@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" data-remove="false" data-concat="false"></script>
+    <link rel="stylesheet" href="http://cdn.parlameter.si/v1/lib/css/perfect-scrollbar.min.css" data-remove="false" data-concat="false">
+    <script src="http://cdn.parlameter.si/v1/lib/js/perfect-scrollbar.min.js" data-remove="false" data-concat="false"></script>
+
+
+    <!-- these are your (s)css and js files -->
+    <link rel="stylesheet" href="scss/style.css" data-prefix="true">
+    <script src="js/script.js" data-prefix="true"></script>
+    <!-- your extra (s)css and js files should be above this line -->
+</head>
+
+<body onload="iframeResizePipe()">
+
+    <!-- Livereload script for development only (stripped during dist build) -->
+    <script src="http://localhost:35729/livereload.js" data-concat="false" data-remove="false"></script>
+
+
+    <!-- everything above here is part of the page and not part of the card -->
+    <div class="card-container card-halfling">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Zadnje aktivnosti</h1>
+            <!-- this text is the only thing you touch in .card-header -->
+        </div>
+        <div class="card-content recent-activity">
+            <div>
+
+                <% for (var i=0; i < data.results.length; i++) {
+                    var day = data.results[i];
+                %>
+
+                <section>
+                    <span class="date"><%= day.date %></span>
+
+                    <ul>
+
+                        <% for (var j=0; j < day.events.length; j++) {
+                            var event = day.events[j];
+                            var icon = '';
+                            var verb = '';
+                            var thing = '';
+
+                            if(event.type === 'ballot'){
+
+                                switch(event.option){
+                                    case 'za':
+                                        icon = 'glyphicon-ok';
+                                        verb = 'Glasovala ZA';
+                                        break;
+                                    case 'proti':
+                                        icon = 'glyphicon-remove';
+                                        verb = 'Glasovala PROTI';
+                                        break;
+                                    case 'ni':
+                                        icon = 'glyphicon-ban-circle';
+                                        verb = 'NI glasovala za';
+                                        break;
+                                }
+
+                                thing = event.vote_name;
+                            %>
+
+                            <li>
+                                <span class="glyphicon <%= icon %>"></span>
+                                <p><%= verb %> <a href="#"><%= thing %></a></p>
+                            </li>
+
+                            <%
+
+                            } else {
+                                icon = 'glyphicon-comment';
+                                verb = 'Govorila';
+                                thing = event.session_name;
+
+                            %>
+
+                            <li>
+                                <span class="glyphicon <%= icon %>"></span>
+                                <p><a href="#"><%= verb %></a> na <a href="#"><%= thing %></a></p>
+                            </li>
+
+                            <%
+
+                            }
+                        %>
+
+                        <% } %>
+
+                        <!-- <li>
+                            <span class="glyphicon glyphicon-ban-circle"></span>
+                            <p>Se VZDRŽALA glasovanja o <a href="#">Sklepu o imenovanju člana nadzornega sveta RTV</a></p>
+                        </li> -->
+                    </ul>
+
+                </section>
+
+                <% } %>
+
+            </div>
+            <!-- delete this placeholder, this is the content of your card -->
+        </div>
+        <div class="card-footer">
+            <div class="card-circle-button card-share"></div>
+            <div class="card-circle-button card-embed">&lt;/&gt;</div>
+            <div class="card-circle-button card-info">i</div>
+        </div>
+    </div>
+    <!-- everything below here is part of the page and not part of the card -->
+
+
+    <iframe id="helpframe" src='' height='0' width='0' frameborder='0'></iframe>
+</body>
+
+</html>
