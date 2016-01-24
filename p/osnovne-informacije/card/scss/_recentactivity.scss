@@ -1,9 +1,10 @@
-$border-light : #f0f0f0;
-
 .recent-activity {
-  color: $black;
+    color: $black;
 
-    #scrollbar {
+    #scrollbar-recent-activity {
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
 
     section {
@@ -62,5 +63,6 @@ $border-light : #f0f0f0;
             }
         }
 
-      }
     }
+
+}
