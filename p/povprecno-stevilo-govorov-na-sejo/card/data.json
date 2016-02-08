@@ -1,0 +1,14 @@
+{
+    "person": {
+        "id": 11,
+        "name": "Milan Brglez"
+    },
+    "results": {
+        "average": 4,
+        "max": {
+            "id": 11,
+            "score": 49
+        },
+        "score": 49
+    }
+}
