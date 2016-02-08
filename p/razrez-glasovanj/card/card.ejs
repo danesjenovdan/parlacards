@@ -56,11 +56,11 @@
                             </div>
                             <div class="col280">
                                 <div class="progress hugebar ">
-                                    <div class="progress-bar red" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                        <span class="sr-only">70</span>
+                                    <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.for.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.score %>%;">
+                                        <span class="sr-only"><%= data.results.for.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        70
+                                        <%= data.results.for.score %>
                                     </div>
 
                                 </div>
@@ -75,11 +75,11 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgOpposition.score %>%;">
+                                        <span class="sr-only"><%= data.results.for.avgOpposition.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        55
+                                        <%= data.results.for.avgOpposition.score %>
                                     </div>
 
                                 </div>
@@ -94,14 +94,14 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgminmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxOpposition.mps.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxOpposition.score %>%;">
+                                        <span class="sr-only"><%= data.results.for.maxOpposition.score %></span>
                                     </div>
                                     <div class="avgminimg">
                                         <img src="http://cdn.parlameter.si/v1/img/demo/poslanka.png" class="img-circle" />
                                     </div>
                                     <div class="progress_number">
-                                        92
+                                        <%= data.results.for.maxOpposition.score %>
                                     </div>
 
                                 </div>
@@ -116,11 +116,11 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgCoalition.score %>%;">
+                                        <span class="sr-only"><%= data.results.for.avgCoalition.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        55
+                                        <%= data.results.for.avgCoalition.score %>
                                     </div>
 
                                 </div>
@@ -135,14 +135,14 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgminmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxCoalition.score %>%;">
+                                        <span class="sr-only"><%= data.results.for.maxCoalition.score %></span>
                                     </div>
                                     <div class="avgminimg">
                                         <img src="http://cdn.parlameter.si/v1/img/demo/poslanka.png" class="img-circle" />
                                     </div>
                                     <div class="progress_number">
-                                        92
+                                        <%= data.results.for.maxCoalition.score %>
                                     </div>
 
                                 </div>
@@ -154,17 +154,15 @@
 
                         <div class="me_poslanec clearfix">
                             <div class="col150">
-                                <span class="poslanec_title">
-                                                Margareta guček zakošek 123
-                                            </span>
+                                <span class="poslanec_title"><%= data.person.name %></span>
                             </div>
                             <div class="col280">
                                 <div class="progress hugebar ">
-                                    <div class="progress-bar red" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                        <span class="sr-only">70% Complete</span>
+                                    <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.against.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.score %>%;">
+                                        <span class="sr-only"><%= data.results.against.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        70
+                                        <%= data.results.against.score %>
                                     </div>
 
                                 </div>
@@ -173,17 +171,15 @@
 
                         <div class="other_poslanec clearfix">
                             <div class="col150">
-                                <span class="poslanec_title">
-                                                Opozicijsko povprečje
-                                            </span>
+                                <span class="poslanec_title">Opozicijsko povprečje</span>
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgOpposition.score %>%;">
+                                        <span class="sr-only"><%= data.results.against.avgOpposition.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        55
+                                        <%= data.results.against.avgOpposition.score %>
                                     </div>
 
                                 </div>
@@ -192,20 +188,18 @@
 
                         <div class="other_poslanec clearfix">
                             <div class="col150">
-                                <span class="poslanec_title">
-                                                Največ v opoziciji
-                                            </span>
+                                <span class="poslanec_title">Največ v opoziciji</span>
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgminmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxOpposition.score %>%;">
+                                        <span class="sr-only"><%= data.results.against.maxOpposition.score %></span>
                                     </div>
                                     <div class="avgminimg">
                                         <img src="http://cdn.parlameter.si/v1/img/demo/poslanka.png" class="img-circle" />
                                     </div>
                                     <div class="progress_number">
-                                        92
+                                        <%= data.results.against.maxOpposition.score %>
                                     </div>
 
                                 </div>
@@ -220,11 +214,11 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgCoalition.score %>%;">
+                                        <span class="sr-only"><%= data.results.against.avgCoalition.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        55
+                                        <%= data.results.against.avgCoalition.score %>
                                     </div>
 
                                 </div>
@@ -239,14 +233,14 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgminmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxCoalition.score %>%;">
+                                        <span class="sr-only"><%= data.results.against.maxCoalition.score %></span>
                                     </div>
                                     <div class="avgminimg">
                                         <img src="http://cdn.parlameter.si/v1/img/demo/poslanka.png" class="img-circle" />
                                     </div>
                                     <div class="progress_number">
-                                        92
+                                        <%= data.results.against.maxCoalition.score %>
                                     </div>
 
                                 </div>
@@ -259,16 +253,16 @@
                         <div class="me_poslanec clearfix">
                             <div class="col150">
                                 <span class="poslanec_title">
-                                                Margareta guček zakošek
+                                                <%= data.person.name %>
                                             </span>
                             </div>
                             <div class="col280">
                                 <div class="progress hugebar ">
-                                    <div class="progress-bar red" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                        <span class="sr-only">70% Complete</span>
+                                    <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.abstain.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.score %>%;">
+                                        <span class="sr-only"><%= data.results.abstain.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        70
+                                        <%= data.results.abstain.score %>
                                     </div>
 
                                 </div>
@@ -283,11 +277,11 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.avgOpposition.score %>%;">
+                                        <span class="sr-only"><%= data.results.abstain.avgOpposition.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        55
+                                        <%= data.results.abstain.avgOpposition.score %>
                                     </div>
 
                                 </div>
@@ -302,14 +296,14 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgminmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.maxOpposition.score %>%;">
+                                        <span class="sr-only"><%= data.results.abstain.maxOpposition.score %></span>
                                     </div>
                                     <div class="avgminimg">
                                         <img src="http://cdn.parlameter.si/v1/img/demo/poslanka.png" class="img-circle" />
                                     </div>
                                     <div class="progress_number">
-                                        92
+                                        <%= data.results.abstain.maxOpposition.score %>
                                     </div>
 
                                 </div>
@@ -324,11 +318,11 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.avgCoalition.score %>%;">
+                                        <span class="sr-only"><%= data.results.abstain.avgCoalition.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        55
+                                        <%= data.results.abstain.avgCoalition.score %>
                                     </div>
 
                                 </div>
@@ -343,14 +337,14 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgminmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.maxCoalition.score %>%;">
+                                        <span class="sr-only"><%= data.results.abstain.maxCoalition.score %></span>
                                     </div>
                                     <div class="avgminimg">
                                         <img src="http://cdn.parlameter.si/v1/img/demo/poslanka.png" class="img-circle" />
                                     </div>
                                     <div class="progress_number">
-                                        92
+                                        <%= data.results.abstain.maxCoalition.score %>
                                     </div>
 
                                 </div>
@@ -363,16 +357,16 @@
                         <div class="me_poslanec clearfix">
                             <div class="col150">
                                 <span class="poslanec_title">
-                                                Margareta guček zakošek
+                                                <%= data.person.name %>
                                             </span>
                             </div>
                             <div class="col280">
                                 <div class="progress hugebar ">
-                                    <div class="progress-bar red" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                        <span class="sr-only">70% Complete</span>
+                                    <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.absent.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.score %>%;">
+                                        <span class="sr-only"><%= data.results.absent.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        70
+                                        <%= data.results.absent.score %>
                                     </div>
 
                                 </div>
@@ -387,11 +381,11 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.avgOpposition.score %>%;">
+                                        <span class="sr-only"><%= data.results.absent.avgOpposition.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        55
+                                        <%= data.results.absent.avgOpposition.score %>
                                     </div>
 
                                 </div>
@@ -406,14 +400,14 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgminmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.maxOpposition.score %>%;">
+                                        <span class="sr-only"><%= data.results.absent.maxOpposition.score %></span>
                                     </div>
                                     <div class="avgminimg">
                                         <img src="http://cdn.parlameter.si/v1/img/demo/poslanka.png" class="img-circle" />
                                     </div>
                                     <div class="progress_number">
-                                        92
+                                        <%= data.results.absent.maxOpposition.score %>
                                     </div>
 
                                 </div>
@@ -428,11 +422,11 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.avgCoalition.score %>%;">
+                                        <span class="sr-only"><%= data.results.absent.avgCoalition.score %></span>
                                     </div>
                                     <div class="progress_number">
-                                        55
+                                        <%= data.results.absent.avgCoalition.score %>
                                     </div>
 
                                 </div>
@@ -447,14 +441,14 @@
                             </div>
                             <div class="col280">
                                 <div class="progress smallbar avgminmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                        <span class="sr-only">55% Complete</span>
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.maxCoalition.score %>%;">
+                                        <span class="sr-only"><%= data.results.absent.maxCoalition.score %></span>
                                     </div>
                                     <div class="avgminimg">
                                         <img src="http://cdn.parlameter.si/v1/img/demo/poslanka.png" class="img-circle" />
                                     </div>
                                     <div class="progress_number">
-                                        92
+                                        <%= data.results.absent.maxCoalition.score %>
                                     </div>
 
                                 </div>
@@ -475,7 +469,7 @@
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed">&lt;/&gt;</div>
+            <div class="card-circle-button card-embed"></div>
             <div class="card-circle-button card-info">i</div>
         </div>
     </div>

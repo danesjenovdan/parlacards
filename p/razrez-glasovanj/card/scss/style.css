@@ -107,14 +107,20 @@ a:focus, button:focus {
   color: #ffffff;
   cursor: pointer; }
 
+.card-info {
+  font-weight: 100; }
+
 .card-embed {
-  font-size: 14px;
-  line-height: 28px; }
+  background-image: url("http://cdn.parlameter.si/v1/icons/embed.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% 70%; }
 
 .card-share {
-  background-image: url("http://cdn.parlameter.si/v1/img/share.png");
+  background-image: url("http://cdn.parlameter.si/v1/icons/share.svg");
   background-repeat: no-repeat;
-  background-position: 4px 5.5px; }
+  background-position: 6px center;
+  background-size: 50% 50%; }
 
 /*  */
 header.header {
@@ -1258,5 +1264,58 @@ footer.footer {
           margin: 0 0 0 65px; }
           .recent-activity section ul li p a {
             font-weight: 400; }
+
+.parlaicon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.parlaicon-clanstva {
+  background-image: url("http://cdn.parlameter.si/v1/icons/clanstva.svg"); }
+
+.parlaicon-skupina {
+  background-image: url("http://cdn.parlameter.si/v1/icons/skupina.svg"); }
+
+.parlaicon-delaza {
+  background-image: url("http://cdn.parlameter.si/v1/icons/delaza.svg"); }
+
+.parlaicon-mandat {
+  background-image: url("http://cdn.parlameter.si/v1/icons/mandat.svg"); }
+
+.parlaicon-status {
+  background-image: url("http://cdn.parlameter.si/v1/icons/status.svg"); }
+
+.parlaicon-izobrazba {
+  background-image: url("http://cdn.parlameter.si/v1/icons/izobrazba.svg"); }
+
+.parlaicon-starost {
+  background-image: url("http://cdn.parlameter.si/v1/icons/starost.svg"); }
+
+.parlaicon-facebook {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  position: relative;
+  bottom: -5px;
+  background-image: url("http://cdn.parlameter.si/v1/icons/facebook.svg"); }
+
+.parlaicon-twitter {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  position: relative;
+  bottom: -5px;
+  background-image: url("http://cdn.parlameter.si/v1/icons/twitter.svg"); }
+
+.parlaicon-linkedin {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  position: relative;
+  bottom: -5px;
+  background-image: url("http://cdn.parlameter.si/v1/icons/linkedin.svg"); }
 
 /*# sourceMappingURL=style.css.map */
