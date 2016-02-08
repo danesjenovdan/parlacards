@@ -1,0 +1,47 @@
+{
+    "person": {
+        "id": 50,
+        "name": "Franc Laj"
+    },
+    "results": [{
+        "rank": 1,
+        "term": "alergen",
+        "tfidf": 0.009124496769425486
+    }, {
+        "rank": 2,
+        "term": "ambrozija",
+        "tfidf": 0.009124496769425486
+    }, {
+        "rank": 3,
+        "term": "lendati",
+        "tfidf": 0.00833667703715213
+    }, {
+        "rank": 4,
+        "term": "ambroziti",
+        "tfidf": 0.007789051259282549
+    }, {
+        "rank": 5,
+        "term": "mrtvec",
+        "tfidf": 0.007299597415540388
+    }, {
+        "rank": 6,
+        "term": "agrotehničen",
+        "tfidf": 0.007299597415540388
+    }, {
+        "rank": 7,
+        "term": "odriniti",
+        "tfidf": 0.007156003630437071
+    }, {
+        "rank": 8,
+        "term": "krater",
+        "tfidf": 0.006527296549898024
+    }, {
+        "rank": 9,
+        "term": "žitnica",
+        "tfidf": 0.006211100481021827
+    }, {
+        "rank": 10,
+        "term": "koncentriran",
+        "tfidf": 0.005672387204613367
+    }]
+}
