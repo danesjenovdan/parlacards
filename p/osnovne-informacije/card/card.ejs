@@ -35,7 +35,7 @@
 
                 <div class="clearfix">
                     <div class="col50 text-center btn-lg">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        <span class="parlaicon parlaicon-skupina" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
                         <span class="key">
@@ -47,7 +47,7 @@
 
                 <div class="clearfix">
                     <div class="col50 text-center btn-lg">
-                        <span class="glyphicon glyphicon-xbt" aria-hidden="true"></span>
+                        <span class="parlaicon parlaicon-delaza" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
                         <span class="key">
@@ -58,7 +58,7 @@
 
                 <div class="clearfix">
                     <div class="col50 text-center btn-lg">
-                        <span class="glyphicon glyphicon-eur" aria-hidden="true"></span>
+                        <span class="parlaicon parlaicon-mandat" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
                         <span class="key">
@@ -69,7 +69,7 @@
 
                 <div class="clearfix">
                     <div class="col50 text-center btn-lg">
-                        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+                        <span class="parlaicon parlaicon-status" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
                         <span class="key">
@@ -80,7 +80,7 @@
 
                 <div class="clearfix">
                     <div class="col50 text-center btn-lg">
-                        <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+                        <span class="parlaicon parlaicon-izobrazba" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
                         <span class="key">
@@ -91,7 +91,7 @@
 
                 <div class="clearfix">
                     <div class="col50 text-center btn-lg">
-                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                        <span class="parlaicon parlaicon-starost" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
                         <span class="key">
@@ -100,9 +100,12 @@
                     </div>
                 </div>
 
+                <%
+                    if (data.results.social[0].linkedin != null || data.results.social[0].twitter != null || data.results.social[0].facebook != null) {
+                %>
                 <div class="clearfix">
                     <div class="col50 text-center btn-lg">
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                        <span class="parlaicon parlaicon-clanstva" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
                         <span class="key">
@@ -111,28 +114,32 @@
                                 if (data.results.social[0].facebook) {
                             %>
 
-                            <a href="<%= data.results.social[0].facebook %>">Facebook</a>
-
-                            <% } %>
+                            <a href="<%= data.results.social[0].facebook %>"><span class="parlaicon parlaicon-facebook"></span></a>
 
                             <%
+                                }
                                 if (data.results.social[0].twitter) {
                             %>
 
-                            <a href="<%= data.results.social[0].twitter %>">Twitter</a>
-
-                            <% } %>
+                            <a href="<%= data.results.social[0].twitter %>"><span class="parlaicon parlaicon-twitter"></span></a>
 
                             <%
+                                }
                                 if (data.results.social[0].linkedin) {
                             %>
 
                             <a href="<%= data.results.social[0].linkedin %>">Linkedin</a>
 
-                            <% } %>
+                            <%
+                                }
+                            %>
                         </span>
                     </div>
                 </div>
+
+                <%
+                    }
+                %>
 
 
 
@@ -141,7 +148,7 @@
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed">&lt;/&gt;</div>
+            <div class="card-circle-button card-embed"></div>
             <div class="card-circle-button card-info">i</div>
         </div>
     </div>

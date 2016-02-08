@@ -57,9 +57,9 @@
         "party_id": 3,
         "previous_occupation": "direktor Doma pod Gorco",
         "social": [{
-            "facebook": null,
-            "linkedin": null,
-            "twitter": null
+            "facebook": "asdfasdf",
+            "linkedin": "asdf",
+            "twitter": "null"
         }],
         "voters": null
     }

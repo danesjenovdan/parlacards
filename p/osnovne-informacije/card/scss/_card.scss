@@ -74,14 +74,20 @@
     color: $white;
     cursor: pointer;
 }
+.card-info {
+    font-weight: 100;
+}
 .card-embed {
-    font-size: 14px;
-    line-height: 28px;
+    background-image: url('http://cdn.parlameter.si/v1/icons/embed.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70% 70%;
 }
 .card-share {
-    background-image: url('http://cdn.parlameter.si/v1/img/share.png');
+    background-image: url('http://cdn.parlameter.si/v1/icons/share.svg');
     background-repeat: no-repeat;
-    background-position: 4px 5.5px;
+    background-position: 6px center;
+    background-size: 50% 50%;
 }
 
 /*  */
