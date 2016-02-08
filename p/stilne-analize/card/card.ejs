@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" data-remove="false" data-concat="false"></script>
+    <link rel="stylesheet" href="http://cdn.parlameter.si/v1/lib/css/perfect-scrollbar.min.css" data-remove="false" data-concat="false">
+    <script src="http://cdn.parlameter.si/v1/lib/js/perfect-scrollbar.min.js" data-remove="false" data-concat="false"></script>
+
+
+    <!-- these are your (s)css and js files -->
+    <link rel="stylesheet" href="scss/style.css" data-prefix="true">
+    <script src="js/script.js" data-prefix="true"></script>
+    <!-- your extra (s)css and js files should be above this line -->
+</head>
+
+<body onload="iframeResizePipe()">
+
+    <!-- Livereload script for development only (stripped during dist build) -->
+    <script src="http://localhost:35729/livereload.js" data-concat="false" data-remove="false"></script>
+
+
+    <!-- everything above here is part of the page and not part of the card -->
+    <div class="card-container card-halfling">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Stilne analize</h1>
+            <!-- this text is the only thing you touch in .card-header -->
+        </div>
+        <div class="card-content">
+            <div class="bgwhite poslanec">
+
+                <div class="me_poslanec_mini clearfix">
+                    <div class="col150">
+                        <span class="poslanec_title">
+                                        Privzdignjeno besedje
+                                    </span>
+                    </div>
+                    <div class="col100">
+                        <%= data.person.name %>
+                        <br /> Povprečje
+
+                    </div>
+                    <div class="col180">
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.privzdignjeno * 500000 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.privzdignjeno * 500000 %>%;">
+                                <span class="sr-only"><%= data.results.privzdignjeno * 500000 %></span>
+                            </div>
+                            <div class="progress_number">
+                                <%= Math.round(data.results.privzdignjeno * 500000); %>
+                            </div>
+
+                        </div>
+
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.privzdignjeno_average * 500000 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.privzdignjeno_average * 500000 %>%;">
+                                <span class="sr-only"><%= data.results.average.privzdignjeno_average * 500000 %></span>
+                            </div>
+                            <div class="progress_number">
+                                <%= Math.round(data.results.average.privzdignjeno_average * 500000); %>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="me_poslanec_mini clearfix">
+                    <div class="col150">
+                        <span class="poslanec_title">
+                                        Preprosto besedje
+                                    </span>
+                    </div>
+                    <div class="col100">
+                        <%= data.person.name %>
+                        <br /> Povprečje
+
+                    </div>
+                    <div class="col180">
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.preprosto %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.preprosto * 500000 %>%;">
+                                <span class="sr-only"><%= data.results.preprosto * 500000 %></span>
+                            </div>
+                            <div class="progress_number">
+                                <%= Math.round(data.results.preprosto * 500000); %>
+                            </div>
+
+                        </div>
+
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.preprosto_average * 500000 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.preprosto_average * 500000 %>%;">
+                                <span class="sr-only"><%= data.results.average.preprosto_average * 500000 %></span>
+                            </div>
+                            <div class="progress_number">
+                                <%= Math.round(data.results.average.preprosto_average * 500000); %>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="me_poslanec_mini clearfix">
+                    <div class="col150">
+                        <span class="poslanec_title">
+                                        Problematično besedje
+                                    </span>
+                    </div>
+                    <div class="col100">
+                        <%= data.person.name %>
+                        <br /> Povprečje
+
+                    </div>
+                    <div class="col180">
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.problematicno * 500000 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.problematicno * 500000 %>%;">
+                                <span class="sr-only"><%= data.results.problematicno * 500000 %></span>
+                            </div>
+                            <div class="progress_number">
+                                <%= Math.round(data.results.problematicno * 500000); %>
+                            </div>
+
+                        </div>
+
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.problematicno_average * 500000 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.problematicno_average * 500000 %>%;">
+                                <span class="sr-only"><%= data.results.average.problematicno_average * 500000 %></span>
+                            </div>
+                            <div class="progress_number">
+                                <%= Math.round(data.results.average.problematicno_average * 500000); %>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- delete this placeholder, this is the content of your card -->
+        </div>
+        <div class="card-footer">
+            <div class="card-circle-button card-share"></div>
+            <div class="card-circle-button card-embed"></div>
+            <div class="card-circle-button card-info">i</div>
+        </div>
+    </div>
+    <!-- everything below here is part of the page and not part of the card -->
+
+
+    <iframe id="helpframe" src='' height='0' width='0' frameborder='0'></iframe>
+</body>
+
+</html>

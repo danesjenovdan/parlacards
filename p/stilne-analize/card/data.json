@@ -1,0 +1,16 @@
+{
+    "person": {
+        "id": 11,
+        "name": "Milan Brglez"
+    },
+    "results": {
+        "average": {
+            "preprosto_average": 0.0000111984880318313,
+            "privzdignjeno_average": 4.9224123216840803e-07,
+            "problematicno_average": 0.00000578383447797879
+        },
+        "preprosto": 0.000114752099604822,
+        "privzdignjeno": 0.0000035860031126507,
+        "problematicno": 0.0000286880249012056
+    }
+}
