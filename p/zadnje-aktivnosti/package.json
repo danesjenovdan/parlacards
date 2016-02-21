@@ -1,4 +1,5 @@
 {
+    "data-url": "http://analize.parlameter.si/v1/p/getLastActivity/69/",
   "engines": {
     "node": ">= 0.10.0"
   },
