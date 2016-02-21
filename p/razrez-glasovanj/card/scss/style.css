@@ -1294,6 +1294,18 @@ footer.footer {
 .parlaicon-starost {
   background-image: url("http://cdn.parlameter.si/v1/icons/starost.svg"); }
 
+.parlaicon-za {
+  background-image: url("http://cdn.parlameter.si/v1/icons/za.svg"); }
+
+.parlaicon-ni {
+  background-image: url("http://cdn.parlameter.si/v1/icons/ni.svg"); }
+
+.parlaicon-proti {
+  background-image: url("http://cdn.parlameter.si/v1/icons/proti.svg"); }
+
+.parlaicon-govor {
+  background-image: url("http://cdn.parlameter.si/v1/icons/govor.svg"); }
+
 .parlaicon-facebook {
   width: 22px;
   height: 22px;
