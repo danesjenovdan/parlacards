@@ -84,6 +84,7 @@ module.exports = function(grunt) {
                 tasks: ['reload_data','ejs','jshint','dom_munger:read','concat','uglify','sass','cssmin','read_script','read_css','dom_munger:update','htmlmin','clean:after'] //all the tasks are run dynamically during the watch event handler
             }
         },
+
         dom_munger:{
             read: {
                 options: {
@@ -109,12 +110,12 @@ module.exports = function(grunt) {
                 options: {
                     remove: ['script[data-remove!="false"]','link[data-remove!="false"]'],
                     append: [
-                        {selector:'body',html:'<script>'+'<%= read_script.data.script %>'+'</script>'},
+                        {selector:'#min-script',html:'<%= read_script.data.script %>'},
                         {selector:'head',html:'<style rel="stylesheet">'+'<%= read_css.data.css %>'+'</style>'}
                     ]
                 },
-                src:'card/card.ejs',
-                dest: 'dist/card.compiled.ejs'
+                src:'temp/card_ejs_body_removed.ejs',
+                dest: 'temp/card.precompiled.ejs'
             }
 /*            serveCompile: {
                 options: {
@@ -165,7 +166,7 @@ module.exports = function(grunt) {
                     removeStyleLinkTypeAttributes: true
                 },
                 files: {
-                    'dist/card.compiled.ejs': 'dist/card.compiled.ejs'
+                    'dist/card.compiled.ejs': 'temp/card_ejs_before_minification.ejs'
                 }
             }
         },
@@ -194,11 +195,58 @@ module.exports = function(grunt) {
     });
 
     // These plugins provide necessary tasks.
-
     grunt.registerTask('read_script', 'do some stuff.', function() {
 
         var minifiedScript = grunt.file.read('temp/card.full.min.js');
         grunt.config(['read_script','data','script'],minifiedScript);
+
+    });
+
+    grunt.registerTask('wrap_ejs', 'do some stuff.', function() {
+
+        var html = grunt.file.read('card/card.ejs');
+
+        var replaced = html.replace(/<%([\w\W]*?)%>/g, function(match, subMatch){ return "<!-- <%"+subMatch+"%> -->"; });
+
+        var fs = require('fs');
+        var path = require('path');
+        fs.writeFileSync(path.join(__dirname, '/temp/card_ejs_wrapped.ejs'), replaced);
+
+        grunt.config(['wrap_ejs','data','wrapped_ejs'], replaced);
+
+    });
+
+    var bodyText;
+
+    grunt.registerTask('body_grabber', 'do some stuff.', function() {
+
+
+        var html = grunt.file.read('card/card.ejs');
+        var fs = require('fs');
+        var path = require('path');
+
+        bodyText = html.match(/<body[^>]*>([^<]*(?:(?!<\/?body)<[^<]*)*)<\/body\s*>/i);
+
+        var re = /<body[^>]*>([^<]*(?:(?!<\/?body)<[^<]*)*)<\/body\s*>/i;
+        html = html.replace(re, '<body></body>');
+
+        console.log(html);
+        fs.writeFileSync('temp/card_ejs_body_removed.ejs', html);
+
+        grunt.config(['body_grabber','data','body'], bodyText);
+
+    });
+
+    grunt.registerTask('body_replacer', 'do some stuff.', function() {
+
+        var html = grunt.file.read('temp/card.precompiled.ejs');
+        var fs = require('fs');
+        var re = /<body[^>]*>([^<]*(?:(?!<\/?body)<[^<]*)*)<\/body\s*>/i;
+        html = html.replace(re, bodyText[0]);
+
+        fs.writeFileSync('temp/card_ejs_before_minification.ejs', html);
+
+        grunt.config(['body_replacer','data','html'], html);
 
     });
 
@@ -217,7 +265,7 @@ module.exports = function(grunt) {
     });
 
     // Default task.
-    grunt.registerTask('build', ['jshint', 'dom_munger:read','concat','uglify','sass','cssmin','read_script','read_css','dom_munger:updateBuild','htmlmin','clean:after']);
+    grunt.registerTask('build', ['jshint', 'body_grabber', 'dom_munger:read','concat','uglify','sass','cssmin','read_script','read_css','dom_munger:updateBuild','body_replacer','htmlmin'/*,'clean:after'*/]);
     grunt.registerTask('serve', ['jshint', 'ejs','dom_munger:read','concat','uglify','sass','cssmin','read_script','read_css','dom_munger:update','htmlmin','clean:after','connect','open:dev', 'watch']);
 
     //grunt.registerTask('serve', ['jshint', 'ejs', 'sass', 'dom_munger:serveCompile',,'connect', 'watch','clean:after']);
