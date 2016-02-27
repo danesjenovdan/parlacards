@@ -25,9 +25,15 @@
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling">
-        <div class="card-header">
-            <div class="card-header-border"></div>
-            <h1>Zadnje aktivnosti</h1>
+        <div class="card-header card-header-embed">
+            <div class="headerimage-container">
+                <img src="//cdn.parlameter.si/v1/img/demo/poslanka.png" class="img-responsive img-circle">
+                <!-- <img src="//cdn.parlameter.si/v1/img/people/<%= data.person.id %>.png" class="img-responsive img-circle"> -->
+            </div>
+            <div class="headerwords-container">
+                <h1>Osnovne informacije o poslanki <br>&nbsp;</h1> <!-- TODO IF MORE CHARS THAN X THEN LINE BREAK -->
+                <h2><span class="name"><%= data.person.name %></span> / <span class="acronym"><%= data.results.acronym %></span></h2>
+            </div>
             <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content recent-activity">
