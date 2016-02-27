@@ -1,5 +1,5 @@
 {
-    "data-url": "http://analize.parlameter.si/v1/p/getStyleScores/11",
+    "data-url": "https://analize.parlameter.si/v1/p/getStyleScores/11",
     "engines": {
         "node": ">= 0.10.0"
     },

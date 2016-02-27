@@ -1,5 +1,5 @@
 {
-    "data-url": "http://analize.parlameter.si/v1/p/getAverageNumberOfSpeechesPerSession/80",
+    "data-url": "https://analize.parlameter.si/v1/p/getAverageNumberOfSpeechesPerSession/80",
     "engines": {
         "node": ">= 0.10.0"
     },

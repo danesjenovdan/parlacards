@@ -1,5 +1,5 @@
 {
-    "data-url": "http://analize.parlameter.si/v1/p/getTFIDF/50/",
+    "data-url": "https://analize.parlameter.si/v1/p/getTFIDF/50/",
     "engines": {
         "node": ">= 0.10.0"
     },
