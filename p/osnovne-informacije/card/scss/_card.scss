@@ -12,6 +12,7 @@
     background-color: #ffffff;
     @include card(1);
 }
+
 .card-header {
     width: 100%;
     height: 80px;
@@ -19,45 +20,53 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
 .card-header .card-header-border {
     height: 40px;
     width: 3px;
-    background-image: url('http://cdn.parlameter.si/v1/img/cardheaderborder.png');
+    background-image: url(http://cdn.parlameter.si/v1/img/cardheaderborder.png);
     margin-right: 13px;
     float: left;
 }
+
 .card-header h1 {
     margin: 0;
     font-size: 24px!important;
     line-height: 40px;
 }
+
 .card-content {
     width: 100%;
     padding: 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
 }
+
 .col-md-6 > .card-container .card-content {
     height: 480px;
 }
+
 .col-md-6 > .card-container .card-content.half {
     height: 220px;
 }
+
 .card-placeholder {
     background-color: $grey;
     width: 100%;
     height: 300px;
 }
+
 .card-footer {
     @extend .card-header;
     height: 62px;
     padding-top: 14px;
     padding-bottom: 14px;
     /* this background thing is a hack, still work TODO */
-    background-image: url('http://cdn.parlameter.si/v1/img/shortline.png');
+    background-image: url(http://cdn.parlameter.si/v1/img/shortline.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 100%;
 }
+
 .card-circle-button {
     width: 30px;
     height: 30px;
@@ -74,20 +83,68 @@
     color: $white;
     cursor: pointer;
 }
+
 .card-info {
     font-weight: 100;
 }
+
 .card-embed {
-    background-image: url('http://cdn.parlameter.si/v1/icons/embed.svg');
+    background-image: url(http://cdn.parlameter.si/v1/icons/embed.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70% 70%;
 }
+
 .card-share {
-    background-image: url('http://cdn.parlameter.si/v1/icons/share.svg');
+    background-image: url(http://cdn.parlameter.si/v1/icons/share.svg);
     background-repeat: no-repeat;
     background-position: 6px center;
     background-size: 50% 50%;
 }
 
 /*  */
+.card-header-embed {
+
+    height: 115px;
+
+    .headerimage-container {
+        float: left;
+        width: 80px;
+        height: 80px;
+    }
+
+    .headerwords-container {
+        float: left;
+        margin-left: 15px;
+
+        h1 {
+            color: $funblue;
+            font-weight: 200;
+            font-size: 20px !important;
+            line-height: 20px !important;
+        }
+
+        h2 {
+            color: $black;
+            font-size: 18px;
+            font-weight: 200;
+
+            margin-top: 20px;
+            margin-bottom: 0;
+
+            .name {
+                font-weight: 400;
+            }
+        }
+    }
+}
+.card-embed-header-divider {
+    height: 1px;
+
+    background-image: url('//cdn.parlameter.si/v1/img/shortline.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-left: -20px;
+    margin-right: -20px;
+}

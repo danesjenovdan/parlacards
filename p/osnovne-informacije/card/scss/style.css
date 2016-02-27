@@ -51,7 +51,7 @@ a:focus, button:focus {
 .card-header .card-header-border, .card-footer .card-header-border {
   height: 40px;
   width: 3px;
-  background-image: url("http://cdn.parlameter.si/v1/img/cardheaderborder.png");
+  background-image: url(http://cdn.parlameter.si/v1/img/cardheaderborder.png);
   margin-right: 13px;
   float: left; }
 
@@ -63,7 +63,7 @@ a:focus, button:focus {
 .card-content {
   width: 100%;
   padding: 0;
-  margin: 0 0 10px 0; }
+  margin: 0 0 10px; }
 
 .col-md-6 > .card-container .card-content {
   height: 480px; }
@@ -81,7 +81,7 @@ a:focus, button:focus {
   padding-top: 14px;
   padding-bottom: 14px;
   /* this background thing is a hack, still work TODO */
-  background-image: url("http://cdn.parlameter.si/v1/img/shortline.png");
+  background-image: url(http://cdn.parlameter.si/v1/img/shortline.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100%; }
@@ -111,18 +111,49 @@ a:focus, button:focus {
   font-weight: 100; }
 
 .card-embed {
-  background-image: url("http://cdn.parlameter.si/v1/icons/embed.svg");
+  background-image: url(http://cdn.parlameter.si/v1/icons/embed.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70% 70%; }
 
 .card-share {
-  background-image: url("http://cdn.parlameter.si/v1/icons/share.svg");
+  background-image: url(http://cdn.parlameter.si/v1/icons/share.svg);
   background-repeat: no-repeat;
   background-position: 6px center;
   background-size: 50% 50%; }
 
 /*  */
+.card-header-embed {
+  height: 115px; }
+  .card-header-embed .headerimage-container {
+    float: left;
+    width: 80px;
+    height: 80px; }
+  .card-header-embed .headerwords-container {
+    float: left;
+    margin-left: 15px; }
+    .card-header-embed .headerwords-container h1 {
+      color: #009cdd;
+      font-weight: 200;
+      font-size: 20px !important;
+      line-height: 20px !important; }
+    .card-header-embed .headerwords-container h2 {
+      color: #505050;
+      font-size: 18px;
+      font-weight: 200;
+      margin-top: 20px;
+      margin-bottom: 0; }
+      .card-header-embed .headerwords-container h2 .name {
+        font-weight: 400; }
+
+.card-embed-header-divider {
+  height: 1px;
+  background-image: url("//cdn.parlameter.si/v1/img/shortline.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: -20px;
+  margin-right: -20px; }
+
 header.header {
   padding-top: 10px;
   background: url(../img/top.png) top center no-repeat;
