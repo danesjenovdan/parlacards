@@ -2,6 +2,7 @@
     "person": {
         "id": 11,
         "name": "Milan Brglez",
+        "gov_id": "P240",
         "party": {
             "id": 2,
             "name": "Stranka mokrih cur",

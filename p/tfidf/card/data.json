@@ -2,6 +2,7 @@
     "person": {
         "id": 50,
         "name": "Franc Laj",
+        "gov_id": "P240",
         "party": {
             "name": "Stranka mehkih cur",
             "id": 2,
