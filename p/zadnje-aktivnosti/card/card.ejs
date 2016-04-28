@@ -31,8 +31,8 @@
                 <!-- <img src="//cdn.parlameter.si/v1/img/people/<%= data.person.id %>.png" class="img-responsive img-circle"> -->
             </div>
             <div class="headerwords-container">
-                <h1>Osnovne informacije o poslanki <br>&nbsp;</h1> <!-- TODO IF MORE CHARS THAN X THEN LINE BREAK -->
-                <h2><span class="name"><%= data.person.name %></span> / <span class="acronym"><%= data.person.party.acronym %></span></h2>
+                <h1>Zadnje aktivnosti <br>&nbsp;</h1> <!-- TODO IF MORE CHARS THAN X THEN LINE BREAK -->
+                <h2><span class="name"><%= data.person.name %></span> | <span class="acronym"><%= data.person.party.acronym %></span></h2>
             </div>
             <!-- this text is the only thing you touch in .card-header -->
         </div>
@@ -45,7 +45,7 @@
                 %>
 
                 <section>
-                    <span class="date"><%= day.date %></span>
+                    <span class="date"><%= day.date.split('-')[2] %>. <%= day.date.split('-')[1] %>. <%= day.date.split('-')[0] %></span>
 
                     <ul>
 
