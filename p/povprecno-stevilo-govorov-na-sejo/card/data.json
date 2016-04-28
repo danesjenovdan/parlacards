@@ -1,7 +1,12 @@
 {
     "person": {
         "id": 11,
-        "name": "Milan Brglez"
+        "name": "Milan Brglez",
+        "party": {
+            "name": "Stranka mehkih cur",
+            "id": 2,
+            "acronym": "SMC"
+        }
     },
     "results": {
         "average": 4,

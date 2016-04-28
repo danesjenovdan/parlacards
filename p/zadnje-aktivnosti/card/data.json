@@ -1,7 +1,12 @@
 {
     "person": {
         "id": 69,
-        "name": "Uroš Prikl"
+        "name": "Uroš Prikl",
+        "party": {
+            "name": "Stranka mehkih cur",
+            "id": 2,
+            "acronym": "SMC"
+        }
     },
     "results": [{
         "date": "2015-10-20",

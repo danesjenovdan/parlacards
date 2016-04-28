@@ -1,7 +1,12 @@
 {
     "person": {
         "id": 50,
-        "name": "Franc Laj"
+        "name": "Franc Laj",
+        "party": {
+            "name": "Stranka mehkih cur",
+            "id": 2,
+            "acronym": "SMC"
+        }
     },
     "results": [{
         "rank": 1,
