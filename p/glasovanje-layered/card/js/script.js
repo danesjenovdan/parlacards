@@ -314,8 +314,6 @@ var color = d3.scale.ordinal()
     .range(["#009CDD", "#00628C", "#99E1FF", "#003B54"]);
 
 var svg = d3.select(".partychart").append("svg")
-    // .attr("width", width + margin.left + margin.right)
-    // .attr("height", height + margin.top + margin.bottom)
     .attr('viewBox', '0 0 400 400')
     .attr('preserveAspectRatio', 'xMidYMid meet')
     .append("g")
