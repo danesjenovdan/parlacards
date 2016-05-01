@@ -1,0 +1,23 @@
+path {
+  stroke: #505050;
+  stroke-width: 1;
+  fill: none; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+  stroke-dasharray: 1, 3; }
+
+.tick line {
+  stroke-width: 0; }
+
+.dot circle {
+  fill: #ffffff; }
+
+.dot text {
+  fill: #197197; }
+
+/*# sourceMappingURL=style.css.map */

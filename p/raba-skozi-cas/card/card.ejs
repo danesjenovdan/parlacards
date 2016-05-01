@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" data-remove="false" data-concat="false"></script>
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false">
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js" data-remove="false" data-concat="false"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js" data-remove="false" data-concat="false"></script>
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false">
+    <%# <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js" data-remove="false" data-concat="false"></script>%>
+
+    <!-- d3 MUKI -->
+    <script src="//d3js.org/d3.v3.min.js" data-remove="false" data-concat="false"></script>
+    <!-- moment MUKI -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js" data-remove="false" data-concat="false"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/sl.js" data-remove="false" data-concat="false"></script>
+
+
+    <!-- these are your (s)css and js files -->
+    <link rel="stylesheet" href="scss/style.css" data-prefix="true">
+    <script src="js/script.js" data-prefix="true"></script>
+    <!-- your extra (s)css and js files should be above this line -->
+
+    <!-- Livereload script for development only (stripped during dist build) -->
+    <script src="http://localhost:35729/livereload.js" data-concat="false" data-remove="true"></script>
+</head>
+
+<body>
+
+
+    <!-- everything above here is part of the page and not part of the card -->
+    <div class="card-container card-halfling">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Raba skozi čas</h1> <!-- this text is the only thing you touch in .card-header -->
+        </div>
+        <div class="card-content">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="timechart"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer">
+            <div class="card-circle-button card-share"></div>
+            <div class="card-circle-button card-embed">&lt;/&gt;</div>
+            <div class="card-circle-button card-info">i</div>
+        </div>
+    </div>
+    <!-- everything below here is part of the page and not part of the card -->
+
+</body>
+
+<script id="min-script" data-remove="false" data-concat="false"></script>
+
+</html>
