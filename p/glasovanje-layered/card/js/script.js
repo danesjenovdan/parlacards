@@ -245,6 +245,7 @@ function drawOuter(data) {
     g.append('path')
         .attr('d', arc)
         .style('fill', function(d) {
+            console.log(d.data);
             return color(d.data.option);
         })
         .attr("d", arc).style('stroke', 'white')
@@ -294,9 +295,9 @@ function drawOuter(data) {
         .attr("marker-end", "url(#circ)")
         .attr("d", function(d) {
             if (d.cx > d.ox) {
-                return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx*1.7 + "," + d.cy*1.7;
+                return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx*1.9 + "," + d.cy*1.9;
             } else {
-                return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx*1.7 + "," + d.cy*1.7;
+                return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx*1.9 + "," + d.cy*1.9;
             }
         });
 }
@@ -328,28 +329,25 @@ $(document).ready(function() {
 
     var pieWidth = 200;
 
-    console.log(data);
 
-    drawInner(data);
-    var second_level_data = [];
-    for (option in data) {
-        for (party in data[option]['breakdown']) {
-            newdict = data[option]['breakdown'][party];
-            newdict['option'] = data[option]['option'];
-            second_level_data.push(data[option]['breakdown'][party])
+    $.getJSON('https://analize.parlameter.si/v1/s/getMotionGraph/2772/', function(r) {
+
+        var livedata = r.results.layered_data;
+        console.log(r);
+        console.log(livedata);
+
+        drawInner(livedata);
+
+        var second_level_data = [];
+        for (option in livedata) {
+            for (party in livedata[option]['breakdown']) {
+                newdict = livedata[option]['breakdown'][party];
+                newdict['option'] = livedata[option]['option'];
+                second_level_data.push(livedata[option]['breakdown'][party])
+            }
         }
-    }
-    console.log(second_level_data);
-    drawOuter(second_level_data);
 
-    $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
-
-        // drawInner(data);
-
-        // for (var i = 0; i < data.length; i++) {
-        //     var _cData = data[i];
-        //     drawOuter(_cData, i);
-        // }
+        drawOuter(second_level_data);
 
     });
 
