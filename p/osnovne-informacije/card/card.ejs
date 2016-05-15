@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" data-remove="false" data-concat="false"></script>
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.min.css" data-remove="false" data-concat="false">
-    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.min.js" data-remove="false" data-concat="false"></script>
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false">
     <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false">
-    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js" data-remove="false" data-concat="false"></script>
 
 
     <!-- these are your (s)css and js files -->
@@ -25,18 +22,11 @@
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling">
-        <div class="card-header card-header-embed">
-            <div class="headerimage-container">
-                <img src="//cdn.parlameter.si/v1/parlassets/img/people/<%= data.person.gov_id %>.png" class="img-responsive img-circle">
-                <!-- <img src="//cdn.parlameter.si/v1/img/people/<%= data.person.id %>.png" class="img-responsive img-circle"> -->
-            </div>
-            <div class="headerwords-container">
-                <h1>Osnovne informacije o poslanki <br>&nbsp;</h1> <!-- TODO IF MORE CHARS THAN X THEN LINE BREAK -->
-                <h2><span class="name"><%= data.person.name %></span> | <span class="acronym"><%= data.results.acronym %></span></h2>
-            </div>
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Osnovne informacije</h1>
             <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <div class="card-embed-header-divider"></div>
         <div class="card-content">
             <div class="bgwhite poslanec">
 

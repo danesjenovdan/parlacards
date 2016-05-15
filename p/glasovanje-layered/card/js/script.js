@@ -245,7 +245,6 @@ function drawOuter(data) {
     g.append('path')
         .attr('d', arc)
         .style('fill', function(d) {
-            console.log(d.data);
             return color(d.data.option);
         })
         .attr("d", arc).style('stroke', 'white')
@@ -330,10 +329,9 @@ $(document).ready(function() {
     var pieWidth = 200;
 
 
-    $.getJSON('https://analize.parlameter.si/v1/s/getMotionGraph/2772/', function(r) {
+    $.getJSON('https://analize.parlameter.si/v1/s/getMotionGraph/2931/', function(r) {
 
         var livedata = r.results.layered_data;
-        console.log(r);
         console.log(livedata);
 
         drawInner(livedata);

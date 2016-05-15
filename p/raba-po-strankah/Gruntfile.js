@@ -205,7 +205,7 @@ module.exports = function(grunt) {
     grunt.registerTask('wrap_ejs', 'do some stuff.', function() {
 
         var html = grunt.file.read('card/card.ejs');
-        
+
         var replaced = html.replace(/<%([\w\W]*?)%>/g, function(match, subMatch){ return "<!-- <%"+subMatch+"%> -->"; });
 
         var fs = require('fs');
@@ -232,13 +232,13 @@ module.exports = function(grunt) {
 
         console.log(html);
         fs.writeFileSync('temp/card_ejs_body_removed.ejs', html);
-    
+
         grunt.config(['body_grabber','data','body'], bodyText);
 
     });
 
     grunt.registerTask('body_replacer', 'do some stuff.', function() {
-        
+
         var html = grunt.file.read('temp/card.precompiled.ejs');
         var fs = require('fs');
         var re = /<body[^>]*>([^<]*(?:(?!<\/?body)<[^<]*)*)<\/body\s*>/i;
@@ -265,7 +265,7 @@ module.exports = function(grunt) {
     });
 
     // Default task.
-    grunt.registerTask('build', ['jshint', 'body_grabber', 'dom_munger:read','concat','uglify','sass','cssmin','read_script','read_css','dom_munger:updateBuild','body_replacer','htmlmin'/*,'clean:after'*/]);
+    grunt.registerTask('build', ['jshint', 'body_grabber', 'dom_munger:read','concat','uglify','sass','cssmin','read_script','read_css','dom_munger:updateBuild','body_replacer'/*,'clean:after'*/]);
     grunt.registerTask('serve', ['jshint', 'ejs','dom_munger:read','concat','uglify','sass','cssmin','read_script','read_css','dom_munger:update','htmlmin','clean:after','connect','open:dev', 'watch']);
 
     //grunt.registerTask('serve', ['jshint', 'ejs', 'sass', 'dom_munger:serveCompile',,'connect', 'watch','clean:after']);
