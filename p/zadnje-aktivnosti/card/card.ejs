@@ -1,42 +1,35 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> <!-- removeme -->
+<html> <!-- removeme -->
 
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<head> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" data-remove="false" data-concat="false"></script>
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.min.css" data-remove="false" data-concat="false">
-    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.min.js" data-remove="false" data-concat="false"></script>
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false">
-    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js" data-remove="false" data-concat="false"></script>
+    <!-- build:remove -->
+    <!-- these script files are removed on build -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <!-- endbuild -->
 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
 
-    <!-- these are your (s)css and js files -->
-    <!-- your extra (s)css and js files should be above this line -->
+    <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <link data-inline="true" rel="stylesheet" href="css/style.css">
 
-    <!-- Livereload script for development only (stripped during dist build) -->
-    <script src="http://localhost:35729/livereload.js" data-concat="false" data-remove="false"></script>
-</head>
+</head> <!-- removeme -->
 
-<body>
+<body> <!-- removeme -->
 
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling">
-        <div class="card-header card-header-embed">
-            <div class="headerimage-container">
-                <img src="//cdn.parlameter.si/v1/parlassets/img/people/<%= data.person.gov_id %>.png" class="img-responsive img-circle">
-                <!-- <img src="//cdn.parlameter.si/v1/img/people/<%= data.person.id %>.png" class="img-responsive img-circle"> -->
-            </div>
-            <div class="headerwords-container">
-                <h1>Zadnje aktivnosti <br>&nbsp;</h1> <!-- TODO IF MORE CHARS THAN X THEN LINE BREAK -->
-                <h2><span class="name"><%= data.person.name %></span> | <span class="acronym"><%= data.person.party.acronym %></span></h2>
-            </div>
+        <div class="card-header">
             <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <div class="card-embed-header-divider"></div>
         <div class="card-content recent-activity">
             <div>
 
@@ -122,8 +115,10 @@
     </div>
     <!-- everything below here is part of the page and not part of the card -->
 
+    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <!-- inline temp/js/script.js as <script> -->
+    <script data-inline="true" src="js/script.js"></script>
 
-    <iframe id="helpframe" src='' height='0' width='0' frameborder='0'></iframe>
-</body>
+</body> <!-- removeme -->
 
-</html>
+</html> <!-- removeme -->

@@ -1,5 +1,8 @@
-@import 'colors';
-// @import 'font';
-// @import 'helper';
-// @import 'card';
-@import 'custom';
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.arc path {
+  stroke-width: 0;
+}

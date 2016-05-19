@@ -1,14 +1,3 @@
-/* global Ps */
-
-
-
-//doIt();
-
-/**
- * Your code below
- * @type {{init: Function}}
- */
-
 var data = [{
     'option': 'za',
     'total_votes': 10,
@@ -183,6 +172,8 @@ var data = [{
 
 function drawInner(data) {
 
+    console.log('starting drawInner');
+
     var arc = d3.svg.arc()
         .outerRadius(radius)
         .innerRadius(0);
@@ -218,6 +209,7 @@ function drawInner(data) {
 }
 
 function drawOuter(data) {
+    console.log('starting drawOuter');
     var arc = d3.svg.arc()
         .outerRadius(radius * 1.5 - 10)
         .innerRadius(radius);
@@ -294,9 +286,9 @@ function drawOuter(data) {
         .attr("marker-end", "url(#circ)")
         .attr("d", function(d) {
             if (d.cx > d.ox) {
-                return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx*1.9 + "," + d.cy*1.9;
+                return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
             } else {
-                return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx*1.9 + "," + d.cy*1.9;
+                return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
             }
         });
 }
@@ -319,34 +311,26 @@ var svg = d3.select(".partychart").append("svg")
     .append("g")
     .attr("transform", "translate(" + (width / 2 + margin.left) + "," + (height / 2 + margin.top) + ")");
 
-$(document).ready(function() {
-    // var linechart_data = data['facet_counts']['facet_dates']['datetime_dt'];
-    //
-    // for (data_point in linechart_data) {
-    //     console.log(data_point);
-    // }
-
-    var pieWidth = 200;
+var pieWidth = 200;
 
 
-    $.getJSON('https://analize.parlameter.si/v1/s/getMotionGraph/2931/', function(r) {
+$.getJSON('https://analize.parlameter.si/v1/s/getMotionGraph/2931/', function(r) {
 
-        var livedata = r.results.layered_data;
-        console.log(livedata);
+    var livedata = r.results.layered_data;
+    console.log(livedata);
+    console.log('before drawInner');
 
-        drawInner(livedata);
+    drawInner(livedata);
 
-        var second_level_data = [];
-        for (option in livedata) {
-            for (party in livedata[option]['breakdown']) {
-                newdict = livedata[option]['breakdown'][party];
-                newdict['option'] = livedata[option]['option'];
-                second_level_data.push(livedata[option]['breakdown'][party])
-            }
+    var second_level_data = [];
+    for (option in livedata) {
+        for (party in livedata[option]['breakdown']) {
+            newdict = livedata[option]['breakdown'][party];
+            newdict['option'] = livedata[option]['option'];
+            second_level_data.push(livedata[option]['breakdown'][party])
         }
+    }
 
-        drawOuter(second_level_data);
-
-    });
+    drawOuter(second_level_data);
 
 });

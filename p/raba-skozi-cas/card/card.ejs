@@ -1,35 +1,29 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> <!-- removeme -->
+<html> <!-- removeme -->
 
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<head> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" data-remove="false" data-concat="false"></script>
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false">
-    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js" data-remove="false" data-concat="false"></script>
-    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js" data-remove="false" data-concat="false"></script>
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false">
-    <%# <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js" data-remove="false" data-concat="false"></script>%>
+    <!-- build:remove -->
+    <!-- these script files are removed on build -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <!-- endbuild -->
 
-    <!-- d3 MUKI -->
-    <script src="//d3js.org/d3.v3.min.js" data-remove="false" data-concat="false"></script>
-    <!-- moment MUKI -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js" data-remove="false" data-concat="false"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/locale/sl.js" data-remove="false" data-concat="false"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
 
+    <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <link data-inline="true" rel="stylesheet" href="css/style.css">
 
-    <!-- these are your (s)css and js files -->
-    <link rel="stylesheet" href="scss/style.css" data-prefix="true">
-    <script src="js/script.js" data-prefix="true"></script>
-    <!-- your extra (s)css and js files should be above this line -->
+</head> <!-- removeme -->
 
-    <!-- Livereload script for development only (stripped during dist build) -->
-    <script src="http://localhost:35729/livereload.js" data-concat="false" data-remove="true"></script>
-</head>
-
-<body>
+<body> <!-- removeme -->
 
 
     <!-- everything above here is part of the page and not part of the card -->
@@ -55,8 +49,10 @@
     </div>
     <!-- everything below here is part of the page and not part of the card -->
 
-</body>
+    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <!-- inline temp/js/script.js as <script> -->
+    <script data-inline="true" src="js/script.js"></script>
 
-<script id="min-script" data-remove="false" data-concat="false"></script>
+</body> <!-- removeme -->
 
-</html>
+</html> <!-- removeme -->
