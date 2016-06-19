@@ -36,7 +36,7 @@
             <div class="bgwhite poslanec">
 
                 <div class="clearfix">
-                    <div class="col50 text-center btn-lg">
+                    <div class="col50 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-skupina" aria-hidden="true"></span>
                     </div>
                     <div class="col380 nopadding">
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="clearfix">
-                    <div class="col50 text-center btn-lg">
+                    <div class="col50 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-delaza" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="clearfix">
-                    <div class="col50 text-center btn-lg">
+                    <div class="col50 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-mandat" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="clearfix">
-                    <div class="col50 text-center btn-lg">
+                    <div class="col50 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-status" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="clearfix">
-                    <div class="col50 text-center btn-lg">
+                    <div class="col50 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-izobrazba" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="clearfix">
-                    <div class="col50 text-center btn-lg">
+                    <div class="col50 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-starost" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
@@ -106,8 +106,8 @@
                     if (data.results.social[0].linkedin != null || data.results.social[0].twitter != null || data.results.social[0].facebook != null) {
                 %>
                 <div class="clearfix">
-                    <div class="col50 text-center btn-lg">
-                        <span class="parlaicon parlaicon-clanstva" aria-hidden="true"></span>
+                    <div class="col50 parlaicon-container text-center btn-lg">
+                        <span class="parlaicon parlaicon-omrezja" aria-hidden="true"></span>
                     </div>
                     <div class="col380 bordertop nopadding">
                         <span class="key">
@@ -130,7 +130,7 @@
                                 if (data.results.social[0].linkedin) {
                             %>
 
-                            <a href="<%= data.results.social[0].linkedin %>">Linkedin</a>
+                            <a href="<%= data.results.social[0].linkedin %>"><span class="parlaicon parlaicon-linkedin"></span></a>
 
                             <%
                                 }
