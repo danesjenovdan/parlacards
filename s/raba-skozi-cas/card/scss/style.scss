@@ -1,7 +1,8 @@
-path {
-    stroke: #505050;
-    stroke-width: 1;
-    fill: none;
+.bar {
+    fill: #ccebf8;
+}
+.bar:hover {
+    fill: #009cdd;
 }
 
 .axis path,
@@ -14,11 +15,4 @@ path {
 }
 .tick line {
         stroke-width: 0;
-}
-
-.dot circle {
-    fill: #ffffff;
-}
-.dot text {
-    fill: #197197;
 }

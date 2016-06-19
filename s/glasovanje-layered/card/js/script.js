@@ -242,6 +242,17 @@ function drawOuter(data) {
         .attr("d", arc).style('stroke', 'white')
         .style('stroke-width', 2);
 
+}
+
+function drawLabels(data) {
+    var pie = d3.layout.pie()
+        .sort(null)
+        .value(function(d) {
+            return d.total_votes;
+        });
+
+    var piedata = pie(data);
+
     var labels = svg.selectAll("text").data(piedata)
         .enter()
         .append("text")
@@ -257,7 +268,7 @@ function drawOuter(data) {
             return d.y = Math.sin(a) * (radius * 1.5 + 20);
         })
         .text(function(d) {
-            return d.data.acronym + ' ' + String(d.data.total_votes);
+            return d.data.acronym;
         })
         .each(function(d) {
             var bbox = this.getBBox();
@@ -266,32 +277,67 @@ function drawOuter(data) {
             d.sy = d.oy = d.y + 5;
         });
 
+    var alpha = 0.5;
+    var spacingY = 14;
+    var spacingX = 24;
 
-    svg.append("defs").append("marker")
-        .attr("id", "circ")
-        .attr("markerWidth", 6)
-        .attr("markerHeight", 6)
-        .attr("refX", 3)
-        .attr("refY", 3)
-        // .append("circle")
-        // .attr("cx", 3)
-        // .attr("cy", 3)
-        // .attr("r", 3);
+    function relax() {
+        again = false;
+        labels.each(function(d, i) {
+            a = this;
+            da = d3.select(a);
+            y1 = da.attr('y');
+            x1 = da.attr('x');
 
-    svg.selectAll("path.pointer").data(piedata).enter()
-        .append("path")
-        .attr("class", "pointer")
-        .style("fill", "none")
-        .style("stroke", "black")
-        .attr("marker-end", "url(#circ)")
-        .attr("d", function(d) {
-            if (d.cx > d.ox) {
-                return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
-            } else {
-                return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
-            }
+            labels.each(function(d, j) {
+                b = this;
+                if (a == b) return;
+                db = d3.select(b);
+                y2 = db.attr('y');
+                x2 = db.attr('x');
+
+                deltaY = y1 - y2;
+                deltaX = x1 - x2;
+
+                if ((Math.abs(deltaY) > spacingY) || (Math.abs(deltaX) > spacingX)) return;
+                // if (Math.abs(deltaX) > spacingY) return;
+
+                // if we didn't break until now, labels are overlapping
+                again = true;
+                sign = deltaY > 0 ? 1 : -1;
+                adjust = sign * alpha;
+                da.attr('y', +y1 + adjust);
+                db.attr('y', +y2 - adjust);
+
+                // update line coordinates
+                da.sy = da.oy = da.y + 5;
+                db.sy = db.oy = db.y + 5;
+
+                if (again) {
+                    setTimeout(relax, 20);
+                }
+            });
         });
+
+    }
+
+    relax();
+
+    // svg.selectAll("path.pointer").data(piedata).enter()
+    //     .append("path")
+    //     .attr("class", "pointer")
+    //     .style("fill", "none")
+    //     .style("stroke", "black")
+    //     .attr("marker-end", "url(#circ)")
+    //     .attr("d", function(d) {
+    //         if (d.cx > d.ox) {
+    //             return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+    //         } else {
+    //             return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+    //         }
+    //     });
 }
+
 var margin = {
     top: 50,
     right: 50,
@@ -332,5 +378,7 @@ $.getJSON('https://analize.parlameter.si/v1/s/getMotionGraph/2931/', function(r)
     }
 
     drawOuter(second_level_data);
+
+    drawLabels(second_level_data);
 
 });

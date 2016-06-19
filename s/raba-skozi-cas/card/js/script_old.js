@@ -20,7 +20,7 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
                 if (piece != 'gap') {
                     data.push({
                         'date': piece,
-                        'occurences': parseInt(raw_data[piece])
+                        'close': parseInt(raw_data[piece])
                     });
                 }
             }
@@ -30,8 +30,6 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
     data.sort(function(x, y) {
         return date_formatter.parse(x.date) - date_formatter.parse(y.date);
     });
-
-    console.log(data);
 
     // for (piece in data) {
     //     if (piece % 2 === 0) {
@@ -82,15 +80,15 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
         .scale(y)
         .orient("left");
 
-    // var line = d3.svg.line()
-    //     .x(function(d) {
-    //         console.log('date' + x(d.date));
-    //         return x(d.date);
-    //     })
-    //     .y(function(d) {
-    //         console.log(x(d.occurences));
-    //         return y(d.occurences);
-    //     });
+    var line = d3.svg.line()
+        .x(function(d) {
+            console.log('date' + x(d.date));
+            return x(d.date);
+        })
+        .y(function(d) {
+            console.log(x(d.close));
+            return y(d.close);
+        });
 
     var svg = d3.select(".timechart").append("svg")
         // .attr("width", width + margin.left + margin.right)
@@ -106,14 +104,14 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
         console.log(parseDate(d.date));
         d.date = parseDate(d.date);
         console.log(d.date);
-        d.occurences = +d.occurences;
+        d.close = +d.close;
     });
 
     x.domain(d3.extent(data, function(d) {
         return d.date;
     }));
     y.domain(d3.extent(data, function(d) {
-        return d.occurences;
+        return d.close;
     }));
 
     svg.append("g")
@@ -122,21 +120,6 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
         .call(xAxis);
 
     console.log('ping');
-
-    svg.selectAll(".bar")
-        .data(data)
-        .enter().append("rect")
-        .attr("class", "bar")
-        .attr("x", function(d) {
-            return x(d.date);
-        })
-        .attr("width", width / data.length)
-        .attr("y", function(d) {
-            return y(d.occurences);
-        })
-        .attr("height", function(d) {
-            return height - y(d.occurences);
-        });
 
     // svg.append("g")
     //     .attr("class", "y axis")
@@ -150,47 +133,47 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
 
     console.log('ping2');
 
-    // svg.append("path")
-    //     .datum(data)
-    //     .attr("class", "line")
-    //     .attr("d", line);
+    svg.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .attr("d", line);
 
     console.log('ping3');
 
-    // svg.selectAll("g.dot")
-    //     .data(data)
-    //     .enter()
-    //     .append("g")
-    //     .attr("class", "dot")
-    //     .append("circle")
-    //     .attr("r", 11)
-    //     .attr("cx", function(d, i) {
-    //         console.log(d.date);
-    //         return x(d.date);
-    //     })
-    //     .attr("cy", function(d, i) {
-    //         return y(d.occurences);
-    //     });
-    //
-    // svg.selectAll('g.dot')
-    //     .data(data)
-    //     .append('text')
-    //     // .attr('dx', function(d) {
-    //     //     return -20
-    //     // })
-    //     // .attr("cx", function(d, i) {
-    //     //     console.log(d.date);
-    //     //     return x(d.date);
-    //     // })
-    //     // .attr("cy", function(d, i) {
-    //     //     return y(d.occurences);
-    //     // })
-    //     .attr('transform', function(d) {
-    //         return 'translate(' + (x(d.date) - 8) + ',' + (y(d.occurences) + 5) + ')'
-    //     })
-    //     .text(function(d) {
-    //         return d.occurences
-    //     });
+    svg.selectAll("g.dot")
+        .data(data)
+        .enter()
+        .append("g")
+        .attr("class", "dot")
+        .append("circle")
+        .attr("r", 11)
+        .attr("cx", function(d, i) {
+            console.log(d.date);
+            return x(d.date);
+        })
+        .attr("cy", function(d, i) {
+            return y(d.close);
+        });
+
+    svg.selectAll('g.dot')
+        .data(data)
+        .append('text')
+        // .attr('dx', function(d) {
+        //     return -20
+        // })
+        // .attr("cx", function(d, i) {
+        //     console.log(d.date);
+        //     return x(d.date);
+        // })
+        // .attr("cy", function(d, i) {
+        //     return y(d.close);
+        // })
+        .attr('transform', function(d) {
+            return 'translate(' + (x(d.date) - 8) + ',' + (y(d.close) + 5) + ')'
+        })
+        .text(function(d) {
+            return d.close
+        });
 
     // var aspect = width / height,
     //     chart = d3.select('#chart');
@@ -204,6 +187,6 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
 
 // function type(d) {
 //     d.date = parseDate.parse(d.date);
-//     d.occurences = +d.occurences;
+//     d.close = +d.close;
 //     return d;
 // }

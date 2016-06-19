@@ -134,7 +134,7 @@ gulp.task('remove-minify', function() {
 gulp.task('watch', function() {
     gulp.watch('card/scss/**/*.scss', ['sass']);
     gulp.watch('card/card.ejs', ['ejs', browserSync.reload]);
-    gulp.watch('card/js/**/*.js', browserSync.reload);
+    gulp.watch('card/js/**/*.js', ['js', browserSync.reload]);
 });
 
 // clean temp folder
