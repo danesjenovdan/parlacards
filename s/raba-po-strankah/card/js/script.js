@@ -96,6 +96,70 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
             d.sy = d.oy = d.y + 5;
         });
 
+        var alpha = 0.5;
+        var spacingY = 14;
+        var spacingX = 24;
+
+        function relax() {
+            console.log('beginning constraint relaxing');
+            again = false;
+            labels.each(function(d, i) {
+                a = this;
+                da = d3.select(a);
+                y1 = da.attr('y');
+                x1 = da.attr('x');
+
+                labels.each(function(d, j) {
+                    b = this;
+                    if (a == b) return;
+                    db = d3.select(b);
+                    y2 = db.attr('y');
+                    x2 = db.attr('x');
+
+                    deltaY = y1 - y2;
+                    deltaX = x1 - x2;
+
+                    if ((Math.abs(deltaY) > spacingY) || (Math.abs(deltaX) > spacingX)) return;
+                    // if (Math.abs(deltaX) > spacingY) return;
+
+                    // if we didn't break until now, labels are overlapping
+                    again = true;
+                    sign = deltaY > 0 ? 1 : -1;
+                    adjust = sign * alpha;
+                    da.attr('y', +y1 + adjust);
+                    db.attr('y', +y2 - adjust);
+
+                    // update line coordinates
+                    da.sy = da.oy = da.y + 5;
+                    db.sy = db.oy = db.y + 5;
+
+                    // update bounding box stuff for line
+                    var bboxa = a.getBBox();
+                    da.sx = da.x - bboxa.width / 2 - 2;
+                    da.ox = da.x + bboxa.width / 2 + 2;
+                    da.sy = da.oy = da.y + 5;
+                    var bboxb = b.getBBox();
+                    db.sx = db.x - bboxb.width / 2 - 2;
+                    db.ox = db.x + bboxb.width / 2 + 2;
+                    db.sy = db.oy = db.y + 5;
+
+                    // update arcs
+                    var thing_a = a.startAngle + (a.endAngle - a.startAngle) / 2 - Math.PI / 2;
+                    a.cx = Math.cos(thing_a) * (radius - 75);
+                    a.x = Math.cos(thing_a) * (radius + 20);
+                    a.cy = Math.sin(thing_a) * (radius - 75);
+                    d.y = Math.sin(thing_a) * (radius + 20);
+
+                    if (again) {
+                        setTimeout(relax, 20);
+                    }
+                });
+            });
+
+        }
+
+        relax();
+
     // var prev;
     // labels.each(function(d, i) {
     //     if (i > 0) {
@@ -122,16 +186,16 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
     // });
 
 
-    svg.append("defs").append("marker")
-        .attr("id", "circ")
-        .attr("markerWidth", 6)
-        .attr("markerHeight", 6)
-        .attr("refX", 3)
-        .attr("refY", 3)
-        .append("circle")
-        .attr("cx", 3)
-        .attr("cy", 3)
-        .attr("r", 3);
+    // svg.append("defs").append("marker")
+    //     .attr("id", "circ")
+    //     .attr("markerWidth", 6)
+    //     .attr("markerHeight", 6)
+    //     .attr("refX", 3)
+    //     .attr("refY", 3)
+    //     .append("circle")
+    //     .attr("cx", 3)
+    //     .attr("cy", 3)
+    //     .attr("r", 3);
 
     svg.selectAll("path.pointer").data(piedata).enter()
         .append("path")
