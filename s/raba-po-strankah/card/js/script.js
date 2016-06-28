@@ -108,6 +108,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
         var spacingX = 30;
 
         function relax() {
+
             again = false;
             labels.each(function(d, i) {
                 a = this;
