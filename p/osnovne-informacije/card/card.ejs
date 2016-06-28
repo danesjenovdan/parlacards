@@ -103,7 +103,7 @@
                 </div>
 
                 <%
-                    if (data.results.social[0].linkedin != null || data.results.social[0].twitter != null || data.results.social[0].facebook != null) {
+                    if (data.results.social[0].twitter != null || data.results.social[0].facebook != null) {
                 %>
                 <div class="clearfix">
                     <div class="col50 parlaicon-container text-center btn-lg">
@@ -124,13 +124,6 @@
                             %>
 
                             <a href="<%= data.results.social[0].twitter %>"><span class="parlaicon parlaicon-twitter"></span></a>
-
-                            <%
-                                }
-                                if (data.results.social[0].linkedin) {
-                            %>
-
-                            <a href="<%= data.results.social[0].linkedin %>"><span class="parlaicon parlaicon-linkedin"></span></a>
 
                             <%
                                 }
