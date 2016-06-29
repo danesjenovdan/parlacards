@@ -1,8 +1,11 @@
-.arc text {
+text {
   font: 10px sans-serif;
   text-anchor: middle;
+  color: #505050;
+  font-weight: 300;
 }
 
-.arc path {
-  stroke-width: 0;
+path.pointer {
+  stroke-width: 0.6;
+  stroke: #505050;
 }

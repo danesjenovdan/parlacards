@@ -105,7 +105,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
 
         var alpha = 0.5;
         var spacingY = 20;
-        var spacingX = 30;
+        var spacingX = 20;
 
         function relax() {
 
@@ -183,19 +183,23 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
                 d.sx = +thing.attr('x') - bbox.width / 2 - 2;
                 d.ox = +thing.attr('x') + bbox.width / 2 + 2;
                 d.sy = d.oy = +thing.attr('y') + 5;
+                d.endx = +thing.attr('x') + bbox.width;
             });
 
             svg.selectAll("path.pointer").data(piedata).enter()
                 .append("path")
                 .attr("class", "pointer")
                 .style("fill", "none")
-                .style("stroke", "black")
+                // .style("stroke", "black")
                 .attr("marker-end", "url(#circ)")
                 .attr("d", function(d) {
                     console.log(d);
                     if (d.cx > d.ox) { //|| Math.abs(d.cx) < 0.1) {
                         return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx + "," + d.cy;
                     } else {
+                        if ((d.endx > 0) && (Math.abs(d.cx) < 10)) {
+                            return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx + "," + d.cy;
+                        }
                         return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx + "," + d.cy;
                     }
                 });
