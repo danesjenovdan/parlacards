@@ -28,10 +28,12 @@
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling">
         <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Zadnje aktivnosti</h1>
             <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content recent-activity">
-            <div>
+            <div class="scroller" id="scrollbar-recent-activity">
 
                 <% for (var i=0; i < data.results.length; i++) {
                     var day = data.results[i];
@@ -84,7 +86,7 @@
 
                             <li>
                                 <span class="parlaicon <%= icon %>"></span>
-                                <p><a href="#"><%= verb %></a> na <a href="#"><%= thing %></a></p>
+                                <p><a href="#"><%= verb %></a>&nbsp;na&nbsp;<a href="#"><%= thing %></a></p>
                             </li>
 
                             <%
