@@ -102,6 +102,13 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
             .text(function(d) {
                 return parties[d.data.party]['acronym'] + ' | ' + d.data.percentage + '%';
             })
+            .style('display', function(d) {
+                if (+d.data.percentage === 0) {
+                    return 'none';
+                } else {
+                    return 'block';
+                }
+            });
 
         var alpha = 0.5;
         var spacingY = 20;
@@ -201,6 +208,13 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
                             return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx + "," + d.cy;
                         }
                         return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx + "," + d.cy;
+                    }
+                })
+                .style('display', function(d) {
+                    if (+d.data.percentage === 0) {
+                        return 'none';
+                    } else {
+                        return 'block';
                     }
                 });
         }
