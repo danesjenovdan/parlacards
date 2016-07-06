@@ -1,0 +1,58 @@
+{
+  "date_of_card": "19.06.2016",
+  "person": {
+    "id": 12,
+    "name": "Nada Brinovšek"
+  },
+  "results": [{
+    "gov_id": "P180",
+    "id": 94,
+    "name": "Jana Jenko",
+    "party": {
+      "acronym": "DeSUS",
+      "id": 3,
+      "name": "PS Demokratska Stranka Upokojencev Slovenije"
+    },
+    "ratio": -0.24104742328907
+  }, {
+    "gov_id": "P186",
+    "id": 45,
+    "name": "Marjana Kotnik Poropat",
+    "party": {
+      "acronym": "DeSUS",
+      "id": 3,
+      "name": "PS Demokratska Stranka Upokojencev Slovenije"
+    },
+    "ratio": -0.22170209304971
+  }, {
+    "gov_id": "P280",
+    "id": 69,
+    "name": "Uroš Prikl",
+    "party": {
+      "acronym": "DeSUS",
+      "id": 3,
+      "name": "PS Demokratska Stranka Upokojencev Slovenije"
+    },
+    "ratio": -0.219381148664759
+  }, {
+    "gov_id": "P281",
+    "id": 70,
+    "name": "Branislav Rajić",
+    "party": {
+      "acronym": "SMC",
+      "id": 1,
+      "name": "PS Stranka modernega centra"
+    },
+    "ratio": -0.216557627105966
+  }, {
+    "gov_id": "P275",
+    "id": 61,
+    "name": "Bojana Muršič",
+    "party": {
+      "acronym": "SD",
+      "id": 7,
+      "name": "PS Socialni Demokrati"
+    },
+    "ratio": -0.211522617037362
+  }]
+}

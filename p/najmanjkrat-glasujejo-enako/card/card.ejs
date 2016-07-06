@@ -44,9 +44,9 @@
 
                     <div id="scrollbar-voting-card" class="scroller">
 
-                        <% for (person in data.results) { %>
+                        <% var i = 1; for (person in data.results) { %>
 
-                            <div class="member">
+                            <div class="member <%= (data.results.length == i) ? 'lastel' : ''; %>">
                                 <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data.results[person].gov_id %>.png); background-size: cover;"></div>
                                 <p><%= data.results[person].name %>
                                     <br/><%= data.results[person].party.acronym %></p>
@@ -54,7 +54,7 @@
                                 <div class="clearfix"></div>
                             </div>
 
-                        <% }%>
+                        <% i++; }%>
 
                     </div>
 
