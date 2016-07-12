@@ -27,37 +27,47 @@
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling">
-        <div class="card-header card-header-embed">
-            <div class="headerimage-container">
-                <img src="//cdn.parlameter.si/v1/parlassets/img/people/<%= data.person.gov_id %>.png" class="img-responsive img-circle">
-                <!-- <img src="//cdn.parlameter.si/v1/img/people/<%= data.person.id %>.png" class="img-responsive img-circle"> -->
-            </div>
-            <div class="headerwords-container">
-                <h1>Osnovne informacije o poslanki <br>&nbsp;</h1> <!-- TODO IF MORE CHARS THAN X THEN LINE BREAK -->
-                <h2><span class="name"><%= data.person.name %></span> / <span class="acronym"><%= data.person.party.acronym %></span></h2>
-            </div>
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Besede, ki jo delajo posebno</h1>
             <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <div class="card-embed-header-divider"></div>
         <div class="card-content">
             <div class="bgwhite poslanec">
 
                 <%
-                    for (var i=0; i < data.results.length; i++) {
+
+                var max = 0;
+                var min = 100;
+
+                for (var i = 0; i < data.results.length; i++) {
+                    var word = data.results[i];
+                    if (Math.round(word.tfidf * 5000) > max) {
+                        max = Math.round(word.tfidf * 5000);
+                    } else if (+word.tfidf < min) {
+                        min = Math.round(word.tfidf * 5000);
+                    }
+                }
+
+                var diff = max - min;
+
+                var offset = 120;
+
+                for (var i=0; i < data.results.length; i++) {
                         var word = data.results[i];
                         word.score = Math.round(word.tfidf * 5000);
                 %>
 
-                <div class="me_poslanec clearfix">
+                <div class="me_poslanec clearfix tfidf-bar">
 
-                    <div class="col150">
+                    <div class="term">
                         <span class="poslanec_title">
                                         <%= word.term %>
                                     </span>
                     </div>
-                    <div class="col280">
+                    <div class="frequency">
                         <div class="progress hugebar2 avgmin">
-                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= word.score %>%;">
+                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="<%= min %>" aria-valuemax="<%= max %>" style="width: <%= (word.score) / max * 100 - 20 %>%;">
                                 <span class="sr-only"><%= word.score %></span>
                             </div>
                             <div class="progress_number">
