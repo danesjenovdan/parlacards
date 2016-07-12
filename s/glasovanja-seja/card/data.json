@@ -1,0 +1,162 @@
+[
+  {
+    "session": {
+      "date": "2014-08-01",
+      "name": "1. redna seja",
+      "id": 3046
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Predlog za izvolitev predsednika Dr\u017eavnega zbora Republike Slovenije",
+      "against": 0,
+      "votes_for": 0,
+      "motion_id": 2769,
+      "not_present": 0,
+      "result": "-"
+    }
+  },
+  {
+    "session": {
+      "date": "2014-08-01",
+      "name": "1. redna seja",
+      "id": 3046
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Poro\u010dilo o izidu pred\u010dasnih volitev v Dr\u017eavni zbor Republike Slovenije",
+      "against": 0,
+      "votes_for": 0,
+      "motion_id": 2770,
+      "not_present": 0,
+      "result": "-"
+    }
+  },
+  {
+    "session": {
+      "date": "2014-08-01",
+      "name": "1. redna seja",
+      "id": 3046
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Sklep o imenovanju predsednika in podpredsednika Mandatno-volilne komisije",
+      "against": 0,
+      "votes_for": 0,
+      "motion_id": 2771,
+      "not_present": 0,
+      "result": "-"
+    }
+  },
+  {
+    "session": {
+      "date": "2014-08-01",
+      "name": "1. redna seja",
+      "id": 3046
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Proceduralni predlog za prekinitev 1. to\u010dke dnevnega reda",
+      "against": 0,
+      "votes_for": 0,
+      "motion_id": 2772,
+      "not_present": 0,
+      "result": "-"
+    }
+  },
+  {
+    "session": {
+      "date": "2014-08-01",
+      "name": "1. redna seja",
+      "id": 3046
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Dnevni red v celoti",
+      "against": 0,
+      "votes_for": 0,
+      "motion_id": 2773,
+      "not_present": 0,
+      "result": "-"
+    }
+  },
+  {
+    "session": {
+      "date": "2014-08-01",
+      "name": "1. redna seja",
+      "id": 3046
+    },
+    "results": {
+      "abstain": 20,
+      "text": "Predlog za izvolitev predsednika Dr\u017eavnega zbora Republike Slovenije",
+      "against": 0,
+      "votes_for": 66,
+      "motion_id": 2769,
+      "not_present": 4,
+      "result": "-"
+    }
+  },
+  {
+    "session": {
+      "date": "2014-08-01",
+      "name": "1. redna seja",
+      "id": 3046
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Poro\u010dilo o izidu pred\u010dasnih volitev v Dr\u017eavni zbor Republike Slovenije",
+      "against": 0,
+      "votes_for": 88,
+      "motion_id": 2770,
+      "not_present": 2,
+      "result": "-"
+    }
+  },
+  {
+    "session": {
+      "date": "2014-08-01",
+      "name": "1. redna seja",
+      "id": 3046
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Sklep o imenovanju predsednika in podpredsednika Mandatno-volilne komisije",
+      "against": 21,
+      "votes_for": 64,
+      "motion_id": 2771,
+      "not_present": 5,
+      "result": "-"
+    }
+  },
+  {
+    "session": {
+      "date": "2014-08-01",
+      "name": "1. redna seja",
+      "id": 3046
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Proceduralni predlog za prekinitev 1. to\u010dke dnevnega reda",
+      "against": 59,
+      "votes_for": 26,
+      "motion_id": 2772,
+      "not_present": 5,
+      "result": "-"
+    }
+  },
+  {
+    "session": {
+      "date": "2014-08-01",
+      "name": "1. redna seja",
+      "id": 3046
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Dnevni red v celoti",
+      "against": 0,
+      "votes_for": 84,
+      "motion_id": 2773,
+      "not_present": 6,
+      "result": "-"
+    }
+  }
+]

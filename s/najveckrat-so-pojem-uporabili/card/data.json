@@ -1,0 +1,73 @@
+{
+  "organization": {
+    "name": "PS Stranka modernega centra",
+    "id": 1
+  },
+  "results": [
+    {
+      "person": {
+        "party": {
+          "acronym": "SD",
+          "id": 7,
+          "name": "PS Socialni Demokrati"
+        },
+        "name": "Matja\u017e Han",
+        "gov_id": "P018",
+        "id": 30
+      },
+      "ratio": 96.059090753799
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "DeSUS",
+          "id": 3,
+          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+        },
+        "name": "Marjana Kotnik Poropat",
+        "gov_id": "P186",
+        "id": 45
+      },
+      "ratio": 95.8894174281845
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "SD",
+          "id": 7,
+          "name": "PS Socialni Demokrati"
+        },
+        "name": "Bojana Mur\u0161i\u010d",
+        "gov_id": "P275",
+        "id": 61
+      },
+      "ratio": 95.4279290130061
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "DeSUS",
+          "id": 3,
+          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+        },
+        "name": "Franc Jur\u0161a",
+        "gov_id": "P122",
+        "id": 37
+      },
+      "ratio": 94.0906853197073
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "DeSUS",
+          "id": 3,
+          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+        },
+        "name": "Marija Antonija Kova\u010di\u010d",
+        "gov_id": "P297",
+        "id": 96
+      },
+      "ratio": 94.0455998204513
+    }
+  ]
+}

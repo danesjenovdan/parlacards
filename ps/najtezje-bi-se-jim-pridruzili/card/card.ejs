@@ -39,17 +39,18 @@
 
             <div id="scrollbar-voting-card" class="scroller">
 
-                <% var i = 1; for (person in data.results) { %>
+                <% for (var i = 0; i < data.results.length ; i++) { %>
 
-                <div class="member <%= (data.results.length == i) ? 'lastel' : ''; %>">
-                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data.results[person].gov_id %>.png); background-size: cover;"></div>
-                    <p><%= data.results[person].name %>
-                        <br/><%= data.results[person].party.acronym %></p>
-                    <span><%= data.results[person].ratio.toFixed(2) %>%</span>
+                <div class="member <%= ((data.results.length-1) == i) ? 'lastel' : ''; %>">
+                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data.results[i].person.gov_id %>.png); background-size: cover;"></div>
+                    <p><%= data.results[i].person.name %>
+
+                        <br/><%= data.results[i].person.party.acronym %></p>
+                    <span><%= data.results[i].ratio.toFixed(2) %>%</span>
                     <div class="clearfix"></div>
                 </div>
 
-                <% i++; }%>
+                <% }%>
 
             </div>
 
@@ -64,9 +65,9 @@
 </div>
 <!-- everything below here is part of the page and not part of the card -->
 
-    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
-    <!-- inline temp/js/script.js as <script> -->
-    <script data-inline="true" src="js/script.js"></script>
+<!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+<!-- inline temp/js/script.js as <script> -->
+<script data-inline="true" src="js/script.js"></script>
 
 </body> <!-- removeme -->
 

@@ -1,0 +1,73 @@
+{
+  "organization": {
+    "name": "PS Stranka modernega centra",
+    "id": 1
+  },
+  "results": [
+    {
+      "person": {
+        "party": {
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "name": "Zvonko Lah",
+        "gov_id": "P129",
+        "id": 49
+      },
+      "ratio": 32.8048948834593
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "name": "Franc Breznik",
+        "gov_id": "P167",
+        "id": 10
+      },
+      "ratio": 32.9861365768175
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "name": "Andrej \u010cu\u0161",
+        "gov_id": "P225",
+        "id": 15
+      },
+      "ratio": 33.4628425042727
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "name": "Marko Poga\u010dnik",
+        "gov_id": "P196",
+        "id": 65
+      },
+      "ratio": 33.6220093058094
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "name": "Marijan Pojbi\u010d",
+        "gov_id": "P098",
+        "id": 66
+      },
+      "ratio": 35.261212157131
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html> <!-- removeme -->
+<html> <!-- removeme -->
+
+<head> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+
+    <!-- build:remove -->
+    <!-- these script files are removed on build -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <!-- endbuild -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+
+    <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <link data-inline="true" rel="stylesheet" href="css/style.css">
+
+</head> <!-- removeme -->
+
+<body> <!-- removeme -->
+
+
+<!-- everything above here is part of the page and not part of the card -->
+<div class="card-container card-halfling">
+    <div class="card-header">
+        <div class="card-header-border"></div>
+        <h1>Glasovanja - seja</h1>
+        <!-- this text is the only thing you touch in .card-header -->
+    </div>
+    <div class="card-content">
+
+        <div  id="votingCard">
+
+            <div class="session_voting">
+
+                <% for (var i = 0; i < data.length ; i++) { %>
+
+                <% var rnd = (Math.floor((Math.random() * 2)) == 1); %>
+                <% var ayeney = rnd ? "aye" : "nay"; %>
+                <% var ayeneygly = rnd ? "glyphicon-ok" : "glyphicon-remove"; %>
+
+
+                    <div class="row single_voting">
+                        <a href="/seje/P_seja_glasovanje">
+                            <div class=" col-md-1 ">
+                                <div class="accepted <%= ayeney %> ">
+                                    <i class="glyphicon <%=ayeneygly%> "></i>
+                                </div>
+                            </div>
+                            <div class="col-md-11 border-left ">
+                                <div class="col-md-6 ">
+                                    <div class="session_title ">
+                                        <%= data[i].results.text %></div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="session_votes ">
+                                        <div class="progress smallbar ">
+                                            <div class="progress-bar fontblue " style="width: <%= data[i].results.votes_for %>% ">
+                                                <span class="sr-only "><%= data[i].results.votes_for %>% Complete (success)</span>
+                                            </div>
+                                            <div class="progress-bar funblue " style="width: <%= data[i].results.against %>% ">
+                                                <span class="sr-only "><%= data[i].results.against %>% Complete (warning)</span>
+                                            </div>
+                                            <div class="progress-bar ignoreblue " style="width: <%= data[i].results.abstain %>% ">
+                                                <span class="sr-only "><%= data[i].results.abstain %>% Complete (danger)</span>
+                                            </div>
+                                            <div class="progress-bar noblue " style="width: <%= data[i].results.against %>% ">
+                                                <span class="sr-only "><%= data[i].results.against %>% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-xs-3 ">
+                                                <%= data[i].results.votes_for %>
+                                                <div class="type ">Za</div>
+                                                <div class="indicator aye ">&nbsp;</div>
+                                            </div>
+                                            <div class="col-xs-3 ">
+                                                <%= data[i].results.against %>
+                                                <div class="type ">Proti</div>
+                                                <div class="indicator ney ">&nbsp;</div>
+                                            </div>
+                                            <div class="col-xs-3 ">
+                                                <%= data[i].results.abstain %>
+                                                <div class="type ">Vzdržan</div>
+                                                <div class="indicator abstention ">&nbsp;</div>
+                                            </div>
+                                            <div class="col-xs-3 ">
+                                                <%= data[i].results.against %>
+                                                <div class="type ">Niso</div>
+                                                <div class="indicator not ">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                <% }%>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="card-footer">
+        <div class="card-circle-button card-share"></div>
+        <div class="card-circle-button card-embed">&lt;/&gt;</div>
+        <div class="card-circle-button card-info">i</div>
+    </div>
+</div>
+<!-- everything below here is part of the page and not part of the card -->
+
+<!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+<!-- inline temp/js/script.js as <script> -->
+<script data-inline="true" src="js/script.js"></script>
+
+</body> <!-- removeme -->
+
+</html> <!-- removeme -->
