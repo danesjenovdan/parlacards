@@ -357,7 +357,7 @@ function drawLabels(data) {
             .attr("d", function(d) {
                 console.log(d);
                 if (d.cx > d.ox) { //|| Math.abs(d.cx) < 0.1) {
-                    return "M" + d.sx + "," + d.sy + "L" + d.cx * 1.9 + "," + d.cy * 1.9;
+                    return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
                 } else {
                     if ((d.endx > 0) && (Math.abs(d.cx) < 10)) {
                         return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
