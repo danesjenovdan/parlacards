@@ -268,7 +268,7 @@ function drawLabels(data) {
             return d.y = Math.sin(a) * (radius * 1.5 + 20);
         })
         .text(function(d) {
-            return d.data.acronym;
+            return d.data.acronym + ' | ' + d.data.total_votes;
         })
         .each(function(d) {
             var bbox = this.getBBox();
@@ -278,10 +278,11 @@ function drawLabels(data) {
         });
 
     var alpha = 0.5;
-    var spacingY = 14;
-    var spacingX = 24;
+    var spacingY = 20;
+    var spacingX = 20;
 
     function relax() {
+
         again = false;
         labels.each(function(d, i) {
             a = this;
@@ -299,29 +300,79 @@ function drawLabels(data) {
                 deltaY = y1 - y2;
                 deltaX = x1 - x2;
 
-                if ((Math.abs(deltaY) > spacingY) || (Math.abs(deltaX) > spacingX)) return;
-                // if (Math.abs(deltaX) > spacingY) return;
-
-                // if we didn't break until now, labels are overlapping
-                again = true;
-                sign = deltaY > 0 ? 1 : -1;
-                adjust = sign * alpha;
-                da.attr('y', +y1 + adjust);
-                db.attr('y', +y2 - adjust);
-
-                // update line coordinates
-                da.sy = da.oy = da.y + 5;
-                db.sy = db.oy = db.y + 5;
-
-                if (again) {
-                    setTimeout(relax, 20);
+                // handle Y spacing
+                if (Math.abs(deltaY) > spacingY) {
+                    return;
+                } else {
+                    // if we didn't break until now, labels are overlapping
+                    again = true;
+                    sign = deltaY > 0 ? 1 : -1;
+                    adjust = sign * alpha;
+                    da.attr('y', +y1 + adjust);
+                    db.attr('y', +y2 - adjust);
                 }
+
+                // handle X spacing
+                if (Math.abs(deltaX) > spacingX) {
+                    return;
+                } else {
+                    // if we didn't break until now, labels are overlapping
+                    again = true;
+                    sign = deltaX > 0 ? 1 : -1;
+                    adjust = sign * alpha;
+                    da.attr('x', +x1 + adjust);
+                    db.attr('x', +x2 - adjust);
+                }
+
             });
         });
+
+        if (again) {
+            setTimeout(relax, 20);
+        } else {
+            drawLines();
+        }
 
     }
 
     relax();
+
+    function drawLines() {
+
+        labels.each(function(d) {
+            var thing = d3.select(this);
+            var bbox = this.getBBox();
+            d.sx = +thing.attr('x') - bbox.width / 2 - 2;
+            d.ox = +thing.attr('x') + bbox.width / 2 + 2;
+            d.sy = d.oy = +thing.attr('y') + 5;
+            d.endx = +thing.attr('x') + bbox.width;
+        });
+
+        svg.selectAll("path.pointer").data(piedata).enter()
+            .append("path")
+            .attr("class", "pointer")
+            .style("fill", "none")
+            // .style("stroke", "black")
+            .attr("marker-end", "url(#circ)")
+            .attr("d", function(d) {
+                console.log(d);
+                if (d.cx > d.ox) { //|| Math.abs(d.cx) < 0.1) {
+                    return "M" + d.sx + "," + d.sy + "L" + d.cx * 1.9 + "," + d.cy * 1.9;
+                } else {
+                    if ((d.endx > 0) && (Math.abs(d.cx) < 10)) {
+                        return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+                    }
+                    return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+                }
+            })
+            .style('display', function(d) {
+                if (+d.data.percentage === 0) {
+                    return 'none';
+                } else {
+                    return 'block';
+                }
+            });
+    }
 
     // svg.selectAll("path.pointer").data(piedata).enter()
     //     .append("path")
