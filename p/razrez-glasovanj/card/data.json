@@ -1,0 +1,122 @@
+{
+    "person": {
+        "gov_id": "P239",
+        "id": 2,
+        "name": "Anja Bah Žibert",
+        "party": {
+            "acronym": "SDS",
+            "id": 5,
+            "name": "PS Slovenska Demokratska Stranka"
+        }
+    },
+    "results": {
+        "absent": {
+            "avgCoalition": {
+                "score": 10
+            },
+            "avgOpposition": {
+                "score": 30
+            },
+            "maxCoalition": {
+                "mps": [{
+                    "gov_id": "P246",
+                    "id": 14,
+                    "name": "Tanja Cink"
+                }],
+                "score": 26
+            },
+            "maxOpposition": {
+                "mps": [{
+                    "gov_id": "P025",
+                    "id": 36,
+                    "name": "Janez Janša"
+                }],
+                "score": 39
+            },
+            "score": 18
+        },
+        "abstain": {
+            "avgCoalition": {
+                "score": 0
+            },
+            "avgOpposition": {
+                "score": 10
+            },
+            "maxCoalition": {
+                "mps": [{
+                    "gov_id": "P207",
+                    "id": 85,
+                    "name": "Peter Vilfan"
+                }],
+                "score": 3
+            },
+            "maxOpposition": {
+                "mps": [{
+                    "gov_id": "P117",
+                    "id": 24,
+                    "name": "László Göncz"
+                }],
+                "score": 26
+            },
+            "score": 8
+        },
+        "against": {
+            "avgCoalition": {
+                "score": 37
+            },
+            "avgOpposition": {
+                "score": 13
+            },
+            "maxCoalition": {
+                "mps": [{
+                    "gov_id": "P293",
+                    "id": 87,
+                    "name": "Simon Zajc"
+                }, {
+                    "gov_id": "P282",
+                    "id": 71,
+                    "name": "Danilo Anton Ranc"
+                }],
+                "score": 30
+            },
+            "maxOpposition": {
+                "mps": [{
+                    "gov_id": "P289",
+                    "id": 80,
+                    "name": "Violeta Tomić"
+                }],
+                "score": 19
+            },
+            "score": 9
+        },
+        "for": {
+            "avgCoalition": {
+                "score": 51
+            },
+            "avgOpposition": {
+                "score": 45
+            },
+            "maxCoalition": {
+                "mps": [{
+                    "gov_id": "P240",
+                    "id": 3,
+                    "name": "Urška Ban"
+                }, {
+                    "gov_id": "P293",
+                    "id": 87,
+                    "name": "Simon Zajc"
+                }],
+                "score": 40
+            },
+            "maxOpposition": {
+                "mps": [{
+                    "gov_id": "P292",
+                    "id": 86,
+                    "name": "Jernej Vrtovec"
+                }],
+                "score": 42
+            },
+            "score": 34
+        }
+    }
+}
