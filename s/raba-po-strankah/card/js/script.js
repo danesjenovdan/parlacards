@@ -34,10 +34,10 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
         }
 
         var margin = {
-            top: 50,
-            right: 50,
-            bottom: 50,
-            left: 50
+            top: 60,
+            right: 60,
+            bottom: 60,
+            left: 60
         };
         var width = 400 - margin.left - margin.right;
         var height = 400 - margin.top - margin.bottom;
@@ -47,12 +47,12 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
             .range(["#8FCFEE", "#4FB5E6", "#AA7375", "#534961", "#4F6379", "#5388AA", "#D9776B", "#BA594C"]);
 
         var arc = d3.svg.arc()
-            .outerRadius(radius - 10)
+            .outerRadius(radius - 30)
             .innerRadius(0);
 
 
         var labelArc = d3.svg.arc()
-            .outerRadius(radius - 50)
+            .outerRadius(radius)
             .innerRadius(radius - 100);
 
 
@@ -100,7 +100,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
                 return d.y = Math.sin(a) * (radius + 20);
             })
             .text(function(d) {
-                return parties[d.data.party]['acronym'] + ' | ' + d.data.percentage + '%';
+                return parties[d.data.party]['acronym'] + ' | ' + d.data.percentage + ' %';
             })
             .style('display', function(d) {
                 if (+d.data.percentage === 0) {
