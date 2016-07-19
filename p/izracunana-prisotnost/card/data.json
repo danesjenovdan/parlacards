@@ -1,0 +1,75 @@
+{
+    "person": {
+        "gov_id": "P239",
+        "id": 2,
+        "name": "Anja Bah Žibert",
+        "party": {
+            "acronym": "SDS",
+            "id": 5,
+            "name": "PS Slovenska Demokratska Stranka"
+        }
+    },
+    "results": {
+        "sessions": {
+            "average": 86,
+            "max": {
+                "mps": [{
+                    "gov_id": "P240",
+                    "id": 3,
+                    "name": "Urška Ban",
+                    "party": {
+                        "acronym": "SMC",
+                        "id": 1,
+                        "name": "PS Stranka modernega centra"
+                    }
+                }, {
+                    "gov_id": "P274",
+                    "id": 60,
+                    "name": "Jasna Murgel",
+                    "party": {
+                        "acronym": "SMC",
+                        "id": 1,
+                        "name": "PS Stranka modernega centra"
+                    }
+                }, {
+                    "gov_id": "P275",
+                    "id": 61,
+                    "name": "Bojana Muršič",
+                    "party": {
+                        "acronym": "SD",
+                        "id": 7,
+                        "name": "PS Socialni Demokrati"
+                    }
+                }, {
+                    "gov_id": "P129",
+                    "id": 49,
+                    "name": "Zvonko Lah",
+                    "party": {
+                        "acronym": "SDS",
+                        "id": 5,
+                        "name": "PS Slovenska Demokratska Stranka"
+                    }
+                }],
+                "score": 100
+            },
+            "score": 80
+        },
+        "votes": {
+            "average": 80,
+            "max": {
+                "mps": [{
+                    "gov_id": "P240",
+                    "id": 3,
+                    "name": "Urška Ban",
+                    "party": {
+                        "acronym": "SMC",
+                        "id": 1,
+                        "name": "PS Stranka modernega centra"
+                    }
+                }],
+                "score": 99
+            },
+            "score": 74
+        }
+    }
+}

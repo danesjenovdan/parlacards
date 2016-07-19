@@ -1,0 +1,211 @@
+<!DOCTYPE html><!-- removeme -->
+<html><!-- removeme -->
+
+    <head><!-- removeme -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/><!-- removeme -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><!-- removeme -->
+
+        <!-- build:remove -->
+        <!-- these script files are removed on build -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
+        <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+        <%# <script src="https://raw.githubusercontent.com/twbs/bootstrap/master/js/tab.js"></script>%>
+        <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+        <!-- endbuild -->
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"><!-- removeme -->
+        <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"><!-- removeme -->
+        <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"><!-- removeme -->
+
+        <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+        <link data-inline="true" rel="stylesheet" href="css/style.css">
+
+    </head><!-- removeme -->
+
+    <body><!-- removeme -->
+
+        <!-- everything above here is part of the page and not part of the card -->
+        <div class="card-container card-halfling">
+            <div class="card-header">
+                <div class="card-header-border"></div>
+                <h1>Izračunana prisotnost</h1>
+                <!-- this text is the only thing you touch in .card-header -->
+            </div>
+            <div class="card-content">
+                <div class="bgwhite poslanec poslanec-small">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#prisotnost_na_sejah" aria-controls="Prisotnost na sejah DZ" role="tab" data-toggle="tab">Prisotnost na sejah DZ</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#prisotnost_na_glasovanjih" aria-controls="Prisotnost na glasovanjih sej DZ" role="tab" data-toggle="tab">Prisotnost na glasovanjih sej DZ</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="prisotnost_na_sejah">
+
+                            <div class="me_poslanec clearfix">
+                                <div class="col150">
+                                    <span class="poslanec_title">
+                                        <%= data.person.name %>
+                                    </span>
+                                </div>
+                                <div class="col280">
+                                    <div class="progress hugebar ">
+                                        <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.sessions.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.score %>%;">
+                                            <span class="sr-only"><%= data.results.sessions.score %>% Complete</span>
+                                        </div>
+                                        <div class="progress_number">
+                                            <%= data.results.sessions.score %>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="other_poslanec clearfix">
+                                <div class="col150">
+                                    <span class="poslanec_title">
+                                        Povprečje
+                                    </span>
+                                </div>
+                                <div class="col280">
+                                    <div class="progress smallbar avgmin">
+                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.sessions.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.average %>%;">
+                                            <span class="sr-only"><%= data.results.sessions.average %>% Complete</span>
+                                        </div>
+                                        <div class="progress_number">
+                                            <%= data.results.sessions.average %>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="other_poslanec clearfix">
+                                <div class="col150">
+                                    <span class="poslanec_title">
+                                        Največ
+                                    </span>
+                                </div>
+                                <div class="col280">
+                                    <div class="progress smallbar avgminmin">
+                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.sessions.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.max.score %>%;">
+                                            <span class="sr-only"><%= data.results.sessions.max.score %>% Complete</span>
+                                        </div>
+                                        <%
+
+                                        if (data.results.sessions.max.mps) {
+                                            for (var i = 0; i < data.results.sessions.max.mps.length; i++) {
+
+                                        %>
+                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.sessions.max.mps.length - i) %>px; background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.results.sessions.max.mps[i]['gov_id'] %>.png');"></div>
+                                        <%
+                                            }
+                                        }
+                                        %>
+                                        <div class="progress_number">
+                                            <%= data.results.sessions.max.score %>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="prisotnost_na_glasovanjih">
+
+                            <div class="me_poslanec clearfix">
+                                <div class="col150">
+                                    <span class="poslanec_title">
+                                        <%= data.person.name %>
+                                    </span>
+                                </div>
+                                <div class="col280">
+                                    <div class="progress hugebar ">
+                                        <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.votes.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.votes.score %>%;">
+                                            <span class="sr-only"><%= data.results.votes.score %>% Complete</span>
+                                        </div>
+                                        <div class="progress_number">
+                                            <%= data.results.votes.score %>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="other_poslanec clearfix">
+                                <div class="col150">
+                                    <span class="poslanec_title">
+                                        Povprečje
+                                    </span>
+                                </div>
+                                <div class="col280">
+                                    <div class="progress smallbar avgmin">
+                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.votes.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.votes.average %>%;">
+                                            <span class="sr-only"><%= data.results.votes.average %>% Complete</span>
+                                        </div>
+                                        <div class="progress_number">
+                                            <%= data.results.votes.average %>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="other_poslanec clearfix">
+                                <div class="col150">
+                                    <span class="poslanec_title">
+                                        Največ
+                                    </span>
+                                </div>
+                                <div class="col280">
+                                    <div class="progress smallbar avgminmin">
+                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.votes.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.votes.max.score %>%;">
+                                            <span class="sr-only"><%= data.results.votes.max.score %>% Complete</span>
+                                        </div>
+                                        <%
+
+                                        if (data.results.votes.max.mps) {
+                                            for (var i = 0; i < data.results.votes.max.mps.length; i++) {
+
+                                        %>
+                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.votes.max.mps.length - i) %>px; background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.results.votes.max.mps[i]['gov_id'] %>.png');"></div>
+                                        <%
+                                            }
+                                        }
+                                        %>
+                                        <div class="progress_number">
+                                            <%= data.results.votes.max.score %>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- delete this placeholder, this is the content of your card -->
+            </div>
+            <div class="card-footer">
+                <div class="card-circle-button card-share"></div>
+                <div class="card-circle-button card-embed"></div>
+                <div class="card-circle-button card-info">i</div>
+            </div>
+        </div>
+        <!-- everything below here is part of the page and not part of the card -->
+
+        <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+        <!-- inline temp/js/script.js as <script> -->
+        <script data-inline="true" src="js/script.js"></script>
+
+    </body><!-- removeme -->
+
+</html><!-- removeme -->
