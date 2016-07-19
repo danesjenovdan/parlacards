@@ -52,6 +52,15 @@
 
                 <div class="bgwhite poslanec">
 
+                    <!-- prepare data -->
+                    <%#
+                        for (var i = 0; i < data.results.absent.maxCoalition.parties.length; i++) {
+                            if (data.results.absent.maxCoalition.parties[i].acronym === 'DeSUS') {
+                                data.results.absent.maxCoalition.parties[i].acronym = 'De<br />SUS'
+                            }
+                        }
+                    %>
+
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active">
@@ -75,7 +84,7 @@
                             <div class="me_poslanec clearfix">
                                 <div class="col150">
                                     <span class="poslanec_title">
-                                        <%= data.person.name %>
+                                        <%= data.organization.name %>
                                     </span>
                                 </div>
                                 <div class="col280">
@@ -123,11 +132,11 @@
                                         </div>
                                         <%
 
-                                        if (data.results.for.maxOpposition.mps) {
-                                            for (var i = 0; i < data.results.for.maxOpposition.mps.length; i++) {
+                                        if (data.results.for.maxOpposition.parties) {
+                                            for (var i = 0; i < data.results.for.maxOpposition.parties.length; i++) {
 
                                         %>
-                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.mps.length - i) %>px; background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.results.for.maxOpposition.mps[i]['gov_id'] %>.png');"></div>
+                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.for.maxOpposition.parties[i]['acronym'] %></div>
                                         <%
                                             }
                                         }
@@ -172,11 +181,11 @@
                                         </div>
                                         <%
 
-                                        if (data.results.for.maxCoalition.mps) {
-                                            for (var i = 0; i < data.results.for.maxCoalition.mps.length; i++) {
+                                        if (data.results.for.maxCoalition.parties) {
+                                            for (var i = 0; i < data.results.for.maxCoalition.parties.length; i++) {
 
                                         %>
-                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.mps.length - i) %>px; background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.results.for.maxCoalition.mps[i]['gov_id'] %>.png');"></div>
+                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.for.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.for.maxCoalition.parties[i]['acronym'] %></div>
                                         <%
                                             }
                                         }
@@ -195,7 +204,7 @@
                             <div class="me_poslanec clearfix">
                                 <div class="col150">
                                     <span class="poslanec_title">
-                                        <%= data.person.name %>
+                                        <%= data.organization.name %>
                                     </span>
                                 </div>
                                 <div class="col280">
@@ -243,11 +252,11 @@
                                         </div>
                                         <%
 
-                                        if (data.results.against.maxOpposition.mps) {
-                                            for (var i = 0; i < data.results.against.maxOpposition.mps.length; i++) {
+                                        if (data.results.against.maxOpposition.parties) {
+                                            for (var i = 0; i < data.results.against.maxOpposition.parties.length; i++) {
 
                                         %>
-                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.mps.length - i) %>px; background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.results.against.maxOpposition.mps[i]['gov_id'] %>.png');"></div>
+                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.against.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.against.maxOpposition.parties[i]['acronym'] %></div>
                                         <%
                                             }
                                         }
@@ -292,11 +301,11 @@
                                         </div>
                                         <%
 
-                                        if (data.results.against.maxCoalition.mps) {
-                                            for (var i = 0; i < data.results.against.maxCoalition.mps.length; i++) {
+                                        if (data.results.against.maxCoalition.parties) {
+                                            for (var i = 0; i < data.results.against.maxCoalition.parties.length; i++) {
 
                                         %>
-                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.mps.length - i) %>px; background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.results.against.maxCoalition.mps[i]['gov_id'] %>.png');"></div>
+                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.against.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.against.maxCoalition.parties[i]['acronym'] %></div>
                                         <%
                                             }
                                         }
@@ -315,7 +324,7 @@
                             <div class="me_poslanec clearfix">
                                 <div class="col150">
                                     <span class="poslanec_title">
-                                        <%= data.person.name %>
+                                        <%= data.organization.name %>
                                     </span>
                                 </div>
                                 <div class="col280">
@@ -363,11 +372,11 @@
                                         </div>
                                         <%
 
-                                        if (data.results.abstain.maxOpposition.mps) {
-                                            for (var i = 0; i < data.results.abstain.maxOpposition.mps.length; i++) {
+                                        if (data.results.abstain.maxOpposition.parties) {
+                                            for (var i = 0; i < data.results.abstain.maxOpposition.parties.length; i++) {
 
                                         %>
-                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.mps.length - i) %>px; background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.results.abstain.maxOpposition.mps[i]['gov_id'] %>.png');"></div>
+                                        <div class="avgminimg avgminimg-party avgminimg avgminimg-party-party img-circle" style="margin-left: <%= -30 * (data.results.abstain.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.abstain.maxOpposition.parties[i]['acronym'] %></div>
                                         <%
                                             }
                                         }
@@ -412,11 +421,11 @@
                                         </div>
                                         <%
 
-                                        if (data.results.abstain.maxCoalition.mps) {
-                                            for (var i = 0; i < data.results.abstain.maxCoalition.mps.length; i++) {
+                                        if (data.results.abstain.maxCoalition.parties) {
+                                            for (var i = 0; i < data.results.abstain.maxCoalition.parties.length; i++) {
 
                                         %>
-                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.mps.length - i) %>px; background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.results.abstain.maxCoalition.mps[i]['gov_id'] %>.png');"></div>
+                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.abstain.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.abstain.maxCoalition.parties[i]['acronym'] %></div>
                                         <%
                                             }
                                         }
@@ -435,7 +444,7 @@
                             <div class="me_poslanec clearfix">
                                 <div class="col150">
                                     <span class="poslanec_title">
-                                        <%= data.person.name %>
+                                        <%= data.organization.name %>
                                     </span>
                                 </div>
                                 <div class="col280">
@@ -483,11 +492,11 @@
                                         </div>
                                         <%
 
-                                        if (data.results.absent.maxOpposition.mps) {
-                                            for (var i = 0; i < data.results.absent.maxOpposition.mps.length; i++) {
+                                        if (data.results.absent.maxOpposition.parties) {
+                                            for (var i = 0; i < data.results.absent.maxOpposition.parties.length; i++) {
 
                                         %>
-                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.mps.length - i) %>px; background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.results.absent.maxOpposition.mps[i]['gov_id'] %>.png');"></div>
+                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.absent.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.absent.maxOpposition.parties[i]['acronym'] %></div>
                                         <%
                                             }
                                         }
@@ -532,11 +541,11 @@
                                         </div>
                                         <%
 
-                                        if (data.results.absent.maxCoalition.mps) {
-                                            for (var i = 0; i < data.results.absent.maxCoalition.mps.length; i++) {
+                                        if (data.results.absent.maxCoalition.parties) {
+                                            for (var i = 0; i < data.results.absent.maxCoalition.parties.length; i++) {
 
                                         %>
-                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.mps.length - i)  %>px; background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.results.absent.maxCoalition.mps[i]['gov_id'] %>.png');"></div>
+                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.absent.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.absent.maxCoalition.parties[i]['acronym'] %></div>
                                         <%
                                             }
                                         }

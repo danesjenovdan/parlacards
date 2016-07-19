@@ -1,0 +1,129 @@
+{
+    "organization": {
+        "acronym": "ZAAB",
+        "id": 4,
+        "name": "PS Zavezništvo Alenke Bratušek"
+    },
+    "results": {
+        "absent": {
+            "avgCoalition": {
+                "score": 8
+            },
+            "avgOpposition": {
+                "score": 27
+            },
+            "maxCoalition": {
+                "parties": [{
+                    "acronym": "DeSUS",
+                    "id": 3,
+                    "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                }],
+                "score": 2
+            },
+            "maxOpposition": {
+                "parties": [{
+                    "acronym": "ZL",
+                    "id": 8,
+                    "name": "PS Združena Levica"
+                }],
+                "score": 8
+            },
+            "score": 6
+        },
+        "abstain": {
+            "avgCoalition": {
+                "score": 0
+            },
+            "avgOpposition": {
+                "score": 11
+            },
+            "maxCoalition": {
+                "parties": [{
+                    "acronym": "DeSUS",
+                    "id": 3,
+                    "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                }, {
+                    "acronym": "SD",
+                    "id": 7,
+                    "name": "PS Socialni Demokrati"
+                }, {
+                    "acronym": "SMC",
+                    "id": 1,
+                    "name": "PS Stranka modernega centra"
+                }],
+                "score": 0
+            },
+            "maxOpposition": {
+                "parties": [{
+                    "acronym": "IMNS",
+                    "id": 2,
+                    "name": "PS italijanske in madžarske narodne skupnosti"
+                }],
+                "score": 4
+            },
+            "score": 1
+        },
+        "against": {
+            "avgCoalition": {
+                "score": 26
+            },
+            "avgOpposition": {
+                "score": 17
+            },
+            "maxCoalition": {
+                "parties": [{
+                    "acronym": "DeSUS",
+                    "id": 3,
+                    "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                }, {
+                    "acronym": "SD",
+                    "id": 7,
+                    "name": "PS Socialni Demokrati"
+                }, {
+                    "acronym": "SMC",
+                    "id": 1,
+                    "name": "PS Stranka modernega centra"
+                }],
+                "score": 5
+            },
+            "maxOpposition": {
+                "parties": [{
+                    "acronym": "ZL",
+                    "id": 8,
+                    "name": "PS Združena Levica"
+                }, {
+                    "acronym": "SDS",
+                    "id": 5,
+                    "name": "PS Slovenska Demokratska Stranka"
+                }],
+                "score": 4
+            },
+            "score": 3
+        },
+        "for": {
+            "avgCoalition": {
+                "score": 63
+            },
+            "avgOpposition": {
+                "score": 43
+            },
+            "maxCoalition": {
+                "parties": [{
+                    "acronym": "SMC",
+                    "id": 1,
+                    "name": "PS Stranka modernega centra"
+                }],
+                "score": 13
+            },
+            "maxOpposition": {
+                "parties": [{
+                    "acronym": "IMNS",
+                    "id": 2,
+                    "name": "PS italijanske in madžarske narodne skupnosti"
+                }],
+                "score": 11
+            },
+            "score": 9
+        }
+    }
+}
