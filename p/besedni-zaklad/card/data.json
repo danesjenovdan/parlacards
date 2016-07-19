@@ -1,0 +1,29 @@
+{
+    "person": {
+        "gov_id": "P267",
+        "id": 50,
+        "name": "Franc Laj",
+        "party": {
+            "acronym": "SMC",
+            "id": 1,
+            "name": "PS Stranka modernega centra"
+        }
+    },
+    "results": {
+        "average": 1450.8791208791199,
+        "max": {
+            "mps": [{
+                "gov_id": "P077",
+                "id": 78,
+                "name": "Jože Tanko",
+                "party": {
+                    "acronym": "SDS",
+                    "id": 5,
+                    "name": "PS Slovenska Demokratska Stranka"
+                }
+            }],
+            "score": 3979.0
+        },
+        "score": 346.0
+    }
+}
