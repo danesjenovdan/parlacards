@@ -33,6 +33,23 @@
                 <!-- this text is the only thing you touch in .card-header -->
             </div>
             <div class="card-content">
+
+                <!-- get random id -->
+                <%
+                    function makeid() {
+                        var text = "";
+                        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                        for( var i=0; i < 5; i++ ) {
+                            text += possible.charAt(Math.floor(Math.random() * possible.length));
+                        }
+
+                        return text;
+                    }
+
+                    var random_id = makeid();
+                %>
+
                 <div class="bgwhite poslanec">
 
                     <!-- prepare data -->
@@ -47,22 +64,22 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active">
-                            <a href="#Glasovala_ZA" aria-controls="ZA" role="tab" data-toggle="tab">ZA</a>
+                            <a href="#Glasovala_ZA<%= random_id %>" aria-controls="ZA" role="tab" data-toggle="tab">ZA</a>
                         </li>
                         <li role="presentation">
-                            <a href="#Glasovala_PROTI" aria-controls="PROTI" role="tab" data-toggle="tab">PROTI</a>
+                            <a href="#Glasovala_PROTI<%= random_id %>" aria-controls="PROTI" role="tab" data-toggle="tab">PROTI</a>
                         </li>
                         <li role="presentation">
-                            <a href="#se_VZDRŽALA" aria-controls="se VZDRŽALA" role="tab" data-toggle="tab">se VZDRŽALA</a>
+                            <a href="#se_VZDRŽALA<%= random_id %>" aria-controls="se VZDRŽALA" role="tab" data-toggle="tab">se VZDRŽALA</a>
                         </li>
                         <li role="presentation">
-                            <a href="#NI_glasovala" aria-controls="NI glasovala" role="tab" data-toggle="tab">NI glasovala</a>
+                            <a href="#NI_glasovala<%= random_id %>" aria-controls="NI glasovala" role="tab" data-toggle="tab">NI glasovala</a>
                         </li>
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="Glasovala_ZA">
+                        <div role="tabpanel" class="tab-pane active" id="Glasovala_ZA<%= random_id %>">
 
                             <div class="me_poslanec clearfix">
                                 <div class="col150">
@@ -182,7 +199,7 @@
                             </div>
 
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="Glasovala_PROTI">
+                        <div role="tabpanel" class="tab-pane" id="Glasovala_PROTI<%= random_id %>">
 
                             <div class="me_poslanec clearfix">
                                 <div class="col150">
@@ -302,7 +319,7 @@
                             </div>
 
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="se_VZDRŽALA">
+                        <div role="tabpanel" class="tab-pane" id="se_VZDRŽALA<%= random_id %>">
 
                             <div class="me_poslanec clearfix">
                                 <div class="col150">
@@ -422,7 +439,7 @@
                             </div>
 
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="NI_glasovala">
+                        <div role="tabpanel" class="tab-pane" id="NI_glasovala<%= random_id %>">
 
                             <div class="me_poslanec clearfix">
                                 <div class="col150">
