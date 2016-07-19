@@ -26,41 +26,45 @@
 <body> <!-- removeme -->
 
 
-<!-- everything above here is part of the page and not part of the card -->
+    <!-- everything above here is part of the page and not part of the card -->
+    <!--
+    https://analize.parlameter.si/v1/s/getPresenceOfPG/3072
+     -->
+
+
 <div class="card-container card-halfling">
     <div class="card-header">
         <div class="card-header-border"></div>
-        <h1>Največkrat so pojem uporabili</h1>
+        <h1>Prisotnost po poslanskih skupinah</h1>
         <!-- this text is the only thing you touch in .card-header -->
     </div>
     <div class="card-content">
-
-        <div  id="votingCard">
-
-            <div id="scrollbar-voting-card" class="scroller">
-<% var facet = data.facet_counts.facet_fields.speaker_i; %>
-
-                <% var i=0; for (var fce in facet) { %>
-<% console.log(fce); %>
-<% console.log(facet[fce]); %>
+        <div class="card-placeholder bgwhite presence-of-pg" style="">
 
 
 
-                <div class="member <%= ((facet.length-1) == i) ? 'lastel' : ''; %>">
-                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= fce %>.png); background-size: cover;"></div>
-                    <p><%= fce %>
+            <div class="clearfix">
+                <% var i = 1; for (ps in data) { %>
 
-                        <br/><%= fce %></p>
-                    <span><%= facet[fce] %></span>
-                    <div class="clearfix"></div>
+                <div class="pspris">
+                    <span><%= data[ps].percent %> %</span>
+                    <font><%= data[ps].acronym %></font>
+                    <div class="" style="">
+                        <div class="border" style="width: <%= data[ps].percent %>%;"></div>
+                    </div>
                 </div>
 
-                <% i++; } %>
 
+                <% i++; }%>
             </div>
 
-        </div>
 
+
+
+
+
+        </div>
+        <!-- delete this placeholder, this is the content of your card -->
     </div>
     <div class="card-footer">
         <div class="card-circle-button card-share"></div>
@@ -68,11 +72,14 @@
         <div class="card-circle-button card-info">i</div>
     </div>
 </div>
-<!-- everything below here is part of the page and not part of the card -->
 
-<!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
-<!-- inline temp/js/script.js as <script> -->
-<script data-inline="true" src="js/script.js"></script>
+
+
+    <!-- everything below here is part of the page and not part of the card -->
+
+    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <!-- inline temp/js/script.js as <script> -->
+    <script data-inline="true" src="js/script.js"></script>
 
 </body> <!-- removeme -->
 

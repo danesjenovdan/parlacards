@@ -1,0 +1,50 @@
+[
+  {
+    "acronym": "SMC",
+    "percent": 72,
+    "id": 1,
+    "name": "PS Stranka modernega centra"
+  },
+  {
+    "acronym": "DeSUS",
+    "percent": 72,
+    "id": 3,
+    "name": "PS Demokratska Stranka Upokojencev Slovenije"
+  },
+  {
+    "acronym": "IMNS",
+    "percent": 60,
+    "id": 2,
+    "name": "PS italijanske in mad\u017earske narodne skupnosti"
+  },
+  {
+    "acronym": "SDS",
+    "percent": 69,
+    "id": 5,
+    "name": "PS Slovenska Demokratska Stranka"
+  },
+  {
+    "acronym": "SD",
+    "percent": 60,
+    "id": 7,
+    "name": "PS Socialni Demokrati"
+  },
+  {
+    "acronym": "NSI",
+    "percent": 60,
+    "id": 6,
+    "name": "PS Nova Slovenija"
+  },
+  {
+    "acronym": "ZL",
+    "percent": 66,
+    "id": 8,
+    "name": "PS Zdru\u017eena Levica"
+  },
+  {
+    "acronym": "PS NP",
+    "percent": 120,
+    "id": 97,
+    "name": "PS nepovezanih poslancev"
+  }
+]

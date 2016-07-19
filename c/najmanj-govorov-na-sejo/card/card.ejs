@@ -1,0 +1,74 @@
+<!DOCTYPE html> <!-- removeme -->
+<html> <!-- removeme -->
+
+    <head> <!-- removeme -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!-- removeme -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+
+        <!-- build:remove -->
+        <!-- these script files are removed on build -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
+        <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+        <!-- endbuild -->
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+        <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
+        <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+
+        <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+        <link data-inline="true" rel="stylesheet" href="css/style.css">
+
+    </head> <!-- removeme -->
+
+    <body> <!-- removeme -->
+
+        <!-- everything above here is part of the page and not part of the card -->
+        <!-- //https://analize.parlameter.si/v1/s/getMinSpeechesOnSession/23.12.2014 -->
+
+        <div class="card-container card-halfling">
+            <div class="card-header">
+                <div class="card-header-border"></div>
+                <h1>Najmanj govorov na sejo</h1>
+                <!-- this text is the only thing you touch in .card-header -->
+            </div>
+            <div class="card-content">
+
+                <div id="votingCard">
+
+                    <div id="scrollbar-voting-card" class="scroller">
+
+                        <% var i = 1; for (person in data) { %>
+
+                            <div class="member <%= (data.length == i) ? 'lastel' : ''; %>">
+                                <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data[person].gov_id %>.png); background-size: cover;"></div>
+                                <p><%= data[person].name %>
+                                    <br/><%= data[person].party.acronym %></p>
+                                <span><%= data[person].speeches.toFixed(2) %></span>
+                                <div class="clearfix"></div>
+                            </div>
+
+                        <% i++; }%>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <div class="card-circle-button card-share"></div>
+                <div class="card-circle-button card-embed">&lt;/&gt;</div>
+                <div class="card-circle-button card-info">i</div>
+            </div>
+        </div>
+        <!-- everything below here is part of the page and not part of the card -->
+
+        <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+        <!-- inline temp/js/script.js as <script> -->
+        <script data-inline="true" src="js/script.js"></script>
+
+    </body> <!-- removeme -->
+
+</html> <!-- removeme -->
