@@ -41,6 +41,8 @@
     <div class="card-content">
         <div class="card-placeholder bgwhite presence-of-pg" style="">
 
+            <% var colors = ["#197197", "#8cb8cb","#009cdd","#d9e7ed","#00628c","#003B54","#99E1FF","#ff5e41","#acc501"]; %>
+
 
 
             <div class="clearfix">
@@ -50,7 +52,7 @@
                     <span><%= data[ps].percent %> %</span>
                     <font><%= data[ps].acronym %></font>
                     <div class="" style="">
-                        <div class="border" style="width: <%= data[ps].percent %>%;"></div>
+                        <div class="border" style="width: <%= data[ps].percent %>%; background-color: <%=colors[ps]%>;"></div>
                     </div>
                 </div>
 

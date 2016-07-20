@@ -2,8 +2,9 @@
 <html> <!-- removeme -->
 
 <head> <!-- removeme -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- removeme -->
 
     <!-- build:remove -->
     <!-- these script files are removed on build -->
@@ -13,9 +14,12 @@
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
     <!-- endbuild -->
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"
+          data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false"
+          data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false"
+          data-concat="false"> <!-- removeme -->
 
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
@@ -25,101 +29,99 @@
 <body> <!-- removeme -->
 
 
-    <!-- everything above here is part of the page and not part of the card -->
-    <div class="card-container card-halfling">
-        <div class="card-header">
-            <div class="card-header-border"></div>
-            <h1>Zadnje aktivnosti</h1>
-            <!-- this text is the only thing you touch in .card-header -->
-        </div>
-        <div class="card-content recent-activity">
-            <div class="scroller" id="scrollbar-recent-activity">
-
-                <% for (var i=0; i < data.results.length; i++) {
-                    var day = data.results[i];
-                %>
-
-                <section>
-                    <span class="date"><%= day.date.split('-')[2] %>. <%= day.date.split('-')[1] %>. <%= day.date.split('-')[0] %></span>
-
-                    <ul>
-
-                        <% for (var j=0; j < day.events.length; j++) {
-                            var event = day.events[j];
-                            var icon = '';
-                            var verb = '';
-                            var thing = '';
-
-                            if(event.type === 'ballot'){
-
-                                switch(event.option){
-                                    case 'za':
-                                        icon = 'parlaicon-za';
-                                        verb = 'Glasovala ZA';
-                                        break;
-                                    case 'proti':
-                                        icon = 'parlaicon-proti';
-                                        verb = 'Glasovala PROTI';
-                                        break;
-                                    case 'ni':
-                                        icon = 'parlaicon-ni';
-                                        verb = 'NI glasovala za';
-                                        break;
-                                }
-
-                                thing = event.vote_name;
-                            %>
-
-                            <li>
-                                <span class="parlaicon <%= icon %>"></span>
-                                <p><%= verb %> <a href="#"><%= thing %></a></p>
-                            </li>
-
-                            <%
-
-                            } else {
-                                icon = 'parlaicon-govor';
-                                verb = 'Govorila';
-                                thing = event.session_name;
-
-                            %>
-
-                            <li>
-                                <span class="parlaicon <%= icon %>"></span>
-                                <p><a href="#"><%= verb %></a>&nbsp;na&nbsp;<a href="#"><%= thing %></a></p>
-                            </li>
-
-                            <%
-
-                            }
-                        %>
-
-                        <% } %>
-
-                        <!-- <li>
-                            <span class="glyphicon glyphicon-ban-circle"></span>
-                            <p>Se VZDRŽALA glasovanja o <a href="#">Sklepu o imenovanju člana nadzornega sveta RTV</a></p>
-                        </li> -->
-                    </ul>
-
-                </section>
-
-                <% } %>
-
-            </div>
-            <!-- delete this placeholder, this is the content of your card -->
-        </div>
-        <div class="card-footer">
-            <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed"></div>
-            <div class="card-circle-button card-info">i</div>
-        </div>
+<!-- everything above here is part of the page and not part of the card -->
+<div class="card-container card-halfling">
+    <div class="card-header">
+        <div class="card-header-border"></div>
+        <h1>Zadnje aktivnosti</h1>
+        <!-- this text is the only thing you touch in .card-header -->
     </div>
-    <!-- everything below here is part of the page and not part of the card -->
+    <div class="card-content recent-activity">
+        <div class="scroller" id="scrollbar-recent-activity">
 
-    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
-    <!-- inline temp/js/script.js as <script> -->
-    <script data-inline="true" src="js/script.js"></script>
+            <% for (var i = 0; i < data.results.length; i++) {
+                var day = data.results[i];
+            %>
+
+            <section>
+                <span class="date"><%= day.date.split('-')[2] %>. <%= day.date.split('-')[1] %>
+                    . <%= day.date.split('-')[0] %></span>
+
+                <ul>
+
+                    <% for (var j = 0; j < day.events.length; j++) {
+                        var event = day.events[j];
+                        var icon = '';
+                        var verb = '';
+                        var thing = '';
+
+                    if(event.type === 'ballot'){
+
+                        switch (event.option) {
+                            case 'za':
+                                icon = 'parlaicon-za';
+                                verb = 'Glasovala ZA';
+                                break;
+                            case 'proti':
+                                icon = 'parlaicon-proti';
+                                verb = 'Glasovala PROTI';
+                                break;
+                            case 'ni':
+                                icon = 'parlaicon-ni';
+                                verb = 'NI glasovala za';
+                                break;
+                        }
+
+                        thing = event.vote_name;
+                    %>
+
+                    <li>
+                        <span class="parlaicon <%= icon %>"></span>
+                        <p><%= verb %> <a href="#"><%= thing %></a></p>
+                    </li>
+
+                    <%
+                    } else {
+                        icon = 'parlaicon-govor';
+                        verb = 'Govorila';
+                        thing = event.session_name;
+                    %>
+
+                    <li>
+                        <span class="parlaicon <%= icon %>"></span>
+                        <p><a href="#"><%= verb %></a>&nbsp;na&nbsp;<a href="#"><%= thing %></a></p>
+                    </li>
+
+                    <%
+                    }
+                    %>
+
+                    <% } %>
+
+                    <!-- <li>
+                        <span class="glyphicon glyphicon-ban-circle"></span>
+                        <p>Se VZDRŽALA glasovanja o <a href="#">Sklepu o imenovanju člana nadzornega sveta RTV</a></p>
+                    </li> -->
+                </ul>
+
+            </section>
+
+            <% } %>
+
+        </div>
+        <!-- delete this placeholder, this is the content of your card -->
+    </div>
+    <div class="card-footer">
+        <div class="card-circle-button card-share"></div>
+        <div class="card-circle-button card-embed"></div>
+        <div class="card-circle-button card-info">i</div>
+    </div>
+</div>
+<!-- everything below here is part of the page and not part of the card -->
+
+<!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+<!-- inline temp/js/script.js as <script> -->
+<script data-inline="true" src="js/script.js"></script>
 
 </body> <!-- removeme -->
 

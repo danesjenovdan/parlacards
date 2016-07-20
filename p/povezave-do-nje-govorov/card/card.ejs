@@ -33,7 +33,6 @@
 <!-- everything above here is part of the page and not part of the card -->
 <!-- https://analize.parlameter.si/v1/p/getAllSpeeches/80 -->
 
-<% var person = data.person; %>
 
 <div class="card-container card-halfling">
     <div class="card-header">
@@ -41,13 +40,14 @@
         <h1>Povezave do nje govorov</h1>
         <!-- this text is the only thing you touch in .card-header -->
     </div>
-    <div class="card-content recent-activity">
+    <div class="card-content recent-activity " id="recent-speeches">
         <div class="scroller" id="scrollbar-recent-activity">
+            <% var person = data.person; %>
 
             <% var i = 0; %>
             <% for(result in data.results){ %>
 
-            %>
+
             <section>
                 <span class="date"><%= data.results[result].date %></span>
 
@@ -59,9 +59,7 @@
 
                     <li>
                         <% for(var speechIndex = 0; speechIndex < data.results[result].speeches.length; speechIndex++ ){ var tmp = (speechIndex+1); %>
-
-                        <%= tmp %>
-                        <a href="<%= data.results[result].speeches[speechIndex].speech_id %>">link do speecha</a>
+                            <a class="speech" href="<%= data.results[result].speeches[speechIndex].speech_id %>"><%= tmp %></a>
                         <% } %>
                     </li>
                 </ul>
