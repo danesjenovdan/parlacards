@@ -3,8 +3,7 @@
 
 <head> <!-- removeme -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!-- removeme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
 
     <!-- build:remove -->
     <!-- these script files are removed on build -->
@@ -26,46 +25,38 @@
 
 <body> <!-- removeme -->
 
-
 <!-- everything above here is part of the page and not part of the card -->
-<!-- https://analize.parlameter.si/v1/p/getAllSpeeches/80 -->
-
+<!-- //https://analize.parlameter.si/v1/s/getMinSpeechesOnSession/23.12.2014 -->
 
 <style>
-    #recent-speeches{height: 480px;}
+    #votingCard{height: 480px;}
+
 </style>
 <div class="card-container card-halfling">
     <div class="card-header">
         <div class="card-header-border"></div>
-        <h1>Povezave do nje govorov</h1>
+        <h1>Seznam odsotnih poslancev</h1>
         <!-- this text is the only thing you touch in .card-header -->
     </div>
-    <div class="card-content recent-activity " id="recent-speeches">
-        <div class="scroller" id="scrollbar-recent-activity">
-            <% var person = data.person; %>
+    <div class="card-content">
 
-            <% var i = 0; %>
-            <% for(result in data.results){ %>
+        <div id="votingCard">
 
+            <div id="scrollbar-voting-card" class="scroller">
 
-            <section>
-                <span class="date"><%= data.results[result].date %></span>
+                <% var i = 1; for (person in data) { %>
 
-                <ul>
-                    <li>
+                <div class="member <%= (data.length == i) ? 'lastel' : ''; %>">
+                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data[person].gov_id %>.png); background-size: cover;"></div>
+                    <p><%= data[person].name %>
+                        <br/><%= data[person].party.acronym %></p>
 
-                        <p><a href="<%= data.results[result].speeches[0].session_id %>"><%= data.results[result].speeches[0].session_name %></a></p>
-                    </li>
+                    <div class="clearfix"></div>
+                </div>
 
-                    <li>
-                        <% for(var speechIndex = 0; speechIndex < data.results[result].speeches.length; speechIndex++ ){ var tmp = (speechIndex+1); %>
-                            <a class="parlaicon speech" href="<%= data.results[result].speeches[speechIndex].speech_id %>"><%= tmp %></a>
-                        <% } %>
-                    </li>
-                </ul>
+                <% i++; }%>
 
-            </section>
-            <% i++; } %>
+            </div>
 
         </div>
 
@@ -76,8 +67,6 @@
         <div class="card-circle-button card-info">i</div>
     </div>
 </div>
-
-
 <!-- everything below here is part of the page and not part of the card -->
 
 <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->

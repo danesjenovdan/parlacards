@@ -57,13 +57,23 @@
 #recent-speeches {
 
   .speech{
-    background: #197197;
+    //background: #197197;
+
     color: #FFFFFF;
-    font-weight:400;
+    font-weight:500;
     display: inline-block;
     float: left;
-    padding: 5px 10px;
+    padding: 3px 10px;
     margin: 0 20px 0 0;
+
+
+    -webkit-mask: url(https://cdn.parlameter.si/v1/icons/govor.svg) no-repeat 50% 50%;
+    mask: url(https://cdn.parlameter.si/v1/icons/govor.svg) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: #197197;
+
+
   }
 
   section {
@@ -84,7 +94,7 @@
 
         }
         a {
-          color: #009cdd;
+          color: #197197;
           font-weight:400;
         }
 

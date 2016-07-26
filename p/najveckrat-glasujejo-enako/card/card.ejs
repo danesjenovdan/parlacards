@@ -40,13 +40,16 @@
 
                         <% var i = 1; for (person in data.results) { %>
 
-                            <div class="member <%= (data.results.length == i) ? 'lastel' : ''; %>">
-                                <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data.results[person].gov_id %>.png); background-size: cover;"></div>
-                                <p><%= data.results[person].name %>
-                                    <br/><%= data.results[person].party.acronym %></p>
-                                <span><%= data.results[person].ratio.toFixed(2) %>%</span>
-                                <div class="clearfix"></div>
-                            </div>
+
+                        <div class="member <%= (data.results.length == i) ? 'lastel' : ''; %>">
+                            <div class="image"
+                                 style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data.results[person].person.gov_id %>.png); background-size: cover;"></div>
+                            <p><%= data.results[person].person.name %>
+                                <br/><%= data.results[person].person.party.acronym %></p>
+                            <span><%= data.results[person].ratio.toFixed(2) %> %</span>
+                            <div class="clearfix"></div>
+                        </div>
+
 
                         <% i++; }%>
 

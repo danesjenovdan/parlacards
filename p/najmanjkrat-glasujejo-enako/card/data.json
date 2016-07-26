@@ -1,58 +1,80 @@
 {
-    "date_of_card": "19.06.2016",
-    "person": {
-        "id": 12,
-        "name": "Nada Brinovšek"
+  "person": {
+    "party": {
+      "acronym": "SDS",
+      "id": 5,
+      "name": "PS Slovenska Demokratska Stranka"
     },
-    "results": [{
-        "gov_id": "P180",
-        "id": 94,
+    "name": "Nada Brinov\u0161ek",
+    "gov_id": "P244",
+    "id": 12
+  },
+  "date_of_card": "19.06.2016",
+  "results": [
+    {
+      "person": {
+        "party": {
+          "acronym": "DeSUS",
+          "id": 3,
+          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+        },
         "name": "Jana Jenko",
+        "gov_id": "P180",
+        "id": 94
+      },
+      "ratio": -0.24104742328907
+    },
+    {
+      "person": {
         "party": {
-            "acronym": "DeSUS",
-            "id": 3,
-            "name": "PS Demokratska Stranka Upokojencev Slovenije"
+          "acronym": "DeSUS",
+          "id": 3,
+          "name": "PS Demokratska Stranka Upokojencev Slovenije"
         },
-        "ratio": -0.24104742328907
-    }, {
-        "gov_id": "P186",
-        "id": 45,
         "name": "Marjana Kotnik Poropat",
+        "gov_id": "P186",
+        "id": 45
+      },
+      "ratio": -0.22170209304971
+    },
+    {
+      "person": {
         "party": {
-            "acronym": "DeSUS",
-            "id": 3,
-            "name": "PS Demokratska Stranka Upokojencev Slovenije"
+          "acronym": "DeSUS",
+          "id": 3,
+          "name": "PS Demokratska Stranka Upokojencev Slovenije"
         },
-        "ratio": -0.22170209304971
-    }, {
+        "name": "Uro\u0161 Prikl",
         "gov_id": "P280",
-        "id": 69,
-        "name": "Uroš Prikl",
+        "id": 69
+      },
+      "ratio": -0.219381148664759
+    },
+    {
+      "person": {
         "party": {
-            "acronym": "DeSUS",
-            "id": 3,
-            "name": "PS Demokratska Stranka Upokojencev Slovenije"
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
         },
-        "ratio": -0.219381148664759
-    }, {
+        "name": "Branislav Raji\u0107",
         "gov_id": "P281",
-        "id": 70,
-        "name": "Branislav Rajić",
+        "id": 70
+      },
+      "ratio": -0.216557627105966
+    },
+    {
+      "person": {
         "party": {
-            "acronym": "SMC",
-            "id": 1,
-            "name": "PS Stranka modernega centra"
+          "acronym": "SD",
+          "id": 7,
+          "name": "PS Socialni Demokrati"
         },
-        "ratio": -0.216557627105966
-    }, {
+        "name": "Bojana Mur\u0161i\u010d",
         "gov_id": "P275",
-        "id": 61,
-        "name": "Bojana Muršič",
-        "party": {
-            "acronym": "SD",
-            "id": 7,
-            "name": "PS Socialni Demokrati"
-        },
-        "ratio": -0.211522617037362
-    }]
+        "id": 61
+      },
+      "ratio": -0.211522617037362
+    }
+  ]
 }
