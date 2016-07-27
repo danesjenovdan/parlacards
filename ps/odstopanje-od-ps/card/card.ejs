@@ -30,11 +30,32 @@
     <div class="card-container card-halfling">
         <div class="card-header">
             <div class="card-header-border"></div>
-            <h1>Naslov kartice</h1> <!-- this text is the only thing you touch in .card-header -->
+            <h1>Odstopanje od poslanske skupine</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <div class="card-content">
+        <div class="card-content" id="votingCardHorizontal">
+
+            <span class="glyphicon glyphicon-circle-arrow-left navigate-left text-center"></span>
+            <div class="slider" id="scrollbar">
+                <div class="slider-content">
+
+                    <% for (var i = 0; i < data.results.length ; i++) { %>
+                    <div class="member">
+                        <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data.results[i].person.gov_id %>.png); background-size: cover;"></div>
+                        <p><%= data.results[i].person.name %></p>
+                        <span><%= data.results[i].ratio.toFixed(0) %> %</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <% } %>
 
 
+
+                </div>
+            </div>
+            <span class="glyphicon glyphicon-circle-arrow-right navigate-right text-center"></span>
+
+
+
+            <div class="clearfix"></div>
 
         </div>
         <div class="card-footer">

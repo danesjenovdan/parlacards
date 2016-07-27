@@ -1,1 +1,80 @@
-{}
+{
+  "organization": {
+    "acronym": "SMC",
+    "id": 1,
+    "name": "PS Stranka modernega centra"
+  },
+  "results": [
+    {
+      "person": {
+        "id": 13
+      },
+      "ratio": 58.5258600295523
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "name": "Du\u0161an Radi\u010d",
+        "gov_id": "P300",
+        "id": 1357
+      },
+      "ratio": 75.940403994797
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "name": "Bojan Krajnc",
+        "gov_id": "P299",
+        "id": 1354
+      },
+      "ratio": 80.854791516143
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "name": "Simon Zajc",
+        "gov_id": "P293",
+        "id": 87
+      },
+      "ratio": 99.5221603678972
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "name": "Ivan \u0160kodnik",
+        "gov_id": "P286",
+        "id": 76
+      },
+      "ratio": 99.5352993460654
+    },
+    {
+      "person": {
+        "party": {
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "name": "Ur\u0161ka Ban",
+        "gov_id": "P240",
+        "id": 3
+      },
+      "ratio": 99.5657883740758
+    }
+  ]
+}
