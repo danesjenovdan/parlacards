@@ -1,20 +1,29 @@
 {
     "person": {
-        "id": 11,
-        "name": "Milan Brglez",
         "gov_id": "P240",
+        "id": 3,
+        "name": "Urška Ban",
         "party": {
-            "name": "Stranka mehkih cur",
-            "id": 2,
-            "acronym": "SMC"
+            "acronym": "SMC",
+            "id": 1,
+            "name": "PS Stranka modernega centra"
         }
     },
     "results": {
-        "average": 4,
+        "average": 3.0,
         "max": {
-            "id": 11,
-            "score": 49
+            "mps": [{
+                "gov_id": "P243",
+                "id": 11,
+                "name": "Milan Brglez",
+                "party": {
+                    "acronym": "SMC",
+                    "id": 1,
+                    "name": "PS Stranka modernega centra"
+                }
+            }],
+            "score": 54.0
         },
-        "score": 49
+        "score": 5.0
     }
 }
