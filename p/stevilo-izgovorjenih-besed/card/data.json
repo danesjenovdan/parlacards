@@ -1,0 +1,29 @@
+{
+    "person": {
+        "gov_id": "P225",
+        "id": 15,
+        "name": "Andrej Čuš",
+        "party": {
+            "acronym": "SDS",
+            "id": 5,
+            "name": "PS Slovenska Demokratska Stranka"
+        }
+    },
+    "results": {
+        "average": 10609,
+        "max": {
+            "mps": [{
+                "gov_id": "P077",
+                "id": 78,
+                "name": "Jože Tanko",
+                "party": {
+                    "acronym": "SDS",
+                    "id": 5,
+                    "name": "PS Slovenska Demokratska Stranka"
+                }
+            }],
+            "score": 51517
+        },
+        "score": 16816
+    }
+}
