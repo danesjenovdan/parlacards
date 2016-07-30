@@ -1,0 +1,33 @@
+{
+    "memberships": {
+        "odbor": [{
+            "org_type": "odbor",
+            "org_id": 19,
+            "name": "Odbor za infrastrukturo, okolje in prostor"
+        }, {
+            "org_type": "odbor",
+            "org_id": 17,
+            "name": "Odbor za finance in monetarno politiko"
+        }],
+        "komisija": [{
+            "org_type": "komisija",
+            "org_id": 10,
+            "name": "Komisija za nadzor javnih financ"
+        }],
+        "poslanska skupina": [{
+            "org_type": "poslanska skupina",
+            "org_id": 1,
+            "name": "PS Stranka modernega centra"
+        }]
+    },
+    "person": {
+        "party": {
+            "acronym": "SMC",
+            "id": 1,
+            "name": "PS Stranka modernega centra"
+        },
+        "name": "Ur\u0161ka Ban",
+        "gov_id": "P240",
+        "id": 3
+    }
+}
