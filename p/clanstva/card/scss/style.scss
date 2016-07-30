@@ -1,0 +1,42 @@
+.poslanec .nav-tabs > li {
+  width: 33.333%;
+}
+
+.membership-list {
+  margin: 0;
+  padding: 0;
+
+  .key {
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.pagination-container {
+  text-align: center;
+}
+
+.pagination li {
+  a {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #6d6d6d;
+    font-size: 16px;
+    height: 26px;
+    line-height: 26px;
+    margin: 0 1px;
+    padding: 0;
+    width: 26px;
+  }
+  &:first-child a, &:last-child a {
+    background: none;
+    color: #337ab7;
+    font-size: 36px;
+    font-weight: 100;
+    line-height: 18px;
+    margin: 0;
+  }
+}

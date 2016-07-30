@@ -30,12 +30,74 @@
     <div class="card-container card-halfling">
         <div class="card-header">
             <div class="card-header-border"></div>
-            <h1>Naslov kartice</h1> <!-- this text is the only thing you touch in .card-header -->
+            <h1>Članstva</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
+          <!-- get random id -->
+          <%
+              function makeid() {
+                  var text = "";
+                  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
+                  for(var i = 0; i < 5; i++) {
+                      text += possible.charAt(Math.floor(Math.random() * possible.length));
+                  }
 
+                  return text;
+              }
 
+              var random_id = makeid();
+          %>
+          <div class="bgwhite poslanec">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <% var i = 0; for (membership in data.memberships) { %>
+
+                <li role="presentation" class="<%= i === 0 ? 'active' : '' %>">
+                    <a href="#<%= membership.replace(/ /g, '_') %><%= random_id %>" aria-controls="<%= membership %>" role="tab" data-toggle="tab"><%= membership %></a>
+                </li>
+
+                <% i++ } %>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <% var i = 0; for (membership in data.memberships) { %>
+
+                <div role="tabpanel" class="tab-pane<%= i === 0 ? ' active' : '' %>" id="<%= membership.replace(/ /g, '_') %><%= random_id %>">
+                  <ul class="membership-list">
+                  <% data.memberships[membership].forEach(function(membershipItem) { %>
+                    <li class="key"><a href="#"> <%= membershipItem.name %></a></li>
+
+                  <% }) %>
+                  </ul>
+                  <nav class="pagination-container" aria-label="Page navigation">
+                    <ul class="pagination">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span aria-hidden="true">&lsaquo;</span>
+                        </a>
+                      </li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">...</a></li>
+                      <li><a href="#">7</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span aria-hidden="true">&rsaquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+                <% i++ } %>
+
+            </div>
+
+          </div>
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>
