@@ -1,0 +1,45 @@
+.poslanec_title {
+    font-weight: 300 !important;
+    line-height: 30px;
+    height: 30px;
+    padding-right: 10px;
+}
+
+.term, .frequency {
+    display: block;
+    float: left;
+
+    height: 40px;
+}
+.term span, .frequency div span {
+    line-height: 40px;
+}
+.hugebar2 {
+    height: 40px !important;
+}
+.progress-bar, .progress_number {
+    // display: block;
+    float: left;
+}
+
+.tfidf-bar {
+    height: 40px;
+    margin-bottom: 10px;
+}
+.progress-bar {
+    border-bottom-width: 0;
+}
+
+.halfer-container {
+    overflow: hidden;
+}
+
+.halfer {
+    width: 100%;
+    float: left;
+}
+@media (min-width: 768px) {
+    .halfer {
+        width: 50%;
+    }
+}
