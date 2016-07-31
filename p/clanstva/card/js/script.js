@@ -1,5 +1,3 @@
-
-
 /* ========================================================================
  * Bootstrap: tab.js v3.3.6
  * http://getbootstrap.com/javascript/#tabs
@@ -7,7 +5,6 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
-
 
 +function ($) {
   'use strict';
@@ -155,3 +152,14 @@
     .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
 
 }(jQuery);
+
+$('[data-move-pagination]').on('click', function(event) {
+  var $this = $(this),
+      direction = $this.data().movePagination,
+      nextOrPreviousElement = $this.closest('ul')
+                                   .children('li.active')
+                                   [direction](':not(.arrow)');
+  if (nextOrPreviousElement) {
+    nextOrPreviousElement.children('a').click();
+  }
+});
