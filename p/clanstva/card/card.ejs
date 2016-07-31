@@ -53,17 +53,17 @@
                 'komisija' : 'Delovna telesa',
                 'delegacija' : 'Stalne delegacije',
                 'skupina prijateljstva': 'Skupine prijateljstva'
-              }
+            };
               var tabs = {
                 'Delovna telesa': [],
                 'Stalne delegacije': [],
                 'Skupine prijateljstva': []
-              }
+            };
 
               for (membership in data.memberships) {
                   if (membership in membershipTabMap) {
-                      var tabId = membershipTabMap[membership]
-                      tabs[tabId] = tabs[tabId].concat(data.memberships[membership])
+                      var tabId = membershipTabMap[membership];
+                      tabs[tabId] = tabs[tabId].concat(data.memberships[membership]);
                   }
               }
           %>
