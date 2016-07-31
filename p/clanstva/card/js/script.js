@@ -154,6 +154,7 @@
 }(jQuery);
 
 $('[data-move-pagination]').on('click', function(event) {
+  event.preventDefault();
   var $this = $(this),
       direction = $this.data().movePagination,
       nextOrPreviousElement = $this.closest('ul')
