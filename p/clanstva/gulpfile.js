@@ -61,6 +61,12 @@ gulp.task('js', function() {
         .pipe(gulp.dest('temp/js'));
 });
 
+// js copier (without uglify, for debug)
+gulp.task('js-no-uglify', function() {
+    return gulp.src('card/js/script.js')
+        .pipe(gulp.dest('temp/js'));
+});
+
 // ejs compiler
 gulp.task('ejs', function() {
     return gulp.src('card/card.ejs')
@@ -134,7 +140,7 @@ gulp.task('remove-minify', function() {
 gulp.task('watch', function() {
     gulp.watch('card/scss/**/*.scss', ['sass']);
     gulp.watch('card/card.ejs', ['ejs', browserSync.reload]);
-    gulp.watch('card/js/**/*.js', ['js', browserSync.reload]);
+    gulp.watch('card/js/**/*.js', ['js-no-uglify', browserSync.reload]);
 });
 
 // clean temp folder
@@ -150,7 +156,7 @@ gulp.task('clean:dist', function() {
 // serve
 gulp.task('serve', function(callback) {
     runSequence(
-        'clean:temp', ['ejs', 'sass', 'js', 'browserSync', 'watch'],
+        'clean:temp', ['ejs', 'sass', 'js-no-uglify', 'browserSync', 'watch'],
         callback
     );
 });
