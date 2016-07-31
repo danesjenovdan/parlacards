@@ -1,0 +1,80 @@
+{
+    "memberships": {
+        "odbor": [{
+            "org_type": "odbor",
+            "org_id": 19,
+            "name": "Odbor za infrastrukturo, okolje in prostor"
+        }, {
+            "org_type": "odbor",
+            "org_id": 17,
+            "name": "Odbor za finance in monetarno politiko"
+        }],
+        "kolegij": [{
+          "org_type": "kolegij",
+          "org_id": 9,
+          "name": "Kolegij predsednika dr\u017eavnega zbora"
+        }],
+        "delegacija": [{
+          "org_type": "delegacija",
+          "org_id": 32,
+          "name": "Delegacija Dr\u017eavnega zbora v Parlamentarni skup\u0161\u010dini Organizacije za varnost in sodelovanje v Evropi"
+        }],
+        "komisija": [{
+            "org_type": "komisija",
+            "org_id": 10,
+            "name": "Komisija za nadzor javnih financ"
+        }],
+        "poslanska skupina": [{
+            "org_type": "poslanska skupina",
+            "org_id": 1,
+            "name": "PS Stranka modernega centra"
+        }],
+        "skupina prijateljstva": [{
+            "org_type": "skupina prijateljstva",
+            "org_id": 42,
+            "name": "Skupina prijateljstva z Belgijo"
+        }, {
+            "org_type": "skupina prijateljstva",
+            "org_id": 44,
+            "name": "Skupina prijateljstva z Bosno in Hercegovino"
+        }, {
+            "org_type": "skupina prijateljstva",
+            "org_id": 55,
+            "name": "Skupina prijateljstva z Italijo"
+        }, {
+            "org_type": "skupina prijateljstva",
+            "org_id": 68,
+            "name": "Skupina prijateljstva z Nizozemsko"
+        }, {
+            "org_type": "skupina prijateljstva",
+            "org_id": 69,
+            "name": "Skupina prijateljstva z Norve\u0161ko"
+        }, {
+            "org_type": "skupina prijateljstva",
+            "org_id": 71,
+            "name": "Skupina prijateljstva z Rusijo"
+        }, {
+            "org_type": "skupina prijateljstva",
+            "org_id": 76,
+            "name": "Skupina prijateljstva s \u0160vico"
+        }, {
+            "org_type": "skupina prijateljstva",
+            "org_id": 79,
+            "name": "Skupina prijateljstva z Veliko Britanijo"
+        }, {
+            "org_type": "skupina prijateljstva",
+            "org_id": 88,
+            "name": "Skupina prijateljstva z Luksemburgom"
+        }]
+    },
+    "person": {
+        "party": {
+            "acronym": "SMC",
+            "id": 1,
+            "name": "PS Stranka modernega centra"
+        },
+        "name": "Tilen Bo\u017ei\u010d",
+        "gov_id": "P242",
+        "id": 8
+    }
+}

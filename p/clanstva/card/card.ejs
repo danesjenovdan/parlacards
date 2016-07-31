@@ -1,0 +1,153 @@
+<!DOCTYPE html> <!-- removeme -->
+<html> <!-- removeme -->
+
+<head> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+
+    <!-- build:remove -->
+    <!-- these script files are removed on build -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <!-- endbuild -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+
+    <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <link data-inline="true" rel="stylesheet" href="css/style.css">
+
+</head> <!-- removeme -->
+
+<body> <!-- removeme -->
+
+
+    <!-- everything above here is part of the page and not part of the card -->
+    <div class="card-container card-halfling">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Članstva</h1> <!-- this text is the only thing you touch in .card-header -->
+        </div>
+        <div class="card-content">
+          <!-- get random id -->
+          <%
+              function makeId() {
+                  var text = "";
+                  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                  for(var i = 0; i < 5; i++) {
+                      text += possible.charAt(Math.floor(Math.random() * possible.length));
+                  }
+
+                  return text;
+              }
+
+              var randomId = makeId();
+              var membershipTabMap = {
+                'odbor': 'Delovna telesa',
+                'kolegij': 'Delovna telesa',
+                'komisija' : 'Delovna telesa',
+                'delegacija' : 'Stalne delegacije',
+                'skupina prijateljstva': 'Skupine prijateljstva'
+              }
+              var tabs = {
+                'Delovna telesa': [],
+                'Stalne delegacije': [],
+                'Skupine prijateljstva': []
+              }
+
+              for (membership in data.memberships) {
+                  if (membership in membershipTabMap) {
+                      var tabId = membershipTabMap[membership]
+                      tabs[tabId] = tabs[tabId].concat(data.memberships[membership])
+                  }
+              }
+          %>
+          <div class="bgwhite poslanec">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <% var i = 0; for (tab in tabs) { %>
+
+                <li role="presentation" class="<%= i === 0 ? 'active' : '' %>">
+                    <a href="#<%= tab.replace(/ /g, '_') %>_<%= randomId %>" aria-controls="<%= tab %>" role="tab" data-toggle="tab"><%= tab %></a>
+                </li>
+
+                <% i++ } %>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <% var i = 0;
+                   for (tab in tabs) {
+                       var PAGE_SIZE = 3;
+                       var currentTab = tabs[tab];
+                       var hasPagination = currentTab.length > PAGE_SIZE;
+                       var pageCount = Math.ceil(currentTab.length / PAGE_SIZE); %>
+
+                <div role="tabpanel" class="tab-pane<%= i === 0 ? ' active' : '' %>" id="<%= tab.replace(/ /g, '_') %>_<%= randomId %>">
+
+                    <% if (hasPagination) { %>
+                        <div class="tab-content">
+                        <% for (var j = 0; j < pageCount; j++) { %>
+                            <div role="tabpanel" class="tab-pane<%= j === 0 ? ' active' : '' %>" id="<%= tab.replace(/ /g, '_') %>_<%= randomId %>_<%= j %>">
+                            <% var items = currentTab.slice(j * PAGE_SIZE, (j + 1) * PAGE_SIZE); %>
+                                <% include membershipList %>
+                            </div>
+                        <% } %>
+                        </div>
+                    <% } else {
+                        var items = currentTab; %>
+                    <% include membershipList %>
+                    <% } %>
+
+                    <% if (hasPagination) { %>
+                    <nav class="pagination-container" aria-label="Page navigation">
+                        <ul class="pagination" role="tablist">
+                            <li class="arrow">
+                                <a href="#" aria-label="Previous" data-move-pagination="prev">
+                                    <span aria-hidden="true"></span>
+                                </a>
+                            </li>
+
+                            <% for (var j = 0; j < pageCount; j++) { %>
+                                  <li role="presentation" class="<%= j === 0 ? 'active' : '' %>">
+                                      <a href="#<%= tab.replace(/ /g, '_') %>_<%= randomId %>_<%= j %>" aria-controls="<%= tab %>" role="tab" data-toggle="tab"><%= j + 1 %></a>
+                                  </li>
+                            <% } %>
+
+                            <li class="arrow">
+                                <a href="#" aria-label="Next" data-move-pagination="next">
+                                    <span aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <% } %>
+                </div>
+
+                <% i++ } %>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="card-footer">
+            <div class="card-circle-button card-share"></div>
+            <div class="card-circle-button card-embed">&lt;/&gt;</div>
+            <div class="card-circle-button card-info">i</div>
+        </div>
+    </div>
+    <!-- everything below here is part of the page and not part of the card -->
+
+    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <!-- inline temp/js/script.js as <script> -->
+    <script data-inline="true" src="js/script.js"></script>
+
+</body> <!-- removeme -->
+
+</html> <!-- removeme -->
