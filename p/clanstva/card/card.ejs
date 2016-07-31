@@ -96,13 +96,25 @@
                         <% for (var j = 0; j < pageCount; j++) { %>
                             <div role="tabpanel" class="tab-pane<%= j === 0 ? ' active' : '' %>" id="<%= tab.replace(/ /g, '_') %>_<%= randomId %>_<%= j %>">
                             <% var items = currentTab.slice(j * PAGE_SIZE, (j + 1) * PAGE_SIZE); %>
-                                <% include membershipList %>
+                            <ul class="membership-list">
+                                <% items.forEach(function(membershipItem) { %>
+                                    <li class="key">
+                                        <a href="#"> <%= membershipItem.name %></a>
+                                    </li>
+                                <% }) %>
+                                </ul>
                             </div>
                         <% } %>
                         </div>
                     <% } else {
                         var items = currentTab; %>
-                    <% include membershipList %>
+                    <ul class="membership-list">
+                    <% items.forEach(function(membershipItem) { %>
+                        <li class="key">
+                            <a href="#"> <%= membershipItem.name %></a>
+                        </li>
+                    <% }) %>
+                    </ul>
                     <% } %>
 
                     <% if (hasPagination) { %>
