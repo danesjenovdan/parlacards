@@ -71,7 +71,7 @@
                                                 <span class="sr-only "><%= data[i].results.abstain %>% Complete (danger)</span>
                                             </div>
                                             <div class="progress-bar noblue " style="width: <%= data[i].results.against %>% ">
-                                                <span class="sr-only "><%= data[i].results.against %>% Complete (danger)</span>
+                                                <span class="sr-only "><%= data[i].results.not_present %>% Complete (danger)</span>
                                             </div>
                                         </div>
                                         <div class="row ">
@@ -91,7 +91,7 @@
                                                 <div class="indicator abstention ">&nbsp;</div>
                                             </div>
                                             <div class="col-xs-3 ">
-                                                <%= data[i].results.against %>
+                                                <%= data[i].results.not_present %>
                                                 <div class="type ">Niso</div>
                                                 <div class="indicator not ">&nbsp;</div>
                                             </div>
