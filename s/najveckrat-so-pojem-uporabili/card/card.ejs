@@ -38,20 +38,16 @@
         <div  id="votingCard">
 
             <div id="scrollbar-voting-card" class="scroller">
-<% var facet = data.facet_counts.facet_fields.speaker_i; %>
+<% var persons = data.facet_counts.facet_fields.speaker_i; %>
+                <% console.log(persons); %>
+                <% var i=0; for (var person in persons) { %>
 
-                <% var i=0; for (var fce in facet) { %>
-<% console.log(fce); %>
-<% console.log(facet[fce]); %>
+                <div class="member <%= ((persons.length-1) == i) ? 'lastel' : ''; %>">
+                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= persons[person].person.gov_id %>.png); background-size: cover;"></div>
+                    <p><%= persons[person].person.name %>
 
-
-
-                <div class="member <%= ((facet.length-1) == i) ? 'lastel' : ''; %>">
-                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= fce %>.png); background-size: cover;"></div>
-                    <p><%= fce %>
-
-                        <br/><%= fce %></p>
-                    <span><%= facet[fce] %></span>
+                        <br/><%= persons[person].person.party.acronym %></p>
+                    <span><%= persons[person].score %></span>
                     <div class="clearfix"></div>
                 </div>
 
