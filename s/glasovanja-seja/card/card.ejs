@@ -44,6 +44,13 @@
                 <% var rnd = (Math.floor((Math.random() * 2)) == 1); %>
                 <% var ayeney = rnd ? "aye" : "nay"; %>
                 <% var ayeneygly = rnd ? "glyphicon-ok" : "glyphicon-remove"; %>
+                <%
+                    var allInVotes = data[i].results.votes_for + data[i].results.against + data[i].results.abstain +data[i].results.not_present;
+                var percent_votes_for = Math.floor( (data[i].results.votes_for / allInVotes) * 100) ;
+                var percent_against = Math.floor( (data[i].results.against / allInVotes) * 100);
+                var percent_abstain = Math.floor( (data[i].results.abstain / allInVotes) * 100);
+                var percent_not_present = Math.floor( (data[i].results.not_present / allInVotes) * 100);
+ %>
 
 
                     <div class="row single_voting">
@@ -61,17 +68,17 @@
                                 <div class="col-md-6 ">
                                     <div class="session_votes ">
                                         <div class="progress smallbar ">
-                                            <div class="progress-bar fontblue " style="width: <%= data[i].results.votes_for %>% ">
-                                                <span class="sr-only "><%= data[i].results.votes_for %>% Complete (success)</span>
+                                            <div class="progress-bar fontblue " style="width: <%= percent_votes_for %>% ">
+                                                <span class="sr-only "><%= percent_votes_for %>% Complete (success)</span>
                                             </div>
-                                            <div class="progress-bar funblue " style="width: <%= data[i].results.against %>% ">
-                                                <span class="sr-only "><%= data[i].results.against %>% Complete (warning)</span>
+                                            <div class="progress-bar funblue " style="width: <%= percent_against %>% ">
+                                                <span class="sr-only "><%= percent_against %>% Complete (warning)</span>
                                             </div>
-                                            <div class="progress-bar ignoreblue " style="width: <%= data[i].results.abstain %>% ">
-                                                <span class="sr-only "><%= data[i].results.abstain %>% Complete (danger)</span>
+                                            <div class="progress-bar ignoreblue " style="width: <%= percent_abstain %>% ">
+                                                <span class="sr-only "><%= percent_abstain %>% Complete (danger)</span>
                                             </div>
-                                            <div class="progress-bar noblue " style="width: <%= data[i].results.against %>% ">
-                                                <span class="sr-only "><%= data[i].results.not_present %>% Complete (danger)</span>
+                                            <div class="progress-bar noblue " style="width: <%= percent_not_present %>% ">
+                                                <span class="sr-only "><%= percent_not_present %>% Complete (danger)</span>
                                             </div>
                                         </div>
                                         <div class="row ">

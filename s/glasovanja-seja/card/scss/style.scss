@@ -44,3 +44,17 @@
   padding-left: 20px;
 }
 
+@media (max-width: 480px) {
+
+  .session_voting .session_votes {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 15px 0;
+  }
+
+  .session_voting .session_votes .type {
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+}

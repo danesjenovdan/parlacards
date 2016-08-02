@@ -49,3 +49,40 @@
   padding-left: 20px;
 }
 
+
+@media (max-width: 390px) {
+  .pspris {
+    width: 22.7%;
+  }
+
+}
+
+@media (max-width: 980px) {
+  .pspris {
+    width: 31.8%;
+    margin-bottom: 10px;
+  }
+  .pspris:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 530px) {
+  .pspris {
+    width: 30.5%;
+  }
+  .pspris:nth-child(3n){
+    margin-right: 0;
+  }
+  .pspris:nth-child(4n) {
+    margin-right: 10px;
+  }
+  .pspris span {
+    font-size: 26px;
+    font-weight: 400;
+  }
+  .pspris font {
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+}
