@@ -12,7 +12,7 @@
             "gender": "f"
         },
         "date": "2016-02-12T00:00:00Z",
-        "quote": "Hvala lepa.\nZdaj pa glede sklepov. \u017deli kdo besedo glede predlaganih sklepov. Ne. \u017delite da lo\u010deno glasujemo o obeh sklepih ali skupaj. Lahko skupaj."
+        "quote": "Hvala lepa.\nZdaj pa glede sklepov. \u017deli kdo besedo glede predlaganih sklepov. Ne <strong>prekinjaj</strong>! \u017delite da lo\u010deno glasujemo o obeh sklepih ali skupaj. Lahko skupaj."
     }, {
         "person": {
             "id": 42,
@@ -26,7 +26,7 @@
             "gender": "f"
         },
         "date": "2016-01-11T00:00:00Z",
-        "quote": "O tem ni razprave, lahko pa predstavniki poslanskih skupin predstavite svoje stali\u0161\u010de. \u017deli kdo predstaviti? (Ne.) \u010ce ne predlagam, da torej glasujemo o tem predlogu."
+        "quote": "O tem ni razprave, lahko pa predstavniki poslanskih skupin predstavite svoje stali\u0161\u010de. \u017deli kdo predstaviti? (Ne.) \u010ce ne <strong>prekinjate</strong>, da torej glasujemo o tem predlogu."
     }, {
         "person": {
             "id": 10,
@@ -40,7 +40,7 @@
             "gender": "f"
         },
         "date": "2015-12-02T00:00:00Z",
-        "quote": "Hvala lepa. Vpra\u0161anja so bila \u0161tevilna, vendar glede na to, da enostavno je \u010das omejen, v tem trenutku prekinjam to sejo v skladu s Poslovnikom in v nadaljevanju seje."
+        "quote": "Hvala lepa. Vpra\u0161anja so bila \u0161tevilna, vendar glede na to, da enostavno je \u010das omejen, v tem trenutku <strong>prekinjam</strong> to sejo v skladu s Poslovnikom in v nadaljevanju seje."
     }, {
         "person": {
             "id": 81,
@@ -54,7 +54,7 @@
             "gender": "f"
         },
         "date": "2016-11-08T00:00:00Z",
-        "quote": "The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. Blessed is he, who in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy my brothers. And you will know my name is the Lord when I lay my vengeance upon thee."
+        "quote": "The path of the righteous man is beset on all sides by the inequities of the <strong>prekinila</strong> selfish and the tyranny of evil men. Blessed is he, who in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy my brothers. And you will know my name is the Lord when I lay my vengeance upon thee."
     }, {
         "person": {
             "id": 82,
@@ -68,6 +68,6 @@
             "gender": "f"
         },
         "date": "2016-09-29T00:00:00Z",
-        "quote": "Hvala lepa. Potem zaklju\u010dujem razpravo in bi dal na glasovanje naslednji predlog mnenja: Odbor za zdravstvo je kot mati\u010dno delovno telo z vidika svojih pristojnosti obravnaval predlog Deklaracije o usmeritvah za delovanje Republike Slovenije."
+        "quote": "Hvala lepa. Potem zaklju\u010dujem razpravo in bi dal na glasovanje naslednji predlog mnenja: Odbor za zdravstvo je kot mati\u010dno delovno telo z vidika svojih pristojnosti obravnaval <strong>prekiniti</strong> Deklaracije o usmeritvah za delovanje Republike Slovenije."
     }]
 }

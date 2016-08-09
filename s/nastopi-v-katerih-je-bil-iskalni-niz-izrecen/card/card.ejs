@@ -17,6 +17,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
     <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
     <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700" rel="stylesheet">
 
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
@@ -34,6 +35,29 @@
         </div>
         <div class="card-content">
 
+          <div  id="votingCard">
+
+              <div id="scrollbar-voting-card" class="scroller">
+
+                  <% data.search_results.forEach(function(result, index) { %>
+
+                  <div class="member">
+                      <div class="metadata">
+                          <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= result.person.gov_id %>.png); background-size: cover;"></div>
+                          <p class="name">
+                            <%= result.person.name %><br/>
+                            <%= result.person.party.acronym %>
+                            </p>
+                          <p class="date">13. 2. 2016</p>
+                      </div>
+                      <div class="quote"><%- result.quote %></div>
+                  </div>
+
+                  <% }) %>
+
+              </div>
+
+          </div>
 
 
         </div>
