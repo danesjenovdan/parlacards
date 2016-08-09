@@ -1,0 +1,1644 @@
+{
+  "results": [
+    {
+      "date": "2014-12-23",
+      "sessions": [
+        {
+          "session_name": "8. izredna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Jana Jenko",
+                "gov_id": "P180",
+                "id": 94
+              },
+              "speeches": [
+                296635
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                296629
+              ]
+            }
+          ],
+          "session_id": 3067
+        }
+      ]
+    },
+    {
+      "date": "2014-12-19",
+      "sessions": [
+        {
+          "session_name": "3. redna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marjana Kotnik Poropat",
+                "gov_id": "P186",
+                "id": 45
+              },
+              "speeches": [
+                276001
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                276023,
+                276025,
+                276027,
+                276051,
+                276029,
+                276031,
+                276033,
+                276035,
+                276037,
+                276039,
+                276041,
+                276043,
+                276045,
+                276047,
+                276049,
+                276053,
+                276055,
+                276057,
+                276059,
+                276061,
+                276063,
+                276065,
+                276067,
+                276069
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Franc Jur\u0161a",
+                "gov_id": "P122",
+                "id": 37
+              },
+              "speeches": [
+                276009,
+                276116
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Ivan Hr\u0161ak",
+                "gov_id": "P176",
+                "id": 34
+              },
+              "speeches": [
+                276066
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                276084,
+                276088,
+                276170,
+                276212
+              ]
+            }
+          ],
+          "session_id": 3044
+        }
+      ]
+    },
+    {
+      "date": "2014-12-18",
+      "sessions": [
+        {
+          "session_name": "3. redna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                275885,
+                275887,
+                275889,
+                275891,
+                275893,
+                275895,
+                275897,
+                275917,
+                275874,
+                275876,
+                275878,
+                275881,
+                275883,
+                275899,
+                275901,
+                275903,
+                275905,
+                275907,
+                275912,
+                275915,
+                275919
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Franc Jur\u0161a",
+                "gov_id": "P122",
+                "id": 37
+              },
+              "speeches": [
+                275962
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                275827,
+                275855,
+                275938,
+                275976
+              ]
+            }
+          ],
+          "session_id": 3044
+        }
+      ]
+    },
+    {
+      "date": "2014-12-17",
+      "sessions": [
+        {
+          "session_name": "3. redna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Jana Jenko",
+                "gov_id": "P180",
+                "id": 94
+              },
+              "speeches": [
+                275623
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marjana Kotnik Poropat",
+                "gov_id": "P186",
+                "id": 45
+              },
+              "speeches": [
+                275742,
+                275756,
+                275762,
+                275784
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marija Antonija Kova\u010di\u010d",
+                "gov_id": "P297",
+                "id": 96
+              },
+              "speeches": [
+                275660
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                275649,
+                275651,
+                275653,
+                275655,
+                275657,
+                275659,
+                275661,
+                275663,
+                275665,
+                275667,
+                275669,
+                275671,
+                275673,
+                275675,
+                275677,
+                275679,
+                275681,
+                275683,
+                275685,
+                275687,
+                275689,
+                275691,
+                275693,
+                275695,
+                275697
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Franc Jur\u0161a",
+                "gov_id": "P122",
+                "id": 37
+              },
+              "speeches": [
+                275804
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                275611,
+                275812
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marinka Levi\u010dar",
+                "gov_id": "P269",
+                "id": 52
+              },
+              "speeches": [
+                275794
+              ]
+            }
+          ],
+          "session_id": 3044
+        }
+      ]
+    },
+    {
+      "date": "2014-12-16",
+      "sessions": [
+        {
+          "session_name": "3. redna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Jana Jenko",
+                "gov_id": "P180",
+                "id": 94
+              },
+              "speeches": [
+                275267,
+                275354
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marija Antonija Kova\u010di\u010d",
+                "gov_id": "P297",
+                "id": 96
+              },
+              "speeches": [
+                275283
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                275351,
+                275329,
+                275331,
+                275333,
+                275335,
+                275337,
+                275339,
+                275341,
+                275343,
+                275345,
+                275347,
+                275349,
+                275353,
+                275355,
+                275357,
+                275359,
+                275361,
+                275363,
+                275365,
+                275367,
+                275369,
+                275371,
+                275373,
+                275375,
+                275377,
+                275379,
+                275381,
+                275383,
+                275385,
+                275387,
+                275389,
+                275391
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Franc Jur\u0161a",
+                "gov_id": "P122",
+                "id": 37
+              },
+              "speeches": [
+                275590,
+                275496
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Ivan Hr\u0161ak",
+                "gov_id": "P176",
+                "id": 34
+              },
+              "speeches": [
+                275368
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                275455,
+                275299,
+                275340,
+                275342,
+                275348,
+                275376,
+                275380,
+                275403,
+                275530
+              ]
+            }
+          ],
+          "session_id": 3044
+        }
+      ]
+    },
+    {
+      "date": "2014-12-15",
+      "sessions": [
+        {
+          "session_name": "3. redna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                275111,
+                275123,
+                275163,
+                275010,
+                275014,
+                275083,
+                275085,
+                275087,
+                275089,
+                275091,
+                275093,
+                275095,
+                275097,
+                275099,
+                275101,
+                275103,
+                275105,
+                275107,
+                275109,
+                275113,
+                275115,
+                275117,
+                275119,
+                275121,
+                275125,
+                275127,
+                275129,
+                275131,
+                275133,
+                275135,
+                275137,
+                275139,
+                275141,
+                275143,
+                275145,
+                275147,
+                275149,
+                275151,
+                275153,
+                275155,
+                275157,
+                275159,
+                275161,
+                275165,
+                275167
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Franc Jur\u0161a",
+                "gov_id": "P122",
+                "id": 37
+              },
+              "speeches": [
+                274933,
+                274937
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                275110,
+                275114
+              ]
+            }
+          ],
+          "session_id": 3044
+        }
+      ]
+    },
+    {
+      "date": "2014-12-05",
+      "sessions": [
+        {
+          "session_name": "7. izredna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Jana Jenko",
+                "gov_id": "P180",
+                "id": 94
+              },
+              "speeches": [
+                296816
+              ]
+            }
+          ],
+          "session_id": 3068
+        }
+      ]
+    },
+    {
+      "date": "2014-12-04",
+      "sessions": [
+        {
+          "session_name": "7. izredna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marija Antonija Kova\u010di\u010d",
+                "gov_id": "P297",
+                "id": 96
+              },
+              "speeches": [
+                296757,
+                296775
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                296706,
+                296708,
+                296710,
+                296712,
+                296714,
+                296716,
+                296718,
+                296720,
+                296722,
+                296724,
+                296726,
+                296728,
+                296730,
+                296732,
+                296734,
+                296736,
+                296738,
+                296740,
+                296742,
+                296744,
+                296746,
+                296748,
+                296750,
+                296752,
+                296754,
+                296756
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Franc Jur\u0161a",
+                "gov_id": "P122",
+                "id": 37
+              },
+              "speeches": [
+                296652
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                296697,
+                296725,
+                296741,
+                296785
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Benedikt Kopmajer",
+                "gov_id": "P261",
+                "id": 41
+              },
+              "speeches": [
+                296801
+              ]
+            }
+          ],
+          "session_id": 3068
+        }
+      ]
+    },
+    {
+      "date": "2014-11-21",
+      "sessions": [
+        {
+          "session_name": "2. redna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Toma\u017e Gantar",
+                "gov_id": "P251",
+                "id": 22
+              },
+              "speeches": [
+                277416,
+                277466
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marjana Kotnik Poropat",
+                "gov_id": "P186",
+                "id": 45
+              },
+              "speeches": [
+                277494
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                277452,
+                277471,
+                277473,
+                277475,
+                277477,
+                277479,
+                277481,
+                277483,
+                277485,
+                277487,
+                277489,
+                277491,
+                277493,
+                277495,
+                277497,
+                277499,
+                277501,
+                277503,
+                277505,
+                277507
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Franc Jur\u0161a",
+                "gov_id": "P122",
+                "id": 37
+              },
+              "speeches": [
+                277474
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                277446
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marinka Levi\u010dar",
+                "gov_id": "P269",
+                "id": 52
+              },
+              "speeches": [
+                277470
+              ]
+            }
+          ],
+          "session_id": 3045
+        }
+      ]
+    },
+    {
+      "date": "2014-11-19",
+      "sessions": [
+        {
+          "session_name": "2. redna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Toma\u017e Gantar",
+                "gov_id": "P251",
+                "id": 22
+              },
+              "speeches": [
+                276890
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marija Antonija Kova\u010di\u010d",
+                "gov_id": "P297",
+                "id": 96
+              },
+              "speeches": [
+                276935,
+                276985,
+                276997
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                276982,
+                276919,
+                276974,
+                276976,
+                276978,
+                276980,
+                276984,
+                276986,
+                276988,
+                276990,
+                276992,
+                276994,
+                276996,
+                276998,
+                277000,
+                277002,
+                277004,
+                277008,
+                277009,
+                277011,
+                277013,
+                277015,
+                277017,
+                277021
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Franc Jur\u0161a",
+                "gov_id": "P122",
+                "id": 37
+              },
+              "speeches": [
+                276872,
+                277014
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                276878,
+                277026,
+                277099
+              ]
+            }
+          ],
+          "session_id": 3045
+        }
+      ]
+    },
+    {
+      "date": "2014-11-18",
+      "sessions": [
+        {
+          "session_name": "2. redna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                276858,
+                276728,
+                276730,
+                276732,
+                276734,
+                276736,
+                276738,
+                276740,
+                276742,
+                276744,
+                276746,
+                276779,
+                276748,
+                276750,
+                276752,
+                276754,
+                276763,
+                276765,
+                276767,
+                276787,
+                276852,
+                276854,
+                276856,
+                276838,
+                276840,
+                276842,
+                276844,
+                276846,
+                276848,
+                276850
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                276723,
+                276741,
+                276747,
+                276853
+              ]
+            }
+          ],
+          "session_id": 3045
+        }
+      ]
+    },
+    {
+      "date": "2014-11-17",
+      "sessions": [
+        {
+          "session_name": "2. redna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                276660,
+                276374,
+                276376,
+                276404,
+                276332,
+                276334,
+                276336,
+                276338,
+                276340,
+                276342,
+                276344,
+                276362,
+                276346,
+                276348,
+                276350,
+                276352,
+                276364,
+                276354,
+                276356,
+                276358,
+                276360,
+                276366,
+                276368,
+                276370,
+                276372,
+                276378,
+                276380,
+                276382,
+                276384,
+                276385,
+                276387,
+                276389,
+                276390,
+                276392,
+                276394,
+                276396,
+                276398,
+                276400,
+                276402,
+                276406,
+                276408,
+                276410,
+                276412,
+                276414,
+                276416,
+                276418,
+                276420,
+                276422,
+                276479,
+                276614,
+                276644,
+                276616,
+                276618,
+                276620,
+                276622,
+                276624,
+                276626,
+                276628,
+                276646,
+                276630,
+                276632,
+                276634,
+                276636,
+                276638,
+                276640,
+                276642,
+                276648,
+                276650,
+                276652,
+                276654,
+                276656,
+                276658,
+                276662,
+                276664,
+                276666,
+                276668,
+                276670,
+                276672,
+                276674,
+                276676,
+                276678,
+                276680,
+                276682,
+                276684,
+                276686,
+                276688,
+                276690,
+                276692,
+                276694,
+                276696,
+                276698,
+                276700,
+                276702
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                276319
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Benedikt Kopmajer",
+                "gov_id": "P261",
+                "id": 41
+              },
+              "speeches": [
+                276405
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marinka Levi\u010dar",
+                "gov_id": "P269",
+                "id": 52
+              },
+              "speeches": [
+                276561,
+                276565
+              ]
+            }
+          ],
+          "session_id": 3045
+        }
+      ]
+    },
+    {
+      "date": "2014-11-13",
+      "sessions": [
+        {
+          "session_name": "3. nujna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Ivan Hr\u0161ak",
+                "gov_id": "P176",
+                "id": 34
+              },
+              "speeches": [
+                307177,
+                307179,
+                307181,
+                307183,
+                307185,
+                307187,
+                307189,
+                307190,
+                307192,
+                307194,
+                307196,
+                307198,
+                307200,
+                307202,
+                307204,
+                307205,
+                307207,
+                307209
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marinka Levi\u010dar",
+                "gov_id": "P269",
+                "id": 52
+              },
+              "speeches": [
+                307191
+              ]
+            }
+          ],
+          "session_id": 3234
+        }
+      ]
+    },
+    {
+      "date": "2014-11-05",
+      "sessions": [
+        {
+          "session_name": "2. nujna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Ivan Hr\u0161ak",
+                "gov_id": "P176",
+                "id": 34
+              },
+              "speeches": [
+                307227,
+                307225,
+                307210,
+                307212,
+                307214,
+                307216,
+                307218,
+                307220,
+                307222,
+                307229,
+                307230,
+                307232,
+                307234,
+                307236,
+                307238
+              ]
+            }
+          ],
+          "session_id": 3235
+        }
+      ]
+    },
+    {
+      "date": "2014-09-30",
+      "sessions": [
+        {
+          "session_name": "4. izredna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                297258,
+                297256,
+                297252,
+                297254,
+                297260,
+                297262,
+                297264
+              ]
+            }
+          ],
+          "session_id": 3071
+        }
+      ]
+    },
+    {
+      "date": "2014-09-24",
+      "sessions": [
+        {
+          "session_name": "1. nujna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                305233
+              ]
+            }
+          ],
+          "session_id": 3203
+        }
+      ]
+    },
+    {
+      "date": "2014-09-19",
+      "sessions": [
+        {
+          "session_name": "3. izredna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                297558,
+                297560,
+                297562
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Ivan Hr\u0161ak",
+                "gov_id": "P176",
+                "id": 34
+              },
+              "speeches": [
+                297537
+              ]
+            }
+          ],
+          "session_id": 3072
+        }
+      ]
+    },
+    {
+      "date": "2014-09-12",
+      "sessions": [
+        {
+          "session_name": "1. nujna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Ivan Hr\u0161ak",
+                "gov_id": "P176",
+                "id": 34
+              },
+              "speeches": [
+                307239,
+                307241,
+                307243,
+                307245,
+                307247,
+                307249,
+                307251,
+                307253,
+                307255,
+                307256,
+                307258,
+                307260,
+                307262,
+                307264,
+                307265,
+                307267,
+                307269
+              ]
+            }
+          ],
+          "session_id": 3236
+        }
+      ]
+    },
+    {
+      "date": "2014-08-28",
+      "sessions": [
+        {
+          "session_name": "2. izredna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Primo\u017e Hainz",
+                "gov_id": "P255",
+                "id": 29
+              },
+              "speeches": [
+                297775,
+                297800,
+                297802,
+                297804,
+                297767,
+                297769,
+                297771,
+                297773,
+                297777,
+                297778,
+                297780,
+                297782,
+                297784,
+                297786,
+                297788,
+                297790,
+                297792,
+                297794,
+                297796,
+                297798,
+                297806,
+                297808,
+                297810,
+                297812,
+                297814
+              ]
+            },
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "m",
+                "name": "Uro\u0161 Prikl",
+                "gov_id": "P280",
+                "id": 69
+              },
+              "speeches": [
+                297783,
+                297825
+              ]
+            }
+          ],
+          "session_id": 3073
+        }
+      ]
+    },
+    {
+      "date": "2014-08-01",
+      "sessions": [
+        {
+          "session_name": "1. redna seja",
+          "speakers": [
+            {
+              "person": {
+                "party": {
+                  "acronym": "DeSUS",
+                  "id": 3,
+                  "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                },
+                "gender": "f",
+                "name": "Marjana Kotnik Poropat",
+                "gov_id": "P186",
+                "id": 45
+              },
+              "speeches": [
+                277561,
+                277543,
+                277559,
+                277545,
+                277547,
+                277549,
+                277551,
+                277553,
+                277555,
+                277557,
+                277563,
+                277564,
+                277565,
+                277567
+              ]
+            }
+          ],
+          "session_id": 3046
+        }
+      ]
+    }
+  ]
+}

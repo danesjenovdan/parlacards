@@ -1,0 +1,114 @@
+<!DOCTYPE html> <!-- removeme -->
+<html> <!-- removeme -->
+
+<head> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+
+    <!-- build:remove -->
+    <!-- these script files are removed on build -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <!-- endbuild -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+
+    <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <link data-inline="true" rel="stylesheet" href="css/style.css">
+
+</head> <!-- removeme -->
+
+<body> <!-- removeme -->
+
+<style>
+    #recent-speeches{height: 480px;}
+</style>
+
+    <!-- everything above here is part of the page and not part of the card -->
+    <div class="card-container card-halfling">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Vsi govori poslanske skupine</h1> <!-- this text is the only thing you touch in .card-header -->
+        </div>
+
+        <div class="card-content recent-activity " id="recent-speeches">
+            <div class="scroller" id="scrollbar-recent-activity">
+                <% var i = 0; %>
+                <% for(result in data.results){ %>
+
+                <section>
+                    <span class="date"><%= data.results[result].date %></span>
+
+                    <ul>
+                        <li>
+
+                            <p><a href="<%= data.results[result].sessions[0].session_name %>">
+                                    <%= data.results[result].sessions[0].session_name %>
+                                </a></p>
+
+                            <ul>
+                                <% for(var speechIndex = 0; speechIndex < data.results[result].sessions[0].speakers.length; speechIndex++ ){
+                                    var tmpSpeeker = data.results[result].sessions[0].speakers[speechIndex];
+                                %>
+                                <li>
+
+                                    <div class="member pull-left">
+                                        <div class="image"
+                                             style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= tmpSpeeker.person.gov_id %>.png);">
+
+                                        </div>
+                                        <p>
+                                            <%= tmpSpeeker.person.name %>
+                                            <br/>
+                                            <%= tmpSpeeker.person.party.acronym %>
+                                        </p>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <div class="pull-left">
+
+                                        <% var j = 0; for(r in tmpSpeeker.speeches) {
+                                            var tmpIndex = j+1;
+                                        %>
+                                        <a class="parlaicon speech" href="<%= tmpSpeeker.speeches[r] %>"><%= tmpIndex %></a>
+                                        <% j++; } %>
+
+                                    </div>
+                                    <div class="clearfix"></div>
+
+                                </li>
+                                <% } %>
+
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </section>
+                <% i++; } %>
+
+            </div>
+
+        </div>
+
+
+        <div class="card-footer">
+            <div class="card-circle-button card-share"></div>
+            <div class="card-circle-button card-embed">&lt;/&gt;</div>
+            <div class="card-circle-button card-info">i</div>
+        </div>
+    </div>
+    <!-- everything below here is part of the page and not part of the card -->
+
+    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <!-- inline temp/js/script.js as <script> -->
+    <script data-inline="true" src="js/script.js"></script>
+
+</body> <!-- removeme -->
+
+</html> <!-- removeme -->

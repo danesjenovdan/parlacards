@@ -39,7 +39,7 @@
 
             <div id="scrollbar-voting-card" class="scroller">
 <% var persons = data.facet_counts.facet_fields.speaker_i; %>
-                <% console.log(persons); %>
+
                 <% var i=0; for (var person in persons) { %>
 
                 <div class="member <%= ((persons.length-1) == i) ? 'lastel' : ''; %>">

@@ -2,8 +2,9 @@
 <html> <!-- removeme -->
 
 <head> <!-- removeme -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- removeme -->
 
     <!-- build:remove -->
     <!-- these script files are removed on build -->
@@ -14,9 +15,9 @@
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
     <!-- endbuild -->
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"           data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false"           data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false"           data-concat="false"> <!-- removeme -->
 
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
@@ -26,49 +27,55 @@
 <body> <!-- removeme -->
 
 
-    <!-- everything above here is part of the page and not part of the card -->
-    <div class="card-container card-halfling">
-        <div class="card-header">
-            <div class="card-header-border"></div>
-            <h1>Odstopanje od poslanske skupine</h1> <!-- this text is the only thing you touch in .card-header -->
-        </div>
-        <div class="card-content" id="votingCardHorizontal">
-
-            <span class="glyphicon glyphicon-circle-arrow-left navigate-left text-center"></span>
-            <div class="slider" id="scrollbar">
-                <div class="slider-content">
-
-                    <% for (var i = 0; i < data.results.length ; i++) { %>
-                    <div class="member">
-                        <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data.results[i].person.gov_id %>.png); background-size: cover;"></div>
-                        <p><%= data.results[i].person.name %></p>
-                        <span><%= data.results[i].ratio.toFixed(0) %> %</span>
-                        <div class="clearfix"></div>
-                    </div>
-                    <% } %>
-
-
-
-                </div>
-            </div>
-            <span class="glyphicon glyphicon-circle-arrow-right navigate-right text-center"></span>
-
-
-
-            <div class="clearfix"></div>
-
-        </div>
-        <div class="card-footer">
-            <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed">&lt;/&gt;</div>
-            <div class="card-circle-button card-info">i</div>
-        </div>
+<!-- everything above here is part of the page and not part of the card -->
+<div class="card-container card-halfling">
+    <div class="card-header">
+        <div class="card-header-border"></div>
+        <h1>Odstopanje od poslanske skupine</h1> <!-- this text is the only thing you touch in .card-header -->
     </div>
-    <!-- everything below here is part of the page and not part of the card -->
+    <div class="card-content" id="votingCardHorizontal">
 
-    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
-    <!-- inline temp/js/script.js as <script> -->
-    <script data-inline="true" src="js/script.js"></script>
+        <span class="glyphicon glyphicon-circle-arrow-left navigate-left text-center"></span>
+        <div class="slider" id="scrollbar">
+            <div class="slider-content">
+
+                <% for (var i = 0; i < data.results.length ; i++) { %>
+                <%
+                    var tmpname = data.results[i].person.name;
+                    var tmpGovId = data.results[i].person.gov_id;
+                    if (typeof (tmpname) === 'undefined') {
+                        tmpname = "duke Nukem FixMe";
+                        tmpGovId = 666;
+                    }
+                %>
+                <div class="member">
+                    <div class="image"
+                         style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= tmpGovId %>.png); background-size: cover;"></div>
+                    <p><%= tmpname %></p>
+                    <span><%= data.results[i].ratio.toFixed(0) %> %</span>
+                    <div class="clearfix"></div>
+                </div>
+                <% } %>
+
+            </div>
+        </div>
+        <span class="glyphicon glyphicon-circle-arrow-right navigate-right text-center"></span>
+
+
+        <div class="clearfix"></div>
+
+    </div>
+    <div class="card-footer">
+        <div class="card-circle-button card-share"></div>
+        <div class="card-circle-button card-embed">&lt;/&gt;</div>
+        <div class="card-circle-button card-info">i</div>
+    </div>
+</div>
+<!-- everything below here is part of the page and not part of the card -->
+
+<!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+<!-- inline temp/js/script.js as <script> -->
+<script data-inline="true" src="js/script.js"></script>
 
 </body> <!-- removeme -->
 
