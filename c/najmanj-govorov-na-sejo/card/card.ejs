@@ -46,13 +46,16 @@
 
                         <% var i = 1; for (person in data) { %>
 
-                            <div class="member <%= (data.length == i) ? 'lastel' : ''; %>">
-                                <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data[person].gov_id %>.png); background-size: cover;"></div>
-                                <p><%= data[person].name %>
-                                    <br/><%= data[person].party.acronym %></p>
-                                <span><%= data[person].speeches.toFixed(2) %></span>
-                                <div class="clearfix"></div>
-                            </div>
+                        <div class="member <%= (data.length == i) ? 'lastel' : ''; %>">
+                            <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data[person].person.gov_id %>.png); background-size: cover;"></div>
+                            <p>
+                                <%= data[person].person.name %>
+                                <br/>
+                                <%= data[person].person.party.acronym %>
+                            </p>
+                            <span><%= data[person].speeches.toFixed(1) %></span>
+                            <div class="clearfix"></div>
+                        </div>
 
                         <% i++; }%>
 
