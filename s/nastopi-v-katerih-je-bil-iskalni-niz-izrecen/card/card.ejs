@@ -48,14 +48,11 @@
               var PAGE_SIZE = 5;
               var randomId = makeId();
               var paginationNeeded = data.search_results.length > PAGE_SIZE;
+              var resultPages = [];
+              var pageCount = Math.ceil(data.search_results.length / PAGE_SIZE);
 
-              if (paginationNeeded) {
-                var resultPages = [];
-                var pageCount = Math.ceil(data.search_results.length / PAGE_SIZE);
-
-                for (var i = 0; i < pageCount; i++) {
-                  resultPages.push(data.search_results.slice(i * PAGE_SIZE, (i + 1) * PAGE_SIZE));
-                }
+              for (var i = 0; i < pageCount; i++) {
+                resultPages.push(data.search_results.slice(i * PAGE_SIZE, (i + 1) * PAGE_SIZE));
               }
           %>
 
