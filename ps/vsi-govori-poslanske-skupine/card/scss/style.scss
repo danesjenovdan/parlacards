@@ -54,7 +54,7 @@
 
 
 
-#recent-speeches {
+#all-speeches {
 
   .speech{
     //background: #197197;
@@ -111,10 +111,17 @@
       float: left;
       margin-right: 10px;
       background-size: cover;
+      -webkit-border-radius:20px;
+      -moz-border-radius:20px;
+      border-radius:20px;
     }
     .member p{
       float: left;
       display: inline-block;
+      font-size: 14px;
+    }
+    .speechesnmbr{
+      width: 50%;
     }
 
   }
