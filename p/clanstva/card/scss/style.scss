@@ -17,12 +17,13 @@
   }
 }
 
-.pagination-container {
-  text-align: center;
-}
-
+// TODO: Move this to shared stylesheet as it appears in multiple cards
 .pagination {
   margin: 13px 0 -4px 0;
+
+  &-container {
+    text-align: center;
+  }
 
   li {
     a:focus,

@@ -17,7 +17,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
     <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
     <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700" rel="stylesheet">
 
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
@@ -34,36 +33,94 @@
             <h1>Nastopi, v katerih je bil iskalni niz izrečen</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
+          <%
+              function makeId() {
+                  var text = "";
+                  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                  for(var i = 0; i < 5; i++) {
+                      text += possible.charAt(Math.floor(Math.random() * possible.length));
+                  }
+
+                  return text;
+              }
+
+              var PAGE_SIZE = 3;
+              var randomId = makeId();
+              var paginationNeeded = data.search_results.length > PAGE_SIZE;
+
+              if (paginationNeeded) {
+                var resultPages = [];
+                var pageCount = Math.ceil(data.search_results.length / PAGE_SIZE);
+
+                for (var i = 0; i < pageCount; i++) {
+                  resultPages.push(data.search_results.slice(i * PAGE_SIZE, (i + 1) * PAGE_SIZE));
+                }
+              }
+          %>
 
           <div  id="votingCard">
 
               <div id="scrollbar-voting-card" class="scroller">
 
-                  <% data.search_results.forEach(function(result, index) { %>
+                  <div class="tab-content">
+                      <% resultPages.forEach(function(resultPage, index) { %>
+                          <% if (paginationNeeded) { %>
+                          <div role="tabpanel" class="tab-pane<%= index === 0 ? ' active' : '' %>" id="<%= randomId %>_<%= index %>">
+                          <% } %>
 
-                  <div class="member">
-                      <div class="metadata">
-                          <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= result.person.gov_id %>.png); background-size: cover;"></div>
-                          <p class="name">
-                            <%= result.person.name %><br/>
-                            <%= result.person.party.acronym %>
-                            </p>
-                          <p class="date">13. 2. 2016</p>
-                      </div>
-                      <div class="quote"><%- result.quote %></div>
+                          <% resultPage.forEach(function(result, index) { %>
+                          <div class="member">
+                              <div class="metadata">
+                                  <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= result.person.gov_id %>.png); background-size: cover;"></div>
+                                  <p class="name">
+                                      <%= result.person.name %><br/>
+                                      <%= result.person.party.acronym %>
+                                      </p>
+                                  <p class="date">13. 2. 2016</p>
+                              </div>
+                              <div class="quote"><%- result.quote %></div>
+                          </div>
+                          <% }) %>
+
+                          <% if (paginationNeeded) { %>
+                          </div>
+                          <% } %>
+                      <% }) %>
                   </div>
 
-                  <% }) %>
+                  <% if (paginationNeeded) { %>
+                  <nav class="pagination-container" aria-label="Page navigation">
+                      <ul class="pagination" role="tablist">
+                          <li class="arrow">
+                              <a href="#" aria-label="Previous" data-move-pagination="prev">
+                                  <span aria-hidden="true"></span>
+                              </a>
+                          </li>
+
+                          <% for (var i = 0; i < pageCount; i++) { %>
+                              <li role="presentation" class="<%= i === 0 ? 'active' : '' %>">
+                                  <a href="#<%= randomId %>_<%= i %>" aria-controls="i" role="tab" data-toggle="tab"><%= i + 1 %></a>
+                              </li>
+                          <% } %>
+
+                          <li class="arrow">
+                              <a href="#" aria-label="Next" data-move-pagination="next">
+                                  <span aria-hidden="true"></span>
+                              </a>
+                          </li>
+                      </ul>
+                  </nav>
+                  <% } %>
 
               </div>
 
           </div>
 
-
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed">&lt;/&gt;</div>
+            <div class="card-circle-button card-embed"></div>
             <div class="card-circle-button card-info">i</div>
         </div>
     </div>
