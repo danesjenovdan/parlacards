@@ -45,14 +45,19 @@
                   return text;
               }
 
+              function formatDate(unformattedDate) {
+                var date = new Date(unformattedDate);
+                return date.getDate() + ". " + (date.getMonth() + 1) + ". " + date.getFullYear()
+              }
+
               var PAGE_SIZE = 5;
               var randomId = makeId();
-              var paginationNeeded = data.search_results.length > PAGE_SIZE;
+              var paginationNeeded = data.highlighting.length > PAGE_SIZE;
               var resultPages = [];
-              var pageCount = Math.ceil(data.search_results.length / PAGE_SIZE);
+              var pageCount = Math.ceil(data.highlighting.length / PAGE_SIZE);
 
               for (var i = 0; i < pageCount; i++) {
-                resultPages.push(data.search_results.slice(i * PAGE_SIZE, (i + 1) * PAGE_SIZE));
+                resultPages.push(data.highlighting.slice(i * PAGE_SIZE, (i + 1) * PAGE_SIZE));
               }
           %>
 
@@ -74,9 +79,9 @@
                                       <%= result.person.name %><br/>
                                       <%= result.person.party.acronym %>
                                       </p>
-                                  <p class="date">13. 2. 2016</p>
+                                  <p class="date"><%= formatDate(result.date) %></p>
                               </div>
-                              <div class="quote"><%- result.quote %></div>
+                              <div class="quote"><%- result.content_t %></div>
                           </div>
                           <% }) %>
 
