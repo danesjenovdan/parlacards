@@ -1,19 +1,41 @@
-.poslanec.clanstva .nav-tabs {
-  padding-bottom: 13px;
-  > li {
-    width: 33.333%;
-  }
+#votingCard div.member:last-child {
+  border-bottom: none;
 }
 
-.membership-list {
-  margin: 0;
-  min-height: 72px;
-  padding: 0;
-
-  .key {
-    padding: 1px 0;
-    text-align: center;
-    width: 100%;
+#votingCard {
+  div.member {
+    display: flex;
+    flex-wrap: wrap;
+    .metadata {
+      width: 50%;
+      display: flex;
+    }
+    .image {
+      float: none;
+    }
+    .name {
+      flex: 1;
+      float: none;
+      line-height: 1.111em;
+      margin: 16px 0 0 24px;
+      width: auto;
+    }
+    .date {
+      float: none;
+      width: 100px;
+      margin: 0 36px 0 0;
+      text-align: right;
+      line-height: 75px;
+    }
+    .quote {
+      width: 50%;
+      font-family: Roboto Slab, Georgia, serif;
+      font-weight: 300;
+      em {
+        font-style: normal;
+        font-weight: bold;
+      }
+    }
   }
 }
 
@@ -65,6 +87,20 @@
     }
     &:first-child a {
       transform: scaleX(-1);
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  #votingCard div.member {
+    .date {
+      margin: 0;
+    }
+
+    .metadata, .quote {
+      width: 100%;
+      margin-top: 10px;
     }
   }
 }

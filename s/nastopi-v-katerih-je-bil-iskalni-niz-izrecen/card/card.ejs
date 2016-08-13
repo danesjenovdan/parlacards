@@ -1,0 +1,137 @@
+<!DOCTYPE html> <!-- removeme -->
+<html> <!-- removeme -->
+
+<head> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+
+    <!-- build:remove -->
+    <!-- these script files are removed on build -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <!-- endbuild -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+
+    <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <link data-inline="true" rel="stylesheet" href="css/style.css">
+
+</head> <!-- removeme -->
+
+<body> <!-- removeme -->
+
+
+    <!-- everything above here is part of the page and not part of the card -->
+    <div class="card-container card-halfling">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Nastopi, v katerih je bil iskalni niz izrečen</h1> <!-- this text is the only thing you touch in .card-header -->
+        </div>
+        <div class="card-content">
+          <%
+              function makeId() {
+                  var text = "";
+                  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                  for(var i = 0; i < 5; i++) {
+                      text += possible.charAt(Math.floor(Math.random() * possible.length));
+                  }
+
+                  return text;
+              }
+
+              function formatDate(unformattedDate) {
+                var date = new Date(unformattedDate);
+                return date.getDate() + ". " + (date.getMonth() + 1) + ". " + date.getFullYear()
+              }
+
+              var PAGE_SIZE = 5;
+              var randomId = makeId();
+              var paginationNeeded = data.highlighting.length > PAGE_SIZE;
+              var resultPages = [];
+              var pageCount = Math.ceil(data.highlighting.length / PAGE_SIZE);
+
+              for (var i = 0; i < pageCount; i++) {
+                resultPages.push(data.highlighting.slice(i * PAGE_SIZE, (i + 1) * PAGE_SIZE));
+              }
+          %>
+
+          <div  id="votingCard">
+
+              <div id="scrollbar-voting-card" class="scroller">
+
+                  <div class="tab-content">
+                      <% resultPages.forEach(function(resultPage, index) { %>
+                          <% if (paginationNeeded) { %>
+                          <div role="tabpanel" class="tab-pane<%= index === 0 ? ' active' : '' %>" id="<%= randomId %>_<%= index %>">
+                          <% } %>
+
+                          <% resultPage.forEach(function(result, index) { %>
+                          <div class="member">
+                              <div class="metadata">
+                                  <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= result.person.gov_id %>.png); background-size: cover;"></div>
+                                  <p class="name">
+                                      <%= result.person.name %><br/>
+                                      <%= result.person.party.acronym %>
+                                      </p>
+                                  <p class="date"><%= formatDate(result.date) %></p>
+                              </div>
+                              <div class="quote"><%- result.content_t %></div>
+                          </div>
+                          <% }) %>
+
+                          <% if (paginationNeeded) { %>
+                          </div>
+                          <% } %>
+                      <% }) %>
+                  </div>
+
+                  <% if (paginationNeeded) { %>
+                  <nav class="pagination-container" aria-label="Page navigation">
+                      <ul class="pagination" role="tablist">
+                          <li class="arrow">
+                              <a href="#" aria-label="Previous" data-move-pagination="prev">
+                                  <span aria-hidden="true"></span>
+                              </a>
+                          </li>
+
+                          <% for (var i = 0; i < pageCount; i++) { %>
+                              <li role="presentation" class="<%= i === 0 ? 'active' : '' %>">
+                                  <a href="#<%= randomId %>_<%= i %>" aria-controls="i" role="tab" data-toggle="tab"><%= i + 1 %></a>
+                              </li>
+                          <% } %>
+
+                          <li class="arrow">
+                              <a href="#" aria-label="Next" data-move-pagination="next">
+                                  <span aria-hidden="true"></span>
+                              </a>
+                          </li>
+                      </ul>
+                  </nav>
+                  <% } %>
+
+              </div>
+
+          </div>
+
+        </div>
+        <div class="card-footer">
+            <div class="card-circle-button card-share"></div>
+            <div class="card-circle-button card-embed"></div>
+            <div class="card-circle-button card-info">i</div>
+        </div>
+    </div>
+    <!-- everything below here is part of the page and not part of the card -->
+
+    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <!-- inline temp/js/script.js as <script> -->
+    <script data-inline="true" src="js/script.js"></script>
+
+</body> <!-- removeme -->
+
+</html> <!-- removeme -->
