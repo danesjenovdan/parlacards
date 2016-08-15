@@ -1,0 +1,13 @@
+{
+    "person": {
+        "id": 83,
+        "party": {
+            "acronym": "SD",
+            "id": 7,
+            "name": "PS Socialni Demokrati"
+        },
+        "name": "Janko Veber",
+        "gov_id": "P081",
+        "gender": "f"
+    },
+    "text": "Lorem ipsum."}

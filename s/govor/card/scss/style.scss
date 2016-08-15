@@ -1,0 +1,21 @@
+.card-header-person {
+  display: flex;
+  padding: 0;
+  height: 75px;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+
+  .portrait {
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 4px #ddd;
+    height: 32px;
+    width: 32px;
+    margin-right: 24px;
+  }
+  .name {
+    font-weight: 300;
+    font-size: 18px !important;
+  }
+}
