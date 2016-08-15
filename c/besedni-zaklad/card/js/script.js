@@ -168,7 +168,7 @@ function renderGraph() {
   // The ideal number of times scales with graph complexity.
   // Of course, don't run too long—you'll hang the page!
   force.start();
-  for (var i = 100; i > 0; --i) force.tick();
+  for (var i = 50; i > 0; --i) force.tick();
   force.stop();
 
   svg.append("g")
