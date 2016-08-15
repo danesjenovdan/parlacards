@@ -13,6 +13,7 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
     <!-- endbuild -->
+    <script>var speechData = <%- JSON.stringify(data); %></script>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
     <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
@@ -20,7 +21,6 @@
 
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
-
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
@@ -32,10 +32,9 @@
             <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.person.gov_id %>.png')"></div>
             <h1 class="name"><%= data.person.name %></h1>
         </div>
-        <div class="card-content">
-
-          SPEECH GOES HERE
-
+        <div class="card-content speech-text">
+          <%= data.content %>
+          <div class="quote-button">“</div>
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>

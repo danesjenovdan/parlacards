@@ -19,3 +19,33 @@
     font-size: 18px !important;
   }
 }
+
+
+.speech-text {
+  padding: 0 133px;
+  margin: 36px 0;
+  font-family: Roboto Slab;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  position: relative;
+
+  .quote-button {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    background: #197197;
+    border-radius: 50%;
+    color: #fff;
+    font-family: Times New Roman, serif;
+    font-size: 44px;
+    text-align: center;
+    line-height: 52px;
+    margin-top: -16px;
+    top: 0;
+    left: 50px;
+    user-select: none;
+    cursor: pointer;
+    display: none;
+  }
+}
