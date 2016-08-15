@@ -21,6 +21,10 @@
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
 
+    <script>
+        var kompas_data = <%- JSON.stringify(data); %>
+    </script>
+
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
@@ -77,7 +81,7 @@
                     </div>
                 </div>
                 <div class="col-xs-10">
-                    <div id="scatter"></div>
+                    <div id="kompas-scatter"></div>
                 </div>
             </div>
             <!-- delete this placeholder, this is the content of your card -->
