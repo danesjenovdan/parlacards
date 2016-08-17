@@ -9,3 +9,119 @@ path.pointer {
   stroke-width: 0.6;
   stroke: #505050;
 }
+
+.card-header {
+    height: auto;
+}
+.slab {
+    padding-left: 20px;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
+a.document {
+    display: inline-block;
+    border-radius: 50%;
+
+    height: 35px;
+    width: 35px;
+    background-color: #00628c;
+
+    line-height: 35px;
+    text-align: center;
+    color: #ffffff;
+
+    margin-left: 10px;
+}
+a.document:hover {
+    text-decoration: none;
+    background-color: #009cdd;
+}
+
+.greybox {
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin-top: 15px;
+
+    overflow: hidden;
+}
+.legend-container {
+    display: block;
+    float: left;
+
+    height: 48px;
+
+    .option {
+        display: inline-block;
+        margin-right: 20px;
+
+        .option-marker {
+            display: inline-block;
+            background-color: #000000;
+            width: 10px;
+            height: 40px;
+        }
+        .option-marker-za {
+            background-color: #00628C;
+        }
+        .option-marker-proti {
+            background-color: #009CDD;
+        }
+        .option-marker-vzdrzani {
+            background-color: #003B54;
+        }
+        .option-marker-niso {
+            background-color: #99E1FF;
+        }
+        .option-text {
+            display: inline-block;
+        }
+        .option-number {
+            font-size: 30px;
+            font-weight: 400;
+            color: #515151;
+            line-height: 30px;
+            padding: 0;
+            margin: 0;
+        }
+        .option-option {
+            font-size: 16px;
+            color: #515151;
+            line-height: 16px;
+        }
+    }
+}
+
+.status-container {
+    display: block;
+    float: left;
+
+    height: 48px;
+
+    font-size: 16px;
+
+    .status {
+        display: inline-block;
+        line-height: 48px;
+
+        font-weight: 700;
+    }
+
+    i {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .glyphicon-remove {
+        color: #FF5E41;
+    }
+
+}
+
+.required-majority {
+    display: block;
+    float: left;
+
+    line-height: 48px;
+}

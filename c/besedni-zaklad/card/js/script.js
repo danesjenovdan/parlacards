@@ -21,7 +21,7 @@ function groupBy(array, f) {
     })
 }
 
-var groupedData = groupBy(kompas_data, function(item) {
+var groupedData = groupBy(data, function(item) {
     return [item.person.party.acronym]
 });
 
@@ -36,47 +36,185 @@ var margin = {
     width = outerWidth - margin.left - margin.right,
     height = outerHeight - margin.top - margin.bottom;
 
+// var x = d3.scale.linear()
+//     .range([0, width]).nice();
+
 var x = d3.scale.linear()
-    .range([0, width]).nice();
+  .range( [margin.left, width ] ).nice();
 
-var y = d3.scale.linear()
-    .range([height, 0]).nice();
+var xCat = "score";
 
-var xCat = "ideology1";
-var yCat = "ideology2";
-
-kompas_data.forEach(function(d) {
-    d.ideology1 = +d.score.vT1;
-    d.ideology2 = +d.score.vT2;
+data.forEach(function(d) {
+    d.score = +d.score;
 });
 
-var xMax = d3.max(kompas_data, function(d) {
+var xMax = d3.max(data, function(d) {
         return d[xCat];
-    }) * 1.05,
-    xMin = d3.min(kompas_data, function(d) {
+    }) * 1.05;
+var xMin = d3.min(data, function(d) {
         return d[xCat];
-    }),
-    xMin = xMin > 0 ? 0 : xMin,
-    yMax = d3.max(kompas_data, function(d) {
-        return d[yCat];
-    }) * 1.05,
-    yMin = d3.min(kompas_data, function(d) {
-        return d[yCat];
-    }),
-    yMin = yMin > 0 ? 0 : yMin;
+    });
+var xMin = xMin > 0 ? 0 : xMin;
 
 x.domain([xMin, xMax]);
-y.domain([yMin, yMax]);
+
+var nodes = data.map(function(node, index) {
+    return {
+        person: node.person,
+        score: node.score,
+        idealradius: node.score / 100,
+        radius: 15,
+        // Give each node a random color.
+        color: '#ff7f0e',
+        // Set the node's gravitational centerpoint.
+        idealcx: x(node.score),
+        idealcy: height / 2,
+        x: x(node.score),
+        // Add some randomization to the placement;
+        // nodes stacked on the same point can produce NaN errors.
+        y: height / 2 + Math.random()
+    };
+});
+
+var force = d3.layout.force()
+  .nodes(nodes)
+  .size([width, height])
+  .gravity(0)
+  .charge(0)
+  .on("tick", tick)
+  .start();
 
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom")
     .tickSize(0);
 
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left")
-    .tickSize(0);
+/**
+ * On a tick, apply custom gravity, collision detection, and node placement.
+ */
+function tick(e) {
+  for ( i = 0; i < nodes.length; i++ ) {
+    var node = nodes[i];
+    /*
+     * Animate the radius via the tick.
+     *
+     * Typically this would be performed as a transition on the SVG element itself,
+     * but since this is a static force layout, we must perform it on the node.
+     */
+    // node.radius = node.idealradius - node.idealradius * e.alpha * 10;
+    node = gravity(.2 * e.alpha)(node);
+    node = collide(.5)(node);
+    node.cx = node.x;
+    node.cy = node.y;
+  }
+}
+
+/**
+ * On a tick, move the node towards its desired position,
+ * with a preference for accuracy of the node's x-axis placement
+ * over smoothness of the clustering, which would produce inaccurate data presentation.
+ */
+function gravity(alpha) {
+  return function(d) {
+    d.y += (d.idealcy - d.y) * alpha;
+    d.x += (d.idealcx - d.x) * alpha * 3;
+    return d;
+  };
+}
+
+/**
+ * On a tick, resolve collisions between nodes.
+ */
+ var maxRadius = 15;
+ var padding = 5;
+function collide(alpha) {
+  var quadtree = d3.geom.quadtree(nodes);
+  return function(d) {
+    var r = d.radius + maxRadius + padding,
+        nx1 = d.x - r,
+        nx2 = d.x + r,
+        ny1 = d.y - r,
+        ny2 = d.y + r;
+    quadtree.visit(function(quad, x1, y1, x2, y2) {
+      if (quad.point && (quad.point !== d)) {
+        var x = d.x - quad.point.x,
+            y = d.y - quad.point.y,
+            l = Math.sqrt(x * x + y * y),
+            r = d.radius + quad.point.radius + padding;
+        if (l < r) {
+          l = (l - r) / l * alpha;
+          d.x -= x *= l;
+          d.y -= y *= l;
+          quad.point.x += x;
+          quad.point.y += y;
+        }
+      }
+      return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+    });
+    return d;
+  };
+}
+
+function transform(d) {
+    return "translate(" + d.x + "," + d.y + ")";
+}
+
+/**
+ * Run the force layout to compute where each node should be placed,
+ * then replace the loading text with the graph.
+ */
+function renderGraph() {
+  // Run the layout a fixed number of times.
+  // The ideal number of times scales with graph complexity.
+  // Of course, don't run too long—you'll hang the page!
+  force.start();
+  for (var i = 50; i > 0; --i) force.tick();
+  force.stop();
+
+  svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + ( margin.top + ( height * 3/4 ) ) + ")")
+    .call(xAxis);
+
+  var circle = svg.selectAll('.dot')
+    .data(nodes)
+    .enter().append('g')
+    .append("circle")
+    // .enter().append('svg:image')
+    //     .attr('xlink:href', function(d) {
+    //         return 'https://cdn.parlameter.si/v1/img/people/' + d.person.gov_id + '.png';
+    //     })
+    //     .attr('x', function(d) { return d.x })
+    //     .attr('y', function(d) { return d.y })
+    //     .attr('height', 30)
+    //     .attr('width', 30)
+    // .style("fill", function(d) { return d.color; })
+    // .attr("cx", function(d) { return d.x} )
+    // .attr("cy", function(d) { console.log(d); return d.y} )
+    .attr('transform', transform)
+    .attr("r", function(d) { return d.radius} )
+    .classed("dot", true)
+    .attr('id', function(d) {
+        return '_' + d.person.id;
+    })
+    // .style('border', '3px solid')
+    .style("stroke", function(d) {
+        return color(d.person.party.acronym.replace(' ', '_'));
+    })
+    .style('fill', function(d) {
+        return 'url(#' + d.person.gov_id + ')'
+    })
+    .on('click', function(d, i) {
+        // var element = d3.select('#_' + d.person.id);
+        // if (element.classed('selected')) {
+        //     removeSingleHull(d);
+        //     element.classed('selected', false);
+        // } else {
+        drawSingleHull(d);
+        //     element.classed('selected', true);
+        // }
+    });
+}
 
 var parties = [];
 for (group in groupedData) {
@@ -86,18 +224,11 @@ for (group in groupedData) {
 var color = d3.scale.ordinal()
     .range(["#8FCFEE", "#4FB5E6", "#AA7375", "#534961", "#4F6379", "#5388AA", "#D9776B", "#BA594C"]);
 
-var zoomBeh = d3.behavior.zoom()
-    .x(x)
-    .y(y)
-    .scaleExtent([0, 500])
-    .on("zoom", zoom);
-
-var svg = d3.select("#kompas-scatter")
+var svg = d3.select("#vocabulary-chart")
     .append("svg")
     .attr('viewBox', '0 0 700 400')
     .attr('preserveAspectRatio', 'xMidYMid meet')
-    .append("g")
-    .call(zoomBeh);
+    .append("g");
 
 svg.append("rect")
     .attr("width", width)
@@ -107,10 +238,6 @@ svg.append("g")
     .classed("x axis", true)
     .attr("transform", "translate(0," + height + ")")
     .call(xAxis)
-
-svg.append("g")
-    .classed("y axis", true)
-    .call(yAxis)
 
 svg.selectAll(".tick")
     .each(function(d, i) {
@@ -130,90 +257,64 @@ var parties = objects.selectAll('g')
         return 'kompasgroup' + d[0].person.party.acronym.replace(' ', '_');
     });
 
-var defs = svg.append('defs');
+var defs = svg.append('defs').attr('id', 'thedefs');
 
-for (i in kompas_data) {
+for (i in data) {
     defs.append("pattern")
-        .attr("id", kompas_data[i].person.gov_id)
+        .attr("id", data[i].person.gov_id)
         .attr("patternUnits", "userSpaceOnUse")
-        .attr("width", 40)
-        .attr("height", 40)
-        .attr("x", -20)
-        .attr("y", 20)
+        .attr("width", 30)
+        .attr("height", 30)
+        .attr("x", -15)
+        .attr("y", -15)
         .append("image")
-        .attr("xlink:href", 'https://cdn.parlameter.si/v1/img/people/' + kompas_data[i].person.gov_id + '.png')
-        .attr("width", 40)
-        .attr("height", 40)
+        .attr("xlink:href", 'https://cdn.parlameter.si/v1/img/people/' + data[i].person.gov_id + '.png')
+        .attr("width", 30)
+        .attr("height", 30)
         .attr("x", 0)
         .attr("y", 0);
 }
 
-for (group in groupedData) {
+// for (group in groupedData) {
+//
+//     var currentselection = d3.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(' ', '_'))
+//         .selectAll('.dot')
+//         .data(groupedData[group])
+//         .enter()
+//         .append("circle")
+//         .classed("dot", true)
+//         .attr('id', function(d) {
+//             return '_' + d.person.id;
+//         })
+//         .attr("r", function(d) {
+//             return 20;
+//         })
+//         .attr("transform", transform)
+//         // .style('border', '3px solid')
+//         .style("stroke", function(d) {
+//             return color(d.person.party.acronym.replace(' ', '_'));
+//         })
+//         .style('fill', function(d) {
+//             return 'url(#' + d.person.gov_id + ')'
+//         })
+//         .on('click', function(d, i) {
+//             // var element = d3.select('#_' + d.person.id);
+//             // if (element.classed('selected')) {
+//             //     removeSingleHull(d);
+//             //     element.classed('selected', false);
+//             // } else {
+//             drawSingleHull(d);
+//             //     element.classed('selected', true);
+//             // }
+//         });
+//     // .style('filter', 'url(#glow)');
+//     // .on('mouseover', overGroup)
+//     // .off('mouseover', offGroup);
+//
+//     drawHull(currentselection, groupedData[group]);
+//
+// }
 
-    var currentselection = d3.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(' ', '_'))
-        .selectAll('.dot')
-        .data(groupedData[group])
-        .enter()
-        .append("circle")
-        .classed("dot", true)
-        .attr('id', function(d) {
-            return '_' + d.person.id;
-        })
-        .attr("r", function(d) {
-            return 20;
-        })
-        .attr("transform", transform)
-        // .style('border', '3px solid')
-        .style("stroke", function(d) {
-            return color(d.person.party.acronym.replace(' ', '_'));
-        })
-        .style('fill', function(d) {
-            return 'url(#' + d.person.gov_id + ')'
-        })
-        .on('click', function(d, i) {
-            // var element = d3.select('#_' + d.person.id);
-            // if (element.classed('selected')) {
-            //     removeSingleHull(d);
-            //     element.classed('selected', false);
-            // } else {
-            drawSingleHull(d);
-            //     element.classed('selected', true);
-            // }
-        });
-    // .style('filter', 'url(#glow)');
-    // .on('mouseover', overGroup)
-    // .off('mouseover', offGroup);
-
-    drawHull(currentselection, groupedData[group]);
-
-}
-
-function zoom() {
-
-    svg.selectAll(".dot")
-        .attr("transform", transform);
-
-    svg.selectAll(".singlehull")
-        .attr("d", function(d) {
-            var parent = d3.select('#' + d3.select(this).attr('data-parent'));
-            var translateX = parseInt(parent.attr('transform').split('(')[1].split(',')[0]);
-            var translateY = parseInt(parent.attr('transform').split('(')[1].split(',')[1].split(')')[0]);
-            console.log(translateX, translateY)
-            return "M" + translateX + ',' + translateY + "L" + (translateX + 0.01) + ',' + translateY + "Z";
-        });
-
-    for (group in groupedData) {
-
-        var currentselection = d3.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(' ', '_'))
-
-        redrawHull(currentselection, groupedData[group]);
-
-    }
-}
-
-function transform(d) {
-    return "translate(" + x(d[xCat]) + "," + y(d[yCat]) + ")";
-}
 
 function overGroup() {};
 
@@ -350,3 +451,5 @@ function redrawHull(group, dataset) {
             });
     }
 }
+
+renderGraph();

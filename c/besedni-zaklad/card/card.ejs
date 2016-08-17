@@ -21,48 +21,74 @@
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
 
+    <script>
+        var data = <%- JSON.stringify(data); %>
+    </script>
+
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
 
-<style>
-    #votingCard{height: 480px;}
+    <%
 
-</style>
+        function getParties(data) {
+
+            var parties = [];
+
+            for (person_i in data) {
+                if (parties.indexOf(data[person_i].person.party.acronym) === -1) {
+                    parties.push(data[person_i].person.party.acronym);
+                }
+            }
+
+            return parties;
+        }
+
+        var parties = getParties(data);
+
+    %>
+
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling">
         <div class="card-header">
             <div class="card-header-border"></div>
-            <h1>Članice in člani poslanske skupine</h1> <!-- this text is the only thing you touch in .card-header -->
+            <h1>Besedni zaklad</h1>
+            <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
-
-            <div id="votingCard">
-
-                <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
-
-                    <% var i = 1; for (person in data) { %>
-
-                    <div class="member <%= (data.length == i) ? 'lastel' : ''; %>">
-                        <div class="image"
-                             style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data[person].gov_id %>.png); background-size: cover;"></div>
-                        <p><%= data[person].name %>
-                            <br/><%= data[person].party.acronym %></p>
-                        <span></span>
-                        <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-1">
+                    <div class="kompas-search">
+                        Search
                     </div>
-
-                    <% i++; } %>
-
                 </div>
-
+                <div class="col-xs-8 col-sm-8 col-md-11">
+                    <div class="kompas-people">
+                    </div>
+                </div>
             </div>
-
-
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="kompas-stranke">
+                        <% for (party_i in parties) {
+                        %>
+                            <div class="kompas-stranka" id="partyswitch-<%= parties[party_i].replace(' ', '_') %>">
+                                <%= parties[party_i] %>
+                            </div>
+                        <%
+                        }
+                        %>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div id="vocabulary-chart"></div>
+                </div>
+            </div>
+            <!-- delete this placeholder, this is the content of your card -->
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed">&lt;/&gt;</div>
+            <div class="card-circle-button card-embed"></div>
             <div class="card-circle-button card-info">i</div>
         </div>
     </div>

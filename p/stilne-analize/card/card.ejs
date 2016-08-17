@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+    <%# <script src="https://raw.githubusercontent.com/twbs/bootstrap/master/js/tab.js"></script>%>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
     <!-- endbuild -->
 
@@ -27,25 +28,20 @@
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling">
-        <div class="card-header card-header-embed">
-            <div class="headerimage-container">
-                <img src="//cdn.parlameter.si/v1/parlassets/img/people/<%= data.person.gov_id %>.png" class="img-responsive img-circle">
-                <!-- <img src="//cdn.parlameter.si/v1/img/people/<%= data.person.id %>.png" class="img-responsive img-circle"> -->
+        <div class="card-header">
+            <div class="card-header">
+                <div class="card-header-border"></div>
+                <h1>Število izgovorjenih besed</h1>
+                <!-- this text is the only thing you touch in .card-header -->
             </div>
-            <div class="headerwords-container">
-                <h1>Stilne analize <br>&nbsp;</h1> <!-- TODO IF MORE CHARS THAN X THEN LINE BREAK -->
-                <h2><span class="name"><%= data.person.name %></span> | <span class="acronym"><%= data.person.party.acronym %></span></h2>
-            </div>
-            <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <div class="card-embed-header-divider"></div>
         <div class="card-content">
             <div class="bgwhite poslanec">
 
                 <div class="me_poslanec_mini clearfix">
                     <div class="col150">
                         <span class="poslanec_title">
-                                        Privzdignjeno besedje
+                                        Privzdignjeno <br>besedje
                                     </span>
                     </div>
                     <div class="col100">
@@ -79,7 +75,7 @@
                 <div class="me_poslanec_mini clearfix">
                     <div class="col150">
                         <span class="poslanec_title">
-                                        Preprosto besedje
+                                        Preprosto <br>besedje
                                     </span>
                     </div>
                     <div class="col100">
@@ -113,7 +109,7 @@
                 <div class="me_poslanec_mini clearfix">
                     <div class="col150">
                         <span class="poslanec_title">
-                                        Problematično besedje
+                                        Problematično <br>besedje
                                     </span>
                     </div>
                     <div class="col100">
