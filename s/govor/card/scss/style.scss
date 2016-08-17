@@ -1,10 +1,4 @@
-.card-header-person {
-  display: flex;
-  padding: 0;
-  height: 75px;
-  align-items: center;
-  border-bottom: 1px solid #f0f0f0;
-
+.card-govor {
   .portrait {
     background-position: center;
     background-size: cover;
@@ -12,40 +6,129 @@
     box-shadow: 0 0 4px #ddd;
     height: 32px;
     width: 32px;
-    margin-right: 24px;
   }
-  .name {
+
+  .card-header-person {
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    height: 75px;
+    padding: 0;
+
+    .name {
+      font-size: 18px !important;
+      font-weight: 300;
+    }
+
+    .portrait {
+      margin-right: 24px;
+    }
+  }
+
+  .card-content {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 72px;
+    &.closed {
+      max-height: 204px;
+      padding-bottom: 0;
+      .toggle-arrow {
+        transform: none;
+      }
+    }
+  }
+
+  .speech-text {
+    font-family: Roboto Slab;
+    font-size: 18px;
     font-weight: 300;
-    font-size: 18px !important;
+    line-height: 30px;
+    margin: 36px 0;
+    padding: 0 133px;
+    position: relative;
+
+    .quote-button {
+      background: #197197;
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+      display: none;
+      font-family: Times New Roman, serif;
+      font-size: 44px;
+      height: 33px;
+      left: 50px;
+      line-height: 52px;
+      margin-top: -16px;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      user-select: none;
+      width: 33px;
+    }
   }
-}
 
+  .similar-speeches {
+    display: flex;
+    padding: 0 80px;
 
-.speech-text {
-  padding: 0 133px;
-  margin: 36px 0;
-  font-family: Roboto Slab;
-  line-height: 30px;
-  font-size: 18px;
-  font-weight: 300;
-  position: relative;
+    .title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      text-transform: uppercase;
+      width: 110px;
+    }
 
-  .quote-button {
-    position: absolute;
-    width: 33px;
-    height: 33px;
-    background: #197197;
-    border-radius: 50%;
-    color: #fff;
-    font-family: Times New Roman, serif;
-    font-size: 44px;
-    text-align: center;
-    line-height: 52px;
-    margin-top: -16px;
-    top: 0;
-    left: 50px;
-    user-select: none;
+    .speech {
+      align-items: center;
+      background: #f0f0f0;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      height: 126px;
+      margin-right: 16px;
+      padding-top: 10px;
+      position: relative;
+      &:last-child { margin-right: 0; }
+
+      .name {
+        font-size: 15px;
+        font-weight: 300;
+        height: 50px;
+        line-height: 18px;
+        padding: 9px 4px 0 4px;
+        text-align: center;
+      }
+
+      .date {
+        font-family: Roboto Slab;
+        font-size: 15px;
+      }
+
+      .rating {
+        background: #009cdd;
+        bottom: 0;
+        height: 7px;
+        left: 0;
+        position: absolute;
+      }
+    }
+  }
+
+  .toggle-arrow {
+    background: no-repeat center 26px url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="37" height="19.775" viewBox="0 0 9.7895829 5.232016"><path d="M4.895 5.232L9.79.346 9.443 0 4.895 4.537.347 0 0 .346z" fill="#00628c"/></svg>') rgba(255, 255, 255, 0.8);
+    border-bottom: 20px solid #fff;
+    bottom: 0;
     cursor: pointer;
-    display: none;
+    font-size: 100px;
+    height: 72px;
+    left: 0;
+    line-height: 72px;
+    position: absolute;
+    text-align: center;
+    transform: rotate(180deg);
+    transform-origin: center;
+    width: 100%;
   }
 }

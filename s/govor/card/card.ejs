@@ -27,14 +27,28 @@
 
 
     <!-- everything above here is part of the page and not part of the card -->
-    <div class="card-container card-halfling">
+    <div class="card-container card-halfling card-govor">
         <div class="card-header card-header-person">
             <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.person.gov_id %>.png')"></div>
             <h1 class="name"><%= data.person.name %></h1>
         </div>
-        <div class="card-content speech-text">
-          <%= data.content %>
-          <div class="quote-button">“</div>
+        <div class="card-content closed">
+          <div class="speech-text">
+            <%= data.content %>
+            <div class="quote-button">“</div>
+          </div>
+          <div class="similar-speeches">
+            <h2 class="title">Podobni govori:</h2>
+            <% data.similar_speeches.forEach(function(speech) { %>
+              <div class="speech">
+                <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/img/people/<%= speech.person.gov_id %>.png')"></div>
+                <div class="name"><%= speech.person.name %></div>
+                <div class="date"><%= speech.date %></div>
+                <div class="rating" style="width: <%= speech.score * 10 %>%"></div>
+              </div>
+            <% }) %>
+          </div>
+          <div class="toggle-arrow"></div>
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>

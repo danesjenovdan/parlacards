@@ -19,15 +19,23 @@ function generateQuote() {
 
 }
 
-var parentElement = $('.speech-text');
-var quoteElement = $('.quote-button');
+var cardElement = $('.card-govor');
+var contentElement = cardElement.find('.card-content');
+var speechTextElement = cardElement.find('.speech-text');
+var quoteElement = cardElement.find('.quote-button');
+var toggleElement = cardElement.find('.toggle-arrow');
 
-parentElement.on('mouseup', function() {
+speechTextElement.on('mouseup', function() {
     event.preventDefault();
+
+    if(contentElement.hasClass('closed')) {
+      return
+    }
+
     var selection = getSelected();
 
     if (selection && selection.toString().length > 0) {
-        var parentOffsetTop = parentElement.get(0).getBoundingClientRect().top;
+        var parentOffsetTop = speechTextElement.get(0).getBoundingClientRect().top;
         var rectangle = selection.getRangeAt(0).getBoundingClientRect();
         var quoteIconOffset = rectangle.top - parentOffsetTop + rectangle.height / 2;
 
@@ -57,4 +65,9 @@ quoteElement.on('click', function(event) {
   $.get(url, function(result) {
     console.log('Successfully saved quote!', 'https://analize.parlameter.si/v1/s/getQuote/' + result.id);
   })
+})
+
+toggleElement.on('click', function(event) {
+  contentElement.toggleClass('closed');
+  quoteElement.css({ display: 'none' });
 })
