@@ -61,64 +61,59 @@
               }
           %>
 
-          <div  id="votingCard">
+            <div class="scroller">
 
-              <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>">
+                <div class="tab-content">
+                    <% resultPages.forEach(function(resultPage, index) { %>
+                        <% if (paginationNeeded) { %>
+                        <div role="tabpanel" class="tab-pane<%= index === 0 ? ' active' : '' %>" id="<%= randomId %>_<%= index %>">
+                        <% } %>
 
-                  <div class="tab-content">
-                      <% resultPages.forEach(function(resultPage, index) { %>
-                          <% if (paginationNeeded) { %>
-                          <div role="tabpanel" class="tab-pane<%= index === 0 ? ' active' : '' %>" id="<%= randomId %>_<%= index %>">
-                          <% } %>
+                        <% resultPage.forEach(function(result, index) { %>
+                        <div class="member">
+                            <div class="metadata">
+                                <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= result.person.gov_id %>.png); background-size: cover;"></div>
+                                <p class="name">
+                                    <%= result.person.name %><br/>
+                                    <%= result.person.party.acronym %>
+                                    </p>
+                                <p class="date"><%= formatDate(result.date) %></p>
+                            </div>
+                            <div class="quote"><%- result.content_t %></div>
+                        </div>
+                        <% }) %>
 
-                          <% resultPage.forEach(function(result, index) { %>
-                          <div class="member">
-                              <div class="metadata">
-                                  <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= result.person.gov_id %>.png); background-size: cover;"></div>
-                                  <p class="name">
-                                      <%= result.person.name %><br/>
-                                      <%= result.person.party.acronym %>
-                                      </p>
-                                  <p class="date"><%= formatDate(result.date) %></p>
-                              </div>
-                              <div class="quote"><%- result.content_t %></div>
-                          </div>
-                          <% }) %>
+                        <% if (paginationNeeded) { %>
+                        </div>
+                        <% } %>
+                    <% }) %>
+                </div>
 
-                          <% if (paginationNeeded) { %>
-                          </div>
-                          <% } %>
-                      <% }) %>
-                  </div>
+                <% if (paginationNeeded) { %>
+                <nav class="pagination-container" aria-label="Page navigation">
+                    <ul class="pagination" role="tablist">
+                        <li class="arrow">
+                            <a href="#" aria-label="Previous" data-move-pagination="prev">
+                                <span aria-hidden="true"></span>
+                            </a>
+                        </li>
 
-                  <% if (paginationNeeded) { %>
-                  <nav class="pagination-container" aria-label="Page navigation">
-                      <ul class="pagination" role="tablist">
-                          <li class="arrow">
-                              <a href="#" aria-label="Previous" data-move-pagination="prev">
-                                  <span aria-hidden="true"></span>
-                              </a>
-                          </li>
+                        <% for (var i = 0; i < pageCount; i++) { %>
+                            <li role="presentation" class="<%= i === 0 ? 'active' : '' %>">
+                                <a href="#<%= randomId %>_<%= i %>" aria-controls="i" role="tab" data-toggle="tab"><%= i + 1 %></a>
+                            </li>
+                        <% } %>
 
-                          <% for (var i = 0; i < pageCount; i++) { %>
-                              <li role="presentation" class="<%= i === 0 ? 'active' : '' %>">
-                                  <a href="#<%= randomId %>_<%= i %>" aria-controls="i" role="tab" data-toggle="tab"><%= i + 1 %></a>
-                              </li>
-                          <% } %>
+                        <li class="arrow">
+                            <a href="#" aria-label="Next" data-move-pagination="next">
+                                <span aria-hidden="true"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <% } %>
 
-                          <li class="arrow">
-                              <a href="#" aria-label="Next" data-move-pagination="next">
-                                  <span aria-hidden="true"></span>
-                              </a>
-                          </li>
-                      </ul>
-                  </nav>
-                  <% } %>
-
-              </div>
-
-          </div>
-
+            </div>
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>
