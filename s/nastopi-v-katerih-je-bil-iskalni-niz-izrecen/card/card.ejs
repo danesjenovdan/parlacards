@@ -27,7 +27,7 @@
 
 
     <!-- everything above here is part of the page and not part of the card -->
-    <div class="card-container card-halfling">
+    <div class="card-container">
         <div class="card-header">
             <div class="card-header-border"></div>
             <h1>Nastopi, v katerih je bil iskalni niz izrečen</h1> <!-- this text is the only thing you touch in .card-header -->
@@ -63,7 +63,7 @@
 
           <div  id="votingCard">
 
-              <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
+              <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>">
 
                   <div class="tab-content">
                       <% resultPages.forEach(function(resultPage, index) { %>
