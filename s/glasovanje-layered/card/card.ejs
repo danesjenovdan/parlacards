@@ -25,6 +25,7 @@
 
 <body> <!-- removeme -->
 
+    <script>var data = <%- JSON.stringify(data); %></script>
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling">
@@ -104,7 +105,44 @@
 
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="partychart"></div>
+                    <div class="layeredchart"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <%
+                    var second_level_data = [];
+                    for (option in data.all) {
+                        for (party in data.all[option]['breakdown']) {
+                            // newdict = data.all[option]['breakdown'][party];
+                            // newdict['option'] = data.all[option]['option'];
+
+                            var newdict = data.all[option]['breakdown'][party];
+                            newdict.option = option;
+
+                            second_level_data.push(newdict);
+
+                        }
+                    }
+                    %>
+                    <% for (group in second_level_data) { %>
+                        <div class="mpgroup hidden <%= second_level_data[group]['option']%> <%= second_level_data[group]['pg']['acronym'].replace(' ', '_') %>">
+                            <% for (mp in second_level_data[group]['mps']) { %>
+                                <div class="member">
+                                    <div class="metadata">
+                                        <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= second_level_data[group]['mps'][mp]['gov_id'] %>.png); background-size: cover;"></div>
+                                        <p class="name">
+                                            <%= second_level_data[group]['mps'][mp]['name'] %>
+                                        </p>
+                                        <p class="party">
+                                            <%= second_level_data[group]['mps'][mp]['party']['acronym'] %>
+                                        </p>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+                    <% } %>
                 </div>
             </div>
 

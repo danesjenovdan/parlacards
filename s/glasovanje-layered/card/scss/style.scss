@@ -43,6 +43,7 @@ a.document:hover {
     background-color: #f7f7f7;
     padding: 15px;
     margin-top: 15px;
+    margin-bottom: 15px;
 
     overflow: hidden;
 }
@@ -124,4 +125,19 @@ a.document:hover {
     float: left;
 
     line-height: 48px;
+}
+
+.member {
+    overflow: hidden;
+
+    p.name, p.party {
+        margin-top: 30px;
+    }
+
+    p.party {
+        float: right;
+    }
+}
+.member:last-of-type {
+    border-bottom: none;
 }

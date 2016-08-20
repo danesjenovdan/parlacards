@@ -1,175 +1,3 @@
-var data = [{
-    'option': 'za',
-    'total_votes': 10,
-    'breakdown': [{
-        'acronym': 'SMC',
-        'party_id': 1,
-        'total_votes': 6,
-        'mps': [{
-            'name': 'Janez Novak',
-            'person_id': 12
-        }, {
-            'name': 'Đoni Novaković',
-            'person_id': 21
-        }, {
-            'name': 'Janez Najboljši',
-            'person_id': 9
-        }, {
-            'name': 'Đoni asdLsdj',
-            'person_id': 44
-        }, {
-            'name': 'Janez Psodlje',
-            'person_id': 54
-        }, {
-            'name': 'Đoni Jković',
-            'person_id': 32
-        }]
-    }, {
-        'acronym': 'SDS',
-        'party_id': 2,
-        'total_votes': 4,
-        'mps': [{
-            'name': 'Janez Novak',
-            'person_id': 12
-        }, {
-            'name': 'Đoni Novaković',
-            'person_id': 21
-        }, {
-            'name': 'Janez Najboljši',
-            'person_id': 9
-        }, {
-            'name': 'Đoni asdLsdj',
-            'person_id': 44
-        }]
-    }]
-}, {
-    'option': 'proti',
-    'total_votes': 8,
-    'breakdown': [{
-        'acronym': 'SMC',
-        'party_id': 1,
-        'total_votes': 4,
-        'mps': [{
-            'name': 'Janez Najboljši',
-            'person_id': 9
-        }, {
-            'name': 'Đoni asdLsdj',
-            'person_id': 44
-        }, {
-            'name': 'Janez Psodlje',
-            'person_id': 54
-        }, {
-            'name': 'Đoni Jković',
-            'person_id': 32
-        }]
-    }, {
-        'acronym': 'NSi',
-        'party_id': 4,
-        'total_votes': 4,
-        'mps': [{
-            'name': 'Janez Novak',
-            'person_id': 12
-        }, {
-            'name': 'Đoni Novaković',
-            'person_id': 21
-        }, {
-            'name': 'Janez Najboljši',
-            'person_id': 9
-        }, {
-            'name': 'Đoni asdLsdj',
-            'person_id': 44
-        }]
-    }]
-}, {
-    'option': 'kvorum',
-    'total_votes': 8,
-    'breakdown': [{
-        'acronym': 'SMC',
-        'party_id': 1,
-        'total_votes': 4,
-        'mps': [{
-            'name': 'Janez Najboljši',
-            'person_id': 9
-        }, {
-            'name': 'Đoni asdLsdj',
-            'person_id': 44
-        }, {
-            'name': 'Janez Psodlje',
-            'person_id': 54
-        }, {
-            'name': 'Đoni Jković',
-            'person_id': 32
-        }]
-    }, {
-        'acronym': 'NSi',
-        'party_id': 4,
-        'total_votes': 4,
-        'mps': [{
-            'name': 'Janez Novak',
-            'person_id': 12
-        }, {
-            'name': 'Đoni Novaković',
-            'person_id': 21
-        }, {
-            'name': 'Janez Najboljši',
-            'person_id': 9
-        }, {
-            'name': 'Đoni asdLsdj',
-            'person_id': 44
-        }]
-    }]
-}, {
-    'option': 'ni',
-    'total_votes': 12,
-    'breakdown': [{
-        'acronym': 'ZL',
-        'party_id': 1,
-        'total_votes': 8,
-        'mps': [{
-            'name': 'Janez Najboljši',
-            'person_id': 9
-        }, {
-            'name': 'Đoni asdLsdj',
-            'person_id': 44
-        }, {
-            'name': 'Janez Psodlje',
-            'person_id': 54
-        }, {
-            'name': 'Đoni Jković',
-            'person_id': 32
-        }, {
-            'name': 'Janez Najboljš11234123432i',
-            'person_id': 91
-        }, {
-            'name': 'Đoni asdLs11123dj',
-            'person_id': 441
-        }, {
-            'name': 'Janez Psod1111lje',
-            'person_id': 541
-        }, {
-            'name': 'Đoni Jk111ović',
-            'person_id': 321
-        }]
-    }, {
-        'acronym': 'SD',
-        'party_id': 4,
-        'total_votes': 4,
-        'mps': [{
-            'name': 'Janez Novak',
-            'person_id': 12
-        }, {
-            'name': 'Đoni Novaković',
-            'person_id': 21
-        }, {
-            'name': 'Janez Najboljši',
-            'person_id': 9
-        }, {
-            'name': 'Đoni asdLsdj',
-            'person_id': 44
-        }]
-    }]
-}]
-
 function drawInner(data) {
 
     console.log('starting drawInner');
@@ -190,7 +18,13 @@ function drawInner(data) {
             return d.total_votes;
         });
 
-    var piedata = pie(data);
+    var data_for_inner_pie = [];
+
+    for (key in data.all) {
+        data_for_inner_pie.push(data.all[key]);
+    }
+
+    var piedata = pie(data_for_inner_pie);
 
     var g = svg.selectAll('.arc')
         .data(piedata)
@@ -223,7 +57,7 @@ function drawOuter(data) {
     var pie = d3.layout.pie()
         .sort(null)
         .value(function(d) {
-            return d.total_votes;
+            return d.mps.length;
         });
 
     var piedata = pie(data);
@@ -240,7 +74,27 @@ function drawOuter(data) {
             return color(d.data.option);
         })
         .attr("d", arc).style('stroke', 'white')
-        .style('stroke-width', 2);
+        .style('stroke-width', 2)
+        .on('click', function(d) {
+            var mp_list = d3.select('.' + d.data.option + '.' +d.data.pg.acronym.replace(' ', '_'));
+
+            mp_list.classed('hidden', !mp_list.classed('hidden'));
+
+            _this = d3.select(this);
+
+            if (_this.classed('selected')) {
+                _this.attr('transform', function(d) {
+                    return 'translate(0, 0)';
+                })
+                .classed('selected', false);
+            } else {
+                _this.attr('transform', function(d) {
+                    var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+                    return 'translate(' + Math.cos(a) * (radius * 0.05) +',' + Math.sin(a) * (radius * 0.05) + ')';
+                })
+                .classed('selected', true);
+            }
+        });
 
 }
 
@@ -248,7 +102,7 @@ function drawLabels(data) {
     var pie = d3.layout.pie()
         .sort(null)
         .value(function(d) {
-            return d.total_votes;
+            return d.mps.length;
         });
 
     var piedata = pie(data);
@@ -259,16 +113,16 @@ function drawLabels(data) {
         .attr("text-anchor", "middle")
         .attr("x", function(d) {
             var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-            d.cx = Math.cos(a) * (radius * 1.5 - 75);
-            return d.x = Math.cos(a) * (radius * 1.5 + 20);
+            d.cx = Math.cos(a) * (radius * 1.5 - 73);
+            return d.x = Math.cos(a) * (radius * 1.5 + 25);
         })
         .attr("y", function(d) {
             var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-            d.cy = Math.sin(a) * (radius * 1.5 - 75);
-            return d.y = Math.sin(a) * (radius * 1.5 + 20);
+            d.cy = Math.sin(a) * (radius * 1.5 - 73);
+            return d.y = Math.sin(a) * (radius * 1.5 + 25);
         })
         .text(function(d) {
-            return d.data.acronym + ' | ' + d.data.total_votes;
+            return d.data.pg.acronym + ' | ' + d.data.mps.length;
         })
         .each(function(d) {
             var bbox = this.getBBox();
@@ -278,8 +132,8 @@ function drawLabels(data) {
         });
 
     var alpha = 0.5;
-    var spacingY = 20;
-    var spacingX = 20;
+    var spacingY = 15;
+    var spacingX = 5;
 
     function relax() {
 
@@ -353,9 +207,9 @@ function drawLabels(data) {
             .attr("class", "pointer")
             .style("fill", "none")
             // .style("stroke", "black")
-            .attr("marker-end", "url(#circ)")
+            // .attr("marker-end", "url(#circ)")
             .attr("d", function(d) {
-                console.log(d);
+                // console.log(d);
                 if (d.cx > d.ox) { //|| Math.abs(d.cx) < 0.1) {
                     return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
                 } else {
@@ -397,12 +251,12 @@ var margin = {
 };
 var width = 400 - margin.left - margin.right;
 var height = 400 - margin.top - margin.bottom;
-var radius = Math.min(width, height) / 3;
+var radius = Math.min(width, height) / 3.1;
 
 var color = d3.scale.ordinal()
     .range(["#009CDD", "#00628C", "#99E1FF", "#003B54"]);
 
-var svg = d3.select(".partychart").append("svg")
+var svg = d3.select(".layeredchart").append("svg")
     .attr('viewBox', '0 0 400 400')
     .attr('preserveAspectRatio', 'xMidYMid meet')
     .append("g")
@@ -411,25 +265,32 @@ var svg = d3.select(".partychart").append("svg")
 var pieWidth = 200;
 
 
-$.getJSON('https://analize.parlameter.si/v1/s/getMotionGraph/2931/', function(r) {
+// $.getJSON('https://analize.parlameter.si/v1/s/getMotionGraph/2931/', function(r) {
 
-    var livedata = r.results.layered_data;
-    console.log(livedata);
     console.log('before drawInner');
 
-    drawInner(livedata);
+    drawInner(data);
 
     var second_level_data = [];
-    for (option in livedata) {
-        for (party in livedata[option]['breakdown']) {
-            newdict = livedata[option]['breakdown'][party];
-            newdict['option'] = livedata[option]['option'];
-            second_level_data.push(livedata[option]['breakdown'][party])
+    for (option in data.all) {
+        for (party in data.all[option]['breakdown']) {
+            // newdict = data.all[option]['breakdown'][party];
+            // newdict['option'] = data.all[option]['option'];
+
+            var newdict = data.all[option]['breakdown'][party];
+            newdict.option = option;
+
+            second_level_data.push(newdict);
+
         }
     }
 
+    console.log(second_level_data);
+
     drawOuter(second_level_data);
+
+    // console.log(second_level_data);
 
     drawLabels(second_level_data);
 
-});
+// });
