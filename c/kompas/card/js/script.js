@@ -1,11 +1,13 @@
 function makeSwitchEvent(acronym) {
     $('#partyswitch-' + acronym).on('click', function() {
-        $(this).toggleClass('turnedon');
         if (d3.select('#kompashull' + acronym).classed('hidden')) {
             d3.select('#kompashull' + acronym).classed('hidden', false);
+            $(this).css('background-color', color(acronym));
         } else {
+            $(this).css('background-color', '#f0f0f0');
             d3.select('#kompashull' + acronym).classed('hidden', true);
         }
+        $(this).toggleClass('turnedon');
     });
 }
 
@@ -221,12 +223,9 @@ function offGroup() {};
 
 function drawSingleHull(datum) {
 
-    // create card
-    $('.kompas-people').append('<div class="kompas-person" id="personcard' + datum.person.id + '" data-id="' + datum.person.id + '">' + datum.person.name + '</div>');
-    $('#personcard' + datum.person.id).on('click', function() {
-        $('#singlehull' + $(this).data('id')).remove();
-        $(this).remove();
-    });
+    // display card
+    $('#personcard' + datum.person.id).toggleClass('hidden');
+    updatePeopleScroller();
 
     // create hull
     var hull = objects.append('path')
@@ -350,3 +349,26 @@ function redrawHull(group, dataset) {
             });
     }
 }
+
+$.each($('.kompas-stranka'), function(i, e) {
+    $(e).css('border-bottom', '10px solid ' + color($(e).data('acronym')));
+});
+
+function updatePeopleScroller() {
+    var thewidth = 0;
+    $('.kompas-people-wide').width(100000);
+    $('.kompas-person').not('.hidden').each(function(i, e) {
+        thewidth = thewidth + $(e).outerWidth() + 21;
+    });
+    console.log(thewidth);
+    $('.kompas-people-wide').width(thewidth);
+}
+
+$('.kompas-person').on('click', function() {
+    $('#singlehull' + $(this).data('id')).remove();
+    $(this).addClass('hidden');
+});
+
+$('.kompas-person').each(function(i, e) {
+    $(e).children('.kompas-person-party').css('background-color', color($(e).data('acronym')));
+});
