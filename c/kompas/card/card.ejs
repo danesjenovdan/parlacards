@@ -59,14 +59,14 @@
             <div class="row">
                 <div class="col-xs-4 col-sm-4 col-md-1">
                     <div class="kompas-search">
-                        Search
+                        <input type="text" class="kompas-search" />
                     </div>
                 </div>
                 <div class="col-xs-8 col-sm-8 col-md-11">
                     <div class="kompas-people">
                         <div class="kompas-people-wide">
                         <% for (person_i in data) { %>
-                            <div class="kompas-person hidden" id="personcard<%= data[person_i]['person']['id'] %>" data-id="<%= data[person_i]['person']['id'] %>" data-acronym="<%= data[person_i]['person']['party']['acronym'] %>">
+                            <div class="kompas-person hidden noselect" id="personcard<%= data[person_i]['person']['id'] %>" data-id="<%= data[person_i]['person']['id'] %>" data-acronym="<%= data[person_i]['person']['party']['acronym'] %>">
 
                                 <div class="kompas-person-party">
                                     <%= data[person_i]['person']['party']['acronym'] %>
@@ -90,7 +90,7 @@
                     <div class="kompas-stranke">
                         <% for (party_i in parties) {
                         %>
-                            <div data-acronym="<%= parties[party_i].replace(' ', '_') %>" class="kompas-stranka <%= parties[party_i].replace(' ', '_') %>" id="partyswitch-<%= parties[party_i].replace(' ', '_') %>">
+                            <div data-acronym="<%= parties[party_i].replace(' ', '_') %>" class="noselect kompas-stranka <%= parties[party_i].replace(' ', '_') %>" id="partyswitch-<%= parties[party_i].replace(' ', '_') %>">
                                 <%= parties[party_i] %>
                                 <br />
                                 <i class="glyphicon glyphicon-ok"></i>
