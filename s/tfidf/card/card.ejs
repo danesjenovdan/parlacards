@@ -42,10 +42,10 @@
 
                 for (var i = 0; i < data.results.length; i++) {
                     var word = data.results[i];
-                    if (Math.round(word.tfidf * 5000) > max) {
-                        max = Math.round(word.tfidf * 5000);
-                    } else if (+word.tfidf < min) {
-                        min = Math.round(word.tfidf * 5000);
+                    if (Math.round(word['scores']['tf-idf'] * 100) > max) {
+                        max = Math.round(word['scores']['tf-idf'] * 100);
+                    } else if (+word['scores']['tf-idf'] < min) {
+                        min = Math.round(word['scores']['tf-idf'] * 100);
                     }
                 }
 
@@ -63,7 +63,7 @@
 
                     for (var i=0; i < 5; i++) {
                             var word = data.results[i];
-                            word.score = Math.round(word.tfidf * 5000);
+                            word.score = Math.round(word['scores']['tf-idf'] * 100);
                     %>
 
                         <div class="me_poslanec clearfix tfidf-bar">
@@ -75,7 +75,7 @@
                             </div>
                             <div class="frequency">
                                 <div class="progress hugebar2 avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="<%= min %>" aria-valuemax="<%= max %>" style="width: <%= (word.score) / max * 100 - 20 %>%;">
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="<%= min %>" aria-valuemax="<%= max %>" style="width: <%= ((word.score) / max * 100 - 20) > 1 ? (word.score) / max * 100 - 20 : 1 %>%;">
                                         <span class="sr-only"><%= word.score %></span>
                                     </div>
                                     <div class="progress_number">
@@ -98,7 +98,7 @@
 
                     for (var i=5; i < 10; i++) {
                             var word = data.results[i];
-                            word.score = Math.round(word.tfidf * 5000);
+                            word.score = Math.round(word['scores']['tf-idf'] * 100);
                     %>
 
                         <div class="me_poslanec clearfix tfidf-bar">
@@ -110,7 +110,7 @@
                             </div>
                             <div class="frequency">
                                 <div class="progress hugebar2 avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="<%= min %>" aria-valuemax="<%= max %>" style="width: <%= (word.score) / max * 100 - 20 %>%;">
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="<%= min %>" aria-valuemax="<%= max %>" style="width: <%= ((word.score) / max * 100 - 20) > 1 ? (word.score) / max * 100 - 20 : 1 %>%;">
                                         <span class="sr-only"><%= word.score %></span>
                                     </div>
                                     <div class="progress_number">
