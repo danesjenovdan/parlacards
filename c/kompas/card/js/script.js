@@ -375,24 +375,46 @@ function updatePeopleScroller() {
     $('.kompas-people-wide').width(thewidth);
 }
 
+function removeSearchPerson(name) {
+    for (person_i in searchpeople) {
+        if (searchpeople[person_i]['label'] == name) {
+            console.log(name);
+            searchpeople.splice(person_i, 1);
+        }
+    }
+}
+function addSearchPerson(name, id) {
+    searchpeople.push({
+        'label': name,
+        'value': id
+    });
+}
+
 $('.kompas-person').on('click', function() {
     $('#singlehull' + $(this).data('id')).remove();
     $(this).addClass('hidden');
+    var persondata = d3.select('#_' + $(this).data('id')).datum()
+    addSearchPerson(persondata.person.name, persondata.person.id);
 });
 
 $('.kompas-person').each(function(i, e) {
     $(e).children('.kompas-person-party').css('background-color', color($(e).data('acronym')));
 });
 
-$('.kompas-search').autocomplete({
-    'source': searchpeople,
-    'select': function(event, ui) {
-        event.preventDefault();
-        $('.kompas-search').val('');
-        drawSingleHull(d3.select('#_' + ui.item.value).datum());
-    },
-    'focus': function(event, ui) {
-        event.preventDefault();
-        $('.kompas-search').val(ui.item.label);
-    }
-});
+function updatePeopleSearch() {
+    $('.kompas-search').autocomplete({
+        'source': searchpeople,
+        'select': function(event, ui) {
+            event.preventDefault();
+            $('.kompas-search').val('');
+            drawSingleHull(d3.select('#_' + ui.item.value).datum());
+            removeSearchPerson(ui.item.label);
+        },
+        'focus': function(event, ui) {
+            event.preventDefault();
+            $('.kompas-search').val(ui.item.label);
+        }
+    });
+}
+
+updatePeopleSearch();
