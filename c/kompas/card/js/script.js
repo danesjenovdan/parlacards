@@ -235,7 +235,7 @@ function offGroup() {};
 function drawSingleHull(datum) {
 
     // display card
-    $('#personcard' + datum.person.id).toggleClass('hidden').detach().prependTo('.kompas-people-wide');
+    $('#personcard' + datum.person.id).removeClass('hidden').detach().prependTo('.kompas-people-wide');
     updatePeopleScroller();
 
     // create hull
@@ -382,4 +382,17 @@ $('.kompas-person').on('click', function() {
 
 $('.kompas-person').each(function(i, e) {
     $(e).children('.kompas-person-party').css('background-color', color($(e).data('acronym')));
+});
+
+$('.kompas-search').autocomplete({
+    'source': searchpeople,
+    'select': function(event, ui) {
+        event.preventDefault();
+        $('.kompas-search').val('');
+        drawSingleHull(d3.select('#_' + ui.item.value).datum());
+    },
+    'focus': function(event, ui) {
+        event.preventDefault();
+        $('.kompas-search').val(ui.item.label);
+    }
 });

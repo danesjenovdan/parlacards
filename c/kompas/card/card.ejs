@@ -59,6 +59,16 @@
             <div class="row">
                 <div class="col-xs-4 col-sm-4 col-md-1">
                     <div class="kompas-search">
+                        <%
+                            var searchpeople = [];
+
+                            var kompas_data = data;
+
+                            for (person_i in kompas_data) {
+                                searchpeople.push({'label': kompas_data[person_i]['person']['name'], 'value': kompas_data[person_i]['person']['id']});
+                            }
+                        %>
+                        <script>var searchpeople = <%- JSON.stringify(searchpeople) %>;</script>
                         <input type="text" class="kompas-search" />
                     </div>
                 </div>
