@@ -121,7 +121,7 @@
                                             for (var i = 0; i < data.sessions.maxPG.length; i++) {
 
                                         %>
-                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.sessions.maxPG.length - i) %>px;"><%= data.sessions.maxPG[i].acronym %></div>
+                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.sessions.maxPG.length - i - 1) %>px;"><%= data.sessions.maxPG[i].acronym %></div>
                                         <%
                                             }
                                         }
@@ -192,7 +192,7 @@
                                             for (var i = 0; i < data.votes.maxPG.length; i++) {
 
                                         %>
-                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.votes.maxPG.length - i) %>px;"><%= data.votes.maxPG[i].acronym %></div>
+                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.votes.maxPG.length - i - 1) %>px;"><%= data.votes.maxPG[i].acronym %></div>
                                         <%
                                             }
                                         }
