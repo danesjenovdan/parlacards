@@ -33,21 +33,56 @@
             <h1 class="name"><%= data.person.name %></h1>
         </div>
         <div class="card-content closed">
+          <%
+              function makeId() {
+                  var text = "";
+                  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                  for(var i = 0; i < 5; i++) {
+                      text += possible.charAt(Math.floor(Math.random() * possible.length));
+                  }
+
+                  return text;
+              }
+
+              var randomId = makeId();
+          %>
+
           <div class="speech-text">
             <%= data.content %>
             <div class="quote-button">“</div>
           </div>
-          <div class="similar-speeches">
-            <h2 class="title">Podobni govori:</h2>
-            <% data.similar_speeches.forEach(function(speech) { %>
-              <div class="speech">
-                <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/img/people/<%= speech.person.gov_id %>.png')"></div>
-                <div class="name"><%= speech.person.name %></div>
-                <div class="date"><%= speech.date %></div>
-                <div class="rating" style="width: <%= speech.score * 10 %>%"></div>
-              </div>
-            <% }) %>
+
+          <div class="similar-speech">
+            <div class="similar-speech-content tab-content">
+              <% data.similar_speeches.forEach(function(speech, index) { %>
+                <div role="tabpanel" class="tab-pane<%= index === 0 ? ' active' : '' %>" id="<%= speech.speech_id %>_<%= randomId %>">
+                  <div class="similar-speech-heading">
+                    <%= speech.session_name %>, <%= speech.date %>
+                    <div class="close-button"></div>
+                  </div>
+                  <div class="similar-speech-text"><%= speech.content_t[0] %></div>
+                </div>
+              <% }) %>
+            </div>
+
+            <div class="similar-speech-tabs">
+              <h2 class="title">Podobni govori:</h2>
+              <ul>
+                <% data.similar_speeches.forEach(function(speech, index) { %>
+                <li role="tab" class="<%= index === 0 ? 'active' : '' %>">
+                  <a class="speech" href="#<%= speech.speech_id %>_<%= randomId %>" data-toggle="tab">
+                    <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/img/people/<%= speech.person.gov_id %>.png')"></div>
+                    <div class="name"><%= speech.person.name %></div>
+                    <div class="date"><%= speech.date %></div>
+                    <div class="rating" style="width: <%= speech.score / data.maxScore * 100 %>%"></div>
+                  </a>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
           </div>
+
           <div class="toggle-arrow"></div>
         </div>
         <div class="card-footer">
