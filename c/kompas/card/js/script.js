@@ -402,17 +402,17 @@ $('.kompas-person').each(function(i, e) {
 });
 
 function updatePeopleSearch() {
-    $('.kompas-search').autocomplete({
+    $('.kompas-search-input').autocomplete({
         'source': searchpeople,
         'select': function(event, ui) {
             event.preventDefault();
-            $('.kompas-search').val('');
+            $('.kompas-search-input').val('');
             drawSingleHull(d3.select('#_' + ui.item.value).datum());
             removeSearchPerson(ui.item.label);
         },
         'focus': function(event, ui) {
             event.preventDefault();
-            $('.kompas-search').val(ui.item.label);
+            $('.kompas-search-input').val(ui.item.label);
         }
     });
 }
