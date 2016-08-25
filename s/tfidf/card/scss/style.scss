@@ -16,6 +16,10 @@
 }
 .hugebar2 {
     height: 40px !important;
+
+    .progress_number {
+        line-height: 40px !important;
+    }
 }
 .progress-bar, .progress_number {
     // display: block;
@@ -28,9 +32,6 @@
 }
 .progress-bar {
     border-bottom-width: 0;
-}
-.progress_number {
-    line-height: 40px !important;
 }
 
 .halfer-container {
