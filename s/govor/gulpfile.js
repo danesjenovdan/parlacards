@@ -15,6 +15,7 @@ var htmlmin = require('gulp-htmlmin');
 var deleteLines = require('gulp-delete-lines');
 var replace = require('gulp-replace');
 var install = require("gulp-install");
+var wrap = require('gulp-wrap');
 
 var debug = require('gulp-debug');
 
@@ -31,6 +32,10 @@ var options = minimist(process.argv.slice(2), knownOptions);
 var fs = require('fs');
 var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
 
+// generate CSS class name to use for sandboxing
+  var directoryName = __dirname.split('/').pop()
+  var className = 'card-' + directoryName
+
 //#################
 //## tasks below ##
 //#################
@@ -38,6 +43,7 @@ var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
 // SASS/SCSS compiler
 gulp.task('sass', function() {
     return gulp.src('card/scss/style.scss')
+        .pipe(wrap('.' + className + '{<%= contents %>}', {}, { parse: false }))
         .pipe(sass()) // Converts Sass to CSS with gulp-sass
         .pipe(gulp.dest('temp/css'))
         .pipe(browserSync.reload({
@@ -71,7 +77,8 @@ gulp.task('js-no-uglify', function() {
 gulp.task('ejs', function() {
     return gulp.src('card/card.ejs')
         .pipe(ejs({
-            'data': jsonData
+            'data': jsonData,
+            'className': className
         }, {
             ext: '.html'
         }))
