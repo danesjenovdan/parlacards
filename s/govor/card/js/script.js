@@ -222,7 +222,9 @@ quoteElement.on('click', function(event) {
 })
 
 toggleElement.on('click', function(event) {
-  contentElement.toggleClass('closed');
+  contentElement.toggleClass('closed')
+                .removeClass('similar-expanded');
+;
   quoteElement.css({ display: 'none' });
 })
 
