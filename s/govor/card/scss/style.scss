@@ -2,6 +2,7 @@ $toggle-arrow-height: 72px;
 $similar-speech-tab-height: 126px;
 $similar-speech-tab-content-distance: 17px;
 $similar-speech-tabs-offset-bottom: 46px;
+$blue: #009cdd;
 
 %text-styling {
   font-family: Roboto Slab;
@@ -90,7 +91,7 @@ $similar-speech-tabs-offset-bottom: 46px;
 
     background: #f0f0f0;
     display: none;
-    padding: 0 28px 28px 28px;
+    padding: 0 28px 59px 28px;
     position: absolute;
     top: $vertical-offset;
     left: $horizontal-offset;
@@ -123,10 +124,20 @@ $similar-speech-tabs-offset-bottom: 46px;
     }
 
     .similar-speech-text {
+      $offset-top-bottom: 36px;
       @extend %text-styling;
-      height: calc(100% - #{$heading-height});
+      margin: $offset-top-bottom 0;
+      max-height: calc(100% - #{$heading-height + 2 * $offset-top-bottom});
       overflow-y: scroll;
-      padding: 36px 48px;
+      padding: 0 48px;
+    }
+
+    .similar-speech-link {
+      color: $blue;
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      &:hover { color: $blue; }
     }
   }
 
@@ -193,7 +204,7 @@ $similar-speech-tabs-offset-bottom: 46px;
           }
 
           .rating {
-            background: #009cdd;
+            background: $blue;
             bottom: 0;
             height: 7px;
             left: 0;

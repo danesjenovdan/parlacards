@@ -1,107 +1,18 @@
 {
-    "person": {
-        "id": 83,
-        "party": {
-            "acronym": "SD",
-            "id": 7,
-            "name": "PS Socialni Demokrati"
-        },
-        "name": "Janko Veber",
-        "gov_id": "P081",
-        "gender": "f"
-    },
     "content": "Hvala lepa za besedo. \nPo moje je najve\u010dji problem v tem, da se ne terja ni\u010desar v zameno za sredstva davkopla\u010devalcev, ki se uporabljajo za sanacijo bank. Tu gre za milijardne vsote, ki vsaj na papirju sanirajo stanje v bankah, jih naredijo likvidne \u2013 in to je to. Ni\u010d se ne terja od njih, da ta denar skozi \u010das vrnejo. In to se dogaja vseskozi. Ta sklad \u2013 po teh istih izku\u0161njah, ki jih imamo \u2013 bo prazen v enem letu, se bo spremenil, \u010de ni ne\u010desa, kar terja odgovornost od njih, dejansko odgovornost v smislu vra\u010danja davkopla\u010devalskega denarja, ki v na\u0161em primeru o\u010ditno nima nobene cene. Davkopla\u010devalski denar nima nobene cene pri nas! Torej, ta zakon se bo spremenil v nekaj, kar bo samo pospe\u0161ilo to, da se porabijo ta sredstva \u2013 ni\u010d drugega; ker se ne dogaja v nekih normalnih okoli\u0161\u010dinah in se dogaja na podlagi ene prakse, ki je v bistvu spravila to dr\u017eavo na kolena. In ki bi jo mi morali v tem sklicu, ta vlada v tem sklicu, bi morali to prepre\u010diti, da se nadaljuje.",
+    "person": {
+        "party": {
+            "acronym": "IMNS",
+            "id": 2,
+            "name": "PS italijanske in mad\u017earske narodne skupnosti"
+        },
+        "gender": "m",
+        "name": "Roberto Battelli",
+        "gov_id": "P005",
+        "id": 4
+    },
+    "quoted_text": "Tu gre za milijardne vsote",
     "speech_id": 275726,
-    "maxScore": 121.14005,
-    "similar_speeches": [{
-        "session_id": 3047,
-        "person": {
-            "id": 42,
-            "party": {
-                "acronym": "ZL",
-                "id": 8,
-                "name": "PS Zdru\u017eena Levica"
-            },
-            "name": "Miha Kordi\u0161",
-            "gov_id": "P262",
-            "gender": "m"
-        },
-        "date": "2016-02-22",
-        "content_t": ["V Zdru\u017eeni levici bomo glasovali proti. Proti bomo glasovali zato, ker predlagani ukrep izhaja iz napa\u010dnih opredelitev problema s katerim se soo\u010damo, izhaja iz opredelitve, da imamo varnostni problem v vpra\u0161anju beguncev ampak to niti ne dr\u017ei. \u0160tevilo beguncev je najmanj\u0161e odkar se je begunska kriza za\u010dela. Postopki so ute\u010deni, kadri so ute\u010deni in zato ogro\u017eenost ne beguncev in ne na\u0161ih ljudi v nobenem pogledu ne pove\u010damo.\nNaprej, od nasilnega zaustavljanja beguncev imajo korist v resnici samo tihotapci z ljudmi. Sredstva je treba nameniti raje kot za to za organiziran sprejem in nastanitev ne pa za lovljenje ilegalnih pribe\u017enikov za katere bi pa konec koncev itak morali in bi bilo potrebno zanje poskrbeti.\nIn naprej, ne nazadnje v Sloveniji prakti\u010dno nimamo begunca. In v danih razmerah to ni normalno, normalno je, da bi jim podali roko in da bi jim v Sloveniji zagotovili za\u0161\u010dito ljudem, ki to za\u0161\u010dito nedvomno potrebujemo in tukaj se mora vlada odlo\u010diti ali bo izhajala iz zahtev nekaj sto nahujskanih protestnikov, ki begunca od blizu niso niti videli ali bo raj\u0161i izhajala iz dobre prakse ve\u010d tiso\u010d prostovoljcev in aktivistov iz prakse policistov medicinskega osebja in tako naprej, ki dnevno s svojim delom dokazujejo, da je Slovenija zmo\u017ena pomo\u010di in solidarnosti.\nIn v Zdru\u017eeni levici vsekakor ne bomo izhajali iz rasnih predsodkov ampak iz pozitivnih praks in zato pritisnili na tipko \"proti\". Nasploh je pa velik problem, da se politi\u010dni razred spravlja v celoti nad begunce z represijo medtem ko direktno in indirektno podpira tuje bombe, tuje vojske in okupacije Bli\u017enjega vzhoda. Veste, za to obstaja v Sloven\u0161\u010dini en izraz, temu se re\u010de hinav\u0161\u010dina. Samo da je ta hinav\u0161\u010dina precej usodna za narode med Marokom in Iranom in za seboj potegne krvave posledice.\nHvala."],
-        "session_name": "28. izredna seja",
-        "speech_id": 277698,
-        "score": 102
-    }, {
-        "session_id": 3124,
-        "person": {
-            "id": 42,
-            "party": {
-                "acronym": "ZL",
-                "id": 8,
-                "name": "PS Zdru\u017eena Levica"
-            },
-            "name": "Miha Kordi\u0161",
-            "gov_id": "P262",
-            "gender": "m"
-        },
-        "date": "2016-02-19",
-        "content_t": ["Proti bomo glasovali zato, ker predlagani ukrep izhaja iz napa\u010dnih opredelitev problema s katerim se soo\u010damo, izhaja iz opredelitve, da imamo varnostni problem v vpra\u0161anju beguncev ampak to niti ne dr\u017ei. \u0160tevilo beguncev je najmanj\u0161e odkar se je begunska kriza za\u010dela. Postopki so ute\u010deni, kadri so ute\u010deni in zato ogro\u017eenost ne beguncev in ne na\u0161ih ljudi v nobenem pogledu ne pove\u010damo.\nNaprej, od nasilnega zaustavljanja beguncev imajo korist v resnici samo tihotapci z ljudmi. Sredstva je treba nameniti raje kot za to za organiziran sprejem in nastanitev ne pa za lovljenje ilegalnih pribe\u017enikov za katere bi pa konec koncev itak morali in bi bilo potrebno zanje poskrbeti.\nIn naprej, ne nazadnje v Sloveniji prakti\u010dno nimamo begunca. In v danih razmerah to ni normalno, normalno je, da bi jim podali roko in da bi jim v Sloveniji zagotovili za\u0161\u010dito ljudem, ki to za\u0161\u010dito nedvomno potrebujemo in tukaj se mora vlada odlo\u010diti ali bo izhajala iz zahtev nekaj sto nahujskanih protestnikov, ki begunca od blizu niso niti videli ali bo raj\u0161i izhajala iz dobre prakse ve\u010d tiso\u010d prostovoljcev in aktivistov iz prakse policistov medicinskega osebja in tako naprej, ki dnevno s svojim delom dokazujejo, da je Slovenija zmo\u017ena pomo\u010di in solidarnosti.\nIn v Zdru\u017eeni levici vsekakor ne bomo izhajali iz rasnih predsodkov ampak iz pozitivnih praks in zato pritisnili na tipko \"proti\". Nasploh je pa velik problem, da se politi\u010dni razred spravlja v celoti nad begunce z represijo medtem ko direktno in indirektno podpira tuje bombe, tuje vojske in okupacije Bli\u017enjega vzhoda. Veste, za to obstaja v Sloven\u0161\u010dini en izraz, temu se re\u010de hinav\u0161\u010dina. Samo da je ta hinav\u0161\u010dina precej usodna za narode med Marokom in Iranom in za seboj potegne krvave posledice.\nHvala."],
-        "session_name": "28. nujna seja",
-        "speech_id": 300393,
-        "score": 88
-    }, {
-        "session_id": 3047,
-        "person": {
-            "id": 79,
-            "party": {
-                "acronym": "ZL",
-                "id": 8,
-                "name": "PS Zdru\u017eena Levica"
-            },
-            "name": "Matej Ta\u0161ner Vatovec",
-            "gov_id": "P288",
-            "gender": "f"
-        },
-        "date": "2016-02-22",
-        "content_t": ["Izhaja iz opredelitve, da imamo varnostni problem v vpra\u0161anju beguncev ampak to niti ne dr\u017ei. \u0160tevilo beguncev je najmanj\u0161e odkar se je begunska kriza za\u010dela. Postopki so ute\u010deni, kadri so ute\u010deni in zato ogro\u017eenost ne beguncev in ne na\u0161ih ljudi v nobenem pogledu ne pove\u010damo.\nNaprej, od nasilnega zaustavljanja beguncev imajo korist v resnici samo tihotapci z ljudmi. Sredstva je treba nameniti raje kot za to za organiziran sprejem in nastanitev ne pa za lovljenje ilegalnih pribe\u017enikov za katere bi pa konec koncev itak morali in bi bilo potrebno zanje poskrbeti.\nIn naprej, ne nazadnje v Sloveniji prakti\u010dno nimamo begunca. In v danih razmerah to ni normalno, normalno je, da bi jim podali roko in da bi jim v Sloveniji zagotovili za\u0161\u010dito ljudem, ki to za\u0161\u010dito nedvomno potrebujemo in tukaj se mora vlada odlo\u010diti ali bo izhajala iz zahtev nekaj sto nahujskanih protestnikov, ki begunca od blizu niso niti videli ali bo raj\u0161i izhajala iz dobre prakse ve\u010d tiso\u010d prostovoljcev in aktivistov iz prakse policistov medicinskega osebja in tako naprej, ki dnevno s svojim delom dokazujejo, da je Slovenija zmo\u017ena pomo\u010di in solidarnosti.\nIn v Zdru\u017eeni levici vsekakor ne bomo izhajali iz rasnih predsodkov ampak iz pozitivnih praks in zato pritisnili na tipko \"proti\". Nasploh je pa velik problem, da se politi\u010dni razred spravlja v celoti nad begunce z represijo medtem ko direktno in indirektno podpira tuje bombe, tuje vojske in okupacije Bli\u017enjega vzhoda. Veste, za to obstaja v Sloven\u0161\u010dini en izraz, temu se re\u010de hinav\u0161\u010dina. Samo da je ta hinav\u0161\u010dina precej usodna za narode med Marokom in Iranom in za seboj potegne krvave posledice.\nHvala."],
-        "session_name": "28. izredna seja",
-        "speech_id": 277582,
-        "score": 59
-    }, {
-        "session_id": 3052,
-        "person": {
-            "id": 79,
-            "party": {
-                "acronym": "ZL",
-                "id": 8,
-                "name": "PS Zdru\u017eena Levica"
-            },
-            "name": "Matej Ta\u0161ner Vatovec",
-            "gov_id": "P288",
-            "gender": "f"
-        },
-        "date": "2015-11-04",
-        "content_t": ["\u0160tevilo beguncev je najmanj\u0161e odkar se je begunska kriza za\u010dela. Postopki so ute\u010deni, kadri so ute\u010deni in zato ogro\u017eenost ne beguncev in ne na\u0161ih ljudi v nobenem pogledu ne pove\u010damo.\nNaprej, od nasilnega zaustavljanja beguncev imajo korist v resnici samo tihotapci z ljudmi. Sredstva je treba nameniti raje kot za to za organiziran sprejem in nastanitev ne pa za lovljenje ilegalnih pribe\u017enikov za katere bi pa konec koncev itak morali in bi bilo potrebno zanje poskrbeti.\nIn naprej, ne nazadnje v Sloveniji prakti\u010dno nimamo begunca. In v danih razmerah to ni normalno, normalno je, da bi jim podali roko in da bi jim v Sloveniji zagotovili za\u0161\u010dito ljudem, ki to za\u0161\u010dito nedvomno potrebujemo in tukaj se mora vlada odlo\u010diti ali bo izhajala iz zahtev nekaj sto nahujskanih protestnikov, ki begunca od blizu niso niti videli ali bo raj\u0161i izhajala iz dobre prakse ve\u010d tiso\u010d prostovoljcev in aktivistov iz prakse policistov medicinskega osebja in tako naprej, ki dnevno s svojim delom dokazujejo, da je Slovenija zmo\u017ena pomo\u010di in solidarnosti.\nIn v Zdru\u017eeni levici vsekakor ne bomo izhajali iz rasnih predsodkov ampak iz pozitivnih praks in zato pritisnili na tipko \"proti\". Nasploh je pa velik problem, da se politi\u010dni razred spravlja v celoti nad begunce z represijo medtem ko direktno in indirektno podpira tuje bombe, tuje vojske in okupacije Bli\u017enjega vzhoda. Veste, za to obstaja v Sloven\u0161\u010dini en izraz, temu se re\u010de hinav\u0161\u010dina. Samo da je ta hinav\u0161\u010dina precej usodna za narode med Marokom in Iranom in za seboj potegne krvave posledice.\nHvala."],
-        "session_name": "23. izredna seja",
-        "speech_id": 278311,
-        "score": 32
-    }, {
-        "session_id": 3285,
-        "person": {
-            "id": 25,
-            "party": {
-                "acronym": "SDS",
-                "id": 5,
-                "name": "PS Slovenska Demokratska Stranka"
-            },
-            "name": "Vinko Gorenak",
-            "gov_id": "P116",
-            "gender": "f"
-        },
-        "date": "2015-11-02",
-        "content_t": ["Postopki so ute\u010deni, kadri so ute\u010deni in zato ogro\u017eenost ne beguncev in ne na\u0161ih ljudi v nobenem pogledu ne pove\u010damo.\nNaprej, od nasilnega zaustavljanja beguncev imajo korist v resnici samo tihotapci z ljudmi. Sredstva je treba nameniti raje kot za to za organiziran sprejem in nastanitev ne pa za lovljenje ilegalnih pribe\u017enikov za katere bi pa konec koncev itak morali in bi bilo potrebno zanje poskrbeti.\nIn naprej, ne nazadnje v Sloveniji prakti\u010dno nimamo begunca. In v danih razmerah to ni normalno, normalno je, da bi jim podali roko in da bi jim v Sloveniji zagotovili za\u0161\u010dito ljudem, ki to za\u0161\u010dito nedvomno potrebujemo in tukaj se mora vlada odlo\u010diti ali bo izhajala iz zahtev nekaj sto nahujskanih protestnikov, ki begunca od blizu niso niti videli ali bo raj\u0161i izhajala iz dobre prakse ve\u010d tiso\u010d prostovoljcev in aktivistov iz prakse policistov medicinskega osebja in tako naprej, ki dnevno s svojim delom dokazujejo, da je Slovenija zmo\u017ena pomo\u010di in solidarnosti.\nIn v Zdru\u017eeni levici vsekakor ne bomo izhajali iz rasnih predsodkov ampak iz pozitivnih praks in zato pritisnili na tipko \"proti\". Nasploh je pa velik problem, da se politi\u010dni razred spravlja v celoti nad begunce z represijo medtem ko direktno in indirektno podpira tuje bombe, tuje vojske in okupacije Bli\u017enjega vzhoda. Veste, za to obstaja v Sloven\u0161\u010dini en izraz, temu se re\u010de hinav\u0161\u010dina. Samo da je ta hinav\u0161\u010dina precej usodna za narode med Marokom in Iranom in za seboj potegne krvave posledice.\nHvala. V Zdru\u017eeni levici bomo glasovali proti. Proti bomo glasovali zato, ker predlagani ukrep izhaja iz napa\u010dnih opredelitev problema s katerim se soo\u010damo, izhaja iz opredelitve, da imamo varnostni problem v vpra\u0161anju beguncev ampak to niti ne dr\u017ei. \u0160tevilo beguncev je najmanj\u0161e odkar se je begunska kriza za\u010dela."],
-        "session_name": "26. nujna seja",
-        "speech_id": 310741,
-        "score": 31
-    }]
+    "end_idx": 182,
+    "start_idx": 156
 }

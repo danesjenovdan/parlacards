@@ -227,16 +227,51 @@ toggleElement.on('click', function(event) {
 })
 
 // SIMILAR SPEECH TABS
-var similarSpeechTabElements = cardElement.find('a.speech')
-var similarSpeechWrapperElement = cardElement.find('.similar-speech')
-var similarSpeechCloseElement = cardElement.find('.close-button')
+var similarSpeechWrapperElement = cardElement.find('.similar-speech');
+var similarSpeechTabSelector = 'a.speech';
+var similarSpeechCloseSelector = '.close-button';
 
-similarSpeechTabElements.on('click', function() {
+similarSpeechWrapperElement.on('click', similarSpeechTabSelector, function() {
   contentElement.addClass('similar-expanded');
 })
 
-similarSpeechCloseElement.on('click', function() {
+similarSpeechWrapperElement.on('click', similarSpeechCloseSelector, function() {
   contentElement.removeClass('similar-expanded');
 })
 
-similarSpeechCloseElement
+// Fetch similar speeches
+$.get('https://isci.parlameter.si/mlt/' + speechData.speech_id, function(response) {
+  var maxScore = response.response.maxScore;
+  var speeches = response.response.docs.slice(0, 5);
+  var minScore = speeches[4].score;
+
+  var tabs = [];
+  var tabContents = [];
+
+  speeches.forEach(function(speech, index) {
+    tabs.push($(
+      '<li role="tab"' + (index === 0 ? 'class="active"' : '') + '>\
+        <a class="speech" href="#' + speech.speech_id + '_' + randomId + '" data-toggle="tab">\
+          <div class="portrait" style="background-image: url(\'https://cdn.parlameter.si/v1/img/people/' + speech.person.gov_id + '.png\')"></div>\
+          <div class="name">' + speech.person.name + '</div>\
+          <div class="date">' + speech.date + '</div>\
+          <div class="rating" style="width: ' + ((speech.score - minScore) / (maxScore - minScore) * 50 + 50) + '%"></div>\
+        </a>\
+      </li>'
+    ));
+
+    tabContents.push($(
+      '<div role="tabpanel" class="tab-pane' + (index === 0 ? ' active' : '') + '" id="' + speech.speech_id + '_' + randomId + '">\
+        <div class="similar-speech-heading">' +
+          speech.session_name + ', ' + speech.date +
+          '<div class="close-button"></div>\
+        </div>\
+        <div class="similar-speech-text">' + speech.content_t[0] + '</div>\
+        <a class="similar-speech-link" href="#">Pokaži znotraj seje &gt;</a>\
+      </div>'
+    ));
+  });
+
+  similarSpeechWrapperElement.find('.similar-speech-tabs ul').append(tabs);
+  similarSpeechWrapperElement.find('.similar-speech-content').append(tabContents);
+})
