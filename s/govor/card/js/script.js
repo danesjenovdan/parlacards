@@ -153,7 +153,10 @@
 
 }(jQuery);
 
-
+function formatDate(unformattedDate) {
+  var date = new Date(unformattedDate);
+  return date.getDate() + ". " + (date.getMonth() + 1) + ". " + date.getFullYear()
+}
 
 // SELECTION QUOTING
 function getSelected() {
@@ -228,6 +231,7 @@ toggleElement.on('click', function(event) {
   quoteElement.css({ display: 'none' });
 })
 
+// QUOTE-FULL SPEECH TOGGLING
 cardElement.on('click', '.full-text-link', function(event) {
   event.preventDefault();
   contentElement.removeClass('just-quote');
@@ -261,7 +265,7 @@ $.get('https://isci.parlameter.si/mlt/' + speechData.speech_id, function(respons
         <a class="speech" href="#' + speech.speech_id + '_' + randomId + '" data-toggle="tab">\
           <div class="portrait" style="background-image: url(\'https://cdn.parlameter.si/v1/img/people/' + speech.person.gov_id + '.png\')"></div>\
           <div class="name">' + speech.person.name + '</div>\
-          <div class="date">' + speech.date + '</div>\
+          <div class="date">' + formatDate(speech.date) + '</div>\
           <div class="rating" style="width: ' + ((speech.score - minScore) / (maxScore - minScore) * 50 + 50) + '%"></div>\
         </a>\
       </li>'
@@ -270,7 +274,7 @@ $.get('https://isci.parlameter.si/mlt/' + speechData.speech_id, function(respons
     tabContents.push($(
       '<div role="tabpanel" class="tab-pane' + (index === 0 ? ' active' : '') + '" id="' + speech.speech_id + '_' + randomId + '">\
         <div class="similar-speech-heading">' +
-          speech.session_name + ', ' + speech.date +
+          speech.session_name + ', ' + formatDate(speech.date) +
           '<div class="close-button"></div>\
         </div>\
         <div class="similar-speech-text">' + speech.content_t[0] + '</div>\
