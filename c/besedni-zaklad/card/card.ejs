@@ -72,7 +72,7 @@
                     <div class="kompas-stranke">
                         <% for (party_i in parties) {
                         %>
-                            <div class="kompas-stranka" id="partyswitch-<%= parties[party_i].replace(' ', '_') %>">
+                            <div class="kompas-stranka <%= parties[party_i].replace(' ', '_') %>" id="partyswitch-<%= parties[party_i].replace(' ', '_') %>">
                                 <%= parties[party_i] %>
                             </div>
                         <%

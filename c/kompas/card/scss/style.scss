@@ -1,3 +1,18 @@
+@import 'colors';
+@import 'helper';
+@import 'jqueryui';
+@import 'peoplesearch';
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
 rect {
   fill: transparent;
   shape-rendering: crispEdges;
@@ -74,24 +89,116 @@ rect {
 .kompas-stranka {
     width: 50px;
     height: 50px;
-    line-height: 50px;
+    padding-top: 10px;
 
     text-align: center;
 
-    border: 1px solid #000000;
+    border: 1px solid #d5d5d5;
 
     font-size: 10px;
 
     cursor: pointer;
+
+    margin-bottom: 1px;
+
+    .glyphicon {
+        display: none;
+    }
+
+    background-color: #f0f0f0;
 }
 .kompas-stranka.turnedon {
-    background-color: #fff000;
+    color: #ffffff;
+
+    .glyphicon {
+        display: inline-block;
+    }
+}
+.kompas-people {
+    width: 100%;
+    height: 70px;
+    overflow-x: visible;
+    overflow-y: hidden;
+    margin-bottom: 5px;
+}
+.kompas-people-wide {
+    height: 70px;
+    overflow: hidden;
+    padding-left: 5px;
 }
 .kompas-person {
+
+    display: block;
+    overflow: hidden;
+
     float: left;
+
+    margin-top: 5px;
     margin-right: 20px;
+
     padding: 4px;
-    border: 1px solid;
+
+    height: 60px;
+
+    position: relative;
+
+    padding-left: 30px;
+
+    background-color: #ffffff;
+
+    @include card(1);
+
+    .kompas-person-party {
+        position: absolute;
+        transform: rotate(-90deg);
+        // transform: translate(-30px, 100px);
+        background-color: #ff0000;
+        top: 20px;
+        left: -21px;
+        width: 60px;
+        height: 20px;
+        text-align: center;
+        line-height: 22px;
+
+        color: $white;
+        font-weight: 300;
+    }
+
+    .kompas-person-internal-container {
+        display: block;
+        float: left;
+        .kompas-person-image {
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            border-radius: 50%;
+
+            float: left;
+            margin-top: 5px;
+        }
+        .kompas-person-name {
+            text-align: center;
+            display: block;
+            float: left;
+
+            margin-left: 15px;
+            margin-right: 20px;
+            line-height: 50px;
+        }
+    }
+
+    .kompas-person-close {
+        position: absolute;
+        top: 0;
+        right: 4px;
+        cursor: pointer;
+
+        font-size: 22px;
+        line-height: 26px;
+    }
 }
 
 .dot.selected {

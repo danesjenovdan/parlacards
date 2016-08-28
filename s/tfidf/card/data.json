@@ -1,53 +1,85 @@
 {
-    "person": {
-        "id": 50,
-        "name": "Franc Laj",
-        "gov_id": "P240",
-        "party": {
-            "name": "Stranka mehkih cur",
-            "id": 2,
-            "acronym": "SMC"
+    "results": [
+        {
+            "term": "genetski",
+            "scores": {
+                "tf": 25,
+                "df": 37,
+                "tf-idf": 0.6756756756756757
+            }
+        },
+        {
+            "term": "skrob",
+            "scores": {
+                "tf": 2,
+                "df": 4,
+                "tf-idf": 0.5
+            }
+        },
+        {
+            "term": "soja",
+            "scores": {
+                "tf": 8,
+                "df": 30,
+                "tf-idf": 0.26666666666666666
+            }
+        },
+        {
+            "term": "gso",
+            "scores": {
+                "tf": 17,
+                "df": 69,
+                "tf-idf": 0.2463768115942029
+            }
+        },
+        {
+            "term": "beljakovinski",
+            "scores": {
+                "tf": 7,
+                "df": 32,
+                "tf-idf": 0.21875
+            }
+        },
+        {
+            "term": "mikroorganizem",
+            "scores": {
+                "tf": 2,
+                "df": 14,
+                "tf-idf": 0.14285714285714285
+            }
+        },
+        {
+            "term": "krmiti",
+            "scores": {
+                "tf": 3,
+                "df": 32,
+                "tf-idf": 0.09375
+            }
+        },
+        {
+            "term": "koruzen",
+            "scores": {
+                "tf": 2,
+                "df": 27,
+                "tf-idf": 0.07407407407407407
+            }
+        },
+        {
+            "term": "osvescati",
+            "scores": {
+                "tf": 2,
+                "df": 33,
+                "tf-idf": 0.06060606060606061
+            }
+        },
+        {
+            "term": "rastlina",
+            "scores": {
+                "tf": 9,
+                "df": 169,
+                "tf-idf": 0.05325443786982249
+            }
         }
-    },
-    "results": [{
-        "rank": 1,
-        "term": "alergen",
-        "tfidf": 0.009124496769425486
-    }, {
-        "rank": 2,
-        "term": "ambrozija",
-        "tfidf": 0.009124496769425486
-    }, {
-        "rank": 3,
-        "term": "lendati",
-        "tfidf": 0.00833667703715213
-    }, {
-        "rank": 4,
-        "term": "ambroziti",
-        "tfidf": 0.007789051259282549
-    }, {
-        "rank": 5,
-        "term": "mrtvec",
-        "tfidf": 0.007299597415540388
-    }, {
-        "rank": 6,
-        "term": "agrotehničen",
-        "tfidf": 0.007299597415540388
-    }, {
-        "rank": 7,
-        "term": "odriniti",
-        "tfidf": 0.007156003630437071
-    }, {
-        "rank": 8,
-        "term": "krater",
-        "tfidf": 0.006527296549898024
-    }, {
-        "rank": 9,
-        "term": "žitnica",
-        "tfidf": 0.006211100481021827
-    }, {
-        "rank": 10,
-        "term": "koncentriran",
-        "tfidf": 0.005672387204613367
-    }]
+    ],
+    "session_id": 3210
 }

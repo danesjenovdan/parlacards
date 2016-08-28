@@ -1,0 +1,188 @@
+{
+  "tfidf": {
+    "session": {
+      "date": "23.12.2014",
+      "name": "8. izredna seja",
+      "id": 3067
+    },
+    "results": [
+      {
+        "term": "neinvalid",
+        "scores": {
+          "tf": 37,
+          "df": 71,
+          "tf-idf": 0.5211267605633803
+        }
+      },
+      {
+        "term": "rehabilitacija",
+        "scores": {
+          "tf": 15,
+          "df": 218,
+          "tf-idf": 0.06880733944954129
+        }
+      },
+      {
+        "term": "konta",
+        "scores": {
+          "tf": 2,
+          "df": 62,
+          "tf-idf": 0.03225806451612903
+        }
+      },
+      {
+        "term": "zavajajoc",
+        "scores": {
+          "tf": 3,
+          "df": 137,
+          "tf-idf": 0.021897810218978103
+        }
+      },
+      {
+        "term": "podjetje",
+        "scores": {
+          "tf": 90,
+          "df": 4140,
+          "tf-idf": 0.021739130434782608
+        }
+      },
+      {
+        "term": "nasprotnikov",
+        "scores": {
+          "tf": 2,
+          "df": 106,
+          "tf-idf": 0.018867924528301886
+        }
+      },
+      {
+        "term": "upraviciti",
+        "scores": {
+          "tf": 2,
+          "df": 142,
+          "tf-idf": 0.014084507042253521
+        }
+      },
+      {
+        "term": "delojemalec",
+        "scores": {
+          "tf": 2,
+          "df": 163,
+          "tf-idf": 0.012269938650306749
+        }
+      },
+      {
+        "term": "tekmovanje",
+        "scores": {
+          "tf": 2,
+          "df": 170,
+          "tf-idf": 0.011764705882352941
+        }
+      },
+      {
+        "term": "razglasitev",
+        "scores": {
+          "tf": 2,
+          "df": 205,
+          "tf-idf": 0.00975609756097561
+        }
+      }
+    ]
+  },
+  "session": {
+    "date": "2014-12-23",
+    "name": "8. izredna seja",
+    "id": 3067
+  },
+  "motions": [
+    {
+      "session": {
+        "date": "2014-12-23",
+        "name": "8. izredna seja",
+        "id": 3067
+      },
+      "results": {
+        "abstain": 1,
+        "text": "Dnevni red v celoti",
+        "votes_for": 73,
+        "against": 0,
+        "motion_id": 2850,
+        "not_present": 16,
+        "result": "True"
+      }
+    },
+    {
+      "session": {
+        "date": "2014-12-23",
+        "name": "8. izredna seja",
+        "id": 3067
+      },
+      "results": {
+        "abstain": 3,
+        "text": "Zakon o spremembah in dopolnitvah Zakona o zaposlitveni rehabilitaciji in zaposlovanju invalidov",
+        "votes_for": 49,
+        "against": 26,
+        "motion_id": 2849,
+        "not_present": 12,
+        "result": "False"
+      }
+    }
+  ],
+  "presence": [
+    {
+      "org": {
+        "acronym": "SMC",
+        "id": 1,
+        "name": "PS Stranka modernega centra"
+      },
+      "percent": 93
+    },
+    {
+      "org": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "percent": 110
+    },
+    {
+      "org": {
+        "acronym": "SDS",
+        "id": 5,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "percent": 80
+    },
+    {
+      "org": {
+        "acronym": "SD",
+        "id": 7,
+        "name": "PS Socialni Demokrati"
+      },
+      "percent": 75
+    },
+    {
+      "org": {
+        "acronym": "NSI",
+        "id": 6,
+        "name": "PS Nova Slovenija"
+      },
+      "percent": 80
+    },
+    {
+      "org": {
+        "acronym": "ZL",
+        "id": 8,
+        "name": "PS Zdru\u017eena Levica"
+      },
+      "percent": 66
+    },
+    {
+      "org": {
+        "acronym": "PS NP",
+        "id": 97,
+        "name": "PS nepovezanih poslancev"
+      },
+      "percent": 100
+    }
+  ]
+}

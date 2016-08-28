@@ -1,1 +1,345 @@
-{}
+{
+  "info": {
+    "vice_president": [
+      {
+        "party": {
+          "acronym": "DeSUS",
+          "id": 3,
+          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+        },
+        "gender": "f",
+        "name": "Marija Antonija Kova\u010di\u010d",
+        "gov_id": "P297",
+        "id": 96
+      },
+      {
+        "party": {
+          "acronym": "NSI",
+          "id": 6,
+          "name": "PS Nova Slovenija"
+        },
+        "gender": "f",
+        "name": "Ljudmila Novak",
+        "gov_id": "P193",
+        "id": 63
+      }
+    ],
+    "president": {
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "name": "PS Stranka modernega centra"
+      },
+      "gender": "m",
+      "name": "Dragan Mati\u0107",
+      "gov_id": "P272",
+      "id": 57
+    },
+    "members": [
+      {
+        "party": {
+          "acronym": "SD",
+          "id": 7,
+          "name": "PS Socialni Demokrati"
+        },
+        "gender": "f",
+        "name": "Marija Ba\u010di\u010d",
+        "gov_id": "P298",
+        "id": 95
+      },
+      {
+        "party": {
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "gender": "f",
+        "name": "Andrej \u010cu\u0161",
+        "gov_id": "P225",
+        "id": 15
+      },
+      {
+        "party": {
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "gender": "f",
+        "name": "Tanja Cink",
+        "gov_id": "P246",
+        "id": 14
+      },
+      {
+        "party": {
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "gender": "f",
+        "name": "Jelka Godec",
+        "gov_id": "P252",
+        "id": 23
+      },
+      {
+        "party": {
+          "acronym": "IMNS",
+          "id": 2,
+          "name": "PS italijanske in mad\u017earske narodne skupnosti"
+        },
+        "gender": "f",
+        "name": "L\u00e1szl\u00f3 G\u00f6ncz",
+        "gov_id": "P117",
+        "id": 24
+      },
+      {
+        "party": {
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "gender": "m",
+        "name": "Branislav Raji\u0107",
+        "gov_id": "P281",
+        "id": 70
+      },
+      {
+        "party": {
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "gender": "f",
+        "name": "Anita Kole\u0161a",
+        "gov_id": "P260",
+        "id": 40
+      },
+      {
+        "party": {
+          "acronym": "ZL",
+          "id": 8,
+          "name": "PS Zdru\u017eena Levica"
+        },
+        "gender": "f",
+        "name": "Violeta Tomi\u0107",
+        "gov_id": "P289",
+        "id": 80
+      },
+      {
+        "party": {
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "gender": "f",
+        "name": "Janja Sluga",
+        "gov_id": "P284",
+        "id": 73
+      },
+      {
+        "party": {
+          "acronym": "PS NP",
+          "id": 97,
+          "name": "PS nepovezanih poslancev"
+        },
+        "gender": "f",
+        "name": "Mirjam Bon Klanj\u0161\u010dek",
+        "gov_id": "P235",
+        "id": 7
+      },
+      {
+        "party": {
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "gender": "f",
+        "name": "Sa\u0161a Tabakovi\u0107",
+        "gov_id": "P302",
+        "id": 1355
+      },
+      {
+        "party": {
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "gender": "m",
+        "name": "Bojan Podkraj\u0161ek",
+        "gov_id": "P277",
+        "id": 64
+      }
+    ]
+  },
+  "organization": {
+    "acronym": "",
+    "id": 22,
+    "name": "Odbor za kulturo"
+  },
+  "ratio": {
+    "coalition": 53.3333333333333,
+    "opposition": 46.6666666666667
+  },
+  "seats_per_pg": [
+    {
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "name": "PS Stranka modernega centra"
+      },
+      "coalition": "coalition",
+      "seats": 6
+    },
+    {
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "coalition": "opposition",
+      "seats": 3
+    },
+    {
+      "party": {
+        "acronym": "NSI",
+        "id": 6,
+        "name": "PS Nova Slovenija"
+      },
+      "coalition": "opposition",
+      "seats": 2
+    },
+    {
+      "party": {
+        "acronym": "PS NP",
+        "id": 97,
+        "name": "PS nepovezanih poslancev"
+      },
+      "coalition": "opposition",
+      "seats": 1
+    },
+    {
+      "party": {
+        "acronym": "ZL",
+        "id": 8,
+        "name": "PS Zdru\u017eena Levica"
+      },
+      "coalition": "opposition",
+      "seats": 1
+    },
+    {
+      "party": {
+        "acronym": "SD",
+        "id": 7,
+        "name": "PS Socialni Demokrati"
+      },
+      "coalition": "coalition",
+      "seats": 1
+    },
+    {
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "coalition": "coalition",
+      "seats": 1
+    }
+  ],
+  "sessions": [
+    {
+      "id": 1787,
+      "name": "17. nujna seja (skupna seja)"
+    },
+    {
+      "id": 1792,
+      "name": "16. nujna seja"
+    },
+    {
+      "id": 1808,
+      "name": "15. nujna seja (skupna seja)"
+    },
+    {
+      "id": 1839,
+      "name": "14. nujna seja (skupna seja)"
+    },
+    {
+      "id": 1870,
+      "name": "13. nujna seja"
+    },
+    {
+      "id": 1884,
+      "name": "12. redna seja"
+    },
+    {
+      "id": 1901,
+      "name": "12. nujna seja"
+    },
+    {
+      "id": 1676,
+      "name": "11. redna seja"
+    },
+    {
+      "id": 1684,
+      "name": "11. nujna seja"
+    },
+    {
+      "id": 1721,
+      "name": "10. redna seja"
+    },
+    {
+      "id": 1725,
+      "name": "10. nujna seja"
+    },
+    {
+      "id": 1737,
+      "name": "9. nujna seja"
+    },
+    {
+      "id": 1435,
+      "name": "9. redna seja"
+    },
+    {
+      "id": 1467,
+      "name": "8. redna seja"
+    },
+    {
+      "id": 1533,
+      "name": "7. redna seja"
+    },
+    {
+      "id": 1561,
+      "name": "8. nujna seja"
+    },
+    {
+      "id": 1560,
+      "name": "6. redna seja"
+    },
+    {
+      "id": 1579,
+      "name": "7. nujna seja"
+    },
+    {
+      "id": 1580,
+      "name": "5. redna seja"
+    },
+    {
+      "id": 1606,
+      "name": "4. redna seja"
+    },
+    {
+      "id": 1611,
+      "name": "6. nujna seja (skupna seja)"
+    },
+    {
+      "id": 1616,
+      "name": "3. redna seja"
+    },
+    {
+      "id": 1625,
+      "name": "2. redna seja"
+    },
+    {
+      "id": 1633,
+      "name": "5. nujna seja"
+    }
+  ]
+}

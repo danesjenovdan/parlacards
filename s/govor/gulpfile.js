@@ -33,8 +33,8 @@ var fs = require('fs');
 var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
 
 // generate CSS class name to use for sandboxing
-  var directoryName = __dirname.split('/').pop()
-  var className = 'card-' + directoryName
+var directoryName = __dirname.split('/').pop()
+var className = 'card-' + directoryName
 
 //#################
 //## tasks below ##
