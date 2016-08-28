@@ -176,7 +176,7 @@ function getSelected() {
 var cardElement = $('.card-govor');
 var contentElement = cardElement.find('.card-content');
 var speechTextElement = cardElement.find('.speech-text');
-var quoteElement = cardElement.find('.quote-button');
+var quoteElement = cardElement.find('.everything .quote-button');
 var toggleElement = cardElement.find('.toggle-arrow');
 
 speechTextElement.on('mouseup', function() {

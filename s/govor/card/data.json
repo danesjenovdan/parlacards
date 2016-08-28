@@ -11,8 +11,13 @@
         "gov_id": "P005",
         "id": 4
     },
-    "quoted_text": "Tu gre za milijardne vsote",
+    "session": {
+        "date": "15.12.2014",
+        "name": "3. redna seja",
+        "id": 3044
+    },
+    "quoted_text": " Tu gre za milijardne vsote, ki vsaj na papirju sanirajo stanje v bankah, jih naredijo likvidne \u2013 in to je to",
     "speech_id": 275726,
-    "end_idx": 182,
-    "start_idx": 156
+    "end_idx": 264,
+    "start_idx": 155
 }
