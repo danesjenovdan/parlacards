@@ -14,6 +14,16 @@ $medium-gray: #d0d0d0;
   line-height: 30px;
 }
 
+%link-styling {
+  color: $blue;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  &:hover { color: $blue; }
+}
+
 .portrait {
   background-position: center;
   background-size: cover;
@@ -74,6 +84,11 @@ $medium-gray: #d0d0d0;
       color: #cacaca;
       span { color: #000000; }
     }
+    .full-text-link {
+      @extend %link-styling;
+      margin-bottom: 54px;
+    }
+    &.closed { max-height: none; }
     .everything { display: none; }
     .quote { display: block; }
   }
@@ -156,11 +171,7 @@ $medium-gray: #d0d0d0;
     }
 
     .similar-speech-link {
-      color: $blue;
-      display: block;
-      text-align: center;
-      text-transform: uppercase;
-      &:hover { color: $blue; }
+      @extend %link-styling;
     }
   }
 
