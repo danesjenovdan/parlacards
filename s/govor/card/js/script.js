@@ -228,6 +228,11 @@ toggleElement.on('click', function(event) {
   quoteElement.css({ display: 'none' });
 })
 
+cardElement.on('click', '.full-text-link', function(event) {
+  event.preventDefault();
+  contentElement.removeClass('just-quote');
+});
+
 // SIMILAR SPEECH TABS
 var similarSpeechWrapperElement = cardElement.find('.similar-speech');
 var similarSpeechTabSelector = 'a.speech';
