@@ -234,7 +234,7 @@ toggleElement.on('click', function(event) {
 // QUOTE-FULL SPEECH TOGGLING
 cardElement.on('click', '.full-text-link', function(event) {
   event.preventDefault();
-  contentElement.removeClass('just-quote');
+  contentElement.removeClass('just-quote closed');
 });
 
 // SIMILAR SPEECH TABS
