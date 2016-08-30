@@ -51,7 +51,7 @@
                             <div class="col-xs-4 image respo">
 
                                 <img class="media-object img-circle img-responsive"
-                                     src="https://cdn.parlameter.si/v1/img/people/<%= data.info.president[item].gov_id %>.png"
+                                     src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.president[item].gov_id %>.png"
                                      alt=""/>
                             </div>
                             <div class="col-xs-8 member_data">
@@ -78,7 +78,7 @@
                             <div class="col-xs-4 image respo">
 
                                 <img class="media-object img-circle img-responsive"
-                                     src="https://cdn.parlameter.si/v1/img/people/<%= data.info.vice_president[item].gov_id %>.png"
+                                     src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.vice_president[item].gov_id %>.png"
                                      alt=""/>
                             </div>
                             <div class="col-xs-8 member_data">
@@ -104,7 +104,7 @@
                                 <% for(item in data.info.members){ %>
                                 <a href="<%= data.info.members[item].gov_id %>" title="<%= data.info.members[item].name %>">
                                 <img class="img-circle"
-                                     src="https://cdn.parlameter.si/v1/img/people/<%= data.info.members[item].gov_id %>.png"
+                                     src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.members[item].gov_id %>.png"
                                      alt="<%= data.info.members[item].name %>"/>
                                     </a>
                                 <% } %>

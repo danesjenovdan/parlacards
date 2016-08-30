@@ -139,3 +139,33 @@
     width: 50%;
   }
 }
+
+
+
+#votingCardHorizontal div.member{
+  width: 115px;
+}
+#votingCardHorizontal .slider{
+  width: auto;
+}
+
+#votingCardHorizontal div.member .image{
+  float: none;
+}
+#votingCardHorizontal div.member p{
+  float: none;
+}
+#votingCardHorizontal div.member span{
+  float: none;
+}
+
+@media (max-width: 991px) {
+  #votingCardHorizontal div.member{
+    width: 130px;
+  }
+  #votingCardHorizontal .slider{
+    width: 323px;
+  }
+
+
+}

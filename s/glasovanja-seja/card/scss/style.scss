@@ -69,3 +69,35 @@
 .accepted.aye{
 
 }
+
+.session_voting .accepted{
+  line-height:normal;
+  height: 123px;
+}
+.session_voting  .accepted p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.session_voting .session_title {
+  height: 123px;
+  margin: 0;
+}
+.session_voting  .session_title p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+@media (max-width: 991px) {
+  .session_voting .accepted,
+  .session_voting .session_title {
+    height: 93px;
+  }
+
+}

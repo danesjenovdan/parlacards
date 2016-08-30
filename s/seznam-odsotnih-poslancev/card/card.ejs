@@ -47,7 +47,7 @@
                 <% var i = 1; for (person in data) { %>
 
                 <div class="member <%= (data.length == i) ? 'lastel' : ''; %>">
-                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data[person].person.gov_id %>.png); background-size: cover;"></div>
+                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data[person].person.gov_id %>.png); background-size: cover;"></div>
                     <p><%= data[person].person.name %>
                         <br/><%= data[person].person.party.acronym %></p>
 
