@@ -33,13 +33,16 @@
             <h1>Glasovanja</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
-
-
+          <select class="tag-selector" multiple>
+          <% data.all_tags.forEach(function(tag) { %>
+            <option value="<%= tag %>"><%= tag %></option>
+          <% }) %>
+          </select>
 
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed">&lt;/&gt;</div>
+            <div class="card-circle-button card-embed"></div>
             <div class="card-circle-button card-info">i</div>
         </div>
     </div>
