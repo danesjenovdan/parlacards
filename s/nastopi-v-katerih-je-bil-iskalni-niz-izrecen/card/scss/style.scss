@@ -26,9 +26,13 @@
     line-height: 75px;
   }
   .quote {
+    $line-height: 20px;
     width: 50%;
     font-family: Roboto Slab, Georgia, serif;
     font-weight: 300;
+    height: $line-height * 4;
+    line-height: $line-height;
+    overflow: hidden;
     em {
       font-style: normal;
       font-weight: bold;
