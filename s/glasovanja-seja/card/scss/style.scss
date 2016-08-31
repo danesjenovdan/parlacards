@@ -44,21 +44,24 @@
   padding-left: 20px;
 }
 
-@media (max-width: 480px) {
+.session_voting .session_votes .progress.smallbar {
+  height: 15px;
+}
 
   .session_voting .session_votes {
     font-size: 30px;
     line-height: 40px;
-    margin: 15px 0;
+    margin: 15px 0 10px 0;
   }
 
   .session_voting .session_votes .type {
     font-size: 14px;
-    line-height: 30px;
+    line-height: 20px;
     text-transform: uppercase;
   }
+/*@media (max-width: 480px) {
 }
-
+*/
 .session_voting{
   font-weight: 400;
 }
@@ -72,7 +75,7 @@
 
 .session_voting .accepted{
   line-height:normal;
-  height: 123px;
+  height: 95px;
 }
 .session_voting  .accepted p {
   position: relative;
@@ -82,10 +85,10 @@
   transform: translateY(-50%);
 }
 .session_voting .session_title {
-  height: 123px;
+  height: 95px;
   margin: 0;
 }
-.session_voting  .session_title p {
+.session_voting .session_title p {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -100,4 +103,7 @@
     height: 93px;
   }
 
+}
+.session_voting .session_title p{
+  font-size: 14px;
 }
