@@ -1,0 +1,618 @@
+{
+    "person": {
+        "party": {
+            "acronym": "SMC",
+            "id": 1,
+            "name": "PS Stranka modernega centra"
+        },
+        "gender": "f",
+        "name": "Ur\u0161ka Ban",
+        "gov_id": "P240",
+        "id": 3
+    },
+    "results": [{
+        "date": "23.12.2014",
+        "ballots": [{
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o zaposlitveni rehabilitaciji in zaposlovanju invalidov",
+            "ballot_id": 256278,
+            "option": "za",
+            "session_id": 3067,
+            "tags": []
+        }, {
+            "motion": "Dnevni red v celoti",
+            "ballot_id": 256368,
+            "option": "za",
+            "session_id": 3067,
+            "tags": []
+        }]
+    }, {
+        "date": "15.12.2014",
+        "ballots": [{
+            "motion": "Predlog za izvolitev v sodni\u0161ko funkcijo na sodni\u0161ko mesto okro\u017ene sodnice na Okro\u017enem sodi\u0161\u010du v Kr\u0161kem",
+            "ballot_id": 245299,
+            "option": "za",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Sklep o izvolitvi predsednika, podpredsednika in \u010dlanov Komisije za nadzor obve\u0161\u010devalnih in varnostnih slu\u017eb",
+            "ballot_id": 245389,
+            "option": "za",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o ratifikaciji Protokola \u0161t. 16 h Konvenciji o varstvu \u010dlovekovih pravic in temeljnih svobo\u0161\u010din",
+            "ballot_id": 245479,
+            "option": "za",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o ratifikaciji Konvencije Sveta Evrope o prepre\u010devanju nasilja nad \u017eenskami in nasilja v dru\u017eini ter o boju proti njima",
+            "ballot_id": 245569,
+            "option": "za",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o spremembi in dopolnitvi Zakona o delovnih razmerjih",
+            "ballot_id": 245659,
+            "option": "proti",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o spremembi in dopolnitvi Zakona o delovnih razmerjih",
+            "ballot_id": 245749,
+            "option": "proti",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o fiskalnem pravilu",
+            "ballot_id": 245839,
+            "option": "proti",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o fiskalnem pravilu",
+            "ballot_id": 245929,
+            "option": "proti",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o dopolnitvi Kazenskega zakonika",
+            "ballot_id": 246019,
+            "option": "proti",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o dopolnitvi Kazenskega zakonika",
+            "ballot_id": 246109,
+            "option": "proti",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o dopolnitvah Zakona o graditvi objektov",
+            "ballot_id": 246199,
+            "option": "za",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o dopolnitvah Zakona o graditvi objektov",
+            "ballot_id": 246289,
+            "option": "za",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o dopolnitvah Zakona o odvetni\u0161tvu",
+            "ballot_id": 246379,
+            "option": "za",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o dopolnitvah Zakona o odvetni\u0161tvu",
+            "ballot_id": 246469,
+            "option": "proti",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o dopolnitvah Zakona o odvetni\u0161tvu",
+            "ballot_id": 246559,
+            "option": "proti",
+            "session_id": 3044,
+            "tags": []
+        }, {
+            "motion": "Zakon o organu in skladu za re\u0161evanje bank",
+            "ballot_id": 246649,
+            "option": "za",
+            "session_id": 3044,
+            "tags": ["Odbor za finance in monetarno politiko"]
+        }, {
+            "motion": "Zakon o organu in skladu za re\u0161evanje bank",
+            "ballot_id": 246739,
+            "option": "za",
+            "session_id": 3044,
+            "tags": ["Odbor za finance in monetarno politiko"]
+        }, {
+            "motion": "Zakon o organu in skladu za re\u0161evanje bank",
+            "ballot_id": 246829,
+            "option": "za",
+            "session_id": 3044,
+            "tags": ["Odbor za finance in monetarno politiko"]
+        }, {
+            "motion": "Zakon o organu in skladu za re\u0161evanje bank",
+            "ballot_id": 246919,
+            "option": "za",
+            "session_id": 3044,
+            "tags": ["Odbor za finance in monetarno politiko"]
+        }, {
+            "motion": "Zakon o organu in skladu za re\u0161evanje bank",
+            "ballot_id": 247009,
+            "option": "za",
+            "session_id": 3044,
+            "tags": ["Odbor za finance in monetarno politiko"]
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o mati\u010dni evidenci zavarovancev in u\u017eivalcev pravic iz obveznega pokojninskega in invalidskega zavarovanja",
+            "ballot_id": 247099,
+            "option": "za",
+            "session_id": 3044,
+            "tags": ["Odbor za delo, dru\u017eino, socialne zadeve in invalide"]
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o mati\u010dni evidenci zavarovancev in u\u017eivalcev pravic iz obveznega pokojninskega in invalidskega zavarovanja",
+            "ballot_id": 247189,
+            "option": "za",
+            "session_id": 3044,
+            "tags": ["Odbor za delo, dru\u017eino, socialne zadeve in invalide"]
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o mati\u010dni evidenci zavarovancev in u\u017eivalcev pravic iz obveznega pokojninskega in invalidskega zavarovanja",
+            "ballot_id": 247279,
+            "option": "za",
+            "session_id": 3044,
+            "tags": ["Odbor za delo, dru\u017eino, socialne zadeve in invalide"]
+        }]
+    }, {
+        "date": "04.12.2014",
+        "ballots": [{
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o dr\u017eavni upravi",
+            "ballot_id": 256458,
+            "option": "za",
+            "session_id": 3068,
+            "tags": ["Odbor za notranje zadeve, javno upravo in lokalno samoupravo"]
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o dr\u017eavni upravi",
+            "ballot_id": 256548,
+            "option": "proti",
+            "session_id": 3068,
+            "tags": ["Odbor za notranje zadeve, javno upravo in lokalno samoupravo"]
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o dr\u017eavni upravi",
+            "ballot_id": 256638,
+            "option": "proti",
+            "session_id": 3068,
+            "tags": ["Odbor za notranje zadeve, javno upravo in lokalno samoupravo"]
+        }, {
+            "motion": "Zakon o spremembi Zakona o spremembah in dopolnitvah Zakona o tujcih",
+            "ballot_id": 256728,
+            "option": "za",
+            "session_id": 3068,
+            "tags": ["Odbor za notranje zadeve, javno upravo in lokalno samoupravo"]
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o dav\u010dnem postopku",
+            "ballot_id": 256818,
+            "option": "za",
+            "session_id": 3068,
+            "tags": ["Odbor za finance in monetarno politiko"]
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o dav\u010dnem postopku",
+            "ballot_id": 256908,
+            "option": "proti",
+            "session_id": 3068,
+            "tags": ["Odbor za finance in monetarno politiko"]
+        }, {
+            "motion": "Zakon o spremembah Zakona o davku od prometa zavarovalnih poslov",
+            "ballot_id": 256998,
+            "option": "za",
+            "session_id": 3068,
+            "tags": ["Odbor za finance in monetarno politiko"]
+        }, {
+            "motion": "Zakon o spremembah Zakona o davku na finan\u010dne storitve",
+            "ballot_id": 257088,
+            "option": "za",
+            "session_id": 3068,
+            "tags": ["Odbor za finance in monetarno politiko"]
+        }, {
+            "motion": "Predlog kandidata za ministra za gospodarski razvoj in tehnologijo",
+            "ballot_id": 257178,
+            "option": "za",
+            "session_id": 3068,
+            "tags": []
+        }, {
+            "motion": "Proceduralni predlog za omejitev razprave - peti odstavek 67. \u010dlena Poslovnika Dr\u017eavnega zbora",
+            "ballot_id": 257268,
+            "option": "za",
+            "session_id": 3068,
+            "tags": ["Proceduralna glasovanja"]
+        }, {
+            "motion": "Dnevni red v celoti",
+            "ballot_id": 257358,
+            "option": "za",
+            "session_id": 3068,
+            "tags": ["Proceduralna glasovanja"]
+        }, {
+            "motion": "\u0160iritev dnevnega reda",
+            "ballot_id": 257448,
+            "option": "za",
+            "session_id": 3068,
+            "tags": ["Proceduralna glasovanja"]
+        }]
+    }, {
+        "date": "17.11.2014",
+        "ballots": [{
+            "motion": "Sklep o imenovanju \u010dlana Slovenske nacionalne komisije za UNESCO",
+            "ballot_id": 247369,
+            "option": "za",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Sklep o imenovanju predsednika in dveh \u010dlanov Upravnega odbora Sklada za financiranje razgradnje NEK in za odlaganje radioaktivnih odpadkov iz NEK",
+            "ballot_id": 247459,
+            "option": "za",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Sklep o imenovanju \u010dlanice Dr\u017eavne revizijske komisije",
+            "ballot_id": 247549,
+            "option": "za",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Obvestilo Sodnega sveta o pravnomo\u010dni obsodilni sodbi zoper okro\u017enega sodnika svetnika na Okro\u017enem sodi\u0161\u010du v Celju",
+            "ballot_id": 247639,
+            "option": "za",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Uradno pre\u010di\u0161\u010deno besedilo",
+            "ballot_id": 247729,
+            "option": "za",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Zakon o ratifikaciji Sporazuma med Ministrstvom za notranje zadeve Republike Slovenije in Zvezno slu\u017ebo Ruske federacije za nadzor nad trgovino s prepovedanimi drogami o sodelovanju v boju proti nedovoljeni trgovini s prepovedanimi drogami, psihotropnimi snovmi in njihovimi predhodnimi sestavinami",
+            "ballot_id": 247819,
+            "option": "za",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o kazenskem postopku",
+            "ballot_id": 247909,
+            "option": "za",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o kazenskem postopku",
+            "ballot_id": 247999,
+            "option": "proti",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o kazenskem postopku",
+            "ballot_id": 248089,
+            "option": "proti",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o volitvah v Dr\u017eavni zbor",
+            "ballot_id": 248179,
+            "option": "za",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Program dela in finan\u010dni na\u010drt Agencije za energijo za leto 2015",
+            "ballot_id": 248269,
+            "option": "proti",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Devetnajsto redno poro\u010dilo o delu Varuha \u010dlovekovih pravic Republike Slovenije za leto 2013",
+            "ballot_id": 248359,
+            "option": "za",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Devetnajsto redno poro\u010dilo o delu Varuha \u010dlovekovih pravic Republike Slovenije za leto 2013",
+            "ballot_id": 248449,
+            "option": "proti",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Devetnajsto redno poro\u010dilo o delu Varuha \u010dlovekovih pravic Republike Slovenije za leto 2013",
+            "ballot_id": 248539,
+            "option": "proti",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Devetnajsto redno poro\u010dilo o delu Varuha \u010dlovekovih pravic Republike Slovenije za leto 2013",
+            "ballot_id": 248629,
+            "option": "proti",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Devetnajsto redno poro\u010dilo o delu Varuha \u010dlovekovih pravic Republike Slovenije za leto 2013",
+            "ballot_id": 248719,
+            "option": "proti",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Devetnajsto redno poro\u010dilo o delu Varuha \u010dlovekovih pravic Republike Slovenije za leto 2013",
+            "ballot_id": 248809,
+            "option": "proti",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Devetnajsto redno poro\u010dilo o delu Varuha \u010dlovekovih pravic Republike Slovenije za leto 2013",
+            "ballot_id": 248899,
+            "option": "proti",
+            "session_id": 3045,
+            "tags": []
+        }, {
+            "motion": "Predlog za razre\u0161itev predsednika Dr\u017eavnega zbora",
+            "ballot_id": 248989,
+            "option": "za",
+            "session_id": 3045,
+            "tags": []
+        }]
+    }, {
+        "date": "29.10.2014",
+        "ballots": [{
+            "motion": "Dnevni red v celoti",
+            "ballot_id": 257538,
+            "option": "za",
+            "session_id": 3069,
+            "tags": []
+        }]
+    }, {
+        "date": "15.10.2014",
+        "ballots": [{
+            "motion": "Poro\u010dilo v zvezi z mandatom poslanca",
+            "ballot_id": 257627,
+            "option": "proti",
+            "session_id": 3070,
+            "tags": []
+        }, {
+            "motion": "Poro\u010dilo v zvezi z mandatom poslanca",
+            "ballot_id": 257717,
+            "option": "proti",
+            "session_id": 3070,
+            "tags": []
+        }, {
+            "motion": "Poro\u010dilo v zvezi z mandatom poslanca",
+            "ballot_id": 257807,
+            "option": "proti",
+            "session_id": 3070,
+            "tags": []
+        }, {
+            "motion": "Poro\u010dilo v zvezi z mandatom poslanca",
+            "ballot_id": 257897,
+            "option": "proti",
+            "session_id": 3070,
+            "tags": []
+        }, {
+            "motion": "Dnevni red v celoti",
+            "ballot_id": 257987,
+            "option": "za",
+            "session_id": 3070,
+            "tags": []
+        }]
+    }, {
+        "date": "30.09.2014",
+        "ballots": [{
+            "motion": "Sklep o razre\u0161itvi in imenovanju predsednice Odbora za pravosodje, podpredsednika Odbora za izobra\u017eevanje, znanost, \u0161port in mladino in  podpredsednice Odbora za kulturo ter imenovanju podpredsednice Odbora za zunanjo politiko in predsednika in podpredsednice Odbora za delo, dru\u017eino, socialne zadeve in invalide",
+            "ballot_id": 258077,
+            "option": "za",
+            "session_id": 3071,
+            "tags": []
+        }, {
+            "motion": "Sklep o imenovanju \u010dlana Nadzornega sveta Radiotelevizije Slovenija",
+            "ballot_id": 258167,
+            "option": "za",
+            "session_id": 3071,
+            "tags": []
+        }, {
+            "motion": "Sklep o imenovanju \u010dlanice Programskega sveta RTV Slovenija - na podlagi \u0161este alineje \u0161estega odstavek 17. \u010dlena Zakona o RTV Slovenija",
+            "ballot_id": 258257,
+            "option": "za",
+            "session_id": 3071,
+            "tags": []
+        }, {
+            "motion": "Sklep o imenovanju \u010dlana Programskega sveta RTV Slovenija - na podlagi sedme alineje \u0161estega odstavak 17. \u010dlena Zakona o RTV Slovenija",
+            "ballot_id": 258347,
+            "option": "za",
+            "session_id": 3071,
+            "tags": []
+        }, {
+            "motion": "Sklep o imenovanju \u010dlanice Dr\u017eavne revizijske komisije",
+            "ballot_id": 258437,
+            "option": "za",
+            "session_id": 3071,
+            "tags": []
+        }, {
+            "motion": "Predlog za imenovanje namestnika varuhinje \u010dlovekovih pravic",
+            "ballot_id": 258527,
+            "option": "za",
+            "session_id": 3071,
+            "tags": []
+        }, {
+            "motion": "Predlog za imenovanje namestnika varuhinje \u010dlovekovih pravic",
+            "ballot_id": 258617,
+            "option": "za",
+            "session_id": 3071,
+            "tags": []
+        }, {
+            "motion": "Predlog za izvolitev podpredsednice Dr\u017eavnega zbora",
+            "ballot_id": 258707,
+            "option": "za",
+            "session_id": 3071,
+            "tags": []
+        }, {
+            "motion": "Obvestilo s Sklepom o pravici nadome\u0161\u010danja poslancev Dr\u017eavnega zbora",
+            "ballot_id": 258797,
+            "option": "za",
+            "session_id": 3071,
+            "tags": []
+        }, {
+            "motion": "Dnevni red v celoti",
+            "ballot_id": 258887,
+            "option": "za",
+            "session_id": 3071,
+            "tags": []
+        }, {
+            "motion": "Predlog sklepa (Umik 3f. to\u010dke iz dnevnega reda 4. izredne seje)",
+            "ballot_id": 258977,
+            "option": "za",
+            "session_id": 3071,
+            "tags": []
+        }]
+    }, {
+        "date": "10.09.2014",
+        "ballots": [{
+            "motion": "",
+            "ballot_id": 259066,
+            "option": "ni",
+            "session_id": 3072,
+            "tags": []
+        }, {
+            "motion": "Sklep o izvolitvi predsednika, podpredsednika in \u010dlanov Komisije za nadzor obve\u0161\u010devalnih in varnostnih slu\u017eb",
+            "ballot_id": 259156,
+            "option": "proti",
+            "session_id": 3072,
+            "tags": ["Proceduralna glasovanja"]
+        }, {
+            "motion": "Sklep o imenovanju predsednika in podpredsednice Ustavne komisije",
+            "ballot_id": 259246,
+            "option": "za",
+            "session_id": 3072,
+            "tags": ["Proceduralna glasovanja"]
+        }, {
+            "motion": "Lista kandidatk in kandidatov za ministrice in ministre Vlade Republike Slovenije",
+            "ballot_id": 259336,
+            "option": "za",
+            "session_id": 3072,
+            "tags": ["Zunanja imenovanja"]
+        }, {
+            "motion": "Dnevni red v celoti",
+            "ballot_id": 259426,
+            "option": "za",
+            "session_id": 3072,
+            "tags": ["Proceduralna glasovanja"]
+        }]
+    }, {
+        "date": "28.08.2014",
+        "ballots": [{
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o Vladi Republike Slovenije",
+            "ballot_id": 259516,
+            "option": "za",
+            "session_id": 3073,
+            "tags": []
+        }, {
+            "motion": "Zakon o spremembah in dopolnitvah Zakona o Vladi Republike Slovenije",
+            "ballot_id": 259606,
+            "option": "proti",
+            "session_id": 3073,
+            "tags": []
+        }, {
+            "motion": "Sklep o izvolitvi predsednika, podpredsednika in \u010dlanov Komisije za nadzor obve\u0161\u010devalnih in varnostnih slu\u017eb",
+            "ballot_id": 259696,
+            "option": "proti",
+            "session_id": 3073,
+            "tags": ["Proceduralna glasovanja"]
+        }, {
+            "motion": "Proceduralni predlog - na podlagi 5. odstavka 67. \u010dlena Poslovnika lahko vsak poslanec razpravlja samo enkrat",
+            "ballot_id": 259786,
+            "option": "za",
+            "session_id": 3073,
+            "tags": []
+        }, {
+            "motion": "Obvestilo s Sklepom o pravici nadome\u0161\u010danja poslanca Dr\u017eavnega zbora",
+            "ballot_id": 259876,
+            "option": "za",
+            "session_id": 3073,
+            "tags": ["Proceduralna glasovanja"]
+        }, {
+            "motion": "Dnevni red v celoti",
+            "ballot_id": 259966,
+            "option": "ni",
+            "session_id": 3073,
+            "tags": ["Proceduralna glasovanja"]
+        }]
+    }, {
+        "date": "25.08.2014",
+        "ballots": [{
+            "motion": "Sklep o izvolitvi predsednika, podpredsednika in \u010dlanov Komisije za nadzor obve\u0161\u010devalnih in varnostnih slu\u017eb",
+            "ballot_id": 260056,
+            "option": "za",
+            "session_id": 3074,
+            "tags": []
+        }, {
+            "motion": "Sklep o imenovanju predsednikov in podpredsednikov delovnih teles Dr\u017eavnega zbora",
+            "ballot_id": 260146,
+            "option": "za",
+            "session_id": 3074,
+            "tags": []
+        }, {
+            "motion": "Sklep o imenovanju generalne sekretarke Dr\u017eavnega zbora",
+            "ballot_id": 260236,
+            "option": "za",
+            "session_id": 3074,
+            "tags": []
+        }, {
+            "motion": "Odlok o ustanovitvi in nalogah delovnih teles Dr\u017eavnega zbora",
+            "ballot_id": 260326,
+            "option": "za",
+            "session_id": 3074,
+            "tags": []
+        }, {
+            "motion": "Predlog za izvolitev podpredsednika Dr\u017eavnega zbora",
+            "ballot_id": 260416,
+            "option": "za",
+            "session_id": 3074,
+            "tags": []
+        }, {
+            "motion": "Dnevni red v celoti",
+            "ballot_id": 260506,
+            "option": "za",
+            "session_id": 3074,
+            "tags": ["Proceduralna glasovanja"]
+        }]
+    }, {
+        "date": "01.08.2014",
+        "ballots": [{
+            "motion": "Predlog za izvolitev predsednika Dr\u017eavnega zbora Republike Slovenije",
+            "ballot_id": 249077,
+            "option": "za",
+            "session_id": 3046,
+            "tags": []
+        }, {
+            "motion": "Poro\u010dilo o izidu pred\u010dasnih volitev v Dr\u017eavni zbor Republike Slovenije",
+            "ballot_id": 249167,
+            "option": "za",
+            "session_id": 3046,
+            "tags": []
+        }, {
+            "motion": "Sklep o imenovanju predsednika in podpredsednika Mandatno-volilne komisije",
+            "ballot_id": 249257,
+            "option": "za",
+            "session_id": 3046,
+            "tags": ["Proceduralna glasovanja"]
+        }, {
+            "motion": "Proceduralni predlog za prekinitev 1. to\u010dke dnevnega reda",
+            "ballot_id": 249347,
+            "option": "proti",
+            "session_id": 3046,
+            "tags": ["Proceduralna glasovanja"]
+        }, {
+            "motion": "Dnevni red v celoti",
+            "ballot_id": 249437,
+            "option": "za",
+            "session_id": 3046,
+            "tags": ["Proceduralna glasovanja"]
+        }]
+    }],
+    "all_tags": ["Komisija za nadzor javnih financ", "Kolegij predsednika Dr\u017eavnega zbora", "Komisija za narodni skupnosti", "Komisija za odnose s Slovenci v zamejstvu in po svetu", "Komisija za poslovnik", "Mandatno-volilna komisija", "Odbor za delo, dru\u017eino, socialne zadeve in invalide", "Odbor za finance in monetarno politiko", "Odbor za gospodarstvo", "Odbor za infrastrukturo, okolje in prostor", "Odbor za izobra\u017eevanje, znanost, \u0161port in mladino", "Odbor za kmetijstvo, gozdarstvo in prehrano", "Odbor za kulturo", "Odbor za notranje zadeve, javno upravo in lokalno samoupravo", "Odbor za obrambo", "Odbor za pravosodje", "Odbor za zadeve Evropske unije", "Odbor za zdravstvo", "Odbor za zunanjo politiko", "Preiskovalna komisija o ugotavljanju zlorab v slovenskem ban\u010dnem sistemu ter ugotavljanju vzrokov in", "Preiskovalna komisija za ugotavljanje politi\u010dne odgovornosti nosilcev javnih funkcij pri investiciji", "Ustavna komisija", "Proceduralna glasovanja", "Zunanja imenovanja", "Poslanska vpra\u0161anja", "Komisija za nadzor obve\u0161\u010devalnih in varnostnih slu\u017eb", "Preiskovalne komisije"]
+}
