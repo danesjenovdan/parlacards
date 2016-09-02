@@ -1,29 +1,30 @@
-$.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
-    raw_data = r['facet_counts']['facet_dates']['datetime_dt'];
+var mydata;
+var data = [];
 
-    console.log(raw_data);
+$.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
+    // console.log(r);
+    mydata = r;
+    raw_data = r['facet_counts']['facet_ranges']['datetime_dt'];
+
+    // console.log(raw_data);
 
     var dates = [];
     var occurences = [];
 
     var date_formatter = d3.time.format('%Y-%m-%dT%H:%M:%SZ');
 
-    var data = []
+    // var data = []
 
     var ticks = []
 
-    for (piece in raw_data) {
-        dates.push(date_formatter.parse(piece));
-        occurences.push(raw_data[piece]);
-        if (piece != 'end') {
-            if (piece != 'start') {
-                if (piece != 'gap') {
-                    data.push({
-                        'date': piece,
-                        'occurences': parseInt(raw_data[piece])
-                    });
-                }
-            }
+    for (i = 0; i < raw_data['counts'].length; i++) {
+        if (i % 2 === 0 && i > raw_data['counts'].length - 25) {
+            dates.push(date_formatter.parse(raw_data['counts'][i]));
+            occurences.push(raw_data['counts'][i + 1]);
+            data.push({
+                'date': raw_data['counts'][i],
+                'occurences': raw_data['counts'][i + 1]
+            });
         }
     }
 
@@ -31,7 +32,7 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
         return date_formatter.parse(x.date) - date_formatter.parse(y.date);
     });
 
-    console.log(data);
+    // console.log(data);
 
     // for (piece in data) {
     //     if (piece % 2 === 0) {
@@ -65,8 +66,12 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
         "shortMonths": ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "avg", "sep", "okt", "nov", "dec"]
     });
 
+    console.log(width, data.length);
+
     var x = d3.time.scale()
         .range([0, width]);
+    // var x = d3.time.scale().nice(12).range([0, width]);
+    // var x = d3.scale.ordinal().domain(dates).range([0, width]);
 
     var y = d3.scale.linear()
         .range([height, 0]);
@@ -84,11 +89,11 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
 
     // var line = d3.svg.line()
     //     .x(function(d) {
-    //         console.log('date' + x(d.date));
+    //         // console.log('date' + x(d.date));
     //         return x(d.date);
     //     })
     //     .y(function(d) {
-    //         console.log(x(d.occurences));
+    //         // console.log(x(d.occurences));
     //         return y(d.occurences);
     //     });
 
@@ -101,11 +106,11 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     data.forEach(function(d) {
-        console.log(d);
-        console.log(d.date);
-        console.log(parseDate(d.date));
+        // console.log(d);
+        // console.log(d.date);
+        // console.log(parseDate(d.date));
         d.date = parseDate(d.date);
-        console.log(d.date);
+        // console.log(d.date);
         d.occurences = +d.occurences;
     });
 
@@ -121,7 +126,7 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
 
-    console.log('ping');
+    // console.log('ping');
 
     svg.selectAll(".bar")
         .data(data)
@@ -148,14 +153,14 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
     //     .style("text-anchor", "end")
     //     .text("Število pojavitev");
 
-    console.log('ping2');
+    // console.log('ping2');
 
     // svg.append("path")
     //     .datum(data)
     //     .attr("class", "line")
     //     .attr("d", line);
 
-    console.log('ping3');
+    // console.log('ping3');
 
     // svg.selectAll("g.dot")
     //     .data(data)
@@ -165,7 +170,7 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
     //     .append("circle")
     //     .attr("r", 11)
     //     .attr("cx", function(d, i) {
-    //         console.log(d.date);
+    //         // console.log(d.date);
     //         return x(d.date);
     //     })
     //     .attr("cy", function(d, i) {
@@ -179,7 +184,7 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
     //     //     return -20
     //     // })
     //     // .attr("cx", function(d, i) {
-    //     //     console.log(d.date);
+    //     //     // console.log(d.date);
     //     //     return x(d.date);
     //     // })
     //     // .attr("cy", function(d, i) {

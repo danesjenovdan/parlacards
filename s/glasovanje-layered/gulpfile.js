@@ -15,6 +15,7 @@ var htmlmin = require('gulp-htmlmin');
 var deleteLines = require('gulp-delete-lines');
 var replace = require('gulp-replace');
 var install = require("gulp-install");
+var wrap = require('gulp-wrap');
 
 var debug = require('gulp-debug');
 
@@ -31,6 +32,10 @@ var options = minimist(process.argv.slice(2), knownOptions);
 var fs = require('fs');
 var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
 
+// generate CSS class name to use for sandboxing
+var directoryName = __dirname.split('/').pop()
+var className = 'card-' + directoryName
+
 //#################
 //## tasks below ##
 //#################
@@ -38,6 +43,7 @@ var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
 // SASS/SCSS compiler
 gulp.task('sass', function() {
     return gulp.src('card/scss/style.scss')
+        .pipe(wrap('.' + className + '{<%= contents %>}', {}, { parse: false }))
         .pipe(sass()) // Converts Sass to CSS with gulp-sass
         .pipe(gulp.dest('temp/css'))
         .pipe(browserSync.reload({
@@ -54,12 +60,6 @@ gulp.task('minify:css', function() {
         .pipe(gulp.dest('temp/css'));
 });
 
-// copy js for dev
-gulp.task('js:serve', function() {
-    return gulp.src('card/js/script.js')
-        .pipe(gulp.dest('temp/js'));
-});
-
 // js uglifyer
 gulp.task('js', function() {
     return gulp.src('card/js/script.js')
@@ -67,11 +67,18 @@ gulp.task('js', function() {
         .pipe(gulp.dest('temp/js'));
 });
 
+// js copier (without uglify, for debug)
+gulp.task('js-no-uglify', function() {
+    return gulp.src('card/js/script.js')
+        .pipe(gulp.dest('temp/js'));
+});
+
 // ejs compiler
 gulp.task('ejs', function() {
     return gulp.src('card/card.ejs')
         .pipe(ejs({
-            'data': jsonData
+            'data': jsonData,
+            'className' : className
         }, {
             ext: '.html'
         }))
@@ -140,7 +147,7 @@ gulp.task('remove-minify', function() {
 gulp.task('watch', function() {
     gulp.watch('card/scss/**/*.scss', ['sass']);
     gulp.watch('card/card.ejs', ['ejs', browserSync.reload]);
-    gulp.watch('card/js/**/*.js', ['js:serve', browserSync.reload]);
+    gulp.watch('card/js/**/*.js', ['js-no-uglify', browserSync.reload]);
 });
 
 // clean temp folder
@@ -156,7 +163,7 @@ gulp.task('clean:dist', function() {
 // serve
 gulp.task('serve', function(callback) {
     runSequence(
-        'clean:temp', ['ejs', 'sass', 'js:serve', 'browserSync', 'watch'],
+        'clean:temp', ['ejs', 'sass', 'js-no-uglify', 'browserSync', 'watch'],
         callback
     );
 });
