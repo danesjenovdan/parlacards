@@ -1,3 +1,18 @@
+function addCardFlip() {
+
+    $('.back .card-content').height($('.front .card-content').height());
+    $('.back').css({
+        'width': $('.front').width(),
+        // 'top': -$('.front').height()
+    });
+
+    $('.card-circle-button').off('click').on('click', function() {
+        $('.back-info, .back-share, .back-embed').not('.back-' + $(this).data('back')).addClass('hidden');
+        $('.back-' + $(this).data('back')).removeClass('hidden');
+        $(this).parents('.card-container').toggleClass('flipped');
+    });
+}
+
 function fixImages() {
     $.each($('.smallbar .funblue'), function(i, e) {
         if ($(e).width() <= 30) {
@@ -172,3 +187,5 @@ function fixImages() {
     .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
 
 }(jQuery);
+
+addCardFlip();
