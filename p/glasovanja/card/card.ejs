@@ -40,6 +40,18 @@
             <option value="<%= tag %>"><%= tag %></option>
           <% }) %>
           </select>
+          <ul class="votes">
+            <% data.results.forEach(function(result) { %>
+              <% result.ballots.forEach(function(ballot, index) { %>
+                <li>
+                  <div class="date"><%= index === 0 ? result.date.replace(/\./g, '. ') : '' %></div>
+                  <div class="icon <%= ballot.option %>"></div>
+                  <div class="motion">Glasoval <%= ballot.option.toUpperCase() %> <a href="#"><%= ballot.motion %></a></div>
+                </li>
+              <% }) %>
+            <% }) %>
+
+          </ul>
 
         </div>
         <div class="card-footer">
