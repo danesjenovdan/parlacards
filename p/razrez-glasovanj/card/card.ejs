@@ -567,44 +567,91 @@
                 <div class="back-info">
                     <div class="card-header">
                         <div class="card-header-border"></div>
-                        <h1>Razrez glasovanj info</h1>
+                        <h1>Razrez glasovanj</h1>
                         <!-- this text is the only thing you touch in .card-header -->
                     </div>
                     <div class="card-back-content card-content">
-                        this is info
+                        <div class="scroller" id="tvojamtka">
+                            <p class="info-text">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                            </p>
+                            <p class="info-text">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                            </p>
+                            <p class="info-text">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                            </p>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <div class="card-circle-button card-share" data-back="share"></div>
                         <div class="card-circle-button card-embed" data-back="embed"></div>
-                        <div class="card-circle-button card-info" data-back="info">i</div>
+                        <div class="card-circle-button card-info card-exit" data-back="info">×</div>
                     </div>
                 </div>
                 <div class="back-embed">
                     <div class="card-header">
                         <div class="card-header-border"></div>
-                        <h1>Razrez glasovanj embed</h1>
+                        <h1>Razrez glasovanj</h1>
                         <!-- this text is the only thing you touch in .card-header -->
                     </div>
                     <div class="card-back-content card-content">
-                        this is embed
+                        <div class="embed-content">
+                            <div class="embed-divider"></div>
+                            <input type="text" class="form-control" id="embed-name" value="Razrez glasovanj"/>
+                            <div class="embed-divider"></div>
+                            <div class="embed-switch-container">
+                                <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                                <div class="embed-switch-big-box">
+                                    <div class="embed-switch-box">
+                                        <div class="embed-switch">
+                                            <div class="embed-switches">
+                                                <div class="leftswitch">
+                                                    DA
+                                                </div>
+                                                <div class="rightswitch">
+                                                    NE
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <%# <div class="embed-switch-ball"></div>%>
+                                    </div>
+                                    <div class="embed-switch-ball"></div>
+                                </div>
+                            </div>
+                            <div class="embed-divider"></div>
+                            <div class="embed-script">
+                                <textarea class="form-control">&lt;div class=&quot;parlameter-card&quot; data-src=&quot;https://glej.parlameter.si/p/povprecno-stevilo-govorov-na-sejo/82/&quot;&gt;&lt;/div&gt;
+&lt;script defer src=&quot;https://cdn.parlameter.si/v1/lib/js/embed.script.js&quot;&gt;&lt;/script&gt;</textarea>
+                                <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                            </div>
+                            <div class="embed-divider"></div>
+                            <div class="embed-export">
+                                <div class="embed-label">Izvozi kartico kot sliko <button class="btn-parlameter btn-blue btn-margin-left">PRENESI</button></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <div class="card-circle-button card-share" data-back="share"></div>
-                        <div class="card-circle-button card-embed" data-back="embed"></div>
+                        <div class="card-circle-button card-embed card-exit" data-back="embed">×</div>
                         <div class="card-circle-button card-info" data-back="info">i</div>
                     </div>
                 </div>
                 <div class="back-share">
                     <div class="card-header">
                         <div class="card-header-border"></div>
-                        <h1>Razrez glasovanj share</h1>
+                        <h1>Razrez glasovanj</h1>
                         <!-- this text is the only thing you touch in .card-header -->
                     </div>
                     <div class="card-back-content card-content">
-                        this is share
+                        <div class="share-content">
+                            <label for="share-url">Neposredna povezava do kartice</label>
+                            <input type="url" class="form-control" id="share-url" value="https://parlameter.si/trajlala"/>
+                            <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                        </div>
                     </div>
                     <div class="card-footer">
-                        <div class="card-circle-button card-share" data-back="share"></div>
+                        <div class="card-circle-button card-share card-exit" data-back="share">×</div>
                         <div class="card-circle-button card-embed" data-back="embed"></div>
                         <div class="card-circle-button card-info" data-back="info">i</div>
                     </div>

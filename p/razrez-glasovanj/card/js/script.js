@@ -1,3 +1,12 @@
+function makeSwitch() {
+    // $('.embed-switch-box').on('click', function() {
+    //     $(this).toggleClass('off');
+    // });
+    $('.embed-switch-big-box').on('click', function() {
+        $(this).children('.embed-switch-box').toggleClass('off');
+    });
+}
+
 function addCardFlip() {
 
     $('.back .card-content').height($('.front .card-content').height());
@@ -6,10 +15,28 @@ function addCardFlip() {
         // 'top': -$('.front').height()
     });
 
-    $('.card-circle-button').off('click').on('click', function() {
+    $('.front .card-circle-button').on('click', function() {
         $('.back-info, .back-share, .back-embed').not('.back-' + $(this).data('back')).addClass('hidden');
         $('.back-' + $(this).data('back')).removeClass('hidden');
         $(this).parents('.card-container').toggleClass('flipped');
+    });
+
+    $('.back .card-circle-button').on('click', function() {
+        $(this).parents('.card-container')
+            .toggleClass('flipped');
+
+        var _this = this;
+        window.setTimeout(function() {
+            $('.back-info, .back-share, .back-embed').not('.back-' + $(_this).data('back')).addClass('hidden');
+            $('.back-' + $(_this).data('back')).removeClass('hidden');
+            if (!$(_this).hasClass('card-exit')) {
+                $(_this).parents('.card-container').toggleClass('flipped');
+            }
+        }, 600);
+    });
+
+    $('.share-content').css({
+        'padding-top': ($('.share-content').parent().height() - $('.share-content').height()) / 2
     });
 }
 
@@ -189,3 +216,4 @@ function fixImages() {
 }(jQuery);
 
 addCardFlip();
+makeSwitch();
