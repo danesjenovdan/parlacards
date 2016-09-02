@@ -43,7 +43,7 @@
                 <% var i=0; for (var person in persons) { %>
 
                 <div class="member <%= ((persons.length-1) == i) ? 'lastel' : ''; %>">
-                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= persons[person].person.gov_id %>.png); background-size: cover;"></div>
+                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= persons[person].person.gov_id %>.png); background-size: cover;"></div>
                     <p><%= persons[person].person.name %>
 
                         <br/><%= persons[person].person.party.acronym %></p>

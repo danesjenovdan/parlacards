@@ -1,50 +1,52 @@
-.card-nastopi {
-  .member {
+.member {
+  display: flex;
+  flex-wrap: wrap;
+
+  &:last-child { border-bottom: none; }
+
+  .metadata {
+    width: 50%;
     display: flex;
-    flex-wrap: wrap;
-
-    &:last-child { border-bottom: none; }
-
-    .metadata {
-      width: 50%;
-      display: flex;
-    }
-    .image {
-      float: none;
-    }
-    .name {
-      flex: 1;
-      float: none;
-      line-height: 1.111em;
-      margin: 16px 0 0 24px;
-      width: auto;
-    }
-    .date {
-      float: none;
-      width: 100px;
-      margin: 0 36px 0 0;
-      text-align: right;
-      line-height: 75px;
-    }
-    .quote {
-      width: 50%;
-      font-family: Roboto Slab, Georgia, serif;
-      font-weight: 300;
-      em {
-        font-style: normal;
-        font-weight: bold;
-      }
+  }
+  .image {
+    float: none;
+  }
+  .name {
+    flex: 1;
+    float: none;
+    line-height: 1.111em;
+    margin: 16px 0 0 24px;
+    width: auto;
+  }
+  .date {
+    float: none;
+    width: 100px;
+    margin: 0 36px 0 0;
+    text-align: right;
+    line-height: 75px;
+  }
+  .quote {
+    $line-height: 20px;
+    width: 50%;
+    font-family: Roboto Slab, Georgia, serif;
+    font-weight: 300;
+    height: $line-height * 4;
+    line-height: $line-height;
+    overflow: hidden;
+    em {
+      font-style: normal;
+      font-weight: bold;
     }
   }
+}
 
-  @media (max-width: 767px) {
-    .member {
-      .date { margin: 0; }
+@media (max-width: 767px) {
+  .member {
+    .date { margin: 0; }
 
-      .metadata, .quote {
-        width: 100%;
-        margin-top: 10px;
-      }
+    .metadata, .quote {
+      width: 100%;
+      margin-top: 10px;
     }
   }
 }

@@ -25,6 +25,10 @@
 
 <body> <!-- removeme -->
 
+<div class="container">
+
+<div class="col-md-12">
+
 
 <!-- everything above here is part of the page and not part of the card -->
 <div class="card-container card-halfling">
@@ -34,8 +38,8 @@
     </div>
     <div class="card-content" id="votingCardHorizontal">
 
-        <span class="glyphicon glyphicon-circle-arrow-left navigate-left text-center"></span>
-        <div class="slider" id="scrollbar">
+        <span class="hidden-lg hidden-md glyphicon glyphicon-circle-arrow-left navigate-left text-center"></span>
+        <div class="slider" id="scrollbar-voting-card-horizontal">
             <div class="slider-content">
 
                 <% for (var i = 0; i < data.results.length ; i++) { %>
@@ -49,7 +53,7 @@
                 %>
                 <div class="member">
                     <div class="image"
-                         style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= tmpGovId %>.png); background-size: cover;"></div>
+                         style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= tmpGovId %>.png); background-size: cover;"></div>
                     <p><%= tmpname %></p>
                     <span><%= data.results[i].ratio.toFixed(0) %> %</span>
                     <div class="clearfix"></div>
@@ -58,7 +62,7 @@
 
             </div>
         </div>
-        <span class="glyphicon glyphicon-circle-arrow-right navigate-right text-center"></span>
+        <span class="hidden-lg hidden-md glyphicon glyphicon-circle-arrow-right navigate-right text-center"></span>
 
 
         <div class="clearfix"></div>
@@ -72,6 +76,8 @@
 </div>
 <!-- everything below here is part of the page and not part of the card -->
 
+    </div>
+</div>
 <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
 <!-- inline temp/js/script.js as <script> -->
 <script data-inline="true" src="js/script.js"></script>

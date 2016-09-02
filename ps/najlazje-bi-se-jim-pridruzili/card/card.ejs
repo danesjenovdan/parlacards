@@ -42,7 +42,7 @@
                 <% for (var i = 0; i < data.results.length ; i++) { %>
 
                 <div class="member <%= ((data.results.length-1) == i) ? 'lastel' : ''; %>">
-                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data.results[i].person.gov_id %>.png); background-size: cover;"></div>
+                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results[i].person.gov_id %>.png); background-size: cover;"></div>
                     <p><%= data.results[i].person.name %>
 
                         <br/><%= data.results[i].person.party.acronym %></p>

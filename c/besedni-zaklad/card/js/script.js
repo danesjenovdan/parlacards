@@ -182,7 +182,7 @@ function renderGraph() {
     .append("circle")
     // .enter().append('svg:image')
     //     .attr('xlink:href', function(d) {
-    //         return 'https://cdn.parlameter.si/v1/img/people/' + d.person.gov_id + '.png';
+    //         return 'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + d.person.gov_id + '.png';
     //     })
     //     .attr('x', function(d) { return d.x })
     //     .attr('y', function(d) { return d.y })
@@ -268,7 +268,7 @@ for (i in data) {
         .attr("x", -15)
         .attr("y", -15)
         .append("image")
-        .attr("xlink:href", 'https://cdn.parlameter.si/v1/img/people/' + data[i].person.gov_id + '.png')
+        .attr("xlink:href", 'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + data[i].person.gov_id + '.png')
         .attr("width", 30)
         .attr("height", 30)
         .attr("x", 0)

@@ -1,0 +1,180 @@
+<!DOCTYPE html> <!-- removeme -->
+<html> <!-- removeme -->
+
+<head> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+
+    <!-- build:remove -->
+    <!-- these script files are removed on build -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <!-- endbuild -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+
+    <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <link data-inline="true" rel="stylesheet" href="css/style.css">
+
+</head> <!-- removeme -->
+
+<body> <!-- removeme -->
+
+
+<!-- everything above here is part of the page and not part of the card -->
+<div class="card-container card-halfling">
+    <div class="card-header">
+        <div class="card-header-border"></div>
+        <h1>Osnovne informacije</h1>
+        <!-- this text is the only thing you touch in .card-header -->
+    </div>
+    <div class="card-content">
+        <div class="bgwhite poslanec">
+
+            <div class="member row">
+                <div class="col-xs-4 image respo">
+
+                    <img class="media-object img-circle img-responsive"
+                         src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.headOfPG.gov_id %>.png"
+                         alt=""/>
+                </div>
+                <div class="col-xs-8 member_data">
+                    <h3>
+                        <%= data.results.headOfPG.name %>
+                    </h3>
+                    <h4>
+                        <%
+                        var title = "Vodja poslanske skupine";
+                        if (data.results.headOfPG.gender == "f") {
+                            title = "Vodja poslanske skupine";
+                        } else {
+
+                        } %>
+                        <%=title %>
+                    </h4>
+                </div>
+            </div>
+            <% } %>
+
+            <% for(item in data.results.viceOfPG){ %>
+
+            <div class="member row">
+                <div class="col50 parlaicon-container text-center btn-lg">
+                    <span class="parlaicon parlaicon-namestnik" aria-hidden="true"></span>
+                </div>
+                <div class="col-xs-4 image respo">
+
+                    <img class="media-object img-circle img-responsive"
+                         src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.viceOfPG[item].gov_id %>.png"
+                         alt=""/>
+                </div>
+                <div class="col-xs-8 member_data">
+                    <h3>
+                        <%= data.results.viceOfPG[item].name %>
+                    </h3>
+                    <h4>
+                        <%
+                            var title = "Namestnik";
+                            if (data.results.viceOfPG[item].gender == "f") {
+                                title = "Namestnica";
+                            } else {
+
+                            } %>
+                        <%= title %></h4>
+                </div>
+            </div>
+            <% } %>
+
+
+            <div class="clearfix">
+                <div class="col50 parlaicon-container text-center btn-lg">
+                    <span class="parlaicon parlaicon-skupina" aria-hidden="true"></span>
+                </div>
+                <div class="col380 nopadding">
+                        <span class="key">
+                            Zaupalo jim je:
+                            <%= data.results.allVoters %>
+                        </span>
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <div class="col50 parlaicon-container text-center btn-lg">
+                    <span class="parlaicon parlaicon-sedezi" aria-hidden="true"></span>
+                </div>
+                <div class="col380 bordertop nopadding">
+                        <span class="key">
+                            Število poslanskih sedežev: <%= data.results.numberOfSeats %>
+                        </span>
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <div class="col50 parlaicon-container text-center btn-lg">
+                    <span class="parlaicon parlaicon-kontakt" aria-hidden="true"></span>
+                </div>
+                <div class="col380 bordertop nopadding">
+                        <span class="key">
+                            Kontakt: <a href="mailto:<%= data.results.email %>"><%= data.results.email %></a>
+                        </span>
+                </div>
+            </div>
+
+            <%
+            if (data.results.social[0].twitter != null || data.results.social[0].facebook != null) {
+            %>
+            <div class="clearfix">
+                <div class="col50 parlaicon-container text-center btn-lg">
+                    <span class="parlaicon parlaicon-omrezja" aria-hidden="true"></span>
+                </div>
+                <div class="col380 bordertop nopadding">
+                        <span class="key">
+                            Družbena omrežja:
+                            <%
+                            if (data.results.social[0].facebook) {
+                            %>
+
+                            <a href="<%= data.results.social[0].facebook %>"><span class="parlaicon parlaicon-facebook"></span></a>
+
+                            <%
+                            }
+                            if (data.results.social[0].twitter) {
+                            %>
+
+                            <a href="<%= data.results.social[0].twitter %>"><span class="parlaicon parlaicon-twitter"></span></a>
+
+                            <%
+                            }
+                            %>
+                        </span>
+                </div>
+            </div>
+
+            <%
+            }
+            %>
+
+
+
+        </div>
+        <!-- delete this placeholder, this is the content of your card -->
+    </div>
+    <div class="card-footer">
+        <div class="card-circle-button card-share"></div>
+        <div class="card-circle-button card-embed"></div>
+        <div class="card-circle-button card-info">i</div>
+    </div>
+</div>
+<!-- everything below here is part of the page and not part of the card -->
+
+<!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+<!-- inline temp/js/script.js as <script> -->
+<script data-inline="true" src="js/script.js"></script>
+
+</body> <!-- removeme -->
+
+</html> <!-- removeme -->
