@@ -1,11 +1,15 @@
 function addCardFlip() {
 
-    $('.card .back').height($('.card-container').height());
+    $('.back .card-content').height($('.front .card-content').height());
+    $('.back').css({
+        'width': $('.front').width(),
+        // 'top': -$('.front').height()
+    });
 
     $('.card-circle-button').off('click').on('click', function() {
         $('.back-info, .back-share, .back-embed').not('.back-' + $(this).data('back')).addClass('hidden');
         $('.back-' + $(this).data('back')).removeClass('hidden');
-        $(this).parents('.card').toggleClass('flipped');
+        $(this).parents('.card-container').toggleClass('flipped');
     });
 }
 
