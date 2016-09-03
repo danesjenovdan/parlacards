@@ -1,80 +1,86 @@
 {
   "person": {
     "party": {
-      "acronym": "SDS",
-      "id": 5,
-      "name": "PS Slovenska Demokratska Stranka"
+      "acronym": "DeSUS",
+      "id": 3,
+      "name": "PS Demokratska Stranka Upokojencev Slovenije"
     },
-    "name": "Nada Brinov\u0161ek",
-    "gov_id": "P244",
-    "id": 12
+    "gender": "f",
+    "name": "Marija Antonija Kova\u010di\u010d",
+    "gov_id": "P297",
+    "id": 96
   },
-  "date_of_card": "19.06.2016",
+  "date_of_card": "12.07.2016",
   "results": [
     {
       "person": {
         "party": {
-          "acronym": "DeSUS",
-          "id": 3,
-          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
         },
-        "name": "Jana Jenko",
-        "gov_id": "P180",
-        "id": 94
+        "gender": "m",
+        "name": "Zvonko Lah",
+        "gov_id": "P129",
+        "id": 49
       },
-      "ratio": -0.24104742328907
+      "ratio": -0.260349124353602
     },
     {
       "person": {
         "party": {
-          "acronym": "DeSUS",
-          "id": 3,
-          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
         },
-        "name": "Marjana Kotnik Poropat",
-        "gov_id": "P186",
-        "id": 45
+        "gender": "m",
+        "name": "Andrej \u010cu\u0161",
+        "gov_id": "P225",
+        "id": 15
       },
-      "ratio": -0.22170209304971
+      "ratio": -0.259704798073345
     },
     {
       "person": {
         "party": {
-          "acronym": "DeSUS",
-          "id": 3,
-          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
         },
-        "name": "Uro\u0161 Prikl",
-        "gov_id": "P280",
-        "id": 69
+        "gender": "m",
+        "name": "Marko Poga\u010dnik",
+        "gov_id": "P196",
+        "id": 65
       },
-      "ratio": -0.219381148664759
+      "ratio": -0.254148586039437
     },
     {
       "person": {
         "party": {
-          "acronym": "SMC",
-          "id": 1,
-          "name": "PS Stranka modernega centra"
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
         },
-        "name": "Branislav Raji\u0107",
-        "gov_id": "P281",
-        "id": 70
+        "gender": "f",
+        "name": "Anja Bah \u017dibert",
+        "gov_id": "P239",
+        "id": 2
       },
-      "ratio": -0.216557627105966
+      "ratio": -0.240927033106229
     },
     {
       "person": {
         "party": {
-          "acronym": "SD",
-          "id": 7,
-          "name": "PS Socialni Demokrati"
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
         },
-        "name": "Bojana Mur\u0161i\u010d",
-        "gov_id": "P275",
-        "id": 61
+        "gender": "m",
+        "name": "Marijan Pojbi\u010d",
+        "gov_id": "P098",
+        "id": 66
       },
-      "ratio": -0.211522617037362
+      "ratio": -0.238786409347765
     }
   ]
 }

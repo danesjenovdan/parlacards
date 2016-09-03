@@ -22,8 +22,8 @@ var debug = require('gulp-debug');
 var minimist = require('minimist');
 
 var knownOptions = {
-  string: 'name',
-  default: { path: process.env.NODE_ENV || 'newcard' }
+    string: 'name',
+    default: { path: process.env.NODE_ENV || 'newcard' }
 };
 
 var options = minimist(process.argv.slice(2), knownOptions);
@@ -33,7 +33,7 @@ var fs = require('fs');
 var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
 
 // generate CSS class name to use for sandboxing
-var directoryName = __dirname.split('/').pop()
+var directoryName = __dirname.replace(/\\/g, '/').split('/').pop()
 var className = 'card-' + directoryName
 
 //#################
