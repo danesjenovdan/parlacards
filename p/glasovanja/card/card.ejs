@@ -43,10 +43,10 @@
             <option value="<%= tag %>"><%= tag %></option>
           <% }) %>
           </select>
-          <ul class="votes">
+          <ul class="votes scroller" id="branko_grims">
             <% data.results.forEach(function(result) { %>
               <% result.ballots.forEach(function(ballot, index) { %>
-                <li style="display: none;">
+                <li>
                   <div class="date"><%= result.date.replace(/\./g, '. ') %></div>
                   <div class="icon <%= ballot.option %>"></div>
                   <div class="motion">Glasoval <%= ballot.option.toUpperCase() %> <a href="#"><%= ballot.motion %></a></div>

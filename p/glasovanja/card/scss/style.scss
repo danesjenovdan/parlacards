@@ -88,26 +88,32 @@ overflow: visible !important;
 }
 
 .votes {
+  height: 355px;
   list-style: none;
-  margin: 0;
+  overflow: hidden;
+  margin: 18px 0 0 0;
   padding: 0;
   li {
     $border: 1px solid $grey-light;
-    display: flex;
+    display: none;
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
-    &:first-child {
+    &.with-date {
       .icon, .motion { border-top: $border; }
-      margin-top: 18px;
+      .date {
+        height: auto;
+        visibility: visible;
+      }
     }
     .date {
-      width: 54px;
+      height: 0;
       margin-left: 16px;
       padding: 16px 0;
+      visibility: hidden;
+      width: 54px;
     }
     .icon {
-      border-bottom: $border;
       width: 50px;
       padding: 15px;
       &.za {
@@ -124,7 +130,6 @@ overflow: visible !important;
       }
     }
     .motion {
-      border-bottom: $border;
       flex: 1;
       font-weight: 300;
       line-height: 20px;

@@ -1,25 +1,30 @@
 var voteElements = $('.votes li');
 
+function filterByTags(tags) {
+  var index = 0,
+      empty = false;
+
+  if (tags.length === 0) {
+    empty = true;
+  }
+  voteData.results.forEach(function(result) {
+    var dateRendered = false;
+    result.ballots.forEach(function(ballot) {
+      var shouldBeVisible = empty ? true : tags.indexOf(ballot.tags[0]) > -1
+      voteElements.eq(index).css({display : shouldBeVisible ? 'flex' : 'none' })
+                            .toggleClass('with-date', shouldBeVisible && !dateRendered);
+      dateRendered = dateRendered || shouldBeVisible;
+      index++;
+    })
+  })
+}
+
 $('.tag-selector')
   .select2({
     dropdownParent: $('.card-glasovanja')
   })
   .on('change', function(event) {
-    var index = 0,
-        activeTags = $(event.currentTarget).val(),
-        hideAll = false;
-
-    if (!activeTags) {
-      hideAll = true;
-    }
-    voteData.results.forEach(function(result) {
-      var dateRendered = false;
-      result.ballots.forEach(function(ballot) {
-        var shouldBeVisible = hideAll ? false : activeTags.indexOf(ballot.tags[0]) > -1
-        voteElements.eq(index).css({display : shouldBeVisible ? 'flex' : 'none' })
-                              .children('.date').css({visibility: shouldBeVisible && !dateRendered ? 'visible' : 'hidden'});
-        dateRendered = dateRendered || shouldBeVisible;
-        index++;
-      })
-    })
+    filterByTags($(event.currentTarget).val());
   })
+
+filterByTags([])
