@@ -13,6 +13,9 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <script>
+      var voteData = <%- JSON.stringify(data); %>
+    </script>
     <!-- endbuild -->
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
@@ -43,8 +46,8 @@
           <ul class="votes">
             <% data.results.forEach(function(result) { %>
               <% result.ballots.forEach(function(ballot, index) { %>
-                <li>
-                  <div class="date"><%= index === 0 ? result.date.replace(/\./g, '. ') : '' %></div>
+                <li style="display: none;">
+                  <div class="date"><%= result.date.replace(/\./g, '. ') %></div>
                   <div class="icon <%= ballot.option %>"></div>
                   <div class="motion">Glasoval <%= ballot.option.toUpperCase() %> <a href="#"><%= ballot.motion %></a></div>
                 </li>
