@@ -35,6 +35,9 @@
     <div class="card-content">
         <div class="bgwhite poslanec">
 
+            <% console.log(data.results); %>
+
+            <% if(typeof data.results.headOfPG !== undefined){ %>
             <div class="member row">
                 <div class="col-xs-4 image respo">
 
@@ -54,11 +57,12 @@
                         } else {
 
                         } %>
-                        <%=title %>
+                        <%= title %>
                     </h4>
                 </div>
             </div>
             <% } %>
+
 
             <% for(item in data.results.viceOfPG){ %>
 
@@ -119,13 +123,13 @@
                 </div>
                 <div class="col380 bordertop nopadding">
                         <span class="key">
-                            Kontakt: <a href="mailto:<%= data.results.email %>"><%= data.results.email %></a>
+                            Kontakt: <a href="mailto:<%= data.results.email %>"><%= data.results.social.email %></a>
                         </span>
                 </div>
             </div>
 
             <%
-            if (data.results.social[0].twitter != null || data.results.social[0].facebook != null) {
+            if (data.results.social.twitter != null || data.results.social.facebook != null) {
             %>
             <div class="clearfix">
                 <div class="col50 parlaicon-container text-center btn-lg">
@@ -135,17 +139,17 @@
                         <span class="key">
                             Družbena omrežja:
                             <%
-                            if (data.results.social[0].facebook) {
+                            if (data.results.social.facebook) {
                             %>
 
-                            <a href="<%= data.results.social[0].facebook %>"><span class="parlaicon parlaicon-facebook"></span></a>
+                            <a href="<%= data.results.social.facebook %>"><span class="parlaicon parlaicon-facebook"></span></a>
 
                             <%
                             }
-                            if (data.results.social[0].twitter) {
+                            if (data.results.social.twitter) {
                             %>
 
-                            <a href="<%= data.results.social[0].twitter %>"><span class="parlaicon parlaicon-twitter"></span></a>
+                            <a href="<%= data.results.social.twitter %>"><span class="parlaicon parlaicon-twitter"></span></a>
 
                             <%
                             }

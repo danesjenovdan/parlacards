@@ -1,7 +1,6 @@
 {
   "allVoters": 124669,
   "numberOfSeats": 36,
-  "facebook": "https://www.facebook.com/StrankaSMC/",
   "headOfPG": {
     "party": {
       "acronym": "SMC",
@@ -18,17 +17,22 @@
     "id": 1,
     "name": "PS Stranka modernega centra"
   },
-  "twitter": "https://twitter.com/strankasmc",
-  "viceOfPG": {
-    "party": {
-      "acronym": "SMC",
-      "id": 1,
-      "name": "PS Stranka modernega centra"
-    },
-    "gender": "f",
-    "name": "Simona Kustec Lipicer",
-    "gov_id": "P266",
-    "id": 48
-  },
-  "email": "monika.mandic@dz-rs.si"
+  "viceOfPG":[
+    {
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "name": "PS Stranka modernega centra"
+      },
+      "gender": "f",
+      "name": "Simona Kustec Lipicer",
+      "gov_id": "P266",
+      "id": 48
+    }
+  ],
+  "social": {
+    "email": "monika.mandic@dz-rs.si",
+    "facebook": "https://www.facebook.com/StrankaSMC/",
+    "twitter": "https://twitter.com/strankasmc"
+  }
 }
