@@ -21,7 +21,7 @@
         }, {
             "motion": "Dnevni red v celoti",
             "ballot_id": 256368,
-            "option": "za",
+            "option": "kvorum",
             "session_id": 3067,
             "tags": []
         }]
@@ -36,7 +36,7 @@
         }, {
             "motion": "Sklep o izvolitvi predsednika, podpredsednika in \u010dlanov Komisije za nadzor obve\u0161\u010devalnih in varnostnih slu\u017eb",
             "ballot_id": 245389,
-            "option": "za",
+            "option": "ni",
             "session_id": 3044,
             "tags": []
         }, {
@@ -66,7 +66,7 @@
         }, {
             "motion": "Zakon o fiskalnem pravilu",
             "ballot_id": 245839,
-            "option": "proti",
+            "option": "kvorum",
             "session_id": 3044,
             "tags": []
         }, {
