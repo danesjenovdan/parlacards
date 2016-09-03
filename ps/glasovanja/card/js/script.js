@@ -1,6 +1,6 @@
-var voteElements = $('.votes li');
+var voteElements = $('#glasovanja-' + psGlasovanjaRandomId + ' .votes li');
 
-function filterByTags(tags) {
+function filterPsGlasovanjaByTags(tags) {
   var index = 0,
       empty = false;
 
@@ -19,12 +19,12 @@ function filterByTags(tags) {
   })
 }
 
-$('.tag-selector')
+$('#glasovanja-' + psGlasovanjaRandomId + ' .tag-selector')
+    .on('change', function(event) {
+      filterPsGlasovanjaByTags($(event.currentTarget).val());
+    })
   .select2({
-    dropdownParent: $('.card-glasovanja')
-  })
-  .on('change', function(event) {
-    filterByTags($(event.currentTarget).val());
+    dropdownParent: $('#glasovanja-' + psGlasovanjaRandomId)
   })
 
-filterByTags(null)
+filterPsGlasovanjaByTags(null)

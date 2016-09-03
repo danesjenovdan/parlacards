@@ -15,7 +15,24 @@
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
     <!-- endbuild -->
     <script>
-    var PsVoteData = <%- JSON.stringify(data); %>
+    <%
+      function makeId() {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        for(var i = 0; i < 5; i++) {
+          text += possible.charAt(Math.floor(Math.random() * possible.length));
+        }
+
+        return text;
+      }
+
+      var randomId = makeId();
+    %>
+
+    var PsVoteData = <%- JSON.stringify(data); %>;
+    var psGlasovanjaRandomId = '<%= randomId; %>';
+
     </script>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
@@ -37,7 +54,7 @@
             <div class="card-header-border"></div>
             <h1>Glasovanja</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <div class="card-content">
+        <div id="glasovanja-<%= randomId %>" class="card-content">
           <select class="tag-selector" multiple>
           <% data.all_tags.forEach(function(tag) { %>
             <option value="<%= tag %>"><%= tag %></option>
