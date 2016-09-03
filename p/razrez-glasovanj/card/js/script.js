@@ -2,7 +2,21 @@ function makeSwitch() {
     // $('.embed-switch-box').on('click', function() {
     //     $(this).toggleClass('off');
     // });
+    $('.embed-script textarea').val('<div class="parlameter-card" data-src="' + $('.embed-script textarea').data('url')  + razrez_data['person']['id'] + '/"></div>\n<script defer src="https://cdn.parlameter.si/v1/lib/js/embed.script.js"></script>');
     $('.embed-switch-big-box').on('click', function() {
+
+        var thechild = $(this).parent().next().next().children('textarea');
+        var todaysdate = new Date;
+        var today = '' + todaysdate.getDay() + '.' + todaysdate.getMonth() + '.' + todaysdate.getFullYear();
+
+        if ($(this).children('.embed-switch-box').hasClass('off')) {
+            console.log(thechild.data('url')  + razrez_data['person']['id']);
+            thechild.val('<div class="parlameter-card" data-src="' + thechild.data('url')  + razrez_data['person']['id'] + '/"></div>\n<script defer src="https://cdn.parlameter.si/v1/lib/js/embed.script.js"></script>');
+        } else {
+            thechild.val('<div class="parlameter-card" data-src="' + thechild.data('url')  + razrez_data['person']['id'] + '/' + today + '/"></div>\n<script defer src="https://cdn.parlameter.si/v1/lib/js/embed.script.js"></script>');
+            console.log(thechild.data('url')  + razrez_data['person']['id'] + today);
+        }
+
         $(this).children('.embed-switch-box').toggleClass('off');
     });
 }
