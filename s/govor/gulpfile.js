@@ -78,7 +78,7 @@ gulp.task('ejs', function() {
     return gulp.src('card/card.ejs')
         .pipe(ejs({
             'data': jsonData,
-            'className': className
+            'className' : className
         }, {
             ext: '.html'
         }))
@@ -138,6 +138,7 @@ gulp.task('remove-minify', function() {
             'conservativeCollapse': false,
             'removeComments': true
         }))
+        .pipe(replace(/<%= *className *%>/, className))
         .pipe(replace(/\n/g, '')) // cleaning up newlines that were left
         .pipe(replace(/\s\s+/g, ' ')) // cleaning up multiple spaces that were left
         .pipe(gulp.dest('dist'));
