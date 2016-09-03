@@ -4,7 +4,7 @@ function filterByTags(tags) {
   var index = 0,
       empty = false;
 
-  if (tags.length === 0) {
+  if (tags === null) {
     empty = true;
   }
   voteData.results.forEach(function(result) {
@@ -27,4 +27,4 @@ $('.tag-selector')
     filterByTags($(event.currentTarget).val());
   })
 
-filterByTags([])
+filterByTags(null)
