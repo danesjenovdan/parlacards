@@ -75,11 +75,8 @@
                             </div>
                             <div class="frequency">
                                 <div class="progress hugebar2 avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="0" aria-valuemax="<%= max %>" style="width: <%= word.score / max * 80 > 1 ? word.score / max * 80 : 1 %>%;">
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="0" aria-valuemax="<%= max %>" style="width: <%= word.score / max * 100 > 1 ? word.score / max * 100 : 1 %>%;">
                                         <span class="sr-only"><%= word.score %></span>
-                                    </div>
-                                    <div class="progress_number">
-                                        <%= word.score %>
                                     </div>
 
                                 </div>
@@ -110,11 +107,8 @@
                             </div>
                             <div class="frequency">
                                 <div class="progress hugebar2 avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="0" aria-valuemax="<%= max %>" style="width: <%= word.score / max * 80 > 1 ? word.score / max * 80 : 1 %>%;">
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="0" aria-valuemax="<%= max %>" style="width: <%= word.score / max * 100 > 1 ? word.score / max * 100 : 1 %>%;">
                                         <span class="sr-only"><%= word.score %></span>
-                                    </div>
-                                    <div class="progress_number">
-                                        <%= word.score %>
                                     </div>
 
                                 </div>
