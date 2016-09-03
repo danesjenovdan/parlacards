@@ -2,8 +2,8 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
 
     var parties = response;
 
-    $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
-        raw_data = r['facet_counts']['facet_fields']['party_i'];
+    // $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
+        raw_data = stranke_data['facet_counts']['facet_fields']['party_i'];
         console.log(raw_data);
         var sum = 0;
         for (datum in raw_data) {
@@ -219,7 +219,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
                 });
         }
 
-    });
+    // });
 
 });
 
