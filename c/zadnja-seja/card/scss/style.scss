@@ -1,28 +1,27 @@
-.card-header h1, .card-footer h1{
+.card-header h1, .card-footer h1 {
   color: #525252;
 }
 
-.pspris span{
+.pspris span {
   color: #525252;
-  font-weight:500;
+  font-weight: 500;
 }
 
 .presence-of-pg {
-  height:120px;
+  height: 120px;
 }
 
 @media (max-width: 950px) {
-  .presence-of-pg .pspris{
+  .presence-of-pg .pspris {
     margin-bottom: 20px;
   }
   .presence-of-pg {
-    height:auto;
+    height: auto;
   }
 }
 
-
-.card-container{
-  width:auto;
+.card-container {
+  width: auto;
   margin-left: 0px;
   margin-right: 0px;
 
@@ -30,25 +29,34 @@
   padding-right: 0;
 }
 
-.card-header{
-  width:auto;
+.card-header {
+  width: auto;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.card-content{
-  width:auto;
+.card-content {
+  width: auto;
   margin-left: 20px;
   margin-right: 20px;
 
 }
 
-.card-footer{
-  width:auto;
+.card-footer {
+  width: auto;
   padding-right: 20px;
   padding-left: 20px;
 }
 
+
+
+.pspris {
+  width: 10%;
+}
+
+.pspris span {
+  font-size: 32px;
+}
 
 @media (max-width: 390px) {
   .pspris {
@@ -66,11 +74,12 @@
     margin-right: 0;
   }
 }
+
 @media (max-width: 530px) {
   .pspris {
     width: 30.5%;
   }
-  .pspris:nth-child(3n){
+  .pspris:nth-child(3n) {
     margin-right: 0;
   }
   .pspris:nth-child(4n) {
@@ -90,7 +99,6 @@
   }
 
 }
-
 .poslanec_title {
   font-weight: 300 !important;
   line-height: 30px;
@@ -104,12 +112,15 @@
 
   height: 40px;
 }
+
 .term span, .frequency div span {
   line-height: 40px;
 }
+
 .hugebar2 {
   height: 40px !important;
 }
+
 .progress-bar, .progress_number {
   // display: block;
   float: left;
@@ -119,9 +130,11 @@
   height: 40px;
   margin-bottom: 10px;
 }
+
 .progress-bar {
   border-bottom-width: 0;
 }
+
 .progress_number {
   line-height: 40px !important;
 }
@@ -134,38 +147,116 @@
   width: 100%;
   float: left;
 }
+
 @media (min-width: 768px) {
   .halfer {
     width: 50%;
   }
 }
 
-
-
-#votingCardHorizontal div.member{
+#votingCardHorizontal div.member {
   width: 115px;
 }
-#votingCardHorizontal .slider{
+
+#votingCardHorizontal .slider {
   width: auto;
 }
 
-#votingCardHorizontal div.member .image{
+#votingCardHorizontal div.member .image {
   float: none;
 }
-#votingCardHorizontal div.member p{
+
+#votingCardHorizontal div.member p {
   float: none;
 }
-#votingCardHorizontal div.member span{
+
+#votingCardHorizontal div.member span {
   float: none;
 }
 
 @media (max-width: 991px) {
-  #votingCardHorizontal div.member{
+  #votingCardHorizontal div.member {
     width: 130px;
   }
-  #votingCardHorizontal .slider{
+  #votingCardHorizontal .slider {
     width: 323px;
   }
 
+}
 
+.session_voting .session_votes .progress.smallbar {
+  height: 15px;
+}
+
+.session_voting .session_votes {
+  font-size: 30px;
+  line-height: 40px;
+  margin: 15px 0 10px 0;
+}
+
+.session_voting .session_votes .type {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/*@media (max-width: 480px) {
+}
+*/
+.session_voting {
+  font-weight: 400;
+}
+
+.accepted.nay {
+  color: #ff5e41;
+}
+
+.accepted.aye {
+
+}
+
+.session_voting .accepted {
+  line-height: normal;
+  height: 95px;
+}
+
+.session_voting .accepted p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.session_voting .session_title {
+  height: 95px;
+  margin: 0;
+}
+
+.session_voting .session_title p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 991px) {
+  .session_voting .accepted,
+  .session_voting .session_title {
+    height: 93px;
+  }
+
+}
+
+.session_voting .session_title p {
+  font-size: 14px;
+}
+
+
+.session_voting .single_voting{
+  margin-bottom: 0;
+}
+.session_voting{
+  padding: 0 0 20px 0;
 }

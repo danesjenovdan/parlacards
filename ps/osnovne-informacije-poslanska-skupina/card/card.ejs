@@ -35,24 +35,24 @@
     <div class="card-content">
         <div class="bgwhite poslanec">
 
-            <% console.log(data.results); %>
+            <% console.log(data.headOfPG); %>
 
-            <% if(typeof data.results.headOfPG !== undefined){ %>
+            <% if(typeof data.headOfPG !== "undefined"){ %>
             <div class="member row">
                 <div class="col-xs-4 image respo">
 
                     <img class="media-object img-circle img-responsive"
-                         src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.headOfPG.gov_id %>.png"
+                         src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.headOfPG.gov_id %>.png"
                          alt=""/>
                 </div>
                 <div class="col-xs-8 member_data">
                     <h3>
-                        <%= data.results.headOfPG.name %>
+                        <%= data.headOfPG.name %>
                     </h3>
                     <h4>
                         <%
                         var title = "Vodja poslanske skupine";
-                        if (data.results.headOfPG.gender == "f") {
+                        if (data.headOfPG.gender == "f") {
                             title = "Vodja poslanske skupine";
                         } else {
 
@@ -64,33 +64,32 @@
             <% } %>
 
 
-            <% for(item in data.results.viceOfPG){ %>
-
+            <% for(item in data.viceOfPG){ %>
             <div class="member row">
-                <div class="col50 parlaicon-container text-center btn-lg">
-                    <span class="parlaicon parlaicon-namestnik" aria-hidden="true"></span>
-                </div>
                 <div class="col-xs-4 image respo">
 
                     <img class="media-object img-circle img-responsive"
-                         src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.viceOfPG[item].gov_id %>.png"
+                         src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.viceOfPG[item].gov_id %>.png"
                          alt=""/>
                 </div>
                 <div class="col-xs-8 member_data">
                     <h3>
-                        <%= data.results.viceOfPG[item].name %>
+                        <%= data.viceOfPG[item].name %>
                     </h3>
                     <h4>
                         <%
                             var title = "Namestnik";
-                            if (data.results.viceOfPG[item].gender == "f") {
+                            if (data.viceOfPG[item].gender == "f") {
                                 title = "Namestnica";
                             } else {
 
                             } %>
-                        <%= title %></h4>
+                        <%= title %>
+                    </h4>
                 </div>
             </div>
+
+
             <% } %>
 
 
@@ -101,7 +100,7 @@
                 <div class="col380 nopadding">
                         <span class="key">
                             Zaupalo jim je:
-                            <%= data.results.allVoters %>
+                            <%= data.allVoters %>
                         </span>
                 </div>
             </div>
@@ -112,7 +111,7 @@
                 </div>
                 <div class="col380 bordertop nopadding">
                         <span class="key">
-                            Število poslanskih sedežev: <%= data.results.numberOfSeats %>
+                            Število poslanskih sedežev: <%= data.numberOfSeats %>
                         </span>
                 </div>
             </div>
@@ -123,13 +122,13 @@
                 </div>
                 <div class="col380 bordertop nopadding">
                         <span class="key">
-                            Kontakt: <a href="mailto:<%= data.results.email %>"><%= data.results.social.email %></a>
+                            Kontakt: <a href="mailto:<%= data.email %>"><%= data.social.email %></a>
                         </span>
                 </div>
             </div>
 
             <%
-            if (data.results.social.twitter != null || data.results.social.facebook != null) {
+            if (data.social.twitter != null || data.social.facebook != null) {
             %>
             <div class="clearfix">
                 <div class="col50 parlaicon-container text-center btn-lg">
@@ -139,17 +138,17 @@
                         <span class="key">
                             Družbena omrežja:
                             <%
-                            if (data.results.social.facebook) {
+                            if (data.social.facebook) {
                             %>
 
-                            <a href="<%= data.results.social.facebook %>"><span class="parlaicon parlaicon-facebook"></span></a>
+                            <a href="<%= data.social.facebook %>"><span class="parlaicon parlaicon-facebook"></span></a>
 
                             <%
                             }
-                            if (data.results.social.twitter) {
+                            if (data.social.twitter) {
                             %>
 
-                            <a href="<%= data.results.social.twitter %>"><span class="parlaicon parlaicon-twitter"></span></a>
+                            <a href="<%= data.social.twitter %>"><span class="parlaicon parlaicon-twitter"></span></a>
 
                             <%
                             }

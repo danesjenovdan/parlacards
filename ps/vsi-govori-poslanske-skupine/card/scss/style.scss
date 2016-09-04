@@ -64,7 +64,7 @@
     display: inline-block;
     float: left;
     padding: 3px 10px;
-    margin: 0 20px 0 0;
+    margin: 0 20px 5px 0;
 
 
     -webkit-mask: url(https://cdn.parlameter.si/v1/icons/govor.svg) no-repeat 50% 50%;
@@ -83,9 +83,13 @@
     }
 
     ul {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      border-top: none;
+      border-bottom: 1px solid #f0f0f0;
+      padding-bottom: 5px;
+
       li {
-        margin: 20px;
+        margin: 20px 10px 0px 10px;
         span {
         }
 
@@ -98,11 +102,19 @@
           font-weight:400;
         }
 
+        ul{
+          margin-bottom: 0px;
+          border: none;
+          padding-bottom: 0px;
+          li{
+            margin: 0;
+          }
+        }
       }
     }
 
     .member{
-      width: 50%;
+      border-bottom:none;
     }
     .member .image{
       width: 30px;
@@ -119,11 +131,17 @@
       float: left;
       display: inline-block;
       font-size: 14px;
+      width: 80%;
     }
     .speechesnmbr{
-      width: 50%;
+
     }
 
+
   }
+
+
+
+
 
 }

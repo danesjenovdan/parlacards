@@ -34,14 +34,13 @@
 <div class="card-container card-halfling <%= className %>">
     <div class="card-header">
         <div class="card-header-border"></div>
-        <h1>Delovno telo komisija odbor</h1> <!-- this text is the only thing you touch in .card-header -->
+        <h1>Delovno telo / komisija / odbor</h1> <!-- this text is the only thing you touch in .card-header -->
     </div>
 
     <div class="session-container">
 
         <div class="row">
-            <div class="col-md-12">
-                <div class="card-container">
+
 
                     <div class="paneltab border-right col-md-4">
                         <h2>Osnovne informacije</h2>
@@ -110,6 +109,24 @@
                                 <% } %>
                             </div>
                         </div>
+
+
+                        <% if(typeof data.info.sekretarka !== "undefined"){
+
+
+                        %>
+                        <div class="clearfix">
+                            <h2>Sektretarke</h2>
+                            <div class="session_other_members">
+
+                                <a href="<%= data.info.sekretarka.gov_id %>" title="<%= data.info.sekretarka.name %>">
+
+                                         <%= data.info.sekretarka.name %>
+                                </a>
+                            </div>
+                        </div>
+                        <%}%>
+
                     </div>
 
                     <div class="paneltab border-right col-md-4">
@@ -128,18 +145,26 @@
 
 
                         <h2>Število sedežev</h2>
-                        <% for(item in data.seats_per_pg){
+                        <%
+
+                            var allSeats = 0;
+                            for(item in data.seats_per_pg){
+                                allSeats += data.seats_per_pg[item].seats;
+                            }
+
+                        for(item in data.seats_per_pg){
                         var opocoaColor = "funblue";
                             if(data.seats_per_pg[item].coalition == "opposition"){
                                 opocoaColor = "red";
                             }
                             var index = 0;
-                            var indexInPercent = 0;
+                            var indexInPercent = (data.seats_per_pg[item].seats / allSeats) * 100 ;
+
                         %>
                         <div class="other_poslanec clearfix">
                             <div class="col150">
                                 <span class="poslanec_title">
-                                        <%=data.seats_per_pg[item].party.name %>
+                                        <%=data.seats_per_pg[item].party.acronym %>
                                     </span>
                             </div>
                             <div class="col280">
@@ -173,8 +198,10 @@
 
 
                                         <li class="row">
-                                            <span class="date col-sm-3"><%= data.sessions[item].id%></span>
-                                            <p class=" col-sm-9"><a href="#">Govorila</a> na <a href="#"><%= data.sessions[item].name%></a></p>
+                                            <span class="date col-sm-3"><%= data.sessions[item].date%></span>
+                                            <p class=" col-sm-9">
+
+                                                <a href="<%= data.sessions[item].id%>"><%= data.sessions[item].name%></a></p>
                                         </li>
                                         <% } %>
 
@@ -187,8 +214,9 @@
                                         <% for(item in data.sessions){ %>
 
                                         <li class="row">
-                                            <span class="date col-sm-3"><%= data.sessions[item].id%></span>
-                                            <p class=" col-sm-9"><a href="#">Govorila</a> na <a href="#"><%= data.sessions[item].name%></a></p>
+                                            <span class="date col-sm-3"><%= data.sessions[item].date%></span>
+                                            <p class=" col-sm-9">
+                                                <a href="<%= data.sessions[item].id%>"><%= data.sessions[item].name%></a></p>
                                         </li>
                                         <% } %>
 
@@ -213,8 +241,6 @@
 
                     </div>
 
-                </div>
-            </div>
         </div>
 
 

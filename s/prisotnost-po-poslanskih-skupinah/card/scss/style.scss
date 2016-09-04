@@ -1,28 +1,27 @@
-.card-header h1, .card-footer h1{
+.card-header h1, .card-footer h1 {
   color: #525252;
 }
 
-  .pspris span{
+.pspris span {
   color: #525252;
-  font-weight:500;
+  font-weight: 500;
 }
 
 .presence-of-pg {
-  height:120px;
+  height: 120px;
 }
 
 @media (max-width: 950px) {
-  .presence-of-pg .pspris{
+  .presence-of-pg .pspris {
     margin-bottom: 20px;
   }
   .presence-of-pg {
-    height:auto;
+    height: auto;
   }
 }
 
-
-.card-container{
-  width:auto;
+.card-container {
+  width: auto;
   margin-left: 0px;
   margin-right: 0px;
 
@@ -30,28 +29,29 @@
   padding-right: 0;
 }
 
-.card-header{
-  width:auto;
+.card-header {
+  width: auto;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.card-content{
-  width:auto;
+.card-content {
+  width: auto;
   margin-left: 20px;
   margin-right: 20px;
 
 }
 
-.card-footer{
-  width:auto;
+.card-footer {
+  width: auto;
   padding-right: 20px;
   padding-left: 20px;
 }
 
-.pspris{
+.pspris {
   width: 10%;
 }
+
 .pspris span {
   font-size: 32px;
 }
@@ -72,11 +72,12 @@
     margin-right: 0;
   }
 }
+
 @media (max-width: 530px) {
   .pspris {
     width: 30.5%;
   }
-  .pspris:nth-child(3n){
+  .pspris:nth-child(3n) {
     margin-right: 0;
   }
   .pspris:nth-child(4n) {

@@ -1,0 +1,34 @@
+
+#votingCardHorizontal div.member {
+  width: 141px;
+}
+
+#votingCardHorizontal .slider div.member {
+  margin: 0 16px 0 0;
+}
+
+#votingCardHorizontal .slider {
+  width: auto;
+}
+
+#votingCardHorizontal div.member .image,
+#votingCardHorizontal div.member p,
+#votingCardHorizontal div.member span {
+  float: none;
+}
+
+@media (max-width: 991px) {
+  #votingCardHorizontal {
+    .slider {
+      width: 333px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #votingCardHorizontal {
+    .slider {
+      width: 100%;
+    }
+  }
+}
