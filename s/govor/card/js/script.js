@@ -220,7 +220,10 @@ quoteElement.on('click', function(event) {
   var url = 'https://analize.parlameter.si/v1/s/setQuote/' + speechData.speech_id + '/' + startIndex + '/' + endIndex;
 
   $.get(url, function(result) {
-    console.log('Successfully saved quote!', 'https://analize.parlameter.si/v1/s/getQuote/' + result.id);
+    var newCardUrl = 'https://glej.parlameter.si/s/govor/' + result.id;
+    $.get(newCardUrl, function(response) {
+      cardElement.parent().html(response);
+    })
   })
 })
 
