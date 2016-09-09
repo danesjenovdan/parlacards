@@ -1,10 +1,10 @@
 var mydata;
 var data = [];
 
-$.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
+// $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
     // console.log(r);
-    mydata = r;
-    raw_data = r['facet_counts']['facet_ranges']['datetime_dt'];
+    mydata = raba_data;
+    raw_data = raba_data['facet_counts']['facet_ranges']['datetime_dt'];
 
     // console.log(raw_data);
 
@@ -205,7 +205,7 @@ $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
     //         chart.attr("width", targetWidth);
     //         chart.attr("height", targetWidth / aspect);
     //     });
-});
+// });
 
 // function type(d) {
 //     d.date = parseDate.parse(d.date);
