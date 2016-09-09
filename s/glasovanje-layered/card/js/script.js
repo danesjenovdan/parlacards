@@ -42,11 +42,88 @@ function drawInner(data) {
 
 }
 
+function drawPie(data) {
+
+    // options
+    var options_data = [];
+    for (key in data.all) {
+        options_data.push(data.all[key]);
+    }
+
+    var pie = d3.layout.pie()
+        .sort(null)
+        .value(function(d) {
+            return d.mps.length;
+        });
+
+    var options_data = pie(options_data);
+
+    console.log('drawing pie');
+    var arc = d3.svg.arc()
+        .outerRadius(radius * 1.5 - 10);
+
+    var labelArc = d3.svg.arc()
+        .outerRadius(radius * 1.5 - 50)
+        .innerRadius(radius * 1.5 - 100);
+
+    var pie = d3.layout.pie()
+        .sort(null)
+        .value(function(d) {
+            return d.mps.length;
+        });
+
+    var piedata = pie(data);
+
+    var options = svg.selectAll('.option')
+        .data(options_data)
+        .enter()
+        .append('g')
+        .attr('class', 'pg');
+
+    drawOptionLabels(options);
+}
+
+function drawOptionLabels(options) {
+
+}
+
+function drawLabelLines(labels) {
+    labels.each(function(d) {
+        var thing = d3.select(this);
+        var bbox = this.getBBox();
+        d.sx = +thing.attr('x') - bbox.width / 2 - 2;
+        d.ox = +thing.attr('x') + bbox.width / 2 + 2;
+        d.sy = d.oy = +thing.attr('y') + 5;
+        d.endx = +thing.attr('x') + bbox.width;
+    });
+
+    svg.selectAll("path.pointer").data(piedata).enter()
+        .append("path")
+        .attr("class", "pointer")
+        .style("fill", "none")
+        .attr("d", function(d) {
+            if (d.cx > d.ox) { //|| Math.abs(d.cx) < 0.1) {
+                return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+            } else {
+                if ((d.endx > 0) && (Math.abs(d.cx) < 10)) {
+                    return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+                }
+                return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+            }
+        })
+        .style('display', function(d) {
+            if (+d.data.percentage === 0) {
+                return 'none';
+            } else {
+                return 'block';
+            }
+        });
+}
+
 function drawOuter(data) {
     console.log('starting drawOuter');
     var arc = d3.svg.arc()
-        .outerRadius(radius * 1.5 - 10)
-        .innerRadius(radius);
+        .outerRadius(radius * 1.5 - 10);
 
 
     var labelArc = d3.svg.arc()
@@ -73,8 +150,11 @@ function drawOuter(data) {
         .style('fill', function(d) {
             return color(d.data.option);
         })
-        .attr("d", arc).style('stroke', 'white')
-        .style('stroke-width', 2)
+        .attr("d", arc)
+        .style('stroke', function(d) {
+            return color(d.data.option);
+        })
+        .style('stroke-width', 0.3)
         .on('click', function(d) {
             var mp_list = d3.select('.' + d.data.option + '.' +d.data.pg.acronym.replace(' ', '_'));
 
@@ -90,7 +170,7 @@ function drawOuter(data) {
             } else {
                 _this.attr('transform', function(d) {
                     var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                    return 'translate(' + Math.cos(a) * (radius * 0.05) +',' + Math.sin(a) * (radius * 0.05) + ')';
+                    return 'translate(' + Math.cos(a) * (radius * 0.2) +',' + Math.sin(a) * (radius * 0.2) + ')';
                 })
                 .classed('selected', true);
             }
@@ -269,7 +349,7 @@ var pieWidth = 200;
 
     console.log('before drawInner');
 
-    drawInner(data);
+    // drawInner(data);
 
     var second_level_data = [];
     for (option in data.all) {
@@ -288,6 +368,7 @@ var pieWidth = 200;
     console.log(second_level_data);
 
     drawOuter(second_level_data);
+    // drawPie(second_level_data);
 
     // console.log(second_level_data);
 
