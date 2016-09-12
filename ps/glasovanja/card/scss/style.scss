@@ -15,8 +15,11 @@ overflow: visible !important;
   font-size: 12px;
   height: 24px;
   line-height: 24px;
+  overflow: hidden;
   padding: 0 16px;
   position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   &::after {
     background-color: #ebebeb;
@@ -138,6 +141,7 @@ overflow: visible !important;
       font-weight: 300;
       line-height: 20px;
       padding: 15px 0;
+      a { font-weight: normal; }
     }
   }
 }
