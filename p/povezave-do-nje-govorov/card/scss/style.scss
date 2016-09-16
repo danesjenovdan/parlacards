@@ -6,55 +6,7 @@
   font-weight:500;
 }
 
-#votingCard div.member{
-
-}
-#votingCard .member:last-child{
-  border: none;
-}
-#votingCard .member.lastel{
-  border: none;
-  padding-bottom: 10px;
-}
-.card-container{
-  width:auto;
-  margin-left: 0px;
-  margin-right: 0px;
-
-  padding-left: 0px;
-  padding-right: 0;
-}
-
-.card-header{
-  width:auto;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.card-content{
-  width:auto;
-  margin-left: 20px;
-  margin-right: 20px;
-
-}
-
-.card-footer{
-  width:auto;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-/*************/
-.card-content {
-  margin-right: 5px;
-}
-#votingCard div.member {
-
-}
-
-
-
-
-#recent-speeches {
+#recent-speeches-do-nje-govorov {
 
   .speech{
     color: #FFFFFF;
@@ -65,11 +17,8 @@
     margin: 0 10px 10px 0;
     text-align: center;
 
-
-
-    -webkit-mask: url(https://cdn.parlameter.si/v1/icons/govor.svg) no-repeat 50% 50%;
+   -webkit-mask: url(https://cdn.parlameter.si/v1/icons/govor.svg) no-repeat 50% 50%;
     mask: url(https://cdn.parlameter.si/v1/icons/govor.svg);
-
     -webkit-mask-size: cover;
     //mask-size: cover;
 

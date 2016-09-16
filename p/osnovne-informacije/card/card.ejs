@@ -24,6 +24,7 @@
 
 <body> <!-- removeme -->
 
+<div class="container"><div class="row"><div class="col-md-6"><!-- removeme -->
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
@@ -35,11 +36,11 @@
         <div class="card-content">
             <div class="bgwhite poslanec">
 
-                <div class="clearfix">
-                    <div class="col50 parlaicon-container text-center btn-lg">
+                <div class="row">
+                    <div class="col-xs-2 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-skupina" aria-hidden="true"></span>
                     </div>
-                    <div class="col380 nopadding">
+                    <div class="col-xs-10 bordertop">
                         <span class="key">
                             Poslanska skupina:
                             <a href="#<%= data.results.party_id %>"><%= data.results.acronym %></a>
@@ -47,55 +48,55 @@
                     </div>
                 </div>
 
-                <div class="clearfix">
-                    <div class="col50 parlaicon-container text-center btn-lg">
+                <div class="row">
+                    <div class="col-xs-2 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-delaza" aria-hidden="true"></span>
                     </div>
-                    <div class="col380 bordertop nopadding">
+                    <div class="col-xs-10 bordertop">
                         <span class="key">
                             Dela za: <%= data.results.voters %>
                         </span>
                     </div>
                 </div>
 
-                <div class="clearfix">
-                    <div class="col50 parlaicon-container text-center btn-lg">
+                <div class="row">
+                    <div class="col-xs-2 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-mandat" aria-hidden="true"></span>
                     </div>
-                    <div class="col380 bordertop nopadding">
+                    <div class="col-xs-10 bordertop">
                         <span class="key">
                             Število mandatov: <%= data.results.mandates %>
                         </span>
                     </div>
                 </div>
 
-                <div class="clearfix">
-                    <div class="col50 parlaicon-container text-center btn-lg">
+                <div class="row">
+                    <div class="col-xs-2 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-status" aria-hidden="true"></span>
                     </div>
-                    <div class="col380 bordertop nopadding">
+                    <div class="col-xs-10 bordertop">
                         <span class="key">
                             Prejšnji status: <%= data.results.previous_occupation %>
                         </span>
                     </div>
                 </div>
 
-                <div class="clearfix">
-                    <div class="col50 parlaicon-container text-center btn-lg">
+                <div class="row">
+                    <div class="col-xs-2 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-izobrazba" aria-hidden="true"></span>
                     </div>
-                    <div class="col380 bordertop nopadding">
+                    <div class="col-xs-10 bordertop">
                         <span class="key">
                             Izobrazba: <%= data.results.education %>
                         </span>
                     </div>
                 </div>
 
-                <div class="clearfix">
-                    <div class="col50 parlaicon-container text-center btn-lg">
+                <div class="row">
+                    <div class="col-xs-2 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-starost" aria-hidden="true"></span>
                     </div>
-                    <div class="col380 bordertop nopadding">
+                    <div class="col-xs-10 bordertop">
                         <span class="key">
                             Starost: <%= data.results.age %> let
                         </span>
@@ -105,11 +106,11 @@
                 <%
                     if (data.results.social[0].twitter != null || data.results.social[0].facebook != null) {
                 %>
-                <div class="clearfix">
-                    <div class="col50 parlaicon-container text-center btn-lg">
+                <div class="row">
+                    <div class="col-xs-2 parlaicon-container text-center btn-lg">
                         <span class="parlaicon parlaicon-omrezja" aria-hidden="true"></span>
                     </div>
-                    <div class="col380 bordertop nopadding">
+                    <div class="col-xs-10 bordertop">
                         <span class="key">
                             Družbena omrežja:
                             <%
@@ -148,6 +149,8 @@
         </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->
+
+</div></div></div><!-- removeme -->
 
     <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <!-- inline temp/js/script.js as <script> -->
