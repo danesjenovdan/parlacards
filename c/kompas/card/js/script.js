@@ -1,3 +1,6 @@
+// TODO
+// kdaj se izklopi označba za stranko?
+
 // jquery ui
 
 /*! jQuery UI - v1.12.0 - 2016-08-21
@@ -17,6 +20,46 @@ function makeSwitchEvent(acronym) {
         } else {
             $(this).css('background-color', '#f0f0f0');
             d3.select('#kompashull' + acronym).classed('hidden', true);
+        }
+        $(this).toggleClass('turnedon');
+    });
+}
+
+function makeSwitchEvent2(selection) {
+    $('#partyswitch-' + d3.select(selection[0][0]).datum().person.party.acronym.replace(' ', '_')).on('click', function() {
+        if (!$(this).hasClass('turnedon')) {
+
+            $(this).css('background-color', color($(this).attr('id').split('-')[1]));
+
+            for (var i = 0; i < selection[0].length; i++) {
+                // show photos
+                showPersonPicture(d3.select(selection[0][i]).datum())
+
+                // move to front
+                var parent = $('#_' + d3.select(selection[0][i]).datum().person.id).parent()[0];
+                moveToFront(parent, d3.select(selection[0][i]).datum());
+            }
+        } else {
+            $(this).css('background-color', '#f0f0f0');
+
+            for (var i = 0; i < selection[0].length; i++) {
+                d3.select('#personcard' + d3.select(selection[0][i]).datum().person.id).classed('hidden', true);
+                d3.select(selection[0][i])
+                    .attr('r', function(d) {
+                        return 3;
+                    })
+                    .style("fill", function(d) {
+                        return color(d.person.party.acronym.replace(' ', '_'));
+                    })
+                    .on('click', function(d) {
+                        // show photo
+                        showPersonPicture(d);
+
+                        // move to front
+                        var parent = $('#_' + d.person.id).parent()[0];
+                        moveToFront(parent, d);
+                    });
+            }
         }
         $(this).toggleClass('turnedon');
     });
@@ -154,7 +197,7 @@ for (i in kompas_data) {
         .attr("x", -20)
         .attr("y", 20)
         .append("image")
-        .attr("xlink:href", 'https://cdn.parlameter.si/v1/img/people/' + kompas_data[i].person.gov_id + '.png')
+        .attr("xlink:href", 'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + kompas_data[i].person.gov_id + '.png')
         .attr("width", 40)
         .attr("height", 40)
         .attr("x", 0)
@@ -163,7 +206,7 @@ for (i in kompas_data) {
 
 for (group in groupedData) {
 
-    var currentselection = d3.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(' ', '_'))
+    var currentselection = d3.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(' ', '_')).classed('partygroup', true)
         .selectAll('.dot')
         .data(groupedData[group])
         .enter()
@@ -173,23 +216,33 @@ for (group in groupedData) {
             return '_' + d.person.id;
         })
         .attr("r", function(d) {
-            return 20;
+            return 3;
         })
         .attr("transform", transform)
         // .style('border', '3px solid')
+        .style("fill", function(d) {
+            return color(d.person.party.acronym.replace(' ', '_'));
+        })
         .style("stroke", function(d) {
             return color(d.person.party.acronym.replace(' ', '_'));
         })
-        .style('fill', function(d) {
-            return 'url(#' + d.person.gov_id + ')'
-        })
+        // .style('fill', function(d) {
+        //     return 'url(#' + d.person.gov_id + ')'
+        // })
         .on('click', function(d, i) {
             // var element = d3.select('#_' + d.person.id);
             // if (element.classed('selected')) {
             //     removeSingleHull(d);
             //     element.classed('selected', false);
             // } else {
-            drawSingleHull(d);
+
+            // show photo
+            showPersonPicture(d);
+
+            // move to front
+            var parent = $('#_' + d.person.id).parent()[0];
+            moveToFront(parent, d);
+
             //     element.classed('selected', true);
             // }
         });
@@ -197,7 +250,8 @@ for (group in groupedData) {
     // .on('mouseover', overGroup)
     // .off('mouseover', offGroup);
 
-    drawHull(currentselection, groupedData[group]);
+    // drawHull(currentselection, groupedData[group]);
+    makeSwitchEvent2(currentselection); // TODO
 
 }
 
@@ -215,13 +269,13 @@ function zoom() {
             return "M" + translateX + ',' + translateY + "L" + (translateX + 0.01) + ',' + translateY + "Z";
         });
 
-    for (group in groupedData) {
-
-        var currentselection = d3.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(' ', '_'))
-
-        redrawHull(currentselection, groupedData[group]);
-
-    }
+    // for (group in groupedData) {
+    //
+    //     var currentselection = d3.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(' ', '_'))
+    //
+    //     redrawHull(currentselection, groupedData[group]);
+    //
+    // }
 }
 
 function transform(d) {
@@ -266,6 +320,56 @@ function drawSingleHull(datum) {
             d3.select('#personcard' + d3.select(this).attr('data-id')).classed('hidden', true);
             d3.select(this).remove();
         });
+}
+
+function moveToFront(parent, selected) {
+    // move person to group front
+    d3.select(parent).selectAll('.dot')
+        .sort(function(a, b) {
+            s = selected.person.id;
+            return (a.person.id == s) - (b.person.id == s);
+        });
+
+     // move group in front of other groups
+     d3.select(parent.parentNode).selectAll('.partygroup')
+         .sort(function(a, b) {
+             s = selected.person.party.id;
+             return (a[0].person.party.id == s) - (b[0].person.party.id == s);
+         });
+}
+
+function showPersonPicture(datum) {
+
+    // display card
+    $('#personcard' + datum.person.id).removeClass('hidden').detach().prependTo('.kompas-people-wide');
+    updatePeopleScroller();
+
+    // create hull
+    d3.select('#_' + datum.person.id)
+        .attr('r', function(d) {
+            return 20;
+        })
+        .style('fill', function(d) {
+            return 'url(#' + d.person.gov_id + ')'
+        })
+        .on('click', function() {
+                d3.select('#personcard' + d3.select(this).datum().person.id).classed('hidden', true);
+                d3.select(this)
+                    .attr('r', function(d) {
+                        return 3;
+                    })
+                    .style("fill", function(d) {
+                        return color(d.person.party.acronym.replace(' ', '_'));
+                    })
+                    .on('click', function(d) {
+                        // show photo
+                        showPersonPicture(d);
+
+                        // move to front
+                        var parent = $('#_' + d.person.id).parent()[0];
+                        moveToFront(parent, d);
+                    });
+            });
 }
 
 function drawHull(group, dataset) {
@@ -371,7 +475,7 @@ function updatePeopleScroller() {
     $('.kompas-person').not('.hidden').each(function(i, e) {
         thewidth = thewidth + $(e).outerWidth() + 21;
     });
-    console.log(thewidth);
+    // console.log(thewidth);
     $('.kompas-people-wide').width(thewidth);
 }
 
@@ -391,8 +495,27 @@ function addSearchPerson(name, id) {
 }
 
 $('.kompas-person').on('click', function() {
-    $('#singlehull' + $(this).data('id')).remove();
+    // hide card
     $(this).addClass('hidden');
+
+    // turn picture back to dot
+    d3.select('#_' + $(this).data('id'))
+        .attr('r', function(d) {
+            return 3;
+        })
+        .style("fill", function(d) {
+            return color(d.person.party.acronym.replace(' ', '_'));
+        })
+        .on('click', function(d) {
+            // show photo
+            showPersonPicture(d);
+
+            // move to front
+            var parent = $('#_' + d.person.id).parent()[0];
+            moveToFront(parent, d);
+        });
+
+    // handle search
     var persondata = d3.select('#_' + $(this).data('id')).datum()
     addSearchPerson(persondata.person.name, persondata.person.id);
 });
