@@ -54,7 +54,14 @@
                     </div>
                     <div class="col-xs-10 bordertop">
                         <span class="key">
-                            Dela za: <%= data.results.voters %>
+                            Dela za: <b><%= data.results.voters %></b>
+                            <% if(data.results.district !== null){ %>
+                            <br />
+                            <b><%=data.results.district%></b>
+                            <% }else{ %>
+                            <br />
+                            manjka label in okraj!!!
+                            <% } %>
                         </span>
                     </div>
                 </div>
@@ -65,7 +72,7 @@
                     </div>
                     <div class="col-xs-10 bordertop">
                         <span class="key">
-                            Število mandatov: <%= data.results.mandates %>
+                            Število mandatov: <b><%= data.results.mandates %></b>
                         </span>
                     </div>
                 </div>
@@ -76,7 +83,7 @@
                     </div>
                     <div class="col-xs-10 bordertop">
                         <span class="key">
-                            Prejšnji status: <%= data.results.previous_occupation %>
+                            Prejšnji status: <b><%= data.results.previous_occupation %></b>
                         </span>
                     </div>
                 </div>
@@ -87,7 +94,7 @@
                     </div>
                     <div class="col-xs-10 bordertop">
                         <span class="key">
-                            Izobrazba: <%= data.results.education %>
+                            Izobrazba: <b><%= data.results.education %></b>
                         </span>
                     </div>
                 </div>
@@ -98,7 +105,7 @@
                     </div>
                     <div class="col-xs-10 bordertop">
                         <span class="key">
-                            Starost: <%= data.results.age %> let
+                            Starost: <b><%= data.results.age %> let</b>
                         </span>
                     </div>
                 </div>

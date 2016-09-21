@@ -1,11 +1,11 @@
 [
   {
     "organization": {
-      "acronym": "IMNS",
-      "id": 2,
-      "name": "PS italijanske in mad\u017earske narodne skupnosti"
+      "acronym": "SMC",
+      "id": 1,
+      "name": "PS Stranka modernega centra"
     },
-    "percent": 100
+    "percent": 92
   },
   {
     "organization": {
@@ -13,31 +13,7 @@
       "id": 3,
       "name": "PS Demokratska Stranka Upokojencev Slovenije"
     },
-    "percent": 98
-  },
-  {
-    "organization": {
-      "acronym": "SD",
-      "id": 7,
-      "name": "PS Socialni Demokrati"
-    },
-    "percent": 97
-  },
-  {
-    "organization": {
-      "acronym": "SMC",
-      "id": 1,
-      "name": "PS Stranka modernega centra"
-    },
-    "percent": 96
-  },
-  {
-    "organization": {
-      "acronym": "NSI",
-      "id": 6,
-      "name": "PS Nova Slovenija"
-    },
-    "percent": 80
+    "percent": 87
   },
   {
     "organization": {
@@ -45,7 +21,31 @@
       "id": 5,
       "name": "PS Slovenska Demokratska Stranka"
     },
-    "percent": 71
+    "percent": 85
+  },
+  {
+    "organization": {
+      "acronym": "SD",
+      "id": 7,
+      "name": "PS Socialni Demokrati"
+    },
+    "percent": 83
+  },
+  {
+    "organization": {
+      "acronym": "IMNS",
+      "id": 2,
+      "name": "PS italijanske in mad\u017earske narodne skupnosti"
+    },
+    "percent": 80
+  },
+  {
+    "organization": {
+      "acronym": "PS NP",
+      "id": 97,
+      "name": "PS nepovezanih poslancev"
+    },
+    "percent": 77
   },
   {
     "organization": {
@@ -53,6 +53,14 @@
       "id": 8,
       "name": "PS Zdru\u017eena Levica"
     },
-    "percent": 50
+    "percent": 60
+  },
+  {
+    "organization": {
+      "acronym": "NSI",
+      "id": 6,
+      "name": "PS Nova Slovenija"
+    },
+    "percent": 21
   }
 ]
