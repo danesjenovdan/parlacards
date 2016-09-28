@@ -29,230 +29,241 @@
 
 <body> <!-- removeme -->
 
-<!-- https://analize.parlameter.si/v1/pg/getWorkingBodies/22 -->
-<!-- everything above here is part of the page and not part of the card -->
-<div class="card-container card-halfling <%= className %>">
-    <div class="card-header">
-        <div class="card-header-border"></div>
-        <h1>Delovno telo / komisija / odbor</h1> <!-- this text is the only thing you touch in .card-header -->
-    </div>
+<div class="container"> <!-- removeme -->
+    <div class="row"><!-- removeme -->
+        <div class="col-md-12"><!-- removeme -->
 
-    <div class="session-container">
+            <!-- https://analize.parlameter.si/v1/pg/getWorkingBodies/22 -->
+            <!-- everything above here is part of the page and not part of the card -->
+            <div class="card-container card-halfling <%= className %>">
+                <div class="card-header">
+                    <div class="card-header-border"></div>
+                    <h1>Delovno telo / komisija / odbor</h1>
+                    <!-- this text is the only thing you touch in .card-header -->
+                </div>
 
-        <div class="row">
+                <div class="session-container">
+
+                    <div class="row">
 
 
-                    <div class="paneltab border-right col-md-4">
-                        <h2>Osnovne informacije</h2>
-                        <%   %>
+                        <div class="paneltab border-right col-md-4">
+                            <h2 class="upcase">Osnovne informacije</h2>
 
-                        <div class="member row">
-                            <div class="col-xs-4 image respo">
+                            <%     %>
 
-                                <img class="media-object img-circle img-responsive"
-                                     src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.president.gov_id %>.png"
-                                     alt=""/>
-                            </div>
-                            <div class="col-xs-8 member_data">
-                                <h3>
-                                    <%= data.info.president.name %>
-                                </h3>
-                                <h4>
-                                    <%
+                            <div class="member row verticalmember ">
+                                <div class="col-xs-4 ">
+                                    <div class="image respo">
+
+                                    <img class="media-object img-circle img-responsive"
+                                         src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.president.gov_id %>.png"
+                                         alt=""/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-8 member_data">
+                                    <h3>
+                                        <%= data.info.president.name %>
+                                    </h3>
+                                    <h4>
+                                        <%
                                         var title = "Predsednik";
                                         if (data.info.president.gender == "f") {
                                             title = "Predsednica";
                                         } else {
 
                                         } %>
-                                    <%= title %>
-                                </h4>
+                                        <%= title %>
+                                    </h4>
+                                </div>
                             </div>
-                        </div>
-                        <%  %>
+                            <%    %>
 
-                        <% for(item in data.info.vice_president){ %>
+                            <% for(item in data.info.vice_president){ %>
 
-                        <div class="member row">
-                            <div class="col-xs-4 image respo">
+                            <div class="member row verticalmember">
+                                <div class="col-xs-4">
+<div class="image respo">
+                                    <img class="media-object img-circle img-responsive"
+                                         src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.vice_president[item].gov_id %>.png"
+                                         alt=""/>
+</div>
+                                </div>
+                                <div class="col-xs-8 member_data">
+                                    <h3>
+                                        <%= data.info.vice_president[item].name %>
+                                    </h3>
+                                    <h4>
+                                        <%
+                                            var title = "Podpredsednik";
+                                            if (data.info.vice_president[item].gender == "f") {
+                                                title = "Podpredsednica";
+                                            } else {
 
-                                <img class="media-object img-circle img-responsive"
-                                     src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.vice_president[item].gov_id %>.png"
-                                     alt=""/>
+                                            } %>
+                                        <%= title %></h4>
+                                </div>
                             </div>
-                            <div class="col-xs-8 member_data">
-                                <h3>
-                                    <%= data.info.vice_president[item].name %>
-                                </h3>
-                                <h4>
-                                    <%
-                                        var title = "Podpredsednik";
-                                        if (data.info.vice_president[item].gender == "f") {
-                                            title = "Podpredsednica";
-                                        } else {
+                            <% } %>
 
-                                        } %>
-                                    <%= title %></h4>
-                            </div>
-                        </div>
-                        <% } %>
-
-                        <div class="clearfix">
-                            <h2>Člani in članice</h2>
-                            <div class="session_other_members">
-                                <% for(item in data.info.members){ %>
-                                <a href="<%= data.info.members[item].gov_id %>" title="<%= data.info.members[item].name %>">
-                                <img class="img-circle"
-                                     src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.members[item].gov_id %>.png"
-                                     alt="<%= data.info.members[item].name %>"/>
+                            <div class="member clearfix">
+                                <h2>Člani in članice</h2>
+                                <div class="session_other_members">
+                                    <% for(item in data.info.members){ %>
+                                    <a href="<%= data.info.members[item].gov_id %>"
+                                       title="<%= data.info.members[item].name %>">
+                                        <img class="img-circle"
+                                             src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.members[item].gov_id %>.png"
+                                             alt="<%= data.info.members[item].name %>"/>
                                     </a>
-                                <% } %>
+                                    <% } %>
+                                </div>
                             </div>
+
+                            <% if(typeof data.info.sekretarka !== "undefined"){
+                            %>
+                            <div class="clearfix">
+                                <h2>Sektretarke</h2>
+                                <div class="session_other_members">
+
+                                    <a href="<%= data.info.sekretarka.gov_id %>"
+                                       title="<%= data.info.sekretarka.name %>">
+
+                                        <%= data.info.sekretarka.name %>
+                                    </a>
+                                </div>
+                            </div>
+                            <% } %>
+
                         </div>
 
+                        <div class="paneltab border-right col-md-4">
+                            <h2 class="upcase">Razmerje med koalicijo in opozicijo</h2>
 
-                        <% if(typeof data.info.sekretarka !== "undefined"){
-
-
-                        %>
-                        <div class="clearfix">
-                            <h2>Sektretarke</h2>
-                            <div class="session_other_members">
-
-                                <a href="<%= data.info.sekretarka.gov_id %>" title="<%= data.info.sekretarka.name %>">
-
-                                         <%= data.info.sekretarka.name %>
-                                </a>
+                            <div class="progress hugebar">
+                                <div class="progress-bar funblue" style="width: <%= data.ratio.coalition %>%">
+                                    <div class="cptin">K</div>
+                                    <span class="sr-only"><%= data.ratio.coalition %>% Complete (success)</span>
+                                </div>
+                                <div class="progress-bar red" style="width: <%= data.ratio.opposition %>%">
+                                    <div class="cptin">O</div>
+                                    <span class="sr-only"><%= data.ratio.opposition %>% Complete (danger)</span>
+                                </div>
                             </div>
-                        </div>
-                        <%}%>
-
-                    </div>
-
-                    <div class="paneltab border-right col-md-4">
-                        <h2>Razmerje med koalicijo in opozicijo</h2>
-
-                        <div class="progress hugebar">
-                            <div class="progress-bar funblue" style="width: <%=data.ratio.coalition %>%">
-                                <div class="cptin">K</div>
-                                <span class="sr-only"><%=data.ratio.coalition %>% Complete (success)</span>
-                            </div>
-                            <div class="progress-bar red" style="width: <%=data.ratio.opposition %>%">
-                                <div class="cptin">O</div>
-                                <span class="sr-only"><%=data.ratio.opposition %>% Complete (danger)</span>
-                            </div>
-                        </div>
 
 
-                        <h2>Število sedežev</h2>
-                        <%
-
+                            <h2>Število sedežev</h2>
+                            <%
                             var allSeats = 0;
-                            for(item in data.seats_per_pg){
+                            for (item in data.seats_per_pg) {
                                 allSeats += data.seats_per_pg[item].seats;
                             }
 
-                        for(item in data.seats_per_pg){
-                        var opocoaColor = "funblue";
-                            if(data.seats_per_pg[item].coalition == "opposition"){
-                                opocoaColor = "red";
-                            }
-                            var index = 0;
-                            var indexInPercent = (data.seats_per_pg[item].seats / allSeats) * 100 ;
-
-                        %>
-                        <div class="other_poslanec clearfix">
-                            <div class="col150">
+                                    for(item in data.seats_per_pg){
+                                var opocoaColor = "funblue";
+                                if (data.seats_per_pg[item].coalition == "opposition") {
+                                    opocoaColor = "red";
+                                }
+                                var index = 0;
+                                var indexInPercent = (data.seats_per_pg[item].seats / allSeats) * 100;
+                            %>
+                            <div class="other_poslanec clearfix">
+                                <div class="col150">
                                 <span class="poslanec_title">
-                                        <%=data.seats_per_pg[item].party.acronym %>
+                                        <%= data.seats_per_pg[item].party.acronym %>
                                     </span>
-                            </div>
-                            <div class="col280">
-                                <div class="progress smallbar avgmin">
-                                    <div style="width: <%=indexInPercent %>%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="<%=indexInPercent %>"
-                                         role="progressbar" class="progress-bar <%=opocoaColor%>">
-                                        <span class="sr-only"><%=indexInPercent %>% Complete</span>
+                                </div>
+                                <div class="col280">
+                                    <div class="progress smallbar avgmin">
+                                        <div style="width: <%= indexInPercent %>%;" aria-valuemax="100"
+                                             aria-valuemin="0" aria-valuenow="<%= indexInPercent %>"
+                                             role="progressbar" class="progress-bar <%= opocoaColor %>">
+                                            <span class="sr-only"><%= indexInPercent %>% Complete</span>
+                                        </div>
+                                        <div class="progress_number">
+                                            <%= data.seats_per_pg[item].seats %>
+                                        </div>
                                     </div>
-                                    <div class="progress_number">
-                                        <%=data.seats_per_pg[item].seats %>
-                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <% } %>
-
-                    </div>
-
-                    <div class="paneltab col-md-4">
-                        <h2>Seje</h2>
-
-                        <div class="sessionsGetSessionByDate">
-
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="lfb0">
-
-                                    <ul>
-<% for(item in data.sessions){ %>
-
-
-
-
-                                        <li class="row">
-                                            <span class="date col-sm-3"><%= data.sessions[item].date%></span>
-                                            <p class=" col-sm-9">
-
-                                                <a href="<%= data.sessions[item].id%>"><%= data.sessions[item].name%></a></p>
-                                        </li>
-                                        <% } %>
-
-                                    </ul>
-
-                                </div>
-                                <div role="tabpanel" class="tab-pane " id="lfb1">
-                                    <ul>
-
-                                        <% for(item in data.sessions){ %>
-
-                                        <li class="row">
-                                            <span class="date col-sm-3"><%= data.sessions[item].date%></span>
-                                            <p class=" col-sm-9">
-                                                <a href="<%= data.sessions[item].id%>"><%= data.sessions[item].name%></a></p>
-                                        </li>
-                                        <% } %>
-
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#lfb0" aria-controls="lfb0" role="tab"
-                                                                          data-toggle="tab">&#8226;
-                                    </a>
-                                </li>
-                                <li role="presentation" class=""><a href="#lfb1" aria-controls="lfb1" role="tab"
-                                                                    data-toggle="tab">&#8226;
-                                    </a>
-                                </li>
-
-                            </ul>
-
+                            <% } %>
 
                         </div>
 
+                        <div class="paneltab col-md-4">
+                            <h2 class="upcase">Seje</h2>
+
+                            <div class="sessionsGetSessionByDate">
+
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="lfb0">
+
+                                        <ul>
+                                            <% for(item in data.sessions){ %>
+
+                                            <li class="row">
+                                                <span class="date col-sm-3"><%= data.sessions[item].date %></span>
+                                                <p class=" col-sm-9">
+
+                                                    <a href="<%= data.sessions[item].id %>"><%= data.sessions[item].name %></a>
+                                                </p>
+                                            </li>
+                                            <% } %>
+
+                                        </ul>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane " id="lfb1">
+                                        <ul>
+
+                                            <% for(item in data.sessions){ %>
+
+                                            <li class="row">
+                                                <span class="date col-sm-3"><%= data.sessions[item].date %></span>
+                                                <p class=" col-sm-9">
+                                                    <a href="<%= data.sessions[item].id %>"><%= data.sessions[item].name %></a>
+                                                </p>
+                                            </li>
+                                            <% } %>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#lfb0" aria-controls="lfb0"
+                                                                              role="tab"
+                                                                              data-toggle="tab">&#8226;
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class=""><a href="#lfb1" aria-controls="lfb1" role="tab"
+                                                                        data-toggle="tab">&#8226;
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+
+                            </div>
+
+                        </div>
+
                     </div>
 
-        </div>
 
+                </div>
 
-    </div>
+                <div class="card-footer">
+                    <div class="card-circle-button card-share"></div>
+                    <div class="card-circle-button card-embed">&lt;/&gt;</div>
+                    <div class="card-circle-button card-info">i</div>
+                </div>
+            </div>
+            <!-- everything below here is part of the page and not part of the card -->
 
-    <div class="card-footer">
-        <div class="card-circle-button card-share"></div>
-        <div class="card-circle-button card-embed">&lt;/&gt;</div>
-        <div class="card-circle-button card-info">i</div>
-    </div>
-</div>
-<!-- everything below here is part of the page and not part of the card -->
+        </div><!-- removeme -->
+    </div><!-- removeme -->
+</div><!-- removeme -->
 
 <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
 <!-- inline temp/js/script.js as <script> -->

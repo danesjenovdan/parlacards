@@ -1,3 +1,20 @@
+
+.card-container{
+  width:auto;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding-left: 0px;
+  padding-right: 0;
+}
+
+.card-footer{
+  width:auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
 .osinfopos .member .image{
   width: 100%;
   height: auto;
@@ -65,4 +82,17 @@ background-image: url("https://cdn.parlameter.si/v1/icons/vodja.svg");
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@media (max-width: 991px) {
+  .verticalmember{
+    height: auto;
+  }
+  .verticalmember .member_data {
+    position: relative;
+    top: auto;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
 }

@@ -1,5 +1,5 @@
 .session-container .paneltab .session_other_members a{
-  width: 15.67%;
+  width: 12.67%;
   float: left;
   margin: 2%;
 }
@@ -10,6 +10,41 @@
 
 
 .session-container .paneltab .member img{
-  margin-top: 12px;
+ /*margin-top: 12px;*/
 }
 
+.other_poslanec{
+  padding-bottom: 10px;
+}
+.progress.hugebar{
+  margin-bottom: 30px;
+}
+
+
+.verticalmember{
+  height: 95px;
+}
+.verticalmember .member_data {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 991px) {
+  .verticalmember{
+    height: auto;
+  }
+  .verticalmember .member_data {
+    position: relative;
+    top: auto;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+.upcase{
+  text-transform: uppercase;
+}

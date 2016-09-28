@@ -49,9 +49,9 @@
       },
       {
         "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
+          "acronym": "NeP",
+          "id": 100,
+          "name": "Nepovezani poslanec"
         },
         "gender": "m",
         "name": "Andrej \u010cu\u0161",
@@ -148,12 +148,13 @@
       },
       {
         "party": {
-          "acronym": "unknown",
-          "id": "unknown",
-          "name": "unknown"
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
         },
-        "name": "unknown_1355",
-        "gov_id": "unknown_1355",
+        "gender": "m",
+        "name": "Sa\u0161a Tabakovi\u0107",
+        "gov_id": "P302",
         "id": 1355
       },
       {
@@ -274,124 +275,149 @@
   ],
   "sessions": [
     {
-      "date": "29.06.2016",
+      "date": "29. 06. 2016",
       "name": "17. nujna seja (skupna seja)",
-      "id": 3490
+      "id": 4438
     },
     {
-      "date": "24.06.2016",
+      "date": "24. 06. 2016",
       "name": "16. nujna seja",
-      "id": 3428
+      "id": 4439
     },
     {
-      "date": "15.06.2016",
+      "date": "15. 06. 2016",
       "name": "15. nujna seja (skupna seja)",
-      "id": 3491
+      "id": 4440
     },
     {
-      "date": "31.05.2016",
+      "date": "31. 05. 2016",
       "name": "14. nujna seja (skupna seja)",
-      "id": 3492
+      "id": 4441
     },
     {
-      "date": "16.05.2016",
+      "date": "16. 05. 2016",
       "name": "13. nujna seja",
-      "id": 3399
+      "id": 4442
     },
     {
-      "date": "06.05.2016",
+      "date": "06. 05. 2016",
       "name": "12. redna seja",
-      "id": 3400
+      "id": 4443
     },
     {
-      "date": "20.04.2016",
+      "date": "20. 04. 2016",
       "name": "12. nujna seja",
-      "id": 3401
+      "id": 4444
     },
     {
-      "date": "06.04.2016",
+      "date": "06. 04. 2016",
       "name": "11. redna seja",
-      "id": 3358
+      "id": 4445
     },
     {
-      "date": "01.04.2016",
+      "date": "01. 04. 2016",
       "name": "11. nujna seja",
-      "id": 3359
+      "id": 4446
     },
     {
-      "date": "08.03.2016",
+      "date": "08. 03. 2016",
       "name": "10. redna seja",
-      "id": 3303
+      "id": 4447
     },
     {
-      "date": "02.03.2016",
+      "date": "02. 03. 2016",
       "name": "10. nujna seja",
-      "id": 3304
+      "id": 4448
     },
     {
-      "date": "23.02.2016",
+      "date": "23. 02. 2016",
       "name": "9. nujna seja",
-      "id": 3305
+      "id": 4449
     },
     {
-      "date": "04.02.2016",
+      "date": "04. 02. 2016",
       "name": "9. redna seja",
-      "id": 3075
+      "id": 4450
     },
     {
-      "date": "13.01.2016",
+      "date": "13. 01. 2016",
       "name": "8. redna seja",
-      "id": 3076
+      "id": 4451
     },
     {
-      "date": "05.11.2015",
+      "date": "05. 11. 2015",
       "name": "7. redna seja",
-      "id": 3077
+      "id": 4452
     },
     {
-      "date": "14.10.2015",
-      "name": "8. nujna seja",
-      "id": 3078
-    },
-    {
-      "date": "14.10.2015",
+      "date": "14. 10. 2015",
       "name": "6. redna seja",
-      "id": 3079
+      "id": 4454
     },
     {
-      "date": "06.10.2015",
+      "date": "14. 10. 2015",
+      "name": "8. nujna seja",
+      "id": 4453
+    },
+    {
+      "date": "06. 10. 2015",
       "name": "5. redna seja",
-      "id": 3081
+      "id": 4456
     },
     {
-      "date": "06.10.2015",
+      "date": "06. 10. 2015",
       "name": "7. nujna seja",
-      "id": 3080
+      "id": 4455
     },
     {
-      "date": "23.06.2015",
+      "date": "23. 06. 2015",
       "name": "4. redna seja",
-      "id": 3082
+      "id": 4457
     },
     {
-      "date": "11.06.2015",
+      "date": "11. 06. 2015",
       "name": "6. nujna seja (skupna seja)",
-      "id": 3083
+      "id": 4458
     },
     {
-      "date": "28.05.2015",
+      "date": "28. 05. 2015",
       "name": "3. redna seja",
-      "id": 3084
+      "id": 4459
     },
     {
-      "date": "10.04.2015",
+      "date": "10. 04. 2015",
       "name": "2. redna seja",
-      "id": 3085
+      "id": 4460
     },
     {
-      "date": "12.02.2015",
+      "date": "12. 02. 2015",
       "name": "5. nujna seja",
-      "id": 3086
+      "id": 4461
+    },
+    {
+      "date": "05. 02. 2015",
+      "name": "1. redna seja",
+      "id": 4462
+    },
+    {
+      "date": "10. 12. 2014",
+      "name": "4. nujna seja",
+      "id": 4463
+    },
+    {
+      "date": "14. 11. 2014",
+      "name": "3. nujna seja",
+      "id": 4464
+    },
+    {
+      "date": "07. 11. 2014",
+      "name": "2. nujna seja (skupna seja)",
+      "id": 4465
+    },
+    {
+      "date": "16. 09. 2014",
+      "name": "1. nujna seja",
+      "id": 4466
     }
   ]
 }
