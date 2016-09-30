@@ -16,10 +16,18 @@
       "date": "15. 07. 2016",
       "events": [
         {
-          "session_name": "21. redna seja",
+          "session": {
+            "date": "11. 07. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "21. redna seja",
+            "id": 4383
+          },
           "speech_id": 414757,
-          "type": "speech",
-          "session_id": "817"
+          "type": "speech"
         }
       ]
     },
@@ -165,22 +173,46 @@
       "date": "14. 06. 2016",
       "events": [
         {
-          "session_name": "20. redna seja",
+          "session": {
+            "date": "13. 06. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "20. redna seja",
+            "id": 4384
+          },
           "speech_id": 415330,
-          "type": "speech",
-          "session_id": "875"
+          "type": "speech"
         },
         {
-          "session_name": "20. redna seja",
+          "session": {
+            "date": "13. 06. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "20. redna seja",
+            "id": 4384
+          },
           "speech_id": 415343,
-          "type": "speech",
-          "session_id": "875"
+          "type": "speech"
         },
         {
-          "session_name": "20. redna seja",
+          "session": {
+            "date": "13. 06. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "20. redna seja",
+            "id": 4384
+          },
           "speech_id": 415381,
-          "type": "speech",
-          "session_id": "875"
+          "type": "speech"
         }
       ]
     },
@@ -313,16 +345,32 @@
       "date": "08. 06. 2016",
       "events": [
         {
-          "session_name": "33. izredna seja",
+          "session": {
+            "date": "03. 06. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "33. izredna seja",
+            "id": 4405
+          },
           "speech_id": 435654,
-          "type": "speech",
-          "session_id": "888"
+          "type": "speech"
         },
         {
-          "session_name": "33. izredna seja",
+          "session": {
+            "date": "03. 06. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "33. izredna seja",
+            "id": 4405
+          },
           "speech_id": 435658,
-          "type": "speech",
-          "session_id": "888"
+          "type": "speech"
         }
       ]
     },
@@ -351,160 +399,368 @@
       "date": "31. 05. 2016",
       "events": [
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487579,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487565,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487552,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487554,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487556,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487558,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487560,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487561,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487563,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487567,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487569,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487571,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487573,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487575,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487577,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487581,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487582,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487584,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487586,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487588,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487590,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487592,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487594,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487595,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487597,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         },
         {
-          "session_name": "7. nujna seja",
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
           "speech_id": 487598,
-          "type": "speech",
-          "session_id": "906"
+          "type": "speech"
         }
       ]
     },
@@ -525,16 +781,32 @@
       "date": "25. 05. 2016",
       "events": [
         {
-          "session_name": "24. redna seja",
+          "session": {
+            "date": "25. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 17,
+              "name": "Odbor za finance in monetarno politiko"
+            },
+            "name": "24. redna seja",
+            "id": 4766
+          },
           "speech_id": 454056,
-          "type": "speech",
-          "session_id": "922"
+          "type": "speech"
         },
         {
-          "session_name": "24. redna seja",
+          "session": {
+            "date": "25. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 17,
+              "name": "Odbor za finance in monetarno politiko"
+            },
+            "name": "24. redna seja",
+            "id": 4766
+          },
           "speech_id": 454100,
-          "type": "speech",
-          "session_id": "922"
+          "type": "speech"
         }
       ]
     }
