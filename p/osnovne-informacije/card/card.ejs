@@ -111,7 +111,7 @@
                 </div>
 
                 <%
-                    if (data.results.social[0].twitter != null || data.results.social[0].facebook != null) {
+                //    if (data.results.social[0].twitter != null || data.results.social[0].facebook != null) {
                 %>
                 <div class="row">
                     <div class="col-xs-2 parlaicon-container text-center btn-lg">
@@ -123,25 +123,29 @@
                             <%
                                 if (data.results.social[0].facebook) {
                             %>
-
                             <a href="<%= data.results.social[0].facebook %>"><span class="parlaicon parlaicon-facebook"></span></a>
+                            <%
+                                }else{
+                            %>
 
                             <%
                                 }
                                 if (data.results.social[0].twitter) {
                             %>
-
                             <a href="<%= data.results.social[0].twitter %>"><span class="parlaicon parlaicon-twitter"></span></a>
+                            <%
+                            }else{
+                            %>
 
                             <%
-                                }
+                            }
                             %>
                         </span>
                     </div>
                 </div>
 
                 <%
-                    }
+                //    }
                 %>
 
 

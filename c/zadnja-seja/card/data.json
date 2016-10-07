@@ -1,113 +1,422 @@
 {
   "tfidf": {
     "session": {
-      "date": "26.05.2016",
-      "name": "32. izredna seja",
-      "id": 3427
+      "date": "11. 7. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "21. redna seja",
+      "id": 4383
     },
     "results": [
       {
-        "term": "vi\u0161egrada",
+        "term": "vra\u010dljivost",
         "scores": {
-          "tf": 5,
+          "tf": 53,
+          "df": 33,
+          "tf-idf": 1.606060606060606
+        }
+      },
+      {
+        "term": "idrijec",
+        "scores": {
+          "tf": 6,
+          "df": 4,
+          "tf-idf": 1.5
+        }
+      },
+      {
+        "term": "cerken",
+        "scores": {
+          "tf": 12,
+          "df": 9,
+          "tf-idf": 1.3333333333333333
+        }
+      },
+      {
+        "term": "erkca",
+        "scores": {
+          "tf": 4,
           "df": 3,
-          "tf-idf": 1.6666666666666667
+          "tf-idf": 1.3333333333333333
         }
       },
       {
-        "term": "lafarjev",
+        "term": "tdk",
         "scores": {
-          "tf": 2,
-          "df": 6,
-          "tf-idf": 0.3333333333333333
+          "tf": 18,
+          "df": 15,
+          "tf-idf": 1.2
         }
       },
       {
-        "term": "oprispev\u010den",
+        "term": "ma\u0161\u010doben",
         "scores": {
-          "tf": 2,
-          "df": 13,
-          "tf-idf": 0.15384615384615385
+          "tf": 15,
+          "df": 14,
+          "tf-idf": 1.0714285714285714
         }
       },
       {
-        "term": "molsti",
+        "term": "environmentati",
         "scores": {
-          "tf": 3,
-          "df": 26,
-          "tf-idf": 0.11538461538461539
+          "tf": 4,
+          "df": 4,
+          "tf-idf": 1.0
         }
       },
       {
-        "term": "kapica",
+        "term": "fishing",
         "scores": {
-          "tf": 21,
-          "df": 201,
-          "tf-idf": 0.1044776119402985
+          "tf": 4,
+          "df": 4,
+          "tf-idf": 1.0
         }
       },
       {
-        "term": "tro\u0161arina",
+        "term": "pokojnik",
         "scores": {
-          "tf": 36,
-          "df": 382,
-          "tf-idf": 0.09424083769633508
+          "tf": 86,
+          "df": 87,
+          "tf-idf": 0.9885057471264368
         }
       },
       {
-        "term": "cigaret",
+        "term": "smrtovnica",
         "scores": {
-          "tf": 2,
-          "df": 22,
-          "tf-idf": 0.09090909090909091
-        }
-      },
-      {
-        "term": "po\u017ere\u0161en",
-        "scores": {
-          "tf": 2,
-          "df": 22,
-          "tf-idf": 0.09090909090909091
-        }
-      },
-      {
-        "term": "regenerirati",
-        "scores": {
-          "tf": 3,
-          "df": 38,
-          "tf-idf": 0.07894736842105263
-        }
-      },
-      {
-        "term": "davek",
-        "scores": {
-          "tf": 211,
-          "df": 2895,
-          "tf-idf": 0.07288428324697754
+          "tf": 10,
+          "df": 11,
+          "tf-idf": 0.9090909090909091
         }
       }
     ]
   },
   "session": {
-    "date": "26.05.2016",
-    "name": "32. izredna seja",
-    "id": 3427
+    "date": "11. 7. 2016",
+    "org": {
+      "acronym": "DZ",
+      "id": 95,
+      "name": "Dr\u017eavni zbor"
+    },
+    "name": "21. redna seja",
+    "id": 4383
   },
   "motions": [
     {
       "session": {
-        "date": "26.05.2016",
-        "name": "32. izredna seja",
-        "id": 3427
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
       },
       "results": {
-        "abstain": 1,
-        "text": "Dnevni red v celoti",
-        "votes_for": 68,
+        "abstain": 8,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Sklep da besedilo predloga za tretjo obravnavo pripravi Vlada",
+        "votes_for": 56,
         "against": 0,
-        "motion_id": 2970,
-        "not_present": 21,
-        "result": "True"
+        "motion_id": 3676,
+        "not_present": 26,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 20,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 85. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 52,
+        "against": 0,
+        "motion_id": 3677,
+        "not_present": 18,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 22,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 83. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 53,
+        "against": 0,
+        "motion_id": 3678,
+        "not_present": 15,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 22,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 80. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 53,
+        "against": 0,
+        "motion_id": 3679,
+        "not_present": 15,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 22,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 79. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 53,
+        "against": 0,
+        "motion_id": 3680,
+        "not_present": 15,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 6,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 79. \u010dlenu 5.7.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+        "votes_for": 23,
+        "against": 45,
+        "motion_id": 3681,
+        "not_present": 16,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 22,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 77 a. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 52,
+        "against": 1,
+        "motion_id": 3682,
+        "not_present": 15,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 23,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 77. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 52,
+        "against": 0,
+        "motion_id": 3683,
+        "not_present": 15,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 21,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 76. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 52,
+        "against": 0,
+        "motion_id": 3684,
+        "not_present": 17,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 22,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 75 b. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 52,
+        "against": 0,
+        "motion_id": 3685,
+        "not_present": 16,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 18,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 70. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 57,
+        "against": 0,
+        "motion_id": 3686,
+        "not_present": 15,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 22,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 52. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 52,
+        "against": 0,
+        "motion_id": 3687,
+        "not_present": 16,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 22,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 50. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 52,
+        "against": 0,
+        "motion_id": 3688,
+        "not_present": 16,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 9,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 48. \u010dlenu 5.7.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+        "votes_for": 15,
+        "against": 51,
+        "motion_id": 3689,
+        "not_present": 15,
+        "result": "False"
+      }
+    },
+    {
+      "session": {
+        "date": "11. 7. 2016",
+        "org": {
+          "acronym": "DZ",
+          "id": 95,
+          "name": "Dr\u017eavni zbor"
+        },
+        "name": "21. redna seja",
+        "id": 4383
+      },
+      "results": {
+        "abstain": 21,
+        "text": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 46. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+        "votes_for": 52,
+        "against": 0,
+        "motion_id": 3690,
+        "not_present": 17,
+        "result": "False"
       }
     }
   ],
@@ -118,7 +427,7 @@
         "id": 1,
         "name": "PS Stranka modernega centra"
       },
-      "percent": 85
+      "percent": 96
     },
     {
       "org": {
@@ -126,7 +435,7 @@
         "id": 3,
         "name": "PS Demokratska Stranka Upokojencev Slovenije"
       },
-      "percent": 90
+      "percent": 98
     },
     {
       "org": {
@@ -134,7 +443,7 @@
         "id": 2,
         "name": "PS italijanske in mad\u017earske narodne skupnosti"
       },
-      "percent": 50
+      "percent": 100
     },
     {
       "org": {
@@ -142,7 +451,7 @@
         "id": 5,
         "name": "PS Slovenska Demokratska Stranka"
       },
-      "percent": 60
+      "percent": 71
     },
     {
       "org": {
@@ -150,7 +459,7 @@
         "id": 7,
         "name": "PS Socialni Demokrati"
       },
-      "percent": 83
+      "percent": 97
     },
     {
       "org": {
@@ -158,7 +467,7 @@
         "id": 6,
         "name": "PS Nova Slovenija"
       },
-      "percent": 60
+      "percent": 80
     },
     {
       "org": {
@@ -167,22 +476,6 @@
         "name": "PS Zdru\u017eena Levica"
       },
       "percent": 50
-    },
-    {
-      "org": {
-        "acronym": "NeP",
-        "id": 100,
-        "name": "Nepovezani poslanec"
-      },
-      "percent": 100
-    },
-    {
-      "org": {
-        "acronym": "PS NP",
-        "id": 97,
-        "name": "PS nepovezanih poslancev"
-      },
-      "percent": 100
     }
   ]
 }
