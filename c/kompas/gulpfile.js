@@ -69,7 +69,7 @@ gulp.task('js', function() {
 
 // js copier (without uglify, for debug)
 gulp.task('js-no-uglify', function() {
-    return gulp.src('card/js/script.js')
+    return gulp.src('card/js/**/*.js')
         .pipe(gulp.dest('temp/js'));
 });
 
