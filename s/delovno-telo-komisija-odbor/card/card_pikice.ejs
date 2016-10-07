@@ -190,22 +190,56 @@
 
                             <div class="paneltab col-md-4">
                                 <h2 class="upcase">Seje</h2>
+
                                 <div class="sessionsGetSessionByDate">
-                                    <div class="scroller" id="dtko-sessions-<%=Math.floor(Math.random() * 10000); %>">
-                                    <ul class="tab-content">
-                                        <% for(item in data.sessions){ %>
-                                        <li  class="clearfix">
+                                    <div class="tab-content">
+                                        <%
+ var sessi = data.sessions;
+ var k = 0;
+for(var j = 0; j < Math.ceil(sessi.length / 8); j++){
+     var activeclass = (j==0) ? "active" : null;
+%>
+                                        <div role="tabpanel" class="tab-pane <%=activeclass%>" id="lfb<%=j%>">
+                                            <ul>
+                                                <% for(var tmpk = k; tmpk<(k+8); tmpk++){ %>
+                                                <% if (typeof sessi[tmpk] !== "undefined"){ %>
+                                                <li class="row">
+                                                    <span class="date col-sm-3"><%= sessi[tmpk].date %></span>
+                                                    <p class=" col-sm-9">
 
-                                            <span class="date col-sm-3"><%= data.sessions[item].date %></span>
-                                            <p class=" col-sm-9">
-                                                <a href="<%= data.sessions[item].id %>"><%= data.sessions[item].name %></a>
-                                            </p>
+                                                        <a href="<%= sessi[tmpk].id %>"><%- sessi[tmpk].name %></a>
+                                                    </p>
+                                                </li>
+                                                <% } %>
+                                                <% } %>
+                                            </ul>
+                                        </div>
 
-                                        </li>
-                                        <% } %>
-                                    </ul>
+<%
+k = tmpk;
+ }
+ %>
                                     </div>
+                                    <ul class="nav nav-tabs" role="tablist">
+
+                                        <%
+                                        for(var j = 0; j < Math.ceil(sessi.length / 8); j++){
+                                            var activeclass = (j==0) ? "active" : null;
+                                        %>
+                                        <li role="presentation" class="<%=activeclass%>"><a href="#lfb<%=j%>" aria-controls="lfb<%=j%>"
+                                                                                  role="tab"
+                                                                                  data-toggle="tab">&#8226;
+                                            </a>
+                                        </li>
+                                        <%
+                                            k = tmpk;
+                                        }
+                                        %>
+                                    </ul>
+
+
                                 </div>
+
                             </div>
 
                         </div>

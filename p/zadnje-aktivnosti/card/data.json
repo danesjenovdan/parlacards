@@ -1,487 +1,814 @@
 {
-    "person": {
-        "id": 69,
-        "name": "Uroš Prikl",
-        "gov_id": "P240",
-        "party": {
-            "name": "Stranka mehkih cur",
-            "id": 2,
-            "acronym": "SMC"
-        }
+  "person": {
+    "party": {
+      "acronym": "IMNS",
+      "id": 2,
+      "name": "PS italijanske in mad\u017earske narodne skupnosti"
     },
-    "results": [{
-        "date": "2015-10-20",
-        "events": [{
-            "option": "za",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1254,
-            "vote_name": "Sklep o razrešitvi podpredsednice in imenovanju podpredsednika Odbora za zunanjo politiko"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1255,
-            "vote_name": "Zakon o ratifikaciji Sporazuma med Vlado Republike Slovenije, Vlado Madžarske in Vlado Italijanske republike o večnacionalnih silah kopenske vojske"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1256,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministra za finance dr. Dušana Mramorja na poslansko vprašanje Mihe Kordiša v zvezi z minimalnim dohodkom.)"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1257,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministra za finance dr. Dušana Mramorja ter ministrice za kulturo mag. Julijane Bizjak Mlakar na poslansko vprašanje dr. Franca Trčka v zvezi z usodo umetniške zbirke Factor banke d.d.)"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1258,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministra za kmetijstvo, gozdarstvo in prehrano mag. Dejana Židana na poslansko vprašanje Zvonka Laha v zvezi s spremembo Operativnega programa razvoja podeželja)"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1259,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministra za pravosodje mag. Gorana Klemenčiča na poslansko vprašanje dr. Vinka Gorenaka v zvezi s pripravo celovite reforme pravosodnega sistema v Republiki Sloveniji)"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1260,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministrice za okolje in prostor Irene Majcen na poslansko vprašanje Franca Breznika v zvezi z rezervnimi skladi večstanovanjskih stavb)"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1261,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministra za gospodarski razvoj in tehnologijo Zdravka Počivalška ter ministrice za okolje in prostor Irene Majcen na poslansko vprašanje dr. Franca Trčka v zvezi z reaktivacijo in revitalizacijo Pohorja)"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1262,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministrice za okolje in prostor Irene Majcen ter ministrice za zdravje Marije Milojke Kolar Celarc na poslansko vprašanje Matjaža Hanžka v zvezi s sanacijo Celjske kotline)"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1263,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministra za kmetijstvo, gozdarstvo in prehrano mag. Dejana Židana na poslansko vprašanje Ljuba Žnidarja v zvezi z ustanovitvijo državnega gozdarskega podjetja)"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1264,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministrice za zdravje Marije Milojke Kolar Celarc na poslansko vprašanje Ljudmile Novak v zvezi s pediatrično oskrbo.)"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1265,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministra za finance dr. Dušana Mramorja na poslansko vprašanje Luke Mesca v zvezi z Družbo za upravljanje terjatev bank (DUTB))"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1266,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministra za kmetijstvo, gozdarstvo in prehrano mag. Dejana Židana na poslansko vprašanje Bojana Podkrajška v zvezi s spremembami Programa razvoja podeželja Republike Slovenije 2014 - 2020.)"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1267,
-            "vote_name": "Predlog sklepa (razpravao odgovoru ministrice za okolje in prostor Irene Majcen na poslansko vprašanje Violete Tomić v zvezi z zakonsko ureditvijo področja dimnikarskih storitev.)"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 1,
-            "type": "ballot",
-            "vote_id": 1268,
-            "vote_name": "Predlog sklepa (razprava o odgovoru ministra za pravosodje mag. Gorana Klemenčiča na poslansko vprašanje mag. Anžeta Logarja v zvezi s sodelovanjem sodne veje oblasti z zakonodajno vejo oblasti pri preiskovanju bančne luknje.)"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 13,
-            "type": "ballot",
-            "vote_id": 1436,
-            "vote_name": "Zakon o dopolnitvi Zakona o obrambi"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 13,
-            "type": "ballot",
-            "vote_id": 1437,
-            "vote_name": "Zakon o dopolnitvi Zakona o obrambi"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 13,
-            "type": "ballot",
-            "vote_id": 1438,
-            "vote_name": "Zakon o dopolnitvi Zakona o obrambi"
-        }]
-    }, {
-        "date": "2015-10-15",
-        "events": [{
-            "session_id": "365",
-            "session_name": "36. nujna seja",
-            "speech_id": 115644,
-            "type": "speech"
-        }, {
-            "session_id": "365",
-            "session_name": "36. nujna seja",
-            "speech_id": 115650,
-            "type": "speech"
-        }, {
-            "session_id": "365",
-            "session_name": "36. nujna seja",
-            "speech_id": 115719,
-            "type": "speech"
-        }]
-    }, {
-        "date": "2015-10-13",
-        "events": [{
-            "session_id": "35",
-            "session_name": "8. nujna seja",
-            "speech_id": 106556,
-            "type": "speech"
-        }, {
-            "session_id": "36",
-            "session_name": "6. redna seja",
-            "speech_id": 106656,
-            "type": "speech"
-        }, {
-            "session_id": "35",
-            "session_name": "8. nujna seja",
-            "speech_id": 106546,
-            "type": "speech"
-        }, {
-            "session_id": "36",
-            "session_name": "6. redna seja",
-            "speech_id": 106635,
-            "type": "speech"
-        }]
-    }, {
-        "date": "2015-10-06",
-        "events": [{
-            "session_id": "366",
-            "session_name": "35. nujna seja (skupna seja)",
-            "speech_id": 115777,
-            "type": "speech"
-        }, {
-            "session_id": "366",
-            "session_name": "35. nujna seja (skupna seja)",
-            "speech_id": 115788,
-            "type": "speech"
-        }, {
-            "session_id": "626",
-            "session_name": "7. nujna seja (skupna seja)",
-            "speech_id": 131249,
-            "type": "speech"
-        }, {
-            "session_id": "626",
-            "session_name": "7. nujna seja (skupna seja)",
-            "speech_id": 131255,
-            "type": "speech"
-        }, {
-            "session_id": "626",
-            "session_name": "7. nujna seja (skupna seja)",
-            "speech_id": 131261,
-            "type": "speech"
-        }, {
-            "session_id": "626",
-            "session_name": "7. nujna seja (skupna seja)",
-            "speech_id": 131425,
-            "type": "speech"
-        }, {
-            "session_id": "626",
-            "session_name": "7. nujna seja (skupna seja)",
-            "speech_id": 131438,
-            "type": "speech"
-        }, {
-            "session_id": "626",
-            "session_name": "7. nujna seja (skupna seja)",
-            "speech_id": 131444,
-            "type": "speech"
-        }, {
-            "session_id": "626",
-            "session_name": "7. nujna seja (skupna seja)",
-            "speech_id": 131450,
-            "type": "speech"
-        }]
-    }, {
-        "date": "2015-10-01",
-        "events": [{
-            "option": "ni",
-            "result": null,
-            "session_id": 15,
-            "type": "ballot",
-            "vote_id": 1441,
-            "vote_name": "Sklep o imenovanju predsednika Odbora za obrambo"
-        }, {
-            "option": "ni",
-            "result": null,
-            "session_id": 15,
-            "type": "ballot",
-            "vote_id": 1442,
-            "vote_name": "Dnevni red v celoti"
-        }, {
-            "option": "ni",
-            "result": null,
-            "session_id": 15,
-            "type": "ballot",
-            "vote_id": 1443,
-            "vote_name": "Sklep o imenovanju predsednika Odbora za obrambo"
-        }]
-    }, {
-        "date": "2015-09-28",
-        "events": [{
-            "option": "proti",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1269,
-            "vote_name": "Zakon o dopolnitvi Zakona o varstvu kulturne dediščine"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1270,
-            "vote_name": "Resolucija o dolgoročnem razvojnem programu policije do leta 2025"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1271,
-            "vote_name": "Zakon o spremembah in dopolnitvah Zakona o preprečevanju omejevanja konkurence"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1272,
-            "vote_name": "Zakon o spremembah in dopolnitvah Zakona o morskem ribištvu"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1273,
-            "vote_name": "Zakon o spremembi in dopolnitvi Zakona o stvarnem premoženju države in samoupravnih lokalnih skupnosti"
-        }]
-    }, {
-        "date": "2015-09-24",
-        "events": [{
-            "session_id": "324",
-            "session_name": "18. nujna seja (skupna seja)",
-            "speech_id": 113280,
-            "type": "speech"
-        }, {
-            "session_id": "324",
-            "session_name": "18. nujna seja (skupna seja)",
-            "speech_id": 113289,
-            "type": "speech"
-        }, {
-            "session_id": "324",
-            "session_name": "18. nujna seja (skupna seja)",
-            "speech_id": 113291,
-            "type": "speech"
-        }, {
-            "session_id": "324",
-            "session_name": "18. nujna seja (skupna seja)",
-            "speech_id": 113322,
-            "type": "speech"
-        }, {
-            "session_id": "324",
-            "session_name": "18. nujna seja (skupna seja)",
-            "speech_id": 113328,
-            "type": "speech"
-        }, {
-            "session_id": "324",
-            "session_name": "18. nujna seja (skupna seja)",
-            "speech_id": 113334,
-            "type": "speech"
-        }, {
-            "session_id": "324",
-            "session_name": "18. nujna seja (skupna seja)",
-            "speech_id": 113347,
-            "type": "speech"
-        }, {
-            "session_id": "324",
-            "session_name": "18. nujna seja (skupna seja)",
-            "speech_id": 113352,
-            "type": "speech"
-        }, {
-            "session_id": "324",
-            "session_name": "18. nujna seja (skupna seja)",
-            "speech_id": 113356,
-            "type": "speech"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1274,
-            "vote_name": "Zakon o nematerializiranih vrednostnih papirjih"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1275,
-            "vote_name": "Zakon o nematerializiranih vrednostnih papirjih"
-        }, {
-            "option": "proti",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1276,
-            "vote_name": "Zakon o nematerializiranih vrednostnih papirjih"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1277,
-            "vote_name": "Zakon o ratifikaciji Okvirnega sporazuma o partnerstvu in sodelovanju med Evropsko unijo in njenimi državami članicami na eni strani ter Mongolijo na drugi strani"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1278,
-            "vote_name": "Zakon o ratifikaciji Sporazuma o nabavi in vzajemnih storitvah (USA-SVN-02) med Ministrstvom za obrambo Republike Slovenije in Ministrstvom za obrambo Združenih držav Amerike"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1279,
-            "vote_name": "Zakon o ratifikaciji Sporazuma o prenosu in vzajemnosti prispevkov v okviru enotnega sklada za reševanje"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1280,
-            "vote_name": "Zakon o ratifikaciji Sporazuma med Vlado Republike Slovenije in Vlado Republike Makedonije o policijskem sodelovanju"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1281,
-            "vote_name": "Zakon o ratifikaciji Sporazuma med Vlado Republike Slovenije in Vlado Republike Kosovo o policijskem sodelovanju"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1282,
-            "vote_name": "Zakon o ratifikaciji Dogovora med Vlado Republike Slovenije in Vlado Avstralije o programu delovnih in počitniških vizumov"
-        }, {
-            "option": "za",
-            "result": null,
-            "session_id": 2,
-            "type": "ballot",
-            "vote_id": 1283,
-            "vote_name": "Zakon o ratifikaciji Pogodbe med Republiko Slovenijo in Republiko Srbijo o pravni pomoči v civilnih in kazenskih zadevah"
-        }]
-    }, {
-        "date": "2015-09-22",
-        "events": [{
-            "option": "za",
-            "result": null,
-            "session_id": 16,
-            "type": "ballot",
-            "vote_id": 1444,
-            "vote_name": "Poročilo o ugotovljenih varnostnih vidikih aktualne begunske krize in ilegalnih migracij (poročilo TAJNO)"
-        }]
-    }, {
-        "date": "2015-09-20",
-        "events": [{
-            "session_id": "2",
-            "session_name": "11. redna seja",
-            "speech_id": 93570,
-            "type": "speech"
-        }, {
-            "session_id": "2",
-            "session_name": "11. redna seja",
-            "speech_id": 93576,
-            "type": "speech"
-        }]
-    }, {
-        "date": "2015-09-17",
-        "events": [{
-            "session_id": "627",
-            "session_name": "17. redna seja",
-            "speech_id": 131481,
-            "type": "speech"
-        }, {
-            "session_id": "627",
-            "session_name": "17. redna seja",
-            "speech_id": 131494,
-            "type": "speech"
-        }, {
-            "session_id": "627",
-            "session_name": "17. redna seja",
-            "speech_id": 131496,
-            "type": "speech"
-        }, {
-            "session_id": "627",
-            "session_name": "17. redna seja",
-            "speech_id": 131500,
-            "type": "speech"
-        }, {
-            "session_id": "627",
-            "session_name": "17. redna seja",
-            "speech_id": 131502,
-            "type": "speech"
-        }, {
-            "session_id": "627",
-            "session_name": "17. redna seja",
-            "speech_id": 131506,
-            "type": "speech"
-        }, {
-            "session_id": "627",
-            "session_name": "17. redna seja",
-            "speech_id": 131514,
-            "type": "speech"
-        }, {
-            "session_id": "627",
-            "session_name": "17. redna seja",
-            "speech_id": 131541,
-            "type": "speech"
-        }, {
-            "session_id": "627",
-            "session_name": "17. redna seja",
-            "speech_id": 131543,
-            "type": "speech"
-        }, {
-            "session_id": "627",
-            "session_name": "17. redna seja",
-            "speech_id": 131549,
-            "type": "speech"
-        }]
-    }]
+    "gender": "m",
+    "name": "Roberto Battelli",
+    "gov_id": "P005",
+    "id": 4
+  },
+  "date_of_card": "15. 07. 2016",
+  "results": [
+    {
+      "date": "15. 07. 2016",
+      "events": [
+        {
+          "session": {
+            "date": "11. 07. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "21. redna seja",
+            "id": 4383
+          },
+          "speech_id": 414757,
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "date": "11. 07. 2016",
+      "events": [
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Sklep da besedilo predloga za tretjo obravnavo pripravi Vlada",
+          "vote_id": 3676,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 85. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3677,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 83. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3678,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 80. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3679,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 79. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3680,
+          "type": "ballot"
+        },
+        {
+          "option": "za",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 79. \u010dlenu 5.7.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+          "vote_id": 3681,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 77 a. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3682,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 77. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3683,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 76. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3684,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 75 b. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3685,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 70. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3686,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 52. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3687,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 50. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3688,
+          "type": "ballot"
+        },
+        {
+          "option": "za",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 48. \u010dlenu 5.7.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+          "vote_id": 3689,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 817,
+          "result": "False",
+          "vote_name": "Zakon o kolektivnem upravljanju avtorske in sorodnih pravic - Amandma: K 46. \u010dlenu 5.7.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+          "vote_id": 3690,
+          "type": "ballot"
+        }
+      ]
+    },
+    {
+      "date": "23. 06. 2016",
+      "events": [
+        {
+          "option": "ni",
+          "session_id": 861,
+          "result": "True",
+          "vote_name": "Dnevni red v celoti",
+          "vote_id": 3988,
+          "type": "ballot"
+        }
+      ]
+    },
+    {
+      "date": "14. 06. 2016",
+      "events": [
+        {
+          "session": {
+            "date": "13. 06. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "20. redna seja",
+            "id": 4384
+          },
+          "speech_id": 415330,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "13. 06. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "20. redna seja",
+            "id": 4384
+          },
+          "speech_id": 415343,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "13. 06. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "20. redna seja",
+            "id": 4384
+          },
+          "speech_id": 415381,
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "date": "13. 06. 2016",
+      "events": [
+        {
+          "option": "kvorum",
+          "session_id": 875,
+          "result": "False",
+          "vote_name": "Zakon o tro\u0161arinah - Glasovanje o zakonu v celoti",
+          "vote_id": 3691,
+          "type": "ballot"
+        },
+        {
+          "option": "za",
+          "session_id": 875,
+          "result": "True",
+          "vote_name": "Sklep o razre\u0161itvi podpredsednika in imenovanju podpredsednice Odbora za zunanjo politiko - Glasovanje",
+          "vote_id": 3692,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 875,
+          "result": "False",
+          "vote_name": "Sklep o imenovanju \u010dlanov Sveta za elektronske komunikacije Republike Slovenije - Glasovanje",
+          "vote_id": 3693,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 875,
+          "result": "False",
+          "vote_name": "Predlog za izvolitev v sodni\u0161ko funkcijo na sodni\u0161ko mesto okro\u017ene sodnice na Delovnem in socialnem sodi\u0161\u010du v Ljubljani in na sodni\u0161ki mesti okro\u017enih sodnikov na Okro\u017enem sodi\u0161\u010du v Ljubljani - Glasovanje o sklepu - Gregor Klun",
+          "vote_id": 3694,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 875,
+          "result": "False",
+          "vote_name": "Predlog za izvolitev v sodni\u0161ko funkcijo na sodni\u0161ko mesto okro\u017ene sodnice na Delovnem in socialnem sodi\u0161\u010du v Ljubljani in na sodni\u0161ki mesti okro\u017enih sodnikov na Okro\u017enem sodi\u0161\u010du v Ljubljani - Glasovanje o sklepu - Karmen Er\u010dulj",
+          "vote_id": 3695,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 875,
+          "result": "False",
+          "vote_name": "Predlog za izvolitev v sodni\u0161ko funkcijo na sodni\u0161ko mesto okro\u017ene sodnice na Delovnem in socialnem sodi\u0161\u010du v Ljubljani in na sodni\u0161ki mesti okro\u017enih sodnikov na Okro\u017enem sodi\u0161\u010du v Ljubljani - Glasovanje o sklepu - \u017diva Gliha",
+          "vote_id": 3696,
+          "type": "ballot"
+        },
+        {
+          "option": "za",
+          "session_id": 875,
+          "result": "True",
+          "vote_name": "Uradno pre\u010di\u0161\u010deno besedilo",
+          "vote_id": 3697,
+          "type": "ballot"
+        },
+        {
+          "option": "za",
+          "session_id": 875,
+          "result": "True",
+          "vote_name": "Proceduralni predlog za prestavitev to\u010dke (Uradno pre\u010di\u0161\u010deno besedilo Pomorskega zakonika)",
+          "vote_id": 3698,
+          "type": "ballot"
+        },
+        {
+          "option": "za",
+          "session_id": 875,
+          "result": "True",
+          "vote_name": "Zakon o ratifikaciji Konvencije med Vlado Republike Slovenije in Vlado Republike Kazahstan o izogibanju dvojnega obdav\u010devanja in prepre\u010devanju dav\u010dnih utaj v zvezi z davki od dohodka in premo\u017eenja, s protokolom - Glasovanje o zakonu v celoti",
+          "vote_id": 3699,
+          "type": "ballot"
+        },
+        {
+          "option": "za",
+          "session_id": 875,
+          "result": "True",
+          "vote_name": "Zakon o ratifikaciji Atenske konvencije o prevozu potnikov in njihove prtljage po morju, 1974, in Protokola 2002 k Atenski konvenciji o prevozu potnikov in njihove prtljage po morju, 1974 - Glasovanje o zakonu v celoti",
+          "vote_id": 3700,
+          "type": "ballot"
+        },
+        {
+          "option": "za",
+          "session_id": 875,
+          "result": "True",
+          "vote_name": "Zakon o ratifikaciji Sporazuma med Vlado Republike Slovenije in Vlado Mad\u017earske o izmenjavi in medsebojnem varovanju tajnih podatkov - Glasovanje o zakonu v celoti",
+          "vote_id": 3701,
+          "type": "ballot"
+        },
+        {
+          "option": "za",
+          "session_id": 875,
+          "result": "True",
+          "vote_name": "Zakon o ratifikaciji Pogodbe med Republiko Slovenijo in Mad\u017earsko o prilagoditvi \u010drte dr\u017eavne meje zaradi vodnogospodarske ureditve potoka Ledava - Glasovanje o zakonu v celoti",
+          "vote_id": 3702,
+          "type": "ballot"
+        },
+        {
+          "option": "za",
+          "session_id": 875,
+          "result": "True",
+          "vote_name": "Zakon o ratifikaciji Sporazuma med Vlado Republike Slovenije in Vlado Italijanske republike o izmenjavi in medsebojnem varovanju tajnih podatkov - Glasovanje o zakonu v celoti",
+          "vote_id": 3703,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 875,
+          "result": "False",
+          "vote_name": "Zakon o sodelovanju delavcev pri upravljanju - Eviden\u010dni sklep o primernosti predloga zakona 21.6.2016",
+          "vote_id": 3704,
+          "type": "ballot"
+        },
+        {
+          "option": "kvorum",
+          "session_id": 875,
+          "result": "False",
+          "vote_name": "Zakon o ugotavljanju katastrskega dohodka - Eviden\u010dni sklep o primernosti predloga zakona 21.6.2016",
+          "vote_id": 3705,
+          "type": "ballot"
+        }
+      ]
+    },
+    {
+      "date": "08. 06. 2016",
+      "events": [
+        {
+          "session": {
+            "date": "03. 06. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "33. izredna seja",
+            "id": 4405
+          },
+          "speech_id": 435654,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "03. 06. 2016",
+            "org": {
+              "acronym": "DZ",
+              "id": 95,
+              "name": "Dr\u017eavni zbor"
+            },
+            "name": "33. izredna seja",
+            "id": 4405
+          },
+          "speech_id": 435658,
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "date": "03. 06. 2016",
+      "events": [
+        {
+          "option": "za",
+          "session_id": 888,
+          "result": "True",
+          "vote_name": "Zakon o ratifikaciji Protokola o pristopu \u010crne gore k Severnoatlantski pogodbi - Glasovanje o zakonu v celoti",
+          "vote_id": 3989,
+          "type": "ballot"
+        },
+        {
+          "option": "za",
+          "session_id": 888,
+          "result": "True",
+          "vote_name": "Dnevni red v celoti",
+          "vote_id": 3990,
+          "type": "ballot"
+        }
+      ]
+    },
+    {
+      "date": "31. 05. 2016",
+      "events": [
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487579,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487565,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487552,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487554,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487556,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487558,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487560,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487561,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487563,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487567,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487569,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487571,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487573,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487575,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487577,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487581,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487582,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487584,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487586,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487588,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487590,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487592,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487594,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487595,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487597,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "31. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 11,
+              "name": "Komisija za narodni skupnosti"
+            },
+            "name": "7. nujna seja",
+            "id": 5347
+          },
+          "speech_id": 487598,
+          "type": "speech"
+        }
+      ]
+    },
+    {
+      "date": "26. 05. 2016",
+      "events": [
+        {
+          "option": "ni",
+          "session_id": 918,
+          "result": "True",
+          "vote_name": "Dnevni red v celoti",
+          "vote_id": 3991,
+          "type": "ballot"
+        }
+      ]
+    },
+    {
+      "date": "25. 05. 2016",
+      "events": [
+        {
+          "session": {
+            "date": "25. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 17,
+              "name": "Odbor za finance in monetarno politiko"
+            },
+            "name": "24. redna seja",
+            "id": 4766
+          },
+          "speech_id": 454056,
+          "type": "speech"
+        },
+        {
+          "session": {
+            "date": "25. 05. 2016",
+            "org": {
+              "acronym": "",
+              "id": 17,
+              "name": "Odbor za finance in monetarno politiko"
+            },
+            "name": "24. redna seja",
+            "id": 4766
+          },
+          "speech_id": 454100,
+          "type": "speech"
+        }
+      ]
+    }
+  ]
 }

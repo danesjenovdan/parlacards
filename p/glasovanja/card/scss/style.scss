@@ -4,11 +4,9 @@ $grey-light: #f0f0f0;
 $grey: #c8c8c8;
 $black: #000000;
 
-overflow: visible !important;
 
 .tag-selector {
   width: 100%;
-
 }
 
 .select2-results__option {
@@ -37,6 +35,10 @@ overflow: visible !important;
   border-radius: 0;
 }
 
+.select2-search__field {
+  line-height: 38px;
+}
+
 .select2-container--default {
   .select2-selection--multiple,
   &.select2-container--focus .select2-selection--multiple {
@@ -62,6 +64,7 @@ overflow: visible !important;
     box-shadow: 0 0 2px 3px rgba($black, 0.15);
   }
   .select2-selection--multiple {
+    $border-radius: 2px;
     .select2-selection__choice__remove {
       color: $white;
       float: right;
@@ -72,7 +75,7 @@ overflow: visible !important;
     .select2-selection__choice {
       background-color: $blue-dark;
       border: none;
-      border-radius: 2px;
+      border-radius: $border-radius;
       color: $white;
       cursor: default;
       float: left;
@@ -81,8 +84,20 @@ overflow: visible !important;
       line-height: 11px;
       margin: 3px 3px 3px 0;
       padding: 5px 4px;
+      position: relative;
       white-space: normal;
       width: 110px;
+      &:after {
+        background: $blue-dark;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        bottom: 0;
+        content: '';
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 110px;
+      }
     }
     .select2-selection__rendered {
       padding: 0 3px;

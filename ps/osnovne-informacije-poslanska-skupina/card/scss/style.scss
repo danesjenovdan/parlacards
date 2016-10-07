@@ -1,0 +1,98 @@
+
+.card-container{
+  width:auto;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding-left: 0px;
+  padding-right: 0;
+}
+
+.card-footer{
+  width:auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+.osinfopos .member .image{
+  width: 100%;
+  height: auto;
+}
+
+.member .parlaicon {
+  float: none;
+}
+
+.parlaicon-vodja{
+background-image: url("https://cdn.parlameter.si/v1/icons/vodja.svg");
+}
+.parlaicon-namestnik{
+  background-image: url("https://cdn.parlameter.si/v1/icons/namestnik.svg");
+}
+.parlaicon-sedezi{
+  background-image: url("https://cdn.parlameter.si/v1/icons/sedezi.svg");
+}
+.parlaicon-kontakt{
+  background-image: url("https://cdn.parlameter.si/v1/icons/kontakt.svg");
+}
+.parlaicon-omrezja{
+  width: 30px;
+  height: 30px;
+  line-height: normal;
+}
+
+.poslanec h3{
+  font-weight:400;
+}
+.member{
+  border-bottom: none;
+}
+.bordertop{
+  border-top: 1px solid #f0f0f0;
+  padding: 10px 0;
+  margin: 5px 0;
+}
+.bordertop0{
+  border-top: 1px solid #f0f0f0;
+  padding: 0;
+  margin: 0;
+}
+
+.parlaicon-container{
+  padding-top: 10px;
+}
+.parlaicon-containermp{
+  padding-top: 50px;
+}
+.poslanec .key{
+  padding: 10px 0;
+}
+
+.col-sm-4 {
+  width: 33.33333333%;
+}
+
+.verticalmember{
+  height: 95px;
+}
+.verticalmember .member_data {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 991px) {
+  .verticalmember{
+    height: auto;
+  }
+  .verticalmember .member_data {
+    position: relative;
+    top: auto;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
