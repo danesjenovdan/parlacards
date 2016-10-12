@@ -4,7 +4,6 @@ $grey-light: #f0f0f0;
 $grey: #c8c8c8;
 $black: #000000;
 
-
 .tag-selector {
   width: 100%;
 }
@@ -18,10 +17,17 @@ $black: #000000;
   position: relative;
   text-overflow: ellipsis;
   white-space: nowrap;
-
+  &--highlighted::after,
+  &:last-child::after,
+  &[aria-selected=true] {
+    display: none;
+  }
+  &--highlighted, &--highlighted[aria-selected] {
+    background: $blue-dark;
+  }
   &::after {
     background-color: #ebebeb;
-    bottom: -1px;
+    bottom: 0px;
     content: '';
     height: 1px;
     left: 22px;
