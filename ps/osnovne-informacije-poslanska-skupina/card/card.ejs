@@ -47,13 +47,13 @@
                                 <div class=" clearfix">
 
 
-                                    <div class="col-xs-2 parlaicon-container parlaicon-containermp text-center btn-lg">
+                                    <div class="col-xs-2 parlaicon-container parlaicon-containermp text-center0 btn-lg">
                                         <span class="parlaicon parlaicon-vodja" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-xs-10 bordertop">
 
                                         <div class="verticalmember">
-                                            <div class="col-sm-4 ">
+                                            <div class="col-xs-3 ">
                                                 <div class="image respo">
 
                                                     <img class="media-object img-circle img-responsive"
@@ -61,7 +61,7 @@
                                                          alt=""/>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-8 member_data">
+                                            <div class="col-xs-9 member_data">
                                                 <h3>
                                                     <%= data.headOfPG.name %>
                                                 </h3>
@@ -85,12 +85,13 @@
 
                                 <% for(item in data.viceOfPG){ %>
                                 <div class=" clearfix">
-                                    <div class="col-xs-2 parlaicon-container parlaicon-containermp text-center btn-lg">
+                                    <!--<div class="col-xs-2 parlaicon-container parlaicon-containermp text-center btn-lg">-->
+                                    <div class="col-xs-2 parlaicon-container parlaicon-containermp text-center0 btn-lg">
                                         <span class="parlaicon parlaicon-namestnik" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-xs-10 bordertop">
                                         <div class="verticalmember">
-                                            <div class="col-sm-4 ">
+                                            <div class="col-xs-3 ">
                                                 <div class="image respo">
 
                                                     <img class="media-object img-circle img-responsive"
@@ -98,7 +99,7 @@
                                                          alt=""/>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-8 member_data">
+                                            <div class="col-xs-9 member_data">
                                                 <h3>
                                                     <%= data.viceOfPG[item].name %>
                                                 </h3>
@@ -120,7 +121,8 @@
                                 <% } %>
 
                                 <div class="clearfix ">
-                                    <div class="col-xs-2 parlaicon-container text-center btn-sm2">
+                                    <!--<div class="col-xs-2 parlaicon-container text-center btn-sm2">-->
+                                    <div class="col-xs-2 parlaicon-container text-center0 btn-sm2">
                                         <span class="parlaicon parlaicon-skupina" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-xs-10 bordertop0">
@@ -132,7 +134,7 @@
                                 </div>
 
                                 <div class="clearfix  ">
-                                    <div class="col-xs-2 parlaicon-container text-center btn-sm2">
+                                    <div class="col-xs-2 parlaicon-container text-center0 btn-sm2">
                                         <span class="parlaicon parlaicon-sedezi" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-xs-10 bordertop0">
@@ -143,7 +145,7 @@
                                 </div>
 
                                 <div class="clearfix  ">
-                                    <div class="col-xs-2 parlaicon-container text-center btn-sm2">
+                                    <div class="col-xs-2 parlaicon-container text-center0 btn-sm2">
                                         <span class="parlaicon parlaicon-kontakt" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-xs-10 bordertop0">
@@ -153,11 +155,9 @@
                                     </div>
                                 </div>
 
-                                <%
-                                if (data.social.twitter != null || data.social.facebook != null) {
-                                %>
+
                                 <div class="clearfix  ">
-                                    <div class="col-xs-2 parlaicon-container text-center btn-sm2">
+                                    <div class="col-xs-2 parlaicon-container text-center0 btn-sm2">
                                         <span class="parlaicon parlaicon-omrezja" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-xs-10 bordertop0">
@@ -182,9 +182,6 @@
                         </span>
                                     </div>
                                 </div>
-                                <%
-                                }
-                                %>
 
                             </div>
 

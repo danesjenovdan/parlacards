@@ -63,7 +63,8 @@ background-image: url("https://cdn.parlameter.si/v1/icons/vodja.svg");
   padding-top: 10px;
 }
 .parlaicon-containermp{
-  padding-top: 50px;
+  //padding-top: 50px;
+  padding-top: 25px;
 }
 .poslanec .key{
   padding: 10px 0;
@@ -74,7 +75,12 @@ background-image: url("https://cdn.parlameter.si/v1/icons/vodja.svg");
 }
 
 .verticalmember{
-  height: 95px;
+  height: 40px;
+}
+.verticalmember .col-xs-3{
+  //width: 19%;
+  width: 65px;
+  padding: 0;
 }
 .verticalmember .member_data {
   position: relative;
@@ -82,6 +88,12 @@ background-image: url("https://cdn.parlameter.si/v1/icons/vodja.svg");
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+.verticalmember .img-responsive{
+  width:40px;
+}
+.verticalmember .member_data h4 {
+  margin: 5px 0;
 }
 
 @media (max-width: 991px) {
