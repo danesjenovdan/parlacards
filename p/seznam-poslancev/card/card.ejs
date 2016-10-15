@@ -33,9 +33,21 @@
             <h1>Seznam poslancev</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
-
-
-
+          <ul class="person-list">
+            <li class="headers">
+              <div class="column wider">Ime</div>
+              <div class="column">PS</div>
+              <div class="column">Okraj</div>
+            </li>
+            <% data.data.forEach(function(result) { %>
+            <li class="person">
+              <img class="portrait column" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= result.person.gov_id %>.png" />
+              <div class="column wider name"><%= result.person.name %></div>
+              <div class="column"><%= result.person.party.acronym %></div>
+              <div class="column"><%= result.person.district || 'okraj ni vnešen' %></div>
+            </li>
+            <% }) %>
+          </ul>
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>
