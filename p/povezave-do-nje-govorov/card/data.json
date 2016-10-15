@@ -5,2038 +5,3544 @@
       "id": 8,
       "name": "PS Zdru\u017eena Levica"
     },
+    "gender": "f",
     "name": "Violeta Tomi\u0107",
     "gov_id": "P289",
     "id": 80
   },
   "results": [
     {
-      "date": "2014-08-25",
+      "date": "06. 09. 2016",
       "speeches": [
         {
-          "session_name": "1. izredna seja",
-          "speech_id": 297926,
-          "session_id": 3074
+          "session_name": "20. redna seja (skupna seja)",
+          "speech_id": 467463,
+          "session_id": 5014
+        },
+        {
+          "session_name": "20. redna seja (skupna seja)",
+          "speech_id": 467461,
+          "session_id": 5014
+        },
+        {
+          "session_name": "20. redna seja (skupna seja)",
+          "speech_id": 467489,
+          "session_id": 5014
+        },
+        {
+          "session_name": "20. redna seja (skupna seja)",
+          "speech_id": 467491,
+          "session_id": 5014
+        },
+        {
+          "session_name": "20. redna seja (skupna seja)",
+          "speech_id": 467505,
+          "session_id": 5014
         }
       ]
     },
     {
-      "date": "2014-08-28",
+      "date": "24. 08. 2016",
       "speeches": [
         {
-          "session_name": "2. izredna seja",
-          "speech_id": 297720,
-          "session_id": 3073
-        },
-        {
-          "session_name": "2. izredna seja",
-          "speech_id": 297732,
-          "session_id": 3073
-        },
-        {
-          "session_name": "2. izredna seja",
-          "speech_id": 297734,
-          "session_id": 3073
-        },
-        {
-          "session_name": "2. izredna seja",
-          "speech_id": 297819,
-          "session_id": 3073
+          "session_name": "41. nujna seja",
+          "speech_id": 473615,
+          "session_id": 5121
         }
       ]
     },
     {
-      "date": "2014-09-18",
+      "date": "15. 07. 2016",
       "speeches": [
         {
-          "session_name": "3. izredna seja",
-          "speech_id": 297335,
-          "session_id": 3072
-        },
-        {
-          "session_name": "3. izredna seja",
-          "speech_id": 297435,
-          "session_id": 3072
+          "session_name": "69. redna seja",
+          "speech_id": 442205,
+          "session_id": 4468
         }
       ]
     },
     {
-      "date": "2014-09-30",
+      "date": "14. 07. 2016",
       "speeches": [
         {
-          "session_name": "4. izredna seja",
-          "speech_id": 297259,
-          "session_id": 3071
+          "session_name": "21. redna seja",
+          "speech_id": 414682,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 414523,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 414575,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 414589,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 414603,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 414676,
+          "session_id": 4383
         }
       ]
     },
     {
-      "date": "2014-10-15",
+      "date": "13. 07. 2016",
       "speeches": [
         {
-          "session_name": "5. izredna seja",
-          "speech_id": 296998,
-          "session_id": 3070
+          "session_name": "21. redna seja",
+          "speech_id": 414321,
+          "session_id": 4383
         },
         {
-          "session_name": "5. izredna seja",
-          "speech_id": 297124,
-          "session_id": 3070
+          "session_name": "21. redna seja",
+          "speech_id": 414498,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 414506,
+          "session_id": 4383
         }
       ]
     },
     {
-      "date": "2014-11-05",
+      "date": "12. 07. 2016",
       "speeches": [
         {
-          "session_name": "2. nujna seja",
-          "speech_id": 307233,
-          "session_id": 3235
+          "session_name": "21. redna seja",
+          "speech_id": 414169,
+          "session_id": 4383
         }
       ]
     },
     {
-      "date": "2014-11-13",
+      "date": "11. 07. 2016",
       "speeches": [
         {
-          "session_name": "3. nujna seja",
-          "speech_id": 307206,
-          "session_id": 3234
+          "session_name": "21. redna seja",
+          "speech_id": 413891,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 413895,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 413899,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 414003,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 414007,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 414011,
+          "session_id": 4383
         }
       ]
     },
     {
-      "date": "2014-11-17",
+      "date": "08. 07. 2016",
       "speeches": [
         {
-          "session_name": "2. redna seja",
-          "speech_id": 276363,
-          "session_id": 3045
-        },
-        {
-          "session_name": "2. redna seja",
-          "speech_id": 276355,
-          "session_id": 3045
-        },
-        {
-          "session_name": "2. redna seja",
-          "speech_id": 276359,
-          "session_id": 3045
+          "session_name": "39. nujna seja",
+          "speech_id": 473672,
+          "session_id": 5123
         }
       ]
     },
     {
-      "date": "2014-11-18",
+      "date": "29. 06. 2016",
       "speeches": [
         {
-          "session_name": "2. redna seja",
-          "speech_id": 276789,
-          "session_id": 3045
+          "session_name": "19. redna seja",
+          "speech_id": 467577,
+          "session_id": 5016
         },
         {
-          "session_name": "2. redna seja",
-          "speech_id": 276793,
-          "session_id": 3045
+          "session_name": "19. redna seja",
+          "speech_id": 467606,
+          "session_id": 5016
         }
       ]
     },
     {
-      "date": "2014-11-19",
+      "date": "28. 06. 2016",
       "speeches": [
         {
-          "session_name": "2. redna seja",
-          "speech_id": 276876,
-          "session_id": 3045
+          "session_name": "23. redna seja",
+          "speech_id": 488113,
+          "session_id": 5361
         }
       ]
     },
     {
-      "date": "2014-12-04",
+      "date": "24. 06. 2016",
       "speeches": [
         {
-          "session_name": "7. izredna seja",
-          "speech_id": 296761,
-          "session_id": 3068
-        },
-        {
-          "session_name": "7. izredna seja",
-          "speech_id": 296763,
-          "session_id": 3068
+          "session_name": "16. nujna seja",
+          "speech_id": 440402,
+          "session_id": 4439
         }
       ]
     },
     {
-      "date": "2014-12-05",
+      "date": "15. 06. 2016",
       "speeches": [
         {
-          "session_name": "7. izredna seja",
-          "speech_id": 296908,
-          "session_id": 3068
+          "session_name": "20. redna seja",
+          "speech_id": 415529,
+          "session_id": 4384
+        },
+        {
+          "session_name": "20. redna seja",
+          "speech_id": 415620,
+          "session_id": 4384
         }
       ]
     },
     {
-      "date": "2014-12-18",
+      "date": "14. 06. 2016",
       "speeches": [
         {
-          "session_name": "3. redna seja",
-          "speech_id": 275916,
-          "session_id": 3044
+          "session_name": "20. redna seja",
+          "speech_id": 415339,
+          "session_id": 4384
         },
         {
-          "session_name": "3. redna seja",
-          "speech_id": 275964,
-          "session_id": 3044
+          "session_name": "20. redna seja",
+          "speech_id": 415411,
+          "session_id": 4384
         }
       ]
     },
     {
-      "date": "2014-12-19",
+      "date": "13. 06. 2016",
       "speeches": [
         {
-          "session_name": "3. redna seja",
-          "speech_id": 276056,
-          "session_id": 3044
+          "session_name": "20. redna seja",
+          "speech_id": 415060,
+          "session_id": 4384
         },
         {
-          "session_name": "3. redna seja",
-          "speech_id": 276224,
-          "session_id": 3044
+          "session_name": "20. redna seja",
+          "speech_id": 415048,
+          "session_id": 4384
+        },
+        {
+          "session_name": "20. redna seja",
+          "speech_id": 415054,
+          "session_id": 4384
         }
       ]
     },
     {
-      "date": "2015-01-26",
+      "date": "11. 06. 2016",
       "speeches": [
         {
-          "session_name": "4. redna seja",
-          "speech_id": 265416,
-          "session_id": 3043
+          "session_name": "21. redna seja",
+          "speech_id": 413609,
+          "session_id": 4383
         },
         {
-          "session_name": "4. redna seja",
-          "speech_id": 265420,
-          "session_id": 3043
+          "session_name": "21. redna seja",
+          "speech_id": 413613,
+          "session_id": 4383
         },
         {
-          "session_name": "4. redna seja",
-          "speech_id": 265652,
-          "session_id": 3043
+          "session_name": "21. redna seja",
+          "speech_id": 413617,
+          "session_id": 4383
         },
         {
-          "session_name": "4. redna seja",
-          "speech_id": 265656,
-          "session_id": 3043
+          "session_name": "21. redna seja",
+          "speech_id": 413721,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 413725,
+          "session_id": 4383
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 413729,
+          "session_id": 4383
         }
       ]
     },
     {
-      "date": "2015-01-27",
+      "date": "24. 05. 2016",
       "speeches": [
         {
-          "session_name": "4. redna seja",
-          "speech_id": 265742,
-          "session_id": 3043
+          "session_name": "31. nujna seja (skupna seja)",
+          "speech_id": 444545,
+          "session_id": 4553
         },
         {
-          "session_name": "4. redna seja",
-          "speech_id": 265806,
-          "session_id": 3043
+          "session_name": "31. nujna seja (skupna seja)",
+          "speech_id": 444572,
+          "session_id": 4553
         },
         {
-          "session_name": "4. redna seja",
-          "speech_id": 265858,
-          "session_id": 3043
+          "session_name": "36. nujna seja (skupna seja)",
+          "speech_id": 473816,
+          "session_id": 5128
+        },
+        {
+          "session_name": "36. nujna seja (skupna seja)",
+          "speech_id": 473789,
+          "session_id": 5128
         }
       ]
     },
     {
-      "date": "2015-01-29",
+      "date": "20. 05. 2016",
       "speeches": [
         {
-          "session_name": "4. redna seja",
-          "speech_id": 266193,
-          "session_id": 3043
+          "session_name": "19. redna seja",
+          "speech_id": 417360,
+          "session_id": 4385
+        },
+        {
+          "session_name": "19. redna seja",
+          "speech_id": 417330,
+          "session_id": 4385
         }
       ]
     },
     {
-      "date": "2015-01-30",
+      "date": "19. 05. 2016",
       "speeches": [
         {
-          "session_name": "4. redna seja",
-          "speech_id": 266231,
-          "session_id": 3043
-        },
-        {
-          "session_name": "4. redna seja",
-          "speech_id": 266289,
-          "session_id": 3043
-        },
-        {
-          "session_name": "4. redna seja",
-          "speech_id": 266386,
-          "session_id": 3043
+          "session_name": "19. redna seja",
+          "speech_id": 417257,
+          "session_id": 4385
         }
       ]
     },
     {
-      "date": "2015-02-10",
+      "date": "18. 05. 2016",
       "speeches": [
         {
-          "session_name": "5. nujna seja",
-          "speech_id": 307032,
-          "session_id": 3232
+          "session_name": "19. redna seja",
+          "speech_id": 416913,
+          "session_id": 4385
+        },
+        {
+          "session_name": "19. redna seja",
+          "speech_id": 416991,
+          "session_id": 4385
+        },
+        {
+          "session_name": "19. redna seja",
+          "speech_id": 417027,
+          "session_id": 4385
         }
       ]
     },
     {
-      "date": "2015-02-12",
+      "date": "17. 05. 2016",
       "speeches": [
         {
-          "session_name": "5. nujna seja",
-          "speech_id": 298835,
-          "session_id": 3086
+          "session_name": "19. redna seja",
+          "speech_id": 416602,
+          "session_id": 4385
         },
         {
-          "session_name": "5. nujna seja",
-          "speech_id": 298839,
-          "session_id": 3086
+          "session_name": "19. redna seja",
+          "speech_id": 416630,
+          "session_id": 4385
         },
         {
-          "session_name": "5. nujna seja",
-          "speech_id": 298844,
-          "session_id": 3086
+          "session_name": "19. redna seja",
+          "speech_id": 416734,
+          "session_id": 4385
+        },
+        {
+          "session_name": "19. redna seja",
+          "speech_id": 416762,
+          "session_id": 4385
         }
       ]
     },
     {
-      "date": "2015-02-19",
+      "date": "16. 05. 2016",
       "speeches": [
         {
-          "session_name": "9. izredna seja",
-          "speech_id": 296078,
-          "session_id": 3066
+          "session_name": "19. redna seja",
+          "speech_id": 416419,
+          "session_id": 4385
         },
         {
-          "session_name": "9. izredna seja",
-          "speech_id": 296145,
-          "session_id": 3066
+          "session_name": "19. redna seja",
+          "speech_id": 416425,
+          "session_id": 4385
         },
         {
-          "session_name": "9. izredna seja",
-          "speech_id": 296153,
-          "session_id": 3066
+          "session_name": "19. redna seja",
+          "speech_id": 416439,
+          "session_id": 4385
+        },
+        {
+          "session_name": "19. redna seja",
+          "speech_id": 416443,
+          "session_id": 4385
+        },
+        {
+          "session_name": "19. redna seja",
+          "speech_id": 416447,
+          "session_id": 4385
+        },
+        {
+          "session_name": "13. nujna seja",
+          "speech_id": 440438,
+          "session_id": 4442
         }
       ]
     },
     {
-      "date": "2015-02-20",
+      "date": "10. 05. 2016",
       "speeches": [
         {
-          "session_name": "9. izredna seja",
-          "speech_id": 296490,
-          "session_id": 3066
-        },
-        {
-          "session_name": "9. izredna seja",
-          "speech_id": 296504,
-          "session_id": 3066
-        },
-        {
-          "session_name": "9. izredna seja",
-          "speech_id": 296530,
-          "session_id": 3066
+          "session_name": "33. nujna seja",
+          "speech_id": 473897,
+          "session_id": 5131
         }
       ]
     },
     {
-      "date": "2015-03-02",
+      "date": "05. 05. 2016",
       "speeches": [
         {
-          "session_name": "5. redna seja",
-          "speech_id": 264209,
-          "session_id": 3042
+          "session_name": "31. izredna seja",
+          "speech_id": 435780,
+          "session_id": 4407
         },
         {
-          "session_name": "5. redna seja",
-          "speech_id": 264213,
-          "session_id": 3042
+          "session_name": "31. nujna seja",
+          "speech_id": 467905,
+          "session_id": 5023
         },
         {
-          "session_name": "5. redna seja",
-          "speech_id": 264217,
-          "session_id": 3042
+          "session_name": "31. nujna seja",
+          "speech_id": 467947,
+          "session_id": 5023
         },
         {
-          "session_name": "5. redna seja",
-          "speech_id": 264432,
-          "session_id": 3042
+          "session_name": "31. nujna seja",
+          "speech_id": 468006,
+          "session_id": 5023
         },
         {
-          "session_name": "5. redna seja",
-          "speech_id": 264436,
-          "session_id": 3042
+          "session_name": "32. nujna seja",
+          "speech_id": 473955,
+          "session_id": 5132
         },
         {
-          "session_name": "5. redna seja",
-          "speech_id": 264440,
-          "session_id": 3042
+          "session_name": "32. nujna seja",
+          "speech_id": 473997,
+          "session_id": 5132
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 474054,
+          "session_id": 5132
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 477528,
+          "session_id": 5184
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 477544,
+          "session_id": 5184
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 477566,
+          "session_id": 5184
+        },
+        {
+          "session_name": "21. redna seja",
+          "speech_id": 477568,
+          "session_id": 5184
         }
       ]
     },
     {
-      "date": "2015-03-03",
+      "date": "03. 05. 2016",
       "speeches": [
         {
-          "session_name": "5. redna seja",
-          "speech_id": 264539,
-          "session_id": 3042
+          "session_name": "56. nujna seja (skupna seja)",
+          "speech_id": 454295,
+          "session_id": 4768
         },
         {
-          "session_name": "5. redna seja",
-          "speech_id": 264615,
-          "session_id": 3042
+          "session_name": "56. nujna seja (skupna seja)",
+          "speech_id": 454322,
+          "session_id": 4768
         },
         {
-          "session_name": "5. redna seja",
-          "speech_id": 264712,
-          "session_id": 3042
+          "session_name": "31. nujna seja (skupna seja)",
+          "speech_id": 474143,
+          "session_id": 5133
         },
         {
-          "session_name": "5. redna seja",
-          "speech_id": 264732,
-          "session_id": 3042
-        },
-        {
-          "session_name": "5. redna seja",
-          "speech_id": 264748,
-          "session_id": 3042
+          "session_name": "31. nujna seja (skupna seja)",
+          "speech_id": 474170,
+          "session_id": 5133
         }
       ]
     },
     {
-      "date": "2015-03-09",
+      "date": "21. 04. 2016",
       "speeches": [
         {
-          "session_name": "5. redna seja",
-          "speech_id": 265275,
-          "session_id": 3042
+          "session_name": "18. redna seja",
+          "speech_id": 418149,
+          "session_id": 4386
         },
         {
-          "session_name": "5. redna seja",
-          "speech_id": 265309,
-          "session_id": 3042
+          "session_name": "18. redna seja",
+          "speech_id": 418135,
+          "session_id": 4386
         },
         {
-          "session_name": "5. redna seja",
-          "speech_id": 265327,
-          "session_id": 3042
+          "session_name": "18. redna seja",
+          "speech_id": 418212,
+          "session_id": 4386
         }
       ]
     },
     {
-      "date": "2015-03-26",
-      "speeches": [
-        {
-          "session_name": "11. izredna seja",
-          "speech_id": 295693,
-          "session_id": 3064
-        },
-        {
-          "session_name": "11. izredna seja",
-          "speech_id": 295827,
-          "session_id": 3064
-        }
-      ]
-    },
-    {
-      "date": "2015-03-27",
-      "speeches": [
-        {
-          "session_name": "6. redna seja",
-          "speech_id": 263452,
-          "session_id": 3041
-        },
-        {
-          "session_name": "6. redna seja",
-          "speech_id": 263483,
-          "session_id": 3041
-        }
-      ]
-    },
-    {
-      "date": "2015-03-30",
-      "speeches": [
-        {
-          "session_name": "6. redna seja",
-          "speech_id": 263602,
-          "session_id": 3041
-        },
-        {
-          "session_name": "6. redna seja",
-          "speech_id": 263606,
-          "session_id": 3041
-        },
-        {
-          "session_name": "6. redna seja",
-          "speech_id": 263610,
-          "session_id": 3041
-        }
-      ]
-    },
-    {
-      "date": "2015-04-20",
-      "speeches": [
-        {
-          "session_name": "7. redna seja",
-          "speech_id": 288090,
-          "session_id": 3040
-        },
-        {
-          "session_name": "7. redna seja",
-          "speech_id": 288094,
-          "session_id": 3040
-        },
-        {
-          "session_name": "7. redna seja",
-          "speech_id": 288166,
-          "session_id": 3040
-        },
-        {
-          "session_name": "7. redna seja",
-          "speech_id": 288170,
-          "session_id": 3040
-        },
-        {
-          "session_name": "7. redna seja",
-          "speech_id": 288174,
-          "session_id": 3040
-        }
-      ]
-    },
-    {
-      "date": "2015-05-13",
-      "speeches": [
-        {
-          "session_name": "13. izredna seja",
-          "speech_id": 295534,
-          "session_id": 3062
-        }
-      ]
-    },
-    {
-      "date": "2015-05-18",
-      "speeches": [
-        {
-          "session_name": "8. redna seja",
-          "speech_id": 287503,
-          "session_id": 3039
-        },
-        {
-          "session_name": "8. redna seja",
-          "speech_id": 287507,
-          "session_id": 3039
-        },
-        {
-          "session_name": "8. redna seja",
-          "speech_id": 287511,
-          "session_id": 3039
-        },
-        {
-          "session_name": "8. redna seja",
-          "speech_id": 287543,
-          "session_id": 3039
-        },
-        {
-          "session_name": "8. redna seja",
-          "speech_id": 287547,
-          "session_id": 3039
-        },
-        {
-          "session_name": "8. redna seja",
-          "speech_id": 287551,
-          "session_id": 3039
-        }
-      ]
-    },
-    {
-      "date": "2015-05-19",
-      "speeches": [
-        {
-          "session_name": "8. redna seja",
-          "speech_id": 287564,
-          "session_id": 3039
-        },
-        {
-          "session_name": "8. redna seja",
-          "speech_id": 287596,
-          "session_id": 3039
-        },
-        {
-          "session_name": "8. redna seja",
-          "speech_id": 287646,
-          "session_id": 3039
-        }
-      ]
-    },
-    {
-      "date": "2015-05-22",
-      "speeches": [
-        {
-          "session_name": "14. izredna seja",
-          "speech_id": 295376,
-          "session_id": 3061
-        }
-      ]
-    },
-    {
-      "date": "2015-05-28",
-      "speeches": [
-        {
-          "session_name": "3. redna seja",
-          "speech_id": 298740,
-          "session_id": 3084
-        }
-      ]
-    },
-    {
-      "date": "2015-06-04",
+      "date": "20. 04. 2016",
       "speeches": [
         {
           "session_name": "12. nujna seja",
-          "speech_id": 300300,
-          "session_id": 3123
+          "speech_id": 440527,
+          "session_id": 4444
         }
       ]
     },
     {
-      "date": "2015-06-15",
+      "date": "19. 04. 2016",
       "speeches": [
         {
-          "session_name": "9. redna seja",
-          "speech_id": 286139,
-          "session_id": 3038
+          "session_name": "18. redna seja",
+          "speech_id": 417754,
+          "session_id": 4386
         },
         {
-          "session_name": "9. redna seja",
-          "speech_id": 286143,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 286275,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 286279,
-          "session_id": 3038
+          "session_name": "18. redna seja",
+          "speech_id": 417892,
+          "session_id": 4386
         }
       ]
     },
     {
-      "date": "2015-06-16",
+      "date": "18. 04. 2016",
       "speeches": [
         {
-          "session_name": "9. redna seja",
-          "speech_id": 286332,
-          "session_id": 3038
+          "session_name": "18. redna seja",
+          "speech_id": 417579,
+          "session_id": 4386
         },
         {
-          "session_name": "9. redna seja",
-          "speech_id": 286369,
-          "session_id": 3038
+          "session_name": "18. redna seja",
+          "speech_id": 417575,
+          "session_id": 4386
         },
         {
-          "session_name": "9. redna seja",
-          "speech_id": 286401,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 286405,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 286429,
-          "session_id": 3038
+          "session_name": "18. redna seja",
+          "speech_id": 417583,
+          "session_id": 4386
         }
       ]
     },
     {
-      "date": "2015-06-18",
+      "date": "09. 04. 2016",
       "speeches": [
         {
-          "session_name": "9. redna seja",
-          "speech_id": 286737,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 286823,
-          "session_id": 3038
+          "session_name": "30. nujna seja",
+          "speech_id": 474188,
+          "session_id": 5134
         }
       ]
     },
     {
-      "date": "2015-06-19",
-      "speeches": [
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 286982,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 287006,
-          "session_id": 3038
-        }
-      ]
-    },
-    {
-      "date": "2015-06-22",
-      "speeches": [
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 287167,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 287171,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 287173,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 287177,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 287183,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 287213,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 287217,
-          "session_id": 3038
-        },
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 287221,
-          "session_id": 3038
-        }
-      ]
-    },
-    {
-      "date": "2015-06-23",
-      "speeches": [
-        {
-          "session_name": "4. redna seja",
-          "speech_id": 298583,
-          "session_id": 3082
-        },
-        {
-          "session_name": "4. redna seja",
-          "speech_id": 298586,
-          "session_id": 3082
-        },
-        {
-          "session_name": "4. redna seja",
-          "speech_id": 298588,
-          "session_id": 3082
-        },
-        {
-          "session_name": "4. redna seja",
-          "speech_id": 298590,
-          "session_id": 3082
-        },
-        {
-          "session_name": "4. redna seja",
-          "speech_id": 298592,
-          "session_id": 3082
-        },
-        {
-          "session_name": "4. redna seja",
-          "speech_id": 298633,
-          "session_id": 3082
-        },
-        {
-          "session_name": "4. redna seja",
-          "speech_id": 298637,
-          "session_id": 3082
-        },
-        {
-          "session_name": "4. redna seja",
-          "speech_id": 298639,
-          "session_id": 3082
-        }
-      ]
-    },
-    {
-      "date": "2015-07-09",
-      "speeches": [
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 284323,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 284375,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 284433,
-          "session_id": 3037
-        }
-      ]
-    },
-    {
-      "date": "2015-07-10",
-      "speeches": [
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 284755,
-          "session_id": 3037
-        }
-      ]
-    },
-    {
-      "date": "2015-07-14",
-      "speeches": [
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285179,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285218,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285436,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285440,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285444,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285600,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285604,
-          "session_id": 3037
-        }
-      ]
-    },
-    {
-      "date": "2015-07-15",
-      "speeches": [
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285619,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285763,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285765,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285769,
-          "session_id": 3037
-        },
-        {
-          "session_name": "10. redna seja",
-          "speech_id": 285892,
-          "session_id": 3037
-        }
-      ]
-    },
-    {
-      "date": "2015-07-17",
-      "speeches": [
-        {
-          "session_name": "16. izredna seja",
-          "speech_id": 295097,
-          "session_id": 3059
-        },
-        {
-          "session_name": "16. izredna seja",
-          "speech_id": 295105,
-          "session_id": 3059
-        },
-        {
-          "session_name": "16. izredna seja",
-          "speech_id": 295129,
-          "session_id": 3059
-        },
-        {
-          "session_name": "16. izredna seja",
-          "speech_id": 295175,
-          "session_id": 3059
-        }
-      ]
-    },
-    {
-      "date": "2015-09-10",
+      "date": "06. 04. 2016",
       "speeches": [
         {
           "session_name": "11. redna seja",
-          "speech_id": 306370,
-          "session_id": 3216
-        },
-        {
-          "session_name": "18. nujna seja",
-          "speech_id": 306324,
-          "session_id": 3215
+          "speech_id": 440570,
+          "session_id": 4445
         },
         {
           "session_name": "11. redna seja",
-          "speech_id": 306400,
-          "session_id": 3216
+          "speech_id": 440592,
+          "session_id": 4445
         },
         {
           "session_name": "11. redna seja",
-          "speech_id": 306410,
-          "session_id": 3216
+          "speech_id": 440600,
+          "session_id": 4445
+        },
+        {
+          "session_name": "20. redna seja",
+          "speech_id": 477656,
+          "session_id": 5187
+        },
+        {
+          "session_name": "19. redna seja",
+          "speech_id": 480890,
+          "session_id": 5245
+        },
+        {
+          "session_name": "19. redna seja",
+          "speech_id": 480908,
+          "session_id": 5245
+        },
+        {
+          "session_name": "19. redna seja",
+          "speech_id": 480926,
+          "session_id": 5245
+        },
+        {
+          "session_name": "19. redna seja",
+          "speech_id": 480938,
+          "session_id": 5245
         }
       ]
     },
     {
-      "date": "2015-09-21",
+      "date": "01. 04. 2016",
       "speeches": [
         {
-          "session_name": "11. redna seja",
-          "speech_id": 293491,
-          "session_id": 3036
+          "session_name": "11. nujna seja",
+          "speech_id": 440688,
+          "session_id": 4446
         },
         {
-          "session_name": "11. redna seja",
-          "speech_id": 293495,
-          "session_id": 3036
+          "session_name": "11. nujna seja",
+          "speech_id": 440690,
+          "session_id": 4446
         },
         {
-          "session_name": "11. redna seja",
-          "speech_id": 293627,
-          "session_id": 3036
+          "session_name": "11. nujna seja",
+          "speech_id": 440692,
+          "session_id": 4446
         },
         {
-          "session_name": "11. redna seja",
-          "speech_id": 293631,
-          "session_id": 3036
+          "session_name": "11. nujna seja",
+          "speech_id": 440694,
+          "session_id": 4446
+        },
+        {
+          "session_name": "11. nujna seja",
+          "speech_id": 440697,
+          "session_id": 4446
+        },
+        {
+          "session_name": "11. nujna seja",
+          "speech_id": 440699,
+          "session_id": 4446
         }
       ]
     },
     {
-      "date": "2015-09-22",
+      "date": "24. 03. 2016",
       "speeches": [
         {
-          "session_name": "11. redna seja",
-          "speech_id": 293724,
-          "session_id": 3036
+          "session_name": "17. redna seja",
+          "speech_id": 418833,
+          "session_id": 4387
+        },
+        {
+          "session_name": "17. redna seja",
+          "speech_id": 418825,
+          "session_id": 4387
         }
       ]
     },
     {
-      "date": "2015-09-23",
+      "date": "23. 03. 2016",
       "speeches": [
         {
-          "session_name": "11. redna seja",
-          "speech_id": 293803,
-          "session_id": 3036
+          "session_name": "17. redna seja",
+          "speech_id": 418693,
+          "session_id": 4387
         },
         {
-          "session_name": "11. redna seja",
-          "speech_id": 293813,
-          "session_id": 3036
+          "session_name": "17. redna seja",
+          "speech_id": 418697,
+          "session_id": 4387
         },
         {
-          "session_name": "11. redna seja",
-          "speech_id": 293831,
-          "session_id": 3036
+          "session_name": "17. redna seja",
+          "speech_id": 418701,
+          "session_id": 4387
         },
         {
-          "session_name": "11. redna seja",
-          "speech_id": 293835,
-          "session_id": 3036
+          "session_name": "17. redna seja",
+          "speech_id": 418776,
+          "session_id": 4387
         },
         {
-          "session_name": "11. redna seja",
-          "speech_id": 293845,
-          "session_id": 3036
+          "session_name": "17. redna seja",
+          "speech_id": 418780,
+          "session_id": 4387
         },
         {
-          "session_name": "11. redna seja",
-          "speech_id": 293875,
-          "session_id": 3036
+          "session_name": "17. redna seja",
+          "speech_id": 418784,
+          "session_id": 4387
         }
       ]
     },
     {
-      "date": "2015-09-24",
+      "date": "18. 03. 2016",
       "speeches": [
         {
-          "session_name": "11. redna seja",
-          "speech_id": 294176,
-          "session_id": 3036
+          "session_name": "77. redna seja",
+          "speech_id": 444880,
+          "session_id": 4563
         },
         {
-          "session_name": "11. redna seja",
-          "speech_id": 294178,
-          "session_id": 3036
+          "session_name": "77. redna seja",
+          "speech_id": 444884,
+          "session_id": 4563
+        },
+        {
+          "session_name": "77. redna seja",
+          "speech_id": 444902,
+          "session_id": 4563
+        },
+        {
+          "session_name": "77. redna seja",
+          "speech_id": 444894,
+          "session_id": 4563
         }
       ]
     },
     {
-      "date": "2015-09-25",
+      "date": "16. 03. 2016",
       "speeches": [
         {
-          "session_name": "11. redna seja",
-          "speech_id": 294292,
-          "session_id": 3036
+          "session_name": "32. nujna seja",
+          "speech_id": 481030,
+          "session_id": 5247
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 481038,
+          "session_id": 5247
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 481040,
+          "session_id": 5247
         }
       ]
     },
     {
-      "date": "2015-09-29",
+      "date": "10. 03. 2016",
       "speeches": [
         {
-          "session_name": "11. redna seja",
-          "speech_id": 294449,
-          "session_id": 3036
+          "session_name": "28. nujna seja",
+          "speech_id": 474265,
+          "session_id": 5136
         },
         {
-          "session_name": "11. redna seja",
-          "speech_id": 294514,
-          "session_id": 3036
-        }
-      ]
-    },
-    {
-      "date": "2015-10-06",
-      "speeches": [
-        {
-          "session_name": "7. nujna seja",
-          "speech_id": 298452,
-          "session_id": 3080
-        },
-        {
-          "session_name": "7. nujna seja",
-          "speech_id": 298462,
-          "session_id": 3080
-        },
-        {
-          "session_name": "5. redna seja",
-          "speech_id": 298510,
-          "session_id": 3081
-        }
-      ]
-    },
-    {
-      "date": "2015-10-07",
-      "speeches": [
-        {
-          "session_name": "6. nujna seja",
-          "speech_id": 306903,
-          "session_id": 3230
-        },
-        {
-          "session_name": "6. nujna seja",
-          "speech_id": 306884,
-          "session_id": 3230
-        },
-        {
-          "session_name": "6. nujna seja",
-          "speech_id": 306886,
-          "session_id": 3230
-        },
-        {
-          "session_name": "6. nujna seja",
-          "speech_id": 306888,
-          "session_id": 3230
-        }
-      ]
-    },
-    {
-      "date": "2015-10-09",
-      "speeches": [
-        {
-          "session_name": "19. nujna seja",
-          "speech_id": 306287,
-          "session_id": 3214
-        }
-      ]
-    },
-    {
-      "date": "2015-10-14",
-      "speeches": [
-        {
-          "session_name": "8. nujna seja",
-          "speech_id": 298252,
-          "session_id": 3078
-        },
-        {
-          "session_name": "8. nujna seja",
-          "speech_id": 298266,
-          "session_id": 3078
-        },
-        {
-          "session_name": "6. redna seja",
-          "speech_id": 298290,
-          "session_id": 3079
-        },
-        {
-          "session_name": "6. redna seja",
-          "speech_id": 298350,
-          "session_id": 3079
-        }
-      ]
-    },
-    {
-      "date": "2015-10-15",
-      "speeches": [
-        {
-          "session_name": "14. nujna seja",
-          "speech_id": 300092,
-          "session_id": 3120
-        }
-      ]
-    },
-    {
-      "date": "2015-10-19",
-      "speeches": [
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292154,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292158,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292162,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292382,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292386,
-          "session_id": 3035
-        }
-      ]
-    },
-    {
-      "date": "2015-10-20",
-      "speeches": [
-        {
-          "session_name": "22. izredna seja",
-          "speech_id": 294703,
-          "session_id": 3053
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292439,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292451,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292481,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292513,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292527,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292541,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292569,
-          "session_id": 3035
-        }
-      ]
-    },
-    {
-      "date": "2015-10-21",
-      "speeches": [
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292674,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292857,
-          "session_id": 3035
-        }
-      ]
-    },
-    {
-      "date": "2015-10-22",
-      "speeches": [
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292959,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 292973,
-          "session_id": 3035
-        }
-      ]
-    },
-    {
-      "date": "2015-10-27",
-      "speeches": [
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 293239,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 293294,
-          "session_id": 3035
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 293302,
-          "session_id": 3035
-        }
-      ]
-    },
-    {
-      "date": "2015-10-28",
-      "speeches": [
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 305950,
-          "session_id": 3211
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 305979,
-          "session_id": 3211
-        },
-        {
-          "session_name": "23. nujna seja (skupna seja)",
-          "speech_id": 303566,
-          "session_id": 3177
-        },
-        {
-          "session_name": "23. nujna seja (skupna seja)",
-          "speech_id": 303534,
-          "session_id": 3177
-        },
-        {
-          "session_name": "23. nujna seja (skupna seja)",
-          "speech_id": 303537,
-          "session_id": 3177
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303611,
-          "session_id": 3178
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303625,
-          "session_id": 3178
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303628,
-          "session_id": 3178
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303633,
-          "session_id": 3178
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303635,
-          "session_id": 3178
-        },
-        {
-          "session_name": "23. nujna seja",
-          "speech_id": 305934,
-          "session_id": 3210
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 305947,
-          "session_id": 3211
-        },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306024,
-          "session_id": 3212
+          "session_name": "28. nujna seja",
+          "speech_id": 474301,
+          "session_id": 5136
         },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306038,
-          "session_id": 3212
-        },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306041,
-          "session_id": 3212
-        },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306046,
-          "session_id": 3212
-        },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306048,
-          "session_id": 3212
-        }
-      ]
-    },
-    {
-      "date": "2015-11-04",
-      "speeches": [
-        {
-          "session_name": "23. izredna seja",
-          "speech_id": 278267,
-          "session_id": 3052
-        },
-        {
-          "session_name": "23. izredna seja",
-          "speech_id": 278243,
-          "session_id": 3052
-        },
-        {
-          "session_name": "23. izredna seja",
-          "speech_id": 278283,
-          "session_id": 3052
-        },
-        {
-          "session_name": "7. redna seja",
-          "speech_id": 298133,
-          "session_id": 3077
-        }
-      ]
-    },
-    {
-      "date": "2015-11-05",
-      "speeches": [
-        {
-          "session_name": "7. redna seja",
-          "speech_id": 298180,
-          "session_id": 3077
-        }
-      ]
-    },
-    {
-      "date": "2015-11-10",
-      "speeches": [
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 305909,
-          "session_id": 3209
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 305921,
-          "session_id": 3209
-        },
-        {
-          "session_name": "12. redna seja",
-          "speech_id": 305925,
-          "session_id": 3209
-        }
-      ]
-    },
-    {
-      "date": "2015-11-12",
-      "speeches": [
-        {
-          "session_name": "23. nujna seja",
-          "speech_id": 307854,
-          "session_id": 3245
-        }
-      ]
-    },
-    {
-      "date": "2015-11-16",
-      "speeches": [
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 290507,
-          "session_id": 3034
-        }
-      ]
-    },
-    {
-      "date": "2015-11-17",
-      "speeches": [
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 290536,
-          "session_id": 3034
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 290789,
-          "session_id": 3034
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 290817,
-          "session_id": 3034
-        }
-      ]
-    },
-    {
-      "date": "2015-11-18",
-      "speeches": [
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 291081,
-          "session_id": 3034
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 291091,
-          "session_id": 3034
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 291117,
-          "session_id": 3034
-        }
-      ]
-    },
-    {
-      "date": "2015-11-23",
-      "speeches": [
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 291592,
-          "session_id": 3034
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 291618,
-          "session_id": 3034
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 291624,
-          "session_id": 3034
-        }
-      ]
-    },
-    {
-      "date": "2015-11-24",
-      "speeches": [
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 291767,
-          "session_id": 3034
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 291771,
-          "session_id": 3034
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 291775,
-          "session_id": 3034
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 292031,
-          "session_id": 3034
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 292083,
-          "session_id": 3034
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 292089,
-          "session_id": 3034
-        }
-      ]
-    },
-    {
-      "date": "2015-11-26",
-      "speeches": [
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303642,
-          "session_id": 3178
-        },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306055,
-          "session_id": 3212
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303769,
-          "session_id": 3178
-        },
-        {
-          "session_name": "6. redna seja",
-          "speech_id": 298390,
-          "session_id": 3079
-        },
-        {
-          "session_name": "6. redna seja",
-          "speech_id": 298400,
-          "session_id": 3079
-        },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306182,
-          "session_id": 3212
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303676,
-          "session_id": 3178
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303701,
-          "session_id": 3178
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303775,
-          "session_id": 3178
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303777,
-          "session_id": 3178
-        },
-        {
-          "session_name": "22. nujna seja (skupna seja)",
-          "speech_id": 303779,
-          "session_id": 3178
-        },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306089,
-          "session_id": 3212
-        },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306114,
-          "session_id": 3212
-        },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306188,
-          "session_id": 3212
-        },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306190,
-          "session_id": 3212
-        },
-        {
-          "session_name": "21. nujna seja (skupna seja)",
-          "speech_id": 306192,
-          "session_id": 3212
-        }
-      ]
-    },
-    {
-      "date": "2015-12-09",
-      "speeches": [
-        {
-          "session_name": "25. nujna seja",
-          "speech_id": 305853,
-          "session_id": 3207
-        },
-        {
-          "session_name": "25. nujna seja",
-          "speech_id": 305857,
-          "session_id": 3207
-        }
-      ]
-    },
-    {
-      "date": "2015-12-14",
-      "speeches": [
         {
           "session_name": "14. redna seja",
-          "speech_id": 289595,
-          "session_id": 3033
-        }
-      ]
-    },
-    {
-      "date": "2015-12-15",
-      "speeches": [
+          "speech_id": 474332,
+          "session_id": 5137
+        },
         {
           "session_name": "14. redna seja",
-          "speech_id": 289731,
-          "session_id": 3033
+          "speech_id": 474356,
+          "session_id": 5137
+        },
+        {
+          "session_name": "14. redna seja",
+          "speech_id": 474389,
+          "session_id": 5137
+        },
+        {
+          "session_name": "14. redna seja",
+          "speech_id": 474364,
+          "session_id": 5137
+        },
+        {
+          "session_name": "14. redna seja",
+          "speech_id": 474368,
+          "session_id": 5137
+        },
+        {
+          "session_name": "14. redna seja",
+          "speech_id": 474385,
+          "session_id": 5137
+        },
+        {
+          "session_name": "14. redna seja",
+          "speech_id": 474387,
+          "session_id": 5137
+        },
+        {
+          "session_name": "14. redna seja",
+          "speech_id": 474393,
+          "session_id": 5137
+        },
+        {
+          "session_name": "14. redna seja",
+          "speech_id": 474401,
+          "session_id": 5137
         }
       ]
     },
     {
-      "date": "2016-01-13",
+      "date": "08. 03. 2016",
       "speeches": [
         {
-          "session_name": "8. redna seja",
-          "speech_id": 298043,
-          "session_id": 3076
-        },
-        {
-          "session_name": "8. redna seja",
-          "speech_id": 298069,
-          "session_id": 3076
-        },
-        {
-          "session_name": "8. redna seja",
-          "speech_id": 298081,
-          "session_id": 3076
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305405,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305419,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305437,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305479,
-          "session_id": 3206
+          "session_name": "10. redna seja",
+          "speech_id": 440887,
+          "session_id": 4447
         }
       ]
     },
     {
-      "date": "2016-01-14",
+      "date": "04. 03. 2016",
       "speeches": [
         {
-          "session_name": "13. redna seja",
-          "speech_id": 305490,
-          "session_id": 3206
+          "session_name": "16. redna seja",
+          "speech_id": 420585,
+          "session_id": 4388
         },
         {
-          "session_name": "13. redna seja",
-          "speech_id": 305496,
-          "session_id": 3206
+          "session_name": "16. redna seja",
+          "speech_id": 420595,
+          "session_id": 4388
         },
         {
-          "session_name": "13. redna seja",
-          "speech_id": 305532,
-          "session_id": 3206
+          "session_name": "16. redna seja",
+          "speech_id": 420655,
+          "session_id": 4388
         },
         {
-          "session_name": "13. redna seja",
-          "speech_id": 305562,
-          "session_id": 3206
+          "session_name": "16. redna seja",
+          "speech_id": 420689,
+          "session_id": 4388
         },
         {
-          "session_name": "13. redna seja",
-          "speech_id": 305564,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305568,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305584,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305610,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305618,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305620,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305624,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305632,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305644,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305651,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305671,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305675,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305679,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305715,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305717,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305731,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305737,
-          "session_id": 3206
+          "session_name": "16. redna seja",
+          "speech_id": 420725,
+          "session_id": 4388
         }
       ]
     },
     {
-      "date": "2016-01-15",
+      "date": "03. 03. 2016",
       "speeches": [
         {
-          "session_name": "43. nujna seja (skupna seja)",
-          "speech_id": 301211,
-          "session_id": 3139
+          "session_name": "16. redna seja",
+          "speech_id": 420535,
+          "session_id": 4388
         },
         {
-          "session_name": "18. nujna seja (skupna seja)",
-          "speech_id": 304059,
-          "session_id": 3184
+          "session_name": "16. redna seja",
+          "speech_id": 420473,
+          "session_id": 4388
+        },
+        {
+          "session_name": "16. redna seja",
+          "speech_id": 420495,
+          "session_id": 4388
+        },
+        {
+          "session_name": "16. redna seja",
+          "speech_id": 420507,
+          "session_id": 4388
+        },
+        {
+          "session_name": "16. redna seja",
+          "speech_id": 420551,
+          "session_id": 4388
+        },
+        {
+          "session_name": "16. redna seja",
+          "speech_id": 420563,
+          "session_id": 4388
         }
       ]
     },
     {
-      "date": "2016-01-18",
+      "date": "01. 03. 2016",
       "speeches": [
         {
-          "session_name": "32. nujna seja",
-          "speech_id": 309939,
-          "session_id": 3276
+          "session_name": "16. redna seja",
+          "speech_id": 420208,
+          "session_id": 4388
         },
         {
-          "session_name": "32. nujna seja",
-          "speech_id": 309937,
-          "session_id": 3276
+          "session_name": "16. redna seja",
+          "speech_id": 420034,
+          "session_id": 4388
         },
         {
-          "session_name": "32. nujna seja",
-          "speech_id": 310051,
-          "session_id": 3276
-        },
-        {
-          "session_name": "32. nujna seja",
-          "speech_id": 310065,
-          "session_id": 3276
-        },
-        {
-          "session_name": "32. nujna seja",
-          "speech_id": 310067,
-          "session_id": 3276
-        },
-        {
-          "session_name": "32. nujna seja",
-          "speech_id": 310069,
-          "session_id": 3276
-        },
-        {
-          "session_name": "32. nujna seja",
-          "speech_id": 310071,
-          "session_id": 3276
-        },
-        {
-          "session_name": "32. nujna seja",
-          "speech_id": 310073,
-          "session_id": 3276
-        },
-        {
-          "session_name": "32. nujna seja",
-          "speech_id": 310119,
-          "session_id": 3276
-        },
-        {
-          "session_name": "32. nujna seja",
-          "speech_id": 310135,
-          "session_id": 3276
+          "session_name": "16. redna seja",
+          "speech_id": 420188,
+          "session_id": 4388
         }
       ]
     },
     {
-      "date": "2016-01-19",
+      "date": "29. 02. 2016",
       "speeches": [
         {
-          "session_name": "26. nujna seja",
-          "speech_id": 305289,
-          "session_id": 3205
+          "session_name": "16. redna seja",
+          "speech_id": 419725,
+          "session_id": 4388
         },
         {
-          "session_name": "26. nujna seja",
-          "speech_id": 305307,
-          "session_id": 3205
+          "session_name": "16. redna seja",
+          "speech_id": 419729,
+          "session_id": 4388
         },
         {
-          "session_name": "26. nujna seja",
-          "speech_id": 305327,
-          "session_id": 3205
+          "session_name": "16. redna seja",
+          "speech_id": 419733,
+          "session_id": 4388
         },
         {
-          "session_name": "26. nujna seja",
-          "speech_id": 305355,
-          "session_id": 3205
+          "session_name": "16. redna seja",
+          "speech_id": 420013,
+          "session_id": 4388
         },
         {
-          "session_name": "26. nujna seja",
-          "speech_id": 305364,
-          "session_id": 3205
+          "session_name": "16. redna seja",
+          "speech_id": 420017,
+          "session_id": 4388
         }
       ]
     },
     {
-      "date": "2016-01-20",
-      "speeches": [
-        {
-          "session_name": "27. izredna seja",
-          "speech_id": 277725,
-          "session_id": 3048
-        }
-      ]
-    },
-    {
-      "date": "2016-01-25",
+      "date": "28. 02. 2016",
       "speeches": [
         {
           "session_name": "15. redna seja",
-          "speech_id": 288816,
-          "session_id": 3032
+          "speech_id": 421660,
+          "session_id": 4389
         },
         {
           "session_name": "15. redna seja",
-          "speech_id": 288820,
-          "session_id": 3032
+          "speech_id": 421573,
+          "session_id": 4389
         },
         {
           "session_name": "15. redna seja",
-          "speech_id": 288928,
-          "session_id": 3032
+          "speech_id": 421593,
+          "session_id": 4389
         },
         {
           "session_name": "15. redna seja",
-          "speech_id": 288932,
-          "session_id": 3032
+          "speech_id": 421611,
+          "session_id": 4389
         },
         {
           "session_name": "15. redna seja",
-          "speech_id": 288992,
-          "session_id": 3032
+          "speech_id": 421656,
+          "session_id": 4389
         },
         {
           "session_name": "15. redna seja",
-          "speech_id": 288996,
-          "session_id": 3032
+          "speech_id": 421662,
+          "session_id": 4389
         }
       ]
     },
     {
-      "date": "2016-01-26",
+      "date": "23. 02. 2016",
       "speeches": [
         {
-          "session_name": "15. redna seja",
-          "speech_id": 289043,
-          "session_id": 3032
+          "session_name": "9. nujna seja",
+          "speech_id": 441015,
+          "session_id": 4449
         },
         {
-          "session_name": "15. redna seja",
-          "speech_id": 289057,
-          "session_id": 3032
-        },
-        {
-          "session_name": "15. redna seja",
-          "speech_id": 289075,
-          "session_id": 3032
-        },
-        {
-          "session_name": "15. redna seja",
-          "speech_id": 289095,
-          "session_id": 3032
-        },
-        {
-          "session_name": "15. redna seja",
-          "speech_id": 289132,
-          "session_id": 3032
+          "session_name": "9. nujna seja",
+          "speech_id": 441043,
+          "session_id": 4449
         }
       ]
     },
     {
-      "date": "2016-01-28",
-      "speeches": [
-        {
-          "session_name": "15. redna seja",
-          "speech_id": 289346,
-          "session_id": 3032
-        },
-        {
-          "session_name": "15. redna seja",
-          "speech_id": 289366,
-          "session_id": 3032
-        },
-        {
-          "session_name": "15. redna seja",
-          "speech_id": 289384,
-          "session_id": 3032
-        },
-        {
-          "session_name": "15. redna seja",
-          "speech_id": 289429,
-          "session_id": 3032
-        },
-        {
-          "session_name": "15. redna seja",
-          "speech_id": 289433,
-          "session_id": 3032
-        },
-        {
-          "session_name": "15. redna seja",
-          "speech_id": 289435,
-          "session_id": 3032
-        }
-      ]
-    },
-    {
-      "date": "2016-02-03",
-      "speeches": [
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305782,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305830,
-          "session_id": 3206
-        },
-        {
-          "session_name": "13. redna seja",
-          "speech_id": 305844,
-          "session_id": 3206
-        }
-      ]
-    },
-    {
-      "date": "2016-02-04",
-      "speeches": [
-        {
-          "session_name": "9. redna seja",
-          "speech_id": 298025,
-          "session_id": 3075
-        }
-      ]
-    },
-    {
-      "date": "2016-02-16",
+      "date": "16. 02. 2016",
       "speeches": [
         {
           "session_name": "34. nujna seja",
-          "speech_id": 309741,
-          "session_id": 3272
+          "speech_id": 488863,
+          "session_id": 5373
+        }
+      ]
+    },
+    {
+      "date": "04. 02. 2016",
+      "speeches": [
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 441073,
+          "session_id": 4450
+        }
+      ]
+    },
+    {
+      "date": "03. 02. 2016",
+      "speeches": [
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474931,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474979,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474993,
+          "session_id": 5140
+        }
+      ]
+    },
+    {
+      "date": "28. 01. 2016",
+      "speeches": [
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 421344,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 421364,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 421382,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 421427,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 421431,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 421433,
+          "session_id": 4389
+        }
+      ]
+    },
+    {
+      "date": "26. 01. 2016",
+      "speeches": [
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 421042,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 421056,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 421074,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 421094,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 421130,
+          "session_id": 4389
+        }
+      ]
+    },
+    {
+      "date": "25. 01. 2016",
+      "speeches": [
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 420815,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 420819,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 420927,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 420931,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 420991,
+          "session_id": 4389
+        },
+        {
+          "session_name": "15. redna seja",
+          "speech_id": 420995,
+          "session_id": 4389
+        }
+      ]
+    },
+    {
+      "date": "20. 01. 2016",
+      "speeches": [
+        {
+          "session_name": "27. izredna seja",
+          "speech_id": 436245,
+          "session_id": 4411
+        }
+      ]
+    },
+    {
+      "date": "19. 01. 2016",
+      "speeches": [
+        {
+          "session_name": "26. nujna seja",
+          "speech_id": 474438,
+          "session_id": 5139
+        },
+        {
+          "session_name": "26. nujna seja",
+          "speech_id": 474456,
+          "session_id": 5139
+        },
+        {
+          "session_name": "26. nujna seja",
+          "speech_id": 474476,
+          "session_id": 5139
+        },
+        {
+          "session_name": "26. nujna seja",
+          "speech_id": 474504,
+          "session_id": 5139
+        },
+        {
+          "session_name": "26. nujna seja",
+          "speech_id": 474513,
+          "session_id": 5139
+        }
+      ]
+    },
+    {
+      "date": "18. 01. 2016",
+      "speeches": [
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 489060,
+          "session_id": 5377
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 489062,
+          "session_id": 5377
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 489174,
+          "session_id": 5377
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 489188,
+          "session_id": 5377
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 489190,
+          "session_id": 5377
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 489192,
+          "session_id": 5377
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 489194,
+          "session_id": 5377
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 489196,
+          "session_id": 5377
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 489242,
+          "session_id": 5377
+        },
+        {
+          "session_name": "32. nujna seja",
+          "speech_id": 489258,
+          "session_id": 5377
+        }
+      ]
+    },
+    {
+      "date": "15. 01. 2016",
+      "speeches": [
+        {
+          "session_name": "43. nujna seja (skupna seja)",
+          "speech_id": 455290,
+          "session_id": 4784
+        },
+        {
+          "session_name": "18. nujna seja (skupna seja)",
+          "speech_id": 471123,
+          "session_id": 5078
+        }
+      ]
+    },
+    {
+      "date": "14. 01. 2016",
+      "speeches": [
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474639,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474645,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474681,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474711,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474713,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474717,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474733,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474759,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474767,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474769,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474773,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474781,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474793,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474800,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474820,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474824,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474828,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474864,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474866,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474880,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474886,
+          "session_id": 5140
+        }
+      ]
+    },
+    {
+      "date": "13. 01. 2016",
+      "speeches": [
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 441092,
+          "session_id": 4451
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 441120,
+          "session_id": 4451
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 441133,
+          "session_id": 4451
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474554,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474568,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474586,
+          "session_id": 5140
+        },
+        {
+          "session_name": "13. redna seja",
+          "speech_id": 474628,
+          "session_id": 5140
+        }
+      ]
+    },
+    {
+      "date": "15. 12. 2015",
+      "speeches": [
+        {
+          "session_name": "14. redna seja",
+          "speech_id": 421931,
+          "session_id": 4390
+        }
+      ]
+    },
+    {
+      "date": "14. 12. 2015",
+      "speeches": [
+        {
+          "session_name": "14. redna seja",
+          "speech_id": 421795,
+          "session_id": 4390
+        }
+      ]
+    },
+    {
+      "date": "09. 12. 2015",
+      "speeches": [
+        {
+          "session_name": "25. nujna seja",
+          "speech_id": 475002,
+          "session_id": 5141
+        },
+        {
+          "session_name": "25. nujna seja",
+          "speech_id": 475006,
+          "session_id": 5141
+        }
+      ]
+    },
+    {
+      "date": "26. 11. 2015",
+      "speeches": [
+        {
+          "session_name": "6. redna seja",
+          "speech_id": 441443,
+          "session_id": 4454
+        },
+        {
+          "session_name": "6. redna seja",
+          "speech_id": 441453,
+          "session_id": 4454
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 468987,
+          "session_id": 5037
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 468928,
+          "session_id": 5037
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 468962,
+          "session_id": 5037
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 469055,
+          "session_id": 5037
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 469061,
+          "session_id": 5037
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 469063,
+          "session_id": 5037
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 469065,
+          "session_id": 5037
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475204,
+          "session_id": 5146
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475238,
+          "session_id": 5146
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475263,
+          "session_id": 5146
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475331,
+          "session_id": 5146
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475337,
+          "session_id": 5146
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475339,
+          "session_id": 5146
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475341,
+          "session_id": 5146
+        }
+      ]
+    },
+    {
+      "date": "12. 11. 2015",
+      "speeches": [
+        {
+          "session_name": "23. nujna seja",
+          "speech_id": 481898,
+          "session_id": 5260
+        }
+      ]
+    },
+    {
+      "date": "10. 11. 2015",
+      "speeches": [
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 475058,
+          "session_id": 5143
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 475070,
+          "session_id": 5143
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 475074,
+          "session_id": 5143
+        }
+      ]
+    },
+    {
+      "date": "05. 11. 2015",
+      "speeches": [
+        {
+          "session_name": "7. redna seja",
+          "speech_id": 441233,
+          "session_id": 4452
+        }
+      ]
+    },
+    {
+      "date": "04. 11. 2015",
+      "speeches": [
+        {
+          "session_name": "23. izredna seja",
+          "speech_id": 436763,
+          "session_id": 4415
+        },
+        {
+          "session_name": "23. izredna seja",
+          "speech_id": 436787,
+          "session_id": 4415
+        },
+        {
+          "session_name": "23. izredna seja",
+          "speech_id": 436803,
+          "session_id": 4415
+        },
+        {
+          "session_name": "7. redna seja",
+          "speech_id": 441186,
+          "session_id": 4452
+        }
+      ]
+    },
+    {
+      "date": "28. 10. 2015",
+      "speeches": [
+        {
+          "session_name": "23. nujna seja (skupna seja)",
+          "speech_id": 468820,
+          "session_id": 5036
+        },
+        {
+          "session_name": "23. nujna seja (skupna seja)",
+          "speech_id": 468823,
+          "session_id": 5036
+        },
+        {
+          "session_name": "23. nujna seja (skupna seja)",
+          "speech_id": 468852,
+          "session_id": 5036
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 468897,
+          "session_id": 5037
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 468911,
+          "session_id": 5037
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 468914,
+          "session_id": 5037
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 468919,
+          "session_id": 5037
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 468921,
+          "session_id": 5037
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 475128,
+          "session_id": 5145
+        },
+        {
+          "session_name": "23. nujna seja",
+          "speech_id": 475083,
+          "session_id": 5144
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 475096,
+          "session_id": 5145
+        },
+        {
+          "session_name": "22. nujna seja (skupna seja)",
+          "speech_id": 475099,
+          "session_id": 5145
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475173,
+          "session_id": 5146
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475187,
+          "session_id": 5146
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475190,
+          "session_id": 5146
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475195,
+          "session_id": 5146
+        },
+        {
+          "session_name": "21. nujna seja (skupna seja)",
+          "speech_id": 475197,
+          "session_id": 5146
+        }
+      ]
+    },
+    {
+      "date": "27. 10. 2015",
+      "speeches": [
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 423691,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 423746,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 423754,
+          "session_id": 4392
+        }
+      ]
+    },
+    {
+      "date": "22. 10. 2015",
+      "speeches": [
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 423411,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 423425,
+          "session_id": 4392
+        }
+      ]
+    },
+    {
+      "date": "21. 10. 2015",
+      "speeches": [
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 423126,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 423309,
+          "session_id": 4392
+        }
+      ]
+    },
+    {
+      "date": "20. 10. 2015",
+      "speeches": [
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 423021,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 422891,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 422903,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 422933,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 422965,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 422979,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 422993,
+          "session_id": 4392
+        },
+        {
+          "session_name": "22. izredna seja",
+          "speech_id": 437020,
+          "session_id": 4416
+        }
+      ]
+    },
+    {
+      "date": "19. 10. 2015",
+      "speeches": [
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 422606,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 422610,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 422614,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 422834,
+          "session_id": 4392
+        },
+        {
+          "session_name": "12. redna seja",
+          "speech_id": 422838,
+          "session_id": 4392
+        }
+      ]
+    },
+    {
+      "date": "15. 10. 2015",
+      "speeches": [
+        {
+          "session_name": "14. nujna seja",
+          "speech_id": 449291,
+          "session_id": 4685
+        }
+      ]
+    },
+    {
+      "date": "14. 10. 2015",
+      "speeches": [
+        {
+          "session_name": "8. nujna seja",
+          "speech_id": 441305,
+          "session_id": 4453
+        },
+        {
+          "session_name": "8. nujna seja",
+          "speech_id": 441319,
+          "session_id": 4453
+        },
+        {
+          "session_name": "6. redna seja",
+          "speech_id": 441343,
+          "session_id": 4454
+        },
+        {
+          "session_name": "6. redna seja",
+          "speech_id": 441403,
+          "session_id": 4454
+        }
+      ]
+    },
+    {
+      "date": "09. 10. 2015",
+      "speeches": [
+        {
+          "session_name": "19. nujna seja",
+          "speech_id": 475431,
+          "session_id": 5148
+        }
+      ]
+    },
+    {
+      "date": "07. 10. 2015",
+      "speeches": [
+        {
+          "session_name": "35. nujna seja (skupna seja)",
+          "speech_id": 456619,
+          "session_id": 4798
+        },
+        {
+          "session_name": "35. nujna seja (skupna seja)",
+          "speech_id": 456621,
+          "session_id": 4798
+        },
+        {
+          "session_name": "6. nujna seja",
+          "speech_id": 480098,
+          "session_id": 5228
+        },
+        {
+          "session_name": "6. nujna seja",
+          "speech_id": 480094,
+          "session_id": 5228
+        },
+        {
+          "session_name": "6. nujna seja",
+          "speech_id": 480096,
+          "session_id": 5228
+        },
+        {
+          "session_name": "6. nujna seja",
+          "speech_id": 480113,
+          "session_id": 5228
+        },
+        {
+          "session_name": "7. nujna seja (skupna seja)",
+          "speech_id": 485865,
+          "session_id": 5324
+        },
+        {
+          "session_name": "7. nujna seja (skupna seja)",
+          "speech_id": 485867,
+          "session_id": 5324
+        }
+      ]
+    },
+    {
+      "date": "06. 10. 2015",
+      "speeches": [
+        {
+          "session_name": "7. nujna seja",
+          "speech_id": 441505,
+          "session_id": 4455
+        },
+        {
+          "session_name": "7. nujna seja",
+          "speech_id": 441515,
+          "session_id": 4455
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 441563,
+          "session_id": 4456
+        }
+      ]
+    },
+    {
+      "date": "29. 09. 2015",
+      "speeches": [
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424901,
+          "session_id": 4393
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424966,
+          "session_id": 4393
+        }
+      ]
+    },
+    {
+      "date": "25. 09. 2015",
+      "speeches": [
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424744,
+          "session_id": 4393
+        }
+      ]
+    },
+    {
+      "date": "24. 09. 2015",
+      "speeches": [
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424628,
+          "session_id": 4393
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424630,
+          "session_id": 4393
+        }
+      ]
+    },
+    {
+      "date": "23. 09. 2015",
+      "speeches": [
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424255,
+          "session_id": 4393
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424265,
+          "session_id": 4393
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424283,
+          "session_id": 4393
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424287,
+          "session_id": 4393
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424297,
+          "session_id": 4393
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424327,
+          "session_id": 4393
+        }
+      ]
+    },
+    {
+      "date": "22. 09. 2015",
+      "speeches": [
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424176,
+          "session_id": 4393
+        }
+      ]
+    },
+    {
+      "date": "21. 09. 2015",
+      "speeches": [
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 423947,
+          "session_id": 4393
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 423943,
+          "session_id": 4393
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424079,
+          "session_id": 4393
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 424083,
+          "session_id": 4393
+        }
+      ]
+    },
+    {
+      "date": "10. 09. 2015",
+      "speeches": [
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 475514,
+          "session_id": 5150
+        },
+        {
+          "session_name": "18. nujna seja",
+          "speech_id": 475468,
+          "session_id": 5149
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 475544,
+          "session_id": 5150
+        },
+        {
+          "session_name": "11. redna seja",
+          "speech_id": 475554,
+          "session_id": 5150
+        }
+      ]
+    },
+    {
+      "date": "02. 09. 2015",
+      "speeches": [
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 475597,
+          "session_id": 5151
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 475575,
+          "session_id": 5151
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 475603,
+          "session_id": 5151
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 475619,
+          "session_id": 5151
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 475635,
+          "session_id": 5151
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 475639,
+          "session_id": 5151
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 475643,
+          "session_id": 5151
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 475647,
+          "session_id": 5151
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 475659,
+          "session_id": 5151
+        }
+      ]
+    },
+    {
+      "date": "25. 08. 2015",
+      "speeches": [
+        {
+          "session_name": "19. nujna seja (skupna seja)",
+          "speech_id": 469269,
+          "session_id": 5042
+        },
+        {
+          "session_name": "17. nujna seja (skupna seja)",
+          "speech_id": 475704,
+          "session_id": 5152
+        }
+      ]
+    },
+    {
+      "date": "03. 08. 2015",
+      "speeches": [
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 475966,
+          "session_id": 5156
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 475955,
+          "session_id": 5156
+        }
+      ]
+    },
+    {
+      "date": "17. 07. 2015",
+      "speeches": [
+        {
+          "session_name": "16. izredna seja",
+          "speech_id": 437415,
+          "session_id": 4422
+        },
+        {
+          "session_name": "16. izredna seja",
+          "speech_id": 437423,
+          "session_id": 4422
+        },
+        {
+          "session_name": "16. izredna seja",
+          "speech_id": 437447,
+          "session_id": 4422
+        },
+        {
+          "session_name": "16. izredna seja",
+          "speech_id": 437493,
+          "session_id": 4422
+        }
+      ]
+    },
+    {
+      "date": "16. 07. 2015",
+      "speeches": [
+        {
+          "session_name": "15. nujna seja",
+          "speech_id": 465774,
+          "session_id": 4986
+        },
+        {
+          "session_name": "15. nujna seja",
+          "speech_id": 465784,
+          "session_id": 4986
+        },
+        {
+          "session_name": "15. nujna seja",
+          "speech_id": 465786,
+          "session_id": 4986
+        }
+      ]
+    },
+    {
+      "date": "15. 07. 2015",
+      "speeches": [
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426450,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426594,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426596,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426600,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426723,
+          "session_id": 4394
+        }
+      ]
+    },
+    {
+      "date": "14. 07. 2015",
+      "speeches": [
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426049,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426010,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426267,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426271,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426275,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426431,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 426435,
+          "session_id": 4394
+        }
+      ]
+    },
+    {
+      "date": "10. 07. 2015",
+      "speeches": [
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 425586,
+          "session_id": 4394
+        }
+      ]
+    },
+    {
+      "date": "09. 07. 2015",
+      "speeches": [
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 425154,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 425206,
+          "session_id": 4394
+        },
+        {
+          "session_name": "10. redna seja",
+          "speech_id": 425264,
+          "session_id": 4394
+        }
+      ]
+    },
+    {
+      "date": "07. 07. 2015",
+      "speeches": [
+        {
+          "session_name": "16. nujna seja",
+          "speech_id": 475713,
+          "session_id": 5153
+        },
+        {
+          "session_name": "16. nujna seja",
+          "speech_id": 475729,
+          "session_id": 5153
+        },
+        {
+          "session_name": "16. nujna seja",
+          "speech_id": 475744,
+          "session_id": 5153
+        },
+        {
+          "session_name": "16. nujna seja",
+          "speech_id": 475748,
+          "session_id": 5153
+        },
+        {
+          "session_name": "16. nujna seja",
+          "speech_id": 475750,
+          "session_id": 5153
+        },
+        {
+          "session_name": "16. nujna seja",
+          "speech_id": 475752,
+          "session_id": 5153
+        },
+        {
+          "session_name": "16. nujna seja",
+          "speech_id": 475776,
+          "session_id": 5153
+        },
+        {
+          "session_name": "16. nujna seja",
+          "speech_id": 475780,
+          "session_id": 5153
+        },
+        {
+          "session_name": "16. nujna seja",
+          "speech_id": 475786,
+          "session_id": 5153
+        },
+        {
+          "session_name": "16. nujna seja",
+          "speech_id": 475792,
+          "session_id": 5153
+        }
+      ]
+    },
+    {
+      "date": "24. 06. 2015",
+      "speeches": [
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 469300,
+          "session_id": 5044
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 469309,
+          "session_id": 5044
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 469311,
+          "session_id": 5044
+        }
+      ]
+    },
+    {
+      "date": "23. 06. 2015",
+      "speeches": [
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 441639,
+          "session_id": 4457
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 441641,
+          "session_id": 4457
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 441643,
+          "session_id": 4457
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 441645,
+          "session_id": 4457
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 441636,
+          "session_id": 4457
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 441686,
+          "session_id": 4457
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 441690,
+          "session_id": 4457
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 441692,
+          "session_id": 4457
+        }
+      ]
+    },
+    {
+      "date": "22. 06. 2015",
+      "speeches": [
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427998,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 428002,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 428004,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 428008,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 428014,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 428044,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 428048,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 428052,
+          "session_id": 4395
+        }
+      ]
+    },
+    {
+      "date": "19. 06. 2015",
+      "speeches": [
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427813,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427837,
+          "session_id": 4395
+        }
+      ]
+    },
+    {
+      "date": "18. 06. 2015",
+      "speeches": [
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427568,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427654,
+          "session_id": 4395
+        }
+      ]
+    },
+    {
+      "date": "16. 06. 2015",
+      "speeches": [
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427163,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427200,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427232,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427236,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427260,
+          "session_id": 4395
+        }
+      ]
+    },
+    {
+      "date": "15. 06. 2015",
+      "speeches": [
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 426970,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 426974,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427106,
+          "session_id": 4395
+        },
+        {
+          "session_name": "9. redna seja",
+          "speech_id": 427110,
+          "session_id": 4395
+        }
+      ]
+    },
+    {
+      "date": "04. 06. 2015",
+      "speeches": [
+        {
+          "session_name": "12. nujna seja",
+          "speech_id": 449499,
+          "session_id": 4688
+        }
+      ]
+    },
+    {
+      "date": "28. 05. 2015",
+      "speeches": [
+        {
+          "session_name": "3. redna seja",
+          "speech_id": 441793,
+          "session_id": 4459
+        },
+        {
+          "session_name": "14. nujna seja",
+          "speech_id": 476001,
+          "session_id": 5157
+        }
+      ]
+    },
+    {
+      "date": "22. 05. 2015",
+      "speeches": [
+        {
+          "session_name": "14. izredna seja",
+          "speech_id": 437694,
+          "session_id": 4424
+        }
+      ]
+    },
+    {
+      "date": "21. 05. 2015",
+      "speeches": [
+        {
+          "session_name": "9. nujna seja",
+          "speech_id": 478688,
+          "session_id": 5209
+        },
+        {
+          "session_name": "9. nujna seja",
+          "speech_id": 478690,
+          "session_id": 5209
+        },
+        {
+          "session_name": "9. nujna seja",
+          "speech_id": 478692,
+          "session_id": 5209
+        },
+        {
+          "session_name": "9. nujna seja",
+          "speech_id": 478720,
+          "session_id": 5209
+        },
+        {
+          "session_name": "9. nujna seja",
+          "speech_id": 478722,
+          "session_id": 5209
+        }
+      ]
+    },
+    {
+      "date": "19. 05. 2015",
+      "speeches": [
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 428395,
+          "session_id": 4396
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 428427,
+          "session_id": 4396
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 428477,
+          "session_id": 4396
+        }
+      ]
+    },
+    {
+      "date": "18. 05. 2015",
+      "speeches": [
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 428342,
+          "session_id": 4396
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 428382,
+          "session_id": 4396
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 428334,
+          "session_id": 4396
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 428338,
+          "session_id": 4396
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 428374,
+          "session_id": 4396
+        },
+        {
+          "session_name": "8. redna seja",
+          "speech_id": 428378,
+          "session_id": 4396
+        }
+      ]
+    },
+    {
+      "date": "13. 05. 2015",
+      "speeches": [
+        {
+          "session_name": "13. izredna seja",
+          "speech_id": 437852,
+          "session_id": 4425
+        }
+      ]
+    },
+    {
+      "date": "05. 05. 2015",
+      "speeches": [
+        {
+          "session_name": "14. nujna seja (skupna seja)",
+          "speech_id": 469799,
+          "session_id": 5049
+        },
+        {
+          "session_name": "14. nujna seja (skupna seja)",
+          "speech_id": 469756,
+          "session_id": 5049
+        },
+        {
+          "session_name": "14. nujna seja (skupna seja)",
+          "speech_id": 469813,
+          "session_id": 5049
+        },
+        {
+          "session_name": "13. nujna seja (skupna seja)",
+          "speech_id": 476054,
+          "session_id": 5158
+        },
+        {
+          "session_name": "13. nujna seja (skupna seja)",
+          "speech_id": 476097,
+          "session_id": 5158
+        },
+        {
+          "session_name": "13. nujna seja (skupna seja)",
+          "speech_id": 476111,
+          "session_id": 5158
+        }
+      ]
+    },
+    {
+      "date": "20. 04. 2015",
+      "speeches": [
+        {
+          "session_name": "7. redna seja",
+          "speech_id": 429005,
+          "session_id": 4397
+        },
+        {
+          "session_name": "7. redna seja",
+          "speech_id": 428921,
+          "session_id": 4397
+        },
+        {
+          "session_name": "7. redna seja",
+          "speech_id": 428925,
+          "session_id": 4397
+        },
+        {
+          "session_name": "7. redna seja",
+          "speech_id": 429001,
+          "session_id": 4397
+        },
+        {
+          "session_name": "7. redna seja",
+          "speech_id": 428997,
+          "session_id": 4397
+        }
+      ]
+    },
+    {
+      "date": "08. 04. 2015",
+      "speeches": [
+        {
+          "session_name": "7. redna seja",
+          "speech_id": 476286,
+          "session_id": 5161
+        }
+      ]
+    },
+    {
+      "date": "30. 03. 2015",
+      "speeches": [
+        {
+          "session_name": "6. redna seja",
+          "speech_id": 429951,
+          "session_id": 4398
+        },
+        {
+          "session_name": "6. redna seja",
+          "speech_id": 429955,
+          "session_id": 4398
+        },
+        {
+          "session_name": "6. redna seja",
+          "speech_id": 429959,
+          "session_id": 4398
+        }
+      ]
+    },
+    {
+      "date": "27. 03. 2015",
+      "speeches": [
+        {
+          "session_name": "6. redna seja",
+          "speech_id": 429801,
+          "session_id": 4398
+        },
+        {
+          "session_name": "6. redna seja",
+          "speech_id": 429832,
+          "session_id": 4398
+        }
+      ]
+    },
+    {
+      "date": "26. 03. 2015",
+      "speeches": [
+        {
+          "session_name": "11. izredna seja",
+          "speech_id": 438011,
+          "session_id": 4427
+        },
+        {
+          "session_name": "11. izredna seja",
+          "speech_id": 438145,
+          "session_id": 4427
+        }
+      ]
+    },
+    {
+      "date": "20. 03. 2015",
+      "speeches": [
+        {
+          "session_name": "9. nujna seja",
+          "speech_id": 466413,
+          "session_id": 4997
+        },
+        {
+          "session_name": "9. nujna seja",
+          "speech_id": 466453,
+          "session_id": 4997
+        },
+        {
+          "session_name": "9. nujna seja",
+          "speech_id": 466471,
+          "session_id": 4997
+        }
+      ]
+    },
+    {
+      "date": "19. 03. 2015",
+      "speeches": [
+        {
+          "session_name": "3. redna seja (skupna seja)",
+          "speech_id": 449856,
+          "session_id": 4695
+        },
+        {
+          "session_name": "8. redna seja (skupna seja)",
+          "speech_id": 466491,
+          "session_id": 4998
+        }
+      ]
+    },
+    {
+      "date": "09. 03. 2015",
+      "speeches": [
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 431624,
+          "session_id": 4399
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 431658,
+          "session_id": 4399
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 431676,
+          "session_id": 4399
+        }
+      ]
+    },
+    {
+      "date": "03. 03. 2015",
+      "speeches": [
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 430888,
+          "session_id": 4399
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 430964,
+          "session_id": 4399
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 431061,
+          "session_id": 4399
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 431081,
+          "session_id": 4399
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 431097,
+          "session_id": 4399
+        }
+      ]
+    },
+    {
+      "date": "02. 03. 2015",
+      "speeches": [
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 430558,
+          "session_id": 4399
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 430562,
+          "session_id": 4399
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 430566,
+          "session_id": 4399
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 430781,
+          "session_id": 4399
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 430785,
+          "session_id": 4399
+        },
+        {
+          "session_name": "5. redna seja",
+          "speech_id": 430789,
+          "session_id": 4399
+        }
+      ]
+    },
+    {
+      "date": "23. 02. 2015",
+      "speeches": [
+        {
+          "session_name": "1. redna seja",
+          "speech_id": 442002,
+          "session_id": 4462
+        }
+      ]
+    },
+    {
+      "date": "20. 02. 2015",
+      "speeches": [
+        {
+          "session_name": "9. izredna seja",
+          "speech_id": 438808,
+          "session_id": 4429
+        },
+        {
+          "session_name": "9. izredna seja",
+          "speech_id": 438822,
+          "session_id": 4429
+        },
+        {
+          "session_name": "9. izredna seja",
+          "speech_id": 438848,
+          "session_id": 4429
+        }
+      ]
+    },
+    {
+      "date": "19. 02. 2015",
+      "speeches": [
+        {
+          "session_name": "9. izredna seja",
+          "speech_id": 438396,
+          "session_id": 4429
+        },
+        {
+          "session_name": "9. izredna seja",
+          "speech_id": 438463,
+          "session_id": 4429
+        },
+        {
+          "session_name": "9. izredna seja",
+          "speech_id": 438471,
+          "session_id": 4429
+        }
+      ]
+    },
+    {
+      "date": "18. 02. 2015",
+      "speeches": [
+        {
+          "session_name": "11. nujna seja (skupna seja)",
+          "speech_id": 470050,
+          "session_id": 5053
+        },
+        {
+          "session_name": "11. nujna seja (skupna seja)",
+          "speech_id": 469919,
+          "session_id": 5053
+        },
+        {
+          "session_name": "11. nujna seja (skupna seja)",
+          "speech_id": 469923,
+          "session_id": 5053
+        },
+        {
+          "session_name": "11. nujna seja (skupna seja)",
+          "speech_id": 469927,
+          "session_id": 5053
+        },
+        {
+          "session_name": "11. nujna seja (skupna seja)",
+          "speech_id": 469947,
+          "session_id": 5053
+        },
+        {
+          "session_name": "11. nujna seja (skupna seja)",
+          "speech_id": 469975,
+          "session_id": 5053
+        },
+        {
+          "session_name": "11. nujna seja (skupna seja)",
+          "speech_id": 469979,
+          "session_id": 5053
+        },
+        {
+          "session_name": "11. nujna seja (skupna seja)",
+          "speech_id": 470025,
+          "session_id": 5053
+        },
+        {
+          "session_name": "11. nujna seja (skupna seja)",
+          "speech_id": 470031,
+          "session_id": 5053
+        },
+        {
+          "session_name": "11. nujna seja (skupna seja)",
+          "speech_id": 470037,
+          "session_id": 5053
+        },
+        {
+          "session_name": "11. nujna seja (skupna seja)",
+          "speech_id": 470041,
+          "session_id": 5053
+        },
+        {
+          "session_name": "8. nujna seja (skupna seja)",
+          "speech_id": 476525,
+          "session_id": 5164
+        },
+        {
+          "session_name": "8. nujna seja (skupna seja)",
+          "speech_id": 476395,
+          "session_id": 5164
+        },
+        {
+          "session_name": "8. nujna seja (skupna seja)",
+          "speech_id": 476399,
+          "session_id": 5164
+        },
+        {
+          "session_name": "8. nujna seja (skupna seja)",
+          "speech_id": 476403,
+          "session_id": 5164
+        },
+        {
+          "session_name": "8. nujna seja (skupna seja)",
+          "speech_id": 476423,
+          "session_id": 5164
+        },
+        {
+          "session_name": "8. nujna seja (skupna seja)",
+          "speech_id": 476450,
+          "session_id": 5164
+        },
+        {
+          "session_name": "8. nujna seja (skupna seja)",
+          "speech_id": 476454,
+          "session_id": 5164
+        },
+        {
+          "session_name": "8. nujna seja (skupna seja)",
+          "speech_id": 476500,
+          "session_id": 5164
+        },
+        {
+          "session_name": "8. nujna seja (skupna seja)",
+          "speech_id": 476506,
+          "session_id": 5164
+        },
+        {
+          "session_name": "8. nujna seja (skupna seja)",
+          "speech_id": 476512,
+          "session_id": 5164
+        },
+        {
+          "session_name": "8. nujna seja (skupna seja)",
+          "speech_id": 476516,
+          "session_id": 5164
+        }
+      ]
+    },
+    {
+      "date": "12. 02. 2015",
+      "speeches": [
+        {
+          "session_name": "5. nujna seja",
+          "speech_id": 441888,
+          "session_id": 4461
+        },
+        {
+          "session_name": "5. nujna seja",
+          "speech_id": 441892,
+          "session_id": 4461
+        },
+        {
+          "session_name": "5. nujna seja",
+          "speech_id": 441897,
+          "session_id": 4461
+        }
+      ]
+    },
+    {
+      "date": "11. 02. 2015",
+      "speeches": [
+        {
+          "session_name": "7. nujna seja",
+          "speech_id": 476547,
+          "session_id": 5165
+        },
+        {
+          "session_name": "7. nujna seja",
+          "speech_id": 476549,
+          "session_id": 5165
+        }
+      ]
+    },
+    {
+      "date": "10. 02. 2015",
+      "speeches": [
+        {
+          "session_name": "5. nujna seja",
+          "speech_id": 480242,
+          "session_id": 5230
+        }
+      ]
+    },
+    {
+      "date": "05. 02. 2015",
+      "speeches": [
+        {
+          "session_name": "1. redna seja",
+          "speech_id": 441926,
+          "session_id": 4462
+        },
+        {
+          "session_name": "1. redna seja",
+          "speech_id": 441932,
+          "session_id": 4462
+        },
+        {
+          "session_name": "1. redna seja",
+          "speech_id": 441970,
+          "session_id": 4462
+        }
+      ]
+    },
+    {
+      "date": "03. 02. 2015",
+      "speeches": [
+        {
+          "session_name": "6. nujna seja",
+          "speech_id": 476602,
+          "session_id": 5166
+        },
+        {
+          "session_name": "6. nujna seja",
+          "speech_id": 476663,
+          "session_id": 5166
+        },
+        {
+          "session_name": "6. nujna seja",
+          "speech_id": 476706,
+          "session_id": 5166
+        }
+      ]
+    },
+    {
+      "date": "30. 01. 2015",
+      "speeches": [
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 432580,
+          "session_id": 4400
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 432638,
+          "session_id": 4400
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 432735,
+          "session_id": 4400
+        }
+      ]
+    },
+    {
+      "date": "29. 01. 2015",
+      "speeches": [
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 432542,
+          "session_id": 4400
+        }
+      ]
+    },
+    {
+      "date": "27. 01. 2015",
+      "speeches": [
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 432155,
+          "session_id": 4400
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 432091,
+          "session_id": 4400
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 432207,
+          "session_id": 4400
+        }
+      ]
+    },
+    {
+      "date": "26. 01. 2015",
+      "speeches": [
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 431765,
+          "session_id": 4400
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 431769,
+          "session_id": 4400
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 432001,
+          "session_id": 4400
+        },
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 432005,
+          "session_id": 4400
+        },
+        {
+          "session_name": "15. nujna seja",
+          "speech_id": 459310,
+          "session_id": 4827
+        }
+      ]
+    },
+    {
+      "date": "15. 01. 2015",
+      "speeches": [
+        {
+          "session_name": "6. redna seja",
+          "speech_id": 476736,
+          "session_id": 5167
+        },
+        {
+          "session_name": "6. redna seja",
+          "speech_id": 476748,
+          "session_id": 5167
+        }
+      ]
+    },
+    {
+      "date": "19. 12. 2014",
+      "speeches": [
+        {
+          "session_name": "3. redna seja",
+          "speech_id": 434011,
+          "session_id": 4401
+        },
+        {
+          "session_name": "3. redna seja",
+          "speech_id": 434179,
+          "session_id": 4401
+        }
+      ]
+    },
+    {
+      "date": "18. 12. 2014",
+      "speeches": [
+        {
+          "session_name": "3. redna seja",
+          "speech_id": 433871,
+          "session_id": 4401
+        },
+        {
+          "session_name": "3. redna seja",
+          "speech_id": 433919,
+          "session_id": 4401
+        }
+      ]
+    },
+    {
+      "date": "05. 12. 2014",
+      "speeches": [
+        {
+          "session_name": "7. izredna seja",
+          "speech_id": 439226,
+          "session_id": 4431
+        }
+      ]
+    },
+    {
+      "date": "04. 12. 2014",
+      "speeches": [
+        {
+          "session_name": "7. izredna seja",
+          "speech_id": 439079,
+          "session_id": 4431
+        },
+        {
+          "session_name": "7. izredna seja",
+          "speech_id": 439081,
+          "session_id": 4431
+        }
+      ]
+    },
+    {
+      "date": "27. 11. 2014",
+      "speeches": [
+        {
+          "session_name": "4. redna seja",
+          "speech_id": 476830,
+          "session_id": 5170
+        }
+      ]
+    },
+    {
+      "date": "19. 11. 2014",
+      "speeches": [
+        {
+          "session_name": "2. redna seja",
+          "speech_id": 434831,
+          "session_id": 4402
+        }
+      ]
+    },
+    {
+      "date": "18. 11. 2014",
+      "speeches": [
+        {
+          "session_name": "2. redna seja",
+          "speech_id": 434744,
+          "session_id": 4402
+        },
+        {
+          "session_name": "2. redna seja",
+          "speech_id": 434748,
+          "session_id": 4402
+        }
+      ]
+    },
+    {
+      "date": "17. 11. 2014",
+      "speeches": [
+        {
+          "session_name": "2. redna seja",
+          "speech_id": 434310,
+          "session_id": 4402
+        },
+        {
+          "session_name": "2. redna seja",
+          "speech_id": 434314,
+          "session_id": 4402
+        },
+        {
+          "session_name": "2. redna seja",
+          "speech_id": 434318,
+          "session_id": 4402
+        }
+      ]
+    },
+    {
+      "date": "14. 11. 2014",
+      "speeches": [
+        {
+          "session_name": "3. nujna seja",
+          "speech_id": 442063,
+          "session_id": 4464
+        }
+      ]
+    },
+    {
+      "date": "13. 11. 2014",
+      "speeches": [
+        {
+          "session_name": "3. nujna seja",
+          "speech_id": 480416,
+          "session_id": 5232
+        }
+      ]
+    },
+    {
+      "date": "05. 11. 2014",
+      "speeches": [
+        {
+          "session_name": "2. nujna seja",
+          "speech_id": 480443,
+          "session_id": 5233
+        }
+      ]
+    },
+    {
+      "date": "04. 11. 2014",
+      "speeches": [
+        {
+          "session_name": "8. redna seja (skupna seja)",
+          "speech_id": 447847,
+          "session_id": 4655
+        },
+        {
+          "session_name": "3. redna seja (skupna seja)",
+          "speech_id": 476970,
+          "session_id": 5173
+        }
+      ]
+    },
+    {
+      "date": "15. 10. 2014",
+      "speeches": [
+        {
+          "session_name": "5. izredna seja",
+          "speech_id": 439316,
+          "session_id": 4433
+        },
+        {
+          "session_name": "5. izredna seja",
+          "speech_id": 439442,
+          "session_id": 4433
+        }
+      ]
+    },
+    {
+      "date": "14. 10. 2014",
+      "speeches": [
+        {
+          "session_name": "2. redna seja",
+          "speech_id": 477033,
+          "session_id": 5174
+        },
+        {
+          "session_name": "2. redna seja",
+          "speech_id": 477015,
+          "session_id": 5174
+        },
+        {
+          "session_name": "2. redna seja",
+          "speech_id": 477023,
+          "session_id": 5174
+        }
+      ]
+    },
+    {
+      "date": "08. 10. 2014",
+      "speeches": [
+        {
+          "session_name": "2. nujna seja",
+          "speech_id": 477063,
+          "session_id": 5175
+        }
+      ]
+    },
+    {
+      "date": "30. 09. 2014",
+      "speeches": [
+        {
+          "session_name": "4. izredna seja",
+          "speech_id": 439577,
+          "session_id": 4434
+        }
+      ]
+    },
+    {
+      "date": "25. 09. 2014",
+      "speeches": [
+        {
+          "session_name": "1. redna seja",
+          "speech_id": 477157,
+          "session_id": 5176
+        },
+        {
+          "session_name": "1. redna seja",
+          "speech_id": 477171,
+          "session_id": 5176
+        },
+        {
+          "session_name": "1. redna seja",
+          "speech_id": 477189,
+          "session_id": 5176
+        }
+      ]
+    },
+    {
+      "date": "18. 09. 2014",
+      "speeches": [
+        {
+          "session_name": "3. izredna seja",
+          "speech_id": 439753,
+          "session_id": 4435
+        },
+        {
+          "session_name": "3. izredna seja",
+          "speech_id": 439653,
+          "session_id": 4435
+        }
+      ]
+    },
+    {
+      "date": "16. 09. 2014",
+      "speeches": [
+        {
+          "session_name": "1. nujna seja",
+          "speech_id": 442136,
+          "session_id": 4466
+        },
+        {
+          "session_name": "1. nujna seja",
+          "speech_id": 442163,
+          "session_id": 4466
+        }
+      ]
+    },
+    {
+      "date": "12. 09. 2014",
+      "speeches": [
+        {
+          "session_name": "1. nujna seja",
+          "speech_id": 477200,
+          "session_id": 5177
+        }
+      ]
+    },
+    {
+      "date": "28. 08. 2014",
+      "speeches": [
+        {
+          "session_name": "2. izredna seja",
+          "speech_id": 440038,
+          "session_id": 4436
+        },
+        {
+          "session_name": "2. izredna seja",
+          "speech_id": 440050,
+          "session_id": 4436
+        },
+        {
+          "session_name": "2. izredna seja",
+          "speech_id": 440052,
+          "session_id": 4436
+        },
+        {
+          "session_name": "2. izredna seja",
+          "speech_id": 440137,
+          "session_id": 4436
+        }
+      ]
+    },
+    {
+      "date": "25. 08. 2014",
+      "speeches": [
+        {
+          "session_name": "1. izredna seja",
+          "speech_id": 440244,
+          "session_id": 4437
         }
       ]
     }

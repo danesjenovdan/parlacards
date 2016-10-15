@@ -40,8 +40,7 @@
             %>
 
             <section>
-                <span class="date"><%= day.date.split('-')[2] %>. <%= day.date.split('-')[1] %>
-                    . <%= day.date.split('-')[0] %></span>
+                <span class="date"><%= day.date %></span>
 
                 <ul>
 
@@ -50,21 +49,24 @@
                         var icon = '';
                         var verb = '';
                         var thing = '';
+                        var thingwhere = '';
 
                     if(event.type === 'ballot'){
 
                         switch (event.option) {
                             case 'za':
                                 icon = 'parlaicon-za';
-                                verb = 'Glasovala ZA';
+                                verb = (data.person.gender == 'm') ? 'Glasoval ZA' : 'Glasovala ZA';
                                 break;
                             case 'proti':
                                 icon = 'parlaicon-proti';
                                 verb = 'Glasovala PROTI';
+                                verb = (data.person.gender == 'm') ? 'Glasoval PROTI' : 'Glasovala PROTI';
                                 break;
                             case 'ni':
                                 icon = 'parlaicon-ni';
                                 verb = 'NI glasovala za';
+                                verb = (data.person.gender == 'm') ? 'NI glasoval za' : 'NI glasovala za';
                                 break;
                         }
 
@@ -80,12 +82,14 @@
                     } else {
                         icon = 'parlaicon-govor';
                         verb = 'Govorila';
-                        thing = event.session_name;
+                        verb = (data.person.gender == 'm') ? 'Govoril' : 'Govorila';
+                        thing = event.session.name;
+                        thingwhere = event.session.org.name
                     %>
 
                     <li>
                         <span class="parlaicon <%= icon %>"></span>
-                        <p><a href="#"><%= verb %></a>&nbsp;na&nbsp;<a href="#"><%= thing %></a></p>
+                        <p><a href="#"><%= verb %></a>&nbsp;na&nbsp;<a href="#"><%= thing %> <%=thingwhere%></a></p>
                     </li>
 
                     <%

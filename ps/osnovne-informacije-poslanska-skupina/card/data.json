@@ -1,6 +1,5 @@
 {
-  "allVoters": 124669,
-  "numberOfSeats": 36,
+  "allVoters": 120269,
   "headOfPG": {
     "party": {
       "acronym": "SMC",
@@ -12,27 +11,38 @@
     "gov_id": "P266",
     "id": 48
   },
+  "viceOfPG": [
+    {
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "name": "PS Stranka modernega centra"
+      },
+      "gender": "f",
+      "name": "Lilijana Kozlovi\u010d",
+      "gov_id": "P265",
+      "id": 46
+    },
+    {
+      "party": {
+        "acronym": "unknown",
+        "id": "unknown",
+        "name": "unknown"
+      },
+      "name": "unknown_92",
+      "gov_id": "unknown_92",
+      "id": 92
+    }
+  ],
+  "social": {
+    "twitter": "https://twitter.com/strankasmc",
+    "facebook": "https://www.facebook.com/StrankaSMC/",
+    "email": "monika.mandic@dz-rs.si"
+  },
   "organization": {
     "acronym": "SMC",
     "id": 1,
     "name": "PS Stranka modernega centra"
   },
-  "viceOfPG":[
-    {
-      "party": {
-        "acronym": "SMC",
-        "id": 1,
-        "name": "PS Stranka XXXXmodernega centra"
-      },
-      "gender": "f",
-      "name": "Simona XXXXXKustec Lipicer",
-      "gov_id": "P266",
-      "id": 48
-    }
-  ],
-  "social": {
-    "email": "monika.mandic@dz-rs.si",
-    "facebook": "https://www.facebook.com/StrankaSMC/",
-    "twitter": "https://twitter.com/strankasmc"
-  }
+  "numberOfSeats": 35
 }

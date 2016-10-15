@@ -135,27 +135,44 @@
 
         <div class="indexsessionpart clearfix">
             <div class="link"><a href=""><span class="glyphicon glyphicon-comment"></span> Prisotnost</a></div>
+            <%
+            var presence = data.presence;
+            var stPgs = (presence.length > 7) ? "11.3" : "13.1";
+            var stPgs0 = (presence.length > 7) ? "popgoptmin" : "popgoptmax";
 
+            %>
 
+            <div class="card-placeholder bgwhite presence-of-pg <%=stPgs0%>" style="">
+                <%
 
-                    <% var colors = ["#197197", "#8cb8cb","#009cdd","#d9e7ed","#00628c","#003B54","#99E1FF","#ff5e41","#acc501"]; %>
+                var colors = {
+                    ["id1"]: '#91d0ed',
+                    ["id2"]: '#b8584b',
+                    ["id3"]: '#5287a8',
+                    ["id4"]: '3!',
+                    ["id5"]: '#23a3de',
+                    ["id6"]: '#b58889',
+                    ["id7"]: '#4f6378',
+                    ["id8"]: '#857799',
+                    ["id97"]: '#d9776c',
+                };
+                %>
+                <div class="clearfix">
+                    <% for (ps in presence) { %>
 
-
-
-                    <div class="clearfix">
-                        <% var i = 1; for (ps in data.presence) { %>
-
-                        <div class="pspris">
-                            <span><%= data.presence[ps].percent %> %</span>
-                            <font><%= data.presence[ps].org.acronym %></font>
-                            <div class="" style="">
-                                <div class="border" style="width: <%= data.presence[ps].percent %>%; background-color: <%=colors[ps]%>;"></div>
-                            </div>
+                    <div class="pspris">
+                        <span><%= presence[ps].percent %> %</span>
+                        <font><%= presence[ps].org.acronym %></font>
+                        <div class="" style="">
+                            <div class="border" style="width: <%= presence[ps].percent %>%; background-color: <%=colors["id" + presence[ps].org.id]%>;"></div>
                         </div>
-
-
-                        <% i++; }%>
                     </div>
+
+
+                    <%  }%>
+                </div>
+            </div>
+
 
         </div>
 
@@ -188,7 +205,7 @@
                         %>
 
 
-                        <div class="row single_voting">
+                        <div class="clearfix single_voting">
                             <a href="/seje/P_seja_glasovanje">
                                 <div class=" col-md-1 ">
                                     <div class="accepted <%= ayeney %> ">

@@ -1,5 +1,22 @@
+.session-container{
+  height: auto;
+  left: auto;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  overflow: hidden;
+  padding: 0;
+  position: inherit;
+  top: auto;
+}
+
+.session-container .paneltab{
+  padding-top:0;
+  padding-bottom:0;
+}
+
 .session-container .paneltab .session_other_members a{
-  width: 15.67%;
+  width: 12.67%;
   float: left;
   margin: 2%;
 }
@@ -8,8 +25,70 @@
   width:100%;
 }
 
-
-.session-container .paneltab .member img{
-  margin-top: 12px;
+.session-container .paneltab .member .image{
+  width: auto;
+  height:auto;
 }
 
+.session-container .paneltab .member h3{
+  margin-top: 0;
+}
+
+.session-container .paneltab .member img{
+ /*margin-top: 12px;*/
+}
+
+.other_poslanec{
+  padding-bottom: 10px;
+}
+.progress.hugebar{
+  margin-bottom: 30px;
+}
+
+.sessionsGetSessionByDate{
+  height: 500px;
+}
+.sessionsGetSessionByDate ul{
+  padding: 0;
+}
+.sessionsGetSessionByDate ul li{
+  list-style: none;
+  padding-bottom: 10px;
+}
+.sessionsGetSessionByDate ul li span{
+  padding-left: 0;
+}
+.sessionsGetSessionByDate ul li p{
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.verticalmember{
+  /*height: 95px;*/
+  height: 85px;
+}
+.verticalmember .member_data {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 991px) {
+  .verticalmember{
+    height: auto;
+  }
+  .verticalmember .member_data {
+    position: relative;
+    top: auto;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+.upcase{
+  text-transform: uppercase;
+}

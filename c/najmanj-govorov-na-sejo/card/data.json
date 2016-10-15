@@ -1,72 +1,77 @@
 [
   {
     "person": {
+      "name": "Du\u0161an Radi\u010d",
+      "district": null,
+      "gender": "m",
       "party": {
         "acronym": "SMC",
         "id": 1,
         "name": "PS Stranka modernega centra"
       },
-      "gender": "f",
-      "name": "Sre\u010dko Bla\u017ei\u010d",
-      "gov_id": "P241",
-      "id": 6
+      "id": 1357,
+      "gov_id": "P300"
     },
-    "speeches": 0.0625
+    "speeches": 0.02634054562558796
   },
   {
     "person": {
+      "name": "Tanja Cink",
+      "district": null,
+      "gender": "f",
       "party": {
         "acronym": "SMC",
         "id": 1,
         "name": "PS Stranka modernega centra"
       },
-      "gender": "f",
+      "id": 14,
+      "gov_id": "P246"
+    },
+    "speeches": 0.027281279397930385
+  },
+  {
+    "person": {
       "name": "Aleksander Kav\u010di\u010d",
-      "gov_id": "P259",
-      "id": 39
-    },
-    "speeches": 0.125
-  },
-  {
-    "person": {
+      "district": null,
+      "gender": "m",
       "party": {
         "acronym": "SMC",
         "id": 1,
         "name": "PS Stranka modernega centra"
       },
-      "gender": "f",
-      "name": "Vesna Vervega",
-      "gov_id": "P291",
-      "id": 84
+      "id": 39,
+      "gov_id": "P259"
     },
-    "speeches": 0.1875
+    "speeches": 0.03292568203198495
   },
   {
     "person": {
-      "party": {
-        "acronym": "SMC",
-        "id": 1,
-        "name": "PS Stranka modernega centra"
-      },
-      "gender": "f",
       "name": "Ivan Prelog",
-      "gov_id": "P279",
-      "id": 68
-    },
-    "speeches": 0.1875
-  },
-  {
-    "person": {
+      "district": null,
+      "gender": "m",
       "party": {
         "acronym": "SMC",
         "id": 1,
         "name": "PS Stranka modernega centra"
       },
-      "gender": "f",
-      "name": "Marjan Dolin\u0161ek",
-      "gov_id": "P249",
-      "id": 19
+      "id": 68,
+      "gov_id": "P279"
     },
-    "speeches": 0.1875
+    "speeches": 0.043273753527751646
+  },
+  {
+    "person": {
+      "name": "Maru\u0161a \u0160kopac",
+      "district": null,
+      "gender": "f",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "name": "PS Stranka modernega centra"
+      },
+      "id": 77,
+      "gov_id": "P287"
+    },
+    "speeches": 0.045155221072436504
   }
 ]

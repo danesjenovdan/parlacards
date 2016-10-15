@@ -74,11 +74,11 @@
                                 </div>
                                 <div class="col280">
                                     <div class="progress hugebar ">
-                                        <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.sessions.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.score/100*80 %>%;">
+                                        <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.sessions.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.score/100*73 %>%;">
                                             <span class="sr-only"><%= data.results.sessions.score %>% Complete</span>
                                         </div>
                                         <div class="progress_number">
-                                            <%= data.results.sessions.score %>
+                                            <%= Math.round(data.results.sessions.score) %>
                                         </div>
 
                                     </div>
@@ -93,11 +93,11 @@
                                 </div>
                                 <div class="col280">
                                     <div class="progress smallbar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.sessions.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.average/100*80 %>%;">
+                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.sessions.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.average/100*73 %>%;">
                                             <span class="sr-only"><%= data.results.sessions.average %>% Complete</span>
                                         </div>
                                         <div class="progress_number">
-                                            <%= data.results.sessions.average %>
+                                            <%= Math.round(data.results.sessions.average) %>
                                         </div>
 
                                     </div>
@@ -112,7 +112,7 @@
                                 </div>
                                 <div class="col280">
                                     <div class="progress smallbar avgminmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.sessions.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.max.score/100*80 %>%;">
+                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.sessions.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.max.score/100*73 %>%;">
                                             <span class="sr-only"><%= data.results.sessions.max.score %>% Complete</span>
                                         </div>
                                         <%
@@ -127,7 +127,7 @@
                                         }
                                         %>
                                         <div class="progress_number">
-                                            <%= data.results.sessions.max.score %>
+                                            <%= Math.round(data.results.sessions.max.score) %>
                                         </div>
 
                                     </div>
@@ -145,11 +145,11 @@
                                 </div>
                                 <div class="col280">
                                     <div class="progress hugebar ">
-                                        <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.votes.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.votes.score/100*80 %>%;">
+                                        <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.votes.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.votes.score/100*73 %>%;">
                                             <span class="sr-only"><%= data.results.votes.score %>% Complete</span>
                                         </div>
                                         <div class="progress_number">
-                                            <%= data.results.votes.score %>
+                                            <%= Math.round(data.results.votes.score) %>
                                         </div>
 
                                     </div>
@@ -164,11 +164,11 @@
                                 </div>
                                 <div class="col280">
                                     <div class="progress smallbar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.votes.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.votes.average/100*80 %>%;">
+                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.votes.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.votes.average/100*73 %>%;">
                                             <span class="sr-only"><%= data.results.votes.average %>% Complete</span>
                                         </div>
                                         <div class="progress_number">
-                                            <%= data.results.votes.average %>
+                                            <%= Math.round(data.results.votes.average) %>
                                         </div>
 
                                     </div>
@@ -183,7 +183,7 @@
                                 </div>
                                 <div class="col280">
                                     <div class="progress smallbar avgminmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.votes.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.votes.max.score/100*80 %>%;">
+                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.votes.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.votes.max.score/100*73 %>%;">
                                             <span class="sr-only"><%= data.results.votes.max.score %>% Complete</span>
                                         </div>
                                         <%
@@ -198,7 +198,7 @@
                                         }
                                         %>
                                         <div class="progress_number">
-                                            <%= data.results.votes.max.score %>
+                                            <%= Math.round(data.results.votes.max.score) %>
                                         </div>
 
                                     </div>

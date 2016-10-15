@@ -7,59 +7,45 @@
   "results": [
     {
       "person": {
-        "id": 36,
+        "id": 69,
         "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
+          "acronym": "DeSUS",
+          "id": 3,
+          "name": "PS Demokratska Stranka Upokojencev Slovenije"
         },
-        "name": "Janez Jan\u0161a",
-        "gov_id": "P025",
+        "name": "Uro\u0161 Prikl",
+        "gov_id": "P280",
         "gender": "m"
       },
-      "ratio": 82.1724021968491
+      "ratio": 32.4488962749391
     },
     {
       "person": {
-        "id": 15,
+        "id": 60,
         "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
         },
-        "name": "Andrej \u010cu\u0161",
-        "gov_id": "P225",
-        "gender": "m"
-      },
-      "ratio": 87.1293657688119
-    },
-    {
-      "person": {
-        "id": 10,
-        "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
-        "name": "Franc Breznik",
-        "gov_id": "P167",
-        "gender": "m"
-      },
-      "ratio": 87.6113806162148
-    },
-    {
-      "person": {
-        "id": 51,
-        "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
-        "name": "Suzana Lep \u0160imenko",
-        "gov_id": "P268",
+        "name": "Jasna Murgel",
+        "gov_id": "P274",
         "gender": "f"
       },
-      "ratio": 96.3724387411366
+      "ratio": 32.7715978556233
+    },
+    {
+      "person": {
+        "id": 16,
+        "party": {
+          "acronym": "SMC",
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "name": "Erika Dekleva",
+        "gov_id": "P247",
+        "gender": "f"
+      },
+      "ratio": 32.881558819505
     },
     {
       "person": {
@@ -73,7 +59,7 @@
         "gov_id": "P129",
         "gender": "m"
       },
-      "ratio": 96.8361220719504
+      "ratio": 95.7391225674506
     },
     {
       "person": {
@@ -87,7 +73,21 @@
         "gov_id": "P277",
         "gender": "m"
       },
-      "ratio": 97.0231914392921
+      "ratio": 96.1472014806222
+    },
+    {
+      "person": {
+        "id": 51,
+        "party": {
+          "acronym": "SDS",
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "name": "Suzana Lep \u0160imenko",
+        "gov_id": "P268",
+        "gender": "f"
+      },
+      "ratio": 96.4650786862602
     }
   ]
 }

@@ -25,9 +25,7 @@
 
 <body> <!-- removeme -->
 
-<div class="container">
-
-<div class="col-md-12">
+<div class="container"><div class="row"><div class="col-md-12"><!-- removeme -->
 
 
 <!-- everything above here is part of the page and not part of the card -->
@@ -45,6 +43,23 @@
                 <% for (var i = 0; i < data.results.length ; i++) { %>
                 <%
                     var tmpname = data.results[i].person.name;
+
+
+
+                            var explodedNameParts = tmpname.split(" ");
+                    switch (explodedNameParts.length){
+                        case 2:
+                            tmpname = explodedNameParts[0] + "<br>" + explodedNameParts[1];
+                            break;
+                        case 3:
+                            tmpname = explodedNameParts[0] + " " + explodedNameParts[1]+ "<br>" + explodedNameParts[2];
+                            break;
+                        case 4:
+                            tmpname = explodedNameParts[0] + " " + explodedNameParts[1]+ "<br>" + explodedNameParts[2]+ "" + explodedNameParts[3];
+                            break;
+                    }
+
+
                     var tmpGovId = data.results[i].person.gov_id;
                     if (typeof (tmpname) === 'undefined') {
                         tmpname = "duke Nukem FixMe";
@@ -54,7 +69,7 @@
                 <div class="member">
                     <div class="image"
                          style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= tmpGovId %>.png); background-size: cover;"></div>
-                    <p><%= tmpname %></p>
+                    <p><%- tmpname %></p>
                     <span><%= data.results[i].ratio.toFixed(0) %> %</span>
                     <div class="clearfix"></div>
                 </div>
@@ -76,8 +91,8 @@
 </div>
 <!-- everything below here is part of the page and not part of the card -->
 
-    </div>
-</div>
+</div></div></div><!-- removeme -->
+
 <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
 <!-- inline temp/js/script.js as <script> -->
 <script data-inline="true" src="js/script.js"></script>

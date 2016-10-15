@@ -1,72 +1,77 @@
 [
   {
     "person": {
+      "name": "Milan Brglez",
+      "district": null,
+      "gender": "m",
       "party": {
         "acronym": "SMC",
         "id": 1,
         "name": "PS Stranka modernega centra"
       },
-      "gender": "f",
-      "name": "Milan Brglez",
-      "gov_id": "P243",
-      "id": 11
+      "id": 11,
+      "gov_id": "P243"
     },
-    "speeches": 73.0
+    "speeches": 7.514581373471308
   },
   {
     "person": {
+      "name": "Primo\u017e Hainz",
+      "district": null,
+      "gender": "m",
       "party": {
         "acronym": "DeSUS",
         "id": 3,
         "name": "PS Demokratska Stranka Upokojencev Slovenije"
       },
-      "gender": "f",
-      "name": "Primo\u017e Hainz",
-      "gov_id": "P255",
-      "id": 29
+      "id": 29,
+      "gov_id": "P255"
     },
-    "speeches": 31.3125
+    "speeches": 3.7121354656632173
   },
   {
     "person": {
+      "name": "Ur\u0161ka Ban",
+      "district": null,
+      "gender": "f",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "name": "PS Stranka modernega centra"
+      },
+      "id": 3,
+      "gov_id": "P240"
+    },
+    "speeches": 3.465663217309501
+  },
+  {
+    "person": {
+      "name": "Bojana Mur\u0161i\u010d",
+      "district": null,
+      "gender": "f",
       "party": {
         "acronym": "SD",
         "id": 7,
         "name": "PS Socialni Demokrati"
       },
-      "gender": "f",
-      "name": "Andreja Kati\u010d",
-      "gov_id": "ministrstvo_za_obrambo/ministrica_za_obrambo/",
-      "id": 38
+      "id": 61,
+      "gov_id": "P275"
     },
-    "speeches": 22.3125
+    "speeches": 2.7064910630291625
   },
   {
     "person": {
+      "name": "Uro\u0161 Prikl",
+      "district": null,
+      "gender": "m",
       "party": {
-        "acronym": "SDS",
-        "id": 5,
-        "name": "PS Slovenska Demokratska Stranka"
+        "acronym": "DeSUS",
+        "id": 3,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
       },
-      "gender": "f",
-      "name": "Jo\u017ee Tanko",
-      "gov_id": "P077",
-      "id": 78
+      "id": 69,
+      "gov_id": "P280"
     },
-    "speeches": 8.1875
-  },
-  {
-    "person": {
-      "party": {
-        "acronym": "ZL",
-        "id": 8,
-        "name": "PS Zdru\u017eena Levica"
-      },
-      "gender": "f",
-      "name": "Franc Tr\u010dek ",
-      "gov_id": "P290",
-      "id": 82
-    },
-    "speeches": 4.4375
+    "speeches": 2.531514581373471
   }
 ]

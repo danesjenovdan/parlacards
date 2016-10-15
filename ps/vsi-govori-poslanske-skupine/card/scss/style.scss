@@ -1,60 +1,11 @@
 .card-header h1, .card-footer h1{
   color: #525252;
 }
-#votingCard div.member span{
-  color: #525252;
-  font-weight:500;
-}
-
-#votingCard div.member{
-
-}
-#votingCard .member:last-child{
-  border: none;
-}
-#votingCard .member.lastel{
-  border: none;
-  padding-bottom: 10px;
-}
-.card-container{
-  width:auto;
-  margin-left: 0px;
-  margin-right: 0px;
-
-  padding-left: 0px;
-  padding-right: 0;
-}
-
-.card-header{
-  width:auto;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.card-content{
-  width:auto;
-  margin-left: 20px;
-  margin-right: 20px;
-
-}
-
-.card-footer{
-  width:auto;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-/*************/
-.card-content {
-  margin-right: 5px;
-}
-#votingCard div.member {
-
-}
-
-
 
 
 #all-speeches {
+
+  height: 480px;
 
   .speech{
     //background: #197197;
@@ -87,6 +38,8 @@
       border-top: none;
       border-bottom: 1px solid #f0f0f0;
       padding-bottom: 5px;
+      float: left;
+      width: 100%;
 
       li {
         margin: 20px 10px 0px 10px;
@@ -106,6 +59,7 @@
           margin-bottom: 0px;
           border: none;
           padding-bottom: 0px;
+          width: 100%;
           li{
             margin: 0;
           }
@@ -131,7 +85,7 @@
       float: left;
       display: inline-block;
       font-size: 14px;
-      width: 80%;
+      /*width: 80%;*/
     }
     .speechesnmbr{
 
@@ -144,4 +98,24 @@
 
 
 
+}
+@media (max-width: 991px) {
+
+}
+@media (max-width: 390px) {
+
+  #all-speeches section ul li{
+    margin: 20px 0 0 0;
+  }
+  #all-speeches section ul li ul {
+    padding: 0px;
+  }
+  #all-speeches section .member {
+    border-bottom: none;
+    padding: 10px 0 0 0;
+  }
+  #all-speeches .speech{
+    padding: 3px 10px;
+    margin: 0 10px 5px 0;
+  }
 }
