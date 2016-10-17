@@ -29,11 +29,8 @@
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
         <div class="card-header">
-            <div class="card-header">
-                <div class="card-header-border"></div>
-                <h1>Število izgovorjenih besed</h1>
-                <!-- this text is the only thing you touch in .card-header -->
-            </div>
+            <div class="card-header-border"></div>
+            <h1>Stilne analize</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
             <div class="bgwhite poslanec">
@@ -51,21 +48,21 @@
                     </div>
                     <div class="col180">
                         <div class="progress smallbar avgmin">
-                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.privzdignjeno * 500000 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.privzdignjeno * 500000 %>%;">
-                                <span class="sr-only"><%= data.results.privzdignjeno * 500000 %></span>
+                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.privzdignjeno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.privzdignjeno %>%;">
+                                <span class="sr-only"><%= data.results.privzdignjeno %></span>
                             </div>
-                            <div class="progress_number">
-                                <%= Math.round(data.results.privzdignjeno * 500000); %>
+                            <div class="progress_number" <% if (Math.round(data.results.privzdignjeno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.privzdignjeno); %>
                             </div>
 
                         </div>
 
                         <div class="progress smallbar avgmin">
-                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.privzdignjeno_average * 500000 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.privzdignjeno_average * 500000 %>%;">
-                                <span class="sr-only"><%= data.results.average.privzdignjeno_average * 500000 %></span>
+                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.privzdignjeno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.privzdignjeno %>%;">
+                                <span class="sr-only"><%= data.results.average.privzdignjeno %></span>
                             </div>
-                            <div class="progress_number">
-                                <%= Math.round(data.results.average.privzdignjeno_average * 500000); %>
+                            <div class="progress_number" <% if (Math.round(data.results.average.privzdignjeno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.average.privzdignjeno); %>
                             </div>
 
                         </div>
@@ -85,21 +82,21 @@
                     </div>
                     <div class="col180">
                         <div class="progress smallbar avgmin">
-                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.preprosto %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.preprosto * 500000 %>%;">
-                                <span class="sr-only"><%= data.results.preprosto * 500000 %></span>
+                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.preprosto %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.preprosto %>%;">
+                                <span class="sr-only"><%= data.results.preprosto %></span>
                             </div>
-                            <div class="progress_number">
-                                <%= Math.round(data.results.preprosto * 500000); %>
+                            <div class="progress_number" <% if (Math.round(data.results.preprosto) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.preprosto); %>
                             </div>
 
                         </div>
 
                         <div class="progress smallbar avgmin">
-                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.preprosto_average * 500000 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.preprosto_average * 500000 %>%;">
-                                <span class="sr-only"><%= data.results.average.preprosto_average * 500000 %></span>
+                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.preprosto %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.preprosto %>%;">
+                                <span class="sr-only"><%= data.results.average.preprosto %></span>
                             </div>
-                            <div class="progress_number">
-                                <%= Math.round(data.results.average.preprosto_average * 500000); %>
+                            <div class="progress_number" <% if (Math.round(data.results.average.preprosto) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.average.preprosto); %>
                             </div>
 
                         </div>
@@ -119,21 +116,21 @@
                     </div>
                     <div class="col180">
                         <div class="progress smallbar avgmin">
-                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.problematicno * 500000 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.problematicno * 500000 %>%;">
-                                <span class="sr-only"><%= data.results.problematicno * 500000 %></span>
+                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.problematicno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.problematicno %>%;">
+                                <span class="sr-only"><%= data.results.problematicno %></span>
                             </div>
-                            <div class="progress_number">
-                                <%= Math.round(data.results.problematicno * 500000); %>
+                            <div class="progress_number" <% if (Math.round(data.results.problematicno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.problematicno); %>
                             </div>
 
                         </div>
 
                         <div class="progress smallbar avgmin">
-                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.problematicno_average * 500000 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.problematicno_average * 500000 %>%;">
-                                <span class="sr-only"><%= data.results.average.problematicno_average * 500000 %></span>
+                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.problematicno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.problematicno %>%;">
+                                <span class="sr-only"><%= data.results.average.problematicno %></span>
                             </div>
-                            <div class="progress_number">
-                                <%= Math.round(data.results.average.problematicno_average * 500000); %>
+                            <div class="progress_number" <% if (Math.round(data.results.average.problematicno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.average.problematicno); %>
                             </div>
 
                         </div>
