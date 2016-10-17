@@ -1,0 +1,158 @@
+<!DOCTYPE html> <!-- removeme -->
+<html> <!-- removeme -->
+
+<head> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+
+    <!-- build:remove -->
+    <!-- these script files are removed on build -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+    <%# <script src="https://raw.githubusercontent.com/twbs/bootstrap/master/js/tab.js"></script>%>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <!-- endbuild -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+
+    <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <link data-inline="true" rel="stylesheet" href="css/style.css">
+
+</head> <!-- removeme -->
+
+<body> <!-- removeme -->
+
+    <!-- everything above here is part of the page and not part of the card -->
+    <div class="card-container card-halfling <%= className %>">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Stilne analize</h1> <!-- this text is the only thing you touch in .card-header -->
+        </div>
+        <div class="card-content">
+            <div class="bgwhite poslanec">
+
+                <div class="me_poslanec_mini clearfix">
+                    <div class="col150">
+                        <span class="poslanec_title">
+                                        Privzdignjeno <br>besedje
+                                    </span>
+                    </div>
+                    <div class="col100">
+                        <span style="font-weight: bold;"><%= data.party.acronym %></span>
+                        <br /> Povprečje
+
+                    </div>
+                    <div class="col180">
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.privzdignjeno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.privzdignjeno %>%;">
+                                <span class="sr-only"><%= data.results.privzdignjeno %></span>
+                            </div>
+                            <div class="progress_number" <% if (Math.round(data.results.privzdignjeno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.privzdignjeno); %>
+                            </div>
+
+                        </div>
+
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.privzdignjeno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.privzdignjeno %>%;">
+                                <span class="sr-only"><%= data.results.average.privzdignjeno %></span>
+                            </div>
+                            <div class="progress_number" <% if (Math.round(data.results.average.privzdignjeno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.average.privzdignjeno); %>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="me_poslanec_mini clearfix">
+                    <div class="col150">
+                        <span class="poslanec_title">
+                                        Preprosto <br>besedje
+                                    </span>
+                    </div>
+                    <div class="col100">
+                        <span style="font-weight: bold;"><%= data.party.acronym %></span>
+                        <br /> Povprečje
+
+                    </div>
+                    <div class="col180">
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.preprosto %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.preprosto %>%;">
+                                <span class="sr-only"><%= data.results.preprosto %></span>
+                            </div>
+                            <div class="progress_number" <% if (Math.round(data.results.preprosto) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.preprosto); %>
+                            </div>
+
+                        </div>
+
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.preprosto %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.preprosto %>%;">
+                                <span class="sr-only"><%= data.results.average.preprosto %></span>
+                            </div>
+                            <div class="progress_number" <% if (Math.round(data.results.average.preprosto) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.average.preprosto); %>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="me_poslanec_mini clearfix">
+                    <div class="col150">
+                        <span class="poslanec_title">
+                                        Problematično <br>besedje
+                                    </span>
+                    </div>
+                    <div class="col100">
+                        <span style="font-weight: bold;"><%= data.party.acronym %></span>
+                        <br /> Povprečje
+
+                    </div>
+                    <div class="col180">
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.problematicno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.problematicno %>%;">
+                                <span class="sr-only"><%= data.results.problematicno %></span>
+                            </div>
+                            <div class="progress_number" <% if (Math.round(data.results.problematicno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.problematicno); %>
+                            </div>
+
+                        </div>
+
+                        <div class="progress smallbar avgmin">
+                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.problematicno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.problematicno %>%;">
+                                <span class="sr-only"><%= data.results.average.problematicno %></span>
+                            </div>
+                            <div class="progress_number" <% if (Math.round(data.results.average.problematicno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                <%= Math.round(data.results.average.problematicno); %>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- delete this placeholder, this is the content of your card -->
+        </div>
+        <div class="card-footer">
+            <div class="card-circle-button card-share"></div>
+            <div class="card-circle-button card-embed"></div>
+            <div class="card-circle-button card-info">i</div>
+        </div>
+    </div>
+    <!-- everything below here is part of the page and not part of the card -->
+
+    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <!-- inline temp/js/script.js as <script> -->
+    <script data-inline="true" src="js/script.js"></script>
+
+</body> <!-- removeme -->
+
+</html> <!-- removeme -->

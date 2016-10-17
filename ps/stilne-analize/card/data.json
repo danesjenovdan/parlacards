@@ -1,0 +1,17 @@
+{
+    "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "name": "PS Stranka modernega centra"
+    },
+    "results": {
+        "average": {
+            "preprosto": 29.810175399733602,
+            "privzdignjeno": 0.0,
+            "problematicno": 12.0382026461435
+        },
+        "preprosto": 49.525381758150999,
+        "privzdignjeno": 0.0,
+        "problematicno": 12.3813454395378
+    }
+}
