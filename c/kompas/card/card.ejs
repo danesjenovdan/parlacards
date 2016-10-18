@@ -76,7 +76,7 @@
         </div>
         <div class="card-content">
             <div class="row">
-                <div class="col-xs-4 col-sm-4 col-md-1">
+                <div class="hidden-xs col-sm-4 col-md-2">
                     <div class="kompas-search">
                         <%
                             var searchpeople = [];
@@ -102,31 +102,32 @@
                           </svg>
                     </div>
                 </div>
-                <div class="col-xs-8 col-sm-8 col-md-11">
+                <div class="col-xs-12 col-sm-8 col-md-10">
                     <div class="kompas-people">
                         <div class="kompas-people-wide">
-                        <% for (person_i in data) { %>
-                            <div class="kompas-person hidden noselect" id="personcard<%= data[person_i]['person']['id'] %>" data-id="<%= data[person_i]['person']['id'] %>" data-acronym="<%= data[person_i]['person']['party']['acronym'] %>">
+                            <% for (person_i in data) { %>
+                                <div class="kompas-person hidden noselect" id="personcard<%= data[person_i]['person']['id'] %>" data-id="<%= data[person_i]['person']['id'] %>" data-acronym="<%= data[person_i]['person']['party']['acronym'] %>">
 
-                                <div class="kompas-person-party">
-                                    <%= data[person_i]['person']['party']['acronym'] %>
-                                </div>
-                                <div class="kompas-person-internal-container">
-                                    <div class="kompas-person-image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data[person_i]['person']['gov_id'] %>.png)"></div>
-                                    <div class="kompas-person-name">
-                                        <%= data[person_i]['person']['name'] %>
+                                    <div class="kompas-person-party">
+                                        <%= data[person_i]['person']['party']['acronym'] %>
+                                    </div>
+                                    <div class="kompas-person-internal-container">
+                                        <div class="kompas-person-image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data[person_i]['person']['gov_id'] %>.png)"></div>
+                                        <div class="kompas-person-name">
+                                            <%= data[person_i]['person']['name'] %>
+                                        </div>
+                                    </div>
+                                    <div class="kompas-person-close">
+                                        ×
                                     </div>
                                 </div>
-                                <div class="kompas-person-close">
-                                    ×
-                                </div>
-                            </div>
-                        <% } %>
+                            <% } %>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-2">
+                <div class="hidden-xs col-sm-2 col-md-2">
                     <div class="kompas-stranke">
                         <% for (party_i in parties) {
                         %>
@@ -140,7 +141,7 @@
                         %>
                     </div>
                 </div>
-                <div class="col-xs-10">
+                <div class="col-xs-12 col-sm-10 col-md-10">
                     <div id="kompas-scatter"></div>
                 </div>
             </div>
