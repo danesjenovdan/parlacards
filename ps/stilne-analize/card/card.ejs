@@ -25,32 +25,6 @@
 
 <body> <!-- removeme -->
 
-    <%
-
-        function getInitials(name, delimiter) {
-
-            if(name) {
-
-                var array = name.split(delimiter);
-                var initials = '';
-
-                for (var i = 0; i < array.length; i++) {
-                    if (array[i].length > 0) {
-                        initials = initials + array[i].charAt(0);
-                    }
-                }
-
-                return initials;
-
-            }
-
-            return false;
-
-        }
-        var name = data.person.name;
-        var initials = getInitials(name, ' ');
-    %>
-
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
         <div class="card-header">
@@ -67,7 +41,7 @@
                                     </span>
                     </div>
                     <div class="col100">
-                        <span style="font-weight: bold;"><%= initials %></span>
+                        <span style="font-weight: bold;"><%= data.party.acronym %></span>
                         <br /> Povprečje
 
                     </div>
@@ -101,7 +75,7 @@
                                     </span>
                     </div>
                     <div class="col100">
-                        <span style="font-weight: bold;"><%= initials %></span>
+                        <span style="font-weight: bold;"><%= data.party.acronym %></span>
                         <br /> Povprečje
 
                     </div>
@@ -135,7 +109,7 @@
                                     </span>
                     </div>
                     <div class="col100">
-                        <span style="font-weight: bold;"><%- initials %></span>
+                        <span style="font-weight: bold;"><%= data.party.acronym %></span>
                         <br /> Povprečje
 
                     </div>

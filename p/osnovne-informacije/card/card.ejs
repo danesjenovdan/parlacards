@@ -54,13 +54,12 @@
                     </div>
                     <div class="col-xs-10 bordertop">
                         <span class="key">
-                            Dela za: <b><%= data.results.voters %></b>
+                            Izvoljen/a z <b><%= data.results.voters %></b> glasovi v
                             <% if(data.results.district !== null){ %>
-                            <br />
-                            <b><%=data.results.district%></b>
+                                <b><%=data.results.district%></b>
                             <% }else{ %>
-                            <br />
-                            manjka label in okraj!!!
+                                <br>
+                                manjka label in okraj!!!
                             <% } %>
                         </span>
                     </div>
