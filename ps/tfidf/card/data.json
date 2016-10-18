@@ -1,53 +1,78 @@
 {
-    "person": {
-        "id": 50,
-        "name": "Franc Laj",
-        "gov_id": "P240",
-        "party": {
-            "name": "Stranka mehkih cur",
-            "id": 2,
-            "acronym": "SMC"
-        }
+    "party": {
+        "acronym": "PS NP",
+        "id": 97,
+        "name": "PS nepovezanih poslancev"
     },
     "results": [{
-        "rank": 1,
-        "term": "alergen",
-        "tfidf": 0.009124496769425486
+        "term": "haitij",
+        "scores": {
+            "tf": 2,
+            "df": 11,
+            "tf-idf": 0.18181818181818182
+        }
     }, {
-        "rank": 2,
-        "term": "ambrozija",
-        "tfidf": 0.009124496769425486
+        "term": "konsenza",
+        "scores": {
+            "tf": 3,
+            "df": 33,
+            "tf-idf": 0.09090909090909091
+        }
     }, {
-        "rank": 3,
-        "term": "lendati",
-        "tfidf": 0.00833667703715213
+        "term": "fuzija",
+        "scores": {
+            "tf": 2,
+            "df": 25,
+            "tf-idf": 0.08
+        }
     }, {
-        "rank": 4,
-        "term": "ambroziti",
-        "tfidf": 0.007789051259282549
+        "term": "ri\u017e",
+        "scores": {
+            "tf": 2,
+            "df": 29,
+            "tf-idf": 0.06896551724137931
+        }
     }, {
-        "rank": 5,
-        "term": "mrtvec",
-        "tfidf": 0.007299597415540388
+        "term": "zvra\u010dati",
+        "scores": {
+            "tf": 2,
+            "df": 16,
+            "tf-idf": 0.0625
+        }
     }, {
-        "rank": 6,
-        "term": "agrotehničen",
-        "tfidf": 0.007299597415540388
+        "term": "prezentirati",
+        "scores": {
+            "tf": 2,
+            "df": 87,
+            "tf-idf": 0.022988505747126436
+        }
     }, {
-        "rank": 7,
-        "term": "odriniti",
-        "tfidf": 0.007156003630437071
+        "term": "piramida",
+        "scores": {
+            "tf": 2,
+            "df": 89,
+            "tf-idf": 0.02247191011235955
+        }
     }, {
-        "rank": 8,
-        "term": "krater",
-        "tfidf": 0.006527296549898024
+        "term": "zatekel",
+        "scores": {
+            "tf": 2,
+            "df": 94,
+            "tf-idf": 0.02127659574468085
+        }
     }, {
-        "rank": 9,
-        "term": "žitnica",
-        "tfidf": 0.006211100481021827
+        "term": "reaktiven",
+        "scores": {
+            "tf": 4,
+            "df": 51,
+            "tf-idf": 0.0196078431372549
+        }
     }, {
-        "rank": 10,
-        "term": "koncentriran",
-        "tfidf": 0.005672387204613367
+        "term": "arabski",
+        "scores": {
+            "tf": 4,
+            "df": 192,
+            "tf-idf": 0.015625
+        }
     }]
 }

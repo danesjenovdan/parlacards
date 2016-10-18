@@ -42,10 +42,10 @@
 
                 for (var i = 0; i < data.results.length; i++) {
                     var word = data.results[i];
-                    if (Math.round(word.tfidf * 5000) > max) {
-                        max = Math.round(word.tfidf * 5000);
-                    } else if (+word.tfidf < min) {
-                        min = Math.round(word.tfidf * 5000);
+                    if (Math.round(word.scores['tf-idf'] * 5000) > max) {
+                        max = Math.round(word.scores['tf-idf'] * 5000);
+                    } else if (+word.scores['tf-idf'] < min) {
+                        min = Math.round(word.scores['tf-idf'] * 5000);
                     }
                 }
 
@@ -55,7 +55,7 @@
 
                 for (var i=0; i < data.results.length; i++) {
                         var word = data.results[i];
-                        word.score = Math.round(word.tfidf * 5000);
+                        word.score = Math.round(word.scores['tf-idf'] * 5000);
                 %>
 
                 <div class="me_poslanec clearfix tfidf-bar">
