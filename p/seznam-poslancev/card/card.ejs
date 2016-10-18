@@ -21,6 +21,9 @@
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
 
+    <script>
+        var seznamPoslancevData = <%- JSON.stringify(data); %>;
+    </script>
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
@@ -35,16 +38,18 @@
         <div class="card-content">
           <ul class="person-list">
             <li class="headers">
-              <div class="column wider">Ime</div>
-              <div class="column sort reverse">PS</div>
-              <div class="column">Okraj</div>
+              <div data-sort="name" class="column wider sort">Ime</div>
+              <div data-sort="party" class="column">PS</div>
+              <div data-sort="district" class="column">Okraj</div>
+              <div data-sort="analysis" class="column">Analiza</div>
             </li>
-            <% data.data.forEach(function(result) { %>
-            <li class="person">
+            <% data.data.forEach(function(result, index) { %>
+            <li class="person" data-index="<%= index %>">
               <img class="portrait column" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= result.person.gov_id %>.png" />
               <div class="column wider name"><%= result.person.name %></div>
               <div class="column"><%= result.person.party.acronym %></div>
               <div class="column"><%= result.person.district || 'okraj ni vnešen' %></div>
+              <div class="column"><%= result.results.vocabulary_size %></div>
             </li>
             <% }) %>
           </ul>
