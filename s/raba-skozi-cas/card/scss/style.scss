@@ -4,9 +4,12 @@
 .bar:hover {
     fill: #009cdd;
 }
-.smallbarcontainer text {
+.smallbarcontainer text, .bigbarcontainer text {
     fill: #009cdd;
     font-weight: 300;
+}
+.bigbarcontainer text {
+    font-size: 12px;
 }
 
 .axis path,
