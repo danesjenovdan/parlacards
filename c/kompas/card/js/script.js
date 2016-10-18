@@ -341,6 +341,7 @@ function showPersonPicture(datum) {
         .style('fill', function(d) {
             return 'url(#' + d.person.gov_id + ')'
         })
+        .classed('turnedon', true)
         .on('click', function() {
             d3.select('#personcard' + d3.select(this).datum().person.id).classed('hidden', true);
             d3.select(this)
@@ -350,6 +351,7 @@ function showPersonPicture(datum) {
                 .style("fill", function(d) {
                     return color(d.person.party.acronym.replace(' ', '_'));
                 })
+                .classed('turnedon', false)
                 .on('click', function(d) {
                     // show photo
                     showPersonPicture(d);
@@ -358,6 +360,16 @@ function showPersonPicture(datum) {
                     var parent = $('#_' + d.person.id).parent()[0];
                     moveToFront(parent, d);
                 });
+
+            // if all party members are hidden, disable partyswitch
+            var partyacronym = datum.person.party.acronym.replace(' ', '_');
+
+            if ($(d3.select('#kompasgroup' + partyacronym)[0]).children('.turnedon').length === 0) {
+                $('#partyswitch-' + partyacronym)
+                    .removeClass('turnedon')
+                    .css('background-color', '#f0f0f0');
+            }
+
         });
 }
 
@@ -480,6 +492,7 @@ $('.kompas-person').on('click', function() {
         .style("fill", function(d) {
             return color(d.person.party.acronym.replace(' ', '_'));
         })
+        .classed('turnedon', false)
         .on('click', function(d) {
             // show photo
             showPersonPicture(d);
@@ -492,6 +505,16 @@ $('.kompas-person').on('click', function() {
     // handle search
     var persondata = d3.select('#_' + $(this).data('id')).datum()
     addSearchPerson(persondata.person);
+
+    // if all party members are hidden, disable partyswitch
+    var partyacronym = d3.select('#_' + $(this).data('id')).datum().person.party.acronym.replace(' ', '_');
+
+    if ($(d3.select('#kompasgroup' + partyacronym)[0]).children('.turnedon').length === 0) {
+        $('#partyswitch-' + partyacronym)
+            .removeClass('turnedon')
+            .css('background-color', '#f0f0f0');
+    }
+
 });
 
 $('.kompas-person').each(function(i, e) {

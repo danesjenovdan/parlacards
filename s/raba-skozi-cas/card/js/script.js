@@ -353,6 +353,20 @@ function createBigChart(data) {
         .append('g')
         .attr('class', 'bigbarcontainer');
 
+    barcontainers.append('text')
+        .text(function(d) {
+            return d.occurences;
+        })
+        .attr("x", function(d) {
+            return x(d.date);
+        })
+        .attr("y", function(d) {
+            return y(d.occurences);
+        })
+        .attr('width', x.rangeBand)
+        .attr('text-anchor', 'middle')
+        .attr('transform', 'translate(' + x.rangeBand()/2 + ', -4)');
+
     barcontainers.append("rect")
         .attr("class", "bar")
         .attr("x", function(d) {
