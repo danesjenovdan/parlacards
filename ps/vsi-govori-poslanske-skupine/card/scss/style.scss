@@ -34,12 +34,12 @@
     }
 
     ul {
-      margin-bottom: 10px;
+      margin: 0 0 10px 0;
       border-top: none;
       border-bottom: 1px solid #f0f0f0;
-      padding-bottom: 5px;
+      padding: 0 0 5px 0;
       float: left;
-      width: 100%;
+      width: 88%;
 
       li {
         margin: 20px 10px 0px 10px;
@@ -101,6 +101,18 @@
 }
 @media (max-width: 991px) {
 
+}
+@media (max-width: 480px) {
+  #all-speeches {
+    section{
+      span.date{
+        width: auto;
+      }
+      ul{
+        width: 100%;
+      }
+    }
+  }
 }
 @media (max-width: 390px) {
 
