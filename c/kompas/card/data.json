@@ -1,5 +1,7 @@
 [{
     "person": {
+        "district": ["Novo mesto I"],
+        "gender": "f",
         "gov_id": "P239",
         "id": 2,
         "name": "Anja Bah Žibert",
@@ -10,11 +12,13 @@
         }
     },
     "score": {
-        "vT1": 0.18508622697468333,
-        "vT2": -0.066331394853444886
+        "vT1": 0.19416699950245775,
+        "vT2": -0.0497246893729111
     }
 }, {
     "person": {
+        "district": ["Novo mesto II"],
+        "gender": "f",
         "gov_id": "P240",
         "id": 3,
         "name": "Urška Ban",
@@ -25,11 +29,13 @@
         }
     },
     "score": {
-        "vT1": -0.079765762131727508,
-        "vT2": -0.14044998403605635
+        "vT1": -0.05593550851549445,
+        "vT2": -0.13639310641870972
     }
 }, {
     "person": {
+        "district": ["Koper 1"],
+        "gender": "m",
         "gov_id": "P005",
         "id": 4,
         "name": "Roberto Battelli",
@@ -40,26 +46,47 @@
         }
     },
     "score": {
-        "vT1": 0.084415926648231054,
-        "vT2": -0.073961472030345587
+        "vT1": 0.12240214022370244,
+        "vT2": -0.06617255910240064
     }
 }, {
     "person": {
+        "district": null,
+        "gender": "m",
+        "gov_id": "P241",
+        "id": 6,
+        "name": "Srečko Blažič",
+        "party": {
+            "acronym": "SMC",
+            "id": 1,
+            "name": "PS Stranka modernega centra"
+        }
+    },
+    "score": {
+        "vT1": -0.0207586972823098,
+        "vT2": -0.12533879754084976
+    }
+}, {
+    "person": {
+        "district": ["Nova Gorica II"],
+        "gender": "f",
         "gov_id": "P235",
         "id": 7,
         "name": "Mirjam Bon Klanjšček",
         "party": {
-            "acronym": "PS NP",
-            "id": 97,
-            "name": "PS nepovezanih poslancev"
+            "acronym": "ZAAB",
+            "id": 4,
+            "name": "PS Zavezništvo Alenke Bratušek"
         }
     },
     "score": {
-        "vT1": 0.066496237608380346,
-        "vT2": -0.087995090070651372
+        "vT1": 0.04964579569925196,
+        "vT2": -0.08909789065173462
     }
 }, {
     "person": {
+        "district": null,
+        "gender": "m",
         "gov_id": "P242",
         "id": 8,
         "name": "Tilen Božič",
@@ -70,26 +97,30 @@
         }
     },
     "score": {
-        "vT1": -0.059795187761396362,
-        "vT2": -0.12989152200790691
+        "vT1": -0.04040076277614623,
+        "vT2": -0.12082864196362958
     }
 }, {
     "person": {
+        "district": ["Kranj I"],
+        "gender": "f",
         "gov_id": "P166",
         "id": 9,
         "name": "Alenka Bratušek",
         "party": {
-            "acronym": "PS NP",
-            "id": 97,
-            "name": "PS nepovezanih poslancev"
+            "acronym": "ZAAB",
+            "id": 4,
+            "name": "PS Zavezništvo Alenke Bratušek"
         }
     },
     "score": {
-        "vT1": 0.084652536170635742,
-        "vT2": -0.075357573840636433
+        "vT1": 0.06280335849224015,
+        "vT2": -0.07107790968333005
     }
 }, {
     "person": {
+        "district": ["Lenart"],
+        "gender": "m",
         "gov_id": "P167",
         "id": 10,
         "name": "Franc Breznik",
@@ -100,11 +131,13 @@
         }
     },
     "score": {
-        "vT1": 0.17283581007704818,
-        "vT2": -0.060989358236445405
+        "vT1": 0.17658808354395852,
+        "vT2": -0.04566790437501847
     }
 }, {
     "person": {
+        "district": ["Ljubljana Bežigrad II"],
+        "gender": "m",
         "gov_id": "P243",
         "id": 11,
         "name": "Milan Brglez",
@@ -115,11 +148,13 @@
         }
     },
     "score": {
-        "vT1": -0.061065420570990098,
-        "vT2": -0.13289884902961918
+        "vT1": -0.03020713809634623,
+        "vT2": -0.12202598900395228
     }
 }, {
     "person": {
+        "district": ["Mozirje"],
+        "gender": "f",
         "gov_id": "P244",
         "id": 12,
         "name": "Nada Brinovšek",
@@ -130,11 +165,13 @@
         }
     },
     "score": {
-        "vT1": 0.17919305299474148,
-        "vT2": -0.068337578770216692
+        "vT1": 0.18974896807678668,
+        "vT2": -0.04977732485129889
     }
 }, {
     "person": {
+        "district": ["Ljubljana-Šiška II"],
+        "gender": "f",
         "gov_id": "P246",
         "id": 14,
         "name": "Tanja Cink",
@@ -145,11 +182,13 @@
         }
     },
     "score": {
-        "vT1": -0.036536318380515631,
-        "vT2": -0.1114865218813364
+        "vT1": -0.03375398744628399,
+        "vT2": -0.1152382134768443
     }
 }, {
     "person": {
+        "district": ["Ptuj I "],
+        "gender": "m",
         "gov_id": "P225",
         "id": 15,
         "name": "Andrej Čuš",
@@ -160,11 +199,13 @@
         }
     },
     "score": {
-        "vT1": 0.16770240931984015,
-        "vT2": -0.06038783210343697
+        "vT1": 0.18537131631717485,
+        "vT2": -0.04904696385578692
     }
 }, {
     "person": {
+        "district": ["Postojna"],
+        "gender": "f",
         "gov_id": "P247",
         "id": 16,
         "name": "Erika Dekleva",
@@ -175,11 +216,13 @@
         }
     },
     "score": {
-        "vT1": -0.069132999611960677,
-        "vT2": -0.12917685705259405
+        "vT1": -0.05380292671747075,
+        "vT2": -0.13653583052477306
     }
 }, {
     "person": {
+        "district": ["Cerknica- Logatec"],
+        "gender": "f",
         "gov_id": "P169",
         "id": 17,
         "name": "Iva Dimic",
@@ -190,26 +233,30 @@
         }
     },
     "score": {
-        "vT1": 0.13294418999098936,
-        "vT2": -0.06726386239747488
+        "vT1": 0.10394863207587969,
+        "vT2": -0.07264825518070259
     }
 }, {
     "person": {
+        "district": ["Ljubljana Bežigrad I"],
+        "gender": "m",
         "gov_id": "P248",
         "id": 18,
         "name": "Bojan Dobovšek",
         "party": {
-            "acronym": "PS NP",
-            "id": 97,
-            "name": "PS nepovezanih poslancev"
+            "acronym": "SMC",
+            "id": 1,
+            "name": "PS Stranka modernega centra"
         }
     },
     "score": {
-        "vT1": 0.03078937644021219,
-        "vT2": -0.097224876946132036
+        "vT1": -0.038536077468160894,
+        "vT2": -0.11251165667969555
     }
 }, {
     "person": {
+        "district": ["Zagorje"],
+        "gender": "m",
         "gov_id": "P249",
         "id": 19,
         "name": "Marjan Dolinšek",
@@ -220,11 +267,13 @@
         }
     },
     "score": {
-        "vT1": -0.045754133871487454,
-        "vT2": -0.12630218165842705
+        "vT1": -0.03964713487254753,
+        "vT2": -0.12121777559891186
     }
 }, {
     "person": {
+        "district": ["Koper I"],
+        "gender": "m",
         "gov_id": "P250",
         "id": 21,
         "name": "Marko Ferluga",
@@ -235,11 +284,13 @@
         }
     },
     "score": {
-        "vT1": -0.071339173081778132,
-        "vT2": -0.13648343588397843
+        "vT1": -0.05336314971734912,
+        "vT2": -0.13439724884613335
     }
 }, {
     "person": {
+        "district": ["Piran"],
+        "gender": "m",
         "gov_id": "P251",
         "id": 22,
         "name": "Tomaž Gantar",
@@ -250,11 +301,13 @@
         }
     },
     "score": {
-        "vT1": -0.038787930729015631,
-        "vT2": -0.12686247774459838
+        "vT1": -0.020843729635797423,
+        "vT2": -0.11983251155839167
     }
 }, {
     "person": {
+        "district": ["Šentjur"],
+        "gender": "f",
         "gov_id": "P252",
         "id": 23,
         "name": "Jelka Godec",
@@ -265,11 +318,13 @@
         }
     },
     "score": {
-        "vT1": 0.18217739671346433,
-        "vT2": -0.062786314124573916
+        "vT1": 0.19508387141814493,
+        "vT2": -0.048621643304891424
     }
 }, {
     "person": {
+        "district": ["Lendava 1"],
+        "gender": "m",
         "gov_id": "P117",
         "id": 24,
         "name": "László Göncz",
@@ -280,11 +335,13 @@
         }
     },
     "score": {
-        "vT1": 0.042144009714548576,
-        "vT2": -0.082567558528098023
+        "vT1": 0.04727155811280838,
+        "vT2": -0.08451276017922314
     }
 }, {
     "person": {
+        "district": [" Šmarje pri Jelšah"],
+        "gender": "m",
         "gov_id": "P116",
         "id": 25,
         "name": "Vinko Gorenak",
@@ -295,11 +352,13 @@
         }
     },
     "score": {
-        "vT1": 0.16884420872185135,
-        "vT2": -0.071122012090331768
+        "vT1": 0.1650758156864892,
+        "vT2": -0.05442047607539041
     }
 }, {
     "person": {
+        "district": ["Kranj III "],
+        "gender": "m",
         "gov_id": "P016",
         "id": 26,
         "name": "Branko Grims",
@@ -310,11 +369,13 @@
         }
     },
     "score": {
-        "vT1": 0.17697812109115935,
-        "vT2": -0.066482948855662943
+        "vT1": 0.19537715748611031,
+        "vT2": -0.05249545280510019
     }
 }, {
     "person": {
+        "district": ["Trbovlje"],
+        "gender": "f",
         "gov_id": "P253",
         "id": 27,
         "name": "Irena Grošelj Košnik",
@@ -325,11 +386,30 @@
         }
     },
     "score": {
-        "vT1": -0.032277983832179342,
-        "vT2": -0.12254827703201249
+        "vT1": -0.046491374716777785,
+        "vT2": -0.128496973433315
     }
 }, {
     "person": {
+        "district": null,
+        "gender": "f",
+        "gov_id": "P254",
+        "id": 28,
+        "name": "Margareta Guček Zakošek",
+        "party": {
+            "acronym": "SMC",
+            "id": 1,
+            "name": "PS Stranka modernega centra"
+        }
+    },
+    "score": {
+        "vT1": -0.05518511571574601,
+        "vT2": -0.13457059268826485
+    }
+}, {
+    "person": {
+        "district": ["Vrhnika"],
+        "gender": "m",
         "gov_id": "P255",
         "id": 29,
         "name": "Primož Hainz",
@@ -340,11 +420,13 @@
         }
     },
     "score": {
-        "vT1": -0.040345238946861477,
-        "vT2": -0.12580899743909438
+        "vT1": -0.047729662248053153,
+        "vT2": -0.12885214591077845
     }
 }, {
     "person": {
+        "district": ["Laško"],
+        "gender": "m",
         "gov_id": "P018",
         "id": 30,
         "name": "Matjaž Han",
@@ -355,11 +437,13 @@
         }
     },
     "score": {
-        "vT1": -0.069742536409993741,
-        "vT2": -0.13153379582762345
+        "vT1": -0.051807242117031624,
+        "vT2": -0.12979241717473933
     }
 }, {
     "person": {
+        "district": ["Ljubljana Bežigrad II"],
+        "gender": "m",
         "gov_id": "P256",
         "id": 31,
         "name": "Matjaž Hanžek",
@@ -370,11 +454,13 @@
         }
     },
     "score": {
-        "vT1": 0.084154375592254832,
-        "vT2": -0.057940918064780779
+        "vT1": 0.06543816211385474,
+        "vT2": -0.053088352389986174
     }
 }, {
     "person": {
+        "district": ["Lendava"],
+        "gender": "m",
         "gov_id": "P020",
         "id": 32,
         "name": "Jožef Horvat",
@@ -385,11 +471,13 @@
         }
     },
     "score": {
-        "vT1": 0.13658412131773168,
-        "vT2": -0.074456431228851594
+        "vT1": 0.1252142515117515,
+        "vT2": -0.07586721925163314
     }
 }, {
     "person": {
+        "district": ["Ljubljana Vič-Rudnik II"],
+        "gender": "m",
         "gov_id": "P257",
         "id": 33,
         "name": "Mitja Horvat",
@@ -400,11 +488,13 @@
         }
     },
     "score": {
-        "vT1": -0.05144973151992633,
-        "vT2": -0.13094941079741332
+        "vT1": -0.05311620252553224,
+        "vT2": -0.1343615025410439
     }
 }, {
     "person": {
+        "district": ["Hrastnik"],
+        "gender": "m",
         "gov_id": "P176",
         "id": 34,
         "name": "Ivan Hršak",
@@ -415,11 +505,13 @@
         }
     },
     "score": {
-        "vT1": -0.051133989372795528,
-        "vT2": -0.12471160297207236
+        "vT1": -0.04138193145688143,
+        "vT2": -0.12019510304876975
     }
 }, {
     "person": {
+        "district": ["Ajdovščina"],
+        "gender": "f",
         "gov_id": "P023",
         "id": 35,
         "name": "Eva Irgl",
@@ -430,11 +522,13 @@
         }
     },
     "score": {
-        "vT1": 0.18928525161263313,
-        "vT2": -0.07290242130680899
+        "vT1": 0.19384521025903317,
+        "vT2": -0.05246589215624475
     }
 }, {
     "person": {
+        "district": ["Grosuplje"],
+        "gender": "m",
         "gov_id": "P025",
         "id": 36,
         "name": "Janez Janša",
@@ -445,11 +539,13 @@
         }
     },
     "score": {
-        "vT1": 0.16367319581752018,
-        "vT2": -0.052154878860892068
+        "vT1": 0.18551256771048474,
+        "vT2": -0.04136921234963131
     }
 }, {
     "person": {
+        "district": ["Ljutomer"],
+        "gender": "m",
         "gov_id": "P122",
         "id": 37,
         "name": "Franc Jurša",
@@ -460,11 +556,30 @@
         }
     },
     "score": {
-        "vT1": -0.05777257087265629,
-        "vT2": -0.12493700151195308
+        "vT1": -0.04753097476968867,
+        "vT2": -0.13057071639688853
     }
 }, {
     "person": {
+        "district": null,
+        "gender": "f",
+        "gov_id": "P258",
+        "id": 38,
+        "name": "Andreja Katič",
+        "party": {
+            "acronym": "SD",
+            "id": 7,
+            "name": "PS Socialni Demokrati"
+        }
+    },
+    "score": {
+        "vT1": -0.04706284380229642,
+        "vT2": -0.13357512773732166
+    }
+}, {
+    "person": {
+        "district": ["Ljutomer"],
+        "gender": "m",
         "gov_id": "P259",
         "id": 39,
         "name": "Aleksander Kavčič",
@@ -475,11 +590,13 @@
         }
     },
     "score": {
-        "vT1": -0.05263298012096608,
-        "vT2": -0.12511540165613982
+        "vT1": -0.0430047653643881,
+        "vT2": -0.1219757350434427
     }
 }, {
     "person": {
+        "district": ["Šentjur"],
+        "gender": "f",
         "gov_id": "P260",
         "id": 40,
         "name": "Anita Koleša",
@@ -490,11 +607,13 @@
         }
     },
     "score": {
-        "vT1": -0.074519294723387808,
-        "vT2": -0.13694039402630906
+        "vT1": -0.04849536292885688,
+        "vT2": -0.13358622589765368
     }
 }, {
     "person": {
+        "district": ["Dravograd- Radlje"],
+        "gender": "m",
         "gov_id": "P261",
         "id": 41,
         "name": "Benedikt Kopmajer",
@@ -505,11 +624,13 @@
         }
     },
     "score": {
-        "vT1": -0.053950314318786143,
-        "vT2": -0.12849458531185584
+        "vT1": -0.031499455416416286,
+        "vT2": -0.12294736507751346
     }
 }, {
     "person": {
+        "district": ["Škofja Loka I"],
+        "gender": "m",
         "gov_id": "P262",
         "id": 42,
         "name": "Miha Kordiš",
@@ -520,11 +641,13 @@
         }
     },
     "score": {
-        "vT1": 0.064509052387799193,
-        "vT2": -0.069604113017218347
+        "vT1": 0.05721804806188538,
+        "vT2": -0.07007738056559029
     }
 }, {
     "person": {
+        "district": ["Maribor II"],
+        "gender": "f",
         "gov_id": "P263",
         "id": 43,
         "name": "Ksenija Korenjak Kramar",
@@ -535,11 +658,13 @@
         }
     },
     "score": {
-        "vT1": -0.029033608798370501,
-        "vT2": -0.12241254421045226
+        "vT1": -0.035555134936741215,
+        "vT2": -0.12745239271701692
     }
 }, {
     "person": {
+        "district": ["Radovljica II"],
+        "gender": "f",
         "gov_id": "P264",
         "id": 44,
         "name": "Irena Kotnik",
@@ -550,11 +675,13 @@
         }
     },
     "score": {
-        "vT1": -0.056543151789270336,
-        "vT2": -0.13166269860367852
+        "vT1": -0.05589634688922965,
+        "vT2": -0.13324926912707688
     }
 }, {
     "person": {
+        "district": ["Ruše"],
+        "gender": "f",
         "gov_id": "P186",
         "id": 45,
         "name": "Marjana Kotnik Poropat",
@@ -565,11 +692,13 @@
         }
     },
     "score": {
-        "vT1": -0.059140858335693887,
-        "vT2": -0.13039762000634042
+        "vT1": -0.0574103719604891,
+        "vT2": -0.12802764582307605
     }
 }, {
     "person": {
+        "district": null,
+        "gender": "f",
         "gov_id": "P265",
         "id": 46,
         "name": "Lilijana Kozlovič",
@@ -580,11 +709,13 @@
         }
     },
     "score": {
-        "vT1": -0.074124272760093243,
-        "vT2": -0.1360956513488738
+        "vT1": -0.054681335146597676,
+        "vT2": -0.13347386439321623
     }
 }, {
     "person": {
+        "district": ["Tolmin"],
+        "gender": "m",
         "gov_id": "P040",
         "id": 47,
         "name": "Danijel Krivec",
@@ -595,11 +726,13 @@
         }
     },
     "score": {
-        "vT1": 0.17458399445200851,
-        "vT2": -0.068993784851469259
+        "vT1": 0.20457737522135627,
+        "vT2": -0.05619267820103966
     }
 }, {
     "person": {
+        "district": ["Ljubljana-Šiška I"],
+        "gender": "f",
         "gov_id": "P266",
         "id": 48,
         "name": "Simona Kustec Lipicer",
@@ -610,11 +743,13 @@
         }
     },
     "score": {
-        "vT1": -0.066328626713156091,
-        "vT2": -0.13487614440157047
+        "vT1": -0.046643661586836006,
+        "vT2": -0.1316834161696023
     }
 }, {
     "person": {
+        "district": ["Trebnje"],
+        "gender": "m",
         "gov_id": "P129",
         "id": 49,
         "name": "Zvonko Lah",
@@ -625,11 +760,13 @@
         }
     },
     "score": {
-        "vT1": 0.19091295647674572,
-        "vT2": -0.072737998563182513
+        "vT1": 0.20202279191071543,
+        "vT2": -0.05783259686757356
     }
 }, {
     "person": {
+        "district": ["Lendava"],
+        "gender": "m",
         "gov_id": "P267",
         "id": 50,
         "name": "Franc Laj",
@@ -640,11 +777,13 @@
         }
     },
     "score": {
-        "vT1": -0.015520983630687211,
-        "vT2": -0.11653270953383955
+        "vT1": -0.05494139218639956,
+        "vT2": -0.13369978963838067
     }
 }, {
     "person": {
+        "district": ["Ptuj III"],
+        "gender": "f",
         "gov_id": "P268",
         "id": 51,
         "name": "Suzana Lep Šimenko",
@@ -655,11 +794,13 @@
         }
     },
     "score": {
-        "vT1": 0.19376580793886963,
-        "vT2": -0.073535456415170022
+        "vT1": 0.20700631073167203,
+        "vT2": -0.062109560175535636
     }
 }, {
     "person": {
+        "district": ["Kočevje"],
+        "gender": "f",
         "gov_id": "P269",
         "id": 52,
         "name": "Marinka Levičar",
@@ -670,11 +811,13 @@
         }
     },
     "score": {
-        "vT1": -0.044352649500608077,
-        "vT2": -0.12230803236382475
+        "vT1": -0.022099239350043716,
+        "vT2": -0.11700454701602629
     }
 }, {
     "person": {
+        "district": [" Sevnica"],
+        "gender": "m",
         "gov_id": "P187",
         "id": 53,
         "name": "Tomaž Lisec",
@@ -685,11 +828,13 @@
         }
     },
     "score": {
-        "vT1": 0.17380436524208456,
-        "vT2": -0.061160860622195945
+        "vT1": 0.19183692137630956,
+        "vT2": -0.05056648964717831
     }
 }, {
     "person": {
+        "district": ["Ljubljana Vič-Rudnik IV"],
+        "gender": "m",
         "gov_id": "P238",
         "id": 54,
         "name": "Anže Logar",
@@ -700,11 +845,13 @@
         }
     },
     "score": {
-        "vT1": 0.18812127176095864,
-        "vT2": -0.069159305625155806
+        "vT1": 0.19404675064917712,
+        "vT2": -0.051504783462236636
     }
 }, {
     "person": {
+        "district": ["Škofja Loka II"],
+        "gender": "m",
         "gov_id": "P270",
         "id": 55,
         "name": "Žan Mahnič",
@@ -715,11 +862,30 @@
         }
     },
     "score": {
-        "vT1": 0.17705329981717416,
-        "vT2": -0.070638572093755944
+        "vT1": 0.1706960374125135,
+        "vT2": -0.05195691732523444
     }
 }, {
     "person": {
+        "district": null,
+        "gender": "f",
+        "gov_id": "P271",
+        "id": 56,
+        "name": "Klavdija Markež",
+        "party": {
+            "acronym": "SMC",
+            "id": 1,
+            "name": "PS Stranka modernega centra"
+        }
+    },
+    "score": {
+        "vT1": -0.05025069880176187,
+        "vT2": -0.13496321641188952
+    }
+}, {
+    "person": {
+        "district": ["Ljubljana Moste-Polje II"],
+        "gender": "m",
         "gov_id": "P272",
         "id": 57,
         "name": "Dragan Matić",
@@ -730,11 +896,13 @@
         }
     },
     "score": {
-        "vT1": -0.05802364455454579,
-        "vT2": -0.12795722982021129
+        "vT1": -0.03376750501425672,
+        "vT2": -0.12347047098846421
     }
 }, {
     "person": {
+        "district": ["Trbovlje"],
+        "gender": "m",
         "gov_id": "P273",
         "id": 58,
         "name": "Luka Mesec",
@@ -745,26 +913,30 @@
         }
     },
     "score": {
-        "vT1": 0.068542101631545005,
-        "vT2": -0.070400169835965268
+        "vT1": 0.05646519130203018,
+        "vT2": -0.05853003511383558
     }
 }, {
     "person": {
+        "district": ["Ljubljana Bežigrad II"],
+        "gender": "m",
         "gov_id": "P191",
         "id": 59,
         "name": "Jani Möderndorfer",
         "party": {
-            "acronym": "NeP",
-            "id": 100,
-            "name": "Nepovezani poslanec"
+            "acronym": "ZAAB",
+            "id": 4,
+            "name": "PS Zavezništvo Alenke Bratušek"
         }
     },
     "score": {
-        "vT1": 0.028009861304806993,
-        "vT2": -0.092465370840187522
+        "vT1": 0.0519714746113277,
+        "vT2": -0.09893595870481099
     }
 }, {
     "person": {
+        "district": ["Maribor V"],
+        "gender": "f",
         "gov_id": "P274",
         "id": 60,
         "name": "Jasna Murgel",
@@ -775,11 +947,13 @@
         }
     },
     "score": {
-        "vT1": -0.059002124339457632,
-        "vT2": -0.12782247899843291
+        "vT1": -0.031983892769988975,
+        "vT2": -0.12027483102375967
     }
 }, {
     "person": {
+        "district": ["Ruše"],
+        "gender": "f",
         "gov_id": "P275",
         "id": 61,
         "name": "Bojana Muršič",
@@ -790,11 +964,13 @@
         }
     },
     "score": {
-        "vT1": -0.055475483679014156,
-        "vT2": -0.12814543979143539
+        "vT1": -0.045334234563690026,
+        "vT2": -0.13120282821528398
     }
 }, {
     "person": {
+        "district": ["Nova Gorica I"],
+        "gender": "m",
         "gov_id": "P276",
         "id": 62,
         "name": "Matjaž Nemec",
@@ -805,11 +981,13 @@
         }
     },
     "score": {
-        "vT1": -0.045832162956642802,
-        "vT2": -0.12469028800018693
+        "vT1": -0.04580454841174864,
+        "vT2": -0.13243971796890674
     }
 }, {
     "person": {
+        "district": ["Ribnica"],
+        "gender": "f",
         "gov_id": "P193",
         "id": 63,
         "name": "Ljudmila Novak",
@@ -820,11 +998,13 @@
         }
     },
     "score": {
-        "vT1": 0.12830402833914115,
-        "vT2": -0.07145324546320353
+        "vT1": 0.09723582511161735,
+        "vT2": -0.06007421056946706
     }
 }, {
     "person": {
+        "district": ["Slovenske Konjice"],
+        "gender": "m",
         "gov_id": "P277",
         "id": 64,
         "name": "Bojan Podkrajšek",
@@ -835,11 +1015,13 @@
         }
     },
     "score": {
-        "vT1": 0.19044098656732214,
-        "vT2": -0.074700882316438372
+        "vT1": 0.20366065746197332,
+        "vT2": -0.059594753007140885
     }
 }, {
     "person": {
+        "district": ["Škofja Loka I"],
+        "gender": "m",
         "gov_id": "P196",
         "id": 65,
         "name": "Marko Pogačnik",
@@ -850,11 +1032,13 @@
         }
     },
     "score": {
-        "vT1": 0.18406441578400856,
-        "vT2": -0.071737430333489421
+        "vT1": 0.19149819311619462,
+        "vT2": -0.059169284942120204
     }
 }, {
     "person": {
+        "district": ["Pesnica"],
+        "gender": "m",
         "gov_id": "P098",
         "id": 66,
         "name": "Marijan Pojbič",
@@ -865,11 +1049,13 @@
         }
     },
     "score": {
-        "vT1": 0.17805030670462607,
-        "vT2": -0.06369925594355072
+        "vT1": 0.1688754580365909,
+        "vT2": -0.054604116836802705
     }
 }, {
     "person": {
+        "district": ["Tržič"],
+        "gender": "f",
         "gov_id": "P278",
         "id": 67,
         "name": "Andreja Potočnik",
@@ -880,11 +1066,13 @@
         }
     },
     "score": {
-        "vT1": -0.071283767904013584,
-        "vT2": -0.13436451986785392
+        "vT1": -0.05594792115294941,
+        "vT2": -0.13630602217959845
     }
 }, {
     "person": {
+        "district": ["Maribor I"],
+        "gender": "m",
         "gov_id": "P279",
         "id": 68,
         "name": "Ivan Prelog",
@@ -895,11 +1083,13 @@
         }
     },
     "score": {
-        "vT1": -0.074186609158521488,
-        "vT2": -0.13816012642455436
+        "vT1": -0.047361004694075046,
+        "vT2": -0.13409304471832878
     }
 }, {
     "person": {
+        "district": ["Maribor VII"],
+        "gender": "m",
         "gov_id": "P280",
         "id": 69,
         "name": "Uroš Prikl",
@@ -910,11 +1100,13 @@
         }
     },
     "score": {
-        "vT1": -0.064253874726256988,
-        "vT2": -0.1332522939656221
+        "vT1": -0.05686759553433143,
+        "vT2": -0.1372326121724716
     }
 }, {
     "person": {
+        "district": ["Maribor VII"],
+        "gender": "m",
         "gov_id": "P281",
         "id": 70,
         "name": "Branislav Rajić",
@@ -925,11 +1117,13 @@
         }
     },
     "score": {
-        "vT1": -0.063177195416941834,
-        "vT2": -0.13117050201821023
+        "vT1": -0.05899573291275696,
+        "vT2": -0.1350205706596876
     }
 }, {
     "person": {
+        "district": ["Ravne na Koroškem"],
+        "gender": "m",
         "gov_id": "P282",
         "id": 71,
         "name": "Danilo Anton Ranc",
@@ -940,11 +1134,13 @@
         }
     },
     "score": {
-        "vT1": -0.079048554631362261,
-        "vT2": -0.13994260399644978
+        "vT1": -0.05604892975513881,
+        "vT2": -0.1351756212153064
     }
 }, {
     "person": {
+        "district": ["Domžale II"],
+        "gender": "m",
         "gov_id": "P283",
         "id": 72,
         "name": "Kamal Izidor Shaker",
@@ -955,11 +1151,13 @@
         }
     },
     "score": {
-        "vT1": -0.074473884082810485,
-        "vT2": -0.13541618352196846
+        "vT1": -0.05438514018295007,
+        "vT2": -0.13551762454928015
     }
 }, {
     "person": {
+        "district": ["Celje II"],
+        "gender": "f",
         "gov_id": "P284",
         "id": 73,
         "name": "Janja Sluga",
@@ -970,11 +1168,13 @@
         }
     },
     "score": {
-        "vT1": -0.059014745825270477,
-        "vT2": -0.13100466971769373
+        "vT1": -0.05430650998634033,
+        "vT2": -0.13560844452644347
     }
 }, {
     "person": {
+        "district": ["Hrastnik"],
+        "gender": "f",
         "gov_id": "P285",
         "id": 74,
         "name": "Vojka Šergan",
@@ -985,11 +1185,13 @@
         }
     },
     "score": {
-        "vT1": -0.075108506735214645,
-        "vT2": -0.1389478506349042
+        "vT1": -0.050982391784867485,
+        "vT2": -0.1336426402973769
     }
 }, {
     "person": {
+        "district": ["Cerknica- Logatec"],
+        "gender": "m",
         "gov_id": "P201",
         "id": 75,
         "name": "Andrej Šircelj",
@@ -1000,11 +1202,13 @@
         }
     },
     "score": {
-        "vT1": 0.18393730250056894,
-        "vT2": -0.070546827687515842
+        "vT1": 0.19949272207599492,
+        "vT2": -0.06124174498269649
     }
 }, {
     "person": {
+        "district": ["Dravograd- Radlje"],
+        "gender": "m",
         "gov_id": "P286",
         "id": 76,
         "name": "Ivan Škodnik",
@@ -1015,11 +1219,13 @@
         }
     },
     "score": {
-        "vT1": -0.076579468607238327,
-        "vT2": -0.13940106424781704
+        "vT1": -0.05686759553433143,
+        "vT2": -0.1372326121724716
     }
 }, {
     "person": {
+        "district": ["Jesenice"],
+        "gender": "f",
         "gov_id": "P287",
         "id": 77,
         "name": "Maruša Škopac",
@@ -1030,11 +1236,13 @@
         }
     },
     "score": {
-        "vT1": -0.067446491329740205,
-        "vT2": -0.13429129177136795
+        "vT1": -0.05270387794150063,
+        "vT2": -0.13277034059270487
     }
 }, {
     "person": {
+        "district": ["Ribnica"],
+        "gender": "m",
         "gov_id": "P077",
         "id": 78,
         "name": "Jože Tanko",
@@ -1045,11 +1253,13 @@
         }
     },
     "score": {
-        "vT1": 0.1811921163178207,
-        "vT2": -0.075052231523294266
+        "vT1": 0.20443078674811016,
+        "vT2": -0.060825809030139476
     }
 }, {
     "person": {
+        "district": ["Koper I"],
+        "gender": "m",
         "gov_id": "P288",
         "id": 79,
         "name": "Matej Tašner Vatovec",
@@ -1060,11 +1270,13 @@
         }
     },
     "score": {
-        "vT1": 0.061404489883035353,
-        "vT2": -0.071389598503431531
+        "vT1": 0.07775018134440576,
+        "vT2": -0.07903032468865132
     }
 }, {
     "person": {
+        "district": ["Ljubljana- center"],
+        "gender": "f",
         "gov_id": "P289",
         "id": 80,
         "name": "Violeta Tomić",
@@ -1075,11 +1287,13 @@
         }
     },
     "score": {
-        "vT1": 0.064307472250087636,
-        "vT2": -0.070280765785946386
+        "vT1": 0.06260540216843412,
+        "vT2": -0.06875390725926069
     }
 }, {
     "person": {
+        "district": ["Kamnik"],
+        "gender": "m",
         "gov_id": "P204",
         "id": 81,
         "name": "Matej Tonin",
@@ -1090,11 +1304,13 @@
         }
     },
     "score": {
-        "vT1": 0.1451953523198474,
-        "vT2": -0.064730612335816215
+        "vT1": 0.1379657086975209,
+        "vT2": -0.05340415977252341
     }
 }, {
     "person": {
+        "district": ["Maribor IV"],
+        "gender": "m",
         "gov_id": "P290",
         "id": 82,
         "name": "Franc Trček ",
@@ -1105,26 +1321,13 @@
         }
     },
     "score": {
-        "vT1": 0.084764435896496571,
-        "vT2": -0.062194513333159361
+        "vT1": 0.06404616173980855,
+        "vT2": -0.07551572117874408
     }
 }, {
     "person": {
-        "gov_id": "P081",
-        "id": 83,
-        "name": "Janko Veber",
-        "party": {
-            "acronym": "SD",
-            "id": 7,
-            "name": "PS Socialni Demokrati"
-        }
-    },
-    "score": {
-        "vT1": -0.016296914378576013,
-        "vT2": -0.082916613556974925
-    }
-}, {
-    "person": {
+        "district": ["Pesnica"],
+        "gender": "f",
         "gov_id": "P291",
         "id": 84,
         "name": "Vesna Vervega",
@@ -1135,26 +1338,30 @@
         }
     },
     "score": {
-        "vT1": -0.052193001798957937,
-        "vT2": -0.12801506557485098
+        "vT1": -0.040958682985516616,
+        "vT2": -0.12870227117293345
     }
 }, {
     "person": {
+        "district": ["Ljubljana-Šiška II"],
+        "gender": "m",
         "gov_id": "P207",
         "id": 85,
         "name": "Peter Vilfan",
         "party": {
-            "acronym": "DeSUS",
-            "id": 3,
-            "name": "PS Demokratska Stranka Upokojencev Slovenije"
+            "acronym": "ZAAB",
+            "id": 4,
+            "name": "PS Zavezništvo Alenke Bratušek"
         }
     },
     "score": {
-        "vT1": 0.015491515158488281,
-        "vT2": -0.10639490813457647
+        "vT1": 0.04607107725896341,
+        "vT2": -0.09411546275194055
     }
 }, {
     "person": {
+        "district": ["Ajdovščina"],
+        "gender": "m",
         "gov_id": "P292",
         "id": 86,
         "name": "Jernej Vrtovec",
@@ -1165,11 +1372,13 @@
         }
     },
     "score": {
-        "vT1": 0.12754079856052403,
-        "vT2": -0.07415291559711705
+        "vT1": 0.088716564814125,
+        "vT2": -0.07046375562570019
     }
 }, {
     "person": {
+        "district": ["Ljubljana-Šiška III"],
+        "gender": "m",
         "gov_id": "P293",
         "id": 87,
         "name": "Simon Zajc",
@@ -1180,11 +1389,13 @@
         }
     },
     "score": {
-        "vT1": -0.076200652921232612,
-        "vT2": -0.13960830265591051
+        "vT1": -0.054747840504371585,
+        "vT2": -0.13663118219877196
     }
 }, {
     "person": {
+        "district": ["Brežice"],
+        "gender": "m",
         "gov_id": "P294",
         "id": 88,
         "name": "Igor Zorčič",
@@ -1195,11 +1406,13 @@
         }
     },
     "score": {
-        "vT1": -0.064980018494418909,
-        "vT2": -0.13557154940860913
+        "vT1": -0.05457720488572234,
+        "vT2": -0.13550519338350347
     }
 }, {
     "person": {
+        "district": ["Kranj I"],
+        "gender": "m",
         "gov_id": "P295",
         "id": 89,
         "name": "Branko Zorman",
@@ -1210,11 +1423,13 @@
         }
     },
     "score": {
-        "vT1": -0.064048800537175002,
-        "vT2": -0.13214475763037126
+        "vT1": -0.04198156327377061,
+        "vT2": -0.11953077237353729
     }
 }, {
     "person": {
+        "district": ["Žalec I"],
+        "gender": "m",
         "gov_id": "P212",
         "id": 91,
         "name": "Ljubo Žnidar",
@@ -1225,11 +1440,13 @@
         }
     },
     "score": {
-        "vT1": 0.18473053288443475,
-        "vT2": -0.070277868550136055
+        "vT1": 0.19161091930626917,
+        "vT2": -0.048994068152363277
     }
 }, {
     "person": {
+        "district": ["Ljubljana-Šiška IV"],
+        "gender": "m",
         "gov_id": "P296",
         "id": 92,
         "name": "Dušan Verbič",
@@ -1240,11 +1457,47 @@
         }
     },
     "score": {
-        "vT1": -0.067363908330334871,
-        "vT2": -0.12843491870663892
+        "vT1": -0.04888855922751721,
+        "vT2": -0.11842905820818093
     }
 }, {
     "person": {
+        "district": null,
+        "gender": "f",
+        "gov_id": "P128",
+        "id": 93,
+        "name": "Franc Križanič",
+        "party": {
+            "acronym": "SD",
+            "id": 7,
+            "name": "PS Socialni Demokrati"
+        }
+    },
+    "score": {
+        "vT1": -0.032296441486362064,
+        "vT2": -0.10176145125597043
+    }
+}, {
+    "person": {
+        "district": null,
+        "gender": "f",
+        "gov_id": "P180",
+        "id": 94,
+        "name": "Jana Jenko",
+        "party": {
+            "acronym": "DeSUS",
+            "id": 3,
+            "name": "PS Demokratska Stranka Upokojencev Slovenije"
+        }
+    },
+    "score": {
+        "vT1": -0.05147448164143943,
+        "vT2": -0.10666939374933591
+    }
+}, {
+    "person": {
+        "district": ["Murska Sobota I"],
+        "gender": "f",
         "gov_id": "P298",
         "id": 95,
         "name": "Marija Bačič",
@@ -1255,11 +1508,13 @@
         }
     },
     "score": {
-        "vT1": -0.046056543771623527,
-        "vT2": -0.1196700935678805
+        "vT1": -0.0460573843411423,
+        "vT2": -0.10302750517610487
     }
 }, {
     "person": {
+        "district": ["Velenje I"],
+        "gender": "f",
         "gov_id": "P297",
         "id": 96,
         "name": "Marija Antonija Kovačič",
@@ -1270,67 +1525,7 @@
         }
     },
     "score": {
-        "vT1": -0.065485963172269374,
-        "vT2": -0.12439237528612471
-    }
-}, {
-    "person": {
-        "gov_id": "P299",
-        "id": 1354,
-        "name": "Bojan Krajnc",
-        "party": {
-            "acronym": "SMC",
-            "id": 1,
-            "name": "PS Stranka modernega centra"
-        }
-    },
-    "score": {
-        "vT1": -0.053836121506135363,
-        "vT2": -0.098019118972574037
-    }
-}, {
-    "person": {
-        "gov_id": "P302",
-        "id": 1355,
-        "name": "Saša Tabaković",
-        "party": {
-            "acronym": "SMC",
-            "id": 1,
-            "name": "PS Stranka modernega centra"
-        }
-    },
-    "score": {
-        "vT1": -0.035632425324470494,
-        "vT2": -0.069693404967863179
-    }
-}, {
-    "person": {
-        "gov_id": "P301",
-        "id": 1356,
-        "name": "Jan Škoberne",
-        "party": {
-            "acronym": "SD",
-            "id": 7,
-            "name": "PS Socialni Demokrati"
-        }
-    },
-    "score": {
-        "vT1": -0.0037204134645520406,
-        "vT2": -0.059696103438433783
-    }
-}, {
-    "person": {
-        "gov_id": "P300",
-        "id": 1357,
-        "name": "Dušan Radič",
-        "party": {
-            "acronym": "SMC",
-            "id": 1,
-            "name": "PS Stranka modernega centra"
-        }
-    },
-    "score": {
-        "vT1": -0.050207396290445017,
-        "vT2": -0.091055640053686063
+        "vT1": -0.040969743799617174,
+        "vT2": -0.10291500322793312
     }
 }]

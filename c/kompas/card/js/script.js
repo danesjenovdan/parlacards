@@ -1,5 +1,4 @@
-// TODO
-// kdaj se izklopi označba za stranko?
+(function() {
 
 function makeSwitchEvent(acronym) {
     $('#partyswitch-' + acronym).on('click', function() {
@@ -193,6 +192,14 @@ for (i in kompas_data) {
         .attr("y", 0);
 }
 
+// tooltip start
+
+// Define the div for the tooltip
+var tooltipdiv = d3.select("#kompas-scatter").append("div")
+    .attr("class", "kompastooltip");
+
+// tooltip end
+
 for (group in groupedData) {
 
     var currentselection = d3.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(' ', '_')).classed('partygroup', true)
@@ -234,6 +241,21 @@ for (group in groupedData) {
 
             //     element.classed('selected', true);
             // }
+        })
+        .on("mouseover", function(d) { // setup tooltip
+            tooltipdiv.transition()
+                .duration(200)
+                .style("opacity", .9);
+
+            // console.log($(this).parents('#kompas-scatter')));
+            tooltipdiv.html(d.person.name)
+                .style("left", (d3.event.pageX - (tooltipdiv.node().getBoundingClientRect().width / 2) - $('#kompas-scatter').offset().left + 10 + "px"))
+                .style("top", (d3.event.pageY - $('#kompas-scatter').offset().top - 30) + "px");
+            })
+        .on("mouseout", function(d) {
+            tooltipdiv.transition()
+                .duration(200)
+                .style("opacity", 0);
         });
     // .style('filter', 'url(#glow)');
     // .on('mouseover', overGroup)
@@ -602,3 +624,4 @@ function addSearchPerson(datum) {
     poslancisearch.local = searchpeople;
     poslancisearch.initialize(true);
 }
+})();
