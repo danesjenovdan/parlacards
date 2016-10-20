@@ -212,8 +212,8 @@ function drawLabels(data) {
         });
 
     var alpha = 0.5;
-    var spacingY = 15;
-    var spacingX = 5;
+    var spacingY = 30;
+    var spacingX = 30;
 
     function relax() {
 
@@ -234,29 +234,47 @@ function drawLabels(data) {
                 deltaY = y1 - y2;
                 deltaX = x1 - x2;
 
-                // handle Y spacing
-                if (Math.abs(deltaY) > spacingY) {
+                // handle X & Y spacing
+                if (Math.abs(deltaY) > spacingY || Math.abs(deltaX) > spacingX) {
                     return;
                 } else {
                     // if we didn't break until now, labels are overlapping
                     again = true;
+
                     sign = deltaY > 0 ? 1 : -1;
                     adjust = sign * alpha;
                     da.attr('y', +y1 + adjust);
                     db.attr('y', +y2 - adjust);
-                }
 
-                // handle X spacing
-                if (Math.abs(deltaX) > spacingX) {
-                    return;
-                } else {
-                    // if we didn't break until now, labels are overlapping
-                    again = true;
                     sign = deltaX > 0 ? 1 : -1;
                     adjust = sign * alpha;
                     da.attr('x', +x1 + adjust);
                     db.attr('x', +x2 - adjust);
                 }
+
+                // // handle Y spacing
+                // if (Math.abs(deltaY) > spacingY) {
+                //     return;
+                // } else {
+                //     // if we didn't break until now, labels are overlapping
+                //     again = true;
+                //     sign = deltaY > 0 ? 1 : -1;
+                //     adjust = sign * alpha;
+                //     da.attr('y', +y1 + adjust);
+                //     db.attr('y', +y2 - adjust);
+                // }
+                //
+                // // handle X spacing
+                // if (Math.abs(deltaX) > spacingX) {
+                //     return;
+                // } else {
+                //     // if we didn't break until now, labels are overlapping
+                //     again = true;
+                //     sign = deltaX > 0 ? 1 : -1;
+                //     adjust = sign * alpha;
+                //     da.attr('x', +x1 + adjust);
+                //     db.attr('x', +x2 - adjust);
+                // }
 
             });
         });
@@ -291,12 +309,12 @@ function drawLabels(data) {
             .attr("d", function(d) {
                 // console.log(d);
                 if (d.cx > d.ox) { //|| Math.abs(d.cx) < 0.1) {
-                    return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+                    return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 3.4 + "," + d.cy * 3.4;
                 } else {
                     if ((d.endx > 0) && (Math.abs(d.cx) < 10)) {
-                        return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+                        return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 3.4 + "," + d.cy * 3.4;
                     }
-                    return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+                    return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx * 3.4 + "," + d.cy * 3.4;
                 }
             })
             .style('display', function(d) {
@@ -331,7 +349,7 @@ var margin = {
 };
 var width = 400 - margin.left - margin.right;
 var height = 400 - margin.top - margin.bottom;
-var radius = Math.min(width, height) / 3.1;
+var radius = Math.min(width, height) / 4.5;
 
 var color = d3.scale.ordinal()
     .range(["#009CDD", "#00628C", "#99E1FF", "#003B54"]);
