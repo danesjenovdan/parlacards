@@ -53,12 +53,14 @@
             <section>
                 <span class="date"><%= data.results[result].date %></span>
 
+                <span class="title"><a href="<%= data.results[result].sessions[0].session_name %>">
+                        <%= data.results[result].sessions[0].session_name %>
+                    </a></span>
+
+
                 <ul>
                     <li>
 
-                        <p><a href="<%= data.results[result].sessions[0].session_name %>">
-                                <%= data.results[result].sessions[0].session_name %>
-                            </a></p>
 
                         <ul>
                             <% for(var speechIndex = 0; speechIndex < data.results[result].sessions[0].speakers.length; speechIndex++ ){
