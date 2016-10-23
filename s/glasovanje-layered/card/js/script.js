@@ -1,90 +1,13 @@
-function drawInner(data) {
-
-    console.log('starting drawInner');
-
-    var arc = d3.svg.arc()
-        .outerRadius(radius)
-        .innerRadius(0);
-
-
-    var labelArc = d3.svg.arc()
-        .outerRadius(radius)
-        .innerRadius(radius);
-
-
-    var pie = d3.layout.pie()
-        .sort(null)
-        .value(function(d) {
-            return d.total_votes;
-        });
-
-    var data_for_inner_pie = [];
-
-    for (key in data.all) {
-        data_for_inner_pie.push(data.all[key]);
-    }
-
-    var piedata = pie(data_for_inner_pie);
-
-    var g = svg.selectAll('.arc')
-        .data(piedata)
-        .enter()
-        .append('g')
-        .attr('class', 'arc');
-
-    g.append('path')
-        .attr('d', arc)
-        .style('fill', function(d) {
-            return color(d.data.option);
-        })
-        .attr("d", arc).style('stroke', 'white')
-        .style('stroke-width', 2);
-
-}
-
-function drawPie(data) {
-
-    // options
-    var options_data = [];
-    for (key in data.all) {
-        options_data.push(data.all[key]);
-    }
-
-    var pie = d3.layout.pie()
-        .sort(null)
-        .value(function(d) {
-            return d.mps.length;
-        });
-
-    var options_data = pie(options_data);
-
-    console.log('drawing pie');
-    var arc = d3.svg.arc()
-        .outerRadius(radius * 1.5 - 10);
-
-    var labelArc = d3.svg.arc()
-        .outerRadius(radius * 1.5 - 50)
-        .innerRadius(radius * 1.5 - 100);
-
-    var pie = d3.layout.pie()
-        .sort(null)
-        .value(function(d) {
-            return d.mps.length;
-        });
-
-    var piedata = pie(data);
-
-    var options = svg.selectAll('.option')
-        .data(options_data)
-        .enter()
-        .append('g')
-        .attr('class', 'pg');
-
-    drawOptionLabels(options);
-}
-
-function drawOptionLabels(options) {
-
+function groupBy(array, f) {
+    var groups = {};
+    array.forEach(function(o) {
+        var group = JSON.stringify(f(o));
+        groups[group] = groups[group] || [];
+        groups[group].push(o);
+    });
+    return Object.keys(groups).map(function(group) {
+        return groups[group];
+    })
 }
 
 function drawLabelLines(labels) {
@@ -120,7 +43,7 @@ function drawLabelLines(labels) {
         });
 }
 
-function drawOuter(data) {
+function drawPie(data) {
     console.log('starting drawOuter');
     var arc = d3.svg.arc()
         .outerRadius(radius * 1.5 - 10);
@@ -139,11 +62,15 @@ function drawOuter(data) {
 
     var piedata = pie(data);
 
+    // var bigg = svg.selectAll('.arc-container')
+    //     .data(grouped_data);
+
+
     var g = svg.selectAll('.arc2')
         .data(piedata)
         .enter()
         .append('g')
-        .attr('class', 'arc2');
+        .classed('arc2', true);
 
     g.append('path')
         .attr('d', arc)
@@ -154,9 +81,12 @@ function drawOuter(data) {
         .style('stroke', function(d) {
             return color(d.data.option);
         })
-        .style('stroke-width', 0.3)
+        .attr('class', function(d) {
+            return d.data.option + '-arc'
+        })
+        .style('stroke-width', 0)
         .on('click', function(d) {
-            var mp_list = d3.select('.' + d.data.option + '.' +d.data.pg.acronym.replace(' ', '_'));
+            var mp_list = d3.select('.' + d.data.option + '.' + d.data.pg.acronym.replace(' ', '_'));
 
             mp_list.classed('hidden', !mp_list.classed('hidden'));
 
@@ -164,16 +94,65 @@ function drawOuter(data) {
 
             if (_this.classed('selected')) {
                 _this.attr('transform', function(d) {
-                    return 'translate(0, 0)';
-                })
-                .classed('selected', false);
+                        return 'translate(0, 0)';
+                    })
+                    .classed('selected', false);
             } else {
                 _this.attr('transform', function(d) {
-                    var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                    return 'translate(' + Math.cos(a) * (radius * 0.2) +',' + Math.sin(a) * (radius * 0.2) + ')';
-                })
-                .classed('selected', true);
+                        var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+                        return 'translate(' + Math.cos(a) * (radius * 0.2) + ',' + Math.sin(a) * (radius * 0.2) + ')';
+                    })
+                    .classed('selected', true);
             }
+        })
+        .on("mouseover", function(d) { // setup tooltip
+
+            var startTranslateState = 'translate(0, 0)';
+
+            var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+
+            var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
+
+            function translateOutInterpolator() {
+                return d3.interpolateString(startTranslateState, endTranslateState);
+            }
+            function translateInInterpolator() {
+                return d3.interpolateString(endTranslateState, startTranslateState);
+            }
+
+            console.log('I am over ' + d.data.option);
+            d3.selectAll('.' + d.data.option + '--')
+                .style('opacity', 1);
+
+            // console.log(d3.selectAll('.' + d.data.option + '-arc'));
+            d3.selectAll('.' + d.data.option + '-arc')
+                .transition()
+                .duration(500)
+                .attrTween('transform', translateOutInterpolator);
+        })
+        .on("mouseout", function(d) {
+
+            var startTranslateState = 'translate(0, 0)';
+
+            var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+
+            var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
+
+            function translateOutInterpolator() {
+                return d3.interpolateString(startTranslateState, endTranslateState);
+            }
+            function translateInInterpolator() {
+                return d3.interpolateString(endTranslateState, startTranslateState);
+            }
+
+            console.log('I am out of ' + d.data.option);
+            d3.selectAll('.' + d.data.option + '--')
+                .style('opacity', 0);
+
+            d3.selectAll('.' + d.data.option + '-arc')
+                .transition()
+                .duration(500)
+                .attrTween('transform', translateInInterpolator);
         });
 
 }
@@ -201,6 +180,10 @@ function drawLabels(data) {
             d.cy = Math.sin(a) * (radius * 1.5 - 73);
             return d.y = Math.sin(a) * (radius * 1.5 + 25);
         })
+        .attr('class', function(d) {
+            return d.data.option + '--'
+        })
+        .classed('label', true)
         .text(function(d) {
             return d.data.pg.acronym + ' | ' + d.data.mps.length;
         })
@@ -212,10 +195,10 @@ function drawLabels(data) {
         });
 
     var alpha = 0.5;
-    var spacingY = 30;
+    var spacingY = 20;
     var spacingX = 30;
 
-    function relax() {
+    function relax(labels) {
 
         again = false;
         labels.each(function(d, i) {
@@ -280,16 +263,25 @@ function drawLabels(data) {
         });
 
         if (again) {
-            setTimeout(relax, 20);
+            setTimeout(relax(labels), 20);
         } else {
-            drawLines();
+            // var linestodraw = d3.selectAll('.' + d3.select(labels).node().datum().data.option + '--');
+            // drawLines(labels);
         }
 
     }
 
-    relax();
 
-    function drawLines() {
+    groupedData = groupBy(second_level_data, function(item) {
+        return [item.option]
+    });
+
+    for (i in groupedData) {
+        var group_of_labels = d3.selectAll('.' + groupedData[i][0]['option'] + '--');
+        relax(group_of_labels);
+    }
+
+    function drawLines(labels) {
 
         labels.each(function(d) {
             var thing = d3.select(this);
@@ -362,34 +354,22 @@ var svg = d3.select(".layeredchart").append("svg")
 
 var pieWidth = 200;
 
+var second_level_data = [];
+for (option in data.all) {
+    for (party in data.all[option]['breakdown']) {
+        // newdict = data.all[option]['breakdown'][party];
+        // newdict['option'] = data.all[option]['option'];
 
-// $.getJSON('https://analize.parlameter.si/v1/s/getMotionGraph/2931/', function(r) {
+        var newdict = data.all[option]['breakdown'][party];
+        newdict.option = option;
 
-    console.log('before drawInner');
+        second_level_data.push(newdict);
 
-    // drawInner(data);
-
-    var second_level_data = [];
-    for (option in data.all) {
-        for (party in data.all[option]['breakdown']) {
-            // newdict = data.all[option]['breakdown'][party];
-            // newdict['option'] = data.all[option]['option'];
-
-            var newdict = data.all[option]['breakdown'][party];
-            newdict.option = option;
-
-            second_level_data.push(newdict);
-
-        }
     }
+}
 
-    console.log(second_level_data);
+console.log(second_level_data);
 
-    drawOuter(second_level_data);
-    // drawPie(second_level_data);
+drawPie(second_level_data);
 
-    // console.log(second_level_data);
-
-    drawLabels(second_level_data);
-
-// });
+drawLabels(second_level_data);
