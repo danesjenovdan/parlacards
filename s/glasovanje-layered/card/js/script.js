@@ -1,3 +1,4 @@
+// utilities
 function groupBy(array, f) {
     var groups = {};
     array.forEach(function(o) {
@@ -10,41 +11,9 @@ function groupBy(array, f) {
     })
 }
 
-function drawLabelLines(labels) {
-    labels.each(function(d) {
-        var thing = d3.select(this);
-        var bbox = this.getBBox();
-        d.sx = +thing.attr('x') - bbox.width / 2 - 2;
-        d.ox = +thing.attr('x') + bbox.width / 2 + 2;
-        d.sy = d.oy = +thing.attr('y') + 5;
-        d.endx = +thing.attr('x') + bbox.width;
-    });
-
-    svg.selectAll("path.pointer").data(piedata).enter()
-        .append("path")
-        .attr("class", "pointer")
-        .style("fill", "none")
-        .attr("d", function(d) {
-            if (d.cx > d.ox) { //|| Math.abs(d.cx) < 0.1) {
-                return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
-            } else {
-                if ((d.endx > 0) && (Math.abs(d.cx) < 10)) {
-                    return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
-                }
-                return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
-            }
-        })
-        .style('display', function(d) {
-            if (+d.data.percentage === 0) {
-                return 'none';
-            } else {
-                return 'block';
-            }
-        });
-}
-
+// draw the pie
 function drawPie(data) {
-    console.log('starting drawOuter');
+    
     var arc = d3.svg.arc()
         .outerRadius(radius * 1.5 - 10);
 
@@ -62,30 +31,25 @@ function drawPie(data) {
 
     var piedata = pie(data);
 
-    // var bigg = svg.selectAll('.arc-container')
-    //     .data(grouped_data);
-
-
-    var g = svg.selectAll('.arc2')
+    var g = svg.selectAll('.arc')
         .data(piedata)
         .enter()
         .append('g')
-        .classed('arc2', true);
+        .classed('arc', true);
 
     g.append('path')
         .attr('d', arc)
-        .style('fill', function(d) {
-            return color(d.data.option);
-        })
-        .attr("d", arc)
-        .style('stroke', function(d) {
-            return color(d.data.option);
-        })
         .attr('class', function(d) {
             return d.data.option + '-arc'
         })
+        .style('fill', function(d) {
+            return color(d.data.option);
+        })
+        .style('stroke', function(d) {
+            return color(d.data.option);
+        })
         .style('stroke-width', 0)
-        .on('click', function(d) {
+        .on('click', function(d) { // TODO 
             var mp_list = d3.select('.' + d.data.option + '.' + d.data.pg.acronym.replace(' ', '_'));
 
             mp_list.classed('hidden', !mp_list.classed('hidden'));
@@ -105,58 +69,38 @@ function drawPie(data) {
                     .classed('selected', true);
             }
         })
-        .on("mouseover", function(d) { // setup tooltip
+        .on("mouseover", function(d) { // TODO
 
-            var startTranslateState = 'translate(0, 0)';
-
-            var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-
-            var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
-
-            function translateOutInterpolator() {
-                return d3.interpolateString(startTranslateState, endTranslateState);
-            }
-            function translateInInterpolator() {
-                return d3.interpolateString(endTranslateState, startTranslateState);
-            }
-
-            console.log('I am over ' + d.data.option);
-            d3.selectAll('.' + d.data.option + '--')
+            d3.selectAll('.' + d.data.option + '-label')
                 .style('opacity', 1);
 
-            // console.log(d3.selectAll('.' + d.data.option + '-arc'));
             d3.selectAll('.' + d.data.option + '-arc')
                 .transition()
                 .duration(500)
-                .attrTween('transform', translateOutInterpolator);
+                .attrTween('transform', function(d) {
+                    var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+                    var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
+                    return d3.interpolateString('translate(0, 0)', endTranslateState);
+                });
         })
-        .on("mouseout", function(d) {
+        .on("mouseout", function(d) { // TODO
 
-            var startTranslateState = 'translate(0, 0)';
-
-            var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-
-            var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
-
-            function translateOutInterpolator() {
-                return d3.interpolateString(startTranslateState, endTranslateState);
-            }
-            function translateInInterpolator() {
-                return d3.interpolateString(endTranslateState, startTranslateState);
-            }
-
-            console.log('I am out of ' + d.data.option);
-            d3.selectAll('.' + d.data.option + '--')
+            d3.selectAll('.' + d.data.option + '-label')
                 .style('opacity', 0);
 
             d3.selectAll('.' + d.data.option + '-arc')
                 .transition()
                 .duration(500)
-                .attrTween('transform', translateInInterpolator);
+                .attrTween('transform', function(d) {
+                    var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+                    var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
+                    return d3.interpolateString(startTranslateState, 'translate(0, 0)');
+                });
         });
 
 }
 
+// draw labels
 function drawLabels(data) {
     var pie = d3.layout.pie()
         .sort(null)
@@ -181,7 +125,7 @@ function drawLabels(data) {
             return d.y = Math.sin(a) * (radius * 1.5 + 25);
         })
         .attr('class', function(d) {
-            return d.data.option + '--'
+            return d.data.option + '-label'
         })
         .classed('label', true)
         .text(function(d) {
@@ -277,7 +221,7 @@ function drawLabels(data) {
     });
 
     for (i in groupedData) {
-        var group_of_labels = d3.selectAll('.' + groupedData[i][0]['option'] + '--');
+        var group_of_labels = d3.selectAll('.' + groupedData[i][0]['option'] + '-label');
         relax(group_of_labels);
     }
 
@@ -333,6 +277,41 @@ function drawLabels(data) {
     //     });
 }
 
+// draw label lines
+function drawLabelLines(labels) {
+    labels.each(function(d) {
+        var thing = d3.select(this);
+        var bbox = this.getBBox();
+        d.sx = +thing.attr('x') - bbox.width / 2 - 2;
+        d.ox = +thing.attr('x') + bbox.width / 2 + 2;
+        d.sy = d.oy = +thing.attr('y') + 5;
+        d.endx = +thing.attr('x') + bbox.width;
+    });
+
+    svg.selectAll("path.pointer").data(piedata).enter()
+        .append("path")
+        .attr("class", "pointer")
+        .style("fill", "none")
+        .attr("d", function(d) {
+            if (d.cx > d.ox) { //|| Math.abs(d.cx) < 0.1) {
+                return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+            } else {
+                if ((d.endx > 0) && (Math.abs(d.cx) < 10)) {
+                    return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+                }
+                return "M" + d.ox + "," + d.oy + "L" + d.sx + "," + d.sy + " " + d.cx * 1.9 + "," + d.cy * 1.9;
+            }
+        })
+        .style('display', function(d) {
+            if (+d.data.percentage === 0) {
+                return 'none';
+            } else {
+                return 'block';
+            }
+        });
+}
+
+// initial setup
 var margin = {
     top: 50,
     right: 50,
@@ -368,8 +347,5 @@ for (option in data.all) {
     }
 }
 
-console.log(second_level_data);
-
 drawPie(second_level_data);
-
 drawLabels(second_level_data);
