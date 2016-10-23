@@ -141,3 +141,13 @@ a.document:hover {
 .member:last-of-type {
     border-bottom: none;
 }
+
+.label {
+    opacity: 0;
+}
+
+.arc2 path {
+    transition: all 1s ease-in;
+    // transform: translate(0, 0);
+    display: block;
+}
