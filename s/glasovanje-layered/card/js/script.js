@@ -71,7 +71,7 @@ function drawPie(data) {
         })
         .on("mouseover", function(d) { // TODO
 
-            d3.selectAll('.' + d.data.option + '-label')
+            d3.selectAll('.' + d.data.option + '-label-party')
                 .style('opacity', 1);
 
             d3.selectAll('.' + d.data.option + '-arc')
@@ -79,24 +79,17 @@ function drawPie(data) {
                 .duration(500)
                 .attrTween('transform', function(d) {
                     var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                    var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
+                    var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
                     return d3.interpolateString('translate(0, 0)', endTranslateState);
-                });
-        })
-        .on("mouseout", function(d) { // TODO
-
-            d3.selectAll('.' + d.data.option + '-label')
-                .style('opacity', 0);
-
-            d3.selectAll('.' + d.data.option + '-arc')
+                })
                 .transition()
                 .duration(500)
                 .attrTween('transform', function(d) {
                     var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                    var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
-                    return d3.interpolateString(startTranslateState, 'translate(0, 0)');
+                    var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
+                    return d3.interpolateString(endTranslateState, 'translate(0, 0)');
                 });
-        });
+        })
 
 }
 
@@ -125,7 +118,7 @@ function drawLabels(data) {
             return d.y = Math.sin(a) * (radius * 1.5 + 25);
         })
         .attr('class', function(d) {
-            return d.data.option + '-label'
+            return d.data.option + '-label-party'
         })
         .classed('label', true)
         .text(function(d) {
@@ -221,7 +214,7 @@ function drawLabels(data) {
     });
 
     for (i in groupedData) {
-        var group_of_labels = d3.selectAll('.' + groupedData[i][0]['option'] + '-label');
+        var group_of_labels = d3.selectAll('.' + groupedData[i][0]['option'] + '-label-party');
         relax(group_of_labels);
     }
 
