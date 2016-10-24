@@ -1,5 +1,5 @@
 {
-  "result": "True",
+  "result": true,
   "all": {
     "kvorum": {
       "breakdown": [

@@ -14,7 +14,6 @@ path.pointer {
     height: auto;
 }
 .slab {
-    padding-left: 20px;
 
     font-family: 'Roboto Slab', serif;
     font-size: 16px;
@@ -94,6 +93,12 @@ a.document:hover {
     }
 }
 
+.right-container {
+    position: relative;
+    float: left;
+    margin-left: 30px;
+}
+
 .status-container {
     display: block;
     float: left;
@@ -101,6 +106,8 @@ a.document:hover {
     height: 48px;
 
     font-size: 16px;
+
+    margin-right: 20px;
 
     .status {
         display: inline-block;
@@ -116,6 +123,9 @@ a.document:hover {
 
     .glyphicon-remove {
         color: #FF5E41;
+    }
+    .glyphicon-ok {
+        color: #7AE7BF;
     }
 
 }
@@ -140,4 +150,20 @@ a.document:hover {
 }
 .member:last-of-type {
     border-bottom: none;
+}
+
+.label-party {
+    opacity: 0;
+}
+
+.arc path {
+    transition: all 1s ease-in;
+    cursor: pointer;
+}
+
+.pointer-party {
+    opacity: 0;
+}
+.label, .pointer {
+    transition: opacity 0.3 ease-out;
 }
