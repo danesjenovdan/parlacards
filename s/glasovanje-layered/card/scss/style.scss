@@ -94,6 +94,12 @@ a.document:hover {
     }
 }
 
+.right-container {
+    display: block;
+    position: relative;
+    float: right;
+}
+
 .status-container {
     display: block;
     float: left;
@@ -142,12 +148,18 @@ a.document:hover {
     border-bottom: none;
 }
 
-.label {
+.label-party {
     opacity: 0;
 }
 
 .arc path {
     transition: all 1s ease-in;
-    // transform: translate(0, 0);
-    display: block;
+    cursor: pointer;
+}
+
+.pointer-party {
+    opacity: 0;
+}
+.label, .pointer {
+    transition: opacity 0.3 ease-out;
 }
