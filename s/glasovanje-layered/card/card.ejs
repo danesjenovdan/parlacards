@@ -49,7 +49,7 @@
                                 <div class="option-marker option-marker-za"></div>
                                 <div class="option-text">
                                     <div class="option-number">
-                                        30
+                                        <%= data.all.for.total_votes %>
                                     </div>
                                     <div class="option-option">
                                         ZA
@@ -61,7 +61,7 @@
                                 <div class="option-marker option-marker-proti"></div>
                                 <div class="option-text">
                                     <div class="option-number">
-                                        30
+                                        <%= data.all.against.total_votes %>
                                     </div>
                                     <div class="option-option">
                                         PROTI
@@ -73,7 +73,7 @@
                                 <div class="option-marker option-marker-vzdrzani"></div>
                                 <div class="option-text">
                                     <div class="option-number">
-                                        30
+                                        <%= data.all.not_present.total_votes %>
                                     </div>
                                     <div class="option-option">
                                         VZDRŽANI
@@ -85,7 +85,7 @@
                                 <div class="option-marker option-marker-niso"></div>
                                 <div class="option-text">
                                     <div class="option-number">
-                                        30
+                                        <%= data.all.kvorum.total_votes %>
                                     </div>
                                     <div class="option-option">
                                         NISO
@@ -95,7 +95,7 @@
                         </div>
                         <div class="right-container">
                             <div class="status-container">
-                                <span class="slab">Status predloga: </span><div class="status"><span class="status-text">ZAVRNJEN</span><i class="status-icon glyphicon glyphicon-remove"></i></div>
+                                <span class="slab">Status predloga: </span><div class="status"><span class="status-text"><% if (data.result) { %> SPREJET <% } else { %> ZAVRNJEN <% } %></span><i class="status-icon glyphicon <% if (data.result) { %> glyphicon-ok <% } else { %> glyphicon-remove <% } %>"></i></div>
                             </div>
                             <div class="required-majority">
                                 <span class="slab">Potrebna večina: <strong><%= data.required %></strong></span>

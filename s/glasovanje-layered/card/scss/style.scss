@@ -14,7 +14,6 @@ path.pointer {
     height: auto;
 }
 .slab {
-    padding-left: 20px;
 
     font-family: 'Roboto Slab', serif;
     font-size: 16px;
@@ -95,9 +94,9 @@ a.document:hover {
 }
 
 .right-container {
-    display: block;
     position: relative;
-    float: right;
+    float: left;
+    margin-left: 30px;
 }
 
 .status-container {
@@ -107,6 +106,8 @@ a.document:hover {
     height: 48px;
 
     font-size: 16px;
+
+    margin-right: 20px;
 
     .status {
         display: inline-block;
@@ -122,6 +123,9 @@ a.document:hover {
 
     .glyphicon-remove {
         color: #FF5E41;
+    }
+    .glyphicon-ok {
+        color: #7AE7BF;
     }
 
 }
