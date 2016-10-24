@@ -82,3 +82,8 @@ rect {
         opacity: 1;
     }
 }
+
+.tick line {
+    stroke-dasharray: 2, 2;
+    stroke-width: 1;
+}
