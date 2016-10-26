@@ -23,11 +23,42 @@
 
     <script>
         var seznamPoslancevData = <%- JSON.stringify(data); %>;
+        var seznamPoslancevStatus = <%- JSON.stringify(status); %>;
     </script>
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
 
+    <%
+    var columns = {
+      presence_sessions: {
+        label: 'Prisotnost na sejah DZ',
+        unit: 'percent'
+      },
+      presence_votes: {
+        label: 'Prisotnost na glasovanjih sej DZ',
+        unit: 'percent'
+      },
+      vocabulary_size: {
+        label: 'Besedni zaklad'
+      },
+      spoken_words: {
+        label: 'Št. izgovorjenih besed'
+      },
+      speeches_per_session: {
+        label: 'Št. govorov na sejo'
+      },
+      privzdignjeno: {
+        label: 'Privzdignjeno besedje'
+      },
+      preprosto: {
+        label: 'Preprosto besedje'
+      },
+      problematicno: {
+        label: 'Problematično besedje'
+      },
+    };
+    %>
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
@@ -41,7 +72,9 @@
               <div data-sort="name" class="column wider sort">Ime</div>
               <div data-sort="party" class="column">PS</div>
               <div data-sort="district" class="column">Okraj</div>
-              <div data-sort="analysis" class="column">Analiza</div>
+              <% if (status && status.analysis) { %>
+                <div data-sort="analysis" class="column"><%= columns[status.analysis].label %></div>
+              <% } %>
             </li>
             <% data.data.forEach(function(result, index) { %>
             <li class="person" data-index="<%= index %>">
@@ -49,7 +82,11 @@
               <div class="column wider name"><%= result.person.name %></div>
               <div class="column"><%= result.person.party.acronym %></div>
               <div class="column"><%= result.person.district || 'okraj ni vnešen' %></div>
-              <div class="column"><%= result.results.vocabulary_size %></div>
+              <% if (status && status.analysis) { %>
+                <div class="column">
+                  <%= result.results[status.analysis] + (columns[status.analysis].unit === 'percent' ? '%' : '') %>
+                </div>
+              <% } %>
             </li>
             <% }) %>
           </ul>

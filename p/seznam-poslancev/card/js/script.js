@@ -8,7 +8,7 @@
         name: function(item) { return item.person.name },
         party: function(item) { return item.person.party.acronym },
         district: function(item) { return item.person.district },
-        analysis: function(item) { return item.results.vocabulary_size },
+        analysis: function(item) { return item.results[seznamPoslancevStatus.analysis] },
       };
 
   headersElement.on('click', '.column', function(event) {

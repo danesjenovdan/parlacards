@@ -78,7 +78,10 @@ gulp.task('ejs', function() {
     return gulp.src('card/card.ejs')
         .pipe(ejs({
             'data': jsonData,
-            'className' : className
+            'className' : className,
+            'status' : {
+              analysis: 'preprosto'
+            }
         }, {
             ext: '.html'
         }))
