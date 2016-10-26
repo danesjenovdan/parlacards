@@ -1,8 +1,18 @@
 .bar {
     fill: #ccebf8;
 }
-.bar:hover {
-    fill: #009cdd;
+.smallbarcontainer, .bigbarcontainer {
+    text {
+        transition: all 0.2s ease-out;
+    }
+}
+.smallbarcontainer:hover, .bigbarcontainer:hover {
+    .bar {
+        fill: #009cdd;
+    }
+    text {
+        font-size: 1.2em;
+    }
 }
 .smallbarcontainer text, .bigbarcontainer text {
     fill: #009cdd;
@@ -10,6 +20,10 @@
 }
 .bigbarcontainer text {
     font-size: 12px;
+    opacity: 0;
+}
+.bigbarcontainer:hover text {
+    opacity: 1;
 }
 
 .axis path,
@@ -22,4 +36,8 @@
 }
 .tick line {
         stroke-width: 0;
+}
+.bigdata .tick text {
+    opacity: 0;
+    transition: all 0.2s ease-in;
 }

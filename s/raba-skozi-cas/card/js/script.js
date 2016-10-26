@@ -280,7 +280,7 @@ function createSmallChart(data) {
         .orient("left");
 
     svg.append("g")
-        .attr("class", "x axis")
+        .attr("class", "x axis smalldata")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
 
@@ -334,7 +334,7 @@ function createBigChart(data) {
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient("bottom")
-        .tickValues(x.domain().filter(function(d, i) { return !(i % 3); }))
+        // .tickValues(x.domain().filter(function(d, i) { return !(i % 3); }))
         .tickFormat(SI.timeFormat('%b %y'));
 
     var yAxis = d3.svg.axis()
@@ -342,7 +342,7 @@ function createBigChart(data) {
         .orient("left");
 
     svg.append("g")
-        .attr("class", "x axis")
+        .attr("class", "x axis bigdata")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
 
@@ -351,7 +351,25 @@ function createBigChart(data) {
         .data(data)
         .enter()
         .append('g')
-        .attr('class', 'bigbarcontainer');
+        .attr('class', 'bigbarcontainer')
+        .on('mouseover', function(d) {
+            var a = d3.select(this).datum();
+            var b = d3.selectAll('.tick')
+                .filter(function(d) {
+                    return a.date === d;
+                })
+                .select('text')
+                .style('opacity', 1);
+        })
+        .on('mouseleave', function(d) {
+            var a = d3.select(this).datum();
+            var b = d3.selectAll('.tick')
+                .filter(function(d) {
+                    return a.date === d;
+                })
+                .select('text')
+                .style('opacity', 0);
+        });;
 
     barcontainers.append('text')
         .text(function(d) {
