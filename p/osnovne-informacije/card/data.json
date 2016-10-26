@@ -41,8 +41,8 @@
     "age": 70,
     "social": [
       {
-        "twitter": null,
-        "facebook": null,
+        "twitter": "https://twitter.com/danesjenovdan",
+        "facebook": "https://www.facebook.com/danesjenovdan",
         "linkedin": null
       }
     ],

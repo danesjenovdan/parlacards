@@ -1,11 +1,14 @@
-/* TODO list
+(function() {
 
-1) refactor opacity code -> single redraw function -> also needs updatePeopleScroller()
-2) cleanup unused code
-3) implement new search
-4) style search
+// TODO refactor opacity code -> single redraw function -> also needs updatePeopleScroller()
+// tooltip start
 
- end TODO list */
+// Define the div for the tooltip
+var tooltipdiv = d3.select("#vocabulary-chart").append("div")
+    .attr("class", "kompastooltip");
+
+// tooltip end
+
 function uniq(a) {
     return a.sort().filter(function(item, pos, ary) {
         return !pos || item != ary[pos - 1];
@@ -24,18 +27,18 @@ function makeSwitchEvent(acronym) {
     $('#partyswitch-' + acronym).on('click', function() {
         var partymembers = d3.select('#kompasgroup' + $(this).data('acronym')).selectAll('.dot');
 
-        if (!$(this).hasClass('turnedon')) {
+        if (!$(this).hasClass('turnedon')) { // !.turnedon
             partymembers.classed('selected', true);
             $('#vocabulary-chart').addClass('selection-active');
 
             $(this).addClass('turnedon');
 
-            for (i in partymembers[0]) {
-                $('#personcard' + d3.select(partymembers[0][i]).datum().person.id).removeClass('hidden');
+            partymembers.each(function(d, i) {
+                $('#personcard' + d.person.id).removeClass('hidden');
                 updatePeopleScroller();
-            }
+            });
 
-        } else {
+        } else { // .turnedon
             partymembers.classed('selected', false);
             $(this).removeClass('turnedon');
 
@@ -43,10 +46,10 @@ function makeSwitchEvent(acronym) {
                 $('#vocabulary-chart').removeClass('selection-active');
             }
 
-            for (i in partymembers[0]) {
-                $('#personcard' + partymembers[0][i].datum().person.id).addClass('hidden');
+            partymembers.each(function(d, i) {
+                $('#personcard' + d.person.id).addClass('hidden');
                 updatePeopleScroller();
-            }
+            });
         }
     });
 }
@@ -74,9 +77,6 @@ var margin = {
     width = outerWidth - margin.left - margin.right,
     height = outerHeight - margin.top - margin.bottom;
 
-// var x = d3.scale.linear()
-//     .range([0, width]).nice();
-
 var x = d3.scale.linear()
     .range([margin.left, width]).nice();
 
@@ -92,7 +92,6 @@ var xMax = d3.max(data, function(d) {
 var xMin = d3.min(data, function(d) {
     return d[xCat];
 });
-var xMin = xMin > 0 ? 0 : xMin;
 
 x.domain([xMin, xMax]);
 
@@ -102,8 +101,6 @@ var nodes = data.map(function(node, index) {
         score: node.score,
         idealradius: node.score / 100,
         radius: 15,
-        // Give each node a random color.
-        color: '#ff7f0e',
         // Set the node's gravitational centerpoint.
         idealcx: x(node.score),
         idealcy: height / 2,
@@ -128,8 +125,8 @@ var force = d3.layout.force()
 
 var xAxis = d3.svg.axis()
     .scale(x)
-    .orient("bottom")
-    .tickSize(0);
+    .orient('top')
+    .tickSize(380);
 
 /**
  * On a tick, apply custom gravity, collision detection, and node placement.
@@ -214,11 +211,6 @@ function renderGraph() {
     for (var i = 50; i > 0; --i) force.tick();
     force.stop();
 
-    svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + (margin.top + (height * 3 / 4)) + ")")
-        .call(xAxis);
-
     for (group in groupedNodes) {
         var currentselection = d3.select('#kompasgroup' + groupedNodes[group][0].person.party.acronym.replace(' ', '_'))
             .selectAll('.dot')
@@ -239,8 +231,24 @@ function renderGraph() {
             .style('fill', function(d) {
                 return 'url(#' + d.person.gov_id + ')'
             })
-            .on('click', function(d, i) {
+            .on('click', function(d) {
                 exposeMe(d);
+            })
+            .on("mouseover", function(d) { // setup tooltip
+                tooltipdiv.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+
+                console.log(d3.event.pageX, d3.event.pageY, d);
+
+                tooltipdiv.html(d.person.name + ' | ' + d.score)
+                    .style("left", (d3.event.pageX - (tooltipdiv.node().getBoundingClientRect().width / 2) - $('#vocabulary-chart').offset().left + 10 + "px"))
+                    .style("top", (d3.event.pageY - $('#vocabulary-chart').offset().top - 30) + "px");
+                })
+            .on("mouseout", function(d) {
+                tooltipdiv.transition()
+                    .duration(200)
+                    .style("opacity", 0);
             });
 
         makeSwitchEvent(groupedNodes[group][0].person.party.acronym.replace(' ', '_'));
@@ -253,22 +261,12 @@ var color = d3.scale.ordinal()
 var svg = d3.select("#vocabulary-chart")
     .append("svg")
     .attr('viewBox', '0 0 700 400')
-    .attr('preserveAspectRatio', 'xMidYMid meet')
-    .append("g");
-
-svg.append("rect")
-    .attr("width", width)
-    .attr("height", height);
+    .attr('preserveAspectRatio', 'xMidYMid meet');
 
 svg.append("g")
     .classed("x axis", true)
     .attr("transform", "translate(0," + height + ")")
     .call(xAxis)
-
-svg.selectAll(".tick")
-    .each(function(d, i) {
-        this.remove();
-    });
 
 var objects = svg.append("svg")
     .classed("objects", true)
@@ -307,6 +305,7 @@ function overGroup() {};
 function offGroup() {};
 
 function exposeMe(datum) {
+    console.log(datum);
     if (!$('#vocabulary-chart').hasClass('selection-active')) {
         $('#vocabulary-chart').addClass('selection-active');
     }
@@ -323,141 +322,35 @@ function exposeMe(datum) {
     if ($('.dot.selected').length === 0) {
         $('#vocabulary-chart').removeClass('selection-active');
     }
+
+    updatePeopleScroller();
 }
 
-function drawSingleHull(datum) {
-
-    // create card
-    $('.kompas-people').append('<div class="kompas-person" id="personcard' + datum.person.id + '" data-id="' + datum.person.id + '">' + datum.person.name + '</div>');
-    $('#personcard' + datum.person.id).on('click', function() {
-        $('#singlehull' + $(this).data('id')).remove();
-        $(this).remove();
-    });
-
-    // create hull
-    var hull = objects.append('path')
-        .classed('hull', true)
-        .classed('singlehull', true)
-        .attr('data-parent', '_' + datum.person.id)
-        .attr('id', function() {
-            return 'singlehull' + datum.person.id;
-        })
-        .attr('data-id', datum.person.id);
-
-    var vertices = [
-        [x(datum[xCat]), y(datum[yCat])]
-    ];
-
-    hull.datum(vertices)
-        .attr("d", function(d) {
-            return "M" + d[0][0] + ',' + d[0][1] + "L" + (d[0][0] + 0.1) + ',' + d[0][1] + "Z";
-        })
-        .style('fill', function(d) {
-            return color(datum.person.party.acronym.replace(' ', '_'));
-        })
-        .style('stroke', function(d) {
-            return color(datum.person.party.acronym.replace(' ', '_'));
-        })
-        .on('click', function() {
-            d3.select('#personcard' + d3.select(this).attr('data-id')).remove();
-            d3.select(this).remove();
-        });
-}
-
-function drawHull(group, dataset) {
-    var hull = objects.append("path")
-        .attr("class", "hull")
-        .attr('id', function() {
-            return 'kompashull' + dataset[0].person.party.acronym.replace(' ', '_');
-        })
-        .classed('hidden', true);
-
-    var vertices = dataset.map(function(d) {
-        return [x(d[xCat]), y(d[yCat])];
-    });
-
-    if (vertices.length > 2) {
-        hull.datum(d3.geom.hull(vertices))
-            .attr("d", function(d) {
-                return "M" + d.join("L") + "Z";
-            })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            });
-    } else if (vertices.length === 2) {
-        hull.datum(vertices)
-            .attr("d", function(d) {
-                return "M" + d.join("L") + "Z";
-            })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            });
-    } else {
-        hull.datum(vertices)
-            .attr("d", function(d) {
-                return "M" + d[0][0] + ',' + d[0][1] + "L" + (d[0][0] + 0.1) + ',' + d[0][1] + "Z";
-            })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            });
+function exposeHer(datum) {
+    console.log(datum);
+    if (!$('#vocabulary-chart').hasClass('selection-active')) {
+        $('#vocabulary-chart').addClass('selection-active');
     }
 
-    makeSwitchEvent(dataset[0].person.party.acronym.replace(' ', '_'));
-}
-
-function redrawHull(group, dataset) {
-    var hull = objects.select("#kompashull" + dataset[0].person.party.acronym.replace(' ', '_'));
-
-    var vertices = dataset.map(function(d) {
-        return [x(d[xCat]), y(d[yCat])];
-    });
-
-    if (vertices.length > 2) {
-        hull.datum(d3.geom.hull(vertices))
-            .attr("d", function(d) {
-                return "M" + d.join("L") + "Z";
-            })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            });
-    } else if (vertices.length === 2) {
-        hull.datum(vertices)
-            .attr("d", function(d) {
-                return "M" + d.join("L") + "Z";
-            })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            });
+    var clicked_element = d3.select('#_' + datum.id);
+    if (!clicked_element.classed('selected')) {
+        clicked_element.classed('selected', true);
+        $('#personcard' + datum.id).removeClass('hidden');
     } else {
-        hull.datum(vertices)
-            .attr("d", function(d) {
-                return "M" + d[0][0] + ',' + d[0][1] + "L" + (d[0][0] + 0.01) + ',' + d[0][1] + "Z";
-            })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(' ', '_'));
-            });
+        clicked_element.classed('selected', false);
+        $('#personcard' + datum.id).addClass('hidden');
     }
+
+    if ($('.dot.selected').length === 0) {
+        $('#vocabulary-chart').removeClass('selection-active');
+    }
+
+    updatePeopleScroller();
 }
 
-renderGraph();
+window.setTimeout(function() {
+    renderGraph();
+}, 1000);
 
 $.each($('.kompas-stranka'), function(i, e) {
     $(e).css('border-bottom', '10px solid ' + color($(e).data('acronym')));
@@ -469,7 +362,6 @@ function updatePeopleScroller() {
     $('.kompas-person').not('.hidden').each(function(i, e) {
         thewidth = thewidth + $(e).outerWidth() + 21;
     });
-    console.log(thewidth);
     $('.kompas-people-wide').width(thewidth);
 }
 
@@ -506,20 +398,79 @@ $('.kompas-person').each(function(i, e) {
     $(e).children('.kompas-person-party').css('background-color', color($(e).data('acronym')));
 });
 
+
+var poslancisearch = new Bloodhound({
+    'datumTokenizer': Bloodhound.tokenizers.obj.whitespace('name'),
+    'queryTokenizer': Bloodhound.tokenizers.whitespace,
+    'local': searchpeople
+});
+
+var skupinesearch = new Bloodhound({
+    'datumTokenizer': Bloodhound.tokenizers.obj.whitespace('acronym', 'name'),
+    'queryTokenizer': Bloodhound.tokenizers.whitespace,
+    'local': parties_data
+});
+
 function updatePeopleSearch() {
-    // $('.kompas-search-input').autocomplete({
-    //     'source': searchpeople,
-    //     'select': function(event, ui) {
-    //         event.preventDefault();
-    //         $('.kompas-search-input').val('');
-    //         drawSingleHull(d3.select('#_' + ui.item.value).datum());
-    //         removeSearchPerson(ui.item.label);
-    //     },
-    //     'focus': function(event, ui) {
-    //         event.preventDefault();
-    //         $('.kompas-search-input').val(ui.item.label);
-    //     }
-    // });
+    poeplesearchtypeahead = $('.kompas-search-input').typeahead({
+
+    }, {
+        // 'limit': 3,
+        'name': 'poslanci',
+        'display': 'name',
+        'source': poslancisearch,
+        'templates': {
+            'empty': '<div class="searchheader">Med poslanci ni zadetkov</div>',
+            'suggestion': function(datum) {
+                return '<div class="searchperson-container"><div class="avgminimg img-circle" style="width: 40px; height: 40px; background-image: url(\'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + datum.gov_id + '.png\'); background-size: cover;"></div>' + datum.name + '</div>'
+            },
+            'header': '<div class="searchheader">POSLANKE IN POSLANCI</div>'
+        }
+    }, {
+        // 'limit': 3,
+        'name': 'skupine',
+        'display': 'acronym',
+        'source': skupinesearch,
+        'templates': {
+            'empty': '<div class="searchheader">Med PS ni zadetkov</div>',
+            'suggestion': function(datum) {
+                return '<div class="searchperson-container"><div class="avgminimg avgminimg-party img-circle" style="width: 40px; height: 40px;"></div>' + datum.acronym + '</div>'
+            },
+            'header': '<div class="searchheader results">POSLANSKE SKUPINE</div>'
+        }
+    });
+
+    $('.kompas-search-input').bind('typeahead:select', function(e, datum) {
+
+        if (datum.acronym) {
+            $('#partyswitch-' + datum.acronym.replace(' ', '_')).click();
+        } else {
+
+            exposeHer(datum);
+            removeSearchPerson(datum);
+        }
+
+        $('.kompas-search-input').typeahead('close').typeahead('val', '');
+    });
 }
 
 updatePeopleSearch();
+
+function removeSearchPerson(datum) {
+    for (person_i in searchpeople) {
+        if (searchpeople[person_i]['name'] == datum.name) {
+            console.log(name);
+            searchpeople.splice(person_i, 1);
+        }
+    }
+
+    poslancisearch.local = searchpeople;
+    poslancisearch.initialize(true);
+}
+
+function addSearchPerson(datum) {
+    searchpeople.push(datum);
+    poslancisearch.local = searchpeople;
+    poslancisearch.initialize(true);
+}
+})();
