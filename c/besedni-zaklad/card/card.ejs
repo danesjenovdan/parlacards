@@ -11,6 +11,7 @@
     <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/typeahead.bundle.min.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
     <!-- endbuild -->
 
@@ -46,7 +47,24 @@
 
         var parties = getParties(data);
 
+        function getPartyObjects(data) {
+
+            var parties = [];
+
+            for (person_i in data) {
+                if (parties.indexOf(data[person_i].person.party) === -1) {
+                    parties.push(data[person_i].person.party);
+                }
+            }
+
+            return parties;
+        }
+
     %>
+
+    <script>
+        var parties_data = <%- JSON.stringify(getPartyObjects(data)); %>;
+    </script> <!-- TODO this is a dirty hack -->
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
@@ -57,7 +75,7 @@
         </div>
         <div class="card-content">
             <div class="row">
-                <div class="col-xs-4 col-sm-4 col-md-1">
+                <div class="hidden-xs col-sm-4 col-md-2">
                     <div class="kompas-search">
                         <%
                             var searchpeople = [];
@@ -65,7 +83,7 @@
                             var kompas_data = data;
 
                             for (person_i in kompas_data) {
-                                searchpeople.push({'label': kompas_data[person_i]['person']['name'], 'value': kompas_data[person_i]['person']['id']});
+                                searchpeople.push(kompas_data[person_i]['person']);
                             }
                         %>
                         <script>var searchpeople = <%- JSON.stringify(searchpeople) %>;</script>
@@ -83,7 +101,7 @@
                           </svg>
                     </div>
                 </div>
-                <div class="col-xs-8 col-sm-8 col-md-11">
+                <div class="col-xs-12 col-sm-8 col-md-10">
                     <div class="kompas-people">
                         <div class="kompas-people-wide">
                         <% for (person_i in data) { %>
@@ -112,7 +130,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-2">
+                <div class="hidden-xs col-sm-2 col-md-2">
                     <div class="kompas-stranke">
                         <% for (party_i in parties) {
                         %>
@@ -126,7 +144,7 @@
                         %>
                     </div>
                 </div>
-                <div class="col-xs-10">
+                <div class="col-xs-12 col-sm-10 col-md-10">
                     <div id="vocabulary-chart"></div>
                 </div>
             </div>

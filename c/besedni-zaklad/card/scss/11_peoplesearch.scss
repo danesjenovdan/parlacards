@@ -1,0 +1,116 @@
+// Gives a card depth effect.
+// @param {Number} $depth - depth level (between 1 and 5)
+// @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+// @requires {function} top-shadow
+// @requires {function} bottom-shadow
+@mixin card($depth) {
+    @if $depth < 1 {
+        box-shadow: none;
+    } @else if $depth > 5 {
+        @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+    } @else {
+        @include css3-prefix('box-shadow', bottom-shadow($depth) + ', ' + top-shadow($depth));
+    }
+}
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, .4)) {
+    @include css3-prefix('box-shadow', $x $y $blur $color);
+}
+
+.kompas-search {
+  border-top: 0px solid;
+  border-right: 0px solid;
+  border-left: 0px solid;
+  border-bottom: 2px solid $sadblue;
+
+  width: 100%;
+  height: 35px;
+
+  position: relative;
+}
+.kompas-search-input {
+  border-width: 0;
+  height: 30px;
+  width: 170px;
+
+  margin-bottom: 5px;
+}
+.kompas-search-input:focus {
+  outline: none;
+}
+
+.search-icon {
+  width: 30px;
+  height: 30px;
+  // background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/search.svg');
+  // background-size: contain;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  .svg_1 {
+    fill: $sadblue;
+    stroke: $sadblue;
+  }
+}
+
+// TODO styling of typeahead
+
+.tt-menu {
+    max-height: 300px;
+    overflow-y: auto;
+
+    @include card(1);
+}
+
+.tt-dataset {
+    padding: 0;
+    background-color: #ffffff;
+    width: 200px;
+
+    // max-height: 150px;
+    // overflow-y: auto;
+}
+.tt-dataset .searchheader {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    background-color: #ededed;
+
+    top: 0;
+    left: 0;
+
+    padding-left: 5px;
+    z-index: 10;
+}
+// .tt-dataset-skupine .searchheader {
+//     position: relative;
+//     left: -10px;
+//     margin-top: 16px;
+// }
+// .tt-dataset-skupine .searchheader.results {
+//     margin-top: 0;
+// }
+
+.searchperson-container {
+    border-bottom: 1px solid #ededed;
+    height: 60px;
+    padding: 10px;
+    line-height: 40px;
+    background-color: #ffffff;
+}
+
+.avgminimg-party {
+    background-color: #f0f0f0;
+    line-height: 40px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.tt-cursor {
+    background-color: #ededed;
+}
