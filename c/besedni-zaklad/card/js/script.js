@@ -1,10 +1,14 @@
-/* TODO list
+(function() {
 
-1) refactor opacity code -> single redraw function -> also needs updatePeopleScroller()
-3) implement new search
-4) style search
+// TODO refactor opacity code -> single redraw function -> also needs updatePeopleScroller()
+// tooltip start
 
- end TODO list */
+// Define the div for the tooltip
+var tooltipdiv = d3.select("#vocabulary-chart").append("div")
+    .attr("class", "kompastooltip");
+
+// tooltip end
+
 function uniq(a) {
     return a.sort().filter(function(item, pos, ary) {
         return !pos || item != ary[pos - 1];
@@ -229,6 +233,22 @@ function renderGraph() {
             })
             .on('click', function(d) {
                 exposeMe(d);
+            })
+            .on("mouseover", function(d) { // setup tooltip
+                tooltipdiv.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+
+                console.log(d3.event.pageX, d3.event.pageY, d);
+
+                tooltipdiv.html(d.person.name + ' | ' + d.score)
+                    .style("left", (d3.event.pageX - (tooltipdiv.node().getBoundingClientRect().width / 2) - $('#vocabulary-chart').offset().left + 10 + "px"))
+                    .style("top", (d3.event.pageY - $('#vocabulary-chart').offset().top - 30) + "px");
+                })
+            .on("mouseout", function(d) {
+                tooltipdiv.transition()
+                    .duration(200)
+                    .style("opacity", 0);
             });
 
         makeSwitchEvent(groupedNodes[group][0].person.party.acronym.replace(' ', '_'));
@@ -302,9 +322,35 @@ function exposeMe(datum) {
     if ($('.dot.selected').length === 0) {
         $('#vocabulary-chart').removeClass('selection-active');
     }
+
+    updatePeopleScroller();
 }
 
-renderGraph();
+function exposeHer(datum) {
+    console.log(datum);
+    if (!$('#vocabulary-chart').hasClass('selection-active')) {
+        $('#vocabulary-chart').addClass('selection-active');
+    }
+
+    var clicked_element = d3.select('#_' + datum.id);
+    if (!clicked_element.classed('selected')) {
+        clicked_element.classed('selected', true);
+        $('#personcard' + datum.id).removeClass('hidden');
+    } else {
+        clicked_element.classed('selected', false);
+        $('#personcard' + datum.id).addClass('hidden');
+    }
+
+    if ($('.dot.selected').length === 0) {
+        $('#vocabulary-chart').removeClass('selection-active');
+    }
+
+    updatePeopleScroller();
+}
+
+window.setTimeout(function() {
+    renderGraph();
+}, 1000);
 
 $.each($('.kompas-stranka'), function(i, e) {
     $(e).css('border-bottom', '10px solid ' + color($(e).data('acronym')));
@@ -351,3 +397,80 @@ $('.kompas-person').on('click', function() {
 $('.kompas-person').each(function(i, e) {
     $(e).children('.kompas-person-party').css('background-color', color($(e).data('acronym')));
 });
+
+
+var poslancisearch = new Bloodhound({
+    'datumTokenizer': Bloodhound.tokenizers.obj.whitespace('name'),
+    'queryTokenizer': Bloodhound.tokenizers.whitespace,
+    'local': searchpeople
+});
+
+var skupinesearch = new Bloodhound({
+    'datumTokenizer': Bloodhound.tokenizers.obj.whitespace('acronym', 'name'),
+    'queryTokenizer': Bloodhound.tokenizers.whitespace,
+    'local': parties_data
+});
+
+function updatePeopleSearch() {
+    poeplesearchtypeahead = $('.kompas-search-input').typeahead({
+
+    }, {
+        // 'limit': 3,
+        'name': 'poslanci',
+        'display': 'name',
+        'source': poslancisearch,
+        'templates': {
+            'empty': '<div class="searchheader">Med poslanci ni zadetkov</div>',
+            'suggestion': function(datum) {
+                return '<div class="searchperson-container"><div class="avgminimg img-circle" style="width: 40px; height: 40px; background-image: url(\'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + datum.gov_id + '.png\'); background-size: cover;"></div>' + datum.name + '</div>'
+            },
+            'header': '<div class="searchheader">POSLANKE IN POSLANCI</div>'
+        }
+    }, {
+        // 'limit': 3,
+        'name': 'skupine',
+        'display': 'acronym',
+        'source': skupinesearch,
+        'templates': {
+            'empty': '<div class="searchheader">Med PS ni zadetkov</div>',
+            'suggestion': function(datum) {
+                return '<div class="searchperson-container"><div class="avgminimg avgminimg-party img-circle" style="width: 40px; height: 40px;"></div>' + datum.acronym + '</div>'
+            },
+            'header': '<div class="searchheader results">POSLANSKE SKUPINE</div>'
+        }
+    });
+
+    $('.kompas-search-input').bind('typeahead:select', function(e, datum) {
+
+        if (datum.acronym) {
+            $('#partyswitch-' + datum.acronym.replace(' ', '_')).click();
+        } else {
+
+            exposeHer(datum);
+            removeSearchPerson(datum);
+        }
+
+        $('.kompas-search-input').typeahead('close').typeahead('val', '');
+    });
+}
+
+updatePeopleSearch();
+
+function removeSearchPerson(datum) {
+    for (person_i in searchpeople) {
+        if (searchpeople[person_i]['name'] == datum.name) {
+            console.log(name);
+            searchpeople.splice(person_i, 1);
+        }
+    }
+
+    poslancisearch.local = searchpeople;
+    poslancisearch.initialize(true);
+}
+
+function addSearchPerson(datum) {
+    searchpeople.push(datum);
+    poslancisearch.local = searchpeople;
+    poslancisearch.initialize(true);
+}
+})();
