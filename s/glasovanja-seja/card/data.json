@@ -1,82 +1,317 @@
 [
   {
     "session": {
-      "date": "2014-08-01",
-      "name": "1. redna seja",
-      "id": 3046
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
     },
     "results": {
       "abstain": 20,
-      "text": "Predlog za izvolitev predsednika Dr\u017eavnega zbora Republike Slovenije",
+      "text": "Predlog za izvolitev v sodni\u0161ko funkcijo na sodni\u0161ko mesto okro\u017ene sodnice na Delovnem in socialnem sodi\u0161\u010du v Ljubljani in na sodni\u0161ki mesti okro\u017enih sodnikov na Okro\u017enem sodi\u0161\u010du v Ljubljani - Glasovanje o sklepu - Gregor Klun",
+      "against": 1,
+      "votes_for": 49,
+      "motion_id": 3694,
+      "not_present": 20,
+      "result": false
+    }
+  },
+  {
+    "session": {
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
+    },
+    "results": {
+      "abstain": 7,
+      "text": "Zakon o ugotavljanju katastrskega dohodka - Eviden\u010dni sklep o primernosti predloga zakona 21.6.2016",
+      "against": 18,
+      "votes_for": 49,
+      "motion_id": 3705,
+      "not_present": 16,
+      "result": false
+    }
+  },
+  {
+    "session": {
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
+    },
+    "results": {
+      "abstain": 5,
+      "text": "Zakon o sodelovanju delavcev pri upravljanju - Eviden\u010dni sklep o primernosti predloga zakona 21.6.2016",
+      "against": 61,
+      "votes_for": 7,
+      "motion_id": 3704,
+      "not_present": 17,
+      "result": false
+    }
+  },
+  {
+    "session": {
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Zakon o ratifikaciji Sporazuma med Vlado Republike Slovenije in Vlado Italijanske republike o izmenjavi in medsebojnem varovanju tajnih podatkov - Glasovanje o zakonu v celoti",
+      "against": 0,
+      "votes_for": 72,
+      "motion_id": 3703,
+      "not_present": 18,
+      "result": true
+    }
+  },
+  {
+    "session": {
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Zakon o ratifikaciji Pogodbe med Republiko Slovenijo in Mad\u017earsko o prilagoditvi \u010drte dr\u017eavne meje zaradi vodnogospodarske ureditve potoka Ledava - Glasovanje o zakonu v celoti",
+      "against": 0,
+      "votes_for": 68,
+      "motion_id": 3702,
+      "not_present": 22,
+      "result": true
+    }
+  },
+  {
+    "session": {
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Zakon o ratifikaciji Sporazuma med Vlado Republike Slovenije in Vlado Mad\u017earske o izmenjavi in medsebojnem varovanju tajnih podatkov - Glasovanje o zakonu v celoti",
+      "against": 0,
+      "votes_for": 72,
+      "motion_id": 3701,
+      "not_present": 18,
+      "result": true
+    }
+  },
+  {
+    "session": {
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Zakon o ratifikaciji Atenske konvencije o prevozu potnikov in njihove prtljage po morju, 1974, in Protokola 2002 k Atenski konvenciji o prevozu potnikov in njihove prtljage po morju, 1974 - Glasovanje o zakonu v celoti",
+      "against": 0,
+      "votes_for": 68,
+      "motion_id": 3700,
+      "not_present": 22,
+      "result": true
+    }
+  },
+  {
+    "session": {
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
+    },
+    "results": {
+      "abstain": 0,
+      "text": "Zakon o ratifikaciji Konvencije med Vlado Republike Slovenije in Vlado Republike Kazahstan o izogibanju dvojnega obdav\u010devanja in prepre\u010devanju dav\u010dnih utaj v zvezi z davki od dohodka in premo\u017eenja, s protokolom - Glasovanje o zakonu v celoti",
+      "against": 0,
+      "votes_for": 68,
+      "motion_id": 3699,
+      "not_present": 22,
+      "result": true
+    }
+  },
+  {
+    "session": {
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
+    },
+    "results": {
+      "abstain": 1,
+      "text": "Proceduralni predlog za prestavitev to\u010dke (Uradno pre\u010di\u0161\u010deno besedilo Pomorskega zakonika)",
       "against": 0,
       "votes_for": 66,
-      "motion_id": 2769,
-      "not_present": 4,
-      "result": "True"
+      "motion_id": 3698,
+      "not_present": 23,
+      "result": true
     }
   },
   {
     "session": {
-      "date": "2014-08-01",
-      "name": "1. redna seja",
-      "id": 3046
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
     },
     "results": {
       "abstain": 0,
-      "text": "Poro\u010dilo o izidu pred\u010dasnih volitev v Dr\u017eavni zbor Republike Slovenije",
+      "text": "Uradno pre\u010di\u0161\u010deno besedilo",
       "against": 0,
-      "votes_for": 88,
-      "motion_id": 2770,
-      "not_present": 2,
-      "result": "True"
+      "votes_for": 66,
+      "motion_id": 3697,
+      "not_present": 24,
+      "result": true
     }
   },
   {
     "session": {
-      "date": "2014-08-01",
-      "name": "1. redna seja",
-      "id": 3046
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
     },
     "results": {
-      "abstain": 0,
-      "text": "Sklep o imenovanju predsednika in podpredsednika Mandatno-volilne komisije",
-      "against": 21,
-      "votes_for": 64,
-      "motion_id": 2771,
-      "not_present": 5,
-      "result": "True"
+      "abstain": 15,
+      "text": "Predlog za izvolitev v sodni\u0161ko funkcijo na sodni\u0161ko mesto okro\u017ene sodnice na Delovnem in socialnem sodi\u0161\u010du v Ljubljani in na sodni\u0161ki mesti okro\u017enih sodnikov na Okro\u017enem sodi\u0161\u010du v Ljubljani - Glasovanje o sklepu - \u017diva Gliha",
+      "against": 6,
+      "votes_for": 47,
+      "motion_id": 3696,
+      "not_present": 22,
+      "result": false
     }
   },
   {
     "session": {
-      "date": "2014-08-01",
-      "name": "1. redna seja",
-      "id": 3046
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
     },
     "results": {
-      "abstain": 0,
-      "text": "Proceduralni predlog za prekinitev 1. to\u010dke dnevnega reda",
-      "against": 59,
-      "votes_for": 26,
-      "motion_id": 2772,
-      "not_present": 5,
-      "result": "False"
+      "abstain": 6,
+      "text": "Predlog za izvolitev v sodni\u0161ko funkcijo na sodni\u0161ko mesto okro\u017ene sodnice na Delovnem in socialnem sodi\u0161\u010du v Ljubljani in na sodni\u0161ki mesti okro\u017enih sodnikov na Okro\u017enem sodi\u0161\u010du v Ljubljani - Glasovanje o sklepu - Karmen Er\u010dulj",
+      "against": 15,
+      "votes_for": 48,
+      "motion_id": 3695,
+      "not_present": 21,
+      "result": false
     }
   },
   {
     "session": {
-      "date": "2014-08-01",
-      "name": "1. redna seja",
-      "id": 3046
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
     },
     "results": {
-      "abstain": 0,
-      "text": "Dnevni red v celoti",
+      "abstain": 21,
+      "text": "Sklep o imenovanju \u010dlanov Sveta za elektronske komunikacije Republike Slovenije - Glasovanje",
+      "against": 1,
+      "votes_for": 50,
+      "motion_id": 3693,
+      "not_present": 18,
+      "result": false
+    }
+  },
+  {
+    "session": {
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
+    },
+    "results": {
+      "abstain": 1,
+      "text": "Sklep o razre\u0161itvi podpredsednika in imenovanju podpredsednice Odbora za zunanjo politiko - Glasovanje",
       "against": 0,
-      "votes_for": 84,
-      "motion_id": 2773,
-      "not_present": 6,
-      "result": "True"
+      "votes_for": 70,
+      "motion_id": 3692,
+      "not_present": 19,
+      "result": true
+    }
+  },
+  {
+    "session": {
+      "date": "13. 6. 2016",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "20. redna seja",
+      "id": 4384
+    },
+    "results": {
+      "abstain": 19,
+      "text": "Zakon o tro\u0161arinah - Glasovanje o zakonu v celoti",
+      "against": 2,
+      "votes_for": 51,
+      "motion_id": 3691,
+      "not_present": 18,
+      "result": false
     }
   }
 ]

@@ -27,6 +27,11 @@
 
 <style>     #votingCard{height: 480px;} </style><!-- removeme -->
 
+
+<div class="container"><!-- removeme -->
+    <div class="row"><!-- removeme -->
+        <div class="col-md-12"><!-- removeme -->
+
 <!-- everything above here is part of the page and not part of the card -->
 <div class="card-container card-halfling <%= className %>">
     <div class="card-header">
@@ -58,6 +63,14 @@
                 var percent_against = Math.floor( (data[i].results.against / allInVotes) * 100);
                 var percent_abstain = Math.floor( (data[i].results.abstain / allInVotes) * 100);
                 var percent_not_present = Math.floor( (data[i].results.not_present / allInVotes) * 100);
+
+                    var resulttext = '';
+                    if(data[i].results.text.length > 230){
+                        resulttext = data[i].results.text.substring(0, 230) + "...";
+                    }else{
+                        resulttext = data[i].results.text;
+                    }
+
  %>
 
 
@@ -73,7 +86,7 @@
                             <div class="col-md-11 border-left ">
                                 <div class="col-md-6 ">
                                     <div class="session_title ">
-                                        <p><%= data[i].results.text %></p>
+                                        <p><%=resulttext %></p>
                                     </div>
                                 </div>
                                 <div class="col-md-6 ">
@@ -135,6 +148,11 @@
     </div>
 </div>
 <!-- everything below here is part of the page and not part of the card -->
+
+
+        </div><!-- removeme -->
+    </div><!-- removeme -->
+</div><!-- removeme -->
 
 <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
 <!-- inline temp/js/script.js as <script> -->
