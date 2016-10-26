@@ -334,7 +334,7 @@ function createBigChart(data) {
     var xAxis = d3.svg.axis()
         .scale(x)
         .orient("bottom")
-        // .tickValues(x.domain().filter(function(d, i) { return !(i % 3); }))
+        //.tickValues(x.domain().filter(function(d, i) { return !(i % 5); }))
         .tickFormat(SI.timeFormat('%b %y'));
 
     var yAxis = d3.svg.axis()

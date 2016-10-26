@@ -4,3 +4,24 @@
     padding-top: 7px;
     padding-bottom: 3px;
 }
+a span {
+    color: #197197;
+}
+
+.parlaicon-facebook, .parlaicon-twitter {
+    background: none;
+    svg {
+        width: 22px;
+        height: 22px;
+
+        path {
+            fill: #197197;
+        }
+    }
+
+    &:hover {
+        svg path {
+            fill: #009cdd;
+        }
+    }
+}
