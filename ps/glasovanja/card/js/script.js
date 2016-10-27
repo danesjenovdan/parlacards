@@ -26,5 +26,14 @@ $('#glasovanja-' + psGlasovanjaRandomId + ' .tag-selector')
   .select2({
     dropdownParent: $('#glasovanja-' + psGlasovanjaRandomId)
   })
+  .on('select2:opening', function(e) {
+    if ($('#glasovanja-' + psGlasovanjaRandomId + ' .tag-selector').data('unselecting')) {    
+      $('#glasovanja-' + psGlasovanjaRandomId + ' .tag-selector').removeData('unselecting');
+      e.preventDefault();
+    }
+  })
+  .on('select2:unselecting', function(e) {
+    $('#glasovanja-' + psGlasovanjaRandomId + ' .tag-selector').data('unselecting', true);
+  });
 
 filterPsGlasovanjaByTags(null)
