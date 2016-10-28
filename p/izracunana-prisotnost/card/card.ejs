@@ -121,7 +121,7 @@
                                             for (var i = 0; i < data.results.sessions.max.mps.length; i++) {
 
                                         %>
-                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.sessions.max.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.sessions.max.mps[i]['gov_id'] %>.png');"></div>
+                                        <div data-name="<%= data.results.sessions.max.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.sessions.max.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.sessions.max.mps[i]['gov_id'] %>.png');"></div>
                                         <%
                                             }
                                         }
@@ -192,7 +192,7 @@
                                             for (var i = 0; i < data.results.votes.max.mps.length; i++) {
 
                                         %>
-                                        <div class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.votes.max.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.votes.max.mps[i]['gov_id'] %>.png');"></div>
+                                        <div data-name="<%= data.results.votes.max.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.votes.max.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.votes.max.mps[i]['gov_id'] %>.png');"></div>
                                         <%
                                             }
                                         }
