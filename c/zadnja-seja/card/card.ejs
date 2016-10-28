@@ -202,6 +202,13 @@
                             var percent_against = Math.floor( (motion.against / allInVotes) * 100);
                             var percent_abstain = Math.floor( (motion.abstain / allInVotes) * 100);
                             var percent_not_present = Math.floor( (motion.not_present / allInVotes) * 100);
+
+                            var resulttext = '';
+                            if(motion.text.length > 230){
+                                resulttext = motion.text.substring(0, 230) + "...";
+                            }else{
+                                resulttext = motion.text;
+                            }
                         %>
 
 
@@ -217,9 +224,7 @@
                                 <div class="col-md-11 border-left ">
                                     <div class="col-md-6 ">
                                         <div class="session_title ">
-                                            <p>
-                                                <%= motion.text %>
-                                            </p>
+                                            <p><%=resulttext %></p>
                                         </div>
                                     </div>
                                     <div class="col-md-6 ">
