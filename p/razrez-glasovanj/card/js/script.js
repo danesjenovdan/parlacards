@@ -233,3 +233,5 @@ function fixImages() {
 
 addCardFlip();
 makeSwitch();
+
+progressbarTooltip.init();
