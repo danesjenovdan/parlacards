@@ -35,7 +35,7 @@
     </div>
     <div class="card-content">
 
-        <div id="votingCard">
+        <div>
 
             <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
 
@@ -47,7 +47,6 @@
                     <p><%= data.results[person].person.name %>
                         <br/><%= data.results[person].person.party.acronym %></p>
                     <span><%= data.results[person].ratio.toFixed(2) %> %</span>
-                    <div class="clearfix"></div>
                 </div>
 
                 <% i++; } %>
