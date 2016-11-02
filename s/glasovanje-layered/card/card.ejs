@@ -117,8 +117,6 @@
                     var second_level_data = [];
                     for (option in data.all) {
                         for (party in data.all[option]['breakdown']) {
-                            // newdict = data.all[option]['breakdown'][party];
-                            // newdict['option'] = data.all[option]['option'];
 
                             var newdict = data.all[option]['breakdown'][party];
                             newdict.option = option;
