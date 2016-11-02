@@ -1,4 +1,4 @@
-.card-header h1, .card-footer h1{
+/* .card-header h1, .card-footer h1{
   color: #525252;
 }
 .card-container{
@@ -27,51 +27,4 @@
     width:auto;
     padding-right: 20px;
     padding-left: 20px;
-  }
-
-
-
-
-
-
-.member {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-right: 0;
-
-  .image {
-    max-width: 75px;
-    max-height: 75px;
-    display: flex;
-    flex-shrink: 0;
-  }
-
-  p {
-    margin: 0;
-    display: flex;
-    flex-shrink: 1;
-
-    padding-left: 5px;
-    padding-right: 10px;
-
-    justify-content: flex-start;
-  }
-
-  span {
-    margin: 0;
-    display: flex;
-    flex-grow: 2;
-    flex-shrink: 0;
-
-    justify-content: flex-end;
-
-    color: #525252;
-    font-weight:500;
-  }
-}
-.member.lastel {
-  border: none;
-  padding-bottom: 10px;
-}
+  } */
