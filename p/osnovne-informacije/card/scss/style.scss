@@ -8,8 +8,10 @@ a span {
     color: #197197;
 }
 
+.socialicon-container {
+    background-color: transparent !important;
+}
 .parlaicon-facebook, .parlaicon-twitter {
-    background: none;
     svg {
         width: 22px;
         height: 22px;
@@ -28,4 +30,8 @@ a span {
 
 a strong {
     font-weight: 500;
+}
+a:hover {
+  background-color: #e1f6ff;
+  text-decoration: none; 
 }
