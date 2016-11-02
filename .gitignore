@@ -7,3 +7,4 @@ dist
 parlassets
 .idea
 *.css.map
+p/.DS_Store
