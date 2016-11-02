@@ -2,6 +2,17 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
 
     var parties = response;
 
+    dates=[];
+    for (i in parties) {
+        if (parties[i]['acronym'] === 'PS NP') {
+            dates.push(new Date(response[i]['founded']))
+        }
+    }
+    maxDate=new Date(Math.max.apply(null,dates));
+    // for (i in dates) {
+    //     if dates[i]
+    // }
+
     // $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
         raw_data = stranke_data['facet_counts']['facet_fields']['party_i'];
         console.log(raw_data);
@@ -100,7 +111,15 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
                 return d.y = Math.sin(a) * (radius + 20);
             })
             .text(function(d) {
-                return parties[d.data.party]['acronym'] + ' | ' + d.data.percentage + ' %';
+                console.log(d);
+                if (parties[d.data.party]) {
+                    console.log('yes', d);
+                    return parties[d.data.party]['acronym'] + ' | ' + d.data.percentage + ' %';
+                } else {
+                    console.log('no', d);
+                    
+                    return 'Zunanji govorci | ' + d.data.percentage + ' %';
+                }
             })
             .style('display', function(d) {
                 if (+d.data.percentage === 0) {
