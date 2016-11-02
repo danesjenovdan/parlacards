@@ -11,9 +11,17 @@
   padding: 0;
 
   .key {
-    padding: 1px 0;
+    padding: 4px 0;
     text-align: left;
     width: 100%;
+
+    line-height: 1.3em;
+
+    a:hover {
+      background-color: #e1f6ff;
+      text-decoration: none; 
+    }
+
   }
 }
 
