@@ -1,0 +1,108 @@
+<!DOCTYPE html> <!-- removeme -->
+<html> <!-- removeme -->
+
+<head> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+
+    <!-- build:remove -->
+    <!-- these script files are removed on build -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <!-- endbuild -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+
+    <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <link data-inline="true" rel="stylesheet" href="css/style.css">
+
+    <script>
+        var seznamPoslancevData = <%- JSON.stringify(data); %>;
+        var seznamPoslancevStatus = <%- JSON.stringify(status); %>;
+    </script>
+</head> <!-- removeme -->
+
+<body> <!-- removeme -->
+
+    <%
+    var columns = {
+      presence_sessions: {
+        label: 'Prisotnost na sejah DZ',
+        unit: 'percent'
+      },
+      presence_votes: {
+        label: 'Prisotnost na glasovanjih sej DZ',
+        unit: 'percent'
+      },
+      vocabulary_size: {
+        label: 'Besedni zaklad'
+      },
+      spoken_words: {
+        label: 'Št. izgovorjenih besed'
+      },
+      speeches_per_session: {
+        label: 'Št. govorov na sejo'
+      },
+      privzdignjeno: {
+        label: 'Privzdignjeno besedje'
+      },
+      preprosto: {
+        label: 'Preprosto besedje'
+      },
+      problematicno: {
+        label: 'Problematično besedje'
+      },
+    };
+    %>
+
+    <!-- everything above here is part of the page and not part of the card -->
+    <div class="card-container card-halfling <%= className %>">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Seznam poslancev</h1> <!-- this text is the only thing you touch in .card-header -->
+        </div>
+        <div class="card-content">
+          <ul class="person-list">
+            <li class="headers">
+              <div data-sort="name" class="column wider sort">Ime</div>
+              <div data-sort="party" class="column">PS</div>
+              <div data-sort="district" class="column">Okraj</div>
+              <% if (status && status.analysis) { %>
+                <div data-sort="analysis" class="column"><%= columns[status.analysis].label %></div>
+              <% } %>
+            </li>
+            <% data.data.forEach(function(result, index) { %>
+            <li class="person" data-index="<%= index %>">
+              <img class="portrait column" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= result.person.gov_id %>.png" />
+              <div class="column wider name"><%= result.person.name %></div>
+              <div class="column"><%= result.person.party.acronym %></div>
+              <div class="column"><%= result.person.district || 'okraj ni vnešen' %></div>
+              <% if (status && status.analysis) { %>
+                <div class="column">
+                  <%= result.results[status.analysis] + (columns[status.analysis].unit === 'percent' ? '%' : '') %>
+                </div>
+              <% } %>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+        <div class="card-footer">
+            <div class="card-circle-button card-share"></div>
+            <div class="card-circle-button card-embed"></div>
+            <div class="card-circle-button card-info">i</div>
+        </div>
+    </div>
+    <!-- everything below here is part of the page and not part of the card -->
+
+    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <!-- inline temp/js/script.js as <script> -->
+    <script data-inline="true" src="js/script.js"></script>
+
+</body> <!-- removeme -->
+
+</html> <!-- removeme -->
