@@ -2,8 +2,8 @@
 <html> <!-- removeme -->
 
 <head> <!-- removeme -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!-- removeme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">     <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
 
     <!-- build:remove -->
     <!-- these script files are removed on build -->
@@ -14,9 +14,9 @@
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
     <!-- endbuild -->
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"           data-remove="false" data-concat="false"> <!-- removeme -->
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false"           data-concat="false"> <!-- removeme -->
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false"           data-concat="false"> <!-- removeme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
 
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
@@ -25,62 +25,36 @@
 
 <body> <!-- removeme -->
 
-<div class="container"><div class="row"><div class="col-md-12"><!-- removeme -->
-
 
 <!-- everything above here is part of the page and not part of the card -->
 <div class="card-container card-halfling <%= className %>">
     <div class="card-header">
         <div class="card-header-border"></div>
-        <h1>Odstopanje od poslanske skupine</h1> <!-- this text is the only thing you touch in .card-header -->
+        <h1>Najlažje bi se jim pridružili</h1>
+        <!-- this text is the only thing you touch in .card-header -->
     </div>
-    <div class="card-content" id="votingCardHorizontal">
+    <div class="card-content">
 
-        <span class="hidden-lg hidden-md glyphicon glyphicon-circle-arrow-left navigate-left text-center"></span>
-        <div class="slider" id="scrollbar-voting-card-horizontal">
-            <div class="slider-content">
+        <div  id="votingCard">
+
+            <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
 
                 <% for (var i = 0; i < data.results.length ; i++) { %>
-                <%
-                    var tmpname = data.results[i].person.name;
 
+                <div class="member <%= ((data.results.length-1) == i) ? 'lastel' : ''; %>">
+                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results[i].person.gov_id %>.png); background-size: cover;"></div>
+                    <p><%= data.results[i].person.name %>
 
-
-                            var explodedNameParts = tmpname.split(" ");
-                    switch (explodedNameParts.length){
-                        case 2:
-                            tmpname = explodedNameParts[0] + "<br>" + explodedNameParts[1];
-                            break;
-                        case 3:
-                            tmpname = explodedNameParts[0] + " " + explodedNameParts[1]+ "<br>" + explodedNameParts[2];
-                            break;
-                        case 4:
-                            tmpname = explodedNameParts[0] + " " + explodedNameParts[1]+ "<br>" + explodedNameParts[2]+ "" + explodedNameParts[3];
-                            break;
-                    }
-
-
-                    var tmpGovId = data.results[i].person.gov_id;
-                    if (typeof (tmpname) === 'undefined') {
-                        tmpname = "duke Nukem FixMe";
-                        tmpGovId = 666;
-                    }
-                %>
-                <div class="member odstopanje-member">
-                    <div class="image"
-                         style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= tmpGovId %>.png); background-size: cover;"></div>
-                    <p><%- tmpname %></p>
+                        <br/><%= data.results[i].person.party.acronym %></p>
                     <span><%= data.results[i].ratio.toFixed(0) %> %</span>
                     <div class="clearfix"></div>
                 </div>
-                <% } %>
+
+                <% }%>
 
             </div>
+
         </div>
-        <span class="hidden-lg hidden-md glyphicon glyphicon-circle-arrow-right navigate-right text-center"></span>
-
-
-        <div class="clearfix"></div>
 
     </div>
     <div class="card-footer">
@@ -90,8 +64,6 @@
     </div>
 </div>
 <!-- everything below here is part of the page and not part of the card -->
-
-</div></div></div><!-- removeme -->
 
 <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
 <!-- inline temp/js/script.js as <script> -->
