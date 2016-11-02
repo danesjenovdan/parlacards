@@ -1,3 +1,11 @@
+a {
+  font-size: 16px;
+}
+a:hover {
+  background-color: #e1f6ff;
+  text-decoration: none; 
+}
+
 .session-container{
   height: auto;
   left: auto;
@@ -25,16 +33,16 @@
   width:100%;
 }
 
-.session-container .paneltab .member .image{
+.session-container .paneltab .dt-member .image{
   width: auto;
   height:auto;
 }
 
-.session-container .paneltab .member h3{
+.session-container .paneltab .dt-member h3{
   margin-top: 0;
 }
 
-.session-container .paneltab .member img{
+.session-container .paneltab .dt-member img{
  /*margin-top: 12px;*/
 }
 
@@ -68,7 +76,7 @@
   /*height: 95px;*/
   height: 85px;
 }
-.verticalmember .member_data {
+.verticalmember .dt-member_data {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -80,7 +88,7 @@
   .verticalmember{
     height: auto;
   }
-  .verticalmember .member_data {
+  .verticalmember .dt-member_data {
     position: relative;
     top: auto;
     -webkit-transform: translateY(0%);
@@ -91,4 +99,16 @@
 
 .upcase{
   text-transform: uppercase;
+}
+
+.dt-member {
+  h3 {
+        font-size: 18px;
+        font-weight: 400;
+        margin: 12px 0 0 0;
+    }
+    h4 {
+        font-size: 14px;
+        font-weight: 300;
+    }
 }
