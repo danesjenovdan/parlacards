@@ -78,9 +78,15 @@
             </li>
             <% data.data.forEach(function(result, index) { %>
             <li class="person" data-index="<%= index %>">
+                <a href="/p/id/<%= result.person.id %>">
               <img class="portrait column" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= result.person.gov_id %>.png" />
+                </a>
               <div class="column wider name"><%= result.person.name %></div>
-              <div class="column"><%= result.person.party.acronym %></div>
+              <div class="column">
+                  <a href="/ps/id/<%= result.person.party.id %>">
+                      <%= result.person.party.acronym %>
+                  </a>
+              </div>
               <div class="column"><%= result.person.district || 'okraj ni vnešen' %></div>
               <% if (status && status.analysis) { %>
                 <div class="column">
