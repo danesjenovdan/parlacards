@@ -194,8 +194,8 @@
                         <% var ayeneygly = rnd ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
-                        <% var ayeney = (motion.result == "True")  ? "aye" : "nay"; %>
-                        <% var ayeneygly = (motion.result == "True") ? "glyphicon-ok" : "glyphicon-remove"; %>
+                        <% var ayeney = (motion.result == true)  ? "aye" : "nay"; %>
+                        <% var ayeneygly = (motion.result == true) ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
 
@@ -207,8 +207,8 @@
                             var percent_not_present = Math.floor( (motion.not_present / allInVotes) * 100);
 
                             var resulttext = '';
-                            if(motion.text.length > 230){
-                                resulttext = motion.text.substring(0, 230) + "...";
+                            if(motion.text.length > 180){
+                                resulttext = motion.text.substring(0, 180) + "...";
                             }else{
                                 resulttext = motion.text;
                             }
@@ -216,7 +216,7 @@
 
 
                         <div class="clearfix single_voting">
-                            <a href="/seje/P_seja_glasovanje">
+                            <a href="/seja/glasovanje/<%=data.motions[i].session.id%>/<%=motion.motion_id%>">
                                 <div class=" col-md-1 ">
                                     <div class="accepted <%= ayeney %> ">
                                         <p>

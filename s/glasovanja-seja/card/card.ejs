@@ -52,8 +52,8 @@
                 <% var ayeneygly = rnd ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
-                <% var ayeney = (data[i].results.result == "True")  ? "aye" : "nay"; %>
-                <% var ayeneygly = (data[i].results.result == "True") ? "glyphicon-ok" : "glyphicon-remove"; %>
+                <% var ayeney = (data[i].results.result == true)  ? "aye" : "nay"; %>
+                <% var ayeneygly = (data[i].results.result == true) ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
 
@@ -65,8 +65,8 @@
                 var percent_not_present = Math.floor( (data[i].results.not_present / allInVotes) * 100);
 
                     var resulttext = '';
-                    if(data[i].results.text.length > 230){
-                        resulttext = data[i].results.text.substring(0, 230) + "...";
+                    if(data[i].results.text.length > 180){
+                        resulttext = data[i].results.text.substring(0, 180) + "...";
                     }else{
                         resulttext = data[i].results.text;
                     }
@@ -75,7 +75,7 @@
 
 
                     <div class="clearfix single_voting">
-                        <a href="/seje/P_seja_glasovanje">
+                        <a href="/seja/glasovanje/<%=data[i].session.id%>/<%=data[i].results.motion_id%>">
                             <div class=" col-md-1 ">
                                 <div class="accepted <%= ayeney %> ">
                                     <p>
