@@ -189,6 +189,7 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  font-family: Roboto Slab;
 }
 
 @media (max-width: 991px) {
@@ -212,3 +213,19 @@
 }
 
 @import 'tfidf';
+
+.smalldate {
+  margin-top: -28px;
+  line-height: 16px;
+}
+
+.single_voting:hover {
+  background-color: #e1f6ff;
+
+  .border-left {
+    border-left-color: #cadde6;
+  }
+}
+.seja_anchor:hover {
+  color: #525252; 
+}
