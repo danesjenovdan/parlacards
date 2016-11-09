@@ -3,7 +3,8 @@
     "party": {
       "acronym": "DeSUS",
       "id": 3,
-      "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      "name": "PS Demokratska Stranka Upokojencev Slovenije",
+      "is_coalition": -1
     },
     "gender": "f",
     "name": "Marija Antonija Kova\u010di\u010d",
