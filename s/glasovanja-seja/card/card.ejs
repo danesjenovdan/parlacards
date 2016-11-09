@@ -52,8 +52,8 @@
                 <% var ayeneygly = rnd ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
-                <% var ayeney = (data[i].results.result == "True")  ? "aye" : "nay"; %>
-                <% var ayeneygly = (data[i].results.result == "True") ? "glyphicon-ok" : "glyphicon-remove"; %>
+                <% var ayeney = (data[i].results.result == true)  ? "aye" : "nay"; %>
+                <% var ayeneygly = (data[i].results.result == true) ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
 
@@ -75,7 +75,7 @@
 
 
                     <div class="clearfix single_voting">
-                        <a class="seja_anchor" href="/seje/P_seja_glasovanje">
+                        <a href="/seja/glasovanje/<%=data[i].session.id%>/<%=data[i].results.motion_id%>">
                             <div class=" col-md-1 ">
                                 <div class="accepted <%= ayeney %> ">
                                     <p>
