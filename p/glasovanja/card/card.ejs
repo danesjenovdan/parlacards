@@ -50,34 +50,120 @@
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
-        <div class="card-header">
-            <div class="card-header-border"></div>
-            <h1>Glasovanja</h1> <!-- this text is the only thing you touch in .card-header -->
-        </div>
-        <div id="glasovanja-<%= randomId %>" class="card-content">
-          <select class="tag-selector" multiple>
-          <% data.all_tags.forEach(function(tag) { %>
-            <option value="<%= tag %>"><%= tag %></option>
-          <% }) %>
-          </select>
-          <ul class="votes scroller" id="branko_grims">
-            <% data.results.forEach(function(result) { %>
-              <% result.ballots.forEach(function(ballot, index) { %>
-                <li>
-                  <div class="date"><%= result.date.replace(/\./g, '. ') %></div>
-                  <div class="icon <%= ballot.option %>"></div>
-                  <div class="motion">Glasoval <%= ballot.option.toUpperCase() %> <a href="#"><%= ballot.motion %></a></div>
-                </li>
+        <div class="front">
+            <div class="card-header">
+                <div class="card-header-border"></div>
+                <h1>Glasovanja</h1> <!-- this text is the only thing you touch in .card-header -->
+            </div>
+            <div id="glasovanja-<%= randomId %>" class="card-content">
+              <select class="tag-selector" multiple>
+              <% data.all_tags.forEach(function(tag) { %>
+                <option value="<%= tag %>"><%= tag %></option>
               <% }) %>
-            <% }) %>
+              </select>
+              <ul class="votes scroller" id="branko_grims">
+                <% data.results.forEach(function(result) { %>
+                  <% result.ballots.forEach(function(ballot, index) { %>
+                    <li>
+                      <div class="date"><%= result.date.replace(/\./g, '. ') %></div>
+                      <div class="icon <%= ballot.option %>"></div>
+                      <div class="motion">Glasoval <%= ballot.option.toUpperCase() %> <a href="#"><%= ballot.motion %></a></div>
+                    </li>
+                  <% }) %>
+                <% }) %>
 
-          </ul>
-
+              </ul>
+            </div>
+            <div class="card-footer">
+                <div class="card-circle-button card-share"></div>
+                <div class="card-circle-button card-embed"></div>
+                <div class="card-circle-button card-info">i</div>
+            </div>
         </div>
-        <div class="card-footer">
-            <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed"></div>
-            <div class="card-circle-button card-info">i</div>
+        <div class="back">
+            <div class="back-info">
+                <div class="card-header">
+                    <div class="card-header-border"></div>
+                    <h1>Glasovanja</h1>
+                    <!-- this text is the only thing you touch in .card-header -->
+                </div>
+                <div class="card-back-content card-content">
+                    <div class="scroller" id="tvojamtka">
+                        <p class="info-text">
+                            Na kartici izpisujemo vsa <%= vocab['poslanca5'][data.person.gender] %> glasovanja (skupaj z njihovimi vrednostmi), ki jih lahko uporabnik/-ca filtrira glede na odbore. Kategoriziramo jih ročno, in sicer glede na to, kateremu delovnemu telesu pripada tematika.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-circle-button card-share" data-back="share"></div>
+                    <div class="card-circle-button card-embed" data-back="embed"></div>
+                    <div class="card-circle-button card-info card-exit" data-back="info">×</div>
+                </div>
+            </div>
+            <div class="back-embed">
+                <div class="card-header">
+                    <div class="card-header-border"></div>
+                    <h1>Glasovanja</h1>
+                    <!-- this text is the only thing you touch in .card-header -->
+                </div>
+                <div class="card-back-content card-content">
+                    <div class="embed-content">
+                        <div class="embed-divider"></div>
+                        <div class="embed-switch-container">
+                            <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                            <div class="embed-switch-big-box">
+                                <div class="embed-switch-box">
+                                    <div class="embed-switch">
+                                        <div class="embed-switches">
+                                            <div class="leftswitch">
+                                                DA
+                                            </div>
+                                            <div class="rightswitch">
+                                                NE
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%# <div class="embed-switch-ball"></div>%>
+                                </div>
+                                <div class="embed-switch-ball"></div>
+                            </div>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-script">
+                            <textarea class="form-control" data-url="https://glej.parlameter.si/p/razrez-glasovanj/"></textarea>
+                            <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-export">
+                            <div class="embed-label">Izvozi kartico kot sliko <button class="btn-parlameter btn-blue btn-margin-left">PRENESI</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-circle-button card-share" data-back="share"></div>
+                    <div class="card-circle-button card-embed card-exit" data-back="embed">×</div>
+                    <div class="card-circle-button card-info" data-back="info">i</div>
+                </div>
+            </div>
+            <div class="back-share">
+                <div class="card-header">
+                    <div class="card-header-border"></div>
+                    <h1>Glasovanja</h1>
+                    <!-- this text is the only thing you touch in .card-header -->
+                </div>
+                <div class="card-back-content card-content">
+                    <div class="share-content">
+                        <label for="share-url">Neposredna povezava do kartice</label>
+                        <input type="url" class="form-control" id="share-url" value="https://parlameter.si/trajlala"/>
+                        <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-circle-button card-share card-exit" data-back="share">×</div>
+                    <div class="card-circle-button card-embed" data-back="embed"></div>
+                    <div class="card-circle-button card-info" data-back="info">i</div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->

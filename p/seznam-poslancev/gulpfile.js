@@ -31,6 +31,7 @@ var options = minimist(process.argv.slice(2), knownOptions);
 // read data.json
 var fs = require('fs');
 var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
+var jsonVocab = JSON.parse(fs.readFileSync('card/vocab.json', 'utf-8'));
 
 // generate CSS class name to use for sandboxing
 var directoryName = __dirname.replace(/\\/g, '/').split('/').pop()
@@ -79,9 +80,7 @@ gulp.task('ejs', function() {
         .pipe(ejs({
             'data': jsonData,
             'className' : className,
-            'status' : {
-              analysis: 'preprosto'
-            }
+            'vocab' : jsonVocab
         }, {
             ext: '.html'
         }))

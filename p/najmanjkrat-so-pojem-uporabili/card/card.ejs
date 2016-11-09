@@ -28,38 +28,124 @@
 
 <!-- everything above here is part of the page and not part of the card -->
 <div class="card-container card-halfling <%= className %>">
-    <div class="card-header">
-        <div class="card-header-border"></div>
-        <h1>Najmanjkrat so pojem uporabili</h1>
-        <!-- this text is the only thing you touch in .card-header -->
-    </div>
-    <div class="card-content">
+    <div class="front">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Najmanjkrat so pojem uporabili</h1>
+            <!-- this text is the only thing you touch in .card-header -->
+        </div>
+        <div class="card-content">
 
-        <div  id="votingCard">
+            <div  id="votingCard">
 
-            <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
+                <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
 
-                <% var i = 1; for (person in data.results) { %>
+                    <% var i = 1; for (person in data.results) { %>
 
-                <div class="member <%= (data.results.length == i) ? 'lastel' : ''; %>">
-                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results[person].gov_id %>.png); background-size: cover;"></div>
-                    <p><%= data.results[person].name %>
-                        <br/><%= data.results[person].party.acronym %></p>
-                    <span><%= data.results[person].ratio.toFixed(2) %></span>
-                    <div class="clearfix"></div>
+                    <div class="member <%= (data.results.length == i) ? 'lastel' : ''; %>">
+                        <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results[person].gov_id %>.png); background-size: cover;"></div>
+                        <p><%= data.results[person].name %>
+                            <br/><%= data.results[person].party.acronym %></p>
+                        <span><%= data.results[person].ratio.toFixed(2) %></span>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <% i++; }%>
+
                 </div>
 
-                <% i++; }%>
-
             </div>
-
         </div>
-
+        <div class="card-footer">
+            <div class="card-circle-button card-share"></div>
+            <div class="card-circle-button card-embed"></div>
+            <div class="card-circle-button card-info">i</div>
+        </div>
     </div>
-    <div class="card-footer">
-        <div class="card-circle-button card-share"></div>
-        <div class="card-circle-button card-embed"></div>
-        <div class="card-circle-button card-info">i</div>
+    <div class="back">
+        <div class="back-info">
+            <div class="card-header">
+                <div class="card-header-border"></div>
+                <h1>Najmanjkrat so pojem uporabili</h1>
+                <!-- this text is the only thing you touch in .card-header -->
+            </div>
+            <div class="card-back-content card-content">
+                <div class="scroller" id="tvojamtka">
+                    <p class="info-text">
+                        Za vsakega/-o poslanca/-ko preštejemo število pojavitev leme iskanega niza v njegovih/njenih govorih. Poslance razvrstimo glede na število pojavitev, prikažemo pa prvih pet. Zajeto množico poslancev dodatno določajo uporabniške nastavitve filtrov, in sicer glede na časovno obdboje, poslanca/-ko in/ali poslansko skupino in/ali sejo.
+                    </p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="card-circle-button card-share" data-back="share"></div>
+                <div class="card-circle-button card-embed" data-back="embed"></div>
+                <div class="card-circle-button card-info card-exit" data-back="info">×</div>
+            </div>
+        </div>
+        <div class="back-embed">
+            <div class="card-header">
+                <div class="card-header-border"></div>
+                <h1>Najmanjkrat so pojem uporabili</h1>
+                <!-- this text is the only thing you touch in .card-header -->
+            </div>
+            <div class="card-back-content card-content">
+                <div class="embed-content">
+                    <div class="embed-divider"></div>
+                    <div class="embed-switch-container">
+                        <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                        <div class="embed-switch-big-box">
+                            <div class="embed-switch-box">
+                                <div class="embed-switch">
+                                    <div class="embed-switches">
+                                        <div class="leftswitch">
+                                            DA
+                                        </div>
+                                        <div class="rightswitch">
+                                            NE
+                                        </div>
+                                    </div>
+                                </div>
+                                <%# <div class="embed-switch-ball"></div>%>
+                            </div>
+                            <div class="embed-switch-ball"></div>
+                        </div>
+                    </div>
+                    <div class="embed-divider"></div>
+                    <div class="embed-script">
+                        <textarea class="form-control" data-url="https://glej.parlameter.si/p/razrez-glasovanj/"></textarea>
+                        <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                    </div>
+                    <div class="embed-divider"></div>
+                    <div class="embed-export">
+                        <div class="embed-label">Izvozi kartico kot sliko <button class="btn-parlameter btn-blue btn-margin-left">PRENESI</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="card-circle-button card-share" data-back="share"></div>
+                <div class="card-circle-button card-embed card-exit" data-back="embed">×</div>
+                <div class="card-circle-button card-info" data-back="info">i</div>
+            </div>
+        </div>
+        <div class="back-share">
+            <div class="card-header">
+                <div class="card-header-border"></div>
+                <h1>Najmanjkrat so pojem uporabili</h1>
+                <!-- this text is the only thing you touch in .card-header -->
+            </div>
+            <div class="card-back-content card-content">
+                <div class="share-content">
+                    <label for="share-url">Neposredna povezava do kartice</label>
+                    <input type="url" class="form-control" id="share-url" value="https://parlameter.si/trajlala"/>
+                    <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="card-circle-button card-share card-exit" data-back="share">×</div>
+                <div class="card-circle-button card-embed" data-back="embed"></div>
+                <div class="card-circle-button card-info" data-back="info">i</div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- everything below here is part of the page and not part of the card -->

@@ -27,547 +27,634 @@
 
         <!-- everything above here is part of the page and not part of the card -->
         <div class="card-container card-halfling <%= className %>">
-            <div class="card-header">
-                <div class="card-header-border"></div>
-                <h1>Razrez glasovanj</h1>
-                <!-- this text is the only thing you touch in .card-header -->
-            </div>
-            <div class="card-content">
+            <div class="front">
+                <div class="card-header">
+                    <div class="card-header-border"></div>
+                    <h1>Razrez glasovanj</h1>
+                    <!-- this text is the only thing you touch in .card-header -->
+                </div>
+                <div class="card-content">
 
-                <!-- get random id -->
-                <%
-                    function makeid() {
-                        var text = "";
-                        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                    <!-- get random id -->
+                    <%
+                        function makeid() {
+                            var text = "";
+                            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-                        for( var i=0; i < 5; i++ ) {
-                            text += possible.charAt(Math.floor(Math.random() * possible.length));
-                        }
-
-                        return text;
-                    }
-
-                    var random_id = makeid();
-                %>
-
-                <div class="bgwhite poslanec">
-
-                    <!-- prepare data -->
-                    <%#
-                        for (var i = 0; i < data.results.absent.maxCoalition.parties.length; i++) {
-                            if (data.results.absent.maxCoalition.parties[i].acronym === 'DeSUS') {
-                                data.results.absent.maxCoalition.parties[i].acronym = 'De<br />SUS'
+                            for( var i=0; i < 5; i++ ) {
+                                text += possible.charAt(Math.floor(Math.random() * possible.length));
                             }
+
+                            return text;
                         }
+
+                        var random_id = makeid();
                     %>
 
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active">
-                            <a href="#Glasovala_ZA<%= random_id %>" aria-controls="ZA" role="tab" data-toggle="tab">ZA</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#Glasovala_PROTI<%= random_id %>" aria-controls="PROTI" role="tab" data-toggle="tab">PROTI</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#se_VZDRŽALA<%= random_id %>" aria-controls="se VZDRŽALA" role="tab" data-toggle="tab">se VZDRŽALA</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#NI_glasovala<%= random_id %>" aria-controls="NI glasovala" role="tab" data-toggle="tab">NI glasovala</a>
-                        </li>
-                    </ul>
+                    <div class="bgwhite poslanec">
 
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="Glasovala_ZA<%= random_id %>">
+                        <!-- prepare data -->
+                        <%#
+                            for (var i = 0; i < data.results.absent.maxCoalition.parties.length; i++) {
+                                if (data.results.absent.maxCoalition.parties[i].acronym === 'DeSUS') {
+                                    data.results.absent.maxCoalition.parties[i].acronym = 'De<br />SUS'
+                                }
+                            }
+                        %>
 
-                            <div class="me_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        <%= data.organization.name %>
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress hugebar ">
-                                        <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.for.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.score %>%;">
-                                            <span class="sr-only"><%= data.results.for.score %>% Complete</span>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#Glasovala_ZA<%= random_id %>" aria-controls="ZA" role="tab" data-toggle="tab">ZA</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#Glasovala_PROTI<%= random_id %>" aria-controls="PROTI" role="tab" data-toggle="tab">PROTI</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#se_VZDRŽALA<%= random_id %>" aria-controls="se VZDRŽALA" role="tab" data-toggle="tab">se VZDRŽALA</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#NI_glasovala<%= random_id %>" aria-controls="NI glasovala" role="tab" data-toggle="tab">NI glasovala</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="Glasovala_ZA<%= random_id %>">
+
+                                <div class="me_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            <%= data.organization.name %>
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress hugebar ">
+                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.for.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.score %>%;">
+                                                <span class="sr-only"><%= data.results.for.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.for.score) %>
+                                            </div>
+
                                         </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.for.score) %>
-                                        </div>
-
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Opozicijsko povprečje
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgOpposition.score %>%;">
-                                            <span class="sr-only"><%= data.results.for.avgOpposition.score %>% Complete</span>
-                                        </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.for.avgOpposition.score) %>
-                                        </div>
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Opozicijsko povprečje
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgOpposition.score %>%;">
+                                                <span class="sr-only"><%= data.results.for.avgOpposition.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.for.avgOpposition.score) %>
+                                            </div>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Največ v opoziciji
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgminmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxOpposition.score %>%;">
-                                            <span class="sr-only"><%= data.results.for.maxOpposition.score %>% Complete</span>
-                                        </div>
-                                        <%
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Največ v opoziciji
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgminmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxOpposition.score %>%;">
+                                                <span class="sr-only"><%= data.results.for.maxOpposition.score %>% Complete</span>
+                                            </div>
+                                            <%
 
-                                        if (data.results.for.maxOpposition.parties) {
-                                            for (var i = 0; i < data.results.for.maxOpposition.parties.length; i++) {
+                                            if (data.results.for.maxOpposition.parties) {
+                                                for (var i = 0; i < data.results.for.maxOpposition.parties.length; i++) {
 
-                                        %>
-                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.for.maxOpposition.parties[i]['acronym'] %></div>
-                                        <%
+                                            %>
+                                            <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.for.maxOpposition.parties[i]['acronym'] %></div>
+                                            <%
+                                                }
                                             }
-                                        }
-                                        %>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.for.maxOpposition.score) %>
-                                        </div>
+                                            %>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.for.maxOpposition.score) %>
+                                            </div>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Koalicijsko povprečje
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgCoalition.score %>%;">
-                                            <span class="sr-only"><%= data.results.for.avgCoalition.score %>% Complete</span>
-                                        </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.for.avgCoalition.score) %>
-                                        </div>
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Koalicijsko povprečje
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgCoalition.score %>%;">
+                                                <span class="sr-only"><%= data.results.for.avgCoalition.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.for.avgCoalition.score) %>
+                                            </div>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Največ v koaliciji
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgminmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxCoalition.score %>%;">
-                                            <span class="sr-only"><%= data.results.for.maxCoalition.score %>% Complete</span>
-                                        </div>
-                                        <%
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Največ v koaliciji
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgminmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxCoalition.score %>%;">
+                                                <span class="sr-only"><%= data.results.for.maxCoalition.score %>% Complete</span>
+                                            </div>
+                                            <%
 
-                                        if (data.results.for.maxCoalition.parties) {
-                                            for (var i = 0; i < data.results.for.maxCoalition.parties.length; i++) {
+                                            if (data.results.for.maxCoalition.parties) {
+                                                for (var i = 0; i < data.results.for.maxCoalition.parties.length; i++) {
 
-                                        %>
-                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.for.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.for.maxCoalition.parties[i]['acronym'] %></div>
-                                        <%
+                                            %>
+                                            <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.for.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.for.maxCoalition.parties[i]['acronym'] %></div>
+                                            <%
+                                                }
                                             }
-                                        }
-                                        %>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.for.maxCoalition.score) %>
-                                        </div>
+                                            %>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.for.maxCoalition.score) %>
+                                            </div>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="Glasovala_PROTI<%= random_id %>">
+
+                                <div class="me_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            <%= data.organization.name %>
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress hugebar ">
+                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.against.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.score %>%;">
+                                                <span class="sr-only"><%= data.results.against.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.against.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Opozicijsko povprečje
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgOpposition.score %>%;">
+                                                <span class="sr-only"><%= data.results.against.avgOpposition.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.against.avgOpposition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Največ v opoziciji
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgminmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxOpposition.score %>%;">
+                                                <span class="sr-only"><%= data.results.against.maxOpposition.score %>% Complete</span>
+                                            </div>
+                                            <%
+
+                                            if (data.results.against.maxOpposition.parties) {
+                                                for (var i = 0; i < data.results.against.maxOpposition.parties.length; i++) {
+
+                                            %>
+                                            <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.against.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.against.maxOpposition.parties[i]['acronym'] %></div>
+                                            <%
+                                                }
+                                            }
+                                            %>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.against.maxOpposition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Koalicijsko povprečje
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgCoalition.score %>%;">
+                                                <span class="sr-only"><%= data.results.against.avgCoalition.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.against.avgCoalition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Največ v koaliciji
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgminmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxCoalition.score %>%;">
+                                                <span class="sr-only"><%= data.results.against.maxCoalition.score %>% Complete</span>
+                                            </div>
+                                            <%
+
+                                            if (data.results.against.maxCoalition.parties) {
+                                                for (var i = 0; i < data.results.against.maxCoalition.parties.length; i++) {
+
+                                            %>
+                                            <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.against.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.against.maxCoalition.parties[i]['acronym'] %></div>
+                                            <%
+                                                }
+                                            }
+                                            %>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.against.maxCoalition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="se_VZDRŽALA<%= random_id %>">
+
+                                <div class="me_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            <%= data.organization.name %>
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress hugebar ">
+                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.abstain.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.score %>%;">
+                                                <span class="sr-only"><%= data.results.abstain.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.abstain.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Opozicijsko povprečje
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.avgOpposition.score %>%;">
+                                                <span class="sr-only"><%= data.results.abstain.avgOpposition.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.abstain.avgOpposition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Največ v opoziciji
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgminmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.maxOpposition.score %>%;">
+                                                <span class="sr-only"><%= data.results.abstain.maxOpposition.score %>% Complete</span>
+                                            </div>
+                                            <%
+
+                                            if (data.results.abstain.maxOpposition.parties) {
+                                                for (var i = 0; i < data.results.abstain.maxOpposition.parties.length; i++) {
+
+                                            %>
+                                            <div class="avgminimg avgminimg-party avgminimg avgminimg-party-party img-circle" style="margin-left: <%= -30 * (data.results.abstain.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.abstain.maxOpposition.parties[i]['acronym'] %></div>
+                                            <%
+                                                }
+                                            }
+                                            %>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.abstain.maxOpposition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Koalicijsko povprečje
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.avgCoalition.score %>%;">
+                                                <span class="sr-only"><%= data.results.abstain.avgCoalition.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.abstain.avgCoalition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Največ v koaliciji
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgminmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.maxCoalition.score %>%;">
+                                                <span class="sr-only"><%= data.results.abstain.maxCoalition.score %>% Complete</span>
+                                            </div>
+                                            <%
+
+                                            if (data.results.abstain.maxCoalition.parties) {
+                                                for (var i = 0; i < data.results.abstain.maxCoalition.parties.length; i++) {
+
+                                            %>
+                                            <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.abstain.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.abstain.maxCoalition.parties[i]['acronym'] %></div>
+                                            <%
+                                                }
+                                            }
+                                            %>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.abstain.maxCoalition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="NI_glasovala<%= random_id %>">
+
+                                <div class="me_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            <%= data.organization.name %>
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress hugebar ">
+                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.absent.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.score %>%;">
+                                                <span class="sr-only"><%= data.results.absent.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.absent.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Opozicijsko povprečje
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.avgOpposition.score %>%;">
+                                                <span class="sr-only"><%= data.results.absent.avgOpposition.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.absent.avgOpposition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Največ v opoziciji
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgminmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.maxOpposition.score %>%;">
+                                                <span class="sr-only"><%= data.results.absent.maxOpposition.score %>% Complete</span>
+                                            </div>
+                                            <%
+
+                                            if (data.results.absent.maxOpposition.parties) {
+                                                for (var i = 0; i < data.results.absent.maxOpposition.parties.length; i++) {
+
+                                            %>
+                                            <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.absent.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.absent.maxOpposition.parties[i]['acronym'] %></div>
+                                            <%
+                                                }
+                                            }
+                                            %>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.absent.maxOpposition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Koalicijsko povprečje
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.avgCoalition.score %>%;">
+                                                <span class="sr-only"><%= data.results.absent.avgCoalition.score %>% Complete</span>
+                                            </div>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.absent.avgCoalition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="other_poslanec clearfix">
+                                    <div class="col150">
+                                        <span class="poslanec_title">
+                                            Največ v koaliciji
+                                        </span>
+                                    </div>
+                                    <div class="col280">
+                                        <div class="progress smallbar avgminmin">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.maxCoalition.score %>%;">
+                                                <span class="sr-only"><%= data.results.absent.maxCoalition.score %>% Complete</span>
+                                            </div>
+                                            <%
+
+                                            if (data.results.absent.maxCoalition.parties) {
+                                                for (var i = 0; i < data.results.absent.maxCoalition.parties.length; i++) {
+
+                                            %>
+                                            <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.absent.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.absent.maxCoalition.parties[i]['acronym'] %></div>
+                                            <%
+                                                }
+                                            }
+                                            %>
+                                            <div class="progress_number">
+                                                <%= Math.round(data.results.absent.maxCoalition.score) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="Glasovala_PROTI<%= random_id %>">
 
-                            <div class="me_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        <%= data.organization.name %>
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress hugebar ">
-                                        <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.against.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.score %>%;">
-                                            <span class="sr-only"><%= data.results.against.score %>% Complete</span>
-                                        </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.against.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Opozicijsko povprečje
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgOpposition.score %>%;">
-                                            <span class="sr-only"><%= data.results.against.avgOpposition.score %>% Complete</span>
-                                        </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.against.avgOpposition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Največ v opoziciji
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgminmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxOpposition.score %>%;">
-                                            <span class="sr-only"><%= data.results.against.maxOpposition.score %>% Complete</span>
-                                        </div>
-                                        <%
-
-                                        if (data.results.against.maxOpposition.parties) {
-                                            for (var i = 0; i < data.results.against.maxOpposition.parties.length; i++) {
-
-                                        %>
-                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.against.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.against.maxOpposition.parties[i]['acronym'] %></div>
-                                        <%
-                                            }
-                                        }
-                                        %>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.against.maxOpposition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Koalicijsko povprečje
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgCoalition.score %>%;">
-                                            <span class="sr-only"><%= data.results.against.avgCoalition.score %>% Complete</span>
-                                        </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.against.avgCoalition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Največ v koaliciji
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgminmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxCoalition.score %>%;">
-                                            <span class="sr-only"><%= data.results.against.maxCoalition.score %>% Complete</span>
-                                        </div>
-                                        <%
-
-                                        if (data.results.against.maxCoalition.parties) {
-                                            for (var i = 0; i < data.results.against.maxCoalition.parties.length; i++) {
-
-                                        %>
-                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.against.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.against.maxCoalition.parties[i]['acronym'] %></div>
-                                        <%
-                                            }
-                                        }
-                                        %>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.against.maxCoalition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="se_VZDRŽALA<%= random_id %>">
-
-                            <div class="me_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        <%= data.organization.name %>
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress hugebar ">
-                                        <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.abstain.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.score %>%;">
-                                            <span class="sr-only"><%= data.results.abstain.score %>% Complete</span>
-                                        </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.abstain.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Opozicijsko povprečje
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.avgOpposition.score %>%;">
-                                            <span class="sr-only"><%= data.results.abstain.avgOpposition.score %>% Complete</span>
-                                        </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.abstain.avgOpposition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Največ v opoziciji
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgminmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.maxOpposition.score %>%;">
-                                            <span class="sr-only"><%= data.results.abstain.maxOpposition.score %>% Complete</span>
-                                        </div>
-                                        <%
-
-                                        if (data.results.abstain.maxOpposition.parties) {
-                                            for (var i = 0; i < data.results.abstain.maxOpposition.parties.length; i++) {
-
-                                        %>
-                                        <div class="avgminimg avgminimg-party avgminimg avgminimg-party-party img-circle" style="margin-left: <%= -30 * (data.results.abstain.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.abstain.maxOpposition.parties[i]['acronym'] %></div>
-                                        <%
-                                            }
-                                        }
-                                        %>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.abstain.maxOpposition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Koalicijsko povprečje
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.avgCoalition.score %>%;">
-                                            <span class="sr-only"><%= data.results.abstain.avgCoalition.score %>% Complete</span>
-                                        </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.abstain.avgCoalition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Največ v koaliciji
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgminmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.maxCoalition.score %>%;">
-                                            <span class="sr-only"><%= data.results.abstain.maxCoalition.score %>% Complete</span>
-                                        </div>
-                                        <%
-
-                                        if (data.results.abstain.maxCoalition.parties) {
-                                            for (var i = 0; i < data.results.abstain.maxCoalition.parties.length; i++) {
-
-                                        %>
-                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.abstain.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.abstain.maxCoalition.parties[i]['acronym'] %></div>
-                                        <%
-                                            }
-                                        }
-                                        %>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.abstain.maxCoalition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="NI_glasovala<%= random_id %>">
-
-                            <div class="me_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        <%= data.organization.name %>
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress hugebar ">
-                                        <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.absent.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.score %>%;">
-                                            <span class="sr-only"><%= data.results.absent.score %>% Complete</span>
-                                        </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.absent.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Opozicijsko povprečje
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.avgOpposition.score %>%;">
-                                            <span class="sr-only"><%= data.results.absent.avgOpposition.score %>% Complete</span>
-                                        </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.absent.avgOpposition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Največ v opoziciji
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgminmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.maxOpposition.score %>%;">
-                                            <span class="sr-only"><%= data.results.absent.maxOpposition.score %>% Complete</span>
-                                        </div>
-                                        <%
-
-                                        if (data.results.absent.maxOpposition.parties) {
-                                            for (var i = 0; i < data.results.absent.maxOpposition.parties.length; i++) {
-
-                                        %>
-                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.absent.maxOpposition.parties.length - i - 1) %>px;"><%= data.results.absent.maxOpposition.parties[i]['acronym'] %></div>
-                                        <%
-                                            }
-                                        }
-                                        %>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.absent.maxOpposition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Koalicijsko povprečje
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.avgCoalition.score %>%;">
-                                            <span class="sr-only"><%= data.results.absent.avgCoalition.score %>% Complete</span>
-                                        </div>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.absent.avgCoalition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="other_poslanec clearfix">
-                                <div class="col150">
-                                    <span class="poslanec_title">
-                                        Največ v koaliciji
-                                    </span>
-                                </div>
-                                <div class="col280">
-                                    <div class="progress smallbar avgminmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.maxCoalition.score %>%;">
-                                            <span class="sr-only"><%= data.results.absent.maxCoalition.score %>% Complete</span>
-                                        </div>
-                                        <%
-
-                                        if (data.results.absent.maxCoalition.parties) {
-                                            for (var i = 0; i < data.results.absent.maxCoalition.parties.length; i++) {
-
-                                        %>
-                                        <div class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.results.absent.maxCoalition.parties.length - i - 1) %>px;"><%= data.results.absent.maxCoalition.parties[i]['acronym'] %></div>
-                                        <%
-                                            }
-                                        }
-                                        %>
-                                        <div class="progress_number">
-                                            <%= Math.round(data.results.absent.maxCoalition.score) %>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
+                    </div>
+                    <!-- delete this placeholder, this is the content of your card -->
+                </div>
+                <div class="card-footer">
+                    <div class="card-circle-button card-share"></div>
+                    <div class="card-circle-button card-embed"></div>
+                    <div class="card-circle-button card-info">i</div>
+                </div>
+            </div>
+            <div class="back">
+                <div class="back-info">
+                    <div class="card-header">
+                        <div class="card-header-border"></div>
+                        <h1>Razrez glasovanj</h1>
+                        <!-- this text is the only thing you touch in .card-header -->
+                    </div>
+                    <div class="card-back-content card-content">
+                        <div class="scroller" id="tvojamtka">
+                            <p class="info-text">
+                                Najprej preštejemo, kolikokrat so poslanci posamezne poslanske skupine (PS) glasovali za, kolikokrat proti, kolikokrat so se vzdržali in kolikokrat niso bili prisotni. Seštevke delimo s številom poslancev v PS, potem pa rezultat PS delimo s seštevkom rezultatov vseh PS. Nazadnje normaliziramo (min 1 - max 100).
+                            </p>
                         </div>
                     </div>
-
+                    <div class="card-footer">
+                        <div class="card-circle-button card-share" data-back="share"></div>
+                        <div class="card-circle-button card-embed" data-back="embed"></div>
+                        <div class="card-circle-button card-info card-exit" data-back="info">×</div>
+                    </div>
                 </div>
-                <!-- delete this placeholder, this is the content of your card -->
-            </div>
-            <div class="card-footer">
-                <div class="card-circle-button card-share"></div>
-                <div class="card-circle-button card-embed"></div>
-                <div class="card-circle-button card-info">i</div>
+                <div class="back-embed">
+                    <div class="card-header">
+                        <div class="card-header-border"></div>
+                        <h1>Razrez glasovanj</h1>
+                        <!-- this text is the only thing you touch in .card-header -->
+                    </div>
+                    <div class="card-back-content card-content">
+                        <div class="embed-content">
+                            <div class="embed-divider"></div>
+                            <div class="embed-switch-container">
+                                <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                                <div class="embed-switch-big-box">
+                                    <div class="embed-switch-box">
+                                        <div class="embed-switch">
+                                            <div class="embed-switches">
+                                                <div class="leftswitch">
+                                                    DA
+                                                </div>
+                                                <div class="rightswitch">
+                                                    NE
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <%# <div class="embed-switch-ball"></div>%>
+                                    </div>
+                                    <div class="embed-switch-ball"></div>
+                                </div>
+                            </div>
+                            <div class="embed-divider"></div>
+                            <div class="embed-script">
+                                <textarea class="form-control" data-url="https://glej.parlameter.si/p/razrez-glasovanj/"></textarea>
+                                <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                            </div>
+                            <div class="embed-divider"></div>
+                            <div class="embed-export">
+                                <div class="embed-label">Izvozi kartico kot sliko <button class="btn-parlameter btn-blue btn-margin-left">PRENESI</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-circle-button card-share" data-back="share"></div>
+                        <div class="card-circle-button card-embed card-exit" data-back="embed">×</div>
+                        <div class="card-circle-button card-info" data-back="info">i</div>
+                    </div>
+                </div>
+                <div class="back-share">
+                    <div class="card-header">
+                        <div class="card-header-border"></div>
+                        <h1>Razrez glasovanj</h1>
+                        <!-- this text is the only thing you touch in .card-header -->
+                    </div>
+                    <div class="card-back-content card-content">
+                        <div class="share-content">
+                            <label for="share-url">Neposredna povezava do kartice</label>
+                            <input type="url" class="form-control" id="share-url" value="https://parlameter.si/trajlala"/>
+                            <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-circle-button card-share card-exit" data-back="share">×</div>
+                        <div class="card-circle-button card-embed" data-back="embed"></div>
+                        <div class="card-circle-button card-info" data-back="info">i</div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- everything below here is part of the page and not part of the card -->

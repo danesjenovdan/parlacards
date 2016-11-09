@@ -31,6 +31,7 @@ var options = minimist(process.argv.slice(2), knownOptions);
 // read data.json
 var fs = require('fs');
 var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
+var jsonVocab = JSON.parse(fs.readFileSync('card/vocab.json', 'utf-8'));
 
 // generate CSS class name to use for sandboxing
 var directoryName = __dirname.replace(/\\/g, '/').split('/').pop()
@@ -78,7 +79,8 @@ gulp.task('ejs', function() {
     return gulp.src('card/card.ejs')
         .pipe(ejs({
             'data': jsonData,
-            'className' : className
+            'className' : className,
+            'vocab' : jsonVocab
         }, {
             ext: '.html'
         }))
@@ -146,7 +148,7 @@ gulp.task('remove-minify', function() {
 
 // watch task for serve
 gulp.task('watch', function() {
-    gulp.watch('card/scss/**/*.scss', ['sass', browserSync.reload]);
+    gulp.watch('card/scss/**/*.scss', ['sass']);
     gulp.watch('card/card.ejs', ['ejs', browserSync.reload]);
     gulp.watch('card/js/**/*.js', ['js-no-uglify', browserSync.reload]);
 });
