@@ -214,10 +214,12 @@ quoteElement.on('mousedown', function(event) {
 
 quoteElement.on('click', function(event) {
   var selectedText = quoteElement.data().text.trim();
-  var allText = speechData.content.replace(/\s+/g, ' ').trim();
+  var allText = speechData.results.content;
   var startIndex = allText.indexOf(selectedText);
   var endIndex = startIndex + selectedText.length;
-  var url = 'https://analize.parlameter.si/v1/s/setQuote/' + speechData.speech_id + '/' + startIndex + '/' + endIndex;
+  var url = 'https://analize.parlameter.si/v1/s/setQuote/' + speechData.results.speech_id + '/' + startIndex + '/' + endIndex;
+
+  
 
   $.get(url, function(result) {
     var newCardUrl = 'https://glej.parlameter.si/s/govor/' + result.id;
@@ -230,7 +232,7 @@ quoteElement.on('click', function(event) {
 toggleElement.on('click', function(event) {
   contentElement.toggleClass('closed')
                 .removeClass('similar-expanded');
-;
+
   quoteElement.css({ display: 'none' });
 })
 
@@ -254,7 +256,7 @@ similarSpeechWrapperElement.on('click', similarSpeechCloseSelector, function() {
 })
 
 // Fetch similar speeches
-$.get('https://isci.parlameter.si/mlt/' + speechData.speech_id, function(response) {
+$.get('https://isci.parlameter.si/mlt/' + speechData.results.speech_id, function(response) {
   var maxScore = response.response.maxScore;
   var speeches = response.response.docs.slice(0, 5);
   var minScore = speeches[4].score;
