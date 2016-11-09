@@ -65,8 +65,8 @@
                 var percent_not_present = Math.floor( (data[i].results.not_present / allInVotes) * 100);
 
                     var resulttext = '';
-                    if(data[i].results.text.length > 230){
-                        resulttext = data[i].results.text.substring(0, 230) + "...";
+                    if(data[i].results.text.length > 150){
+                        resulttext = data[i].results.text.substring(0, 150) + "...";
                     }else{
                         resulttext = data[i].results.text;
                     }
@@ -75,7 +75,7 @@
 
 
                     <div class="clearfix single_voting">
-                        <a href="/seje/P_seja_glasovanje">
+                        <a class="seja_anchor" href="/seje/P_seja_glasovanje">
                             <div class=" col-md-1 ">
                                 <div class="accepted <%= ayeney %> ">
                                     <p>

@@ -1,3 +1,5 @@
+var openOption = false;
+
 // utilities
 function groupBy(array, f) {
     var groups = {};
@@ -47,105 +49,8 @@ function drawPie(data) {
             return color(d.data.option);
         })
         .style('stroke-width', 0)
-        .on('click', function(d) {
-            
-            // stop propagation
-            d3.event.stopPropagation();
-
-            if (!d3.select(this).classed('chosen')) { // slice clicked on is not chosen
-
-                // demote currently chosen slices
-                var former_chosen = d3.select('path.chosen')
-                former_chosen.classed('chosen', false)
-                    .transition()
-                    .duration(300)
-                    .attrTween('transform', function(d) {
-
-                        var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                        var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
-                        var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                        return d3.interpolateString(startTranslateState, endTranslateState);
-                    })
-
-                // move slice further
-                d3.select(this)
-                    .classed('chosen', true)
-                    .transition()
-                    .duration(300)
-                    .attrTween('transform', function(d) {
-                        var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                        var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                        var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
-                        return d3.interpolateString(startTranslateState, endTranslateState);
-                    })
-                
-                // togle mps
-                d3.selectAll('.mpgroup').classed('hidden', true);
-                var mp_list = d3.select('.' + d.data.option + '.' + d.data.pg.acronym.replace(' ', '_'));
-                mp_list.classed('hidden', false);
-
-                // if former chosen slice was from other option, close that option
-                if (former_chosen[0][0]) {
-                    var former_option = former_chosen.datum().data.option;
-                    var this_option =  d3.select(this).datum().data.option;
-                    if (former_option === this_option) {
-
-                    } else {
-
-                        // demote previously active slices
-                        d3.selectAll('.active')
-                            .filter(function(d, i) {
-                                return former_option === d.data.option;
-                            })
-                            .classed('active', false)
-                            .transition()
-                            // .delay(300)
-                            .duration(300)
-                            .attrTween('transform', function(d) {
-
-                                var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                                var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                                return d3.interpolateString( endTranslateState, 'translate(0, 0)');
-                            });
-                        
-                        // hide party labels
-                        d3.selectAll('.' + former_option.replace(' ', '_') + '-label-party')
-                            .transition()
-                            .duration(300)
-                            .style('opacity', 0);
-                        d3.selectAll('.' + former_option.replace(' ', '_') + '-pointer-party')
-                            .transition()
-                            .duration(300)
-                            .style('opacity', 0);
-                    }
-                }
-
-
-            } else { // clicked slice is chosen
-                // move slice back
-                d3.select(this)
-                    .classed('chosen', false)
-                    .transition()
-                    .duration(300)
-                    .attrTween('transform', function(d) {
-                        var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                        var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
-                        var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                        return d3.interpolateString(startTranslateState, endTranslateState);
-                    })
-                
-                // hide mps
-                d3.selectAll('.mpgroup').classed('hidden', true);
-            }
-
-        })
-        .on('mouseover', function(d) { // first hover old click events 
-
-            // stop propagation
-            d3.event.stopPropagation();
-
-            if (!d3.selectAll('.' + d.data.option + '-arc').classed('active')) { // current selectoin is not .active
-
+        .on('mouseover', function(d) {
+            if (!d3.selectAll('.' + d.data.option + '-arc').classed('hover')) { // current selection has no hover
                 // hide option labels
                 d3.selectAll('.label-option')
                     .transition()
@@ -155,47 +60,8 @@ function drawPie(data) {
                     .transition()
                     .duration(300)
                     .style('opacity', 0);
-
-                // hide mps
-                // d3.selectAll('.mpgroup')
-                //     .classed('hidden', true);
-
-                // translate currently active slices and hide labels of active elements
-                // hide other party labels
-                // d3.selectAll('.label-party')
-                //     .transition()
-                //     .duration(300)
-                //     .style('opacity', 0);
-                // d3.selectAll('.pointer-party')
-                //     .transition()
-                //     .duration(300)
-                //     .style('opacity', 0);
-                // demote currently chosen slices
-                // d3.selectAll('path.chosen')
-                //     .classed('chosen', false)
-                //     .transition()
-                //     .duration(300)
-                //     .attrTween('transform', function(d) {
-
-                //         var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                //         var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
-                //         var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                //         return d3.interpolateString(startTranslateState, endTranslateState);
-                //     })
-                // demote currently active slices
-                // d3.selectAll('path.active')
-                //     .classed('active', false)
-                //     .transition()
-                //     .delay(300)
-                //     .duration(300)
-                //     .attrTween('transform', function(d) {
-
-                //         var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                //         var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                //         return d3.interpolateString( endTranslateState, 'translate(0, 0)');
-                //     })
-
-                // show labels
+                
+                // show party labels
                 d3.selectAll('.' + d.data.option + '-label-party')
                     .transition()
                     .duration(300)
@@ -207,7 +73,7 @@ function drawPie(data) {
 
                 // translate slices
                 d3.selectAll('.' + d.data.option + '-arc')
-                    .classed('active', true)
+                    .classed('hover', true)
                     .transition()
                     .duration(300)
                     .attrTween('transform', function(d) {
@@ -217,51 +83,13 @@ function drawPie(data) {
                     })
             }
         })
-        .on("mouseleave", function(d) { // mouseover events
-
-            if (d3.selectAll('.chosen')[0].length === 0) { // no element is .chosen -> return to default
-
-                // hide option labels
-                // d3.selectAll('.label-option')
-                //     .transition()
-                //     .duration(300)
-                //     .style('opacity', 0);
-                // d3.selectAll('.pointer-option')
-                //     .transition()
-                //     .duration(300)
-                //     .style('opacity', 0);
-
-                // hide mps
-                // d3.selectAll('.mpgroup')
-                //     .classed('hidden', true);
-
-                // translate currently active slices and hide labels of active elements
-                // hide other party labels
-                d3.selectAll('.label-party')
+        .on('mouseleave', function(d) {
+            if (!d3.selectAll('.' + d.data.option + '-arc').classed('active')) { // current selection is not active
+                
+                // return all slices from group
+                d3.selectAll('.' + d.data.option + '-arc')
+                    .classed('hover', false)
                     .transition()
-                    .duration(300)
-                    .style('opacity', 0);
-                d3.selectAll('.pointer-party')
-                    .transition()
-                    .duration(300)
-                    .style('opacity', 0);
-                // no demotion currently chosen slices
-                // d3.selectAll('path.chosen')
-                //     .classed('chosen', false)
-                //     .transition()
-                //     .duration(300)
-                //     .attrTween('transform', function(d) {
-
-                //         var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                //         var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
-                //         var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                //         return d3.interpolateString(startTranslateState, endTranslateState);
-                //     })
-                // demote currently active slices
-                d3.selectAll('path.active')
-                    .classed('active', false)
-                    .transition()
-                    // .delay(300)
                     .duration(300)
                     .attrTween('transform', function(d) {
 
@@ -269,120 +97,153 @@ function drawPie(data) {
                         var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
                         return d3.interpolateString( endTranslateState, 'translate(0, 0)');
                     })
-
-                // show labels
-                d3.selectAll('.label-option')
+                
+                // hide current party labels
+                d3.selectAll('.' + d.data.option.replace(' ', '_') + '-label-party')
                     .transition()
                     .duration(300)
-                    .style('opacity', 1);
-                d3.selectAll('.pointer-option')
+                    .style('opacity', 0);
+                // hide current party pointers
+                d3.selectAll('.' + d.data.option.replace(' ', '_') + '-pointer-party')
                     .transition()
                     .duration(300)
-                    .style('opacity', 1);
+                    .style('opacity', 0);
 
-                // // if (!d3.selectAll('.' + d.data.option + '-arc').classed('active')) {
-
-                //     d3.selectAll('.' + d.data.option + '-arc')
-                //         // .transition()
-                //         // .duration(300)
-                //         // .attrTween('transform', function(d) {
-                //         //     var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                //         //     var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                //         //     return d3.interpolateString('translate(0, 0)', endTranslateState);
-                //         // })
-                //         .transition()
-                //         .duration(300)
-                //         .attrTween('transform', function(d) {
-                //             var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                //             var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                //             return d3.interpolateString(endTranslateState, 'translate(0, 0)');
-                //         });
-                // // }
-            } else { // something is chosen
-
-                if (d3.selectAll('.' + d.data.option.replace(' ', '_') + '-arc.chosen')[0].length === 0) {
-
-                    // hide option labels
-                    // d3.selectAll('.label-option')
-                    //     .transition()
-                    //     .duration(300)
-                    //     .style('opacity', 0);
-                    // d3.selectAll('.pointer-option')
-                    //     .transition()
-                    //     .duration(300)
-                    //     .style('opacity', 0);
-
-                    // hide mps
-                    // d3.selectAll('.mpgroup')
-                    //     .classed('hidden', true);
-
-                    // translate currently active slices and hide labels of active elements
-                    // hide other party labels
-                    d3.selectAll('.' + d.data.option.replace(' ', '_') + '-label-party')
+                if (d3.selectAll('.active')[0].length === 0) { // no selection is active
+                    // show labels
+                    d3.selectAll('.label-option')
                         .transition()
                         .duration(300)
-                        .style('opacity', 0);
-                    d3.selectAll('.' + d.data.option.replace(' ', '_') + '-pointer-party')
+                        .style('opacity', 1);
+                    d3.selectAll('.pointer-option')
                         .transition()
                         .duration(300)
-                        .style('opacity', 0);
-                    // no demotion currently chosen slices
-                    // d3.selectAll('path.chosen')
-                    //     .classed('chosen', false)
-                    //     .transition()
-                    //     .duration(300)
-                    //     .attrTween('transform', function(d) {
+                        .style('opacity', 1);
+                }
+            }
+        })
+        .on('click', function(d) {
+            // stop propagation
+            d3.event.stopPropagation();
 
-                    //         var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                    //         var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
-                    //         var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                    //         return d3.interpolateString(startTranslateState, endTranslateState);
-                    //     })
-                    // demote currently active slices
-                    d3.selectAll('path.' + d.data.option.replace(' ', '_') + '-arc.active')
-                        .classed('active', false)
+            if (d3.selectAll('.active')[0].length === 0) { // no selection is active
+                
+                d3.selectAll('.' + d.data.option + '-arc')
+                    .classed('active', true);
+                    
+                // togle mps
+                d3.selectAll('.mpgroup').classed('hidden', true);
+                var mp_list = d3.selectAll('.' + d.data.option);
+                mp_list.classed('hidden', false);
+
+            } else if (d3.selectAll('.' + d.data.option + '-arc').classed('active')) { // current selection is active
+                
+                if (d3.select(this).classed('chosen')) { // clicked slice is chosen
+                    
+                    // move slice back
+                    d3.select(this)
+                        .classed('chosen', false)
                         .transition()
-                        // .delay(300)
+                        .duration(300)
+                        .attrTween('transform', function(d) {
+                            var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+                            var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
+                            var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
+                            return d3.interpolateString(startTranslateState, endTranslateState);
+                        })
+                    
+                    // toggle mps
+                    d3.selectAll('.mpgroup').classed('hidden', true);
+                    var mp_list = d3.selectAll('.' + d.data.option);
+                    mp_list.classed('hidden', false);
+
+                } else { // clicked slice is not chosen
+
+                    // demote currently chosen slices
+                    d3.selectAll('path.chosen')
+                        .classed('chosen', false)
+                        .transition()
                         .duration(300)
                         .attrTween('transform', function(d) {
 
                             var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+                            var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
                             var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                            return d3.interpolateString( endTranslateState, 'translate(0, 0)');
+                            return d3.interpolateString(startTranslateState, endTranslateState);
                         })
 
-                    // show labels
-                    // d3.selectAll('.label-option')
-                    //     .transition()
-                    //     .duration(300)
-                    //     .style('opacity', 1);
-                    // d3.selectAll('.pointer-option')
-                    //     .transition()
-                    //     .duration(300)
-                    //     .style('opacity', 1);
-
-                    // // if (!d3.selectAll('.' + d.data.option + '-arc').classed('active')) {
-
-                    //     d3.selectAll('.' + d.data.option + '-arc')
-                    //         // .transition()
-                    //         // .duration(300)
-                    //         // .attrTween('transform', function(d) {
-                    //         //     var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                    //         //     var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                    //         //     return d3.interpolateString('translate(0, 0)', endTranslateState);
-                    //         // })
-                    //         .transition()
-                    //         .duration(300)
-                    //         .attrTween('transform', function(d) {
-                    //             var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                    //             var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                    //             return d3.interpolateString(endTranslateState, 'translate(0, 0)');
-                    //         });
-                    // // }
-
+                    // move slice further
+                    d3.select(this)
+                        .classed('chosen', true)
+                        .transition()
+                        .duration(300)
+                        .attrTween('transform', function(d) {
+                            var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+                            var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
+                            var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
+                            return d3.interpolateString(startTranslateState, endTranslateState);
+                        })
+                    
+                    // togle mps
+                    d3.selectAll('.mpgroup').classed('hidden', true);
+                    var mp_list = d3.select('.' + d.data.option + '.' + d.data.pg.acronym.replace(' ', '_'));
+                    mp_list.classed('hidden', false);
                 }
+            
+            } else { // other selection is active
+                
+                console.log('inactive');
+
+                // demote currently chosen slices
+                d3.selectAll('path.chosen')
+                    .classed('chosen', false)
+                    .transition()
+                    .duration(300)
+                    .attrTween('transform', function(d) {
+
+                        var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+                        var startTranslateState = 'translate(' + Math.cos(a) * (radius * 0.1) + ',' + Math.sin(a) * (radius * 0.1) + ')';
+                        var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
+                        return d3.interpolateString(startTranslateState, endTranslateState);
+                    })
+                
+                // demote currently active slices
+                var activeOption = d3.select('path.active').datum().data.option;
+                d3.selectAll('path.active')
+                    .classed('active', false)
+                    .classed('hover', false)
+                    .transition()
+                    .delay(300)
+                    .duration(300)
+                    .attrTween('transform', function(d) {
+
+                        var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+                        var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
+                        return d3.interpolateString( endTranslateState, 'translate(0, 0)');
+                    })
+                
+                // hide currently active party labels
+                d3.selectAll('.' + activeOption.replace(' ', '_') + '-label-party')
+                    .transition()
+                    .duration(300)
+                    .style('opacity', 0);
+                // hide current party pointers
+                d3.selectAll('.' + activeOption.replace(' ', '_') + '-pointer-party')
+                    .transition()
+                    .duration(300)
+                    .style('opacity', 0);
+                
+
+                d3.selectAll('.' + d.data.option + '-arc')
+                    .classed('active', true);
+                    
+                // togle mps
+                d3.selectAll('.mpgroup').classed('hidden', true);
+                var mp_list = d3.selectAll('.' + d.data.option);
+                mp_list.classed('hidden', false);
+
             }
-        })
+        });
 }
 
 // draw option labels
@@ -698,6 +559,7 @@ var svg = d3.select(".layeredchart").append("svg")
             })
         // demote currently active slices
         d3.selectAll('path.active')
+            .classed('hover', false)
             .classed('active', false)
             .transition()
             .delay(300)

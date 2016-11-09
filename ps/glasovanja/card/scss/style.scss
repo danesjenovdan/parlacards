@@ -168,3 +168,22 @@ $black: #000000;
     }
   }
 }
+
+
+.alt-header {
+  .session-logo {
+    display: block;
+    float: left;
+    margin-right: 15px;
+
+    border: none;
+
+    b {
+      font-size: 20px;
+    }
+  }
+
+  .partyinfo {
+    font-family: 'Roboto Slab';
+  }
+}
