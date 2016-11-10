@@ -174,3 +174,7 @@ function fixImages() {
 }(jQuery);
 
 progressbarTooltip.init();
+
+addCardFlip();
+makeEmbedSwitch();
+activateCopyButton();
