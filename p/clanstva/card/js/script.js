@@ -164,3 +164,7 @@ $('[data-move-pagination]').on('click', function(event) {
     nextOrPreviousElement.children('a').click();
   }
 });
+
+addCardFlip();
+makeEmbedSwitch();
+activateCopyButton();

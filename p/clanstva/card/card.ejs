@@ -150,9 +150,9 @@
               </div>
             </div>
             <div class="card-footer">
-                <div class="card-circle-button card-share"></div>
-                <div class="card-circle-button card-embed"></div>
-                <div class="card-circle-button card-info">i</div>
+                <div class="card-circle-button card-share" data-back="share"></div>
+                <div class="card-circle-button card-embed" data-back="embed"></div>
+                <div class="card-circle-button card-info" data-back="info">i</div>
             </div>
         </div>
         <div class="back">
@@ -198,15 +198,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <%# <div class="embed-switch-ball"></div>%>
                                 </div>
                                 <div class="embed-switch-ball"></div>
                             </div>
                         </div>
                         <div class="embed-divider"></div>
                         <div class="embed-script">
-                            <textarea class="form-control" data-url="https://glej.parlameter.si/p/razrez-glasovanj/"></textarea>
-                            <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                            <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><iframe frameborder="0" width="620" height="400" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?embed=true"></textarea>
+                                <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                         </div>
                         <div class="embed-divider"></div>
                         <div class="embed-export">
