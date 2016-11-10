@@ -37,3 +37,7 @@ $('#glasovanja-' + pGlasovanjaRandomId + ' .tag-selector')
   });
 
 filterPGlasovanjaByTags(null);
+
+addCardFlip();
+makeEmbedSwitch();
+activateCopyButton();
