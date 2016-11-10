@@ -213,11 +213,14 @@ quoteElement.on('mousedown', function(event) {
 })
 
 quoteElement.on('click', function(event) {
-  var selectedText = quoteElement.data().text.trim();
-  var allText = speechData.results.content;
-  var startIndex = allText.indexOf(selectedText);
-  var endIndex = startIndex + selectedText.length;
-  var url = 'https://analize.parlameter.si/v1/s/setQuote/' + speechData.results.speech_id + '/' + startIndex + '/' + endIndex;
+  selectedText = quoteElement.data().text.trim();
+  allText = speechData.results.content.replace(/\n+/g, '').trim();
+  startIndex = allText.indexOf(selectedText);
+  endIndex = startIndex + selectedText.length;
+  url = 'https://analize.parlameter.si/v1/s/setQuote/' + speechData.results.speech_id + '/' + startIndex + '/' + endIndex;
+
+  console.log(url);
+  console.log(selectedText);
 
   
 

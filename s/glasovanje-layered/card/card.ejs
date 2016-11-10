@@ -31,7 +31,7 @@
     <div class="card-container card-halfling <%= className %>">
         <div class="card-header">
             <div class="card-header-border"></div>
-            <h1>Glasovanje o Zakonu o ratifikaciji Sporazuma o pridružitvi med Evropsko unijo in Evropsko skupnostjo za atomsko energijo in njunimi državami članicami na eni strani ter Ukrajino na drugi strani</h1> <!-- this text is the only thing you touch in .card-header -->
+            <h1><%= data.name %></h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
 
@@ -73,7 +73,7 @@
                                 <div class="option-marker option-marker-vzdrzani"></div>
                                 <div class="option-text">
                                     <div class="option-number">
-                                        <%= data.all.not_present.total_votes %>
+                                        <%= data.all.kvorum.total_votes %>
                                     </div>
                                     <div class="option-option">
                                         VZDRŽANI
@@ -85,7 +85,7 @@
                                 <div class="option-marker option-marker-niso"></div>
                                 <div class="option-text">
                                     <div class="option-number">
-                                        <%= data.all.kvorum.total_votes %>
+                                        <%= data.all.not_present.total_votes %>
                                     </div>
                                     <div class="option-option">
                                         NISO

@@ -16,4 +16,21 @@ function equalizeWidth() {
 equalizeWidth();
 $(window).on('resize', function() {
     equalizeWidth();
+
+    // var avgwidth = 0;
+    // var sumwidth = 0;
+    // var counter = 0;
+    // var newwidth = 0;
+    // $.each($('.pspris-container'), function(i, e) {
+    //     sumwidth = sumwidth + $(e).width();
+    //     counter = counter + 1;
+    // });
+    // avgwidth = sumwidth/counter;
+    // $.each($('.pspris-container'), function(i, e) {
+    //     if ($(e).width() < avgwidth - 1) {
+    //         newwidth = $(e).width();
+    //     }
+    // });
+    // $('.pspris-container').width(newwidth);
+
 });

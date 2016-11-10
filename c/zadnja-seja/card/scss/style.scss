@@ -229,3 +229,22 @@
 .seja_anchor:hover {
   color: #525252; 
 }
+
+.pspris-clearfix {
+  text-align: left;
+
+  .pspris-container {
+
+    display: inline-block !important;
+
+    /*overflow: hidden;*/
+
+    min-width: 100px;
+    max-width: 200px;
+    display: block;
+
+    .pspris {
+      width: 100%;
+    }
+  }
+}

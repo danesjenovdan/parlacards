@@ -160,14 +160,16 @@
                     ["id97"]: '#d9776c',
                 };
                 %>
-                <div class="clearfix">
+                <div class="pspris-clearfix">
                     <% for (ps in presence) { %>
 
-                    <div class="pspris">
-                        <span><%= presence[ps].percent %> %</span>
-                        <font><%= presence[ps].org.acronym %></font>
-                        <div class="" style="">
-                            <div class="border" style="width: <%= presence[ps].percent %>%; background-color: <%=colors["id" + presence[ps].org.id]%>;"></div>
+                    <div class="pspris-container">
+                        <div class="pspris">
+                            <span><%= presence[ps].percent %> %</span>
+                            <font><%= presence[ps].org.acronym %></font>
+                            <div class="" style="">
+                                <div class="border" style="width: <%= presence[ps].percent %>%; background-color: <%=colors['id' + presence[ps].org.id]%>;"></div>
+                            </div>
                         </div>
                     </div>
 

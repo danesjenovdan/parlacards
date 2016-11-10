@@ -49,7 +49,7 @@
         <div class="card-content <% if (data.results.quoted_text) { %>just-quote<% } %> closed">
           <div class="everything">
             <div class="speech-text">
-              <%= data.results.content %>
+              <%= data.results.content.replace(/\n+/g, '').trim() %>
               <div class="quote-button">“</div>
             </div>
 
@@ -70,14 +70,13 @@
               <%
                 if (data.results.quoted_text) {
                   var PADDING_LENGTH = 30;
-                  var splitQuote = data.results.content.split(data.results.quoted_text);
+                  var splitQuote = data.results.content.replace(/\n+/g, '').trim().split(data.results.quoted_text);
 
                   var paddingBefore = splitQuote[0].slice(-PADDING_LENGTH);
                   var paddingAfter = splitQuote[1].slice(0, PADDING_LENGTH);
 
                   var quoteWithPadding = '...' + paddingBefore + '<span>' + data.results.quoted_text + '</span>' + paddingAfter + '...';
               %>
-              <%- splitQuote %> SPLIT
               <%- quoteWithPadding %>
               <% }%>
               <div class="quote-button inactive">“</div>
