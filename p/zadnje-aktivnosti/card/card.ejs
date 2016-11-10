@@ -27,95 +27,181 @@
 
 <!-- everything above here is part of the page and not part of the card -->
 <div class="card-container card-halfling <%= className %>">
-    <div class="card-header">
-        <div class="card-header-border"></div>
-        <h1>Zadnje aktivnosti</h1>
-        <!-- this text is the only thing you touch in .card-header -->
-    </div>
-    <div class="card-content recent-activity">
-        <div class="scroller" id="scrollbar-recent-activity">
-
-            <% for (var i = 0; i < data.results.length; i++) {
-                var day = data.results[i];
-            %>
-
-            <section>
-                <span class="date"><%= day.date %></span>
-
-                <ul>
-
-                    <% for (var j = 0; j < day.events.length; j++) {
-                        var event = day.events[j];
-                        var icon = '';
-                        var verb = '';
-                        var thing = '';
-                        var thingwhere = '';
-
-                    if(event.type === 'ballot'){
-
-                        switch (event.option) {
-                            case 'za':
-                                icon = 'parlaicon-za';
-                                verb = (data.person.gender == 'm') ? 'Glasoval ZA' : 'Glasovala ZA';
-                                break;
-                            case 'proti':
-                                icon = 'parlaicon-proti';
-                                verb = 'Glasovala PROTI';
-                                verb = (data.person.gender == 'm') ? 'Glasoval PROTI' : 'Glasovala PROTI';
-                                break;
-                            case 'ni':
-                                icon = 'parlaicon-ni';
-                                verb = 'NI glasovala za';
-                                verb = (data.person.gender == 'm') ? 'NI glasoval za' : 'NI glasovala za';
-                                break;
-                        }
-
-                        thing = event.vote_name;
-                    %>
-
-                    <li>
-                        <span class="parlaicon <%= icon %>"></span>
-                        <p><%= verb %> <a href="#"><%= thing %></a></p>
-                    </li>
-
-                    <%
-                    } else {
-                        icon = 'parlaicon-govor';
-                        verb = 'Govorila';
-                        verb = (data.person.gender == 'm') ? 'Govoril' : 'Govorila';
-                        thing = event.session.name;
-                        thingwhere = event.session.org.name
-                    %>
-
-                    <li>
-                        <span class="parlaicon <%= icon %>"></span>
-                        <p><a href="#"><%= verb %></a>&nbsp;na&nbsp;<a href="#"><%= thing %> <%=thingwhere%></a></p>
-                    </li>
-
-                    <%
-                    }
-                    %>
-
-                    <% } %>
-
-                    <!-- <li>
-                        <span class="glyphicon glyphicon-ban-circle"></span>
-                        <p>Se VZDRŽALA glasovanja o <a href="#">Sklepu o imenovanju člana nadzornega sveta RTV</a></p>
-                    </li> -->
-                </ul>
-
-            </section>
-
-            <% } %>
-
+    <div class="front">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Zadnje aktivnosti</h1>
+            <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <!-- delete this placeholder, this is the content of your card -->
+        <div class="card-content recent-activity">
+            <div class="scroller" id="scrollbar-recent-activity">
+
+                <% for (var i = 0; i < data.results.length; i++) {
+                    var day = data.results[i];
+                %>
+
+                <section>
+                    <span class="date"><%= day.date %></span>
+
+                    <ul>
+
+                        <% for (var j = 0; j < day.events.length; j++) {
+                            var event = day.events[j];
+                            var icon = '';
+                            var verb = '';
+                            var thing = '';
+                            var thingwhere = '';
+
+                        if(event.type === 'ballot'){
+
+                            switch (event.option) {
+                                case 'za':
+                                    icon = 'parlaicon-za';
+                                    verb = (data.person.gender == 'm') ? 'Glasoval ZA' : 'Glasovala ZA';
+                                    break;
+                                case 'proti':
+                                    icon = 'parlaicon-proti';
+                                    verb = 'Glasovala PROTI';
+                                    verb = (data.person.gender == 'm') ? 'Glasoval PROTI' : 'Glasovala PROTI';
+                                    break;
+                                case 'ni':
+                                    icon = 'parlaicon-ni';
+                                    verb = 'NI glasovala za';
+                                    verb = (data.person.gender == 'm') ? 'NI glasoval za' : 'NI glasovala za';
+                                    break;
+                            }
+
+                            thing = event.vote_name;
+                        %>
+
+                        <li>
+                            <span class="parlaicon <%= icon %>"></span>
+                            <p><%= verb %> <a href="#"><%= thing %></a></p>
+                        </li>
+
+                        <%
+                        } else {
+                            icon = 'parlaicon-govor';
+                            verb = 'Govorila';
+                            verb = (data.person.gender == 'm') ? 'Govoril' : 'Govorila';
+                            thing = event.session.name;
+                            thingwhere = event.session.org.name
+                        %>
+
+                        <li>
+                            <span class="parlaicon <%= icon %>"></span>
+                            <p><a href="#"><%= verb %></a>&nbsp;na&nbsp;<a href="#"><%= thing %> <%=thingwhere%></a></p>
+                        </li>
+
+                        <%
+                        }
+                        %>
+
+                        <% } %>
+
+                        <!-- <li>
+                            <span class="glyphicon glyphicon-ban-circle"></span>
+                            <p>Se VZDRŽALA glasovanja o <a href="#">Sklepu o imenovanju člana nadzornega sveta RTV</a></p>
+                        </li> -->
+                    </ul>
+
+                </section>
+
+                <% } %>
+
+            </div>
+            <!-- delete this placeholder, this is the content of your card -->
+        </div>
+        <div class="card-footer">
+            <div class="card-circle-button card-share" data-back="share"></div>
+            <div class="card-circle-button card-embed" data-back="embed"></div>
+            <div class="card-circle-button card-info" data-back="info">i</div>
+        </div>
     </div>
-    <div class="card-footer">
-        <div class="card-circle-button card-share"></div>
-        <div class="card-circle-button card-embed"></div>
-        <div class="card-circle-button card-info">i</div>
-    </div>
+    <div class="back">
+            <div class="back-info">
+                <div class="card-header">
+                    <div class="card-header-border"></div>
+                    <h1>Zadnje aktivnosti</h1>
+                    <!-- this text is the only thing you touch in .card-header -->
+                </div>
+                <div class="card-back-content card-content">
+                    <div class="scroller" id="tvojamtka">
+                        <p class="info-text">
+                            Na kartici izpisujemo povezave do vseh <%= vocab['poslanca'][data.person.gender] %> glasovanj in govorov, ki so se zgodili v zadnjih desetih dneh, ko je <%= vocab['biti'][data.person.gender] %> <%= vocab['poslanec'][data.person.gender] %> <%= vocab['aktiven'][data.person.gender] %>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-circle-button card-share" data-back="share"></div>
+                    <div class="card-circle-button card-embed" data-back="embed"></div>
+                    <div class="card-circle-button card-info card-exit" data-back="info">×</div>
+                </div>
+            </div>
+            <div class="back-embed">
+                <div class="card-header">
+                    <div class="card-header-border"></div>
+                    <h1>Zadnje aktivnosti</h1>
+                    <!-- this text is the only thing you touch in .card-header -->
+                </div>
+                <div class="card-back-content card-content">
+                    <div class="embed-content">
+                        <div class="embed-divider"></div>
+                        <div class="embed-switch-container">
+                            <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                            <div class="embed-switch-big-box">
+                                <div class="embed-switch-box">
+                                    <div class="embed-switch">
+                                        <div class="embed-switches">
+                                            <div class="leftswitch">
+                                                DA
+                                            </div>
+                                            <div class="rightswitch">
+                                                NE
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="embed-switch-ball"></div>
+                            </div>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-script">
+                            <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><iframe frameborder="0" width="620" height="400" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?embed=true"></textarea>
+                            <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-export">
+                            <div class="embed-label">Izvozi kartico kot sliko <button class="btn-parlameter btn-blue btn-margin-left">PRENESI</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-circle-button card-share" data-back="share"></div>
+                    <div class="card-circle-button card-embed card-exit" data-back="embed">×</div>
+                    <div class="card-circle-button card-info" data-back="info">i</div>
+                </div>
+            </div>
+            <div class="back-share">
+                <div class="card-header">
+                    <div class="card-header-border"></div>
+                    <h1>Zadnje aktivnosti</h1>
+                    <!-- this text is the only thing you touch in .card-header -->
+                </div>
+                <div class="card-back-content card-content">
+                    <div class="share-content">
+                        <label for="share-url">Neposredna povezava do kartice</label>
+                        <input type="url" class="form-control" id="share-url" value="https://parlameter.si/trajlala"/>
+                        <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-circle-button card-share card-exit" data-back="share">×</div>
+                    <div class="card-circle-button card-embed" data-back="embed"></div>
+                    <div class="card-circle-button card-info" data-back="info">i</div>
+                </div>
+            </div>
+        </div>
 </div>
 <!-- everything below here is part of the page and not part of the card -->
 
