@@ -16,6 +16,7 @@ var deleteLines = require('gulp-delete-lines');
 var replace = require('gulp-replace');
 var install = require("gulp-install");
 var wrap = require('gulp-wrap');
+var request = require('request');
 
 var debug = require('gulp-debug');
 
@@ -128,7 +129,7 @@ gulp.task('inline', function() {
 
 // remove lines task
 gulp.task('remove-minify', function() {
-    gulp.src('temp/card-inline.ejs')
+  return gulp.src('temp/card-inline.ejs')
         .pipe(deleteLines({
             'filters': [
                 /<!-- removeme -->/i
@@ -180,6 +181,20 @@ gulp.task('build', function(callback) {
         'minify:css',
         'inline',
         'remove-minify',
+        callback
+    );
+});
+
+// push file contents to server
+gulp.task('push', function() {
+    return fs.createReadStream('dist/card.min.ejs').pipe(request.post('http://some.api.url'))
+});
+
+// build and push
+gulp.task('push-build', function(callback) {
+    runSequence(
+        'build',
+        'push',
         callback
     );
 });
