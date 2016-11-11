@@ -133,7 +133,7 @@ var color = d3.scale.ordinal()
 var zoomBeh = d3.behavior.zoom()
     .x(x)
     .y(y)
-    .scaleExtent([0, 500])
+    .scaleExtent([0.6, 10])
     .on("zoom", zoom);
 
 var svg = d3.select("#kompas-scatter")
