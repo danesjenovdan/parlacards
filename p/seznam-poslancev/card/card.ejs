@@ -22,8 +22,24 @@
     <link data-inline="true" rel="stylesheet" href="css/style.css">
 
     <script>
-        var seznamPoslancevData = <%- JSON.stringify(data); %>;
-        var seznamPoslancevStatus = <%- JSON.stringify(status); %>;
+      <% data.data = data.data.map(function(member) {
+        if (member.person.district.length === 0) {
+          member.person.formattedDistrict = 'okraj ni vnešen'
+        }
+        else {
+          member.person.formattedDistrict = member.person.district.map(function(memberDistrict) {
+            var matchingDistrict = data.districts.filter(function(district) {
+              return Object.keys(district)[0] === String(memberDistrict)
+            })[0]
+            return matchingDistrict[String(memberDistrict)]
+          }).join(', ')
+        }
+
+        return member
+      }) %>
+
+      var seznamPoslancevData = <%- JSON.stringify(data); %>;
+      var seznamPoslancevStatus = <%- JSON.stringify(status); %>;
     </script>
 </head> <!-- removeme -->
 
@@ -87,7 +103,7 @@
                       <%= result.person.party.acronym %>
                   </a>
               </div>
-              <div class="column"><%= result.person.district || 'okraj ni vnešen' %></div>
+              <div class="column"><%= result.person.formattedDistrict %></div>
               <% if (status && status.analysis) { %>
                 <div class="column">
                   <%= result.results[status.analysis] + (columns[status.analysis].unit === 'percent' ? '%' : '') %>
