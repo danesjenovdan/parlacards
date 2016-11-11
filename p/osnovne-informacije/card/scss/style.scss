@@ -35,3 +35,33 @@ a:hover {
   background-color: #e1f6ff;
   text-decoration: none; 
 }
+
+
+
+
+
+&.card-container, .card-content {
+    overflow: hidden;
+}
+.card-header {
+    background: #ffffff;
+}
+.card-content {
+    position: relative;
+}
+&.card-container::before {
+    content: '';
+    background-color: black;
+    position: relative;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+
+    transition: transform 0.3s ease-out;
+}
+&.card-container.cover::before {
+    transform: scale(400); 
+}

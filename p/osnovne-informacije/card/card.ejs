@@ -28,13 +28,13 @@
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
-        <div class="front">
-            <div class="card-header">
-                <div class="card-header-border"></div>
-                <h1>Osnovne informacije</h1>
-                <!-- this text is the only thing you touch in .card-header -->
-            </div>
-            <div class="card-content">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Osnovne informacije</h1>
+            <!-- this text is the only thing you touch in .card-header -->
+        </div>
+        <div class="card-content">
+            <div class="card-content-front hidden">
                 <div class="bgwhite poslanec">
 
                     <div class="row">
@@ -150,41 +150,18 @@
 
 
                 </div>
-                <!-- delete this placeholder, this is the content of your card -->
             </div>
-            <div class="card-footer">
-                <div class="card-circle-button card-share" data-back="share"></div>
-                <div class="card-circle-button card-embed" data-back="embed"></div>
-                <div class="card-circle-button card-info" data-back="info">i</div>
-            </div>
-        </div>
-        <div class="back">
-            <div class="back-info">
-                <div class="card-header">
-                    <div class="card-header-border"></div>
-                    <h1>Osnovne informacije</h1>
-                    <!-- this text is the only thing you touch in .card-header -->
-                </div>
-                <div class="card-back-content card-content">
+            <div class="card-content-info hidden">
+                <div class="card-back-content">
                     <div class="scroller" id="tvojamtka">
                         <p class="info-text">
                             Vsebine za to kartico smo pridobili s spletnega mesta DZ RS (poslanska skupina, starost, članstva v delovnih telesih) in s spletnega mesta DVK (število prejetih glasov). Za ostale vsebine smo se obrnili na PR službe poslanskih skupin. Podatke so nam posredovali iz NSi, SD, (takrat še) ZaAB in ZL. SMC so nas usmerili na svoje spletno mesto, SDS pa na spletno mesto državnega zbora. Manjkajoče podatke smo pridobili s pomočjo iskalnika Google in jih za morebitne popravke pred objavo ponudili vsem poslanskim skupinam.
                         </p>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <div class="card-circle-button card-share" data-back="share"></div>
-                    <div class="card-circle-button card-embed" data-back="embed"></div>
-                    <div class="card-circle-button card-info card-exit" data-back="info">×</div>
-                </div>
             </div>
-            <div class="back-embed">
-                <div class="card-header">
-                    <div class="card-header-border"></div>
-                    <h1>Osnovne informacije</h1>
-                    <!-- this text is the only thing you touch in .card-header -->
-                </div>
-                <div class="card-back-content card-content">
+            <div class="card-content-embed hidden">
+                <div class="card-back-content">
                     <div class="embed-content">
                         <div class="embed-divider"></div>
                         <div class="embed-switch-container">
@@ -216,18 +193,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <div class="card-circle-button card-share" data-back="share"></div>
-                    <div class="card-circle-button card-embed card-exit" data-back="embed">×</div>
-                    <div class="card-circle-button card-info" data-back="info">i</div>
-                </div>
             </div>
-            <div class="back-share">
-                <div class="card-header">
-                    <div class="card-header-border"></div>
-                    <h1>Osnovne informacije</h1>
-                    <!-- this text is the only thing you touch in .card-header -->
-                </div>
+            <div class="card-content-share hidden">
                 <div class="card-back-content card-content">
                     <div class="share-content">
                         <label for="share-url">Neposredna povezava do kartice</label>
@@ -235,12 +202,13 @@
                         <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <div class="card-circle-button card-share card-exit" data-back="share">×</div>
-                    <div class="card-circle-button card-embed" data-back="embed"></div>
-                    <div class="card-circle-button card-info" data-back="info">i</div>
-                </div>
             </div>
+            <!-- delete this placeholder, this is the content of your card -->
+        </div>
+        <div class="card-footer">
+            <div class="card-circle-button card-share" data-back="share"></div>
+            <div class="card-circle-button card-embed" data-back="embed"></div>
+            <div class="card-circle-button card-info" data-back="info">i</div>
         </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->
