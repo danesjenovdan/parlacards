@@ -1,3 +1,0 @@
-addCardFlip();
-makeEmbedSwitch();
-activateCopyButton();
