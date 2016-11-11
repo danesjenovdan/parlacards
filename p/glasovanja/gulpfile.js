@@ -189,8 +189,8 @@ gulp.task('build', function(callback) {
 gulp.task('push', function() {
     return fs.readFile('dist/card.min.ejs', 'utf8', (err, data) => {
         request.post({
-            url: 'http://glej.parlameter.si/api/card/' + cardData._id + '/updateEjs',
-            body: JSON.stringify({ ejs: data })
+            url: 'https://glej.parlameter.si/api/card/' + cardData._id + '/updateEjs',
+            json: { ejs: data }
         })
     })
 });
