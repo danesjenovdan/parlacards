@@ -15,6 +15,8 @@ var htmlmin = require('gulp-htmlmin');
 var deleteLines = require('gulp-delete-lines');
 var replace = require('gulp-replace');
 var install = require("gulp-install");
+var wrap = require('gulp-wrap');
+var request = require('request');
 
 var debug = require('gulp-debug');
 
@@ -30,6 +32,8 @@ var options = minimist(process.argv.slice(2), knownOptions);
 // read data.json
 var fs = require('fs');
 var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
+var jsonVocab = JSON.parse(fs.readFileSync('card/vocab.json', 'utf-8'));
+var cardData = JSON.parse(fs.readFileSync('card/card.json', 'utf-8'));
 
 //#################
 //## tasks below ##
@@ -109,9 +113,42 @@ gulp.task('inline', function() {
         .pipe(gulp.dest('temp'));
 });
 
+// build
+gulp.task('build', function(callback) {
+    runSequence(
+        ['clean:dist', 'clean:temp'], ['sass', 'js', 'useref'],
+        'minify:css',
+        'inline',
+        'remove-minify',
+        callback
+    );
+});
+
+// push file contents to server
+gulp.task('push', function() {
+    return fs.readFile('dist/card.min.ejs', 'utf8', (err, data) => {
+        request.post({
+            url: 'https://glej.parlameter.si/api/card/' + cardData._id + '/updateEjs',
+            json: { ejs: data }
+        }, function(err, response) {
+            fs.writeFile('card/card.json', JSON.stringify(response.body), 'utf-8');
+            // request.get('https://glej.parlameter.si/' + response.body.group + '/' + response.body.method + '/?forceRender=true');
+        });
+    });
+});
+
+// build and push
+gulp.task('push-build', function(callback) {
+    runSequence(
+        'build',
+        'push',
+        callback
+    );
+});
+
 // remove lines task
 gulp.task('remove-minify', function() {
-    gulp.src('temp/card-inline.ejs')
+    return gulp.src('temp/card-inline.ejs')
         .pipe(deleteLines({
             'filters': [
                 /<!-- removeme -->/i
@@ -162,6 +199,28 @@ gulp.task('build', function(callback) {
         'minify:css',
         'inline',
         'remove-minify',
+        callback
+    );
+});
+
+// push file contents to server
+gulp.task('push', function() {
+    return fs.readFile('dist/card.min.ejs', 'utf8', (err, data) => {
+        request.post({
+            url: 'https://glej.parlameter.si/api/card/' + cardData._id + '/updateEjs',
+            json: { ejs: data }
+        }, function(err, response) {
+            fs.writeFile('card/card.json', JSON.stringify(response.body), 'utf-8');
+            // request.get('https://glej.parlameter.si/' + response.body.group + '/' + response.body.method + '/?forceRender=true');
+        });
+    });
+});
+
+// build and push
+gulp.task('push-build', function(callback) {
+    runSequence(
+        'build',
+        'push',
         callback
     );
 });

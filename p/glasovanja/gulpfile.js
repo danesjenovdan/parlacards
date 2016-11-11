@@ -17,6 +17,7 @@ var replace = require('gulp-replace');
 var install = require("gulp-install");
 var wrap = require('gulp-wrap');
 var request = require('request');
+var request = require('request');
 
 var debug = require('gulp-debug');
 
@@ -127,6 +128,7 @@ gulp.task('inline', function() {
         .pipe(gulp.dest('temp'));
 });
 
+// remove lines task
 // remove lines task
 gulp.task('remove-minify', function() {
   return gulp.src('temp/card-inline.ejs')
