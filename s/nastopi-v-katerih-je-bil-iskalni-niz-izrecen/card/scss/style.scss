@@ -1,52 +1,33 @@
-.member {
-  display: flex;
-  flex-wrap: wrap;
-
-  &:last-child { border-bottom: none; }
-
-  .metadata {
-    width: 50%;
-    display: flex;
-  }
-  .image {
-    float: none;
-  }
-  .name {
-    flex: 1;
-    float: none;
-    line-height: 1.4444em;
-    margin: 12px 0 0 24px;
-    width: auto;
-  }
+.person-list .person {
   .date {
-    float: none;
-    width: 100px;
-    margin: 0 36px 0 0;
+    padding-right: 34px;
     text-align: right;
-    line-height: 75px;
   }
+
   .quote {
     $line-height: 20px;
-    width: 50%;
+    flex: 3;
     font-family: Roboto Slab, Georgia, serif;
+    font-size: 14px;
     font-weight: 300;
     height: $line-height * 4;
     line-height: $line-height;
     overflow: hidden;
+    text-align: left;
     em {
       font-style: normal;
       font-weight: bold;
     }
   }
-}
 
-@media (max-width: 767px) {
-  .member {
-    .date { margin: 0; }
-
-    .metadata, .quote {
-      width: 100%;
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    .name { flex: 2; }
+    .date { padding-right: 0; }
+    .quote {
+      flex: none;
       margin-top: 10px;
+      width: calc(100% - 16px);
     }
   }
 }

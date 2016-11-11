@@ -69,19 +69,23 @@
                         <div role="tabpanel" class="tab-pane<%= index === 0 ? ' active' : '' %>" id="<%= randomId %>_<%= index %>">
                         <% } %>
 
-                        <% resultPage.forEach(function(result, index) { %>
-                        <div class="member">
-                            <div class="metadata">
-                                <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= result.person.gov_id %>.png); background-size: cover;"></div>
-                                <p class="name">
-                                    <%= result.person.name %><br/>
-                                    <%= result.person.party.acronym %>
-                                    </p>
-                                <p class="date"><%= formatDate(result.date) %></p>
-                            </div>
-                            <div class="quote"><%- result.content_t %></div>
-                        </div>
-                        <% }) %>
+                        <ul class="person-list">
+                          <% resultPage.forEach(function(result, index) { %>
+                            <li class="person">
+                              <a class="column portrait" href="/p/id/<%= result.person.id %>">
+                                <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(result.person.gov_id) %>.png" />
+                              </a>
+                              <div class="column name">
+                                <%= result.person.name %><br/>
+                                <a href="/ps/id/<%= result.person.party.id %>">
+                                  <%= result.person.party.acronym %>
+                                </a>
+                              </div>
+                              <div class="column date"><%= formatDate(result.date) %></div>
+                              <div class="column quote"><%- result.content_t %></div>
+                            </li>
+                          <% }) %>
+                        </ul>
 
                         <% if (paginationNeeded) { %>
                         </div>
