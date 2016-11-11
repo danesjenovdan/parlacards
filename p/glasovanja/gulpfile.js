@@ -187,7 +187,12 @@ gulp.task('build', function(callback) {
 
 // push file contents to server
 gulp.task('push', function() {
-    return fs.createReadStream('dist/card.min.ejs').pipe(request.post('http://some.api.url'))
+    return fs.readFile('dist/card.min.ejs', 'utf8', (err, data) => {
+        request.post({
+            url: 'http://glej.parlameter.si/api/card/' + cardData._id + '/updateEjs',
+            body: JSON.stringify({ ejs: data })
+        })
+    })
 });
 
 // build and push
