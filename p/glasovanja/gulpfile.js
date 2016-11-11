@@ -191,8 +191,11 @@ gulp.task('push', function() {
         request.post({
             url: 'https://glej.parlameter.si/api/card/' + cardData._id + '/updateEjs',
             json: { ejs: data }
-        })
-    })
+        }, function(err, response) {
+            fs.writeFile('card/card.json', JSON.stringify(response.body), 'utf-8');
+            // request.get('https://glej.parlameter.si/' + response.body.group + '/' + response.body.method + '/?forceRender=true');
+        });
+    });
 });
 
 // build and push
