@@ -1,33 +1,39 @@
-.person-list .person {
-  .date {
-    padding-right: 34px;
-    text-align: right;
-  }
-
-  .quote {
-    $line-height: 20px;
-    flex: 3;
-    font-family: Roboto Slab, Georgia, serif;
-    font-size: 14px;
-    font-weight: 300;
-    height: $line-height * 4;
-    line-height: $line-height;
-    overflow: hidden;
-    text-align: left;
-    em {
-      font-style: normal;
-      font-weight: bold;
+.person-list {
+  height: 485px;
+  .person {
+    .date {
+      padding-right: 34px;
+      text-align: right;
     }
-  }
 
-  @media (max-width: 767px) {
-    flex-wrap: wrap;
-    .name { flex: 2; }
-    .date { padding-right: 0; }
     .quote {
-      flex: none;
-      margin-top: 10px;
-      width: calc(100% - 16px);
+      $line-height: 20px;
+      flex: 3;
+      font-family: Roboto Slab, Georgia, serif;
+      font-size: 14px;
+      font-weight: 300;
+      height: $line-height * 4;
+      line-height: $line-height;
+      overflow: hidden;
+      text-align: left;
+      em {
+        font-style: normal;
+        font-weight: bold;
+      }
+    }
+
+  }
+  @media (max-width: 767px) {
+    height: auto;
+    .person {
+      flex-wrap: wrap;
+      .name { flex: 2; }
+      .date { padding-right: 0; }
+      .quote {
+        flex: none;
+        margin-top: 10px;
+        width: calc(100% - 16px);
+      }
     }
   }
 }
