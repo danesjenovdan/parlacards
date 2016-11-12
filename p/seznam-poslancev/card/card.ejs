@@ -22,21 +22,39 @@
     <link data-inline="true" rel="stylesheet" href="css/style.css">
 
     <script>
-      <% data.data = data.data.map(function(member) {
-        if (member.person.district.length === 0) {
-          member.person.formattedDistrict = 'okraj ni vnešen'
-        }
-        else {
-          member.person.formattedDistrict = member.person.district.map(function(memberDistrict) {
-            var matchingDistrict = data.districts.filter(function(district) {
-              return Object.keys(district)[0] === String(memberDistrict)
-            })[0]
-            return matchingDistrict[String(memberDistrict)]
-          }).join(', ')
-        }
+      <%
+        data.data = data.data
+          .filter(function(member) {
+            var partyMatch = true,
+                districtMatch = true
 
-        return member
-      }) %>
+            if (status.party) {
+              partyMatch = member.person.party.acronym === status.party
+            }
+            if (status.districts.length > 0) {
+              districtMatch = member.person.district.reduce(function(prevMatch, memberDistrict) {
+                return prevMatch || status.districts.indexOf(String(memberDistrict)) > -1
+              }, false)
+            }
+
+            return partyMatch && districtMatch
+          })
+          .map(function(member) {
+            if (member.person.district.length === 0) {
+              member.person.formattedDistrict = 'okraj ni vnešen'
+            }
+            else {
+              member.person.formattedDistrict = member.person.district.map(function(memberDistrict) {
+                var matchingDistrict = data.districts.filter(function(district) {
+                  return Object.keys(district)[0] === String(memberDistrict)
+                })[0]
+                return matchingDistrict[String(memberDistrict)]
+              }).join(', ')
+            }
+
+            return member
+          })
+      %>
 
       var seznamPoslancevData = <%- JSON.stringify(data); %>;
       var seznamPoslancevStatus = <%- JSON.stringify(status); %>;

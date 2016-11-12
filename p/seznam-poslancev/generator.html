@@ -29,9 +29,7 @@
         <ul class="search-dropdown-options" :class="{ visible: this.active }">
           <li
             v-for="item in filteredItems"
-            :class="{
-              'selected' : item.selected
-            }"
+            :class="{ 'selected' : item.selected }"
             @click.prevent="toggleItem(item)">
             {{ item.label }}
           </li>
@@ -57,7 +55,7 @@
             <div class="col-md-12 parties-districts">
               <ul class="parties">
                 <li v-for="party in parties" class="party-button"
-                    :class="[{ selected: currentParty === party }, party.replace(' ', '_').toLowerCase()]"
+                    :class="[{ selected: currentParty === party }, party.replace(/ /g, '_').toLowerCase()]"
                     @click="selectParty(party)">
                   {{ party }}
                 </li>
@@ -172,6 +170,9 @@
           item.selected = !item.selected
         },
         toggleDropdown: function(state, event) {
+          if (state === false) {
+            this.filter = ''
+          }
           this.active = state
         },
       }
