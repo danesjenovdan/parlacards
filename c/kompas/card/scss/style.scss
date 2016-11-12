@@ -216,3 +216,22 @@ rect {
 
     color: #ffffff;
 }
+
+
+
+
+// FLEXXER
+.kompas-flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.kompas-search-container {
+    display: flex;
+    width: 250px;
+    flex-shrink: 0;
+}
+.kompas-people-container {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
