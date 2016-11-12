@@ -547,10 +547,11 @@ function updatePeopleScroller() {
 
 $('.kompas-person-close').on('click', function(e) {
     e.stopPropagation();
+
     $(this).parent().addClass('hidden');
 
     // turn picture back to dot
-    d3.select('#_' + $(this).data('id'))
+    d3.select('#_' + $(this).parent().data('id'))
         .attr('r', function(d) {
             return 3;
         })
@@ -569,15 +570,21 @@ $('.kompas-person-close').on('click', function(e) {
         });
 
     // handle search
-    var persondata = d3.select('#_' + $(this).data('id')).datum()
+    var persondata = d3.select('#_' + $(this).parent().data('id')).datum()
     addSearchPerson(persondata.person);
 
     // if all party members are hidden, disable partyswitch
-    var partyacronym = d3.select('#_' + $(this).data('id')).datum().person.party.acronym.replace(/ /g, '_');
+    var partyacronym = d3.select('#_' + $(this).parent().data('id')).datum().person.party.acronym.replace(/ /g, '_');
 
     if ($(d3.select('#kompasgroup' + partyacronym)[0]).children('.turnedon').length === 0) {
+        var hoverclassname = partyacronym.toLowerCase() + '-hover';
+        var backgroundclassname = partyacronym.toLowerCase() + '-background';
         $('#partyswitch-' + partyacronym)
-            .removeClass('turnedon')
+            .removeClass('turnedon');
+        $('#partyswitch-' + partyacronym)
+            .removeClass(hoverclassname);
+        $('#partyswitch-' + partyacronym)
+            .removeClass(backgroundclassname);
     }
 });
 $('.kompas-person').on('click', function() {
