@@ -45,10 +45,15 @@ a.document:hover {
     margin-bottom: 15px;
 
     overflow: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.legend-container, .right-container {
+    display: flex;
 }
 .legend-container {
-    display: block;
-    float: left;
 
     height: 48px;
 
@@ -91,12 +96,6 @@ a.document:hover {
             line-height: 16px;
         }
     }
-}
-
-.right-container {
-    position: relative;
-    float: left;
-    margin-left: 30px;
 }
 
 .status-container {
