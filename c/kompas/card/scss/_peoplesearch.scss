@@ -23,7 +23,7 @@
   border-left: 0px solid;
   border-bottom: 2px solid $sadblue;
 
-  width: 250px;
+  width: 220px;
   height: 35px;
 
   position: relative;
@@ -32,7 +32,7 @@
   border-width: 0;
   height: 30px;
 
-  width: 250px;
+  width: 220px;
   margin-bottom: 5px;
 }
 .kompas-search-input:focus {
@@ -59,7 +59,7 @@
 
 .tt-menu {
     max-height: 300px;
-    width: 250px;
+    width: 220px;
     overflow-y: auto;
 
     @include card(1);
@@ -112,5 +112,10 @@
 }
 
 .tt-cursor {
+    background-color: #ededed;
+}
+
+.tt-suggestion:hover {
+    cursor: pointer;
     background-color: #ededed;
 }

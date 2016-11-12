@@ -1,23 +1,10 @@
 // (function() {
 
-function makeSwitchEvent(acronym) {
-    $('#partyswitch-' + acronym).on('click', function() {
-        if (d3.select('#kompashull' + acronym).classed('hidden')) {
-            d3.select('#kompashull' + acronym).classed('hidden', false);
-            $(this).css('background-color', color(acronym));
-        } else {
-            $(this).css('background-color', '#f0f0f0');
-            d3.select('#kompashull' + acronym).classed('hidden', true);
-        }
-        $(this).toggleClass('turnedon');
-    });
-}
-
 function makeSwitchEvent2(selection) {
     $('#partyswitch-' + d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '_')).on('click', function() {
         if (!$(this).hasClass('turnedon')) {
 
-            $(this).css('background-color', color($(this).attr('id').split('-')[1]));
+            $(this).addClass(d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '_').toLowerCase() + '-background');
 
             for (var i = 0; i < selection[0].length; i++) {
                 // show photos
@@ -30,7 +17,7 @@ function makeSwitchEvent2(selection) {
             console.log(Math.floor(selection[0].length / 2));
             centerCompass();
         } else {
-            $(this).css('background-color', '#f0f0f0');
+            $(this).removeClass(d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '_').toLowerCase() + '-background');
 
             for (var i = 0; i < selection[0].length; i++) {
                 d3.select('#personcard' + d3.select(selection[0][i]).datum().person.id).classed('hidden', true);
@@ -38,9 +25,11 @@ function makeSwitchEvent2(selection) {
                     .attr('r', function(d) {
                         return 3;
                     })
-                    .style("fill", function(d) {
-                        return color(d.person.party.acronym.replace(/ /g, '_'));
-                    })
+                    // .style("fill", function(d) {
+                    //     return color(d.person.party.acronym.replace(/ /g, '_'));
+                    // })
+                    // .classed(d3.select(selection[0][i]).datum().person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
+                    .style('fill', null)
                     .on('click', function(d) {
                         // show photo
                         showPersonPicture(d);
@@ -218,12 +207,14 @@ for (group in groupedData) {
         })
         .attr("transform", transform)
         // .style('border', '3px solid')
-        .style("fill", function(d) {
-            return color(d.person.party.acronym.replace(/ /g, '_'));
-        })
-        .style("stroke", function(d) {
-            return color(d.person.party.acronym.replace(/ /g, '_'));
-        })
+        // .style("fill", function(d) {
+        //     return color(d.person.party.acronym.replace(/ /g, '_'));
+        // })
+        .classed(groupedData[group][0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
+        .classed(groupedData[group][0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-stroke', true)
+        // .style("stroke", function(d) {
+        //     return color(d.person.party.acronym.replace(/ /g, '_'));
+        // })
         // .style('fill', function(d) {
         //     return 'url(#' + d.person.gov_id + ')'
         // })
@@ -332,12 +323,14 @@ function drawSingleHull(datum) {
         .attr("d", function(d) {
             return "M" + d[0][0] + ',' + d[0][1] + "L" + (d[0][0] + 0.1) + ',' + d[0][1] + "Z";
         })
-        .style('fill', function(d) {
-            return color(datum.person.party.acronym.replace(/ /g, '_'));
-        })
-        .style('stroke', function(d) {
-            return color(datum.person.party.acronym.replace(/ /g, '_'));
-        })
+        // .style('fill', function(d) {
+        //     return color(datum.person.party.acronym.replace(/ /g, '_'));
+        // })
+        .classed(datum.person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
+        .classed(datum.person.party.acronym.replace(/ /g, '_').toLowerCase() + '-stroke', true)
+        // .style('stroke', function(d) {
+        //     return color(datum.person.party.acronym.replace(/ /g, '_'));
+        // })
         .on('click', function() {
             d3.select('#personcard' + d3.select(this).attr('data-id')).classed('hidden', true);
             d3.select(this).remove();
@@ -381,9 +374,11 @@ function showPersonPicture(datum) {
                 .attr('r', function(d) {
                     return 3;
                 })
-                .style("fill", function(d) {
-                    return color(d.person.party.acronym.replace(/ /g, '_'));
-                })
+                // .style("fill", function(d) {
+                //     return color(d.person.party.acronym.replace(/ /g, '_'));
+                // })
+                .classed(d3.select(this).datum().person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
+                .style('fill', null)
                 .classed('turnedon', false)
                 .on('click', function(d) {
                     // show photo
@@ -400,7 +395,6 @@ function showPersonPicture(datum) {
             if ($(d3.select('#kompasgroup' + partyacronym)[0]).children('.turnedon').length === 0) {
                 $('#partyswitch-' + partyacronym)
                     .removeClass('turnedon')
-                    .css('background-color', '#f0f0f0');
             }
 
         });
@@ -449,34 +443,40 @@ function drawHull(group, dataset) {
             .attr("d", function(d) {
                 return "M" + d.join("L") + "Z";
             })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            });
+            // .style('fill', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // })
+            // .style('stroke', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // });
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-stroke', true)
     } else if (vertices.length === 2) {
         hull.datum(vertices)
             .attr("d", function(d) {
                 return "M" + d.join("L") + "Z";
             })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            });
+            // .style('fill', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // })
+            // .style('stroke', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // });
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-stroke', true)
     } else {
         hull.datum(vertices)
             .attr("d", function(d) {
                 return "M" + d[0][0] + ',' + d[0][1] + "L" + (d[0][0] + 0.1) + ',' + d[0][1] + "Z";
             })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            });
+            // .style('fill', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // })
+            // .style('stroke', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // });
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-stroke', true)
     }
 
     makeSwitchEvent(dataset[0].person.party.acronym.replace(/ /g, '_'));
@@ -494,34 +494,40 @@ function redrawHull(group, dataset) {
             .attr("d", function(d) {
                 return "M" + d.join("L") + "Z";
             })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            });
+            // .style('fill', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // })
+            // .style('stroke', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // });
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-stroke', true)
     } else if (vertices.length === 2) {
         hull.datum(vertices)
             .attr("d", function(d) {
                 return "M" + d.join("L") + "Z";
             })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            });
+            // .style('fill', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // })
+            // .style('stroke', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // });
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-stroke', true)
     } else {
         hull.datum(vertices)
             .attr("d", function(d) {
                 return "M" + d[0][0] + ',' + d[0][1] + "L" + (d[0][0] + 0.01) + ',' + d[0][1] + "Z";
             })
-            .style('fill', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            })
-            .style('stroke', function(d) {
-                return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
-            });
+            // .style('fill', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // })
+            // .style('stroke', function(d) {
+            //     return color(dataset[0].person.party.acronym.replace(/ /g, '_'));
+            // });
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
+            .classed(dataset[0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-stroke', true)
     }
 }
 
@@ -539,18 +545,19 @@ function updatePeopleScroller() {
     $('.kompas-people-wide').width(thewidth);
 }
 
-$('.kompas-person').on('click', function() {
-    // hide card
-    $(this).addClass('hidden');
+$('.kompas-person-close').on('click', function(e) {
+    e.stopPropagation();
+    $(this).parent().addClass('hidden');
 
     // turn picture back to dot
     d3.select('#_' + $(this).data('id'))
         .attr('r', function(d) {
             return 3;
         })
-        .style("fill", function(d) {
-            return color(d.person.party.acronym.replace(/ /g, '_'));
-        })
+        // .style("fill", function(d) {
+        //     return color(d.person.party.acronym.replace(/ /g, '_'));
+        // })
+        .style('fill', null)
         .classed('turnedon', false)
         .on('click', function(d) {
             // show photo
@@ -571,13 +578,11 @@ $('.kompas-person').on('click', function() {
     if ($(d3.select('#kompasgroup' + partyacronym)[0]).children('.turnedon').length === 0) {
         $('#partyswitch-' + partyacronym)
             .removeClass('turnedon')
-            .css('background-color', '#f0f0f0');
     }
-
 });
+$('.kompas-person').on('click', function() {
+    document.location.href = 'https://skoraj.parlameter.si/p/id/' + $(this).data('id');
 
-$('.kompas-person').each(function(i, e) {
-    $(e).children('.kompas-person-party').css('background-color', color($(e).data('acronym')));
 });
 
 var poslancisearch = new Bloodhound({

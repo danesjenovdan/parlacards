@@ -103,34 +103,23 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="hidden-xs col-sm-2 col-md-2">
-                            <% for (party_i in parties) { %>
-                                <div class="party-button <%= parties[party_i].replace(/ /g, '_') %>"></div>
-                            <% } %>
-                        <div class="kompas-stranke">
-
+                    <div class="kompas-parties-container">
                             <% for (party_i in parties) {
-                            %>
-                                <div data-acronym="<%= parties[party_i].replace(' ', '_') %>" class="noselect kompas-stranka <%= parties[party_i].replace(' ', '_') %>" id="partyswitch-<%= parties[party_i].replace(' ', '_') %>">
-                                    <%= parties[party_i] %>
-                                    <br />
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                </div>
-                            <%
-                            }
-                            %>
-                        </div>
+                                if (parties[party_i].toLowerCase().indexOf('nep') === -1) { %>
+                                <div data-acronym="<%= parties[party_i].replace(/ /g, '_') %>" class="party-button noselect <%= parties[party_i].replace(/ /g, '_').toLowerCase() %> <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-hover" id="partyswitch-<%= parties[party_i].replace(/ /g, '_') %>"><%= parties[party_i] %></div>
+                            <%  }
+                            } %>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="hidden-xs kompas-people-container">
+                <div class="col-xs-12 hidden-xs kompas-people-container">
                     <div class="kompas-people">
                         <div class="kompas-people-wide">
                             <% for (person_i in data.data) { %>
                                 <div class="kompas-person hidden noselect" id="personcard<%= data.data[person_i]['person']['id'] %>" data-id="<%= data.data[person_i]['person']['id'] %>" data-acronym="<%= data.data[person_i]['person']['party']['acronym'] %>">
 
-                                    <div class="kompas-person-party">
+                                    <div class="kompas-person-party <%= data.data[person_i]['person']['party']['acronym'].replace(/ /g, '_').toLowerCase() %>-background">
                                         <%= data.data[person_i]['person']['party']['acronym'] %>
                                     </div>
                                     <div class="kompas-person-internal-container">
@@ -147,7 +136,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-10 col-md-10">
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
                     <div id="kompas-scatter"></div>
                 </div>
             </div>
