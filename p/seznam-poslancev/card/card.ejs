@@ -22,49 +22,43 @@
     <link data-inline="true" rel="stylesheet" href="css/style.css">
 
     <script>
-      <%
-        data.data = data.data
-          .filter(function(member) {
-            var partyMatch = true,
-                districtMatch = true
+      <% data.data = data.data.filter(function(member) {
+        var partyMatch = true,
+        districtMatch = true;
 
-            if (status.party) {
-              partyMatch = member.person.party.acronym === status.party
-            }
-            if (status.districts.length > 0) {
-              districtMatch = member.person.district.reduce(function(prevMatch, memberDistrict) {
-                return prevMatch || status.districts.indexOf(String(memberDistrict)) > -1
-              }, false)
-            }
+        if (state.party) {
+          partyMatch = member.person.party.acronym === state.party;
+        }
+        if (state.districts.length > 0) {
+          districtMatch = member.person.district.reduce(function(prevMatch, memberDistrict) {
+            return prevMatch || state.districts.indexOf(String(memberDistrict)) > -1;
+          }, false);
+        }
 
-            return partyMatch && districtMatch
-          })
-          .map(function(member) {
-            if (member.person.district.length === 0) {
-              member.person.formattedDistrict = 'okraj ni vnešen'
-            }
-            else {
-              member.person.formattedDistrict = member.person.district.map(function(memberDistrict) {
-                var matchingDistrict = data.districts.filter(function(district) {
-                  return Object.keys(district)[0] === String(memberDistrict)
-                })[0]
-                return matchingDistrict[String(memberDistrict)]
-              }).join(', ')
-            }
+        return partyMatch && districtMatch;
+      }).map(function(member) {
+        if (member.person.district.length === 0) {
+          member.person.formattedDistrict = 'okraj ni vnešen';
+        }
+        else {
+          member.person.formattedDistrict = member.person.district.map(function(memberDistrict) {
+            var matchingDistrict = data.districts.filter(function(district) {
+              return Object.keys(district)[0] === String(memberDistrict);
+            })[0];
+            return matchingDistrict[String(memberDistrict)];
+          }).join(', ');
+        }
 
-            return member
-          })
-      %>
-
+        return member;
+      }); %>
       var seznamPoslancevData = <%- JSON.stringify(data); %>;
-      var seznamPoslancevStatus = <%- JSON.stringify(status); %>;
+      var seznamPoslancevState = <%- JSON.stringify(state); %>;
     </script>
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
 
-    <%
-    var columns = {
+    <% var columns = {
       presence_sessions: {
         label: 'Prisotnost na sejah DZ',
         unit: 'percent'
@@ -90,9 +84,8 @@
       },
       problematicno: {
         label: 'Problematično besedje'
-      },
-    };
-    %>
+      }
+    }; %>
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
@@ -106,8 +99,8 @@
               <div data-sort="name" class="column wider sort">Ime</div>
               <div data-sort="party" class="column">PS</div>
               <div data-sort="district" class="column">Okraj</div>
-              <% if (status && status.analysis) { %>
-                <div data-sort="analysis" class="column"><%= columns[status.analysis].label %></div>
+              <% if (state && state.analysis) { %>
+                <div data-sort="analysis" class="column"><%= columns[state.analysis].label %></div>
               <% } %>
             </li>
             <% data.data.forEach(function(result, index) { %>
@@ -122,9 +115,9 @@
                   </a>
               </div>
               <div class="column"><%= result.person.formattedDistrict %></div>
-              <% if (status && status.analysis) { %>
+              <% if (state && state.analysis) { %>
                 <div class="column">
-                  <%= result.results[status.analysis] + (columns[status.analysis].unit === 'percent' ? '%' : '') %>
+                  <%= result.results[state.analysis] + (columns[state.analysis].unit === 'percent' ? '%' : '') %>
                 </div>
               <% } %>
             </li>
