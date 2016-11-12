@@ -212,7 +212,7 @@ bigdata.sort(function(x, y) {
 
 // global stuff for the chart
 var margin = {
-    top: 30,
+    top: 50,
     right: 30,
     bottom: 30,
     left: 30
@@ -236,6 +236,9 @@ var SI = d3.locale({
 });
 
 var parseDate = d3.time.format("%Y-%m-%dT%H:%M:%SZ").parse;
+var bisectDate = d3.bisector(function(d) {
+        return d.date;
+    }).left;
 data.forEach(function(d) {
     d.date = parseDate(d.date);
     d.occurences = +d.occurences;
@@ -259,8 +262,11 @@ var svg = d3.select(".timechart").append("svg")
 
 function createSmallChart(data) {
 
-    svg.selectAll(".bigbarcontainer").remove();
+    svg.selectAll(".dot").remove();
+    svg.selectAll('.smalldata g path').remove();
+    d3.select('.overlay').remove();
     svg.selectAll(".axis").remove();
+    svg.on('mousemove', null);
 
     var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
 
@@ -399,11 +405,242 @@ function createBigChart(data) {
         });
 }
 
+function createLineChart(data) {
+    svg.selectAll(".smallbarcontainer").remove();
+    svg.selectAll(".axis").remove();
+    
+    d3.select(svg.node().parentNode).append("rect")
+      .attr("class", "overlay")
+      .attr("width", '100%')
+      .attr("height", '100%')
+      .style('fill', 'transparent')
+      .on("mouseover", function() { focus.style("display", null); })
+      .on("mouseout", function() { focus.style("display", "none"); })
+      .on("mousemove", mousemove);
+
+    var x = d3.time.scale()
+        .range([0, width]);
+
+    var y = d3.scale.linear()
+        .range([height, 0]);
+
+    // x.domain(data.map(function(d) { return d.date; }));
+    x.domain(d3.extent(data, function(d) {
+        return d.date;
+    }));
+    y.domain([0, d3.max(data, function(d) { return d.occurences; })]);
+    // y.domain(d3.extent(data, function(d) {
+    //     return d.close;
+    // }));
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom")
+        //.tickValues(x.domain().filter(function(d, i) { return !(i % 5); }))
+        .tickFormat(SI.timeFormat('%b %y'));
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+
+    svg.append("g")
+        .attr("class", "x axis bigdata")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+    
+    var line = d3.svg.line()
+        .x(function(d) {
+            console.log('date' + x(d.date));
+            return x(d.date);
+        })
+        .y(function(d) {
+            console.log(d);
+            console.log(y(d.occurences));
+            return y(d.occurences);
+        });
+
+    // data.forEach(function(d) {
+    //     console.log(d);
+    //     console.log(d.date);
+    //     d.date = parseDate(d.date);
+    //     console.log(d.date);
+    //     d.close = +d.close;
+    // });
+
+    console.log(line);
+    svg.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .attr("d", line);
+
+    function mousemove() {
+        var x0 = x.invert(d3.mouse(this)[0] - margin.left),
+            i = bisectDate(data, x0, 1),
+            d0 = data[i - 1],
+            d1 = data[i],
+            d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+
+        var circle = x0 - d0.date > d1.date - x0 ? d3.selectAll('.dot circle')[0][i] : d3.selectAll('.dot circle')[0][i - 1];
+
+        if (d3.select(circle).classed('hovered')) {
+
+        } else {
+            d3.select('.dot circle.hovered')
+                .classed('hovered', false)
+                .transition()
+                .duration(200)
+                .attr('r', 4);
+            
+            d3.select(circle)
+                .classed('hovered', true)
+                .transition()
+                .duration(200)
+                .ease('linear')
+                .attr('r', 7);
+        }
+
+        if (2 < i && i < data.length - 3.5) {
+            focus.attr("transform", "translate(" + x(d.date) + "," + y(d.occurences) + ")");
+        } else if (i < 3) {
+            focus.attr("transform", "translate(" + x(data[2].date) + "," + y(d.occurences) + ")");
+        } else {
+            focus.attr("transform", "translate(" + x(data[data.length - 4].date) + "," + y(d.occurences) + ")");
+        }
+        
+        focus.select("text").text(SI.timeFormat('%B %Y')(d.date) + ' | ' + d.occurences);
+    }
+
+    svg.selectAll("g.dot")
+        .data(data)
+        .enter()
+        .append("g")
+        .attr("class", "dot")
+        .append("circle")
+        .attr("r", 4)
+        .attr("cx", function(d, i) {
+            console.log(d.date);
+            return x(d.date);
+        })
+        .attr("cy", function(d, i) {
+            return y(d.occurences);
+        })
+        .on("mouseover", function(d) { // setup tooltip
+            tooltipdiv.transition()
+                .duration(200)
+                .style("opacity", .9);
+
+            // console.log($(this).parents('#kompas-scatter')));
+            tooltipdiv.html(d.occurences)
+                .style("left", (d3.event.pageX - (tooltipdiv.node().getBoundingClientRect().width / 2) - $('.timechart').offset().left + 10 + "px"))
+                .style("top", (d3.event.pageY - $('.timechart').offset().top - 30) + "px");
+            
+            console.log('ping');
+            })
+
+        .on("mouseout", function(d) {
+            tooltipdiv.transition()
+                .duration(200)
+                .style("opacity", 0);
+        });
+
+        var focus = svg.append("g")
+            .attr("class", "focus")
+            .style("display", "none");
+
+        // var focuscircle = focus.append("circle")
+        //     .attr("r", 4);
+        
+        focus.append('rect')
+            .attr('width', 150)
+            .attr('height', 25)
+            .attr('y', -35)
+            .attr('x', -75)
+            .style('rx', 3)
+            .style('yx', 3);
+
+        focus.append("text")
+            .style('fill', '#ffffff')
+            .attr('text-anchor', 'middle')
+            .attr('y', -18);
+
+    // svg.selectAll('g.dot')
+    //     .data(data)
+    //     .append('text')
+    //     // .attr('dx', function(d) {
+    //     //     return -20
+    //     // })
+    //     // .attr("cx", function(d, i) {
+    //     //     console.log(d.date);
+    //     //     return x(d.date);
+    //     // })
+    //     // .attr("cy", function(d, i) {
+    //     //     return y(d.close);
+    //     // })
+    //     .attr('transform', function(d) {
+    //         return 'translate(' + (x(d.date) - 8) + ',' + (y(d.close) + 5) + ')'
+    //     })
+    //     .text(function(d) {
+    //         return d.close
+    //     });
+
+    // var barcontainers = svg.selectAll(".bigbarcontainer")
+    //     .remove()
+    //     .data(data)
+    //     .enter()
+    //     .append('g')
+    //     .attr('class', 'bigbarcontainer')
+    //     .on('mouseover', function(d) {
+    //         var a = d3.select(this).datum();
+    //         var b = d3.selectAll('.tick')
+    //             .filter(function(d) {
+    //                 return a.date === d;
+    //             })
+    //             .select('text')
+    //             .style('opacity', 1);
+    //     })
+    //     .on('mouseleave', function(d) {
+    //         var a = d3.select(this).datum();
+    //         var b = d3.selectAll('.tick')
+    //             .filter(function(d) {
+    //                 return a.date === d;
+    //             })
+    //             .select('text')
+    //             .style('opacity', 0);
+    //     });;
+
+    // barcontainers.append('text')
+    //     .text(function(d) {
+    //         return d.occurences;
+    //     })
+    //     .attr("x", function(d) {
+    //         return x(d.date);
+    //     })
+    //     .attr("y", function(d) {
+    //         return y(d.occurences);
+    //     })
+    //     .attr('width', x.rangeBand)
+    //     .attr('text-anchor', 'middle')
+    //     .attr('transform', 'translate(' + x.rangeBand()/2 + ', -4)');
+
+    // barcontainers.append("rect")
+    //     .attr("class", "bar")
+    //     .attr("x", function(d) {
+    //         return x(d.date);
+    //     })
+    //     .attr("width", x.rangeBand())
+    //     .attr("y", function(d) {
+    //         return y(d.occurences);
+    //     })
+    //     .attr("height", function(d) {
+    //         return height - y(d.occurences);
+    //     });
+}
+
 createSmallChart(smalldata);
 
 $('#smalldata' + random_id).on('click', function() {
     createSmallChart(smalldata);
 });
 $('#bigdata' + random_id).on('click', function() {
-    createBigChart(bigdata);
+    createLineChart(bigdata);
 });
