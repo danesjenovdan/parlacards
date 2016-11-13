@@ -198,6 +198,10 @@ rect {
 
         font-size: 22px;
         line-height: 26px;
+
+        &:hover {
+            font-weight: 900;
+        }
     }
 }
 

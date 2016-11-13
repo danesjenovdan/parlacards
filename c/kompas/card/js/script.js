@@ -393,9 +393,15 @@ function showPersonPicture(datum) {
             var partyacronym = datum.person.party.acronym.replace(/ /g, '_');
 
             if ($(d3.select('#kompasgroup' + partyacronym)[0]).children('.turnedon').length === 0) {
+                var hoverclassname = partyacronym.toLowerCase() + '-hover';
+                var backgroundclassname = partyacronym.toLowerCase() + '-background';
                 $('#partyswitch-' + partyacronym)
                     .removeClass('turnedon')
-            }
+                $('#partyswitch-' + partyacronym)
+                    .removeClass(hoverclassname);
+                $('#partyswitch-' + partyacronym)
+                    .removeClass(backgroundclassname);
+                }
 
         });
 }
