@@ -683,3 +683,9 @@ function addSearchPerson(datum) {
     poslancisearch.initialize(true);
 }
 // })();
+
+if (kompasState.people.length > 0) {
+    for (person_i in kompasState.people) {
+        showPersonPicture(d3.select('#_' + kompasState.people[person_i].id).datum());
+    }
+}
