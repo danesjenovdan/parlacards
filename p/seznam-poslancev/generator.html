@@ -235,8 +235,7 @@
     },
     created: function() {
       var that = this
-      // This should poll the api instead of this static json
-      $.getJSON('https://api.myjson.com/bins/4f734', function(response) {
+      $.getJSON('https://analize.parlameter.si/v1/p/getListOfMembers/', function(response) {
         that.districts = response.districts.map(function(district) {
           var id = Object.keys(district)[0]
           return {
