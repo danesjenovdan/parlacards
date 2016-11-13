@@ -32,7 +32,7 @@
     <% function round(value, precision) {
       var multiplier = Math.pow(10, precision || 0);
       return Math.round(value * multiplier) / multiplier;
-    }
+    };
 
     var analyses = {
       seat_count: {
@@ -68,7 +68,7 @@
     var analysis = state && state.analysis ? state.analysis : 'seat_count';
     data.data = data.data.sort(function(a, b) {
       return a.results[analysis] > b.results[analysis] ? -1 : (a.results[analysis] < b.results[analysis] ? 1 : 0)
-    })
+    });
     var maxValue = data.data[0].results[analysis]; %>
 
     <!-- everything above here is part of the page and not part of the card -->
@@ -86,9 +86,9 @@
               </div>
               <div class="column chart">
                 <% if (state && state.analysis) {
-                     var rawValue = result.results[state.analysis]
-                     var displayValue = round(rawValue, 1) + (analyses[state.analysis].unit === 'percent' ? '%' : '')
-                     var chartWidth = rawValue === 0 ? '1px' : rawValue / maxValue * 80 + '%'
+                     var rawValue = result.results[state.analysis];
+                     var displayValue = round(rawValue, 1) + (analyses[state.analysis].unit === 'percent' ? '%' : '');
+                     var chartWidth = rawValue === 0 ? '1px' : rawValue / maxValue * 80 + '%';
                   %>
                   <div class="progress hugebar">
                     <div class="progress-bar funblue" role="progressbar" style="width: <%= chartWidth %>">
