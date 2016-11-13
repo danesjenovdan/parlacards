@@ -82,6 +82,152 @@ rect {
     stroke-width: 1;
 }
 
+/* kompas switches */
+.kompas-stranke {
+    width: 52px;
+    float: right;
+}
+.kompas-stranka {
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+
+    text-align: center;
+
+    border: 1px solid #d5d5d5;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    margin-bottom: 1px;
+
+    .glyphicon {
+        display: none;
+    }
+
+    background-color: #f0f0f0;
+}
+.party-button.turnedon {
+    color: #ffffff;
+}
+.kompas-people {
+    width: 100%;
+    height: 80px;
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+.kompas-people-wide {
+    height: 80px;
+    overflow: hidden;
+    padding-left: 5px;
+}
+.kompas-person {
+
+    display: block;
+    overflow: hidden;
+
+    float: left;
+
+    margin-top: 5px;
+    margin-right: 20px;
+
+    padding: 4px;
+
+    height: 60px;
+
+    position: relative;
+
+    padding-left: 95px;
+
+    background-color: #ffffff;
+
+    @include card(1);
+
+    transition: box-shadow 0.2s;
+
+    &:hover {
+        @include card(2);
+        cursor: pointer;
+    }
+
+    .kompas-person-party {
+        position: absolute;
+        transform: rotate(-90deg);
+        // transform: translate(-30px, 100px);
+        top: 20px;
+        left: -21px;
+        width: 60px;
+        height: 20px;
+        text-align: center;
+        line-height: 22px;
+
+        color: $white;
+        font-weight: 300;
+    }
+
+    .kompas-person-score {
+        @extend .kompas-person-party;
+
+        transform: none;
+
+        height: 60px;
+        width: auto;
+
+        top: 0;
+        left: 19px;
+
+        padding: 6px 10px 0px 10px;
+        background-color: #009CDD;
+        border-width: 0;
+        line-height: 16px;
+    }
+
+    .kompas-person-internal-container {
+        display: block;
+        float: left;
+        .kompas-person-image {
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            border-radius: 50%;
+
+            float: left;
+            margin-top: 5px;
+        }
+        .kompas-person-name {
+            text-align: center;
+            display: block;
+            float: left;
+
+            margin-left: 15px;
+            margin-right: 20px;
+            line-height: 50px;
+        }
+    }
+
+    .kompas-person-close {
+        position: absolute;
+        top: 0;
+        right: 4px;
+        cursor: pointer;
+
+        font-size: 22px;
+        line-height: 26px;
+
+        &:hover {
+            font-weight: 900;
+        }
+    }
+}
+
+.dot.selected {
+    filter: url(#glow);
+}
+
 .kompastooltip {
     position: absolute;
     text-align: center;
@@ -93,4 +239,41 @@ rect {
     opacity: 0;
 
     color: #ffffff;
+}
+
+// FLEXXER
+.kompas-flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /*justify-content: space-between;*/
+    padding-bottom: 12px;
+}
+.kompas-search-container {
+    display: flex;
+    width: 220px;
+    flex-shrink: 0;
+    margin-top: 16px;
+    margin-right: 20px;
+}
+.kompas-parties-container {
+    display: flex;
+    overflow: hidden;
+
+    .party-button {
+        width: 51px;
+        flex: 1;
+    }
+}
+
+.party-button {
+    margin-left: 3px;
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+#kompas-scatter {
+    @include card(1);
+    margin-bottom: 10px;
 }

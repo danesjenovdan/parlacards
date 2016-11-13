@@ -28,6 +28,7 @@ function makeSwitchEvent(acronym) {
         var partymembers = d3.select('#kompasgroup' + $(this).data('acronym')).selectAll('.dot');
 
         if (!$(this).hasClass('turnedon')) { // !.turnedon
+            $(this).addClass(acronym.replace(/ /g, '_').toLowerCase() + '-background');
             partymembers.classed('selected', true);
             $('#vocabulary-chart').addClass('selection-active');
 
@@ -39,6 +40,8 @@ function makeSwitchEvent(acronym) {
             });
 
         } else { // .turnedon
+            
+            $(this).removeClass(acronym.replace(/ /g, '_').toLowerCase() + '-background');
             partymembers.classed('selected', false);
             $(this).removeClass('turnedon');
 
@@ -225,12 +228,14 @@ function renderGraph() {
                 return d.radius;
             })
             .attr("transform", transform)
-            .style("stroke", function(d) {
-                return color(d.person.party.acronym.replace(' ', '_'));
-            })
+            // .style("stroke", function(d) {
+            //     return color(d.person.party.acronym.replace(' ', '_'));
+            // })
             .style('fill', function(d) {
                 return 'url(#' + d.person.gov_id + ')'
             })
+            // .classed(groupedNodes[group][0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
+            .classed(groupedNodes[group][0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-stroke', true)
             .on('click', function(d) {
                 exposeMe(d);
             })
@@ -394,10 +399,6 @@ $('.kompas-person').on('click', function() {
     addSearchPerson(d3person.datum().person.name, d3person.datum().person.id);
 });
 
-$('.kompas-person').each(function(i, e) {
-    $(e).children('.kompas-person-party').css('background-color', color($(e).data('acronym')));
-});
-
 
 var poslancisearch = new Bloodhound({
     'datumTokenizer': Bloodhound.tokenizers.obj.whitespace('name'),
@@ -420,7 +421,7 @@ function updatePeopleSearch() {
         'display': 'name',
         'source': poslancisearch,
         'templates': {
-            'empty': '<div class="searchheader">Med poslanci ni zadetkov</div>',
+            'empty': '<div class="searchheader results">POSLANKE IN POSLANCI</div><div class="searchperson-container">Ni zadetkov.</div>',
             'suggestion': function(datum) {
                 return '<div class="searchperson-container"><div class="avgminimg img-circle" style="width: 40px; height: 40px; background-image: url(\'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + datum.gov_id + '.png\'); background-size: cover;"></div>' + datum.name + '</div>'
             },
@@ -432,7 +433,7 @@ function updatePeopleSearch() {
         'display': 'acronym',
         'source': skupinesearch,
         'templates': {
-            'empty': '<div class="searchheader">Med PS ni zadetkov</div>',
+            'empty': '<div class="searchheader results">POSLANSKE SKUPINE</div><div class="searchperson-container">Ni zadetkov.</div>',
             'suggestion': function(datum) {
                 return '<div class="searchperson-container"><div class="avgminimg avgminimg-party img-circle" style="width: 40px; height: 40px;"></div>' + datum.acronym + '</div>'
             },

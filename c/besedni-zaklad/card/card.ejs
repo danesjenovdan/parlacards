@@ -23,7 +23,7 @@
     <link data-inline="true" rel="stylesheet" href="css/style.css">
 
     <script>
-        var data = <%- JSON.stringify(data); %>
+        var data = <%- JSON.stringify(data.data); %>
     </script>
 
 </head> <!-- removeme -->
@@ -45,7 +45,7 @@
             return parties;
         }
 
-        var parties = getParties(data);
+        var parties = getParties(data.data);
 
         function getPartyObjects(data) {
 
@@ -63,88 +63,102 @@
     %>
 
     <script>
-        var parties_data = <%- JSON.stringify(getPartyObjects(data)); %>;
+        var parties_data = <%- JSON.stringify(getPartyObjects(data.data)); %>;
+        var vocabsize_state = <%- JSON.stringify(state); %>;
     </script> <!-- TODO this is a dirty hack -->
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
         <div class="card-header">
             <div class="card-header-border"></div>
-            <h1>Besedni zaklad</h1>
+            <h1>Raznolikost besedja</h1>
             <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
             <div class="row">
-                <div class="hidden-xs col-sm-4 col-md-2">
-                    <div class="kompas-search">
-                        <%
-                            var searchpeople = [];
+                <div class="col-md-12 kompas-flex-container">
+                    <div class="hidden-xs kompas-search-container">
+                        <div class="kompas-search">
+                            <%
+                                var searchpeople = [];
 
-                            var kompas_data = data;
+                                var kompas_data = data;
 
-                            for (person_i in kompas_data) {
-                                searchpeople.push(kompas_data[person_i]['person']);
-                            }
-                        %>
-                        <script>var searchpeople = <%- JSON.stringify(searchpeople) %>;</script>
-                        <input type="text" class="kompas-search-input" />
-                          <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" class="search-icon">
+                                for (person_i in kompas_data.data) {
+                                    searchpeople.push(kompas_data.data[person_i]['person']);
+                                }
+                            %>
+                            <script>var searchpeople = <%- JSON.stringify(searchpeople) %>;</script>
+                            <input type="text" class="kompas-search-input" id="the-kompas-search-input" />
+                            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" class="search-icon">
 
-                           <g>
-                            <title>background</title>
-                            <rect fill="none" id="canvas_background" height="102" width="102" y="-1" x="-1"/>
-                           </g>
-                           <g>
-                            <title>Layer 1</title>
-                            <path class="svg_1" d="m101,93.254997l-31.361,-31.361996c4.902,-6.543003 7.556999,-14.458 7.556999,-22.780003c0,-10.179998 -3.965996,-19.747999 -11.163002,-26.945999c-7.195995,-7.199 -16.763996,-11.162 -26.945995,-11.162c-10.179001,0 -19.748001,3.963 -26.945002,11.162c-14.856,14.856001 -14.856,39.032001 -0.002,53.889999c7.197999,7.198997 16.766999,11.163002 26.945998,11.163002c8.338001,0 16.264,-2.663002 22.815002,-7.581001l31.356003,31.356003l7.742996,-7.740005zm-61.915001,-25.962997c-7.525999,0 -14.603998,-2.931 -19.926998,-8.251999c-5.323001,-5.323002 -8.254001,-12.401001 -8.254001,-19.929001c0,-7.528 2.932,-14.604 8.255,-19.927c5.323,-5.321 12.400999,-8.252 19.926998,-8.252c7.529003,0 14.606003,2.931 19.926003,8.252999c10.987999,10.987001 10.987999,28.866999 0,39.855001c-5.322002,5.320999 -12.396999,8.251999 -19.927002,8.251999z" fill="#505050"/>
-                           </g>
-                          </svg>
+                            <g>
+                                <title>background</title>
+                                <rect fill="none" id="canvas_background" height="102" width="102" y="-1" x="-1"/>
+                            </g>
+                            <g>
+                                <title>Layer 1</title>
+                                <path class="svg_1" d="m101,93.254997l-31.361,-31.361996c4.902,-6.543003 7.556999,-14.458 7.556999,-22.780003c0,-10.179998 -3.965996,-19.747999 -11.163002,-26.945999c-7.195995,-7.199 -16.763996,-11.162 -26.945995,-11.162c-10.179001,0 -19.748001,3.963 -26.945002,11.162c-14.856,14.856001 -14.856,39.032001 -0.002,53.889999c7.197999,7.198997 16.766999,11.163002 26.945998,11.163002c8.338001,0 16.264,-2.663002 22.815002,-7.581001l31.356003,31.356003l7.742996,-7.740005zm-61.915001,-25.962997c-7.525999,0 -14.603998,-2.931 -19.926998,-8.251999c-5.323001,-5.323002 -8.254001,-12.401001 -8.254001,-19.929001c0,-7.528 2.932,-14.604 8.255,-19.927c5.323,-5.321 12.400999,-8.252 19.926998,-8.252c7.529003,0 14.606003,2.931 19.926003,8.252999c10.987999,10.987001 10.987999,28.866999 0,39.855001c-5.322002,5.320999 -12.396999,8.251999 -19.927002,8.251999z" fill="#505050"/>
+                            </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="kompas-parties-container">
+                            <% for (party_i in parties) {
+                                var selected = false;
+                                if (state.parties.length > 0) {
+                                    for (state_party_i in state.parties) {
+                                        if (state.parties[state_party_i].acronym === parties[party_i]) {
+                                            selected = true;
+                                        }
+                                    }
+                                }
+                                if (parties[party_i].toLowerCase().indexOf('nep') === -1) { %>
+                                <div data-acronym="<%= parties[party_i].replace(/ /g, '_') %>" class="<% if (selected) { %>turnedon <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-background<% } %> party-button noselect <%= parties[party_i].replace(/ /g, '_').toLowerCase() %> <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-hover" id="partyswitch-<%= parties[party_i].replace(/ /g, '_') %>"><%= parties[party_i] %></div>
+                                <%  }
+                            } %>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-8 col-md-10">
+            </div>
+            <div class="row">
+                <div class="col-xs-12 hidden-xs kompas-people-container">
                     <div class="kompas-people">
                         <div class="kompas-people-wide">
-                        <% for (person_i in data) { %>
-                            <div class="kompas-person hidden noselect" id="personcard<%= data[person_i]['person']['id'] %>" data-id="<%= data[person_i]['person']['id'] %>" data-acronym="<%= data[person_i]['person']['party']['acronym'] %>">
+                            <% for (person_i in data.data) {
+                                var selected = false;
+                                if (state.people.length > 0) {
+                                    for (state_person_i in state.people) {
+                                        if (state.people[state_person_i].id === data.data[person_i].person.id) {
+                                            selected = true;
+                                        }
+                                    }
+                                }%>
+                                <div class="kompas-person <% if (!selected) { %>hidden<% } %> noselect" id="personcard<%= data.data[person_i]['person']['id'] %>" data-id="<%= data.data[person_i]['person']['id'] %>" data-acronym="<%= data.data[person_i]['person']['party']['acronym'] %>">
 
-                                <div class="kompas-person-party">
-                                    <%= data[person_i]['person']['party']['acronym'] %>
-                                </div>
-                                <div class="kompas-person-score">
-                                    Besedni<br />zaklad<br />
-                                    <span class="score"><%= data[person_i]['score'] %></span>
-                                </div>
-                                <div class="kompas-person-internal-container">
-                                    <div class="kompas-person-image" style="background-image: url(https://cdn.parlameter.si/v1/img/people/<%= data[person_i]['person']['gov_id'] %>.png)"></div>
-                                    <div class="kompas-person-name">
-                                        <%= data[person_i]['person']['name'] %>
+                                    <div class="kompas-person-party <%= data.data[person_i]['person']['party']['acronym'].replace(/ /g, '_').toLowerCase() %>-background">
+                                        <%= data.data[person_i]['person']['party']['acronym'] %>
+                                    </div>
+                                    <div class="kompas-person-score">
+                                        Besedni<br />zaklad<br />
+                                        <span class="score"><%= data.data[person_i]['score'] %></span>
+                                    </div>
+                                    <div class="kompas-person-internal-container">
+                                        <div class="kompas-person-image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.data[person_i]['person']['gov_id'] %>.png)"></div>
+                                        <div class="kompas-person-name">
+                                            <%= data.data[person_i]['person']['name'] %>
+                                        </div>
+                                    </div>
+                                    <div class="kompas-person-close">
+                                        ×
                                     </div>
                                 </div>
-                                <div class="kompas-person-close">
-                                    ×
-                                </div>
-                            </div>
-                        <% } %>
+                            <% } %>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="hidden-xs col-sm-2 col-md-2">
-                    <div class="kompas-stranke">
-                        <% for (party_i in parties) {
-                        %>
-                            <div data-acronym="<%= parties[party_i].replace(' ', '_') %>" class="noselect kompas-stranka <%= parties[party_i].replace(' ', '_') %>" id="partyswitch-<%= parties[party_i].replace(' ', '_') %>">
-                                <%= parties[party_i] %>
-                                <br />
-                                <i class="glyphicon glyphicon-ok"></i>
-                            </div>
-                        <%
-                        }
-                        %>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-10 col-md-10">
+                <div class="col-xs-12">
                     <div id="vocabulary-chart"></div>
                 </div>
             </div>

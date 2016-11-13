@@ -1,10 +1,29 @@
+// Gives a card depth effect.
+// @param {Number} $depth - depth level (between 1 and 5)
+// @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+// @requires {function} top-shadow
+// @requires {function} bottom-shadow
+@mixin card($depth) {
+    @if $depth < 1 {
+        box-shadow: none;
+    } @else if $depth > 5 {
+        @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+    } @else {
+        @include css3-prefix('box-shadow', bottom-shadow($depth) + ', ' + top-shadow($depth));
+    }
+}
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, .4)) {
+    @include css3-prefix('box-shadow', $x $y $blur $color);
+}
+
 .kompas-search {
   border-top: 0px solid;
   border-right: 0px solid;
   border-left: 0px solid;
   border-bottom: 2px solid $sadblue;
 
-  width: 200px;
+  width: 220px;
   height: 35px;
 
   position: relative;
@@ -12,7 +31,9 @@
 .kompas-search-input {
   border-width: 0;
   height: 30px;
-  width: 170px;
+
+  width: 220px;
+  margin-bottom: 5px;
 }
 .kompas-search-input:focus {
   outline: none;
@@ -34,148 +55,11 @@
   }
 }
 
-
-/* kompas switches */
-.kompas-stranke {
-    width: 52px;
-    float: right;
-}
-.kompas-stranka {
-    width: 50px;
-    height: 50px;
-    padding-top: 10px;
-
-    text-align: center;
-
-    border: 1px solid #d5d5d5;
-
-    font-size: 10px;
-
-    cursor: pointer;
-
-    margin-bottom: 1px;
-
-    .glyphicon {
-        display: none;
-    }
-
-    background-color: #f0f0f0;
-}
-.kompas-stranka.turnedon {
-    color: #ffffff;
-
-    .glyphicon {
-        display: inline-block;
-    }
-}
-.kompas-people {
-    width: 100%;
-    height: 70px;
-    overflow-x: visible;
-    overflow-y: hidden;
-    margin-bottom: 5px;
-}
-.kompas-people-wide {
-    height: 70px;
-    overflow: hidden;
-    padding-left: 5px;
-}
-.kompas-person {
-
-    display: block;
-    overflow: hidden;
-
-    float: left;
-
-    margin-top: 5px;
-    margin-right: 20px;
-
-    padding: 4px;
-    padding-left: 95px;
-
-    height: 60px;
-
-    position: relative;
-
-    background-color: #ffffff;
-
-    @include card(1);
-
-    .kompas-person-party {
-        position: absolute;
-        transform: rotate(-90deg);
-        // transform: translate(-30px, 100px);
-        background-color: #ff0000;
-        top: 20px;
-        left: -21px;
-        width: 60px;
-        height: 20px;
-        text-align: center;
-        line-height: 22px;
-
-        color: $white;
-        font-weight: 300;
-    }
-
-    .kompas-person-score {
-        @extend .kompas-person-party;
-
-        transform: none;
-
-        height: 60px;
-        width: auto;
-
-        top: 0;
-        left: 19px;
-
-        padding: 6px 10px 0px 10px;
-        background-color: #009CDD;
-        border-width: 0;
-        line-height: 16px;
-    }
-
-    .kompas-person-internal-container {
-        display: block;
-        float: left;
-        .kompas-person-image {
-            width: 40px;
-            height: 40px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-
-            border-radius: 50%;
-
-            float: left;
-            margin-top: 5px;
-        }
-        .kompas-person-name {
-            text-align: center;
-            display: block;
-            float: left;
-
-            margin-left: 15px;
-            margin-right: 20px;
-            line-height: 50px;
-        }
-    }
-
-    .kompas-person-close {
-        position: absolute;
-        top: 0;
-        right: 4px;
-        cursor: pointer;
-
-        font-size: 22px;
-        line-height: 26px;
-    }
-}
-
-
 // TODO styling of typeahead
 
 .tt-menu {
     max-height: 300px;
+    width: 220px;
     overflow-y: auto;
 
     @include card(1);
@@ -184,7 +68,7 @@
 .tt-dataset {
     padding: 0;
     background-color: #ffffff;
-    width: 200px;
+    width: 100%;
 
     // max-height: 150px;
     // overflow-y: auto;
@@ -192,7 +76,7 @@
 .tt-dataset .searchheader {
     display: block;
     position: relative;
-    width: 200px;
+    width: 100%;
     height: 16px;
     line-height: 16px;
     font-size: 12px;
@@ -222,12 +106,16 @@
 }
 
 .avgminimg-party {
-    background-color: #f0f0f0;
     line-height: 40px;
     font-size: 12px;
     text-align: center;
 }
 
 .tt-cursor {
+    background-color: #ededed;
+}
+
+.tt-suggestion:hover {
+    cursor: pointer;
     background-color: #ededed;
 }
