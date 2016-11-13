@@ -107,10 +107,12 @@
                     <div class="kompas-parties-container">
                             <% for (party_i in parties) {
                                 var selected = false;
-                                if (state.parties.length > 0) {
-                                    for (state_party_i in state.parties) {
-                                        if (state.parties[state_party_i].acronym === parties[party_i]) {
-                                            selected = true;
+                                if (state.parties) {
+                                    if (state.parties.length > 0) {
+                                        for (state_party_i in state.parties) {
+                                            if (state.parties[state_party_i].acronym === parties[party_i]) {
+                                                selected = true;
+                                            }
                                         }
                                     }
                                 }
@@ -127,14 +129,17 @@
                         <div class="kompas-people-wide">
                             <% for (person_i in data.data) {
                                 var selected = false;
-                                if (state.people.length > 0) {
-                                    for (state_person_i in state.people) {
-                                        if (state.people[state_person_i].id === data.data[person_i].person.id) {
-                                            selected = true;
+                                if (state.people) {
+                                    if (state.people.length > 0) {
+                                        for (state_person_i in state.people) {
+                                            if (state.people[state_person_i].id === data.data[person_i].person.id) {
+                                                selected = true;
+                                            }
                                         }
                                     }
-                                }%>
-                                <div class="kompas-person <% if (!selected) { %>hidden<% } %> noselect" id="personcard<%= data.data[person_i]['person']['id'] %>" data-id="<%= data.data[person_i]['person']['id'] %>" data-acronym="<%= data.data[person_i]['person']['party']['acronym'] %>">
+                                }
+                                %>
+                                <div class="kompas-person <% if (!selected) { %>hidden<% } %> noselect" id="kompas-personcard<%= data.data[person_i]['person']['id'] %>" data-id="<%= data.data[person_i]['person']['id'] %>" data-acronym="<%= data.data[person_i]['person']['party']['acronym'] %>">
 
                                     <div class="kompas-person-party <%= data.data[person_i]['person']['party']['acronym'].replace(/ /g, '_').toLowerCase() %>-background">
                                         <%= data.data[person_i]['person']['party']['acronym'] %>

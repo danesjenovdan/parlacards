@@ -23,13 +23,12 @@
     <link data-inline="true" rel="stylesheet" href="css/style.css">
 
     <script>
-        var data = <%- JSON.stringify(data.data); %>
+        var data = <%- JSON.stringify(data.data); %>;
     </script>
 
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
-
     <%
 
         function getParties(data) {
@@ -76,9 +75,9 @@
         </div>
         <div class="card-content">
             <div class="row">
-                <div class="col-md-12 kompas-flex-container">
-                    <div class="hidden-xs kompas-search-container">
-                        <div class="kompas-search">
+                <div class="col-md-12 besedni-zaklad-flex-container">
+                    <div class="hidden-xs besedni-zaklad-search-container">
+                        <div class="besedni-zaklad-search">
                             <%
                                 var searchpeople = [];
 
@@ -89,7 +88,7 @@
                                 }
                             %>
                             <script>var searchpeople = <%- JSON.stringify(searchpeople) %>;</script>
-                            <input type="text" class="kompas-search-input" id="the-kompas-search-input" />
+                            <input type="text" class="besedni-zaklad-search-input" id="the-besedni-zaklad-search-input" />
                             <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" class="search-icon">
 
                             <g>
@@ -103,52 +102,57 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="kompas-parties-container">
+                    <div class="besedni-zaklad-parties-container">
                             <% for (party_i in parties) {
                                 var selected = false;
-                                if (state.parties.length > 0) {
-                                    for (state_party_i in state.parties) {
-                                        if (state.parties[state_party_i].acronym === parties[party_i]) {
-                                            selected = true;
+                                if (state.parties) {
+                                    if (state.parties.length > 0) {
+                                        for (state_party_i in state.parties) {
+                                            if (state.parties[state_party_i].acronym === parties[party_i]) {
+                                                selected = true;
+                                            }
                                         }
                                     }
                                 }
                                 if (parties[party_i].toLowerCase().indexOf('nep') === -1) { %>
-                                <div data-acronym="<%= parties[party_i].replace(/ /g, '_') %>" class="<% if (selected) { %>turnedon <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-background<% } %> party-button noselect <%= parties[party_i].replace(/ /g, '_').toLowerCase() %> <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-hover" id="partyswitch-<%= parties[party_i].replace(/ /g, '_') %>"><%= parties[party_i] %></div>
+                                <div data-acronym="<%= parties[party_i].replace(/ /g, '_') %>" class="<% if (selected) { %>turnedon <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-background<% } %> party-button noselect <%= parties[party_i].replace(/ /g, '_').toLowerCase() %> <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-hover" id="besedni-zaklad-partyswitch-<%= parties[party_i].replace(/ /g, '_') %>"><%= parties[party_i] %></div>
                                 <%  }
                             } %>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 hidden-xs kompas-people-container">
-                    <div class="kompas-people">
-                        <div class="kompas-people-wide">
+                <div class="col-xs-12 hidden-xs besedni-zaklad-people-container">
+                    <div class="besedni-zaklad-people">
+                        <div class="besedni-zaklad-people-wide">
                             <% for (person_i in data.data) {
                                 var selected = false;
-                                if (state.people.length > 0) {
-                                    for (state_person_i in state.people) {
-                                        if (state.people[state_person_i].id === data.data[person_i].person.id) {
-                                            selected = true;
+                                if (state.people) {
+                                    if (state.people.length > 0) {
+                                        for (state_person_i in state.people) {
+                                            if (state.people[state_person_i].id === data.data[person_i].person.id) {
+                                                selected = true;
+                                            }
                                         }
                                     }
-                                }%>
-                                <div class="kompas-person <% if (!selected) { %>hidden<% } %> noselect" id="personcard<%= data.data[person_i]['person']['id'] %>" data-id="<%= data.data[person_i]['person']['id'] %>" data-acronym="<%= data.data[person_i]['person']['party']['acronym'] %>">
+                                }
+                                %>
+                                <div class="besedni-zaklad-person <% if (!selected) { %>hidden<% } %> noselect" id="personcard<%= data.data[person_i]['person']['id'] %>" data-id="<%= data.data[person_i]['person']['id'] %>" data-acronym="<%= data.data[person_i]['person']['party']['acronym'] %>">
 
-                                    <div class="kompas-person-party <%= data.data[person_i]['person']['party']['acronym'].replace(/ /g, '_').toLowerCase() %>-background">
+                                    <div class="besedni-zaklad-person-party <%= data.data[person_i]['person']['party']['acronym'].replace(/ /g, '_').toLowerCase() %>-background">
                                         <%= data.data[person_i]['person']['party']['acronym'] %>
                                     </div>
-                                    <div class="kompas-person-score">
+                                    <div class="besedni-zaklad-person-score">
                                         Besedni<br />zaklad<br />
                                         <span class="score"><%= data.data[person_i]['score'] %></span>
                                     </div>
-                                    <div class="kompas-person-internal-container">
-                                        <div class="kompas-person-image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.data[person_i]['person']['gov_id'] %>.png)"></div>
-                                        <div class="kompas-person-name">
+                                    <div class="besedni-zaklad-person-internal-container">
+                                        <div class="besedni-zaklad-person-image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.data[person_i]['person']['gov_id'] %>.png)"></div>
+                                        <div class="besedni-zaklad-person-name">
                                             <%= data.data[person_i]['person']['name'] %>
                                         </div>
                                     </div>
-                                    <div class="kompas-person-close">
+                                    <div class="besedni-zaklad-person-close">
                                         ×
                                     </div>
                                 </div>

@@ -20,7 +20,7 @@ function makeSwitchEvent2(selection) {
             $(this).removeClass(d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '_').toLowerCase() + '-background');
 
             for (var i = 0; i < selection[0].length; i++) {
-                d3.select('#personcard' + d3.select(selection[0][i]).datum().person.id).classed('hidden', true);
+                d3.select('#kompas-personcard' + d3.select(selection[0][i]).datum().person.id).classed('hidden', true);
                 d3.select(selection[0][i])
                     .attr('r', function(d) {
                         return 3;
@@ -193,7 +193,7 @@ var tooltipdiv = d3.select("#kompas-scatter").append("div")
 
 for (group in groupedData) {
 
-    var currentselection = d3.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(/ /g, '_')).classed('partygroup', true)
+    var currentselection = svg.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(/ /g, '_')).classed('partygroup', true)
         .selectAll('.dot')
         .data(groupedData[group])
         .enter()
@@ -302,7 +302,7 @@ function offGroup() {};
 function drawSingleHull(datum) {
 
     // display card
-    $('#personcard' + datum.person.id).removeClass('hidden').detach().prependTo('.kompas-people-wide');
+    $('#kompas-personcard' + datum.person.id).removeClass('hidden').detach().prependTo('.kompas-people-wide');
     updatePeopleScroller();
 
     // create hull
@@ -332,8 +332,8 @@ function drawSingleHull(datum) {
         //     return color(datum.person.party.acronym.replace(/ /g, '_'));
         // })
         .on('click', function() {
-            d3.select('#personcard' + d3.select(this).attr('data-id')).classed('hidden', true);
-            d3.select(this).remove();
+            d3.select('#kompas-personcard' + svg.select(this).attr('data-id')).classed('hidden', true);
+            svg.select(this).remove();
         });
 }
 
@@ -356,11 +356,11 @@ function moveToFront(parent, selected) {
 function showPersonPicture(datum) {
 
     // display card
-    $('#personcard' + datum.person.id).removeClass('hidden').detach().prependTo('.kompas-people-wide');
+    $('#kompas-personcard' + datum.person.id).removeClass('hidden').detach().prependTo('.kompas-people-wide');
     updatePeopleScroller();
 
     // create hull
-    d3.select('#_' + datum.person.id)
+    svg.select('#_' + datum.person.id)
         .attr('r', function(d) {
             return 20;
         })
@@ -369,7 +369,7 @@ function showPersonPicture(datum) {
         })
         .classed('turnedon', true)
         .on('click', function() {
-            d3.select('#personcard' + d3.select(this).datum().person.id).classed('hidden', true);
+            d3.select('#kompas-personcard' + d3.select(this).datum().person.id).classed('hidden', true);
             d3.select(this)
                 .attr('r', function(d) {
                     return 3;
@@ -392,7 +392,7 @@ function showPersonPicture(datum) {
             // if all party members are hidden, disable partyswitch
             var partyacronym = datum.person.party.acronym.replace(/ /g, '_');
 
-            if ($(d3.select('#kompasgroup' + partyacronym)[0]).children('.turnedon').length === 0) {
+            if ($(svg.select('#kompasgroup' + partyacronym)[0]).children('.turnedon').length === 0) {
                 var hoverclassname = partyacronym.toLowerCase() + '-hover';
                 var backgroundclassname = partyacronym.toLowerCase() + '-background';
                 $('#partyswitch-' + partyacronym)
@@ -415,7 +415,7 @@ function centerCompass() {
 }
 
 function zoomIn(datum, scale) {
-    var point = d3.select('#_' + datum.person.id);
+    var point = svg.select('#_' + datum.person.id);
 
     // translate points to [0, 0]
     zoomBeh.scale([scale]);
@@ -557,7 +557,7 @@ $('.kompas-person-close').on('click', function(e) {
     $(this).parent().addClass('hidden');
 
     // turn picture back to dot
-    d3.select('#_' + $(this).parent().data('id'))
+    svg.select('#_' + $(this).parent().data('id'))
         .attr('r', function(d) {
             return 3;
         })
@@ -576,13 +576,13 @@ $('.kompas-person-close').on('click', function(e) {
         });
 
     // handle search
-    var persondata = d3.select('#_' + $(this).parent().data('id')).datum()
+    var persondata = svg.select('#_' + $(this).parent().data('id')).datum()
     addSearchPerson(persondata.person);
 
     // if all party members are hidden, disable partyswitch
-    var partyacronym = d3.select('#_' + $(this).parent().data('id')).datum().person.party.acronym.replace(/ /g, '_');
+    var partyacronym = svg.select('#_' + $(this).parent().data('id')).datum().person.party.acronym.replace(/ /g, '_');
 
-    if ($(d3.select('#kompasgroup' + partyacronym)[0]).children('.turnedon').length === 0) {
+    if ($(svg.select('#kompasgroup' + partyacronym)[0]).children('.turnedon').length === 0) {
         var hoverclassname = partyacronym.toLowerCase() + '-hover';
         var backgroundclassname = partyacronym.toLowerCase() + '-background';
         $('#partyswitch-' + partyacronym)
@@ -647,17 +647,17 @@ function updatePeopleSearch() {
         } else {
 
             // show photos
-            showPersonPicture(d3.select('#_' + datum.id).datum());
+            showPersonPicture(svg.select('#_' + datum.id).datum());
 
             // move to front
-            var parent = $('#_' + d3.select('#_' + datum.id).datum().person.id).parent()[0];
-            moveToFront(parent, d3.select('#_' + datum.id).datum());
+            var parent = $('#_' + svg.select('#_' + datum.id).datum().person.id).parent()[0];
+            moveToFront(parent, svg.select('#_' + datum.id).datum());
 
             // remove from autocomplete
             removeSearchPerson(datum);
 
             // zoom in
-            zoomIn(d3.select('#_' + datum.id).datum(), 4);
+            zoomIn(svg.select('#_' + datum.id).datum(), 4);
         }
 
         $('.kompas-search-input').typeahead('close').typeahead('val', '');
@@ -682,10 +682,11 @@ function addSearchPerson(datum) {
     poslancisearch.local = searchpeople;
     poslancisearch.initialize(true);
 }
-// })();
 
 if (kompasState.people.length > 0) {
     for (person_i in kompasState.people) {
-        showPersonPicture(d3.select('#_' + kompasState.people[person_i].id).datum());
+        showPersonPicture(svg.select('#_' + kompasState.people[person_i].id).datum());
     }
 }
+
+// })();

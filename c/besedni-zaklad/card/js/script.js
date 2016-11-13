@@ -24,8 +24,8 @@ function uniqBy(a, key) {
 
 function makeSwitchEvent(acronym) {
     console.log(acronym);
-    $('#partyswitch-' + acronym).on('click', function() {
-        var partymembers = d3.select('#kompasgroup' + $(this).data('acronym')).selectAll('.dot');
+    $('#besedni-zaklad-partyswitch-' + acronym).on('click', function() {
+        var partymembers = svg.select('#kompasgroup' + $(this).data('acronym')).selectAll('.dot');
 
         if (!$(this).hasClass('turnedon')) { // !.turnedon
             $(this).addClass(acronym.replace(/ /g, '_').toLowerCase() + '-background');
@@ -215,7 +215,7 @@ function renderGraph() {
     force.stop();
 
     for (group in groupedNodes) {
-        var currentselection = d3.select('#kompasgroup' + groupedNodes[group][0].person.party.acronym.replace(' ', '_'))
+        var currentselection = svg.select('#kompasgroup' + groupedNodes[group][0].person.party.acronym.replace(' ', '_'))
             .selectAll('.dot')
             .data(groupedNodes[group])
             .enter()
@@ -315,7 +315,7 @@ function exposeMe(datum) {
         $('#vocabulary-chart').addClass('selection-active');
     }
 
-    var clicked_element = d3.select('#_' + datum.person.id);
+    var clicked_element = svg.select('#_' + datum.person.id);
     if (!clicked_element.classed('selected')) {
         clicked_element.classed('selected', true);
         $('#personcard' + datum.person.id).removeClass('hidden');
@@ -337,7 +337,7 @@ function exposeHer(datum) {
         $('#vocabulary-chart').addClass('selection-active');
     }
 
-    var clicked_element = d3.select('#_' + datum.id);
+    var clicked_element = svg.select('#_' + datum.id);
     if (!clicked_element.classed('selected')) {
         clicked_element.classed('selected', true);
         $('#personcard' + datum.id).removeClass('hidden');
@@ -357,17 +357,17 @@ window.setTimeout(function() {
     renderGraph();
 }, 1000);
 
-$.each($('.kompas-stranka'), function(i, e) {
+$.each($('.besedni-zaklad-stranka'), function(i, e) {
     $(e).css('border-bottom', '10px solid ' + color($(e).data('acronym')));
 });
 
 function updatePeopleScroller() {
     var thewidth = 0;
-    $('.kompas-people-wide').width(100000);
-    $('.kompas-person').not('.hidden').each(function(i, e) {
+    $('.besedni-zaklad-people-wide').width(100000);
+    $('.besedni-zaklad-person').not('.hidden').each(function(i, e) {
         thewidth = thewidth + $(e).outerWidth() + 21;
     });
-    $('.kompas-people-wide').width(thewidth);
+    $('.besedni-zaklad-people-wide').width(thewidth);
 }
 
 function removeSearchPerson(name) {
@@ -386,10 +386,10 @@ function addSearchPerson(name, id) {
     });
 }
 
-$('.kompas-person').on('click', function() {
+$('.besedni-zaklad-person').on('click', function() {
     $(this).addClass('hidden');
 
-    var d3person = d3.select('#_' + $(this).data('id'));
+    var d3person = svg.select('#_' + $(this).data('id'));
     d3person.classed('selected', false);
 
     if ($('.dot.selected').length === 0) {
@@ -413,7 +413,7 @@ var skupinesearch = new Bloodhound({
 });
 
 function updatePeopleSearch() {
-    poeplesearchtypeahead = $('.kompas-search-input').typeahead({
+    poeplesearchtypeahead = $('.besedni-zaklad-search-input').typeahead({
 
     }, {
         // 'limit': 3,
@@ -441,17 +441,17 @@ function updatePeopleSearch() {
         }
     });
 
-    $('.kompas-search-input').bind('typeahead:select', function(e, datum) {
+    $('.besedni-zaklad-search-input').bind('typeahead:select', function(e, datum) {
 
         if (datum.acronym) {
-            $('#partyswitch-' + datum.acronym.replace(' ', '_')).click();
+            $('#besedni-zaklad-partyswitch-' + datum.acronym.replace(' ', '_')).click();
         } else {
 
             exposeHer(datum);
             removeSearchPerson(datum);
         }
 
-        $('.kompas-search-input').typeahead('close').typeahead('val', '');
+        $('.besedni-zaklad-search-input').typeahead('close').typeahead('val', '');
     });
 }
 
