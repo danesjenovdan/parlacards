@@ -1,0 +1,123 @@
+{
+    "data": [{
+        "party": {
+            "acronym": "DeSUS",
+            "is_coalition": true,
+            "id": 3,
+            "name": "PS Demokratska Stranka Upokojencev Slovenije"
+        },
+        "results": {
+            "privzdignjeno": 0.0,
+            "vocabulary_size": 118.0,
+            "presence_votes": 87.4296817967106,
+            "presence_sessions": 92.495004995005,
+            "problematicno": 0.0,
+            "preprosto": 165.289256198347
+        }
+    }, {
+        "party": {
+            "acronym": "NSI",
+            "is_coalition": false,
+            "id": 6,
+            "name": "PS Nova Slovenija"
+        },
+        "results": {
+            "privzdignjeno": 0.0,
+            "vocabulary_size": 0.0,
+            "presence_votes": 65.0869565217391,
+            "presence_sessions": 77.8571428571429,
+            "problematicno": 11.1806797853309,
+            "preprosto": 29.0697674418605
+        }
+    }, {
+        "party": {
+            "acronym": "SDS",
+            "is_coalition": false,
+            "id": 5,
+            "name": "PS Slovenska Demokratska Stranka"
+        },
+        "results": {
+            "privzdignjeno": 0.0,
+            "vocabulary_size": 76.0,
+            "presence_votes": 66.0157584962977,
+            "presence_sessions": 79.0020505809979,
+            "problematicno": 16.5994783021105,
+            "preprosto": 42.684372776855604
+        }
+    }, {
+        "party": {
+            "acronym": "SD",
+            "is_coalition": true,
+            "id": 7,
+            "name": "PS Socialni Demokrati"
+        },
+        "results": {
+            "privzdignjeno": 0.0,
+            "vocabulary_size": 81.0,
+            "presence_votes": 82.8672943438135,
+            "presence_sessions": 89.2908017908018,
+            "problematicno": 0.0,
+            "preprosto": 0.0
+        }
+    }, {
+        "party": {
+            "acronym": "SMC",
+            "is_coalition": true,
+            "id": 1,
+            "name": "PS Stranka modernega centra"
+        },
+        "results": {
+            "privzdignjeno": 0.0,
+            "vocabulary_size": 90.0,
+            "presence_votes": 90.6939625651515,
+            "presence_sessions": 92.3564331417321,
+            "problematicno": 19.4363459669582,
+            "preprosto": 53.4499514091351
+        }
+    }, {
+        "party": {
+            "acronym": "ZL",
+            "is_coalition": false,
+            "id": 8,
+            "name": "PS Zdru\u017eena Levica"
+        },
+        "results": {
+            "privzdignjeno": 0.0,
+            "vocabulary_size": 0.0,
+            "presence_votes": 59.3115942028986,
+            "presence_sessions": 70.5357142857143,
+            "problematicno": 23.999999999999996,
+            "preprosto": 44.0
+        }
+    }, {
+        "party": {
+            "acronym": "IMNS",
+            "is_coalition": false,
+            "id": 2,
+            "name": "PS italijanske in mad\u017earske narodne skupnosti"
+        },
+        "results": {
+            "privzdignjeno": 0.0,
+            "vocabulary_size": 0.0,
+            "presence_votes": 77.5,
+            "presence_sessions": 74.1071428571429,
+            "problematicno": 8.512087163772561,
+            "preprosto": 23.8338440585632
+        }
+    }, {
+        "party": {
+            "acronym": "PS NP",
+            "is_coalition": false,
+            "id": 109,
+            "name": "PS nepovezanih poslancev "
+        },
+        "results": {
+            "privzdignjeno": 0.0,
+            "vocabulary_size": null,
+            "presence_votes": 61.5760869565217,
+            "presence_sessions": 75.4464285714286,
+            "problematicno": 17.736786094359697,
+            "preprosto": 39.020929407591304
+        }
+    }]
+}
