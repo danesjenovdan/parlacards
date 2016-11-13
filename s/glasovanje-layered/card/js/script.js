@@ -338,7 +338,7 @@ function drawOptionLabels(data) {
             });
     }
 
-    drawLines(labels);
+    // drawLines(labels);
 }
 
 // draw party labels
@@ -498,7 +498,7 @@ function drawPartyLabels(data) {
             });
     }
 
-    drawLines(labels);
+    // drawLines(labels);
 
 }
 
