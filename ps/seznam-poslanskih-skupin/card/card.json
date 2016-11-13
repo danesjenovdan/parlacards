@@ -1,1 +1,1 @@
-{"_id":"5806f939b0702658a04f22a9","name":"Seznam poslancev","group":"p","method":"seznam-poslancev","dataUrl":"https://analize.parlameter.si/v1/p/getListOfMembers"}
+{"_id":"582875eb937bd1f306e069ee","name":"Seznam poslanskih skupin","group":"ps","method":"seznam-poslanskih-skupin","dataUrl":"https://analize.parlameter.si/v1/pg/getListOfPGs"}
