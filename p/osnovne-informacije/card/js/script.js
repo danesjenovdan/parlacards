@@ -79,3 +79,5 @@ function addCardRippling(element) {
         }
     });
 }
+
+addCardRippling();
