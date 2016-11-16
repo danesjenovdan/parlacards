@@ -125,6 +125,7 @@ function drawPie(data) {
         .on('click', function(d) {
             // stop propagation
             d3.event.stopPropagation();
+            console.log('ping');
 
             if (d3.selectAll('.active')[0].length === 0) { // no selection is active
                 
@@ -192,8 +193,7 @@ function drawPie(data) {
             
             } else { // other selection is active
                 
-                console.log('inactive');
-
+                console.log('demote chosen');
                 // demote currently chosen slices
                 d3.selectAll('path.chosen')
                     .classed('chosen', false)
@@ -207,36 +207,42 @@ function drawPie(data) {
                         return d3.interpolateString(startTranslateState, endTranslateState);
                     })
                 
+                console.log('demote active');
                 // demote currently active slices
-                var activeOption = d3.select('path.active').datum().data.option;
-                d3.selectAll('path.active')
-                    .classed('active', false)
-                    .classed('hover', false)
-                    .transition()
-                    .delay(300)
-                    .duration(300)
-                    .attrTween('transform', function(d) {
+                if (d3.select('path.active')[0][0] !== null) {
+                    var activeOption = d3.select('path.active').datum().data.option;
+                    console.log(activeOption);
+                    d3.selectAll('path.active')
+                        .classed('active', false)
+                        .classed('hover', false)
+                        .transition()
+                        .delay(300)
+                        .duration(300)
+                        .attrTween('transform', function(d) {
 
-                        var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
-                        var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
-                        return d3.interpolateString( endTranslateState, 'translate(0, 0)');
-                    })
+                            var a = d.startAngle + (d.endAngle - d.startAngle) / 2 - Math.PI / 2;
+                            var endTranslateState = 'translate(' + Math.cos(a) * (radius * 0.05) + ',' + Math.sin(a) * (radius * 0.05) + ')';
+                            return d3.interpolateString( endTranslateState, 'translate(0, 0)');
+                        })
+                    
+                    console.log('hide active');
+                    // hide currently active party labels
+                    d3.selectAll('.' + activeOption.replace(' ', '_') + '-label-party')
+                        .transition()
+                        .duration(300)
+                        .style('opacity', 0);
+                    // hide current party pointers
+                    d3.selectAll('.' + activeOption.replace(' ', '_') + '-pointer-party')
+                        .transition()
+                        .duration(300)
+                        .style('opacity', 0);
+                }
                 
-                // hide currently active party labels
-                d3.selectAll('.' + activeOption.replace(' ', '_') + '-label-party')
-                    .transition()
-                    .duration(300)
-                    .style('opacity', 0);
-                // hide current party pointers
-                d3.selectAll('.' + activeOption.replace(' ', '_') + '-pointer-party')
-                    .transition()
-                    .duration(300)
-                    .style('opacity', 0);
-                
-
+                console.log('select data.option');
                 d3.selectAll('.' + d.data.option + '-arc')
                     .classed('active', true);
                     
+                console.log('toggle mps');
                 // togle mps
                 d3.selectAll('.mpgroup').classed('hidden', true);
                 var mp_list = d3.selectAll('.' + d.data.option);

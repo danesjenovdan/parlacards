@@ -66,6 +66,7 @@ a.document:hover {
             background-color: #000000;
             width: 10px;
             height: 40px;
+            margin-right: 10px;
         }
         .option-marker-za {
             background-color: #00628C;
@@ -171,8 +172,9 @@ a.document:hover {
     min-width: 2px;
 }
 
-.fix-700 {
-    height: 700px;
+&.fix-600 {
+    height: 600px !important;
+    overflow: hidden;
 }
 
 .people-ballots {
