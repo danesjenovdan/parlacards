@@ -231,15 +231,6 @@ gulp.task('push', function() {
     });
 });
 
-// build and push
-gulp.task('push-build', function(callback) {
-    runSequence(
-        'build',
-        'push',
-        callback
-    );
-});
-
 // copy card
 gulp.task('copy:card', function() {
     return gulp.src('card/**/*.*')

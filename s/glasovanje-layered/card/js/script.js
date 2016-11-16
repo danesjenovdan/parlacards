@@ -531,9 +531,9 @@ var svg = d3.select(".layeredchart").append("svg")
             .duration(300)
             .style('opacity', 0);
 
-        // hide mps
+        // show mps
         d3.selectAll('.mpgroup')
-            .classed('hidden', true);
+            .classed('hidden', false);
 
         // translate currently active slices and hide labels of active elements
         // hide other party labels
@@ -627,3 +627,10 @@ function moveSingleMP() {
                     .classed('selected', true);
             }
 }
+
+$('.option').on('click', function() {
+    // togle mps
+    $('.mpgroup').addClass('hidden');
+    console.log($(this).data('option'));
+    $('.mpgroup.' + $(this).data('option')).removeClass('hidden');
+});

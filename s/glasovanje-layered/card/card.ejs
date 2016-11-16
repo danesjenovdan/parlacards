@@ -28,24 +28,24 @@
     <script>var data = <%- JSON.stringify(data); %></script>
 
     <!-- everything above here is part of the page and not part of the card -->
-    <div class="card-container card-halfling <%= className %>">
+    <div class="card-container card-halfling <%= className %> fix-700">
         <div class="card-header">
             <div class="card-header-border"></div>
             <h1><%= data.name %></h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
 
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-xs-12">
                     <span class="slab">Dokumenti: </span><a href="https://parlameter.si" target="_blank" class="document">pdf</a>
                 </div>
-            </div>
+            </div>-->
 
             <div class="row">
                 <div class="col-xs-12">
                     <div class="greybox">
                         <div class="legend-container">
-                            <div class="option za">
+                            <div class="option za" data-option="for">
                                 <div class="option-marker option-marker-za"></div>
                                 <div class="option-text">
                                     <div class="option-number">
@@ -57,7 +57,7 @@
                                 </div>
                             </div>
 
-                            <div class="option proti">
+                            <div class="option proti" data-option="against">
                                 <div class="option-marker option-marker-proti"></div>
                                 <div class="option-text">
                                     <div class="option-number">
@@ -69,7 +69,7 @@
                                 </div>
                             </div>
 
-                            <div class="option vzdrzani">
+                            <div class="option vzdrzani" data-option="kvorum">
                                 <div class="option-marker option-marker-vzdrzani"></div>
                                 <div class="option-text">
                                     <div class="option-number">
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
 
-                            <div class="option niso">
+                            <div class="option niso" data-option="not_present">
                                 <div class="option-marker option-marker-niso"></div>
                                 <div class="option-text">
                                     <div class="option-number">
@@ -103,43 +103,58 @@
             </div>
 
             <div class="row">
-                <div class="col-xs-12">
+                <div class="hidden-xs col-sm-6">
                     <div class="layeredchart"></div>
                 </div>
-            </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="people-ballots">
+                        <%
+                        var second_level_data = [];
+                        for (option in data.all) {
+                            for (party in data.all[option]['breakdown']) {
 
-            <div class="row">
-                <div class="col-xs-12">
-                    <%
-                    var second_level_data = [];
-                    for (option in data.all) {
-                        for (party in data.all[option]['breakdown']) {
+                                var newdict = data.all[option]['breakdown'][party];
+                                newdict.option = option;
 
-                            var newdict = data.all[option]['breakdown'][party];
-                            newdict.option = option;
+                                second_level_data.push(newdict);
 
-                            second_level_data.push(newdict);
-
+                            }
                         }
-                    }
-                    %>
-                    <% for (group in second_level_data) { %>
-                        <div class="mpgroup hidden <%= second_level_data[group]['option']%> <%= second_level_data[group]['pg']['acronym'].replace(' ', '_') %>">
-                            <% for (mp in second_level_data[group]['mps']) { %>
-                                <div class="member">
-                                    <div class="metadata">
-                                        <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= second_level_data[group]['mps'][mp]['gov_id'] %>.png); background-size: cover;"></div>
-                                        <p class="name">
-                                            <%= second_level_data[group]['mps'][mp]['name'] %>
-                                        </p>
-                                        <p class="party">
-                                            <%= second_level_data[group]['mps'][mp]['party']['acronym'] %>
-                                        </p>
+                        %>
+                        <script>var trajlala = <%- JSON.stringify(second_level_data); %>;</script>
+                        <% for (group in second_level_data) { %>
+                            <div class="mpgroup <%= second_level_data[group]['option']%> <%= second_level_data[group]['pg']['acronym'].replace(' ', '_') %>">
+                                <% for (mp in second_level_data[group]['mps']) { %>
+                                    <div class="member">
+                                        <div class="metadata">
+                                            <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= second_level_data[group]['mps'][mp]['gov_id'] %>.png); background-size: cover;"></div>
+                                            <p><%= second_level_data[group]['mps'][mp]['name'] %>
+                                                <br/><%= second_level_data[group]['mps'][mp]['party']['acronym'] %></p>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <%
+                                            var option;
+                                            switch (second_level_data[group]['option']){
+                                                case 'for':
+                                                    option = 'za';
+                                                    break;
+                                                case 'against':
+                                                    option = 'proti';
+                                                    break;
+                                                case 'abstain':
+                                                    option = 'vzdrzan';
+                                                    break;
+                                                case 'not_present':
+                                                    option = 'ni';
+                                                    break;
+                                            }
+                                        %>
+                                        <div class="vote-icon <%= option %>"></div>
                                     </div>
-                                </div>
-                            <% } %>
-                        </div>
-                    <% } %>
+                                <% } %>
+                            </div>
+                        <% } %>
+                    </div>
                 </div>
             </div>
 
