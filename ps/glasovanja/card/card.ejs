@@ -11,8 +11,9 @@
     <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <script src="https://unpkg.com/vue@2.0.5/dist/vue.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/search-dropdown.js"></script>
     <!-- endbuild -->
     <script>
     <%
@@ -30,13 +31,12 @@
       var randomId = makeId();
     %>
 
-    var PsVoteData = <%- JSON.stringify(data); %>;
+    var psVoteData = <%- JSON.stringify(data); %>;
     var psGlasovanjaRandomId = '<%= randomId; %>';
 
     </script>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
     <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
 
@@ -56,24 +56,17 @@
             <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div id="glasovanja-<%= randomId %>" class="card-content">
-          <select class="tag-selector" multiple>
-          <% data.all_tags.forEach(function(tag) { %>
-            <option value="<%= tag %>"><%= tag %></option>
-          <% }) %>
-          </select>
-          <ul class="votes scroller" id="joze_tanko">
-            <% data.results.forEach(function(result) { %>
-              <% result.ballots.forEach(function(ballot, index) { %>
-                <li>
-                  <div class="date"><%= result.date.replace(/\./g, '. ') %></div>
-                  <div class="icon <%= ballot.option %>"></div>
-                  <div class="motion">Glasovali <%= ballot.option.toUpperCase() %> <a href="#"><%= ballot.motion %></a></div>
-                </li>
-              <% }) %>
-            <% }) %>
+          <search-dropdown :items="allTags" :placeholder="inputPlaceholder"></search-dropdown>
 
+          <ul class="votes">
+            <template v-for="votingDay in filteredVotingDays">
+              <li v-for="ballot, index in votingDay.ballots">
+                <div v-if="index === 0" class="date">{{ votingDay.date.replace(/\./g, '. ') }}</div>
+                <div :class="['icon', ballot.option]"></div>
+                <div class="motion">Glasovali {{ ballot.option.toUpperCase() }} <a href="#">{{ ballot.motion }}</a></div>
+              </li>
+            </template>
           </ul>
-
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>

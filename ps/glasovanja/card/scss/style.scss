@@ -4,144 +4,37 @@ $grey-light: #f0f0f0;
 $grey: #c8c8c8;
 $black: #000000;
 
-.tag-selector {
-  width: 100%;
-}
-
-.select2-results__option {
-  font-size: 12px;
-  height: 24px;
-  line-height: 24px;
-  overflow: hidden;
-  padding: 0 16px;
-  position: relative;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  &--highlighted::after,
-  &:last-child::after,
-  &[aria-selected=true] {
-    display: none;
-  }
-  &--highlighted, &--highlighted[aria-selected] {
-    background: $blue-dark;
-  }
-  &::after {
-    background-color: #ebebeb;
-    bottom: 0px;
-    content: '';
-    height: 1px;
-    left: 22px;
-    position: absolute;
-    width: calc(100% - 44px);
-  }
-}
-
-.select2-dropdown {
-  border: 1px solid $grey;
-  border-radius: 0;
-}
-
-.select2-search__field {
-  line-height: 38px;
-}
-
-.select2-container--default {
-  .select2-selection--multiple,
-  &.select2-container--focus .select2-selection--multiple {
-    border: 1px solid $grey;
-    border-radius: 0;
-    height: auto;
-    line-height: 1px;
-    min-height: 50px;
-    padding: 3px 36px 0 0;
-    &:after {
-      border-style: solid;
-      border-width: 11px 9px 0 9px;
-      border-color: $blue-dark transparent transparent transparent;
-      content: '';
-      cursor: pointer;
-      height: 0;
-      position: absolute;
-      right: 18px;
-      top: 20px;
-      width: 0;
-    }
-  }
-
-  .select2-results__options {
-    box-shadow: 0 0 2px 3px rgba($black, 0.15);
-  }
-  .select2-selection--multiple {
-    $border-radius: 2px;
-    .select2-selection__choice__remove {
-      color: $white;
-      float: right;
-      font-size: 24px;
-      line-height: 14px;
-      margin: 9px 0 0 5px;
-    }
-    .select2-selection__choice {
-      background-color: $blue-dark;
-      border: none;
-      border-radius: $border-radius;
-      color: $white;
-      cursor: default;
-      float: left;
-      font-size: 10px;
-      height: 42px;
-      line-height: 11px;
-      margin: 0 3px 3px 0;
-      padding: 5px 4px;
-      position: relative;
-      white-space: normal;
-      width: 110px;
-      &:after {
-        background: $blue-dark;
-        border-bottom-left-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
-        bottom: 0;
-        content: '';
-        height: 3px;
-        left: 0;
-        position: absolute;
-        width: 110px;
-      }
-    }
-    .select2-selection__rendered {
-      padding: 0 3px;
-    }
-  }
-}
-
 .votes {
   height: 355px;
   list-style: none;
-  overflow: hidden;
+  overflow-y: scroll;
   margin: 18px 0 0 0;
   padding: 0;
+  position: relative;
+  &:empty::after {
+    color: #c8c8c8;
+    content: 'Ni rezultatov.';
+    left: calc(50% - 41px);
+    position: absolute;
+    top: calc(50% - 10px);
+  }
   li {
     $border: 1px solid $grey-light;
-    display: none;
+    display: flex;
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
-    &.with-date {
-      .icon, .motion { border-top: $border; }
-      .date {
-        height: auto;
-        visibility: visible;
-      }
-    }
     .date {
-      height: 0;
+      height: auto;
       margin: 0 0 -18px 16px;
       padding: 16px 0;
-      visibility: hidden;
       width: 54px;
     }
     .icon {
       width: 50px;
       padding: 15px;
+      &:first-child { margin-left: 70px; }
+      &:nth-child(2) { border-top: $border; }
       &.za {
         background: no-repeat center 15px url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.999999 63.999999" height="64" width="64"><title>Rectangle 48</title><g transform="translate(.042 33.858)"><title>background</title><path fill="none" d="M-1-1h582v402H-1z"/></g><g transform="matrix(1.61624 0 0 1.61624 .067 7.283)"><title>Layer 1</title><path d="M9.858 27.314l2.828 2.828 26.87-26.87L36.728.444l-26.87 26.87zm-9.9-9.9l9.9 9.9 2.828-2.83-9.9-9.898-2.828 2.828z" fill="#505050" fill-rule="evenodd"/></g></svg>');
         background-size: 22px;
@@ -164,26 +57,8 @@ $black: #000000;
       font-weight: 300;
       line-height: 20px;
       padding: 15px 0;
+      &:nth-child(3) { border-top: $border; }
       a { font-weight: normal; }
     }
-  }
-}
-
-
-.alt-header {
-  .session-logo {
-    display: block;
-    float: left;
-    margin-right: 15px;
-
-    border: none;
-
-    b {
-      font-size: 20px;
-    }
-  }
-
-  .partyinfo {
-    font-family: 'Roboto Slab';
   }
 }

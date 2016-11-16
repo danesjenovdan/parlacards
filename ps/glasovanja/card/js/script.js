@@ -1,39 +1,57 @@
-var psVoteElements = $('#glasovanja-' + psGlasovanjaRandomId + ' .votes li');
+(function(){
+  new Vue({
+    el: '#glasovanja-' + psGlasovanjaRandomId,
+    components: ['SearchDropdown'],
+    computed: {
+      inputPlaceholder: function() {
+        return this.selectedTags.length > 0 ? 'Izbranih filtrov: ' + this.selectedTags.length : 'Izberi filtre'
+      },
+      selectedTags: function() {
+        return this.allTags
+          .filter(function(tag) { return tag.selected })
+          .map(function(tag) { return tag.id });
+      },
+      filteredVotingDays: function() {
+        var currentDate = '',
+            that = this;
 
-function filterPsGlasovanjaByTags(tags) {
-  var index = 0,
-      empty = false;
+        return this.votingDays
+          .map(function(votingDay) {
+            var newObject = {}
 
-  if (tags === null) {
-    empty = true;
-  }
-  PsVoteData.results.forEach(function(result) {
-    var dateRendered = false;
-    result.ballots.forEach(function(ballot) {
-      var shouldBeVisible = empty ? true : tags.indexOf(ballot.tags[0]) > -1
-      psVoteElements.eq(index).css({display : shouldBeVisible ? 'flex' : 'none' })
-                              .toggleClass('with-date', shouldBeVisible && !dateRendered);
-      dateRendered = dateRendered || shouldBeVisible;
-      index++;
-    })
-  })
-}
+            if (currentDate !== votingDay.date) {
+              currentDate = votingDay.date;
+              newObject.date = votingDay.date;
+            }
 
-$('#glasovanja-' + psGlasovanjaRandomId + ' .tag-selector')
-  .on('change', function(event) {
-    filterPsGlasovanjaByTags($(event.currentTarget).val());
-  })
-  .select2({
-    dropdownParent: $('#glasovanja-' + psGlasovanjaRandomId)
-  })
-  .on('select2:opening', function(e) {
-    if ($('#glasovanja-' + psGlasovanjaRandomId + ' .tag-selector').data('unselecting')) {    
-      $('#glasovanja-' + psGlasovanjaRandomId + ' .tag-selector').removeData('unselecting');
-      e.preventDefault();
+            newObject.ballots = votingDay.ballots.filter(function(ballot) {
+              if (that.selectedTags.length > 0) {
+                var match = false;
+                ballot.tags.forEach(function(tag) {
+                  match = match || that.selectedTags.indexOf(tag) > -1;
+                })
+
+                return match
+              }
+              return true
+            })
+
+            return newObject
+          })
+          .filter(function(votingDay) { return votingDay.ballots.length > 0 })
+      }
+    },
+    data: function() {
+      return {
+        allTags: psVoteData.all_tags.map(function(tag) {
+          return { id: tag, label: tag, selected: false }
+        }),
+        votingDays: psVoteData.results
+      }
     }
   })
-  .on('select2:unselecting', function(e) {
-    $('#glasovanja-' + psGlasovanjaRandomId + ' .tag-selector').data('unselecting', true);
-  });
+})();
 
-filterPsGlasovanjaByTags(null)
+addCardFlip();
+makeEmbedSwitch();
+activateCopyButton();
