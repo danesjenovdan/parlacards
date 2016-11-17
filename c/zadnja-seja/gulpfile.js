@@ -34,10 +34,12 @@ var fs = require('fs');
 var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
 var jsonVocab = JSON.parse(fs.readFileSync('card/vocab.json', 'utf-8'));
 var cardData = JSON.parse(fs.readFileSync('card/card.json', 'utf-8'));
+var stateData = JSON.parse(fs.readFileSync('card/state.json', 'utf-8'));
 
 // generate CSS class name to use for sandboxing
-var directoryName = __dirname.replace(/\\/g, '/').split('/').pop()
-var className = 'card-' + directoryName
+var directoryName = __dirname.replace(/\\/g, '/').split('/').pop();
+var className = 'card-' + directoryName;
+console.log(className);
 
 //#################
 //## tasks below ##
@@ -83,7 +85,8 @@ gulp.task('ejs', function() {
             'data': jsonData,
             'className' : className,
             'vocab' : jsonVocab,
-            'cardData' : cardData
+            'cardData' : cardData,
+            'state' : stateData,
         }, {
             ext: '.html'
         }))
@@ -176,7 +179,7 @@ gulp.task('remove-minify', function() {
             'conservativeCollapse': false,
             'removeComments': true
         }))
-        .pipe(replace(/<%= *className *%>/, className))
+        .pipe(replace(/<%= *className *%>/g, className))
         .pipe(replace(/\n/g, '')) // cleaning up newlines that were left
         .pipe(replace(/\s\s+/g, ' ')) // cleaning up multiple spaces that were left
         .pipe(gulp.dest('dist'));

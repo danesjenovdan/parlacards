@@ -101,7 +101,8 @@
 }
 
 #votingCard{
-  height: 350px;
+  max-height: 350px;
+  overflow-y: scroll;
 }
 
 #votingCardHorizontal div.member {
@@ -167,7 +168,7 @@
 
 .session_voting .accepted {
   line-height: normal;
-  height: 95px;
+  height: 103px;
 }
 
 .session_voting .accepted p {
@@ -176,10 +177,11 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  margin-bottom: 0;
 }
 
 .session_voting .session_title {
-  height: 95px;
+  height: 103px;
   margin: 0;
 }
 
@@ -190,6 +192,7 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   font-family: Roboto Slab;
+  margin-bottom: 0;
 }
 
 @media (max-width: 991px) {
@@ -215,7 +218,7 @@
 @import 'tfidf';
 
 .smalldate {
-  margin-top: -28px;
+  margin-top: -18px;
   line-height: 16px;
 }
 

@@ -34,13 +34,13 @@
 <div class="card-container card-halfling <%= className %>">
     <div class="card-header">
         <div class="card-header-border"></div>
-        <h1>Zadnja seja: <%= data.session.name %></h1>
+        <h1>Zadnja seja: <%= data.session.name %> DZ</h1>
     </div>
     <div class="card-content" id="">
     <div class="smalldate"><br><%= data.session.date %></div>
 
         <div class="indexsessionpart seja_transkript clearfix">
-            <div class="link"><a href=""><span class="glyphicon glyphicon-comment"></span> Transkript</a></div>
+            <div class="link"><a class="funblue-light-hover" href=""><span class="glyphicon glyphicon-comment"></span> Transkript</a></div>
 
 
 
@@ -187,7 +187,7 @@
 
                 <div  id="votingCard">
 
-                    <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller session_voting">
+                    <div class="session_voting">
 
                         <% for (var i = 0; i < data.motions.length ; i++) { %>
 <% var motion = data.motions[i].results;  %>
