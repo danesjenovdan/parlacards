@@ -322,6 +322,19 @@ function exposeMe(datum) {
     } else {
         clicked_element.classed('selected', false);
         $('#personcard' + datum.person.id).addClass('hidden');
+        // if all party members are hidden, disable partyswitch
+        var partyacronym = datum.person.party.acronym.replace(/ /g, '_');
+
+        if (svg.selectAll('.' + partyacronym.toLowerCase() + '-stroke.selected')[0].length === 0) {
+            var hoverclassname = partyacronym.toLowerCase() + '-hover';
+            var backgroundclassname = partyacronym.toLowerCase() + '-background';
+            $('#besedni-zaklad-partyswitch-' + partyacronym)
+                .removeClass('turnedon');
+            // $('#besedni-zaklad-partyswitch-' + partyacronym)
+            //     .addClass(hoverclassname);
+            $('#besedni-zaklad-partyswitch-' + partyacronym)
+                .removeClass(backgroundclassname);
+        }
     }
 
     if ($('.dot.selected').length === 0) {
@@ -363,7 +376,6 @@ $.each($('.besedni-zaklad-stranka'), function(i, e) {
 
 function updatePeopleScroller() {
     var thewidth = 0;
-    $('.besedni-zaklad-people-wide').width(100000);
     $('.besedni-zaklad-person').not('.hidden').each(function(i, e) {
         thewidth = thewidth + $(e).outerWidth() + 21;
     });
@@ -386,10 +398,12 @@ function addSearchPerson(name, id) {
     });
 }
 
-$('.besedni-zaklad-person').on('click', function() {
-    $(this).addClass('hidden');
+$('.besedni-zaklad-person-close').on('click', function(e) {
+    e.stopPropagation();
 
-    var d3person = svg.select('#_' + $(this).data('id'));
+    $(this).parent().addClass('hidden');
+
+    var d3person = svg.select('#_' + $(this).parent().data('id'));
     d3person.classed('selected', false);
 
     if ($('.dot.selected').length === 0) {
@@ -397,6 +411,25 @@ $('.besedni-zaklad-person').on('click', function() {
     }
 
     addSearchPerson(d3person.datum().person.name, d3person.datum().person.id);
+
+    // if all party members are hidden, disable partyswitch
+    var partyacronym = svg.select('#_' + $(this).parent().data('id')).datum().person.party.acronym.replace(/ /g, '_');
+
+    if (svg.selectAll('.' + partyacronym.toLowerCase() + '-stroke.selected')[0].length === 0) {
+        var hoverclassname = partyacronym.toLowerCase() + '-hover';
+        var backgroundclassname = partyacronym.toLowerCase() + '-background';
+        $('#besedni-zaklad-partyswitch-' + partyacronym)
+            .removeClass('turnedon');
+        // $('#besedni-zaklad-partyswitch-' + partyacronym)
+        //     .addClass(hoverclassname);
+        $('#besedni-zaklad-partyswitch-' + partyacronym)
+            .removeClass(backgroundclassname);
+    }
+
+    updatePeopleScroller();
+});
+$('.besedni-zaklad-person').on('click', function() {
+    document.location.href = 'https://skoraj.parlameter.si/p/id/' + $(this).data('id');
 });
 
 
