@@ -28,14 +28,13 @@
 <!-- everything above here is part of the page and not part of the card -->
 
 <div class="card-container card-halfling <%= className %>">
-    <div class="front">
-        <div class="card-header">
-            <div class="card-header-border"></div>
-            <h1>Najmanjkrat glasujejo enako</h1>
-            <!-- this text is the only thing you touch in .card-header -->
-        </div>
-        <div class="card-content">
-
+    <div class="card-header">
+        <div class="card-header-border"></div>
+        <h1>Najmanjkrat glasujejo enako</h1>
+        <!-- this text is the only thing you touch in .card-header -->
+    </div>
+    <div class="card-content full">
+        <div class="card-content-front">
             <div>
 
                 <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
@@ -57,39 +56,17 @@
             </div>
 
         </div>
-        <div class="card-footer">
-            <div class="card-circle-button card-share" data-back="share"></div>
-            <div class="card-circle-button card-embed" data-back="embed"></div>
-            <div class="card-circle-button card-info" data-back="info">i</div>
-        </div>
-    </div>
-    <div class="back">
-        <div class="back-info">
-            <div class="card-header">
-                <div class="card-header-border"></div>
-                <h1>Najmanjkrat glasujejo enako</h1>
-                <!-- this text is the only thing you touch in .card-header -->
-            </div>
-            <div class="card-back-content card-content">
+        <div class="card-content-info hidden">
+            <div class="card-back-content">
                 <div class="scroller" id="tvojamtka">
                     <p class="info-text">
                         Izračunamo Pearsonov koeficient (https://sl.wikipedia.org/wiki/Pearsonov_koeficient_korelacije) med rezultati <%= vocab['poslanca'][data.person.gender] %> glasovanj in rezultati vseh ostalih (pri čemer vrednosti glasov pretvorimo v številčne vrednosti), nato razvrstimo poslance glede na rezultat (med -1 in 1) in prikažemo prvih oz. zadnjih 5.<br>Številčne vrednosti glasov<br>-1: proti<br>0: vzdržan/-a ali ni prisoten/-na<br>1: za<br>
                     </p>
                 </div>
             </div>
-            <div class="card-footer">
-                <div class="card-circle-button card-share" data-back="share"></div>
-                <div class="card-circle-button card-embed" data-back="embed"></div>
-                <div class="card-circle-button card-info card-exit" data-back="info">×</div>
-            </div>
         </div>
-        <div class="back-embed">
-            <div class="card-header">
-                <div class="card-header-border"></div>
-                <h1>Najmanjkrat glasujejo enako</h1>
-                <!-- this text is the only thing you touch in .card-header -->
-            </div>
-            <div class="card-back-content card-content">
+        <div class="card-content-embed hidden">
+            <div class="card-back-content">
                 <div class="embed-content">
                     <div class="embed-divider"></div>
                     <div class="embed-switch-container">
@@ -112,7 +89,7 @@
                     </div>
                     <div class="embed-divider"></div>
                     <div class="embed-script">
-                        <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><iframe frameborder="0" width="620" height="400" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?embed=true"></textarea>
+                        <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?embed=true&altHeader=true"></textarea>
                         <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                     </div>
                     <div class="embed-divider"></div>
@@ -121,31 +98,21 @@
                     </div>
                 </div>
             </div>
-            <div class="card-footer">
-                <div class="card-circle-button card-share" data-back="share"></div>
-                <div class="card-circle-button card-embed card-exit" data-back="embed">×</div>
-                <div class="card-circle-button card-info" data-back="info">i</div>
-            </div>
         </div>
-        <div class="back-share">
-            <div class="card-header">
-                <div class="card-header-border"></div>
-                <h1>Najmanjkrat glasujejo enako</h1>
-                <!-- this text is the only thing you touch in .card-header -->
-            </div>
+        <div class="card-content-share hidden">
             <div class="card-back-content card-content">
                 <div class="share-content">
                     <label for="share-url">Neposredna povezava do kartice</label>
-                    <input type="url" class="form-control" id="share-url" value="https://parlameter.si/trajlala"/>
+                    <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?frame=true&altHeader=true"/>
                     <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
                 </div>
             </div>
-            <div class="card-footer">
-                <div class="card-circle-button card-share card-exit" data-back="share">×</div>
-                <div class="card-circle-button card-embed" data-back="embed"></div>
-                <div class="card-circle-button card-info" data-back="info">i</div>
-            </div>
         </div>
+    </div>
+    <div class="card-footer">
+        <div class="card-circle-button card-share" data-back="share"></div>
+        <div class="card-circle-button card-embed" data-back="embed"></div>
+        <div class="card-circle-button card-info" data-back="info">i</div>
     </div>
 </div>
 <!-- everything below here is part of the page and not part of the card -->

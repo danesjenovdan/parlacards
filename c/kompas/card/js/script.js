@@ -690,3 +690,4 @@ if (kompasState.people.length > 0) {
 }
 
 // })();
+addCardRippling();

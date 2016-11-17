@@ -1,3 +1,3 @@
-addCardFlip();
 makeEmbedSwitch();
 activateCopyButton();
+addCardRippling();

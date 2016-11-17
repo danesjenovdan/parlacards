@@ -26,118 +26,87 @@
     <body><!-- removeme -->
 
         <!-- everything above here is part of the page and not part of the card -->
-        <div class="card-container card-halfling  <%= className %>">
+        <div class="card-container card-halfling <%= className %>">
             <div class="card-header">
                 <div class="card-header-border"></div>
-                <h1>Povprečno število govorov na sejo</h1>
+                <h1>Prisotnost na sejah DZ</h1>
                 <!-- this text is the only thing you touch in .card-header -->
             </div>
             <div class="card-content half">
                 <div class="card-content-front">
-                    <!-- max-min -->
-                    <%
-
-                        var score = data.results.score;
-                        var average = data.results.average;
-                        var maximum = data.results.max.score;
-
-                        var myresults = [score, average, maximum];
-
-                        var max = 0;
-                        var min = 10000000000;
-
-                        for (var i = 0; i < myresults.length; i++) {
-                            var current = myresults[i];
-                            if (Math.round(current) > max) {
-                                max = Math.round(current);
-                            } else if (+current < min) {
-                                min = Math.round(current);
-                            }
-                        }
-
-                        var diff = max - min;
-
-                    %>
-
-                    <div class="bgwhite poslanec poslanec-small">
-
-
-
-                        <div class="me_poslanec clearfix">
-                            <div class="col150">
-                                <span class="poslanec_title">
-                                    <%= data.person.name %>
-                                </span>
-                            </div>
-                            <div class="col280">
-                                <div class="progress smallbar ">
-                                    <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.score/max * 70 %>%;">
-                                        <span class="sr-only"><%= data.results.score %>% Complete</span>
-                                    </div>
-                                    <div class="progress_number">
-                                        <%= data.results.score %>
-                                    </div>
-
+                    <div class="me_poslanec clearfix">
+                        <div class="col150">
+                            <span class="poslanec_title">
+                                <%= data.person.name %>
+                            </span>
+                        </div>
+                        <div class="col280">
+                            <div class="progress smallbar ">
+                                <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.sessions.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.score/100*73 %>%;">
+                                    <span class="sr-only"><%= data.results.sessions.score %>% Complete</span>
                                 </div>
+                                <div class="progress_number">
+                                    <%= Math.round(data.results.sessions.score) %>
+                                </div>
+
                             </div>
                         </div>
+                    </div>
 
-                        <div class="other_poslanec clearfix">
-                            <div class="col150">
-                                <span class="poslanec_title">
-                                    Povprečje
-                                </span>
-                            </div>
-                            <div class="col280">
-                                <div class="progress smallbar avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average/max* 70 %>%;">
-                                        <span class="sr-only"><%= data.results.average %>% Complete</span>
-                                    </div>
-                                    <div class="progress_number">
-                                        <%= Math.round(data.results.average) %>
-                                    </div>
-
+                    <div class="other_poslanec clearfix">
+                        <div class="col150">
+                            <span class="poslanec_title">
+                                Povprečje
+                            </span>
+                        </div>
+                        <div class="col280">
+                            <div class="progress smallbar avgmin">
+                                <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.sessions.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.average/100*73 %>%;">
+                                    <span class="sr-only"><%= data.results.sessions.average %>% Complete</span>
                                 </div>
+                                <div class="progress_number">
+                                    <%= Math.round(data.results.sessions.average) %>
+                                </div>
+
                             </div>
                         </div>
+                    </div>
 
-                        <div class="other_poslanec clearfix">
-                            <div class="col150">
-                                <span class="poslanec_title">
-                                    Največ
-                                </span>
-                            </div>
-                            <div class="col280">
-                                <div class="progress smallbar avgminmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.max.score/max * 70 %>%;">
-                                        <span class="sr-only"><%= data.results.max.score %>% Complete</span>
-                                    </div>
-                                    <%
+                    <div class="other_poslanec clearfix">
+                        <div class="col150">
+                            <span class="poslanec_title">
+                                Največ
+                            </span>
+                        </div>
+                        <div class="col280">
+                            <div class="progress smallbar avgminmin">
+                                <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.sessions.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.sessions.max.score/100*73 %>%;">
+                                    <span class="sr-only"><%= data.results.sessions.max.score %>% Complete</span>
+                                </div>
+                                <%
 
-                                    if (data.results.max.mps) {
-                                        for (var i = 0; i < data.results.max.mps.length; i++) {
+                                if (data.results.sessions.max.mps) {
+                                    for (var i = 0; i < data.results.sessions.max.mps.length; i++) {
 
-                                    %>
-                                    <div data-name="<%= data.results.max.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.max.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.max.mps[i]['gov_id'] %>.png');"></div>
-                                    <%
-                                        }
+                                %>
+                                <div data-name="<%= data.results.sessions.max.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.sessions.max.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.sessions.max.mps[i]['gov_id'] %>.png');"></div>
+                                <%
                                     }
-                                    %>
-                                    <div class="progress_number">
-                                        <%= data.results.max.score %>
-                                    </div>
-
+                                }
+                                %>
+                                <div class="progress_number">
+                                    <%= Math.round(data.results.sessions.max.score) %>
                                 </div>
+
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="card-content-info hidden">
                     <div class="card-back-content">
                         <div class="scroller" id="tvojamtka">
                             <p class="info-text">
-                                Preštejemo <%= vocab['poslanca2'][data.person.gender] %> govore in število delimo s številom sej, na katerih je <%= vocab['poslanec'][data.person.gender] %> <%= vocab['govoriti'][data.person.gender] %>. Število vseh govorov delimo najprej s številom poslancev, potem pa še s številom vseh sej (na katerih se je govorilo). Individualni rezultat primerjamo s povprečnim.
+                                Preštejemo vse seje in preverimo, če je <%= vocab['poslanec'][data.person.gender] %> <%= vocab['glasovati'][data.person.gender] %> na vsaj enem glasovanju na posamezni seji. Če je <%= vocab['glasovati'][data.person.gender] %> vsaj enkrat, <%= vocab['on'][data.person.gender] %> štejemo kot <%= vocab['prisoten'][data.person.gender] %> na posamezni seji. Delimo število sej, ko je <%= vocab['biti'][data.person.gender] %> <%= vocab['prisoten'][data.person.gender] %>, s številom vseh sej in normaliziramo (min 1 - max 100).
                             </p>
                         </div>
                     </div>
@@ -185,13 +154,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- delete this placeholder, this is the content of your card -->
             </div>
             <div class="card-footer">
                 <div class="card-circle-button card-share" data-back="share"></div>
                 <div class="card-circle-button card-embed" data-back="embed"></div>
                 <div class="card-circle-button card-info" data-back="info">i</div>
-            </div>
+            </div>            
         </div>
         <!-- everything below here is part of the page and not part of the card -->
 

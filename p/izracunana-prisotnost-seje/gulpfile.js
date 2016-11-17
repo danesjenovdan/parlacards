@@ -17,7 +17,6 @@ var replace = require('gulp-replace');
 var install = require("gulp-install");
 var wrap = require('gulp-wrap');
 var request = require('request');
-var inlineCss = require('gulp-inline-css')
 
 var debug = require('gulp-debug');
 
@@ -134,28 +133,6 @@ gulp.task('build', function(callback) {
         ['clean:dist', 'clean:temp'], ['sass', 'js', 'useref'],
         'minify:css',
         'inline',
-        'remove-minify',
-        callback
-    );
-});
-
-// inline css
-gulp.task('inline-css', function() {
-    return gulp.src('temp/card.ejs')
-        .pipe(inlineCss({
-            'applyStyleTags': true,
-            'applyLinkTags': true,
-            'removeStyleTags': true,
-            'removeLinkTags': true
-        }))
-        .pipe(gulp.dest('temp'));
-});
-// build-inline
-gulp.task('build-inline', function(callback) {
-    runSequence(
-        ['clean:dist', 'clean:temp'], ['sass', 'js', 'useref'],
-        'minify:css',
-        'inline-css',
         'remove-minify',
         callback
     );

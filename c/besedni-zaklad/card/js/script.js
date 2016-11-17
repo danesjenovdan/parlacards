@@ -475,3 +475,4 @@ function addSearchPerson(datum) {
     poslancisearch.initialize(true);
 }
 })();
+addCardRippling();

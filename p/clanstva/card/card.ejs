@@ -28,47 +28,47 @@
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
-        <div class="front">
-            <div class="card-header">
-                <div class="card-header-border"></div>
-                <h1>Članstva</h1> <!-- this text is the only thing you touch in .card-header -->
-            </div>
-            <div class="card-content half">
-              <!-- get random id -->
-              <%
-                  function makeId() {
-                      var text = "";
-                      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Članstva</h1> <!-- this text is the only thing you touch in .card-header -->
+        </div>
+        <div class="card-content half">
+            <div class="card-content-front">
+                <!-- get random id -->
+                <%
+                    function makeId() {
+                        var text = "";
+                        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-                      for(var i = 0; i < 5; i++) {
-                          text += possible.charAt(Math.floor(Math.random() * possible.length));
-                      }
+                        for(var i = 0; i < 5; i++) {
+                            text += possible.charAt(Math.floor(Math.random() * possible.length));
+                        }
 
-                      return text;
-                  }
+                        return text;
+                    }
 
-                  var randomId = makeId();
-                  var membershipTabMap = {
+                    var randomId = makeId();
+                    var membershipTabMap = {
                     'odbor': 'Delovna telesa',
                     'kolegij': 'Delovna telesa',
                     'komisija' : 'Delovna telesa',
                     'delegacija' : 'Stalne delegacije',
                     'skupina prijateljstva': 'Skupine prijateljstva'
                 };
-                  var tabs = {
+                    var tabs = {
                     'Delovna telesa': [],
                     'Stalne delegacije': [],
                     'Skupine prijateljstva': []
                 };
 
-                  for (membership in data.memberships) {
-                      if (membership in membershipTabMap) {
-                          var tabId = membershipTabMap[membership];
-                          tabs[tabId] = tabs[tabId].concat(data.memberships[membership]);
-                      }
-                  }
-              %>
-              <div class="bgwhite poslanec">
+                    for (membership in data.memberships) {
+                        if (membership in membershipTabMap) {
+                            var tabId = membershipTabMap[membership];
+                            tabs[tabId] = tabs[tabId].concat(data.memberships[membership]);
+                        }
+                    }
+                %>
+                <div class="bgwhite poslanec">
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
@@ -84,11 +84,11 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <% var i = 0;
-                       for (tab in tabs) {
-                           var PAGE_SIZE = 3;
-                           var currentTab = tabs[tab];
-                           var hasPagination = currentTab.length > PAGE_SIZE;
-                           var pageCount = Math.ceil(currentTab.length / PAGE_SIZE); %>
+                        for (tab in tabs) {
+                            var PAGE_SIZE = 3;
+                            var currentTab = tabs[tab];
+                            var hasPagination = currentTab.length > PAGE_SIZE;
+                            var pageCount = Math.ceil(currentTab.length / PAGE_SIZE); %>
 
                     <div role="tabpanel" class="tab-pane<%= i === 0 ? ' active' : '' %>" id="<%= tab.replace(/ /g, '_') %>_<%= randomId %>">
 
@@ -128,9 +128,9 @@
                                 </li>
 
                                 <% for (var j = 0; j < pageCount; j++) { %>
-                                      <li role="presentation" class="<%= j === 0 ? 'active' : '' %>">
-                                          <a href="#<%= tab.replace(/ /g, '_') %>_<%= randomId %>_<%= j %>" aria-controls="<%= tab %>" role="tab" data-toggle="tab"><%= j + 1 %></a>
-                                      </li>
+                                        <li role="presentation" class="<%= j === 0 ? 'active' : '' %>">
+                                            <a href="#<%= tab.replace(/ /g, '_') %>_<%= randomId %>_<%= j %>" aria-controls="<%= tab %>" role="tab" data-toggle="tab"><%= j + 1 %></a>
+                                        </li>
                                 <% } %>
 
                                 <li class="arrow">
@@ -147,41 +147,19 @@
 
                 </div>
 
-              </div>
-            </div>
-            <div class="card-footer">
-                <div class="card-circle-button card-share" data-back="share"></div>
-                <div class="card-circle-button card-embed" data-back="embed"></div>
-                <div class="card-circle-button card-info" data-back="info">i</div>
-            </div>
-        </div>
-        <div class="back">
-            <div class="back-info">
-                <div class="card-header">
-                    <div class="card-header-border"></div>
-                    <h1>Članstva</h1>
-                    <!-- this text is the only thing you touch in .card-header -->
                 </div>
-                <div class="card-back-content card-content">
+            </div>
+            <div class="card-content-info hidden">
+                <div class="card-back-content">
                     <div class="scroller" id="tvojamtka">
                         <p class="info-text">
                             Izpis vseh članstev <%= vocab['poslanec3'][data.person.gender] %> v delovnih telesih, stalnih delegacijah in skupinah prijateljstva.
                         </p>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <div class="card-circle-button card-share" data-back="share"></div>
-                    <div class="card-circle-button card-embed" data-back="embed"></div>
-                    <div class="card-circle-button card-info card-exit" data-back="info">×</div>
-                </div>
             </div>
-            <div class="back-embed">
-                <div class="card-header">
-                    <div class="card-header-border"></div>
-                    <h1>Članstva</h1>
-                    <!-- this text is the only thing you touch in .card-header -->
-                </div>
-                <div class="card-back-content card-content">
+            <div class="card-content-embed hidden">
+                <div class="card-back-content">
                     <div class="embed-content">
                         <div class="embed-divider"></div>
                         <div class="embed-switch-container">
@@ -204,7 +182,7 @@
                         </div>
                         <div class="embed-divider"></div>
                         <div class="embed-script">
-                            <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><iframe frameborder="0" width="620" height="400" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?embed=true"></textarea>
+                            <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?embed=true&altHeader=true"></textarea>
                             <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                         </div>
                         <div class="embed-divider"></div>
@@ -213,31 +191,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <div class="card-circle-button card-share" data-back="share"></div>
-                    <div class="card-circle-button card-embed card-exit" data-back="embed">×</div>
-                    <div class="card-circle-button card-info" data-back="info">i</div>
-                </div>
             </div>
-            <div class="back-share">
-                <div class="card-header">
-                    <div class="card-header-border"></div>
-                    <h1>Članstva</h1>
-                    <!-- this text is the only thing you touch in .card-header -->
-                </div>
+            <div class="card-content-share hidden">
                 <div class="card-back-content card-content">
                     <div class="share-content">
                         <label for="share-url">Neposredna povezava do kartice</label>
-                        <input type="url" class="form-control" id="share-url" value="https://parlameter.si/trajlala"/>
+                        <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?frame=true&altHeader=true"/>
                         <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <div class="card-circle-button card-share card-exit" data-back="share">×</div>
-                    <div class="card-circle-button card-embed" data-back="embed"></div>
-                    <div class="card-circle-button card-info" data-back="info">i</div>
-                </div>
             </div>
+        </div>
+        <div class="card-footer">
+            <div class="card-circle-button card-share" data-back="share"></div>
+            <div class="card-circle-button card-embed" data-back="embed"></div>
+            <div class="card-circle-button card-info" data-back="info">i</div>
         </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->

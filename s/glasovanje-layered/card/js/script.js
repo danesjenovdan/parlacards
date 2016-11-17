@@ -640,3 +640,4 @@ $('.option').on('click', function() {
     console.log($(this).data('option'));
     $('.mpgroup.' + $(this).data('option')).removeClass('hidden');
 });
+addCardRippling();

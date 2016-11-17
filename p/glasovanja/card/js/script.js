@@ -41,3 +41,4 @@ filterPGlasovanjaByTags(null);
 addCardFlip();
 makeEmbedSwitch();
 activateCopyButton();
+addCardRippling();

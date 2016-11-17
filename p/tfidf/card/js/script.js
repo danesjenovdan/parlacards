@@ -24,3 +24,4 @@ $(window).on('resize', function() {
 addCardFlip();
 makeEmbedSwitch();
 activateCopyButton();
+addCardRippling();

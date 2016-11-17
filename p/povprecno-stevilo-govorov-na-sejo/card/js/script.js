@@ -1,5 +1,5 @@
 progressbarTooltip.init();
 
-addCardFlip();
 makeEmbedSwitch();
 activateCopyButton();
+addCardRippling();
