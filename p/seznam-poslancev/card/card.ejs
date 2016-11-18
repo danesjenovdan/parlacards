@@ -26,10 +26,14 @@
         var partyMatch = true,
         districtMatch = true;
 
-        if (state.party) {
-          partyMatch = member.person.party.acronym === state.party;
+        if (state.parties) {
+          stringToMatch = member.person.party.acronym;
+          if (stringToMatch.indexOf('NeP') > -1) {
+            stringToMatch = 'NeP';
+          }
+          partyMatch = state.parties.indexOf(stringToMatch) > -1;
         }
-        if (state.districts.length > 0) {
+        if (state.districts > 0) {
           districtMatch = member.person.district.reduce(function(prevMatch, memberDistrict) {
             return prevMatch || state.districts.indexOf(String(memberDistrict)) > -1;
           }, false);

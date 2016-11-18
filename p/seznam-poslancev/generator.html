@@ -35,7 +35,7 @@
           <div class="col-md-12 parties-districts">
             <ul class="parties">
               <li v-for="party in parties" class="party-button"
-                  :class="[{ selected: currentParty === party }, party.replace(/ /g, '_').toLowerCase()]"
+                  :class="[{ selected: currentParties.indexOf(party) > -1 }, party.replace(/ /g, '_').toLowerCase()]"
                   @click="selectParty(party)">
                 {{ party }}
               </li>
@@ -117,7 +117,7 @@
         { id: 'preprosto',            label: 'Preprosto besedje' },
         { id: 'problematicno',        label: 'Ekscesno besedje' },
       ],
-      currentParty: null,
+      currentParties: [],
       parties: [ 'SMC', 'SDS', 'DeSUS', 'SD', 'ZL', 'NSI', 'PS NP', 'IMNS', 'NeP' ]
     },
     computed: {
@@ -161,8 +161,13 @@
             var partyMatch = true,
                 districtMatch = true
 
-            if (that.currentParty !== null) {
-              partyMatch = member.person.party.acronym === that.currentParty
+            if (that.currentParties.length > 0) {
+              // Beware! NeP check is currently hacked in here.
+              var stringToMatch = member.person.party.acronym
+              if (stringToMatch.indexOf('NeP') > -1) {
+                stringToMatch = 'NeP'
+              }
+              partyMatch = that.currentParties.indexOf(stringToMatch) > -1
             }
             if (that.currentDistricts.length > 0) {
               districtMatch = member.person.district.reduce(function(prevMatch, memberDistrict) {
@@ -221,8 +226,8 @@
         if (this.currentAnalysis !== 'alphabetical') {
           params.analysis = this.currentAnalysis
         }
-        if (this.currentParty !== null) {
-          params.party = this.currentParty
+        if (this.currentParties.length > 0) {
+          params.parties = this.currentParties
         }
         if (this.currentDistricts.length > 0) {
           params.districts = this.currentDistricts
@@ -265,11 +270,11 @@
         }
       },
       selectParty: function(partyId) {
-        if (this.currentParty === partyId) {
-          this.currentParty = null
+        if (this.currentParties.indexOf(partyId) > -1) {
+          this.currentParties.splice(this.currentParties.indexOf(partyId), 1)
         }
         else {
-          this.currentParty = partyId
+          this.currentParties.push(partyId)
         }
       }
     }

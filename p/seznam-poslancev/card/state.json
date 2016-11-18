@@ -1,5 +1,5 @@
 {
     "analysis": "preprosto",
-    "districts": ["71", "60"],
-    "party": "SDS"
+    "districts": ["71", "60", "28"],
+    "parties": ["SDS", "NeP"]
 }
