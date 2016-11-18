@@ -24,7 +24,8 @@
     <script>
       <% data.data = data.data.filter(function(member) {
         var partyMatch = true,
-        districtMatch = true;
+            districtMatch = true,
+            presidingMatch = true;
 
         if (state.parties) {
           stringToMatch = member.person.party.acronym;
@@ -38,8 +39,11 @@
             return prevMatch || state.districts.indexOf(String(memberDistrict)) > -1;
           }, false);
         }
+        if (state.excludePresiding) {
+          presidingMatch = !member.person.has_function;
+        }
 
-        return partyMatch && districtMatch;
+        return partyMatch && districtMatch && presidingMatch;
       }).map(function(member) {
         if (member.person.district.length === 0) {
           member.person.formattedDistrict = 'okraj ni vnešen';

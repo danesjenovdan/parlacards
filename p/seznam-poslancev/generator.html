@@ -32,17 +32,22 @@
       </div>
 
       <div class="row">
-          <div class="col-md-12 parties-districts">
-            <ul class="parties">
-              <li v-for="party in parties" class="party-button"
-                  :class="[{ selected: currentParties.indexOf(party) > -1 }, party.replace(/ /g, '_').toLowerCase()]"
-                  @click="selectParty(party)">
-                {{ party }}
-              </li>
-            </ul>
+        <div class="col-md-12 parties-districts">
+          <ul class="parties">
+            <li v-for="party in parties" class="party-button"
+                :class="[{ selected: currentParties.indexOf(party) > -1 }, party.replace(/ /g, '_').toLowerCase()]"
+                @click="selectParty(party)">
+              {{ party }}
+            </li>
+          </ul>
 
-            <search-dropdown class="districts" :items="districts" :placeholder="inputPlaceholder" />
+          <search-dropdown class="districts" :items="districts" :placeholder="inputPlaceholder"></search-dropdown>
+
+          <div class="exclude-checkbox">
+            <input id="predsedujoci" type="checkbox" v-model="excludePresiding" class="checkbox">
+            <label for="predsedujoci">Skrij predsedujoče</label>
           </div>
+        </div>
       </div>
 
       <div class="row">
@@ -116,7 +121,8 @@
         { id: 'problematicno',        label: 'Ekscesno besedje',                 round: true },
       ],
       currentParties: [],
-      parties: [ 'SMC', 'SDS', 'DeSUS', 'SD', 'ZL', 'NSI', 'PS NP', 'IMNS', 'NeP' ]
+      parties: [ 'SMC', 'SDS', 'DeSUS', 'SD', 'ZL', 'NSI', 'PS NP', 'IMNS', 'NeP' ],
+      excludePresiding: false
     },
     computed: {
       columns: function() {
@@ -157,7 +163,8 @@
         var sortedAndFiltered = this.memberData
           .filter(function(member) {
             var partyMatch = true,
-                districtMatch = true
+                districtMatch = true,
+                presidingMatch = true
 
             if (that.currentParties.length > 0) {
               // Beware! NeP check is currently hacked in here.
@@ -172,8 +179,11 @@
                 return prevMatch || that.currentDistricts.indexOf(String(memberDistrict)) > -1
               }, false)
             }
+            if (that.excludePresiding) {
+              presidingMatch = !member.person.has_function
+            }
 
-            return partyMatch && districtMatch
+            return partyMatch && districtMatch && presidingMatch
           })
           .map(function(member) {
             if (member.person.district.length === 0) {
@@ -229,6 +239,9 @@
         }
         if (this.currentDistricts.length > 0) {
           params.districts = this.currentDistricts
+        }
+        if (this.excludePresiding) {
+          params.excludePresiding = true
         }
 
         return 'https://glej.parlameter.si/p/seznam-poslancev/' +

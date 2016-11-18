@@ -1,5 +1,6 @@
 {
     "analysis": "privzdignjeno",
-    "districts": ["71", "60", "28"],
-    "parties": ["SDS", "NeP"]
+    "districts": ["71", "60", "28", "101"],
+    "parties": ["SDS", "NeP", "DeSUS"],
+    "excludePresiding": true
 }
