@@ -66,18 +66,19 @@
                       {{ column.label }}
                     </div>
                   </li>
+                  <li v-if="memberData.length === 0" class="loader">LOADER GOES HERE</li>
                   <li v-for="member in processedMemberData" class="person">
-                      <a class="portrait column" :href="'/p/id/' + member.person.id + ''">
-                        <img :src="'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + member.person.gov_id + '.png'" />
-                      </a>
-                      <div class="column wider name">
-                        <a :href="'/p/id/' + member.person.id + ''">{{ member.person.name }}</a>
-                      </div>
-                      <div class="column">
-                        <a :href="'/ps/id/' + member.person.party.id + ''">{{ member.person.party.acronym }}</a>
-                      </div>
-                      <div class="column">{{ member.person.formattedDistrict }}</div>
-                      <div v-if="currentAnalysis !== 'alphabetical'" class="column">{{ getFormattedAnalysisValue(member) }}</div>
+                    <a class="portrait column" :href="'/p/id/' + member.person.id + ''">
+                      <img :src="'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + member.person.gov_id + '.png'" />
+                    </a>
+                    <div class="column wider name">
+                      <a :href="'/p/id/' + member.person.id + ''">{{ member.person.name }}</a>
+                    </div>
+                    <div class="column">
+                      <a :href="'/ps/id/' + member.person.party.id + ''">{{ member.person.party.acronym }}</a>
+                    </div>
+                    <div class="column">{{ member.person.formattedDistrict }}</div>
+                    <div v-if="currentAnalysis !== 'alphabetical'" class="column">{{ getFormattedAnalysisValue(member) }}</div>
                   </li>
                 </ul>
               </div>
