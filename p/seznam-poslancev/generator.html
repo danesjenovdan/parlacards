@@ -72,9 +72,7 @@
                         <a :href="'/ps/id/' + member.person.party.id + ''">{{ member.person.party.acronym }}</a>
                       </div>
                       <div class="column">{{ member.person.formattedDistrict }}</div>
-                      <div v-if="currentAnalysis !== 'alphabetical'" class="column">
-                        {{ member.results[currentAnalysis] + (currentAnalysisData.unit === 'percent' ? '%' : '') }}
-                      </div>
+                      <div v-if="currentAnalysis !== 'alphabetical'" class="column">{{ getFormattedAnalysisValue(member) }}</div>
                   </li>
                 </ul>
               </div>
@@ -107,15 +105,15 @@
       currentSortOrder: 'asc',
       currentAnalysis: 'alphabetical',
       analyses: [
-        { id: 'alphabetical',         label: 'Abecedni seznam' },
-        { id: 'presence_sessions',    label: 'Prisotnost na sejah DZ',           unit: 'percent' },
-        { id: 'presence_votes',       label: 'Prisotnost na glasovanjih sej DZ', unit: 'percent' },
+        { id: 'alphabetical',         label: 'Abecedni seznam', },
+        { id: 'presence_sessions',    label: 'Prisotnost na sejah DZ',           round: true, unit: 'percent' },
+        { id: 'presence_votes',       label: 'Prisotnost na glasovanjih sej DZ', round: true, unit: 'percent' },
         { id: 'vocabulary_size',      label: 'Besedni zaklad' },
         { id: 'spoken_words',         label: 'Št. izgovorjenih besed' },
         { id: 'speeches_per_session', label: 'Št. govorov na sejo' },
-        { id: 'privzdignjeno',        label: 'Privzdignjeno besedje' },
-        { id: 'preprosto',            label: 'Preprosto besedje' },
-        { id: 'problematicno',        label: 'Ekscesno besedje' },
+        { id: 'privzdignjeno',        label: 'Privzdignjeno besedje',            scientific: true },
+        { id: 'preprosto',            label: 'Preprosto besedje',                round: true },
+        { id: 'problematicno',        label: 'Ekscesno besedje',                 round: true },
       ],
       currentParties: [],
       parties: [ 'SMC', 'SDS', 'DeSUS', 'SD', 'ZL', 'NSI', 'PS NP', 'IMNS', 'NeP' ]
@@ -276,6 +274,17 @@
         else {
           this.currentParties.push(partyId)
         }
+      },
+      getFormattedAnalysisValue: function(member) {
+        var value = member.results[this.currentAnalysis]
+
+        if (value !== 0) {
+          if (this.currentAnalysisData.round) { value = Math.round(value * 10) / 10 }
+          if (this.currentAnalysisData.scientific) { value = value.toExponential() }
+        }
+        if (this.currentAnalysisData.unit === 'percent') { value += '%' }
+
+        return value
       }
     }
   })

@@ -33,7 +33,7 @@
           }
           partyMatch = state.parties.indexOf(stringToMatch) > -1;
         }
-        if (state.districts > 0) {
+        if (state.districts) {
           districtMatch = member.person.district.reduce(function(prevMatch, memberDistrict) {
             return prevMatch || state.districts.indexOf(String(memberDistrict)) > -1;
           }, false);
@@ -65,11 +65,13 @@
     <% var columns = {
       presence_sessions: {
         label: 'Prisotnost na sejah DZ',
-        unit: 'percent'
+        unit: 'percent',
+        round: true
       },
       presence_votes: {
         label: 'Prisotnost na glasovanjih sej DZ',
-        unit: 'percent'
+        unit: 'percent',
+        round: true
       },
       vocabulary_size: {
         label: 'Besedni zaklad'
@@ -81,13 +83,16 @@
         label: 'Št. govorov na sejo'
       },
       privzdignjeno: {
-        label: 'Privzdignjeno besedje'
+        label: 'Privzdignjeno besedje',
+        scientific: true
       },
       preprosto: {
-        label: 'Preprosto besedje'
+        label: 'Preprosto besedje',
+        round: true
       },
       problematicno: {
-        label: 'Ekscesno besedje'
+        label: 'Ekscesno besedje',
+        round: true
       }
     }; %>
 
@@ -121,7 +126,17 @@
               <div class="column"><%= result.person.formattedDistrict %></div>
               <% if (state && state.analysis) { %>
                 <div class="column">
-                  <%= result.results[state.analysis] + (columns[state.analysis].unit === 'percent' ? '%' : '') %>
+                  <%= function() {
+                    var value = result.results[state.analysis];
+
+                    if (value !== 0) {
+                      if (columns[state.analysis].round) { value = Math.round(value * 10) / 10; }
+                      if (columns[state.analysis].scientific) { value = value.toExponential(); }
+                    }
+                    if (columns[state.analysis].unit === 'percent') { value += '%'; }
+
+                    return value;
+                  }() %>
                 </div>
               <% } %>
             </li>
