@@ -58,6 +58,52 @@
 
                     %>
 
+                    <!-- max-min -->
+                    <%
+
+                        function getMax(myresults) {
+
+                            var max = 0;
+                            var min = 10000000000;
+
+                            for (var i = 0; i < myresults.length; i++) {
+                                var current = myresults[i];
+                                if (Math.round(current) > max) {
+                                    max = Math.round(current);
+                                } else if (+current < min) {
+                                    min = Math.round(current);
+                                }
+                            }
+
+                            return max; 
+
+                        }
+
+                        var max = getMax([
+                            data.results.for.score,
+                            data.results.for.avgOpposition.score,
+                            data.results.for.avgCoalition.score,
+                            data.results.for.maxOpposition.score,
+                            data.results.for.maxCoalition.score,
+                            data.results.against.score,
+                            data.results.against.avgOpposition.score,
+                            data.results.against.avgCoalition.score,
+                            data.results.against.maxOpposition.score,
+                            data.results.against.maxCoalition.score,
+                            data.results.abstain.score,
+                            data.results.abstain.avgOpposition.score,
+                            data.results.abstain.avgCoalition.score,
+                            data.results.abstain.maxOpposition.score,
+                            data.results.abstain.maxCoalition.score,
+                            data.results.absent.score,
+                            data.results.absent.avgOpposition.score,
+                            data.results.absent.avgCoalition.score,
+                            data.results.absent.maxOpposition.score,
+                            data.results.absent.maxCoalition.score
+                        ]);
+
+                    %>
+
                     <div class="bgwhite poslanec">
 
                         <!-- Nav tabs -->
@@ -88,8 +134,8 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar">
-                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.for.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.score %>%;">
-                                                <span class="sr-only"><%= data.results.for.score %>% Complete</span>
+                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.for.score/max * 60%>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.score/max * 60 %>%;">
+                                                <span class="sr-only"><%= data.results.for.score/max * 60%>% Complete</span>
                                             </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.for.score) %>
@@ -107,7 +153,7 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar avgmin">
-                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgOpposition.score %>%;">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgOpposition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.for.avgOpposition.score %>% Complete</span>
                                             </div>
                                             <div class="progress_number">
@@ -126,7 +172,7 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar avgminmin">
-                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxOpposition.score %>%;">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxOpposition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.for.maxOpposition.score %>% Complete</span>
                                             </div>
                                             <%
@@ -156,7 +202,7 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar avgmin">
-                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgCoalition.score %>%;">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgCoalition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.for.avgCoalition.score %>% Complete</span>
                                             </div>
                                             <div class="progress_number">
@@ -175,7 +221,7 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar avgminmin">
-                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxCoalition.score %>%;">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxCoalition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.for.maxCoalition.score %>% Complete</span>
                                             </div>
                                             <%
@@ -208,8 +254,8 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar">
-                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.against.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.score %>%;">
-                                                <span class="sr-only"><%= data.results.against.score %>% Complete</span>
+                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.against.score/max * 60%>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.score/max * 60 %>%;">
+                                                <span class="sr-only"><%= data.results.against.score/max * 60%>% Complete</span>
                                             </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.against.score) %>
@@ -227,7 +273,7 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar avgmin">
-                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgOpposition.score %>%;">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgOpposition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.against.avgOpposition.score %>% Complete</span>
                                             </div>
                                             <div class="progress_number">
@@ -246,7 +292,7 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar avgminmin">
-                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxOpposition.score %>%;">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxOpposition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.against.maxOpposition.score %>% Complete</span>
                                             </div>
                                             <%
@@ -276,7 +322,7 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar avgmin">
-                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgCoalition.score %>%;">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgCoalition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.against.avgCoalition.score %>% Complete</span>
                                             </div>
                                             <div class="progress_number">
@@ -295,7 +341,7 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar avgminmin">
-                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxCoalition.score %>%;">
+                                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxCoalition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.against.maxCoalition.score %>% Complete</span>
                                             </div>
                                             <%
@@ -328,8 +374,8 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar">
-                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.abstain.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.score %>%;">
-                                                <span class="sr-only"><%= data.results.abstain.score %>% Complete</span>
+                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.abstain.score/max * 60%>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.score/max * 60%>%;">
+                                                <span class="sr-only"><%= data.results.abstain.score/max * 60%>% Complete</span>
                                             </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.abstain.score) %>
@@ -448,8 +494,8 @@
                                     </div>
                                     <div class="col280">
                                         <div class="progress smallbar">
-                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.absent.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.score %>%;">
-                                                <span class="sr-only"><%= data.results.absent.score %>% Complete</span>
+                                            <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.absent.score/max * 60%>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.score/max * 60%>%;">
+                                                <span class="sr-only"><%= data.results.absent.score/max * 60%>% Complete</span>
                                             </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.absent.score) %>
