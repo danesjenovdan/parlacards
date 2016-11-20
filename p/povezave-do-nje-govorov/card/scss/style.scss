@@ -55,3 +55,29 @@
   }
 
 }
+
+.date {
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-weight: bold;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.card-content-front {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+& section {
+    overflow: hidden;
+}
+
+.recent-activity section ul li {
+    min-height: 30px;
+    p {
+        min-height: 30px;
+    }
+}

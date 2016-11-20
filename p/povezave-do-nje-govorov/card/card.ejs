@@ -43,31 +43,32 @@
         <!-- this text is the only thing you touch in .card-header -->
     </div>
     <div class="card-content full recent-activity " id="recent-speeches-do-nje-govorov">
-        <div class="card-content-front scroller" id="scrollbar-recent-activity<%=Math.floor(Math.random() * 10000); %>">
-            <% var person = data.person; %>
+        <div class="card-content-front stickinme">
+            <div class="">
+                <% var person = data.person; %>
 
-            <% var i = 0; %>
-            <% for(result in data.results){ %>
+                <% var i = 0; %>
+                <% for(result in data.results){ %>
 
+                <div class="date"><%= data.results[result].date %></div>
+                <section>
 
-            <section>
-                <span class="date"><%= data.results[result].date %></span>
+                    <ul>
+                        <li>
 
-                <ul>
-                    <li>
+                            <p><a href="<%= data.results[result].speeches[0].session_id %>"><%= data.results[result].speeches[0].session_name %></a></p>
+                        </li>
 
-                        <p><a href="<%= data.results[result].speeches[0].session_id %>"><%= data.results[result].speeches[0].session_name %></a></p>
-                    </li>
+                        <li class="clearfix">
+                            <% for(var speechIndex = 0; speechIndex < data.results[result].speeches.length; speechIndex++ ){ var tmp = (speechIndex+1); %>
+                                <a class="parlaicon speech" href="<%= data.results[result].speeches[speechIndex].speech_id %>"><%= tmp %></a>
+                            <% } %>
+                        </li>
+                    </ul>
 
-                    <li class="clearfix">
-                        <% for(var speechIndex = 0; speechIndex < data.results[result].speeches.length; speechIndex++ ){ var tmp = (speechIndex+1); %>
-                            <a class="parlaicon speech" href="<%= data.results[result].speeches[speechIndex].speech_id %>"><%= tmp %></a>
-                        <% } %>
-                    </li>
-                </ul>
-
-            </section>
-            <% i++; } %>
+                </section>
+                <% i++; } %>
+            </div>
 
         </div>
         <div class="card-content-info hidden">
