@@ -259,3 +259,11 @@ rect {
     @include card(1);
     margin-bottom: 10px;
 }
+
+.centerme:hover {
+    path {
+        fill: #009CDD;
+    }
+
+    cursor: pointer;
+}

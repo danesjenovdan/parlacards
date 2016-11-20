@@ -232,7 +232,7 @@ function renderGraph() {
             //     return color(d.person.party.acronym.replace(' ', '_'));
             // })
             .style('fill', function(d) {
-                return 'url(#' + d.person.gov_id + ')'
+                return 'url(#BZ' + d.person.gov_id + ')'
             })
             // .classed(groupedNodes[group][0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-fill', true)
             .classed(groupedNodes[group][0].person.party.acronym.replace(/ /g, '_').toLowerCase() + '-stroke', true)
@@ -290,7 +290,7 @@ var defs = svg.append('defs').attr('id', 'thedefs');
 
 for (i in nodes) {
     defs.append("pattern")
-        .attr("id", nodes[i].person.gov_id)
+        .attr("id", 'BZ' + nodes[i].person.gov_id)
         .attr("patternUnits", "userSpaceOnUse")
         .attr("width", 30)
         .attr("height", 30)

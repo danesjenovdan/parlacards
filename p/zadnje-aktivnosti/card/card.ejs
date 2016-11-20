@@ -27,21 +27,21 @@
 
 <!-- everything above here is part of the page and not part of the card -->
 <div class="card-container card-halfling <%= className %>">
-    <div class="front">
-        <div class="card-header">
-            <div class="card-header-border"></div>
-            <h1>Zadnje aktivnosti</h1>
-            <!-- this text is the only thing you touch in .card-header -->
-        </div>
-        <div class="card-content recent-activity">
-            <div class="scroller" id="scrollbar-recent-activity">
+    <div class="card-header">
+        <div class="card-header-border"></div>
+        <h1>Zadnje aktivnosti</h1>
+        <!-- this text is the only thing you touch in .card-header -->
+    </div>
+    <div class="card-content recent-activity full">
+        <div class="card-content-front stickinme">
+            <div class="2scrollbar-recent-activity">
 
                 <% for (var i = 0; i < data.results.length; i++) {
                     var day = data.results[i];
                 %>
 
+                <div class="date"><%= day.date %></div>
                 <section>
-                    <span class="date"><%= day.date %></span>
 
                     <ul>
 
@@ -76,7 +76,7 @@
 
                         <li>
                             <span class="parlaicon <%= icon %>"></span>
-                            <p><%= verb %> <a href="#"><%= thing %></a></p>
+                            <p><%= verb %> <a class="funblue-light-hover" href="#"><%= thing %></a></p>
                         </li>
 
                         <%
@@ -90,7 +90,7 @@
 
                         <li>
                             <span class="parlaicon <%= icon %>"></span>
-                            <p><a href="#"><%= verb %></a>&nbsp;na&nbsp;<a href="#"><%= thing %> <%=thingwhere%></a></p>
+                            <p><a class="funblue-light-hover" href="#"><%= verb %></a>&nbsp;na&nbsp;<a class="funblue-light-hover" href="#"><%= thing %> <%=thingwhere%></a></p>
                         </li>
 
                         <%
@@ -101,7 +101,7 @@
 
                         <!-- <li>
                             <span class="glyphicon glyphicon-ban-circle"></span>
-                            <p>Se VZDRŽALA glasovanja o <a href="#">Sklepu o imenovanju člana nadzornega sveta RTV</a></p>
+                            <p>Se VZDRŽALA glasovanja o <a class="funblue-light-hover" href="#">Sklepu o imenovanju člana nadzornega sveta RTV</a></p>
                         </li> -->
                     </ul>
 
@@ -112,12 +112,12 @@
             </div>
             <!-- delete this placeholder, this is the content of your card -->
         </div>
-        <div class="card-footer">
+    </div>
+    <div class="card-footer">
             <div class="card-circle-button card-share" data-back="share"></div>
             <div class="card-circle-button card-embed" data-back="embed"></div>
             <div class="card-circle-button card-info" data-back="info">i</div>
         </div>
-    </div>
     <div class="back">
             <div class="back-info">
                 <div class="card-header">

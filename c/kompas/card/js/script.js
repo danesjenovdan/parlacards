@@ -1,4 +1,4 @@
-// (function() {
+(function() {
 
 function makeSwitchEvent2(selection) {
     $('#partyswitch-' + d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '_')).on('click', function() {
@@ -38,6 +38,12 @@ function makeSwitchEvent2(selection) {
                         var parent = $('#_' + d.person.id).parent()[0];
                         moveToFront(parent, d);
                     });
+            }
+
+            updatePeopleScroller();
+            for (i in selection[0]) {
+                console.log(d3.select(selection[0][i]).datum());
+                addSearchPerson(d3.select(selection[0][i]).datum());
             }
         }
         $(this).toggleClass('turnedon');
@@ -183,6 +189,18 @@ for (i in kompas_data) {
         .attr("y", 0);
 }
 
+svg.append('svg')
+    .attr('width', 20)
+    .attr('height', 20)
+    .attr('x', width - 30)
+    .attr('y', height - 30)
+    .attr('viewBox', '0 0 1280 1280')
+    .html('<g class="centerme" transform="translate(-2108.7199,-3554.229)"><rect style="fill: #ffffff;" transform="translate(2108.7199,3554.229)" width="1280" height="1280"></rect><path style="" d="m 2108.7199,4744.854 c 0,-58.75 0.4283,-89.375 1.25,-89.375 0.8226,0 1.25,-33.125 1.25,-96.875 l 0,-96.875 90,0 90,0 0,96.875 0,96.875 95,0 95,0 0,89.375 0,89.375 -186.25,0 -186.25,0 0,-89.375 z m 907.5001,0 0,-89.375 96.25,0 96.25,0 0,-96.875 0,-96.875 90,0 90,0 0,186.25 0,186.25 -186.25,0 -186.25,0 0,-89.375 z m -291.2501,-334.5266 c -35.2236,-4.0473 -73.0374,-18.343 -101.25,-38.2781 -15.2954,-10.8077 -42.0126,-37.5249 -52.8203,-52.8203 -24.7025,-34.9595 -39.6592,-82.1008 -39.6592,-125 0,-42.8992 14.9567,-90.0405 39.6592,-125 10.8077,-15.2954 37.5249,-42.0126 52.8203,-52.8204 22.3667,-15.8043 55.1117,-29.8695 81.875,-35.1684 48.4773,-9.598 95.5802,-3.2991 140.0001,18.7217 22.1493,10.9804 36.9714,21.8091 56.2772,41.1149 19.3057,19.3057 30.1345,34.1279 41.1148,56.2772 30.8302,62.1899 30.8302,131.5601 0,193.75 -10.9803,22.1493 -21.8091,36.9715 -41.1148,56.2772 -19.3058,19.3058 -34.1279,30.1345 -56.2772,41.1149 -37.9266,18.8018 -80.28,26.4671 -120.6251,21.8313 z m -613.75,-669.8484 0,-186.25 185,0 185,0 0,89.375 0,89.375 -95,0 -95,0 0,96.875 0,96.875 -90,0 -90,0 0,-186.25 z m 1097.5001,89.375 0,-96.875 -96.25,0 -96.25,0 0,-89.375 0,-89.375 186.25,0 186.25,0 0,186.25 0,186.25 -90,0 -90,0 0,-96.875 z" fill="#5388AA"></path></g>')
+    .select('.centerme')
+    .on('click', function() {
+        centerCompass();
+    });
+
 // tooltip start
 
 // Define the div for the tooltip
@@ -257,6 +275,15 @@ for (group in groupedData) {
     // drawHull(currentselection, groupedData[group]);
     makeSwitchEvent2(currentselection); // TODO
 
+}
+
+if (kompasState.people.length > 0) {
+    for (person_i in kompasState.people) {
+        showPersonPicture(svg.select('#_' + kompasState.people[person_i].id).datum());
+        // move to front
+        var parent = $('#_' + kompasState.people[person_i].id).parent()[0];
+        moveToFront(parent, svg.select('#_' + kompasState.people[person_i].id).datum());
+    }
 }
 
 function zoom(animate) {
@@ -654,7 +681,7 @@ function updatePeopleSearch() {
             moveToFront(parent, svg.select('#_' + datum.id).datum());
 
             // remove from autocomplete
-            removeSearchPerson(datum);
+            // removeSearchPerson(datum);
 
             // zoom in
             zoomIn(svg.select('#_' + datum.id).datum(), 4);
@@ -683,11 +710,6 @@ function addSearchPerson(datum) {
     poslancisearch.initialize(true);
 }
 
-if (kompasState.people.length > 0) {
-    for (person_i in kompasState.people) {
-        showPersonPicture(svg.select('#_' + kompasState.people[person_i].id).datum());
-    }
-}
-
-// })();
 addCardRippling();
+
+})();
