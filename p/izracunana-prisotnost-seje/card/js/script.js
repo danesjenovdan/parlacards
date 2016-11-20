@@ -9,7 +9,7 @@ function fixImages() {
     });
 }
 
-progressbarTooltip.init();
+progressbarTooltip.init(className);
 
 makeEmbedSwitch();
 activateCopyButton();

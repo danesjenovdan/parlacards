@@ -1,4 +1,4 @@
-progressbarTooltip.init();
+progressbarTooltip.init(className);
 
 makeEmbedSwitch();
 activateCopyButton();

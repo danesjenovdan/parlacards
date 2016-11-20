@@ -173,7 +173,7 @@ function fixImages() {
 
 }(jQuery);
 
-progressbarTooltip.init();
+progressbarTooltip.init(className);
 
 makeEmbedSwitch();
 activateCopyButton();
