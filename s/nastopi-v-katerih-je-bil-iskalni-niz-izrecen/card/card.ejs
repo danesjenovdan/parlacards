@@ -32,7 +32,8 @@
             <div class="card-header-border"></div>
             <h1>Zadnji nastopi, v katerih je bil iskalni niz izrečen</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <div class="card-content">
+        <div class="card-content full">
+            <div class="card-content-front">
           <%
               function makeId() {
                   var text = "";
@@ -50,7 +51,7 @@
                 return date.getDate() + ". " + (date.getMonth() + 1) + ". " + date.getFullYear()
               }
 
-              var PAGE_SIZE = 5;
+              var PAGE_SIZE = 100;
               var randomId = makeId();
               var paginationNeeded = data.highlighting.length > PAGE_SIZE;
               var resultPages = [];
@@ -60,62 +61,27 @@
                 resultPages.push(data.highlighting.slice(i * PAGE_SIZE, (i + 1) * PAGE_SIZE));
               }
           %>
+                <% resultPages.forEach(function(resultPage, index) { %>
 
-            <div class="scroller">
-
-                <div class="tab-content">
-                    <% resultPages.forEach(function(resultPage, index) { %>
-                        <% if (paginationNeeded) { %>
-                        <div role="tabpanel" class="tab-pane<%= index === 0 ? ' active' : '' %>" id="<%= randomId %>_<%= index %>">
-                        <% } %>
-
-                        <ul class="person-list">
-                          <% resultPage.forEach(function(result, index) { %>
-                            <li class="person">
-                              <a class="column portrait" href="/p/id/<%= result.person.id %>">
-                                <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(result.person.gov_id) %>.png" />
-                              </a>
-                              <div class="column name">
-                                <a class="funblue-light-hover" style="color: #6d6d6d;" href="/p/id/<%= result.person.id %>"><%= result.person.name %></a><br/>
-                                <a class="funblue-light-hover" style="color: #6d6d6d;" href="/ps/id/<%= result.person.party.id %>">
-                                  <%= result.person.party.acronym %>
-                                </a>
-                              </div>
-                              <div class="column date"><%= formatDate(result.date) %></div>
-                              <div class="column quote"><a class="funblue-light-hover" href="https://skoraj.parlameter.si/seja/transkript/<%= result.session_id %>" style="color: #6d6d6d;"><%- result.content_t %></a></div>
-                            </li>
-                          <% }) %>
-                        </ul>
-
-                        <% if (paginationNeeded) { %>
-                        </div>
-                        <% } %>
-                    <% }) %>
-                </div>
-
-                <% if (paginationNeeded) { %>
-                <nav class="pagination-container" aria-label="Page navigation">
-                    <ul class="pagination" role="tablist">
-                        <li class="arrow">
-                            <a href="#" aria-label="Previous" data-move-pagination="prev">
-                                <span aria-hidden="true"></span>
+                    <ul class="person-list">
+                        <% resultPage.forEach(function(result, index) { %>
+                        <li class="person">
+                            <a class="column portrait" href="/p/id/<%= result.person.id %>">
+                            <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(result.person.gov_id) %>.png" />
                             </a>
-                        </li>
-
-                        <% for (var i = 0; i < pageCount; i++) { %>
-                            <li role="presentation" class="<%= i === 0 ? 'active' : '' %>">
-                                <a href="#<%= randomId %>_<%= i %>" aria-controls="i" role="tab" data-toggle="tab"><%= i + 1 %></a>
-                            </li>
-                        <% } %>
-
-                        <li class="arrow">
-                            <a href="#" aria-label="Next" data-move-pagination="next">
-                                <span aria-hidden="true"></span>
+                            <div class="column name">
+                            <a class="funblue-light-hover" style="color: #6d6d6d;" href="/p/id/<%= result.person.id %>"><%= result.person.name %></a><br/>
+                            <a class="funblue-light-hover" style="color: #6d6d6d;" href="/ps/id/<%= result.person.party.id %>">
+                                <%= result.person.party.acronym %>
                             </a>
+                            </div>
+                            <div class="column date"><%= formatDate(result.date) %></div>
+                            <div class="column quote"><a class="funblue-light-hover" href="https://skoraj.parlameter.si/seja/transkript/<%= result.session_id %>" style="color: #6d6d6d;"><%- result.content_t %></a></div>
                         </li>
+                        <% }) %>
                     </ul>
-                </nav>
-                <% } %>
+
+                <% }) %>
 
             </div>
         </div>

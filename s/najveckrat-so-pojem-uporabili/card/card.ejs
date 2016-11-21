@@ -49,9 +49,11 @@
 
                 <div class="member <%= ((persons.length-1) == i) ? 'lastel' : ''; %>">
                     <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= persons[person].person.gov_id %>.png); background-size: cover;"></div>
-                    <p><%= persons[person].person.name %>
-
-                        <br/><%= persons[person].person.party.acronym %></p>
+                    <div>
+                        <p>
+                        <a class="funblue-light-hover" style="color: #6d6d6d;" href="/p/id/<%= persons[person].person.id %>"><%= persons[person].person.name %></a>
+                        <br/><a class="funblue-light-hover" style="color: #6d6d6d;" href="/ps/id/<%= persons[person].person.party.id %>"><%= persons[person].person.party.acronym %></a>
+                    </p></div>
                     <span><%= persons[person].score %></span>
                     <div class="clearfix"></div>
                 </div>
