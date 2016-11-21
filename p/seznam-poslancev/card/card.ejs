@@ -68,34 +68,34 @@
 
     <% var columns = {
       presence_sessions: {
-        label: 'Prisotnost na sejah DZ',
+        titleSuffix: 'po prisotnosti na sejah DZ',
         unit: 'percent',
         round: true
       },
       presence_votes: {
-        label: 'Prisotnost na glasovanjih sej DZ',
+        titleSuffix: 'po prisotnosti na glasovanjih sej DZ',
         unit: 'percent',
         round: true
       },
       vocabulary_size: {
-        label: 'Raznolikost besedišča'
+        titleSuffix: 'po raznolikosti besedišča'
       },
       spoken_words: {
-        label: 'Št. izgovorjenih besed'
+        titleSuffix: 'po št. izgovorjenih besed'
       },
       speeches_per_session: {
-        label: 'Št. govorov na sejo'
+        titleSuffix: 'po št. govorov na sejo'
       },
       privzdignjeno: {
-        label: 'Privzdignjeno besedje',
+        titleSuffix: 'po privzdignjenem besedju',
         scientific: true
       },
       preprosto: {
-        label: 'Preprosto besedje',
+        titleSuffix: 'po preprostem besedju',
         round: true
       },
       problematicno: {
-        label: 'Ekscesno besedje',
+        titleSuffix: 'po ekscesnem besedju',
         round: true
       }
     }; %>
@@ -104,16 +104,16 @@
     <div class="card-container card-halfling <%= className %>">
         <div class="card-header">
             <div class="card-header-border"></div>
-            <h1>Seznam poslancev</h1> <!-- this text is the only thing you touch in .card-header -->
+            <h1>Seznam poslancev<%= state && state.analysis ? ' ' + columns[state.analysis].titleSuffix : '' %></h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
           <ul class="person-list">
             <li class="headers">
               <div data-sort="name" class="column wider sort">Ime</div>
               <div data-sort="party" class="column">PS</div>
-              <div data-sort="district" class="column">Okraj</div>
+              <div data-sort="district" class="column district">Okraj</div>
               <% if (state && state.analysis) { %>
-                <div data-sort="analysis" class="column"><%= columns[state.analysis].label %></div>
+                <div data-sort="analysis" class="column">Analiza</div>
               <% } %>
             </li>
             <% data.data.forEach(function(result, index) { %>
@@ -127,7 +127,7 @@
                       <%= result.person.party.acronym %>
                   </a>
               </div>
-              <div class="column"><%= result.person.formattedDistrict %></div>
+              <div class="column district"><%= result.person.formattedDistrict %></div>
               <% if (state && state.analysis) { %>
                 <div class="column">
                   <%= function() {

@@ -78,7 +78,7 @@
                 <ul class="person-list">
                   <li class="headers">
                     <div v-for="column in columns"
-                         :class="{ column: true, wider: column.wider, sort: currentSort === column.id, reverse: currentSortOrder === 'desc' }"
+                         :class="['column', column.additionalClass, { sort: currentSort === column.id }, { reverse: currentSortOrder === 'desc' }]"
                          @click="selectSort(column.id)">
                       {{ column.label }}
                     </div>
@@ -94,7 +94,7 @@
                     <div class="column">
                       <a :href="'/ps/id/' + member.person.party.id + ''">{{ member.person.party.acronym }}</a>
                     </div>
-                    <div class="column">{{ member.person.formattedDistrict }}</div>
+                    <div class="column district">{{ member.person.formattedDistrict }}</div>
                     <div v-if="currentAnalysis !== 'alphabetical'" class="column">{{ getFormattedAnalysisValue(member) }}</div>
                   </li>
                 </ul>
@@ -145,13 +145,13 @@
     computed: {
       columns: function() {
         var columns = [
-          { id: 'name', label: 'Ime', wider: true },
+          { id: 'name', label: 'Ime', additionalClass: 'wider' },
           { id: 'party', label: 'PS' },
-          { id: 'district', label: 'Okraj' }
+          { id: 'district', label: 'Okraj', additionalClass: 'district' }
         ]
 
         if (this.currentAnalysis !== 'alphabetical') {
-          columns.push({ id: 'analysis', label: this.currentAnalysisData.label })
+          columns.push({ id: 'analysis', label: 'Analiza' })
         }
 
         return columns
