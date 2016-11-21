@@ -1,32 +1,29 @@
-.poslanec .nav-tabs {
-  padding-bottom: 13px;
-  > li {
-    width: 33.333%;
-  }
+.card-content-front {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-tabs { padding-bottom: 0; }
+
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
 }
 
 .membership-list {
-  margin: 0;
-  min-height: 72px;
+  margin: 13px 0;
   padding: 0;
+  list-style: none;
 
   .key {
+    line-height: 1.3em;
     padding: 4px 0;
     text-align: left;
     width: 100%;
 
-    line-height: 1.3em;
-
     a:hover {
       background-color: #e1f6ff;
-      text-decoration: none; 
+      text-decoration: none;
     }
-
-  }
-}
-
-@media (max-width: 767px) {
-  .poslanec .nav-tabs {
-    font-size: 11px;
   }
 }
