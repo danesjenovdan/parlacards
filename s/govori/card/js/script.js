@@ -209,9 +209,13 @@ if (url.indexOf('#!') !== -1) {
     $(e).children('div').removeClass('hidden');
   });
 
-  $('body').animate({
-    'scrollTop': (limit + 1) * 340
-  });
+  window.setTimeout(function() {
+    $('body').animate({
+      'scrollTop': $speech_parent.offset().top + 200
+    });
+
+    makeSpeechesEventful();
+  }, 1000);;
 }
 
 })();

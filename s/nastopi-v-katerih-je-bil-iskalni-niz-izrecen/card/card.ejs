@@ -76,7 +76,7 @@
                             </a>
                             </div>
                             <div class="column date"><%= formatDate(result.date) %></div>
-                            <div class="column quote"><a class="funblue-light-hover" href="https://skoraj.parlameter.si/seja/transkript/<%= result.session_id %>" style="color: #6d6d6d;"><%- result.content_t %></a></div>
+                            <div class="column quote"><a class="funblue-light-hover" href="https://skoraj.parlameter.si/seja/transkript/<%= result.session_id %>#!<%= result.speech_id %>" style="color: #6d6d6d;"><%- result.content_t %></a></div>
                         </li>
                         <% }) %>
                     </ul>
