@@ -55,18 +55,72 @@
             <h1>Glasovanja</h1>
             <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <div id="glasovanja-<%= randomId %>" class="card-content">
-          <search-dropdown :items="allTags" :placeholder="inputPlaceholder"></search-dropdown>
+        <div id="glasovanja-<%= randomId %>" class="card-content full">
+            <div class="card-content-front">
+              <search-dropdown :items="allTags" :placeholder="inputPlaceholder"></search-dropdown>
 
-          <ul class="votes">
-            <template v-for="votingDay in filteredVotingDays">
-              <li v-for="ballot, index in votingDay.ballots">
-                <div v-if="index === 0" class="date">{{ votingDay.date.replace(/\./g, '. ') }}</div>
-                <div :class="['icon', ballot.option]"></div>
-                <div class="motion">Glasovali {{ ballot.option.toUpperCase() }} <a href="#">{{ ballot.motion }}</a></div>
-              </li>
-            </template>
-          </ul>
+              <div class="votes stickinme date-list">
+                <template v-for="votingDay in filteredVotingDays">
+                  <div class="date">{{ votingDay.date.replace(/\./g, '. ') }}</div>
+                  <ul>
+                    <li v-for="ballot in votingDay.ballots">
+                      <div :class="['icon', ballot.option]"></div>
+                      <div class="motion">Glasovali {{ ballot.option.toUpperCase() }} <a href="#">{{ ballot.motion }}</a></div>
+                    </li>
+                  </ul>
+                </template>
+              </div>
+            </div>
+            <div class="card-content-info hidden">
+                <div class="card-back-content">
+                    <div class="scroller" id="tvojamtka">
+                        <p class="info-text">INFO MISSING</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content-embed hidden">
+                <div class="card-back-content">
+                    <div class="embed-content">
+                        <div class="embed-divider"></div>
+                        <div class="embed-switch-container">
+                            <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                            <div class="embed-switch-big-box">
+                                <div class="embed-switch-box">
+                                    <div class="embed-switch">
+                                        <div class="embed-switches">
+                                            <div class="leftswitch">
+                                                DA
+                                            </div>
+                                            <div class="rightswitch">
+                                                NE
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="embed-switch-ball"></div>
+                            </div>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-script">
+                            <textarea class="form-control" data-id="<%= data.party.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.party.id %>/?embed=true&altHeader=true"></textarea>
+                            <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-export">
+                            <div class="embed-label">Izvozi kartico kot sliko <button class="btn-parlameter btn-blue btn-margin-left">PRENESI</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content-share hidden">
+                <div class="card-back-content card-content">
+                    <div class="share-content">
+                        <label for="share-url">Neposredna povezava do kartice</label>
+                        <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.party.id %>/?frame=true&altHeader=true"/>
+                        <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="card-footer">
             <div class="card-circle-button card-share"></div>

@@ -59,15 +59,17 @@
             <div class="card-content-front">
               <search-dropdown :items="allTags" :placeholder="inputPlaceholder"></search-dropdown>
 
-              <ul class="votes">
+              <div class="votes stickinme date-list">
                 <template v-for="votingDay in filteredVotingDays">
-                  <li v-for="ballot, index in votingDay.ballots">
-                    <div v-if="index === 0" class="date">{{ votingDay.date.replace(/\./g, '. ') }}</div>
-                    <div :class="['icon', ballot.option]"></div>
-                    <div class="motion">{{ ballot.label }} <a href="#">{{ ballot.motion }}</a></div>
-                  </li>
+                  <div class="date">{{ votingDay.date.replace(/\./g, '. ') }}</div>
+                  <ul>
+                    <li v-for="ballot in votingDay.ballots">
+                      <div :class="['icon', ballot.option]"></div>
+                      <div class="motion">{{ ballot.label }} <a href="#">{{ ballot.motion }}</a></div>
+                    </li>
+                  </ul>
                 </template>
-              </ul>
+              </div>
             </div>
             <div class="card-content-info hidden">
                 <div class="card-back-content">
