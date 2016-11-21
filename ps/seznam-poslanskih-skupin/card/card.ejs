@@ -49,12 +49,6 @@
       vocabulary_size: {
         label: 'po besednem zakladu'
       },
-      spoken_words: {
-        label: 'po št. izgovorjenih besed'
-      },
-      speeches_per_session: {
-        label: 'po št. govorov na sejo'
-      },
       privzdignjeno: {
         label: 'po pogostosti rabe privzdignjenega besedja'
       },
@@ -91,12 +85,9 @@
                      var chartWidth = rawValue === 0 ? '1px' : rawValue / maxValue * 80 + '%';
                   %>
                   <div class="progress hugebar">
-                    <div class="progress-bar funblue" role="progressbar" style="width: <%= chartWidth %>">
-                      <span class="sr-only">60.3485838779956% Complete</span>
-                    </div>
+                    <div class="progress-bar funblue" role="progressbar" style="width: <%= chartWidth %>"></div>
                     <div class="progress_number"><%= displayValue %></div>
                   </div>
-
                 <% } %>
               </div>
             </li>
