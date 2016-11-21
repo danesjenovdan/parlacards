@@ -34,55 +34,28 @@
         </div>
         <div class="card-content full">
             <div class="card-content-front">
-          <%
-              function makeId() {
-                  var text = "";
-                  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                <% function formatDate(unformattedDate) {
+                  var date = new Date(unformattedDate);
+                  return date.getDate() + ". " + (date.getMonth() + 1) + ". " + date.getFullYear()
+                } %>
 
-                  for(var i = 0; i < 5; i++) {
-                      text += possible.charAt(Math.floor(Math.random() * possible.length));
-                  }
-
-                  return text;
-              }
-
-              function formatDate(unformattedDate) {
-                var date = new Date(unformattedDate);
-                return date.getDate() + ". " + (date.getMonth() + 1) + ". " + date.getFullYear()
-              }
-
-              var PAGE_SIZE = 100;
-              var randomId = makeId();
-              var paginationNeeded = data.highlighting.length > PAGE_SIZE;
-              var resultPages = [];
-              var pageCount = Math.ceil(data.highlighting.length / PAGE_SIZE);
-
-              for (var i = 0; i < pageCount; i++) {
-                resultPages.push(data.highlighting.slice(i * PAGE_SIZE, (i + 1) * PAGE_SIZE));
-              }
-          %>
-                <% resultPages.forEach(function(resultPage, index) { %>
-
-                    <ul class="person-list">
-                        <% resultPage.forEach(function(result, index) { %>
-                        <li class="person">
-                            <a class="column portrait" href="/p/id/<%= result.person.id %>">
-                            <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(result.person.gov_id) %>.png" />
-                            </a>
-                            <div class="column name">
-                            <a class="funblue-light-hover" style="color: #6d6d6d;" href="/p/id/<%= result.person.id %>"><%= result.person.name %></a><br/>
-                            <a class="funblue-light-hover" style="color: #6d6d6d;" href="/ps/id/<%= result.person.party.id %>">
-                                <%= result.person.party.acronym %>
-                            </a>
-                            </div>
-                            <div class="column date"><%= formatDate(result.date) %></div>
-                            <div class="column quote"><a class="funblue-light-hover" href="https://skoraj.parlameter.si/seja/transkript/<%= result.session_id %>#!<%= result.speech_id %>" style="color: #6d6d6d;"><%- result.content_t %></a></div>
-                        </li>
-                        <% }) %>
-                    </ul>
-
-                <% }) %>
-
+                <ul class="person-list">
+                    <% data.highlighting.forEach(function(result, index) { %>
+                    <li class="person">
+                        <a class="column portrait" href="/p/id/<%= result.person.id %>">
+                        <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(result.person.gov_id) %>.png" />
+                        </a>
+                        <div class="column name">
+                        <a class="funblue-light-hover" style="color: #6d6d6d;" href="/p/id/<%= result.person.id %>"><%= result.person.name %></a><br/>
+                        <a class="funblue-light-hover" style="color: #6d6d6d;" href="/ps/id/<%= result.person.party.id %>">
+                            <%= result.person.party.acronym %>
+                        </a>
+                        </div>
+                        <div class="column date"><%= formatDate(result.date) %></div>
+                        <div class="column quote"><a class="funblue-light-hover" href="https://skoraj.parlameter.si/seja/transkript/<%= result.session_id %>#!<%= result.speech_id %>" style="color: #6d6d6d;"><%- result.content_t %></a></div>
+                    </li>
+                    <% }) %>
+                </ul>
             </div>
         </div>
         <div class="card-footer">

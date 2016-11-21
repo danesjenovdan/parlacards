@@ -1,5 +1,6 @@
 .person-list {
-  height: 485px;
+  height: 100%;
+  overflow-y: scroll;
   .person {
     .date {
       padding-right: 34px;
@@ -21,10 +22,8 @@
         font-weight: bold;
       }
     }
-
   }
   @media (max-width: 767px) {
-    height: auto;
     .person {
       flex-wrap: wrap;
       .name { flex: 2; }
@@ -36,12 +35,4 @@
       }
     }
   }
-}
-
-
-.card-content {
-  height: 100%;
-}
-.card-content-front {
-  overflow-y: scroll;
 }
