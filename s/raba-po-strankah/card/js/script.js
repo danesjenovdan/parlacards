@@ -182,7 +182,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
             if (again) {
                 setTimeout(relax, 20);
             } else {
-                drawLines();
+                // drawLines();
             }
 
         }
@@ -247,3 +247,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
 //     d.occurences = +d.occurences;
 //     return d;
 // }
+
+makeEmbedSwitch();
+activateCopyButton();
+addCardRippling();

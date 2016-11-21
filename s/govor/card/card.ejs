@@ -15,18 +15,6 @@
     <!-- endbuild -->
     <script>
       var speechData = <%- JSON.stringify(data); %>;
-      function makeId() {
-          var text = "";
-          var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-          for(var i = 0; i < 5; i++) {
-              text += possible.charAt(Math.floor(Math.random() * possible.length));
-          }
-
-          return text;
-      }
-
-      var randomId = makeId();
     </script>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
@@ -41,9 +29,28 @@
 
 
     <!-- everything above here is part of the page and not part of the card -->
-    <div class="card-container card-halfling <%= className %>">
+    <%
+      function makeId() {
+          var text = "";
+          var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+          for(var i = 0; i < 5; i++) {
+              text += possible.charAt(Math.floor(Math.random() * possible.length));
+          }
+
+          return text;
+      }
+
+      var randomId2 = makeId();
+    %>
+    <script>
+      var randomId2 = '<%= randomId2 %>';
+    </script>
+    <div class="card-container card-halfling <%= className %>" id="<%= randomId2 %>">
+        <input type="hidden" id="<%= randomId2 %>words" value="<%= data.results.content.replace(/\n+/g, '').trim() %>">
+        <input type="hidden" id="<%= randomId2 %>id" value="<%= data.results.speech_id %>">
         <div class="card-header card-header-person">
-            <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/img/people/<%= data.person.gov_id %>.png')"></div>
+            <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.person.gov_id %>.png')"></div>
             <h1 class="name"><%= data.person.name %></h1>
         </div>
         <div class="card-content <% if (data.results.quoted_text) { %>just-quote<% } %> closed">

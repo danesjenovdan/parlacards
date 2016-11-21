@@ -36,8 +36,8 @@
      -->
 
 <%
-var stPgs = (data.length > 7) ? "11.3" : "13.1";
-var stPgs0 = (data.length > 7) ? "popgoptmin" : "popgoptmax";
+var stPgs = (data.results.length > 7) ? "11.3" : "13.1";
+var stPgs0 = (data.results.length > 7) ? "popgoptmin" : "popgoptmax";
 %>
 
 
@@ -64,13 +64,13 @@ var stPgs0 = (data.length > 7) ? "popgoptmin" : "popgoptmax";
                         };
                         %>
             <div class="clearfix">
-                <% for (ps in data) { %>
+                <% for (ps in data.results) { %>
 
                 <div class="pspris">
-                    <span><%= data[ps].percent %> %</span>
-                    <font><%= data[ps].organization.acronym %></font>
+                    <span><%= data.results[ps].percent %> %</span>
+                    <font><%= data.results[ps].organization.acronym %></font>
                     <div class="" style="">
-                        <div class="border" style="width: <%= data[ps].percent %>%; background-color: <%=colors["id" + data[ps].organization.id]%>;"></div>
+                        <div class="border" style="width: <%= data.results[ps].percent %>%; background-color: <%=colors["id" + data.results[ps].organization.id]%>;"></div>
                     </div>
                 </div>
 

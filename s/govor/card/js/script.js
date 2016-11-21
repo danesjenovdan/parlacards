@@ -1,3 +1,19 @@
+(function(){
+
+function makeId() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for(var i = 0; i < 5; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+
+    return text;
+}
+
+var randomId = makeId();
+
+
 /* ========================================================================
  * Bootstrap: tab.js v3.3.6
  * http://getbootstrap.com/javascript/#tabs
@@ -176,7 +192,7 @@ function getSelected() {
   return false;
 }
 
-var cardElement = $('.card-govor');
+var cardElement = $('#' + randomId2);
 var contentElement = cardElement.find('.card-content');
 var speechTextElement = cardElement.find('.speech-text');
 var quoteElement = cardElement.find('.everything .quote-button');
@@ -214,10 +230,11 @@ quoteElement.on('mousedown', function(event) {
 
 quoteElement.on('click', function(event) {
   selectedText = quoteElement.data().text.trim();
-  allText = speechData.results.content.replace(/\n+/g, '').trim();
+  //allText = speechData.results.content.replace(/\n+/g, '').trim();
+  allText = $('#' + randomId2 + 'words').val();
   startIndex = allText.indexOf(selectedText);
   endIndex = startIndex + selectedText.length;
-  url = 'https://analize.parlameter.si/v1/s/setQuote/' + speechData.results.speech_id + '/' + startIndex + '/' + endIndex;
+  url = 'https://analize.parlameter.si/v1/s/setQuote/' + $('#' + randomId2 + 'id').val() + '/' + startIndex + '/' + endIndex;
 
   console.log(url);
   console.log(selectedText);
@@ -225,7 +242,7 @@ quoteElement.on('click', function(event) {
   
 
   $.get(url, function(result) {
-    var newCardUrl = 'https://glej.parlameter.si/s/govor/' + result.id;
+    var newCardUrl = 'https://glej.parlameter.si/s/citat/' + result.id;
     $.get(newCardUrl, function(response) {
       cardElement.parent().html(response);
     })
@@ -259,7 +276,7 @@ similarSpeechWrapperElement.on('click', similarSpeechCloseSelector, function() {
 })
 
 // Fetch similar speeches
-$.get('https://isci.parlameter.si/mlt/' + speechData.results.speech_id, function(response) {
+$.get('https://isci.parlameter.si/mlt/' + $('#' + randomId2 + 'id').val(), function(response) {
   var maxScore = response.response.maxScore;
   var speeches = response.response.docs.slice(0, 5);
   var minScore = speeches[4].score;
@@ -271,7 +288,7 @@ $.get('https://isci.parlameter.si/mlt/' + speechData.results.speech_id, function
     tabs.push($(
       '<li role="tab"' + (index === 0 ? 'class="active"' : '') + '>\
         <a class="speech" href="#' + speech.speech_id + '_' + randomId + '" data-toggle="tab">\
-          <div class="portrait" style="background-image: url(\'https://cdn.parlameter.si/v1/img/people/' + speech.person.gov_id + '.png\')"></div>\
+          <div class="portrait" style="background-image: url(\'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + speech.person.gov_id + '.png\')"></div>\
           <div class="name">' + speech.person.name + '</div>\
           <div class="date">' + formatDate(speech.date) + '</div>\
           <div class="rating" style="width: ' + ((speech.score - minScore) / (maxScore - minScore) * 50 + 50) + '%"></div>\
@@ -294,3 +311,4 @@ $.get('https://isci.parlameter.si/mlt/' + speechData.results.speech_id, function
   similarSpeechWrapperElement.find('.similar-speech-tabs ul').append(tabs);
   similarSpeechWrapperElement.find('.similar-speech-content').append(tabContents);
 })
+})();

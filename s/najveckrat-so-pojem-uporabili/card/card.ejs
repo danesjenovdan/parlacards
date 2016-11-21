@@ -33,14 +33,19 @@
         <h1>Največkrat so pojem uporabili</h1>
         <!-- this text is the only thing you touch in .card-header -->
     </div>
-    <div class="card-content">
+    <div class="card-content full">
 
         <div  id="votingCard">
 
             <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
 <% var persons = data.facet_counts.facet_fields.speaker_i; %>
 
-                <% var i=0; for (var person in persons) { %>
+                <% var i=0; for (var person in persons) {
+
+                    if (persons[person].score > 0) {
+                    
+                    %>
+
 
                 <div class="member <%= ((persons.length-1) == i) ? 'lastel' : ''; %>">
                     <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= persons[person].person.gov_id %>.png); background-size: cover;"></div>
@@ -51,7 +56,7 @@
                     <div class="clearfix"></div>
                 </div>
 
-                <% i++; } %>
+                <% } i++; } %>
 
             </div>
 
