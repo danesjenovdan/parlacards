@@ -188,4 +188,30 @@ $(document).on('scroll', function() {
   }
 });
 
+var url = document.location.href;
+
+if (url.indexOf('#!') !== -1) {
+
+  console.log('ping2');
+
+  var speech_id = url.split('#!')[1];
+  var $speech_element = $(document).find('.s' + speech_id);
+  var $speech_parent = $speech_element.parent();
+
+  $('.last').removeClass('last');
+
+  $speech_element.removeClass('hidden');
+
+  $speech_parent.addClass('last');
+  var limit = $speech_parent.prevAll().length;
+
+  $.each($speech_parent.prevAll(), function(i, e) {
+    $(e).children('div').removeClass('hidden');
+  });
+
+  $('body').animate({
+    'scrollTop': (limit + 1) * 340
+  });
+}
+
 })();
