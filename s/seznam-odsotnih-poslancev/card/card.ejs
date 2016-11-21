@@ -39,25 +39,29 @@
         <!-- this text is the only thing you touch in .card-header -->
     </div>
     <div class="card-content full">
+        <div class="card-content-front">
 
-        <div id="votingCard">
 
-            <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
+            <div class="seznamscrollme">
 
                 <% var data = data.results; %>
                 <% var i = 1; for (person in data) { %>
 
-                <div class="member <%= (data.length == i) ? 'lastel' : ''; %>">
+                <div class="member <%= ((data.length-1) == i) ? 'lastel' : ''; %>">
                     <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data[person].person.gov_id %>.png); background-size: cover;"></div>
-                    <p><%= data[person].person.name %>
-                        <br/><%= data[person].person.party.acronym %></p>
-
+                    <div>
+                        <p>
+                        <a class="funblue-light-hover" style="color: #6d6d6d;" href="/p/id/<%= data[person].person.id %>"><%= data[person].person.name %></a>
+                        <br/><a class="funblue-light-hover" style="color: #6d6d6d;" href="/ps/id/<%= data[person].person.party.id %>"><%= data[person].person.party.acronym %></a>
+                    </p></div>
+                    <span><%= data[person].score %></span>
                     <div class="clearfix"></div>
                 </div>
 
                 <% i++; }%>
 
             </div>
+
 
         </div>
 
