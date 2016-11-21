@@ -45,6 +45,8 @@
 
             <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller session_voting">
 
+                <% var data = data.results; %>
+
                 <% for (var i = 0; i < data.length ; i++) { %>
 
                 <% var rnd = (Math.floor((Math.random() * 2)) == 1); %>

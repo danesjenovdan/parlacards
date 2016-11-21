@@ -1,4 +1,4 @@
-.card-header h1, .card-footer h1{
+/*.card-header h1, .card-footer h1{
   color: #525252;
 }
 #votingCard div.member span{
@@ -44,10 +44,14 @@
   padding-left: 20px;
 }
 
-/*************/
+
 .card-content {
   margin-right: 5px;
 }
 #votingCard div.member {
 
+}*/
+
+.member, #votingCard.member {
+  justify-content: flex-start !important;
 }

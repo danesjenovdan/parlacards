@@ -38,12 +38,13 @@
         <h1>Seznam odsotnih poslancev</h1>
         <!-- this text is the only thing you touch in .card-header -->
     </div>
-    <div class="card-content">
+    <div class="card-content full">
 
         <div id="votingCard">
 
             <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
 
+                <% var data = data.results; %>
                 <% var i = 1; for (person in data) { %>
 
                 <div class="member <%= (data.length == i) ? 'lastel' : ''; %>">

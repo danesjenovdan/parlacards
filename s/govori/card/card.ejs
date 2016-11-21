@@ -54,9 +54,9 @@
         return 0;
       }
 
-      var newdata = data.data.sort(compare);
+      var newdata = data.results.sort(compare);
 
-      for (i = 0; i < data.data.length; i++) {
+      for (i = 0; i < data.results.length; i++) {
         var data2 = newdata[i];
 
         var randomId2 = makeId();
@@ -150,7 +150,7 @@
   Tab.prototype.show = function () {
     var $this    = this.element
     var $ul      = $this.closest('ul:not(.dropdown-menu)')
-    var selector = $this.data('target')
+    var selector = $this.results('target')
 
     if (!selector) {
       selector = $this.attr('href')
@@ -242,9 +242,9 @@
   function Plugin(option) {
     return this.each(function () {
       var $this = $(this)
-      var data  = $this.data('bs.tab')
+      var data  = $this.results('bs.tab')
 
-      if (!data) $this.data('bs.tab', (data = new Tab(this)))
+      if (!data) $this.results('bs.tab', (data = new Tab(this)))
       if (typeof option == 'string') data[option]()
     })
   }
@@ -273,8 +273,8 @@
   }
 
   $(document)
-    .on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
-    .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
+    .on('click.bs.tab.results-api', '[data-toggle="tab"]', clickHandler)
+    .on('click.bs.tab.results-api', '[data-toggle="pill"]', clickHandler)
 
 }(jQuery);
 
