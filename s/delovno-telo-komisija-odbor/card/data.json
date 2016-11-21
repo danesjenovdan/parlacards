@@ -2,870 +2,364 @@
   "info": {
     "vice_president": [
       {
-        "party": {
-          "acronym": "ZL",
-          "id": 8,
-          "name": "PS Zdru\u017eena Levica"
-        },
+        "is_active": false,
+        "district": [
+          57
+        ],
+        "name": "Maru\u0161a \u0160kopac",
+        "gov_id": "P287",
         "gender": "f",
-        "name": "Violeta Tomi\u0107",
-        "gov_id": "P289",
-        "id": 80
-      },
-      {
         "party": {
           "acronym": "SMC",
+          "is_coalition": true,
           "id": 1,
           "name": "PS Stranka modernega centra"
         },
-        "gender": "m",
-        "name": "Simon Zajc",
-        "gov_id": "P293",
-        "id": 87
+        "type": "mp",
+        "id": 77,
+        "has_function": false
       }
     ],
     "president": {
-      "party": {
-        "acronym": "SDS",
-        "id": 5,
-        "name": "PS Slovenska Demokratska Stranka"
-      },
+      "is_active": true,
+      "district": [
+        76
+      ],
+      "name": "Matja\u017e Han\u017eek",
+      "gov_id": "P256",
       "gender": "m",
-      "name": "Toma\u017e Lisec",
-      "gov_id": "P187",
-      "id": 53
+      "party": {
+        "acronym": "ZL",
+        "is_coalition": false,
+        "id": 8,
+        "name": "PS Zdru\u017eena Levica"
+      },
+      "type": "mp",
+      "id": 31,
+      "has_function": false
     },
     "members": [
       {
-        "party": {
-          "acronym": "SMC",
-          "id": 1,
-          "name": "PS Stranka modernega centra"
-        },
+        "is_active": true,
+        "district": [
+          14
+        ],
+        "name": "Ivan Hr\u0161ak",
+        "gov_id": "P176",
         "gender": "m",
-        "name": "Du\u0161an Verbi\u010d",
-        "gov_id": "P296",
-        "id": 92
-      },
-      {
-        "party": {
-          "acronym": "SMC",
-          "id": 1,
-          "name": "PS Stranka modernega centra"
-        },
-        "gender": "f",
-        "name": "Vesna Vervega",
-        "gov_id": "P291",
-        "id": 84
-      },
-      {
         "party": {
           "acronym": "DeSUS",
+          "is_coalition": true,
           "id": 3,
           "name": "PS Demokratska Stranka Upokojencev Slovenije"
         },
-        "gender": "m",
-        "name": "Benedikt Kopmajer",
-        "gov_id": "P261",
-        "id": 41
+        "type": "mp",
+        "id": 34,
+        "has_function": false
       },
       {
-        "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
+        "is_active": true,
+        "district": [
+          13
+        ],
+        "name": "Matja\u017e Han",
+        "gov_id": "P018",
         "gender": "m",
-        "name": "Zvonko Lah",
-        "gov_id": "P129",
-        "id": 49
-      },
-      {
-        "party": {
-          "acronym": "PS NP",
-          "id": 97,
-          "name": "PS nepovezanih poslancev"
-        },
-        "gender": "m",
-        "name": "Franc Laj",
-        "gov_id": "P267",
-        "id": 50
-      },
-      {
-        "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
-        "gender": "m",
-        "name": "Toma\u017e Lisec",
-        "gov_id": "P187",
-        "id": 53
-      },
-      {
-        "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
-        "gender": "m",
-        "name": "Bojan Podkraj\u0161ek",
-        "gov_id": "P277",
-        "id": 64
-      },
-      {
-        "party": {
-          "acronym": "SMC",
-          "id": 1,
-          "name": "PS Stranka modernega centra"
-        },
-        "gender": "m",
-        "name": "Ivan \u0160kodnik",
-        "gov_id": "P286",
-        "id": 76
-      },
-      {
-        "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
-        "gender": "m",
-        "name": "Ljubo \u017dnidar",
-        "gov_id": "P212",
-        "id": 91
-      },
-      {
         "party": {
           "acronym": "SD",
+          "is_coalition": true,
           "id": 7,
           "name": "PS Socialni Demokrati"
         },
-        "gender": "m",
-        "name": "Janko Veber",
-        "gov_id": "P081",
-        "id": 83
+        "type": "mp",
+        "id": 30,
+        "has_function": false
       },
       {
-        "party": {
-          "acronym": "NeP",
-          "id": 100,
-          "name": "Nepovezani poslanec"
-        },
-        "gender": "m",
-        "name": "Andrej \u010cu\u0161",
-        "gov_id": "P225",
-        "id": 15
-      },
-      {
-        "party": {
-          "acronym": "SMC",
-          "id": 1,
-          "name": "PS Stranka modernega centra"
-        },
+        "is_active": false,
+        "district": [
+          62
+        ],
+        "name": "Alenka Bratu\u0161ek",
+        "gov_id": "P166",
         "gender": "f",
-        "name": "Vojka \u0160ergan",
-        "gov_id": "P285",
-        "id": 74
-      },
-      {
         "party": {
-          "acronym": "DeSUS",
-          "id": 3,
-          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+          "acronym": "PS NP",
+          "is_coalition": false,
+          "id": 109,
+          "name": "PS nepovezanih poslancev "
         },
-        "gender": "m",
-        "name": "Primo\u017e Hainz",
-        "gov_id": "P255",
-        "id": 29
+        "type": "mp",
+        "id": 9,
+        "has_function": false
       },
       {
+        "is_active": true,
+        "district": [
+          55
+        ],
+        "name": "Danijel Krivec",
+        "gov_id": "P040",
+        "gender": "m",
         "party": {
-          "acronym": "SMC",
-          "id": 1,
-          "name": "PS Stranka modernega centra"
+          "acronym": "SDS",
+          "is_coalition": false,
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
         },
-        "gender": "m",
-        "name": "Danilo Anton Ranc",
-        "gov_id": "P282",
-        "id": 71
+        "type": "mp",
+        "id": 47,
+        "has_function": false
       },
       {
+        "is_active": false,
+        "district": [
+          89
+        ],
+        "name": "Jernej Vrtovec",
+        "gov_id": "P292",
+        "gender": "m",
         "party": {
           "acronym": "NSI",
+          "is_coalition": false,
           "id": 6,
           "name": "PS Nova Slovenija"
         },
+        "type": "mp",
+        "id": 86,
+        "has_function": false
+      }
+    ],
+    "viceMember": [
+      {
+        "is_active": false,
+        "district": [
+          87
+        ],
+        "name": "Mirjam Bon Klanj\u0161\u010dek",
+        "gov_id": "P235",
         "gender": "f",
-        "name": "Iva Dimic",
-        "gov_id": "P169",
-        "id": 17
+        "party": {
+          "acronym": "PS NP",
+          "is_coalition": false,
+          "id": 109,
+          "name": "PS nepovezanih poslancev "
+        },
+        "type": "mp",
+        "id": 7,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          87
+        ],
+        "name": "Mirjam Bon Klanj\u0161\u010dek",
+        "gov_id": "P235",
+        "gender": "f",
+        "party": {
+          "acronym": "PS NP",
+          "is_coalition": false,
+          "id": 109,
+          "name": "PS nepovezanih poslancev "
+        },
+        "type": "mp",
+        "id": 7,
+        "has_function": false
+      },
+      {
+        "is_active": true,
+        "district": [
+          17
+        ],
+        "name": "Jo\u017eef Horvat",
+        "gov_id": "P020",
+        "gender": "m",
+        "party": {
+          "acronym": "NSI",
+          "is_coalition": false,
+          "id": 6,
+          "name": "PS Nova Slovenija"
+        },
+        "type": "mp",
+        "id": 32,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          81
+        ],
+        "name": "Tilen Bo\u017ei\u010d",
+        "gov_id": "P242",
+        "gender": "m",
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "mp",
+        "id": 8,
+        "has_function": false
+      },
+      {
+        "is_active": true,
+        "district": [
+          34
+        ],
+        "name": "Ljubo \u017dnidar",
+        "gov_id": "P212",
+        "gender": "m",
+        "party": {
+          "acronym": "SDS",
+          "is_coalition": false,
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "type": "mp",
+        "id": 91,
+        "has_function": false
+      },
+      {
+        "is_active": true,
+        "district": [
+          49
+        ],
+        "name": "Franc Tr\u010dek ",
+        "gov_id": "P290",
+        "gender": "m",
+        "party": {
+          "acronym": "ZL",
+          "is_coalition": false,
+          "id": 8,
+          "name": "PS Zdru\u017eena Levica"
+        },
+        "type": "mp",
+        "id": 82,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          45
+        ],
+        "name": "Marjana Kotnik Poropat",
+        "gov_id": "P186",
+        "gender": "f",
+        "party": {
+          "acronym": "DeSUS",
+          "is_coalition": true,
+          "id": 3,
+          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+        },
+        "type": "mp",
+        "id": 45,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          36
+        ],
+        "name": "Jan \u0160koberne",
+        "gov_id": "P301",
+        "gender": "m",
+        "party": {
+          "acronym": "SD",
+          "is_coalition": true,
+          "id": 7,
+          "name": "PS Socialni Demokrati"
+        },
+        "type": "mp",
+        "id": 1356,
+        "has_function": false
       }
     ]
   },
-  "organization": {
-    "acronym": "",
-    "id": 21,
-    "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-  },
+  "created_for": "13.11.2016",
   "ratio": {
-    "coalition": 52.9411764705882,
-    "opposition": 47.0588235294118
+    "coalition": 38.4615384615385,
+    "opposition": 61.5384615384615
   },
+  "sessions": [],
+  "created_at": "13.11.2016",
   "seats_per_pg": [
     {
       "party": {
-        "acronym": "SMC",
-        "id": 1,
-        "name": "PS Stranka modernega centra"
+        "acronym": "ZL",
+        "is_coalition": false,
+        "name": "PS Zdru\u017eena Levica",
+        "id": 8
       },
-      "coalition": "coalition",
-      "seats": 6
+      "coalition": "opposition",
+      "seats": 2
+    },
+    {
+      "party": {
+        "acronym": "NSI",
+        "is_coalition": false,
+        "name": "PS Nova Slovenija",
+        "id": 6
+      },
+      "coalition": "opposition",
+      "seats": 2
     },
     {
       "party": {
         "acronym": "SDS",
-        "id": 5,
-        "name": "PS Slovenska Demokratska Stranka"
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka",
+        "id": 5
       },
       "coalition": "opposition",
-      "seats": 4
+      "seats": 2
     },
     {
       "party": {
-        "acronym": "DeSUS",
-        "id": 3,
-        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+        "acronym": "PS NP",
+        "is_coalition": false,
+        "name": "PS nepovezanih poslancev ",
+        "id": 109
+      },
+      "coalition": "opposition",
+      "seats": 2
+    },
+    {
+      "party": {
+        "acronym": "SD",
+        "is_coalition": true,
+        "name": "PS Socialni Demokrati",
+        "id": 7
       },
       "coalition": "coalition",
       "seats": 2
     },
     {
       "party": {
-        "acronym": "PS NP",
-        "id": 97,
-        "name": "PS nepovezanih poslancev"
+        "acronym": "DeSUS",
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije",
+        "id": 3
       },
-      "coalition": "opposition",
-      "seats": 1
+      "coalition": "coalition",
+      "seats": 2
     },
     {
       "party": {
-        "acronym": "NeP",
-        "id": 100,
-        "name": "Nepovezani poslanec"
-      },
-      "coalition": "opposition",
-      "seats": 1
-    },
-    {
-      "party": {
-        "acronym": "ZL",
-        "id": 8,
-        "name": "PS Zdru\u017eena Levica"
-      },
-      "coalition": "opposition",
-      "seats": 1
-    },
-    {
-      "party": {
-        "acronym": "NSI",
-        "id": 6,
-        "name": "PS Nova Slovenija"
-      },
-      "coalition": "opposition",
-      "seats": 1
-    },
-    {
-      "party": {
-        "acronym": "SD",
-        "id": 7,
-        "name": "PS Socialni Demokrati"
+        "acronym": "SMC",
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra",
+        "id": 1
       },
       "coalition": "coalition",
       "seats": 1
     }
   ],
-  "sessions": [
-    {
-      "date": "08. 09. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "42. nujna seja",
-      "id": 5120
-    },
-    {
-      "date": "24. 08. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "41. nujna seja",
-      "id": 5121
-    },
-    {
-      "date": "08. 07. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "39. nujna seja",
-      "id": 5123
-    },
-    {
-      "date": "08. 07. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "40. nujna seja",
-      "id": 5122
-    },
-    {
-      "date": "06. 07. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "16. redna seja",
-      "id": 5124
-    },
-    {
-      "date": "08. 06. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "38. nujna seja",
-      "id": 5125
-    },
-    {
-      "date": "26. 05. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "35. nujna seja",
-      "id": 5126
-    },
-    {
-      "date": "25. 05. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "37. nujna seja",
-      "id": 5127
-    },
-    {
-      "date": "24. 05. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "36. nujna seja (skupna seja)",
-      "id": 5128
-    },
-    {
-      "date": "13. 05. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "34. nujna seja (skupna seja)",
-      "id": 5129
-    },
-    {
-      "date": "11. 05. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "15. redna seja",
-      "id": 5130
-    },
-    {
-      "date": "10. 05. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "33. nujna seja",
-      "id": 5131
-    },
-    {
-      "date": "05. 05. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "32. nujna seja",
-      "id": 5132
-    },
-    {
-      "date": "03. 05. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "31. nujna seja (skupna seja)",
-      "id": 5133
-    },
-    {
-      "date": "14. 04. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "30. nujna seja",
-      "id": 5134
-    },
-    {
-      "date": "07. 04. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "29. nujna seja",
-      "id": 5135
-    },
-    {
-      "date": "10. 03. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "14. redna seja",
-      "id": 5137
-    },
-    {
-      "date": "10. 03. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "28. nujna seja",
-      "id": 5136
-    },
-    {
-      "date": "17. 02. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "27. nujna seja",
-      "id": 5138
-    },
-    {
-      "date": "15. 01. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "26. nujna seja",
-      "id": 5139
-    },
-    {
-      "date": "13. 01. 2016",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "13. redna seja",
-      "id": 5140
-    },
-    {
-      "date": "09. 12. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "25. nujna seja",
-      "id": 5141
-    },
-    {
-      "date": "26. 11. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "24. nujna seja",
-      "id": 5142
-    },
-    {
-      "date": "10. 11. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "12. redna seja",
-      "id": 5143
-    },
-    {
-      "date": "28. 10. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "22. nujna seja (skupna seja)",
-      "id": 5145
-    },
-    {
-      "date": "28. 10. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "21. nujna seja (skupna seja)",
-      "id": 5146
-    },
-    {
-      "date": "28. 10. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "23. nujna seja",
-      "id": 5144
-    },
-    {
-      "date": "16. 10. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "20. nujna seja",
-      "id": 5147
-    },
-    {
-      "date": "09. 10. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "19. nujna seja",
-      "id": 5148
-    },
-    {
-      "date": "10. 09. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "18. nujna seja",
-      "id": 5149
-    },
-    {
-      "date": "10. 09. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "11. redna seja",
-      "id": 5150
-    },
-    {
-      "date": "02. 09. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "10. redna seja",
-      "id": 5151
-    },
-    {
-      "date": "25. 08. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "17. nujna seja (skupna seja)",
-      "id": 5152
-    },
-    {
-      "date": "07. 07. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "16. nujna seja",
-      "id": 5153
-    },
-    {
-      "date": "01. 07. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "9. redna seja",
-      "id": 5154
-    },
-    {
-      "date": "10. 06. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "15. nujna seja (skupna seja)",
-      "id": 5155
-    },
-    {
-      "date": "03. 06. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "8. redna seja",
-      "id": 5156
-    },
-    {
-      "date": "27. 05. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "14. nujna seja",
-      "id": 5157
-    },
-    {
-      "date": "05. 05. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "13. nujna seja (skupna seja)",
-      "id": 5158
-    },
-    {
-      "date": "10. 04. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "12. nujna seja",
-      "id": 5159
-    },
-    {
-      "date": "08. 04. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "11. nujna seja (skupna seja)",
-      "id": 5160
-    },
-    {
-      "date": "08. 04. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "7. redna seja",
-      "id": 5161
-    },
-    {
-      "date": "11. 03. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "9. nujna seja",
-      "id": 5163
-    },
-    {
-      "date": "11. 03. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "10. nujna seja",
-      "id": 5162
-    },
-    {
-      "date": "18. 02. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "8. nujna seja (skupna seja)",
-      "id": 5164
-    },
-    {
-      "date": "11. 02. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "7. nujna seja",
-      "id": 5165
-    },
-    {
-      "date": "03. 02. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "6. nujna seja",
-      "id": 5166
-    },
-    {
-      "date": "15. 01. 2015",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "6. redna seja",
-      "id": 5167
-    },
-    {
-      "date": "10. 12. 2014",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "5. nujna seja (skupna seja)",
-      "id": 5169
-    },
-    {
-      "date": "10. 12. 2014",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "5. redna seja",
-      "id": 5168
-    },
-    {
-      "date": "27. 11. 2014",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "4. redna seja",
-      "id": 5170
-    },
-    {
-      "date": "13. 11. 2014",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "4. nujna seja",
-      "id": 5171
-    },
-    {
-      "date": "06. 11. 2014",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "3. nujna seja (skupna seja)",
-      "id": 5172
-    },
-    {
-      "date": "04. 11. 2014",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "3. redna seja (skupna seja)",
-      "id": 5173
-    },
-    {
-      "date": "14. 10. 2014",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "2. redna seja",
-      "id": 5174
-    },
-    {
-      "date": "08. 10. 2014",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "2. nujna seja",
-      "id": 5175
-    },
-    {
-      "date": "25. 09. 2014",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "1. redna seja",
-      "id": 5176
-    },
-    {
-      "date": "12. 09. 2014",
-      "org": {
-        "acronym": "",
-        "id": 21,
-        "name": "Odbor za kmetijstvo, gozdarstvo in prehrano"
-      },
-      "name": "1. nujna seja",
-      "id": 5177
-    }
-  ]
+  "organization": {
+    "acronym": "",
+    "is_coalition": false,
+    "id": 101,
+    "name": "Preiskovalna komisija za ugotavljanje politi\u010dne odgovornosti nosilcev javnih funkcij pri investiciji v blok 6 Termoelektrarne \u0160o\u0161tanj"
+  }
 }

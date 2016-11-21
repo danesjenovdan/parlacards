@@ -126,6 +126,23 @@
                                     </div>
                                 </div>
 
+                                <% if(data.info.viceMember.length > 0){
+                                %>
+                                <div class="dt-member clearfix">
+                                    <h2>Nadomestni člani in članice</h2>
+                                    <div class="session_other_members">
+                                        <% for(item in data.info.viceMember){ %>
+                                        <a href="/p/id/<%= data.info.viceMember[item].gov_id %>"
+                                           title="<%= data.info.viceMember[item].name %>">
+                                            <img class="img-circle"
+                                                 src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.viceMember[item].gov_id %>.png"
+                                                 alt="<%= data.info.viceMember[item].name %>"/>
+                                        </a>
+                                        <% } %>
+                                    </div>
+                                </div>
+                                <% } %>
+
                                 <% if(typeof data.info.sekretarka !== "undefined"){
                                 %>
                                 <div class="clearfix">
