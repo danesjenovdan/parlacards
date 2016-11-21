@@ -95,7 +95,7 @@
                         </div>
                         <div class="right-container">
                             <div class="status-container">
-                                <span class="slab">Status predloga: </span><div class="status"><span class="status-text"><% if (data.result) { %> SPREJET <% } else { %> ZAVRNJEN <% } %></span><i class="status-icon glyphicon <% if (data.result) { %> glyphicon-ok <% } else { %> glyphicon-remove <% } %>"></i></div>
+                                <span class="slab">Status predloga: </span><div class="status"><span class="status-text"> <% if (data.result) { %> SPREJET <% } else { %> ZAVRNJEN <% } %></span><i class="status-icon glyphicon <% if (data.result) { %> glyphicon-ok <% } else { %> glyphicon-remove <% } %>"></i></div>
                             </div>
                         </div>
                     </div>
@@ -146,6 +146,9 @@
                                                     break;
                                                 case 'not_present':
                                                     option = 'ni';
+                                                    break;
+                                                default:
+                                                    option = 'vzdrzan';
                                                     break;
                                             }
                                         %>
