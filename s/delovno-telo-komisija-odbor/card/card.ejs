@@ -116,7 +116,7 @@
                                     <h2>Člani in članice</h2>
                                     <div class="session_other_members">
                                         <% for(item in data.info.members){ %>
-                                        <a href="/p/id/<%= data.info.members[item].gov_id %>"
+                                        <a href="/p/id/<%= data.info.members[item].id %>"
                                            title="<%= data.info.members[item].name %>">
                                             <img class="img-circle"
                                                  src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.members[item].gov_id %>.png"
@@ -132,7 +132,7 @@
                                     <h2>Nadomestni člani in članice</h2>
                                     <div class="session_other_members">
                                         <% for(item in data.info.viceMember){ %>
-                                        <a href="/p/id/<%= data.info.viceMember[item].gov_id %>"
+                                        <a href="/p/id/<%= data.info.viceMember[item].id %>"
                                            title="<%= data.info.viceMember[item].name %>">
                                             <img class="img-circle"
                                                  src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.viceMember[item].gov_id %>.png"
@@ -149,7 +149,7 @@
                                     <h2>Sektretarke</h2>
                                     <div class="session_other_members">
 
-                                        <a href="<%= data.info.sekretarka.gov_id %>"
+                                        <a href="/p/id/<%= data.info.sekretarka.id %>"
                                            title="<%= data.info.sekretarka.name %>">
 
                                             <%= data.info.sekretarka.name %>
