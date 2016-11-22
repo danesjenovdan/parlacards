@@ -15,7 +15,7 @@
     line-height: 40px;
 }
 .hugebar2 {
-    height: 40px !important;
+    height: 38px !important;
 }
 .progress-bar, .progress_number {
     // display: block;
@@ -23,9 +23,12 @@
 }
 
 .tfidf-bar {
-    height: 40px;
+    height: 38px;
     margin-bottom: 10px;
 }
 .progress-bar {
     border-bottom-width: 0;
+}
+.progress_number {
+    line-height: 40px !important;
 }

@@ -16,10 +16,6 @@
 }
 .hugebar2 {
     height: 40px !important;
-
-    .progress_number {
-        line-height: 40px !important;
-    }
 }
 .progress-bar, .progress_number {
     // display: block;
@@ -34,16 +30,34 @@
     border-bottom-width: 0;
 }
 
-.halfer-container {
-    overflow: hidden;
+.avgminimg {
+    width: 30px;
+    height: 30px;
+
+    background-position: center;
+    background-size: cover;
+
+    border: 2px solid #ffffff;
 }
 
-.halfer {
-    width: 100%;
-    float: left;
+.me_poslanec .progress_number {
+    font-size: 20px;
+    line-height: 20px;
 }
-@media (min-width: 768px) {
-    .halfer {
-        width: 50%;
+
+@media (max-width: 767px) {
+    .nav.nav-tabs li a {
+        font-size: 11px;
     }
+}
+
+.poslanec-small .nav-tabs li {
+    width: 50% !important;
+}
+
+.avgminimg-party {
+    background-color: #f0f0f0;
+    line-height: 27px;
+    font-size: 9px;
+    text-align: center;
 }

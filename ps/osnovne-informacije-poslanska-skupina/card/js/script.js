@@ -1,0 +1,4 @@
+makeEmbedSwitch();
+activateCopyButton();
+
+addCardRippling();

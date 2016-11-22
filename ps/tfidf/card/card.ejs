@@ -29,65 +29,122 @@
     <div class="card-container card-halfling <%= className %>">
         <div class="card-header">
             <div class="card-header-border"></div>
-            <h1>Besede, ki jih delajo posebne</h1>
+            <h1>Besede, ki <% if (data.party.gender === 'm') { %>ga delajo posebnega<% } else { %>jo delajo posebno<% } %></h1>
             <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <div class="card-content">
-            <div class="bgwhite poslanec">
+        <div class="card-content full">
+            <div class="card-content-front">
+                <div class="bgwhite poslanec">
 
-                <%
+                    <%
 
-                var max = 0;
-                var min = 100;
+                    var max = 0;
+                    var min = 100;
 
-                for (var i = 0; i < data.results.length; i++) {
-                    var word = data.results[i];
-                    if (Math.round(word.scores['tf-idf'] * 5000) > max) {
-                        max = Math.round(word.scores['tf-idf'] * 5000);
-                    } else if (+word.scores['tf-idf'] < min) {
-                        min = Math.round(word.scores['tf-idf'] * 5000);
-                    }
-                }
-
-                var diff = max - min;
-
-                var offset = 120;
-
-                for (var i=0; i < data.results.length; i++) {
+                    for (var i = 0; i < data.results.length; i++) {
                         var word = data.results[i];
-                        word.score = Math.round(word.scores['tf-idf'] * 5000);
-                %>
+                        if (Math.round(word.scores['tf-idf'] * 5000) > max) {
+                            max = Math.round(word.scores['tf-idf'] * 5000);
+                        } else if (+word.scores['tf-idf'] < min) {
+                            min = Math.round(word.scores['tf-idf'] * 5000);
+                        }
+                    }
 
-                <div class="me_poslanec clearfix tfidf-bar">
+                    var diff = max - min;
 
-                    <div class="term">
-                        <span class="poslanec_title">
-                                        <%= word.term %>
-                                    </span>
-                    </div>
-                    <div class="frequency">
-                        <div class="progress hugebar2 avgmin">
-                            <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="0" aria-valuemax="<%= max %>" style="width: <%= word.score / max * 100 > 1 ? word.score / max * 100 : 1 %>%;">
-                                <span class="sr-only"><%= word.score %></span>
+                    var offset = 120;
+
+                    for (var i=0; i < data.results.length; i++) {
+                            var word = data.results[i];
+                            word.score = Math.round(word.scores['tf-idf'] * 5000);
+                    %>
+
+                    <div class="me_poslanec clearfix tfidf-bar">
+
+                        <div class="term">
+                            <span class="poslanec_title">
+                                            <%= word.term %>
+                                        </span>
+                        </div>
+                        <div class="frequency">
+                            <div class="progress hugebar2 avgmin">
+                                <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="0" aria-valuemax="<%= max %>" style="width: <%= word.score / max * 100 > 1 ? word.score / max * 100 : 1 %>%;">
+                                    <span class="sr-only"><%= word.score %></span>
+                                </div>
+
                             </div>
+                        </div>
+                    </div>
 
+                    <%
+                        }
+                    %>
+
+
+
+                </div>
+                <!-- delete this placeholder, this is the content of your card -->
+            </div>
+            <div class="card-content-info hidden">
+                <div class="card-back-content">
+                    <div class="scroller" id="tvojamtka">
+                        <p class="info-text">
+                            Analizo izvajamo po statistiki <a href="https://en.wikipedia.org/wiki/Tf-idf">tf-idf</a>.
+                        </p>
+                        <p class="info-text">
+                            Korpus predstavljajo vsi govori, dokument pa vsi <%= vocab['poslanca3'][data.party.gender] %> govori.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content-embed hidden">
+                <div class="card-back-content">
+                    <div class="embed-content">
+                        <div class="embed-divider"></div>
+                        <div class="embed-switch-container">
+                            <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                            <div class="embed-switch-big-box">
+                                <div class="embed-switch-box">
+                                    <div class="embed-switch">
+                                        <div class="embed-switches">
+                                            <div class="leftswitch">
+                                                DA
+                                            </div>
+                                            <div class="rightswitch">
+                                                NE
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="embed-switch-ball"></div>
+                            </div>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-script">
+                            <textarea class="form-control" data-id="<%= data.party.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.party.id %>/?embed=true&altHeader=true"></textarea>
+                            <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-export">
+                            <div class="embed-label">Izvozi kartico kot sliko <button class="btn-parlameter btn-blue btn-margin-left">PRENESI</button></div>
                         </div>
                     </div>
                 </div>
-
-                <%
-                    }
-                %>
-
-
-
             </div>
-            <!-- delete this placeholder, this is the content of your card -->
+            <div class="card-content-share hidden">
+                <div class="card-back-content card-content">
+                    <div class="share-content">
+                        <label for="share-url">Neposredna povezava do kartice</label>
+                        <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.party.id %>/?frame=true&altHeader=true"/>
+                        <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="card-footer">
-            <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed"></div>
-            <div class="card-circle-button card-info">i</div>
+            <div class="card-circle-button card-share" data-back="share"></div>
+            <div class="card-circle-button card-embed" data-back="embed"></div>
+            <div class="card-circle-button card-info" data-back="info">i</div>
         </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->

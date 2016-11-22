@@ -25,35 +25,32 @@
 
 <body> <!-- removeme -->
 
-<style>
-    #votingCard{height: 480px;}
-
-</style>
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
         <div class="card-header">
             <div class="card-header-border"></div>
             <h1>Članice in člani poslanske skupine</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <div class="card-content">
+        <div class="card-content full">
 
-            <div id="votingCard">
+            <div class="card-content-front">
 
-                <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
+                <div class="scrollerformembers">
+
+                    <% var data = data.results; %>
 
                     <% var i = 1; for (person in data) { %>
 
-                    <div class="member <%= (data.length == i) ? 'lastel' : ''; %>">
-                        <a href="/p/id/<%= data[person].id %>">
-                        <div class="image"
-                             style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data[person].gov_id %>.png); background-size: cover;"></div>
-                        </a>
+                    <div class="member <%= ((data.length-1) == i) ? 'lastel' : ''; %>">
+                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data[person].gov_id %>.png); background-size: cover;"></div>
+                    <div>
                         <p>
-                            <%= data[person].name %>
-                            <br/><%= data[person].party.acronym %></p>
-                        <span></span>
-                        <div class="clearfix"></div>
-                    </div>
+                        <a class="funblue-light-hover" style="color: #6d6d6d;" href="/p/id/<%= data[person].id %>"><%= data[person].name %></a>
+                        <br/><a class="funblue-light-hover" style="color: #6d6d6d;" href="/ps/id/<%= data[person].party.id %>"><%= data[person].party.acronym %></a>
+                    </p></div>
+                    <span><%= data[person].score %></span>
+                    <div class="clearfix"></div>
+                </div>
 
                     <% i++; } %>
 

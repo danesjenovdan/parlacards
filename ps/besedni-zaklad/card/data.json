@@ -1,21 +1,2 @@
-{
-    "party" : {
-        "acronym" : "DeSUS",
-        "id" : 3,
-        "name" : "PS Demokratska Stranka Upokojencev Slovenije"
-    },
-  "results" : {
-      "average" : 11830.299999999999,
-      "max" : {
-          "parties" : [
-              {
-                  "acronym" : "SDS",
-                  "id" : 5,
-                  "name" : "PS Slovenska Demokratska Stranka"
-               }
-           ],
-           "score" : 22952.0
-      },
-      "score" : 12410.0
-    }
-}
+
+{"party": {"acronym": "SMC", "is_coalition": true, "id": 1, "name": "PS Stranka modernega centra"}, "created_at": "08.11.2016", "created_for": "04.03.2015", "results": {"max": {"score": 137.149787332108, "parties": [{"acronym": "SMC", "is_coalition": true, "id": 1, "name": "PS Stranka modernega centra"}]}, "average": 109.336086885249, "score": 90.0}}

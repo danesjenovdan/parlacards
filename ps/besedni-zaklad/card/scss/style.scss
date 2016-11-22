@@ -41,7 +41,14 @@
 }
 
 .me_poslanec .progress_number {
-    line-height: 40px;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .nav.nav-tabs li a {
+        font-size: 12px;
+    }
 }
 
 .poslanec-small .nav-tabs li {
