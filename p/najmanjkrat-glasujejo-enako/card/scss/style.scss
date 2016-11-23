@@ -28,3 +28,24 @@
     padding-right: 20px;
     padding-left: 20px;
   } */
+
+  .member {
+    .image {
+      background-position: center center;
+      background-size: 150px auto;
+      border-radius: 50px;
+      height: 80px;
+      width: 80px;
+      img {
+        border-radius: 50px;
+        width: 100%;
+      }
+    }
+    div {
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            display: block !important;
+        }
+    }
+  }
