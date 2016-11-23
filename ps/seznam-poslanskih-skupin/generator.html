@@ -57,7 +57,7 @@
                 <ul class="party-list">
                   <li v-for="party in processedPartyData" class="party">
                     <div class="column name">
-                      <a :href="'/ps/id/' + party.party.id">{{ party.party.acronym }}</a>
+                      <a class="funblue-light-hover" :href="'/ps/id/' + party.party.id">{{ party.party.acronym }}</a>
                     </div>
                     <div class="column chart">
                       <div class="progress hugebar">

@@ -121,11 +121,11 @@
               <a class="portrait column" href="/p/id/<%= result.person.id %>">
                 <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= result.person.gov_id %>.png" />
               </a>
-              <div class="column wider name"><%= result.person.name %></div>
+              <div class="column wider name">
+                <a class="funblue-light-hover" href="/p/id/<%= result.person.id %>"><%= result.person.name %></a>
+              </div>
               <div class="column">
-                  <a href="/ps/id/<%= result.person.party.id %>">
-                      <%= result.person.party.acronym %>
-                  </a>
+                <a class="funblue-light-hover" href="/ps/id/<%= result.person.party.id %>"><%= result.person.party.acronym %></a>
               </div>
               <div class="column district"><%= result.person.formattedDistrict %></div>
               <% if (state && state.analysis) { %>

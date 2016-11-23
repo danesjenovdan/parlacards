@@ -76,7 +76,7 @@
             <% data.data.forEach(function(result, index) { %>
             <li class="party">
               <div class="column name">
-                <a href="/ps/id/<%= result.party.id %>"><%= result.party.acronym %></a>
+                <a class="funblue-light-hover" href="/ps/id/<%= result.party.id %>"><%= result.party.acronym %></a>
               </div>
               <div class="column chart">
                 <% if (state && state.analysis) {

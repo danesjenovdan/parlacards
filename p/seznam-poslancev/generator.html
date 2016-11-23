@@ -89,10 +89,10 @@
                       <img :src="'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + member.person.gov_id + '.png'" />
                     </a>
                     <div class="column wider name">
-                      <a :href="'/p/id/' + member.person.id + ''">{{ member.person.name }}</a>
+                      <a class="funblue-light-hover" :href="'/p/id/' + member.person.id + ''">{{ member.person.name }}</a>
                     </div>
                     <div class="column">
-                      <a :href="'/ps/id/' + member.person.party.id + ''">{{ member.person.party.acronym }}</a>
+                      <a class="funblue-light-hover" :href="'/ps/id/' + member.person.party.id + ''">{{ member.person.party.acronym }}</a>
                     </div>
                     <div class="column district">{{ member.person.formattedDistrict }}</div>
                     <div v-if="currentAnalysis !== 'alphabetical'" class="column">{{ getFormattedAnalysisValue(member) }}</div>
