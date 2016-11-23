@@ -69,6 +69,11 @@
                                     verb = 'NI glasovala za';
                                     verb = (data.person.gender == 'm') ? 'NI glasoval za' : 'NI glasovala za';
                                     break;
+                                case 'kvorum':
+                                    icon = 'parlaicon-kvorum';
+                                    verb = 'VZDRŽALA se je glasovanja o';
+                                    verb = (data.person.gender == 'm') ? 'VZDRŽAL se je glasovanja o' : 'VZDRŽALA se je glasovanja o';
+                                    break;
                             }
 
                             thing = event.vote_name;

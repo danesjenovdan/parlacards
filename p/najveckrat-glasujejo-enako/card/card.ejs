@@ -42,11 +42,13 @@
                             <% var i = 1; for (person in data.results) { %>
 
 
-                            <div class="member <%= (data.results.length == i) ? 'lastel' : ''; %>">
-                                <div class="image"
-                                     style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results[person].person.gov_id %>.png); background-size: cover;"></div>
-                                <p><%= data.results[person].person.name %>
-                                    <br/><%= data.results[person].person.party.acronym %></p>
+                            <div class="member <%= ((data.results.length-1) == i) ? 'lastel' : ''; %>">
+                                <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results[person].person.gov_id %>.png); background-size: cover;"></div>
+                                <div>
+                                    <p>
+                                    <a class="funblue-light-hover" style="color: #6d6d6d;" href="/p/id/<%= data.results[person].person.id %>"><%= data.results[person].person.name %></a>
+                                    <br/><a class="funblue-light-hover" style="color: #6d6d6d;" href="/ps/id/<%= data.results[person].person.party.id %>"><%= data.results[person].person.party.acronym %></a>
+                                </p></div>
                                 <span><%= data.results[person].ratio.toFixed(2) %> %</span>
                                 <div class="clearfix"></div>
                             </div>
