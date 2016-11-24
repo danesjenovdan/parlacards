@@ -42,7 +42,11 @@
               })
               .map(function(ballot) {
                 var ballotClone = JSON.parse(JSON.stringify(ballot));
-                ballotClone.label = capitalise(vocabulary['glasovati'][that.person.gender]) + ' ' + ballot.option.toUpperCase();
+                if (ballot.option === 'ni') {
+                  ballotClone.label = 'Ni ' + vocabulary['glasovati'][that.person.gender] + ' o';
+                } else {
+                  ballotClone.label = capitalise(vocabulary['glasovati'][that.person.gender]) + ' ' + ballot.option.toUpperCase();
+                }
                 return ballotClone;
               })
 

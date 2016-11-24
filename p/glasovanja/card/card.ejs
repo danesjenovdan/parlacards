@@ -65,7 +65,7 @@
                   <ul>
                     <li v-for="ballot in votingDay.ballots">
                       <div :class="['icon', ballot.option]"></div>
-                      <div class="motion">{{ ballot.label }} <a href="#">{{ ballot.motion }}</a></div>
+                      <div class="motion">{{ ballot.label }} <a class="funblue-light-hover" :href="'https://skoraj.parlameter.si/seja/glasovanje/' + ballot.session_id + '/' + ballot.vote_id + ''">{{ ballot.motion }}</a></div>
                     </li>
                   </ul>
                 </template>

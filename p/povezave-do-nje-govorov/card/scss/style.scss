@@ -17,8 +17,8 @@
     margin: 0 10px 10px 0;
     text-align: center;
 
-   -webkit-mask: url(https://cdn.parlameter.si/v1/parlassets/icons/govor.svg) no-repeat 50% 50%;
-    mask: url(https://cdn.parlameter.si/v1/parlassets/icons/govor.svg);
+   -webkit-mask: url(https://cdn.parlameter.si/v1/parlassets/icons/govor_old.svg) no-repeat 50% 50%;
+    mask: url(https://cdn.parlameter.si/v1/parlassets/icons/govor_old.svg);
     -webkit-mask-size: cover;
     //mask-size: cover;
 
@@ -41,7 +41,7 @@
     ul {
       margin-bottom: 20px;
       li {
-        margin: 20px 20px 0 20px;
+        margin: 0px 11px 0 11px;
         span {
         }
 
@@ -52,6 +52,10 @@
         a {
           color: #197197;
           font-weight:400;
+        }
+
+        &:first-child {
+          margin-top: 20px;
         }
 
       }
