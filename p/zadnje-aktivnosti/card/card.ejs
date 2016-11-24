@@ -81,7 +81,7 @@
 
                         <li>
                             <span class="parlaicon <%= icon %>"></span>
-                            <p><%= verb %> <a class="funblue-light-hover" href="#"><%= thing %></a></p>
+                            <p><%= verb %> <a class="funblue-light-hover" href="https://skoraj.parlameter.si/seja/glasovanje/<%= event.session_id %>/<%= event.vote_id %>"><%= thing %></a></p>
                         </li>
 
                         <%
@@ -95,7 +95,7 @@
 
                         <li>
                             <span class="parlaicon <%= icon %>"></span>
-                            <p><a class="funblue-light-hover" href="#"><%= verb %></a>&nbsp;na&nbsp;<a class="funblue-light-hover" href="#"><%= thing %> <%=thingwhere%></a></p>
+                            <p><a class="funblue-light-hover" href="https://skoraj.parlameter.si/seja/transkript/<%= event.session.id %>/#<%= event.speech_id %>"><%= verb %></a>&nbsp;na&nbsp;<a class="funblue-light-hover" href="https://skoraj.parlameter.si/seja/transkript/<%= event.session.id %>"><%= thing %> <%=thingwhere%></a></p>
                         </li>
 
                         <%
