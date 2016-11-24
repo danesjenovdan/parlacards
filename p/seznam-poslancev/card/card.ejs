@@ -125,7 +125,7 @@
                 <a class="funblue-light-hover" href="/p/id/<%= result.person.id %>"><%= result.person.name %></a>
               </div>
               <div class="column">
-                <a class="funblue-light-hover" href="/ps/id/<%= result.person.party.id %>"><%= result.person.party.acronym %></a>
+                <% if (result.person.party.acronym.indexOf('NeP') === -1) { %><a class="funblue-light-hover" href="/ps/id/<%= result.person.party.id %>"><%= result.person.party.acronym %></a><% } else { %> <%= result.person.party.acronym %> <% } %>
               </div>
               <div class="column district"><%= result.person.formattedDistrict %></div>
               <% if (state && state.analysis) { %>
