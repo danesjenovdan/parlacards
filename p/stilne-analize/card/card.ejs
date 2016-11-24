@@ -64,33 +64,17 @@
                     <div class="me_poslanec_mini clearfix">
                         <div class="col150">
                             <span class="poslanec_title stilne_title">
-                                            Privzdignjeno <br>besedje
-                                        </span>
+                                Privzdignjeno <br>besedje
+                            </span>
                         </div>
-                        <div class="col100">
-                            <span style="font-weight: bold;"><%= initials %></span>
-                            <br /> Povprečje
-
-                        </div>
-                        <div class="col180">
-                            <div class="progress smallbar avgmin">
+                        <div class="col280">
+                            <div class="progress smallbar">
                                 <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.privzdignjeno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.privzdignjeno %>%;">
                                     <span class="sr-only"><%= data.results.privzdignjeno %></span>
                                 </div>
                                 <div class="progress_number" <% if (Math.round(data.results.privzdignjeno) === 0) {%> style="padding-left: 0;" <%} %>>
                                     <%= Math.round(data.results.privzdignjeno); %>
                                 </div>
-
-                            </div>
-
-                            <div class="progress smallbar avgmin">
-                                <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.privzdignjeno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.privzdignjeno %>%;">
-                                    <span class="sr-only"><%= data.results.average.privzdignjeno %></span>
-                                </div>
-                                <div class="progress_number" <% if (Math.round(data.results.average.privzdignjeno) === 0) {%> style="padding-left: 0;" <%} %>>
-                                    <%= Math.round(data.results.average.privzdignjeno); %>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -98,15 +82,10 @@
                     <div class="me_poslanec_mini clearfix">
                         <div class="col150">
                             <span class="poslanec_title stilne_title">
-                                            Preprosto <br>besedje
-                                        </span>
+                                Preprosto <br>besedje
+                            </span>
                         </div>
-                        <div class="col100">
-                            <span style="font-weight: bold;"><%= initials %></span>
-                            <br /> Povprečje
-
-                        </div>
-                        <div class="col180">
+                        <div class="col280">
                             <div class="progress smallbar avgmin">
                                 <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.preprosto %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.preprosto %>%;">
                                     <span class="sr-only"><%= data.results.preprosto %></span>
@@ -114,17 +93,6 @@
                                 <div class="progress_number" <% if (Math.round(data.results.preprosto) === 0) {%> style="padding-left: 0;" <%} %>>
                                     <%= Math.round(data.results.preprosto); %>
                                 </div>
-
-                            </div>
-
-                            <div class="progress smallbar avgmin">
-                                <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.preprosto %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.preprosto %>%;">
-                                    <span class="sr-only"><%= data.results.average.preprosto %></span>
-                                </div>
-                                <div class="progress_number" <% if (Math.round(data.results.average.preprosto) === 0) {%> style="padding-left: 0;" <%} %>>
-                                    <%= Math.round(data.results.average.preprosto); %>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -132,31 +100,16 @@
                     <div class="me_poslanec_mini clearfix">
                         <div class="col150">
                             <span class="poslanec_title stilne_title">
-                                            Ekscesno <br>besedje
-                                        </span>
+                                Ekscesno <br>besedje
+                            </span>
                         </div>
-                        <div class="col100">
-                            <span style="font-weight: bold;"><%- initials %></span>
-                            <br /> Povprečje
-
-                        </div>
-                        <div class="col180">
+                        <div class="col280">
                             <div class="progress smallbar avgmin">
                                 <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.problematicno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.problematicno %>%;">
                                     <span class="sr-only"><%= data.results.problematicno %></span>
                                 </div>
                                 <div class="progress_number" <% if (Math.round(data.results.problematicno) === 0) {%> style="padding-left: 0;" <%} %>>
                                     <%= Math.round(data.results.problematicno); %>
-                                </div>
-
-                            </div>
-
-                            <div class="progress smallbar avgmin">
-                                <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.average.problematicno %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average.problematicno %>%;">
-                                    <span class="sr-only"><%= data.results.average.problematicno %></span>
-                                </div>
-                                <div class="progress_number" <% if (Math.round(data.results.average.problematicno) === 0) {%> style="padding-left: 0;" <%} %>>
-                                    <%= Math.round(data.results.average.problematicno); %>
                                 </div>
 
                             </div>
@@ -172,10 +125,10 @@
                 <div class="card-back-content">
                     <div class="scroller" id="tvojamtka">
                         <p class="info-text">
-                        Z združevanjem kvalifikatorjev SSKJ (http://www.fran.si/130/sskj-slovar-slovenskega-knjiznega-jezika) in SNB (http://www.fran.si/131/snb-slovar-novejsega-besedja) smo definirali ekscesno, privzdignjeno in preprosto besedje v poslanskih govorih. Upoštevani so le kvalifikatorji, ki so v obeh slovarjih tik za zaglavjem in imajo doseg do konca geselskega sestavka (ne pa tudi kvalifikatorji za posamezne pomene oziroma rabe). Podjetje Amebis je iz transkriptov poslanskih govorov pripravilo sezname besed, ki imajo katerega od izbranih kvalifikatorjev. 
+                        Z združevanjem kvalifikatorjev SSKJ (http://www.fran.si/130/sskj-slovar-slovenskega-knjiznega-jezika) in SNB (http://www.fran.si/131/snb-slovar-novejsega-besedja) smo definirali ekscesno, privzdignjeno in preprosto besedje v poslanskih govorih. Upoštevani so le kvalifikatorji, ki so v obeh slovarjih tik za zaglavjem in imajo doseg do konca geselskega sestavka (ne pa tudi kvalifikatorji za posamezne pomene oziroma rabe). Podjetje Amebis je iz transkriptov poslanskih govorov pripravilo sezname besed, ki imajo katerega od izbranih kvalifikatorjev.
                         Ekscesno besedje
-                        Kvalifikatorji iz SSKJ 
-                        vulgarno (vulg.), slabšalno (slabš.), ekspresivno (ekspr.), ironično (iron.), otroško (otr.) 
+                        Kvalifikatorji iz SSKJ
+                        vulgarno (vulg.), slabšalno (slabš.), ekspresivno (ekspr.), ironično (iron.), otroško (otr.)
                         Kvalifikatorji iz SNB
                         slabšalno (slabš.), vulgarno (vulg.)
                         Privzdignjeno besedje
@@ -185,7 +138,7 @@
                         /
                         Preprosto besedje
                         Kvalifikatorji iz SSKJ
-                        narečno (nar.), pogovorno (pog.), nižje pogovorno (nižje pog.) 
+                        narečno (nar.), pogovorno (pog.), nižje pogovorno (nižje pog.)
                         Kvalifikatorji iz SNB
                         pogovorno (pog.)
                         </p>

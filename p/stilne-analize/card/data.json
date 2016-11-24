@@ -12,11 +12,6 @@
         }
     },
     "results": {
-        "average": {
-            "preprosto": 29.781637934033501,
-            "privzdignjeno": 0.019725033039430302,
-            "problematicno": 13.161146886939601
-        },
         "preprosto": 28.846153846153801,
         "privzdignjeno": 0.0,
         "problematicno": 11.538461538461501
