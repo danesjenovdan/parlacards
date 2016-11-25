@@ -49,4 +49,8 @@
 
     personElements.appendTo(personListElement);
   }
+
+  makeEmbedSwitch();
+  activateCopyButton();
+  addCardRippling();
 })();

@@ -107,51 +107,110 @@
             <h1>Seznam poslancev<%= state && state.analysis ? ' ' + columns[state.analysis].titleSuffix : '' %></h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
-          <ul class="person-list">
-            <li class="headers">
-              <div data-sort="name" class="column wider sort">Ime</div>
-              <div data-sort="party" class="column">PS</div>
-              <div data-sort="district" class="column district">Okraj</div>
-              <% if (state && state.analysis) { %>
-                <div data-sort="analysis" class="column">Analiza</div>
-              <% } %>
-            </li>
-            <% data.data.forEach(function(result, index) { %>
-            <li class="person" data-index="<%= index %>">
-              <a class="portrait column" href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[result.person.id].slug%><%=urlsData.personLink.pregled%>">
-                <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= result.person.gov_id %>.png" />
-              </a>
-              <div class="column wider name">
-                <a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[result.person.id].slug%><%=urlsData.personLink.pregled%>"><%= result.person.name %></a>
-              </div>
-              <div class="column">
-                <% if (result.person.party.acronym.indexOf('NeP') === -1) { %><a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.partyLink.base%><%=urlsData.party[result.person.party.id].acronym%><%=urlsData.partyLink.pregled%>"><%= result.person.party.acronym %></a><% } else { %> <%= result.person.party.acronym %> <% } %>
-              </div>
-              <div class="column district"><%= result.person.formattedDistrict %></div>
-              <% if (state && state.analysis) { %>
-                <div class="column">
-                  <%= function() {
-                    var value = result.results[state.analysis];
-
-                    if (value !== 0) {
-                      if (columns[state.analysis].round) { value = Math.round(value * 10) / 10; }
-                      if (columns[state.analysis].scientific) { value = value.toExponential(); }
-                    }
-                    if (columns[state.analysis].unit === 'percent') { value += '%'; }
-
-                    return value;
-                  }() %>
+          <div class="card-content-front">
+            <ul class="person-list">
+              <li class="headers">
+                <div data-sort="name" class="column wider sort">Ime</div>
+                <div data-sort="party" class="column">PS</div>
+                <div data-sort="district" class="column district">Okraj</div>
+                <% if (state && state.analysis) { %>
+                  <div data-sort="analysis" class="column">Analiza</div>
+                <% } %>
+              </li>
+              <% data.data.forEach(function(result, index) { %>
+              <li class="person" data-index="<%= index %>">
+                <a class="portrait column" href="/p/id/<%= result.person.id %>">
+                  <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= result.person.gov_id %>.png" />
+                </a>
+                <div class="column wider name">
+                  <a class="funblue-light-hover" href="/p/id/<%= result.person.id %>"><%= result.person.name %></a>
                 </div>
-              <% } %>
-            </li>
-            <% }) %>
-          </ul>
+                <div class="column">
+                  <% if (result.person.party.acronym.indexOf('NeP') === -1) { %><a class="funblue-light-hover" href="/ps/id/<%= result.person.party.id %>"><%= result.person.party.acronym %></a><% } else { %> <%= result.person.party.acronym %> <% } %>
+                </div>
+                <div class="column district"><%= result.person.formattedDistrict %></div>
+                <% if (state && state.analysis) { %>
+                  <div class="column">
+                    <%= function() {
+                      var value = result.results[state.analysis];
+
+                      if (value !== 0) {
+                        if (columns[state.analysis].round) { value = Math.round(value * 10) / 10; }
+                        if (columns[state.analysis].scientific) { value = value.toExponential(); }
+                      }
+                      if (columns[state.analysis].unit === 'percent') { value += '%'; }
+
+                      return value;
+                    }() %>
+                  </div>
+                <% } %>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+          <div class="card-content-info hidden">
+            <div class="card-back-content">
+                <div class="scroller" id="tvojamtka">
+                    <p class="info-text">
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="card-footer">
-            <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed"></div>
-            <div class="card-circle-button card-info">i</div>
+        <div class="card-content-embed hidden">
+            <div class="card-back-content">
+                <div class="embed-content">
+                    <div class="embed-divider"></div>
+                    <div class="embed-switch-container">
+                        <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                        <div class="embed-switch-big-box">
+                            <div class="embed-switch-box">
+                                <div class="embed-switch">
+                                    <div class="embed-switches">
+                                        <div class="leftswitch">
+                                            DA
+                                        </div>
+                                        <div class="rightswitch">
+                                            NE
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="embed-switch-ball"></div>
+                        </div>
+                    </div>
+                    <div class="embed-divider"></div>
+                    <div class="embed-script">
+                        <textarea class="form-control" data-id="<%= 0 %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= 0 %>/?embed=true&altHeader=true"></textarea>
+                        <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                    </div>
+                    <div class="embed-divider"></div>
+                    <div class="embed-export">
+                        <div class="embed-label">Izvozi kartico kot sliko <button class="btn-parlameter btn-blue btn-margin-left">PRENESI</button></div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="card-content-share hidden">
+            <div class="card-back-content card-content">
+                <div class="share-content">
+                    <label for="share-url">Neposredna povezava do kartice</label>
+                    <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= 0 %>/?frame=true"/>
+                    <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+                <div class="card-logo hidden">
+                     <a href="https://skoraj.parlameter.si/">
+                         <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+                     </a>
+                 </div>
+
+        <div class="card-circle-button card-share" data-back="share"></div>
+        <div class="card-circle-button card-embed" data-back="embed"></div>
+        <div class="card-circle-button card-info" data-back="info">i</div>
+    </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->
 

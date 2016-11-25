@@ -58,7 +58,11 @@
     data: function() {
       return {
         allTags: voteData.all_tags.map(function(tag) {
-          return { id: tag, label: tag, selected: false }
+          var smalltag = tag;
+          if (smalltag.length > 44) {
+            smalltag = smalltag.substring(0, 44) + '...'
+          }
+          return { id: tag, label: smalltag, selected: false }
         }),
         votingDays: voteData.results,
         person: voteData.person
