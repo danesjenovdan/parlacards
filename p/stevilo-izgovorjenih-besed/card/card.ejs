@@ -68,7 +68,7 @@
                         <div class="me_poslanec clearfix">
                             <div class="col150">
                                 <span class="poslanec_title">
-                                    <a href="https://skoraj.parlameter.si/p/id/<%= data.person.id %>" class="funblue-light-hover">
+                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.person.id].slug%><%=urlsData.personLink.pregled%>" class="funblue-light-hover">
                                         <%= data.person.name %>
                                     </a>
                                 </span>

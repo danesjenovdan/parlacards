@@ -46,8 +46,8 @@
                                 <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results[person].person.gov_id %>.png); background-size: cover;"></div>
                                 <div>
                                     <p>
-                                    <a class="funblue-light-hover" style="color: #6d6d6d;" href="/p/id/<%= data.results[person].person.id %>"><%= data.results[person].person.name %></a>
-                                    <br/><a class="funblue-light-hover" style="color: #6d6d6d;" href="/ps/id/<%= data.results[person].person.party.id %>"><%= data.results[person].person.party.acronym %></a>
+                                        <a class="funblue-light-hover" style="color: #6d6d6d;" href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results[person].person.id].slug%><%=urlsData.personLink.pregled%>"><%= data.results[person].person.name %></a>
+                                        <br/><a class="funblue-light-hover" style="color: #6d6d6d;" href="<%=urlsData.base%><%=urlsData.partyLink.base%><%=urlsData.party[data.results[person].person.party.id].acronym%><%=urlsData.partyLink.pregled%>"><%= data.results[person].person.party.acronym %></a>
                                 </p></div>
                                 <span><%= data.results[person].ratio.toFixed(2) %></span>
                                 <div class="clearfix"></div>

@@ -91,7 +91,7 @@
                                     for (var i = 0; i < data.results.sessions.max.mps.length; i++) {
 
                                 %>
-                                <a href="https://skoraj.parlameter.si/p/id/<%= data.results.sessions.max.mps[i].id %>" data-name="<%= data.results.sessions.max.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.sessions.max.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.sessions.max.mps[i]['gov_id'] %>.png');"></a>
+                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.sessions.max.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.sessions.max.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.sessions.max.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.sessions.max.mps[i]['gov_id'] %>.png');"></a>
                                 <%
                                     }
                                 }

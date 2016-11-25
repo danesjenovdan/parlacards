@@ -56,12 +56,12 @@
                     <ul>
                         <li>
 
-                            <p><a class="funblue-light-hover" href="https://skoraj.parlameter.si/seja/transkript/<%= data.results[result].speeches[0].session_id %>"><%= data.results[result].speeches[0].session_name %></a></p>
+                            <p><a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%= data.results[result].speeches[0].session_id %>"><%= data.results[result].speeches[0].session_name %></a></p>
                         </li>
 
                         <li class="clearfix">
                             <% for(var speechIndex = 0; speechIndex < data.results[result].speeches.length; speechIndex++ ){ var tmp = (speechIndex+1); %>
-                                <a class="parlaicon speech" href="https://skoraj.parlameter.si/seja/transkript/<%= data.results[result].speeches[0].session_id %>#!<%= data.results[result].speeches[speechIndex].speech_id %>"><%= tmp %></a>
+                                <a class="parlaicon speech" href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%= data.results[result].speeches[0].session_id %>#!<%= data.results[result].speeches[speechIndex].speech_id %>"><%= tmp %></a>
                             <% } %>
                         </li>
                     </ul>

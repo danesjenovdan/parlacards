@@ -94,11 +94,11 @@
                                 <% if (tab === 'Delovna telesa') { %>
                                     <% if (membershipItem.name === 'Kolegij predsednika državnega zbora') { %>
                                         <li class="key">
-                                        <a href="https://skoraj.parlameter.si/seje/tip/seje-kolegija-predsednika-dz"> <%= membershipItem.name %></a>
+                                        <a href="<%=urlsData.base%>/seje/tip/seje-kolegija-predsednika-dz"> <%= membershipItem.name %></a>
                                         </li>
                                     <% } else { %> 
                                     <li class="key">
-                                        <a href="https://skoraj.parlameter.si/seje/tip/seje-delovnih-teles/#<%= membershipItem.org_id %>"> <%= membershipItem.name %></a>
+                                        <a href="<%=urlsData.base%>/seje/tip/seje-delovnih-teles/#<%= membershipItem.org_id %>"> <%= membershipItem.name %></a>
                                     </li>
                                     <% } %>
                                 <% } else { %>
