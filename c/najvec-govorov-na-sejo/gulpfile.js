@@ -84,6 +84,7 @@ gulp.task('ejs', function() {
             'className' : className,
             'vocab' : jsonVocab,
             'cardData' : cardData
+            ,'urlsData': urlsData
         }, {
             ext: '.html'
         }))

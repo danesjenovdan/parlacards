@@ -33,7 +33,7 @@ var options = minimist(process.argv.slice(2), knownOptions);
 var fs = require('fs');
 var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
 var jsonVocab = JSON.parse(fs.readFileSync('card/vocab.json', 'utf-8'));
-var cardData = JSON.parse(fs.readFileSync('card/card.json', 'utf-8'));
+var cardData = JSON.parse(fs.readFileSync('card/card.json', 'utf-8'));var urlsData = JSON.parse(fs.readFileSync('card/urls.json', 'utf-8'));
 var stateData = JSON.parse(fs.readFileSync('card/state.json', 'utf-8'));
 
 // generate CSS class name to use for sandboxing
@@ -86,6 +86,7 @@ gulp.task('ejs', function() {
             'vocab' : jsonVocab,
             'cardData' : cardData,
             'state' : stateData
+            ,'urlsData': urlsData
         }, {
             ext: '.html'
         }))
