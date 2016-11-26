@@ -9,7 +9,7 @@
     <title>Member list generator</title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false">
-     <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- todo --> 
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- todo -->
     <link rel="stylesheet" href="../../../parlassets/scss/style.css" data-remove="false" data-concat="false">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" data-remove="false" data-concat="false"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
@@ -162,13 +162,6 @@
         </div>
         </div>
       </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Generated url</h2>
-          <p class="generated-url">{{ generatedCardUrl }}</p>
-        </div>
       </div>
     </div>
   </div>
@@ -324,7 +317,7 @@
 
         return 'https://glej.parlameter.si/p/seznam-poslancev/' +
           '?customUrl=' + encodeURIComponent('https://analize.parlameter.si/v1/p/getListOfMembers') +
-          (Object.keys(params).length > 0 ? '&status=' + encodeURIComponent(JSON.stringify(params)) : '')
+          (Object.keys(params).length > 0 ? '&state=' + encodeURIComponent(JSON.stringify(params)) : '')
       }
     },
     created: function() {
