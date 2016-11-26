@@ -42,7 +42,7 @@ var cardData = JSON.parse(fs.readFileSync('card/card.json', 'utf-8'));
 // SASS/SCSS compiler
 gulp.task('sass', function() {
     return gulp.src('card/scss/style.scss')
-        .pipe(sass()) // Converts Sass to CSS with gulp-sass
+        .pipe(sass({includePaths: 'node_modules'})) // Converts Sass to CSS with gulp-sass
         .pipe(gulp.dest('temp/css'))
         .pipe(browserSync.reload({
             'stream': true

@@ -24,6 +24,7 @@
     "gulp-util": "^3.0.7",
     "gulp-wrap": "^0.13.0",
     "minimist": "^1.2.0",
+    "parlassets": "git+ssh://git@github.com:muki/parlassets.git",
     "request": "^2.78.0",
     "run-sequence": "^1.1.5"
   }

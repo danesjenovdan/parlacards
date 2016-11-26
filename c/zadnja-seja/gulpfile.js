@@ -50,7 +50,7 @@ console.log(className);
 gulp.task('sass', function() {
     return gulp.src('card/scss/style.scss')
         .pipe(wrap('.' + className + '{<%= contents %>}', {}, { parse: false }))
-        .pipe(sass()) // Converts Sass to CSS with gulp-sass
+        .pipe(sass({includePaths: 'node_modules'})) // Converts Sass to CSS with gulp-sass
         .pipe(gulp.dest('temp/css'))
         .pipe(browserSync.reload({
             'stream': true
