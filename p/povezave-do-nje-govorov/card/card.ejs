@@ -48,6 +48,9 @@
                 <% var person = data.person; %>
 
                 <% var i = 0; %>
+                <% if (data.results.length === 0) { %>
+                    <div class="nospeeches"><i>Brez govorov.</i></div>
+                <% } %>
                 <% for(result in data.results){ %>
 
                 <div class="date"><%= data.results[result].date %></div>
