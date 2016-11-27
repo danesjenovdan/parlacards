@@ -90,23 +90,27 @@
 
                           <div role="tabpanel" class="tab-pane<%= i === 0 ? ' active' : '' %>" id="<%= tab.replace(/ /g, '_') %>_<%= randomId %>">
                               <ul class="membership-list">
-                              <% currentTab.forEach(function(membershipItem) { %>
-                                <% if (tab === 'Delovna telesa') { %>
-                                    <% if (membershipItem.name === 'Kolegij predsednika državnega zbora') { %>
+                              <% if (currentTab.length > 0) { %>
+                                <% currentTab.forEach(function(membershipItem) { %>
+                                    <% if (tab === 'Delovna telesa') { %>
+                                        <% if (membershipItem.name === 'Kolegij predsednika državnega zbora') { %>
+                                            <li class="key">
+                                            <a href="<%=urlsData.base%>/seje/tip/seje-kolegija-predsednika-dz"> <%= membershipItem.name %></a>
+                                            </li>
+                                        <% } else { %>
                                         <li class="key">
-                                        <a href="<%=urlsData.base%>/seje/tip/seje-kolegija-predsednika-dz"> <%= membershipItem.name %></a>
+                                            <a href="<%=urlsData.base%>/seje/tip/seje-delovnih-teles/#<%= membershipItem.org_id %>"> <%= membershipItem.name %></a>
                                         </li>
+                                        <% } %>
                                     <% } else { %>
-                                    <li class="key">
-                                        <a href="<%=urlsData.base%>/seje/tip/seje-delovnih-teles/#<%= membershipItem.org_id %>"> <%= membershipItem.name %></a>
-                                    </li>
+                                        <li class="key">
+                                            <%= membershipItem.name %>
+                                        </li>
                                     <% } %>
-                                <% } else { %>
-                                    <li class="key">
-                                        <%= membershipItem.name %>
-                                    </li>
-                                <% } %>
-                              <% }) %>
+                                <% }) %>
+                              <% } else { %>
+                                  <div class="nomemberships"><i>Brez članstev.</i></div>
+                              <% } %>
                               </ul>
                           </div>
 

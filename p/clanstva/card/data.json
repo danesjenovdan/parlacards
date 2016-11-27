@@ -33,43 +33,6 @@
             "org_type": "poslanska skupina",
             "org_id": 1,
             "name": "PS Stranka modernega centra"
-        }],
-        "skupina prijateljstva": [{
-            "org_type": "skupina prijateljstva",
-            "org_id": 42,
-            "name": "Skupina prijateljstva z Belgijo"
-        }, {
-            "org_type": "skupina prijateljstva",
-            "org_id": 44,
-            "name": "Skupina prijateljstva z Bosno in Hercegovino"
-        }, {
-            "org_type": "skupina prijateljstva",
-            "org_id": 55,
-            "name": "Skupina prijateljstva z Italijo"
-        }, {
-            "org_type": "skupina prijateljstva",
-            "org_id": 68,
-            "name": "Skupina prijateljstva z Nizozemsko"
-        }, {
-            "org_type": "skupina prijateljstva",
-            "org_id": 69,
-            "name": "Skupina prijateljstva z Norve\u0161ko"
-        }, {
-            "org_type": "skupina prijateljstva",
-            "org_id": 71,
-            "name": "Skupina prijateljstva z Rusijo"
-        }, {
-            "org_type": "skupina prijateljstva",
-            "org_id": 76,
-            "name": "Skupina prijateljstva s \u0160vico"
-        }, {
-            "org_type": "skupina prijateljstva",
-            "org_id": 79,
-            "name": "Skupina prijateljstva z Veliko Britanijo"
-        }, {
-            "org_type": "skupina prijateljstva",
-            "org_id": 88,
-            "name": "Skupina prijateljstva z Luksemburgom"
         }]
     },
     "person": {
