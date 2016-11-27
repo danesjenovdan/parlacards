@@ -46,7 +46,11 @@
                     </a>
                     <div class="column name">
                         <a href="/p/id/<%= data[person].person.id %>" class="funblue-light-hover"><%= data[person].person.name %></a><br>
-                        <a href="/ps/id/<%= data[person].person.party.id %>" class="funblue-light-hover"><%= data[person].person.party.acronym %></a>
+                        <% if (data[person].person.party.acronym.indexOf('NeP') === -1) { %>
+                            <a href="/ps/id/<%= data[person].person.party.id %>" class="funblue-light-hover"><%= data[person].person.party.acronym %></a>
+                        <% } else { %>
+                            <%= data[person].person.party.acronym %>
+                        <% } %>
                     </div>
                 </li>
 
