@@ -638,7 +638,7 @@ var skupinesearch = new Bloodhound({
 });
 
 function updatePeopleSearch() {
-    poeplesearchtypeahead = $('.kompas-search-input').typeahead({
+    peoplesearchtypeahead = $('.kompas-search-input').typeahead({
         'hint': false,
         'highlight': true
     }, {
