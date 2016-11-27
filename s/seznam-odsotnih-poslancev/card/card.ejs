@@ -28,10 +28,6 @@
 <!-- everything above here is part of the page and not part of the card -->
 <!-- //https://analize.parlameter.si/v1/s/getMinSpeechesOnSession/23.12.2014 -->
 
-<style>
-    #votingCard{height: 480px;}
-
-</style>
 <div class="card-container card-halfling <%= className %>">
     <div class="card-header">
         <div class="card-header-border"></div>
@@ -40,38 +36,30 @@
     </div>
     <div class="card-content full">
         <div class="card-content-front">
+            <ul class="person-list">
+                <% var data = data.results;
+                   for (person in data) { %>
 
+                <li class="person">
+                    <a href="/p/id/<%= data[person].person.id %>" class="portrait column">
+                        <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(data[person].person.gov_id) %>.png" />
+                    </a>
+                    <div class="column name">
+                        <a href="/p/id/<%= data[person].person.id %>" class="funblue-light-hover"><%= data[person].person.name %></a><br>
+                        <a href="/ps/id/<%= data[person].person.party.id %>" class="funblue-light-hover"><%= data[person].person.party.acronym %></a>
+                    </div>
+                </li>
 
-            <div class="seznamscrollme">
-
-                <% var data = data.results; %>
-                <% var i = 1; for (person in data) { %>
-
-                <div class="member <%= ((data.length-1) == i) ? 'lastel' : ''; %>">
-                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data[person].person.gov_id %>.png); background-size: cover;"></div>
-                    <div>
-                        <p>
-                        <a class="funblue-light-hover" style="color: #6d6d6d;" href="/p/id/<%= data[person].person.id %>"><%= data[person].person.name %></a>
-                        <br/><a class="funblue-light-hover" style="color: #6d6d6d;" href="/ps/id/<%= data[person].person.party.id %>"><%= data[person].person.party.acronym %></a>
-                    </p></div>
-                    <span><%= data[person].score %></span>
-                    <div class="clearfix"></div>
-                </div>
-
-                <% i++; }%>
-
-            </div>
-
-
+                <% }%>
+            </ul>
         </div>
-
     </div>
     <div class="card-footer">
-                <div class="card-logo hidden">
-                     <a href="https://skoraj.parlameter.si/">
-                         <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
-                     </a>
-                 </div>
+        <div class="card-logo hidden">
+             <a href="https://skoraj.parlameter.si/">
+                 <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+             </a>
+         </div>
 
         <div class="card-circle-button card-share"></div>
         <div class="card-circle-button card-embed"></div>
