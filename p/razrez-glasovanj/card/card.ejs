@@ -126,13 +126,13 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="Glasovala_ZA<%= random_id %>">
 
-                                <div class="me_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="me_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             <%= data.person.name %>
                                         </span>
                                     </div>
-                                    <div class="col280">
+                                    <div class="column progress_bar">
                                         <div class="progress smallbar">
                                             <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.for.score/max * 60%>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.for.score/max * 60%>% Complete</span>
@@ -145,14 +145,14 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Opozicijsko povprečje
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgOpposition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.for.avgOpposition.score %>% Complete</span>
                                             </div>
@@ -164,28 +164,28 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Največ v opoziciji
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgminmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar avgmin">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxOpposition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.for.maxOpposition.score %>% Complete</span>
-                                            </div>
-                                            <%
+                                                <%
 
-                                            if (data.results.for.maxOpposition.mps) {
-                                                for (var i = 0; i < data.results.for.maxOpposition.mps.length; i++) {
+                                                if (data.results.for.maxOpposition.mps) {
+                                                    for (var i = 0; i < data.results.for.maxOpposition.mps.length; i++) {
 
-                                            %>
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.for.maxOpposition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.for.maxOpposition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.for.maxOpposition.mps[i]['gov_id'] %>.png');"></a>
-                                            <%
+                                                %>
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.for.maxOpposition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.for.maxOpposition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxOpposition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.for.maxOpposition.mps[i]['gov_id'] %>.png');"></a>
+                                                <%
+                                                    }
                                                 }
-                                            }
-                                            %>
+                                                %>
+                                            </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.for.maxOpposition.score) %>
                                             </div>
@@ -194,14 +194,14 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Koalicijsko povprečje
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar ">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.avgCoalition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.for.avgCoalition.score %>% Complete</span>
                                             </div>
@@ -213,28 +213,28 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Največ v koaliciji
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgminmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar avgmin">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.for.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.for.maxCoalition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.for.maxCoalition.score %>% Complete</span>
-                                            </div>
-                                            <%
+                                                <%
 
-                                            if (data.results.for.maxCoalition.mps) {
-                                                for (var i = 0; i < data.results.for.maxCoalition.mps.length; i++) {
+                                                if (data.results.for.maxCoalition.mps) {
+                                                    for (var i = 0; i < data.results.for.maxCoalition.mps.length; i++) {
 
-                                            %>
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.for.maxCoalition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.for.maxCoalition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxCoalition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.for.maxCoalition.mps[i]['gov_id'] %>.png');"></a>
-                                            <%
+                                                %>
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.for.maxCoalition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.for.maxCoalition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.for.maxCoalition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.for.maxCoalition.mps[i]['gov_id'] %>.png');"></a>
+                                                <%
+                                                    }
                                                 }
-                                            }
-                                            %>
+                                                %>
+                                            </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.for.maxCoalition.score) %>
                                             </div>
@@ -246,13 +246,13 @@
                             </div>
                             <div role="tabpanel" class="tab-pane" id="Glasovala_PROTI<%= random_id %>">
 
-                                <div class="me_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="me_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             <%= data.person.name %>
                                         </span>
                                     </div>
-                                    <div class="col280">
+                                    <div class="column progress_bar">
                                         <div class="progress smallbar">
                                             <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.against.score/max * 60%>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.against.score/max * 60%>% Complete</span>
@@ -265,14 +265,14 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Opozicijsko povprečje
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar ">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgOpposition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.against.avgOpposition.score %>% Complete</span>
                                             </div>
@@ -284,28 +284,28 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Največ v opoziciji
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgminmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar avgmin">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxOpposition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.against.maxOpposition.score %>% Complete</span>
-                                            </div>
-                                            <%
+                                                <%
 
-                                            if (data.results.against.maxOpposition.mps) {
-                                                for (var i = 0; i < data.results.against.maxOpposition.mps.length; i++) {
+                                                if (data.results.against.maxOpposition.mps) {
+                                                    for (var i = 0; i < data.results.against.maxOpposition.mps.length; i++) {
 
-                                            %>
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.against.maxOpposition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.against.maxOpposition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.against.maxOpposition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.against.maxOpposition.mps[i]['gov_id'] %>.png');"></a>
-                                            <%
+                                                %>
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.against.maxOpposition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.against.maxOpposition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.against.maxOpposition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.against.maxOpposition.mps[i]['gov_id'] %>.png');"></a>
+                                                <%
+                                                    }
                                                 }
-                                            }
-                                            %>
+                                                %>
+                                            </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.against.maxOpposition.score) %>
                                             </div>
@@ -314,14 +314,14 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Koalicijsko povprečje
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar ">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.avgCoalition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.against.avgCoalition.score %>% Complete</span>
                                             </div>
@@ -333,28 +333,28 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Največ v koaliciji
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgminmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar avgmin">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.against.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.against.maxCoalition.score/max * 60 %>%;">
                                                 <span class="sr-only"><%= data.results.against.maxCoalition.score %>% Complete</span>
-                                            </div>
-                                            <%
+                                                <%
 
-                                            if (data.results.against.maxCoalition.mps) {
-                                                for (var i = 0; i < data.results.against.maxCoalition.mps.length; i++) {
+                                                if (data.results.against.maxCoalition.mps) {
+                                                    for (var i = 0; i < data.results.against.maxCoalition.mps.length; i++) {
 
-                                            %>
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.against.maxCoalition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.against.maxCoalition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.against.maxCoalition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.against.maxCoalition.mps[i]['gov_id'] %>.png');"></a>
-                                            <%
+                                                %>
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.against.maxCoalition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.against.maxCoalition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.against.maxCoalition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.against.maxCoalition.mps[i]['gov_id'] %>.png');"></a>
+                                                <%
+                                                    }
                                                 }
-                                            }
-                                            %>
+                                                %>
+                                            </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.against.maxCoalition.score) %>
                                             </div>
@@ -366,13 +366,13 @@
                             </div>
                             <div role="tabpanel" class="tab-pane" id="se_VZDRŽALA<%= random_id %>">
 
-                                <div class="me_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="me_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             <%= data.person.name %>
                                         </span>
                                     </div>
-                                    <div class="col280">
+                                    <div class="column progress_bar">
                                         <div class="progress smallbar">
                                             <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.abstain.score/max * 60%>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.score/max * 60%>%;">
                                                 <span class="sr-only"><%= data.results.abstain.score/max * 60%>% Complete</span>
@@ -385,14 +385,14 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Opozicijsko povprečje
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar ">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.avgOpposition.score %>%;">
                                                 <span class="sr-only"><%= data.results.abstain.avgOpposition.score %>% Complete</span>
                                             </div>
@@ -404,28 +404,28 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Največ v opoziciji
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgminmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar avgmin">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.maxOpposition.score %>%;">
                                                 <span class="sr-only"><%= data.results.abstain.maxOpposition.score %>% Complete</span>
-                                            </div>
-                                            <%
+                                                <%
 
-                                            if (data.results.abstain.maxOpposition.mps) {
-                                                for (var i = 0; i < data.results.abstain.maxOpposition.mps.length; i++) {
+                                                if (data.results.abstain.maxOpposition.mps) {
+                                                    for (var i = 0; i < data.results.abstain.maxOpposition.mps.length; i++) {
 
-                                            %>
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.abstain.maxOpposition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.abstain.maxOpposition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.abstain.maxOpposition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.abstain.maxOpposition.mps[i]['gov_id'] %>.png');"></a>
-                                            <%
+                                                %>
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.abstain.maxOpposition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.abstain.maxOpposition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.abstain.maxOpposition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.abstain.maxOpposition.mps[i]['gov_id'] %>.png');"></a>
+                                                <%
+                                                    }
                                                 }
-                                            }
-                                            %>
+                                                %>
+                                            </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.abstain.maxOpposition.score) %>
                                             </div>
@@ -434,14 +434,14 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Koalicijsko povprečje
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar ">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.avgCoalition.score %>%;">
                                                 <span class="sr-only"><%= data.results.abstain.avgCoalition.score %>% Complete</span>
                                             </div>
@@ -453,28 +453,28 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Največ v koaliciji
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgminmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar avgmin">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.abstain.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.abstain.maxCoalition.score %>%;">
                                                 <span class="sr-only"><%= data.results.abstain.maxCoalition.score %>% Complete</span>
-                                            </div>
-                                            <%
+                                                <%
 
-                                            if (data.results.abstain.maxCoalition.mps) {
-                                                for (var i = 0; i < data.results.abstain.maxCoalition.mps.length; i++) {
+                                                if (data.results.abstain.maxCoalition.mps) {
+                                                    for (var i = 0; i < data.results.abstain.maxCoalition.mps.length; i++) {
 
-                                            %>
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.abstain.maxCoalition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.abstain.maxCoalition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.abstain.maxCoalition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.abstain.maxCoalition.mps[i]['gov_id'] %>.png');"></a>
-                                            <%
+                                                %>
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.abstain.maxCoalition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.abstain.maxCoalition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.abstain.maxCoalition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.abstain.maxCoalition.mps[i]['gov_id'] %>.png');"></a>
+                                                <%
+                                                    }
                                                 }
-                                            }
-                                            %>
+                                                %>
+                                            </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.abstain.maxCoalition.score) %>
                                             </div>
@@ -486,13 +486,13 @@
                             </div>
                             <div role="tabpanel" class="tab-pane" id="NI_glasovala<%= random_id %>">
 
-                                <div class="me_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="me_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             <%= data.person.name %>
                                         </span>
                                     </div>
-                                    <div class="col280">
+                                    <div class="column progress_bar">
                                         <div class="progress smallbar">
                                             <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.absent.score/max * 60%>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.score/max * 60%>%;">
                                                 <span class="sr-only"><%= data.results.absent.score/max * 60%>% Complete</span>
@@ -505,14 +505,14 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Opozicijsko povprečje
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar ">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.avgOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.avgOpposition.score %>%;">
                                                 <span class="sr-only"><%= data.results.absent.avgOpposition.score %>% Complete</span>
                                             </div>
@@ -524,28 +524,28 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Največ v opoziciji
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgminmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar avgmin">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.maxOpposition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.maxOpposition.score %>%;">
                                                 <span class="sr-only"><%= data.results.absent.maxOpposition.score %>% Complete</span>
-                                            </div>
-                                            <%
+                                                <%
 
-                                            if (data.results.absent.maxOpposition.mps) {
-                                                for (var i = 0; i < data.results.absent.maxOpposition.mps.length; i++) {
+                                                if (data.results.absent.maxOpposition.mps) {
+                                                    for (var i = 0; i < data.results.absent.maxOpposition.mps.length; i++) {
 
-                                            %>
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.absent.maxOpposition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.absent.maxOpposition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.absent.maxOpposition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.absent.maxOpposition.mps[i]['gov_id'] %>.png');"></a>
-                                            <%
+                                                %>
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.absent.maxOpposition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.absent.maxOpposition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.absent.maxOpposition.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.absent.maxOpposition.mps[i]['gov_id'] %>.png');"></a>
+                                                <%
+                                                    }
                                                 }
-                                            }
-                                            %>
+                                                %>
+                                            </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.absent.maxOpposition.score) %>
                                             </div>
@@ -554,14 +554,14 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Koalicijsko povprečje
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar ">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.avgCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.avgCoalition.score %>%;">
                                                 <span class="sr-only"><%= data.results.absent.avgCoalition.score %>% Complete</span>
                                             </div>
@@ -573,28 +573,28 @@
                                     </div>
                                 </div>
 
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
+                                <div class="other_poslanec clearfix progress_flex">
+                                    <div class="column progress_title">
                                         <span class="poslanec_title">
                                             Največ v koaliciji
                                         </span>
                                     </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgminmin">
+                                    <div class="column progress_bar">
+                                        <div class="progress smallbar avgmin">
                                             <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.absent.maxCoalition.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.absent.maxCoalition.score %>%;">
                                                 <span class="sr-only"><%= data.results.absent.maxCoalition.score %>% Complete</span>
-                                            </div>
-                                            <%
+                                                <%
 
-                                            if (data.results.absent.maxCoalition.mps) {
-                                                for (var i = 0; i < data.results.absent.maxCoalition.mps.length; i++) {
+                                                if (data.results.absent.maxCoalition.mps) {
+                                                    for (var i = 0; i < data.results.absent.maxCoalition.mps.length; i++) {
 
-                                            %>
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.absent.maxCoalition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.absent.maxCoalition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.absent.maxCoalition.mps.length - i - 1)  %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.absent.maxCoalition.mps[i]['gov_id'] %>.png');"></a>
-                                            <%
+                                                %>
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.absent.maxCoalition.mps[i].id].slug%><%=urlsData.personLink.pregled%>" data-name="<%= data.results.absent.maxCoalition.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.absent.maxCoalition.mps.length - i - 1)  %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.absent.maxCoalition.mps[i]['gov_id'] %>.png');"></a>
+                                                <%
+                                                    }
                                                 }
-                                            }
-                                            %>
+                                                %>
+                                            </div>
                                             <div class="progress_number">
                                                 <%= Math.round(data.results.absent.maxCoalition.score) %>
                                             </div>

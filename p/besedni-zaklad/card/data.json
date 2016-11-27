@@ -2,7 +2,7 @@
     "person": {
         "gov_id": "P267",
         "id": 50,
-        "name": "Franc Laj",
+        "name": "Franc Laj Franc Laja",
         "party": {
             "acronym": "SMC",
             "id": 1,
@@ -24,6 +24,6 @@
             }],
             "score": 3979.0
         },
-        "score": 346.0
+        "score": 3960.0
     }
 }
