@@ -260,12 +260,9 @@
                 return matchingDistrict.label
               }).join(', ')
             }
-            if (member.person.party.acronym.indexOf('NeP') === -1) {
-              member.partylink = true;
-            } else {
-              member.partylink = false;
-            }
 
+            member.partylink = member.person.party.acronym.indexOf('NeP') === -1
+          
             return member
           })
           .sort(function(memberA, memberB) {
@@ -337,9 +334,10 @@
 
         if (this.currentAnalysis === 'alphabetical' && this.currentSort === 'analysis') {
           this.selectSort('name')
-        } else {
-          this.currentSort = 'analysis';
-          this.currentSortOrder = 'desc';
+        }
+        else {
+          this.currentSort = 'analysis'
+          this.currentSortOrder = 'desc'
         }
       },
       selectSort: function(sortId) {
@@ -371,11 +369,11 @@
         return value
       }
     }
-  });
+  })
 
-  makeEmbedSwitch();
-  activateCopyButton();
-  addCardRippling();
+  makeEmbedSwitch()
+  activateCopyButton()
+  addCardRippling()
 
   </script>
 </body>
