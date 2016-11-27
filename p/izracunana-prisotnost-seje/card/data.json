@@ -1,75 +1,132 @@
 {
     "person": {
-        "gov_id": "P239",
-        "id": 2,
-        "name": "Anja Bah Žibert",
+        "is_active": false,
+        "district": [
+            62
+        ],
+        "name": "Alenka Bratu\u0161ek",
+        "gov_id": "P166",
+        "gender": "f",
         "party": {
-            "acronym": "SDS",
-            "id": 5,
-            "name": "PS Slovenska Demokratska Stranka"
-        }
-    },
-    "results": {
-        "sessions": {
-            "average": 86,
-            "max": {
-                "mps": [{
-                    "gov_id": "P240",
-                    "id": 3,
-                    "name": "Urška Ban",
-                    "party": {
-                        "acronym": "SMC",
-                        "id": 1,
-                        "name": "PS Stranka modernega centra"
-                    }
-                }, {
-                    "gov_id": "P274",
-                    "id": 60,
-                    "name": "Jasna Murgel",
-                    "party": {
-                        "acronym": "SMC",
-                        "id": 1,
-                        "name": "PS Stranka modernega centra"
-                    }
-                }, {
-                    "gov_id": "P275",
-                    "id": 61,
-                    "name": "Bojana Muršič",
-                    "party": {
-                        "acronym": "SD",
-                        "id": 7,
-                        "name": "PS Socialni Demokrati"
-                    }
-                }, {
-                    "gov_id": "P129",
-                    "id": 49,
-                    "name": "Zvonko Lah",
-                    "party": {
-                        "acronym": "SDS",
-                        "id": 5,
-                        "name": "PS Slovenska Demokratska Stranka"
-                    }
-                }],
-                "score": 100
-            },
-            "score": 80
+            "acronym": "PS NP",
+            "is_coalition": false,
+            "id": 109,
+            "name": "PS nepovezanih poslancev "
         },
+        "type": "mp",
+        "id": 9,
+        "has_function": false
+    },
+    "created_at": "24.11.2016",
+    "created_for": "14.11.2016",
+    "results": {
         "votes": {
-            "average": 80,
             "max": {
-                "mps": [{
-                    "gov_id": "P240",
-                    "id": 3,
-                    "name": "Urška Ban",
-                    "party": {
-                        "acronym": "SMC",
-                        "id": 1,
-                        "name": "PS Stranka modernega centra"
+                "score": 98.6607142857143,
+                "mps": [
+                    {
+                        "is_active": false,
+                        "district": [
+                            8
+                        ],
+                        "name": "Ur\u0161ka Ban",
+                        "gov_id": "P240",
+                        "gender": "f",
+                        "party": {
+                            "acronym": "SMC",
+                            "is_coalition": true,
+                            "id": 1,
+                            "name": "PS Stranka modernega centra"
+                        },
+                        "type": "mp",
+                        "id": 3,
+                        "has_function": false
                     }
-                }],
-                "score": 99
+                ]
             },
-            "score": 74
+            "average": 80.8929655454197,
+            "score": 44.3239795918367
+        },
+        "sessions": {
+            "max": {
+                "score": 100.0,
+                "mps": [
+                    {
+                        "is_active": false,
+                        "district": [
+                            84
+                        ],
+                        "name": "Vlasta Po\u010dkaj",
+                        "gov_id": "P303",
+                        "gender": "f",
+                        "party": {
+                            "acronym": "SMC",
+                            "is_coalition": true,
+                            "id": 1,
+                            "name": "PS Stranka modernega centra"
+                        },
+                        "type": "mp",
+                        "id": 2934,
+                        "has_function": false
+                    },
+                    {
+                        "is_active": false,
+                        "district": [
+                            85
+                        ],
+                        "name": "Teja Ljubi\u010d",
+                        "gov_id": "P304",
+                        "gender": "f",
+                        "party": {
+                            "acronym": "SMC",
+                            "is_coalition": true,
+                            "id": 1,
+                            "name": "PS Stranka modernega centra"
+                        },
+                        "type": "mp",
+                        "id": 2933,
+                        "has_function": false
+                    },
+                    {
+                        "is_active": false,
+                        "district": [
+                            48
+                        ],
+                        "name": "Jasna Murgel",
+                        "gov_id": "P274",
+                        "gender": "f",
+                        "party": {
+                            "acronym": "SMC",
+                            "is_coalition": true,
+                            "id": 1,
+                            "name": "PS Stranka modernega centra"
+                        },
+                        "type": "mp",
+                        "id": 60,
+                        "has_function": false
+                    },
+                    {
+                        "is_active": false,
+                        "district": [
+                            66
+                        ],
+                        "name": "Julijana Bizjak Mlakar",
+                        "gov_id": "P158",
+                        "gender": "f",
+                        "party": {
+                            "acronym": "DeSUS",
+                            "is_coalition": true,
+                            "id": 3,
+                            "name": "PS Demokratska Stranka Upokojencev Slovenije"
+                        },
+                        "type": "mp",
+                        "id": 5,
+                        "has_function": false
+                    }
+                ]
+            },
+            "average": 89.0586534350786,
+            "score": 71.6666666666667
         }
     }
 }
