@@ -56,14 +56,16 @@
                                             <div class="col-xs-3 ">
                                                 <div class="image respo">
 
+                                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.headOfPG.id].slug%><%=urlsData.personLink.pregled%>" title="<%= data.headOfPG.name %>">
                                                     <img class="media-object img-circle img-responsive"
                                                          src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.headOfPG.gov_id %>.png"
                                                          alt=""/>
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div class="col-xs-9 member_data">
                                                 <h3>
-                                                    <a href="https://skoraj.parlameter.si/p/id/<%= data.headOfPG.id %>" style="color: #6d6d6d;" class="funblue-light-hover"><%= data.headOfPG.name %></a>
+                                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.headOfPG.id].slug%><%=urlsData.personLink.pregled%>" style="color: #6d6d6d;" class="funblue-light-hover"><%= data.headOfPG.name %></a>
                                                 </h3>
                                                 <h4>
                                                     <%
@@ -93,14 +95,16 @@
                                             <div class="col-xs-3 ">
                                                 <div class="image respo">
 
+                                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.viceOfPG[item].id].slug%><%=urlsData.personLink.pregled%>" title="<%= data.viceOfPG[item].name %>">
                                                     <img class="media-object img-circle img-responsive"
                                                          src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.viceOfPG[item].gov_id %>.png"
                                                          alt=""/>
+                                                        </a>
                                                 </div>
                                             </div>
                                             <div class="col-xs-9 member_data">
                                                 <h3>
-                                                    <a href="https://skoraj.parlameter.si/p/id/<%= data.viceOfPG.id %>" style="color: #6d6d6d;" class="funblue-light-hover"><%= data.viceOfPG[item].name %></a>
+                                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.viceOfPG[item].id].slug%><%=urlsData.personLink.pregled%>" style="color: #6d6d6d;" class="funblue-light-hover"><%= data.viceOfPG[item].name %></a>
                                                 </h3>
                                                 <h4>
                                                     <%
