@@ -43,9 +43,16 @@
 
                 <div class="member <%= ((data.results.length-1) == i) ? 'lastel' : ''; %>">
                     <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results[i].person.gov_id %>.png); background-size: cover;"></div>
-                    <p><%= data.results[i].person.name %>
+                    <p>
+                        <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results[i].person.id].slug%><%=urlsData.personLink.pregled%>" title="<%data.results[i].person.name%>">
+                        <%= data.results[i].person.name %>
+                        </a>
 
-                        <br/><%= data.results[i].person.party.acronym %></p>
+                        <br/>
+                        <a href="<%=urlsData.base%><%=urlsData.partyLink.base%><%=urlsData.party[data.results[i].person.party.id].acronym%><%=urlsData.partyLink.pregled%>" title="<%=data.results[i].person.party.name%>">
+                        <%= data.results[i].person.party.acronym %>
+                        </a>
+                    </p>
                     <span><%= data.results[i].ratio.toFixed(0) %> %</span>
                     <div class="clearfix"></div>
                 </div>
