@@ -37,24 +37,22 @@
     <div class="card-content full">
         <div class="card-content-front">
             <ul class="person-list">
-                <% var data = data.results;
-                   for (person in data) { %>
-
+                <% data.results.forEach(function(member) { %>
                 <li class="person">
-                    <a href="/p/id/<%= data[person].person.id %>" class="portrait column">
-                        <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(data[person].person.gov_id) %>.png" />
+                    <a href="/p/id/<%= member.person.id %>" class="portrait column">
+                        <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(member.person.gov_id) %>.png" />
                     </a>
                     <div class="column name">
-                        <a href="/p/id/<%= data[person].person.id %>" class="funblue-light-hover"><%= data[person].person.name %></a><br>
-                        <% if (data[person].person.party.acronym.indexOf('NeP') === -1) { %>
-                            <a href="/ps/id/<%= data[person].person.party.id %>" class="funblue-light-hover"><%= data[person].person.party.acronym %></a>
+                        <a href="/p/id/<%= member.person.id %>" class="funblue-light-hover"><%= member.person.name %></a><br>
+                        <% if (member.person.party.acronym.indexOf('NeP') === -1) { %>
+                            <a href="/ps/id/<%= member.person.party.id %>" class="funblue-light-hover"><%= member.person.party.acronym %></a>
                         <% } else { %>
-                            <%= data[person].person.party.acronym %>
+                            <%= member.person.party.acronym %>
                         <% } %>
                     </div>
                 </li>
 
-                <% }%>
+                <% }) %>
             </ul>
         </div>
     </div>
