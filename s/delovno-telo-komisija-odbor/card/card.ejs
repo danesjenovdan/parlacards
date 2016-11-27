@@ -54,7 +54,7 @@
                                     <div class="col-xs-3 ">
                                         <div class="image respo">
 
-                                            <a href="/p/id/<%= data.info.president.id %>">
+                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.president.id].slug%><%=urlsData.personLink.pregled%>">
                                             <img class="media-object img-circle img-responsive"
                                                  src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.president.gov_id %>.png"
                                                  alt=""/>
@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="col-xs-8 member_data">
                                         <h3>
-                                            <a href="/p/id/<%= data.info.president.id %>">
+                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.president.id].slug%><%=urlsData.personLink.pregled%>">
                                                 <%= data.info.president.name %>
                                             </a>
                                         </h3>
@@ -86,7 +86,7 @@
                                 <div class="dt-member row verticalmember">
                                     <div class="col-xs-3">
                                         <div class="image respo">
-                                            <a href="/p/id/<%= data.info.vice_president[item].id %>">
+                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.vice_president[item].id].slug%><%=urlsData.personLink.pregled%>">
                                             <img class="media-object img-circle img-responsive"
                                                  src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.vice_president[item].gov_id %>.png"
                                                  alt=""/>
@@ -95,7 +95,7 @@
                                     </div>
                                     <div class="col-xs-8 member_data">
                                         <h3>
-                                            <a href="/p/id/<%= data.info.vice_president[item].id %>">
+                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.vice_president[item].id].slug%><%=urlsData.personLink.pregled%>">
                                             <%= data.info.vice_president[item].name %>
                                                 </a>
                                         </h3>
@@ -116,7 +116,7 @@
                                     <h2>Člani in članice</h2>
                                     <div class="session_other_members">
                                         <% for(item in data.info.members){ %>
-                                        <a href="/p/id/<%= data.info.members[item].id %>"
+                                        <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.members[item].id].slug%><%=urlsData.personLink.pregled%>"
                                            title="<%= data.info.members[item].name %>">
                                             <img class="img-circle"
                                                  src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.members[item].gov_id %>.png"
@@ -132,7 +132,7 @@
                                     <h2>Nadomestni člani in članice</h2>
                                     <div class="session_other_members">
                                         <% for(item in data.info.viceMember){ %>
-                                        <a href="/p/id/<%= data.info.viceMember[item].id %>"
+                                        <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.viceMember[item].id].slug%><%=urlsData.personLink.pregled%>"
                                            title="<%= data.info.viceMember[item].name %>">
                                             <img class="img-circle"
                                                  src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.viceMember[item].gov_id %>.png"
@@ -149,7 +149,7 @@
                                     <h2>Sektretarke</h2>
                                     <div class="session_other_members">
 
-                                        <a href="/p/id/<%= data.info.sekretarka.id %>"
+                                        <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.sekretarka.id].slug%><%=urlsData.personLink.pregled%>"
                                            title="<%= data.info.sekretarka.name %>">
 
                                             <%= data.info.sekretarka.name %>
@@ -223,7 +223,7 @@
 
                                             <span class="date col-sm-3"><%= data.sessions[item].date %></span>
                                             <p class=" col-sm-9">
-                                                <a href="/seja/transkript/<%= data.sessions[item].id %>"><%= data.sessions[item].name %></a>
+                                                <a href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%= data.sessions[item].id %>"><%= data.sessions[item].name %></a>
                                             </p>
 
                                         </li>
