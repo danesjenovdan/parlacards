@@ -28,11 +28,7 @@
             presidingMatch = true;
 
         if (state.parties) {
-          stringToMatch = member.person.party.acronym;
-          if (stringToMatch.indexOf('NeP') > -1) {
-            stringToMatch = 'NeP';
-          }
-          partyMatch = state.parties.indexOf(stringToMatch) > -1;
+          partyMatch = state.parties.indexOf(member.person.party.acronym) > -1;
         }
         if (state.districts) {
           districtMatch = member.person.district.reduce(function(prevMatch, memberDistrict) {
