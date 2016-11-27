@@ -3,7 +3,7 @@ a {
 }
 a:hover {
   background-color: #e1f6ff;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .session-container{
@@ -16,34 +16,26 @@ a:hover {
   padding: 0;
   position: inherit;
   top: auto;
-}
+  .paneltab {
+    padding-top:0;
+    padding-bottom:0;
+    .session_other_members {
+      a {
+        width: 12.67%;
+        float: left;
+        margin: 2%;
+      }
+      img { width:100%; }
+    }
+    .dt-member {
+      .image {
+        width: auto;
+        height:auto;
+      }
 
-.session-container .paneltab{
-  padding-top:0;
-  padding-bottom:0;
-}
-
-.session-container .paneltab .session_other_members a{
-  width: 12.67%;
-  float: left;
-  margin: 2%;
-}
-
-.session-container .paneltab .session_other_members img{
-  width:100%;
-}
-
-.session-container .paneltab .dt-member .image{
-  width: auto;
-  height:auto;
-}
-
-.session-container .paneltab .dt-member h3{
-  margin-top: 0;
-}
-
-.session-container .paneltab .dt-member img{
- /*margin-top: 12px;*/
+      h3 { margin-top: 0; }
+    }
+  }
 }
 
 .other_poslanec{
@@ -55,33 +47,30 @@ a:hover {
 
 .sessionsGetSessionByDate{
   height: 500px;
-}
-.sessionsGetSessionByDate ul{
-  padding: 0;
-}
-.sessionsGetSessionByDate ul li{
-  list-style: none;
-  padding-bottom: 10px;
-}
-.sessionsGetSessionByDate ul li span{
-  padding-left: 0;
-}
-.sessionsGetSessionByDate ul li p{
-  border-bottom: 1px solid #f0f0f0;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      padding-bottom: 10px;
+      span { padding-left: 0; }
+      p {
+        border-bottom: 1px solid #f0f0f0;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
 }
 
 .verticalmember{
-  /*height: 95px;*/
   height: 85px;
-}
-.verticalmember .dt-member_data {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  .dt-member_data {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
 
 @media (max-width: 991px) {
@@ -97,18 +86,16 @@ a:hover {
   }
 }
 
-.upcase{
-  text-transform: uppercase;
-}
+.upcase { text-transform: uppercase; }
 
 .dt-member {
   h3 {
-        font-size: 18px;
-        font-weight: 400;
-        margin: 12px 0 0 0;
-    }
-    h4 {
-        font-size: 14px;
-        font-weight: 300;
-    }
+      font-size: 18px;
+      font-weight: 400;
+      margin: 12px 0 0 0;
+  }
+  h4 {
+      font-size: 14px;
+      font-weight: 300;
+  }
 }
