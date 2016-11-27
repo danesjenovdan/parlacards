@@ -54,6 +54,13 @@
 
                     var offset = 120;
 
+                    %>
+
+                    <% if (data.results.length === 0) { %>
+                        <div class="nospeeches"><i>Brez govorov.</i></div>
+                    <% } %>
+
+                    <%
                     for (var i=0; i < data.results.length; i++) {
                             var word = data.results[i];
                             word.score = Math.round(word.scores['tf-idf'] * 5000);
