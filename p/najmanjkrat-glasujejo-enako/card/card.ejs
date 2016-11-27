@@ -60,8 +60,19 @@
             <div class="card-back-content">
                 <div class="scroller" id="tvojamtka">
                     <p class="info-text">
-                        Izračunamo <a href="https://en.wikipedia.org/wiki/Euclidean_distance">Evklidsko razdaljo</a> med rezultati <%= vocab['poslanca'][data.person.gender] %> glasovanj in rezultati vseh ostalih (pri čemer vrednosti glasov pretvorimo v številčne vrednosti med -1 in 1). Ko smo izračunali "razdaljo" med vsemi poslanci nato razvrstimo poslance glede na rezultat in prikažemo prvih (najbližjih) oz. zadnjih (najbolj oddaljenih) 5.<br>Številčne vrednosti glasov<br>-1: proti<br>0: vzdržan/-a ali ni prisoten/-na<br>1: za<br>
+                        Izračunamo <a href="https://en.wikipedia.org/wiki/Euclidean_distance">evklidsko razdaljo</a> med rezultati <%= vocab['poslanca'][data.person.gender] %> glasovanj in rezultati vseh ostalih (pri čemer vrednosti glasov pretvorimo v številčne vrednosti med -1 in 1).
                     </p>
+                    <p class="info-text">
+                        Ko izračunamo "razdaljo" med vsemi poslanci, jih razvrstimo glede na rezultat in prikažemo zadnjih oz. najbolj oddaljenih pet.
+                    </p>
+                    <div class="info-text">
+                        Številčne vrednosti glasov
+                        <ul class="info-text">
+                            <li>-1: proti</li>
+                            <li>0: vzdržan/-a ali ni prisoten/-na</li>
+                            <li>1: za</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
