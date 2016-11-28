@@ -246,7 +246,8 @@
           .map(function(member) {
             if (member.person.district.length === 0) {
               member.person.formattedDistrict = 'okraj ni vnešen'
-            } else {
+            }
+            else {
               member.person.formattedDistrict = member.person.district.map(function(memberDistrict) {
                 var matchingDistrict = that.districts.filter(function(district) {
                   return district.id === String(memberDistrict)
