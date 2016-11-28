@@ -12,3 +12,7 @@ function odstopanjeodpsHeight() {
 }
 
 /*odstopanjeodpsHeight();*/
+
+makeEmbedSwitch();
+activateCopyButton();
+addCardRippling();

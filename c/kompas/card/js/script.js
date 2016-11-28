@@ -277,15 +277,6 @@ for (group in groupedData) {
 
 }
 
-if (kompasState.people.length > 0) {
-    for (person_i in kompasState.people) {
-        showPersonPicture(svg.select('#_' + kompasState.people[person_i].id).datum());
-        // move to front
-        var parent = $('#_' + kompasState.people[person_i].id).parent()[0];
-        moveToFront(parent, svg.select('#_' + kompasState.people[person_i].id).datum());
-    }
-}
-
 function zoom(animate) {
 
     console.log('ping');
@@ -709,5 +700,24 @@ function addSearchPerson(datum) {
 }
 
 addCardRippling();
+
+if (kompasState.people.length > 0) {
+    for (person_i in kompasState.people) {
+        showPersonPicture(svg.select('#_' + kompasState.people[person_i].id).datum());
+        // move to front
+        var parent = $('#_' + kompasState.people[person_i].id).parent()[0];
+        moveToFront(parent, svg.select('#_' + kompasState.people[person_i].id).datum());
+    }
+}
+
+if (kompasState.parties.length > 0) {
+    for (party_i in kompasState.parties) {
+        if (kompasState.parties[party_i] === 'desus') {
+            $('#partyswitch-DeSUS').click();
+        } else {
+            $('#partyswitch-' + kompasState.parties[party_i].replace(/-/g, '_').toUpperCase()).click();
+        }
+    }
+}
 
 })();
