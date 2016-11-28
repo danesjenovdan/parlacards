@@ -75,6 +75,6 @@
 
 progressbarTooltip.init(className);
 
-addCardFlip();
+addCardRippling();
 makeEmbedSwitch();
 activateCopyButton();

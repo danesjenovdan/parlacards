@@ -165,7 +165,6 @@ $('[data-move-pagination]').on('click', function(event) {
   }
 });
 
-addCardFlip();
 makeEmbedSwitch();
 activateCopyButton();
 addCardRippling();

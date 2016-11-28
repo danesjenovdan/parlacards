@@ -21,7 +21,6 @@ $(window).on('resize', function() {
     equalizeWidth();
 });
 
-addCardFlip();
 makeEmbedSwitch();
 activateCopyButton();
 addCardRippling();
