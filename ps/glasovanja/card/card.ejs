@@ -32,6 +32,7 @@
     %>
 
     var psVoteData = <%- JSON.stringify(data); %>;
+    var vocabulary = <%- JSON.stringify(vocab); %>;
     var psGlasovanjaRandomId = '<%= randomId; %>';
 
     </script>
@@ -47,6 +48,7 @@
 
 <body> <!-- removeme -->
 
+    <script>var className = '<%= className %>';</script>
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
@@ -65,7 +67,7 @@
                   <ul>
                     <li v-for="ballot in votingDay.ballots">
                       <div :class="['icon', ballot.option]"></div>
-                      <div class="motion">Glasovali {{ ballot.option.toUpperCase() }} <a href="#">{{ ballot.motion }}</a></div>
+                      <div class="motion">{{ ballot.label }} <a class="funblue-light-hover" :href="'https://skoraj.parlameter.si/seja/glasovanje/' + ballot.session_id + '/' + ballot.vote_id + ''">{{ ballot.motion }}</a></div>
                     </li>
                   </ul>
                 </template>
@@ -123,15 +125,15 @@
             </div>
         </div>
         <div class="card-footer">
-                <div class="card-logo hidden">
-                     <a href="https://skoraj.parlameter.si/">
-                         <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
-                     </a>
-                 </div>
+            <div class="card-logo hidden">
+                    <a href="https://skoraj.parlameter.si/">
+                        <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+                    </a>
+                </div>
 
-            <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed"></div>
-            <div class="card-circle-button card-info">i</div>
+            <div class="card-circle-button card-share" data-back="share"></div>
+            <div class="card-circle-button card-embed" data-back="embed"></div>
+            <div class="card-circle-button card-info" data-back="info">i</div>
         </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->

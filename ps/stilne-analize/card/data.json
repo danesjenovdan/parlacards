@@ -1,17 +1,1 @@
-{
-    "party": {
-        "acronym": "SMC",
-        "id": 1,
-        "name": "PS Stranka modernega centra"
-    },
-    "results": {
-        "average": {
-            "preprosto": 29.810175399733602,
-            "privzdignjeno": 0.0,
-            "problematicno": 12.0382026461435
-        },
-        "preprosto": 49.525381758150999,
-        "privzdignjeno": 0.0,
-        "problematicno": 12.3813454395378
-    }
-}
+{"party": {"acronym": "SMC", "is_coalition": true, "id": 1, "name": "PS Stranka modernega centra"}, "created_at": "06.11.2016", "created_for": "27.10.2016", "results": {"problematicno": 2.27806759974168, "preprosto": 1.6249590223715396, "privzdignjeno": 0}}

@@ -30,30 +30,33 @@
 <div class="card-container card-halfling <%= className %>">
     <div class="card-header">
         <div class="card-header-border"></div>
-        <h1>Najlažje bi se jim pridružili</h1>
+        <h1>Odstopanje od poslanske skupine</h1>
         <!-- this text is the only thing you touch in .card-header -->
     </div>
-    <div class="card-content">
+    <div class="card-content full">
+        
+        <div class="card-content-front">
+            <ul class="person-list">
+                <% data.results.forEach(function(member) { %>
+                <li class="person">
+                    <a href="<%= urlsData.base + urlsData.personLink.base + urlsData.person[member.person.id].slug + urlsData.personLink.pregled %>" class="portrait column">
+                        <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(member.person.gov_id) %>.png" />
+                    </a>
+                    <div class="column name">
+                        <a href="<%= urlsData.base + urlsData.personLink.base + urlsData.person[member.person.id].slug + urlsData.personLink.pregled %>" class="funblue-light-hover"><%= member.person.name %></a><br>
+                        <% if (member.person.party.acronym.indexOf('NeP') === -1) { %>
+                            <a href="<%= urlsData.base + urlsData.partyLink.base + urlsData.party[member.person.party.id].acronym + urlsData.partyLink.pregled %>" class="funblue-light-hover"><%= member.person.party.acronym %></a>
+                        <% } else { %>
+                            <%= member.person.party.acronym %>
+                        <% } %>
+                    </div>
+                    <div class="column large-number">
+                        <%= member.ratio.toFixed(2) %>
+                    </div>
+                </li>
 
-        <div  id="votingCard">
-
-            <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller">
-
-                <% for (var i = 0; i < data.results.length ; i++) { %>
-
-                <div class="member <%= ((data.results.length-1) == i) ? 'lastel' : ''; %>">
-                    <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results[i].person.gov_id %>.png); background-size: cover;"></div>
-                    <p><%= data.results[i].person.name %>
-
-                        <br/><%= data.results[i].person.party.acronym %></p>
-                    <span><%= data.results[i].ratio.toFixed(0) %> %</span>
-                    <div class="clearfix"></div>
-                </div>
-
-                <% }%>
-
-            </div>
-
+                <% }) %>
+            </ul>
         </div>
 
     </div>

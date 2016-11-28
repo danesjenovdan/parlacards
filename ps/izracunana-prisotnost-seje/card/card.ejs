@@ -36,13 +36,13 @@
             </div>
             <div class="card-content half">
                 <div class="card-content-front">
-                    <div class="me_poslanec clearfix">
-                        <div class="col150">
+                    <div class="me_poslanec clearfix progress_flex">
+                        <div class="column progress_title">
                             <span class="poslanec_title">
                                 <%= data.organization.acronym %>
                             </span>
                         </div>
-                        <div class="col280">
+                        <div class="column progress_bar">
                             <div class="progress smallbar">
                                 <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.sessions.organization_value %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.sessions.organization_value/100*73 %>%;">
                                     <span class="sr-only"><%= data.sessions.organization_value %>% Complete</span>
@@ -55,13 +55,13 @@
                         </div>
                     </div>
 
-                    <div class="other_poslanec clearfix">
-                        <div class="col150">
+                    <div class="other_poslanec clearfix progress_flex">
+                        <div class="column progress_title">
                             <span class="poslanec_title">
                                 Povprečje
                             </span>
                         </div>
-                        <div class="col280">
+                        <div class="column progress_bar">
                             <div class="progress smallbar avgmin">
                                 <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.sessions.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.sessions.average/100*73 %>%;">
                                     <span class="sr-only"><%= data.sessions.average %>% Complete</span>
@@ -74,28 +74,28 @@
                         </div>
                     </div>
 
-                    <div class="other_poslanec clearfix">
-                        <div class="col150">
+                    <div class="other_poslanec clearfix progress_flex">
+                        <div class="column progress_title">
                             <span class="poslanec_title">
                                 Največ
                             </span>
                         </div>
-                        <div class="col280">
-                            <div class="progress smallbar avgminmin">
+                        <div class="column progress_bar">
+                            <div class="progress smallbar avgmin">
                                 <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.sessions.maximum %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.sessions.maximum/100*73 %>%;">
                                     <span class="sr-only"><%= data.sessions.maximum %>% Complete</span>
-                                </div>
-                                <%
+                                    <%
 
-                                if (data.sessions.maxPG) {
-                                    for (var i = 0; i < data.sessions.maxPG.length; i++) {
+                                    if (data.sessions.maxPG) {
+                                        for (var i = 0; i < data.sessions.maxPG.length; i++) {
 
-                                %>
-                                <div data-name="<%= data.sessions.maxPG[i].acronym %>" class="avgminimg avgminimg-party img-circle" style="margin-left: <%= -30 * (data.sessions.maxPG.length - i - 1) %>px;"><%= data.sessions.maxPG[i].acronym %></div>
-                                <%
+                                    %>
+                                    <a href="<%=urlsData.base%><%=urlsData.partyLink.base%><%=urlsData.party[data.sessions.maxPG[i].id].slug%><%=urlsData.partyLink.pregled%>" data-name="<%= data.sessions.maxPG[i].name %>" class="avgminimg avgminimg-party img-circle <%= data.sessions.maxPG[i].acronym.replace(/ /g, '_').toLowerCase() %>-background" style="margin-left: <%= -30 * (data.sessions.maxPG.length - i - 1) %>px; <% if (data.sessions.maxPG[i].acronym === 'DeSUS') { %>line-height: 1em; padding-top: 2px;">De<br>SUS<% } else { %>"><%= data.sessions.maxPG[i].acronym %><% } %></a>
+                                    <%
+                                        }
                                     }
-                                }
-                                %>
+                                    %>
+                                </div>
                                 <div class="progress_number">
                                     <%= Math.round(data.sessions.maximum) %>
                                 </div>

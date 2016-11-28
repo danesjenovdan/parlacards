@@ -65,13 +65,13 @@
 
 
 
-                        <div class="me_poslanec clearfix">
-                            <div class="col150">
+                        <div class="me_poslanec clearfix progress_flex">
+                            <div class="progress_title">
                                 <span class="poslanec_title">
                                     <%= data.party.acronym %>
                                 </span>
                             </div>
-                            <div class="col280">
+                            <div class="progress_bar">
                                 <div class="progress smallbar ">
                                     <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.score/max * 70 %>%;">
                                         <span class="sr-only"><%= data.results.score %>% Complete</span>
@@ -84,13 +84,13 @@
                             </div>
                         </div>
 
-                        <div class="other_poslanec clearfix">
-                            <div class="col150">
+                        <div class="other_poslanec clearfix progress_flex">
+                            <div class="progress_title">
                                 <span class="poslanec_title">
                                     Povprečje
                                 </span>
                             </div>
-                            <div class="col280">
+                            <div class="progress_bar">
                                 <div class="progress smallbar avgmin">
                                     <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average/max* 70 %>%;">
                                         <span class="sr-only"><%= data.results.average %>% Complete</span>
@@ -103,28 +103,28 @@
                             </div>
                         </div>
 
-                        <div class="other_poslanec clearfix">
-                            <div class="col150">
+                        <div class="other_poslanec clearfix progress_flex">
+                            <div class="progress_title">
                                 <span class="poslanec_title">
                                     Največ
                                 </span>
                             </div>
-                            <div class="col280">
-                                <div class="progress smallbar avgminmin">
+                            <div class="progress_bar">
+                                <div class="progress smallbar avgmin">
                                     <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.max.score/max * 70 %>%;">
                                         <span class="sr-only"><%= data.results.max.score %>% Complete</span>
-                                    </div>
-                                    <%
+                                        <%
 
-                                    if (data.results.max.mps) {
-                                        for (var i = 0; i < data.results.max.mps.length; i++) {
+                                        if (data.results.max.parties) {
+                                            for (var i = 0; i < data.results.max.parties.length; i++) {
 
-                                    %>
-                                    <div data-name="<%= data.results.max.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.max.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.max.mps[i]['gov_id'] %>.png');"></div>
-                                    <%
+                                        %>
+                                        <a href="<%=urlsData.base%><%=urlsData.partyLink.base%><%=urlsData.party[data.results.max.parties[i].id].slug%><%=urlsData.partyLink.pregled%>" data-name="<%= data.results.max.parties[i].name %>" class="avgminimg avgminimg-party img-circle <%= data.results.max.parties[i].acronym.replace(/ /g, '_').toLowerCase() %>-background" style="margin-left: <%= -30 * (data.results.max.parties.length - i - 1) %>px; <% if (data.results.max.parties[i].acronym === 'DeSUS') { %>line-height: 1em; padding-top: 2px;">De<br>SUS<% } else { %>"><%= data.results.max.parties[i].acronym %><% } %></a>
+                                        <%
+                                            }
                                         }
-                                    }
-                                    %>
+                                        %>
+                                    </div>
                                     <div class="progress_number">
                                         <%= Math.floor(data.results.max.score); %>
                                     </div>

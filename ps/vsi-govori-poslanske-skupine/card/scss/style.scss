@@ -6,23 +6,20 @@
 #all-speeches {
 
   .speech{
-    //background: #197197;
-
     color: #FFFFFF;
     font-weight:500;
     display: inline-block;
     float: left;
-    padding: 3px 10px;
-    margin: 0 20px 5px 0;
+    padding: 2px 0;
+    margin: 0 10px 10px 0;
+    text-align: center;
 
-
-    -webkit-mask: url(https://cdn.parlameter.si/v1/parlassets/icons/govor.svg) no-repeat 50% 50%;
-    mask: url(https://cdn.parlameter.si/v1/parlassets/icons/govor.svg) no-repeat 50% 50%;
+   -webkit-mask: url(https://cdn.parlameter.si/v1/parlassets/icons/govor_old.svg) no-repeat 50% 50%;
+    mask: url(https://cdn.parlameter.si/v1/parlassets/icons/govor_old.svg);
     -webkit-mask-size: cover;
-    mask-size: cover;
-    background-color: #197197;
+    //mask-size: cover;
 
-    line-height: 17px;
+    background-color: #197197;
 
 
   }
@@ -41,7 +38,7 @@
     span.title{
       font-weight:500;
       font-size: 16px;
-      margin: 20px 0 0 20px;
+      margin: 20px 0 0 0;
       float: left;
     }
 
@@ -54,7 +51,7 @@
       width: 100%;
 
       li {
-        margin: 20px 10px 0px 10px;
+        margin: 0 0 0 0;
         span {
         }
 
@@ -81,6 +78,13 @@
 
     .member{
       border-bottom:none;
+      display: flex;
+      align-items: flex-start;
+      .column {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+      }
     }
     .member .image{
       width: 30px;
@@ -175,3 +179,7 @@
         min-height: 30px;
     }
 }
+
+
+
+

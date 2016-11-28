@@ -1,4 +1,8 @@
 (function(){
+  function capitalise(string) {
+    return string[0].toUpperCase() + string.substring(1)
+  }
+
   new Vue({
     el: '#glasovanja-' + psGlasovanjaRandomId,
     components: ['SearchDropdown'],
@@ -35,6 +39,19 @@
               }
               return true
             })
+            .map(function(ballot) {
+              var ballotClone = JSON.parse(JSON.stringify(ballot));
+              if (ballot.option === 'ni') {
+                ballotClone.label = 'NISO glasovali o';
+              } else if (ballot.option === 'za'){
+                ballotClone.label = 'Glasovali ZA';
+              } else if (ballot.option === 'proti'){
+                ballotClone.label = 'Glasovali PROTI';
+              } else if (ballot.option === 'kvorum'){
+                ballotClone.label = 'VZDRŽALI so se glasovanja o';
+              }
+              return ballotClone;
+            })
 
             return newObject
           })
@@ -44,13 +61,19 @@
     data: function() {
       return {
         allTags: psVoteData.all_tags.map(function(tag) {
-          return { id: tag, label: tag, selected: false }
+          var smalltag = tag;
+          if (smalltag.length > 44) {
+            smalltag = smalltag.substring(0, 44) + '...'
+          }
+          return { id: tag, label: smalltag, selected: false }
         }),
         votingDays: psVoteData.results
       }
     }
   })
 })();
+
+progressbarTooltip.init(className);
 
 addCardFlip();
 makeEmbedSwitch();

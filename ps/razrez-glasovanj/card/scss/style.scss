@@ -1,58 +1,10 @@
-.poslanec_title {
-    font-weight: 300 !important;
-    line-height: 30px;
-    height: 30px;
-    padding-right: 10px;
-}
-
-.term, .frequency {
-    display: block;
-    float: left;
-
-    height: 40px;
-}
-.term span, .frequency div span {
-    line-height: 40px;
-}
-.hugebar2 {
-    height: 40px !important;
-}
-.progress-bar, .progress_number {
-    // display: block;
-    float: left;
-}
-
-.tfidf-bar {
-    height: 40px;
-    margin-bottom: 10px;
-}
-.progress-bar {
-    border-bottom-width: 0;
-}
-
-.avgminimg {
-    width: 30px;
-    height: 30px;
-
-    background-position: center;
-    background-size: cover;
-
-    border: 2px solid #ffffff;
-}
-
-.me_poslanec .progress_number {
-    line-height: 40px;
-}
-
-@media (max-width: 767px) {
-    .nav.nav-tabs li a {
-        font-size: 11px;
-    }
-}
-
 .avgminimg-party {
-    background-color: #f0f0f0;
     line-height: 27px;
-    font-size: 9px;
-    text-align: center;
+    cursor: pointer;
+    font-size: 11px;
+    color: #ffffff;
+    
+    &:hover {
+        text-decoration: none;
+    }
 }
