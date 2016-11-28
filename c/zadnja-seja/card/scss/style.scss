@@ -102,7 +102,7 @@
 
 #votingCard{
   max-height: 350px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 #votingCardHorizontal div.member {
@@ -230,7 +230,7 @@
   }
 }
 .seja_anchor:hover {
-  color: #525252; 
+  color: #525252;
 }
 
 .pspris-clearfix {

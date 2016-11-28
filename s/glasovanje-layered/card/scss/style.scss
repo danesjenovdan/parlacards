@@ -176,7 +176,7 @@ a.document:hover {
 .people-ballots {
     height: 620px;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .vote-icon {

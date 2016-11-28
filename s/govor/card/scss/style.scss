@@ -167,7 +167,7 @@ $medium-gray: #d0d0d0;
       @extend %text-styling;
       margin: $offset-top-bottom 0;
       max-height: calc(100% - #{$heading-height + 2 * $offset-top-bottom});
-      overflow-y: scroll;
+      overflow-y: auto;
       padding: 0 48px;
     }
 
