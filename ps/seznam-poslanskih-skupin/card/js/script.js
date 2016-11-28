@@ -1,3 +1,3 @@
-(function() {
-  
-})();
+makeEmbedSwitch();
+activateCopyButton();
+addCardRippling();
