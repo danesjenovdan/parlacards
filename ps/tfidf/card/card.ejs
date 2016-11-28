@@ -29,7 +29,7 @@
     <div class="card-container card-halfling <%= className %>">
         <div class="card-header">
             <div class="card-header-border"></div>
-            <h1>Besede, ki <% if (data.party.gender === 'm') { %>ga delajo posebnega<% } else { %>jo delajo posebno<% } %></h1>
+            <h1>Besede, ki jih delajo posebne</h1>
             <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content full">
@@ -92,7 +92,7 @@
                             Analizo izvajamo po statistiki <a href="https://en.wikipedia.org/wiki/Tf-idf">tf-idf</a>.
                         </p>
                         <p class="info-text">
-                            Korpus predstavljajo vsi govori, dokument pa vsi <%= vocab['poslanca3'][data.party.gender] %> govori.
+                            Korpus predstavljajo vsi govori, dokument pa vsi govori poslanske skupine.
                         </p>
                     </div>
                 </div>
