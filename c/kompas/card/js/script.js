@@ -699,8 +699,6 @@ function addSearchPerson(datum) {
     poslancisearch.initialize(true);
 }
 
-addCardRippling();
-
 if (kompasState.people.length > 0) {
     for (person_i in kompasState.people) {
         showPersonPicture(svg.select('#_' + kompasState.people[person_i].id).datum());
@@ -719,5 +717,9 @@ if (kompasState.parties.length > 0) {
         }
     }
 }
+
+makeEmbedSwitch();
+activateCopyButton();
+addCardRippling();
 
 })();

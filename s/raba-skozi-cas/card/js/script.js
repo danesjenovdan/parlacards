@@ -636,7 +636,7 @@ function createLineChart(data) {
     //     });
 }
 
-createSmallChart(smalldata);
+createLineChart(bigdata);
 
 $('#smalldata' + random_id).on('click', function() {
     createSmallChart(smalldata);
@@ -644,3 +644,7 @@ $('#smalldata' + random_id).on('click', function() {
 $('#bigdata' + random_id).on('click', function() {
     createLineChart(bigdata);
 });
+
+makeEmbedSwitch();
+activateCopyButton();
+addCardRippling();
