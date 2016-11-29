@@ -1,3 +1,7 @@
+@import 'parlassets/scss/colors';
+@import 'parlassets/scss/helper';
+@import 'parlassets/scss/breakpoints';
+
 text {
   font: 12px sans-serif;
   text-anchor: middle;
@@ -56,8 +60,11 @@ a.document:hover {
 
     height: 48px;
 
+    display: flex;
+    flex: 1;
+
     .option {
-        display: inline-block;
+        display: flex;
         margin-right: 20px;
         cursor: pointer;
 
@@ -65,8 +72,12 @@ a.document:hover {
             display: inline-block;
             background-color: #000000;
             width: 10px;
-            height: 40px;
+            height: 100%;
             margin-right: 10px;
+
+            @include respond-to(mobile) {
+                margin-right: 5px;
+            }
         }
         .option-marker-za {
             background-color: #00628C;
@@ -90,44 +101,65 @@ a.document:hover {
             line-height: 30px;
             padding: 0;
             margin: 0;
+
+            @include respond-to(mobile) {
+                font-size: 20px;
+            }
         }
         .option-option {
             font-size: 16px;
             color: #515151;
             line-height: 16px;
+
+            @include respond-to(mobile) {
+                font-size: 12px;
+            }
         }
     }
 }
 
-.status-container {
-    display: block;
-    float: left;
+.right-container {
 
-    height: 48px;
-
-    font-size: 16px;
-
-    margin-right: 20px;
-
-    .status {
-        display: inline-block;
-        line-height: 48px;
-
-        font-weight: 700;
+    @include respond-to(mobile) {
+        margin-top: 15px;
+        justify-content: center;
     }
 
-    i {
-        font-size: 14px;
-        margin-left: 5px;
-    }
+    .status-container {
+        display: block;
+        position: relative;
 
-    .glyphicon-remove {
-        color: #FF5E41;
-    }
-    .glyphicon-ok {
-        color: #7AE7BF;
-    }
+        height: 48px;
 
+        font-size: 16px;
+
+        margin-right: 20px;
+
+        @include respond-to(mobile) {
+            margin-right: 0;
+            margin: auto;
+        }
+
+        .status {
+            display: inline-block;
+            line-height: 48px;
+
+            font-weight: 700;
+        }
+
+        i {
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        .glyphicon-remove {
+            color: #FF5E41;
+        }
+        .glyphicon-ok {
+            color: #7AE7BF;
+        }
+
+    }
 }
 
 .required-majority {
@@ -139,17 +171,16 @@ a.document:hover {
 
 .member {
     overflow: hidden;
+    @extend %flex;
 
-    p.name, p.party {
-        margin-top: 30px;
-    }
+    p {
+        font-size: 18px;
+        margin: 0;
 
-    p.party {
-        float: right;
+        @include respond-to(mobile) {
+            font-size: 14px;
+        }
     }
-}
-.member:last-of-type {
-    border-bottom: none;
 }
 
 .label-party {
@@ -168,22 +199,28 @@ a.document:hover {
     transition: opacity 0.3 ease-out;
 }
 
-&.fix-600 {
+.card-content {
     height: 600px !important;
     overflow: hidden;
 }
 
 .people-ballots {
-    height: 620px;
+    height: 507px;
     overflow-x: hidden;
     overflow-y: auto;
+
+    @include respond-to(mobile) {
+        height: 444px;
+    }
 }
 
 .vote-icon {
     display: flex;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
 
     &.za {
         background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/za.svg');
@@ -197,8 +234,4 @@ a.document:hover {
     &.vzdrzan {
         background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/vzdrzan.svg');
     }
-}
-
-.member p {
-    font-size: 18px;
 }

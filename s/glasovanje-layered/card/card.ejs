@@ -34,141 +34,190 @@
             <h1><%= data.name %></h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
-
-            <!--<div class="row">
-                <div class="col-xs-12">
-                    <span class="slab">Dokumenti: </span><a href="https://parlameter.si" target="_blank" class="document">pdf</a>
-                </div>
-            </div>-->
-
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="greybox">
-                        <div class="legend-container">
-                            <div class="option za" data-option="for">
-                                <div class="option-marker option-marker-za"></div>
-                                <div class="option-text">
-                                    <div class="option-number">
-                                        <%= data.all.for.total_votes %>
-                                    </div>
-                                    <div class="option-option">
-                                        ZA
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="option proti" data-option="against">
-                                <div class="option-marker option-marker-proti"></div>
-                                <div class="option-text">
-                                    <div class="option-number">
-                                        <%= data.all.against.total_votes %>
-                                    </div>
-                                    <div class="option-option">
-                                        PROTI
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="option vzdrzani" data-option="kvorum">
-                                <div class="option-marker option-marker-vzdrzani"></div>
-                                <div class="option-text">
-                                    <div class="option-number">
-                                        <%= data.all.kvorum.total_votes %>
-                                    </div>
-                                    <div class="option-option">
-                                        VZDRŽANI
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="option niso" data-option="not_present">
-                                <div class="option-marker option-marker-niso"></div>
-                                <div class="option-text">
-                                    <div class="option-number">
-                                        <%= data.all.not_present.total_votes %>
-                                    </div>
-                                    <div class="option-option">
-                                        NISO
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right-container">
-                            <div class="status-container">
-                                <span class="slab">Status predloga: </span><div class="status"><span class="status-text"><% if (data.result) { %> SPREJET <% } else { %> ZAVRNJEN <% } %></span><i class="status-icon glyphicon <% if (data.result) { %> glyphicon-ok <% } else { %> glyphicon-remove <% } %>"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="hidden-xs col-sm-6">
-                    <div class="layeredchart"></div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <div class="people-ballots">
-                        <%
-                        var second_level_data = [];
-                        for (option in data.all) {
-                            for (party in data.all[option]['breakdown']) {
-
-                                var newdict = data.all[option]['breakdown'][party];
-                                newdict.option = option;
-
-                                second_level_data.push(newdict);
-
-                            }
-                        }
-                        %>
-                        <script>var trajlala = <%- JSON.stringify(second_level_data); %>;</script>
-                        <% for (group in second_level_data) { %>
-                            <div class="mpgroup <%= second_level_data[group]['option']%> <%= second_level_data[group]['pg']['acronym'].replace(' ', '_') %>">
-                                <% for (mp in second_level_data[group]['mps']) { %>
-                                    <div class="member">
-                                        <div class="metadata">
-                                            <div class="image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= second_level_data[group]['mps'][mp]['gov_id'] %>.png); background-size: cover;"></div>
-                                            <p><%= second_level_data[group]['mps'][mp]['name'] %>
-                                                <br/><%= second_level_data[group]['mps'][mp]['party']['acronym'] %></p>
-                                            <div class="clearfix"></div>
+            <div class="card-content-front">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="greybox">
+                            <div class="legend-container">
+                                <div class="option za" data-option="for">
+                                    <div class="option-marker option-marker-za"></div>
+                                    <div class="option-text">
+                                        <div class="option-number">
+                                            <%= data.all.for.total_votes %>
                                         </div>
-                                        <%
-                                            var option;
-                                            switch (second_level_data[group]['option']){
-                                                case 'for':
-                                                    option = 'za';
-                                                    break;
-                                                case 'against':
-                                                    option = 'proti';
-                                                    break;
-                                                case 'abstain':
-                                                    option = 'vzdrzan';
-                                                    break;
-                                                case 'not_present':
-                                                    option = 'ni';
-                                                    break;
-                                            }
-                                        %>
-                                        <div class="vote-icon <%= option %>"></div>
+                                        <div class="option-option">
+                                            ZA
+                                        </div>
                                     </div>
-                                <% } %>
+                                </div>
+
+                                <div class="option proti" data-option="against">
+                                    <div class="option-marker option-marker-proti"></div>
+                                    <div class="option-text">
+                                        <div class="option-number">
+                                            <%= data.all.against.total_votes %>
+                                        </div>
+                                        <div class="option-option">
+                                            PROTI
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="option vzdrzani" data-option="kvorum">
+                                    <div class="option-marker option-marker-vzdrzani"></div>
+                                    <div class="option-text">
+                                        <div class="option-number">
+                                            <%= data.all.kvorum.total_votes %>
+                                        </div>
+                                        <div class="option-option">
+                                            VZDRŽANI
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="option niso" data-option="not_present">
+                                    <div class="option-marker option-marker-niso"></div>
+                                    <div class="option-text">
+                                        <div class="option-number">
+                                            <%= data.all.not_present.total_votes %>
+                                        </div>
+                                        <div class="option-option">
+                                            NISO
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        <% } %>
+                            <div class="right-container">
+                                <div class="status-container">
+                                    <span class="slab">Status predloga:&nbsp;</span><div class="status"><span class="status-text"><% if (data.result) { %> SPREJET <% } else { %> ZAVRNJEN <% } %></span><i class="status-icon glyphicon <% if (data.result) { %> glyphicon-ok <% } else { %> glyphicon-remove <% } %>"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="hidden-xs col-sm-6">
+                        <div class="layeredchart"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="people-ballots">
+                            <%
+                            var second_level_data = [];
+                            for (option in data.all) {
+                                for (party in data.all[option]['breakdown']) {
+
+                                    var newdict = data.all[option]['breakdown'][party];
+                                    newdict.option = option;
+
+                                    second_level_data.push(newdict);
+
+                                }
+                            }
+                            %>
+                            <% for (group in second_level_data) { %>
+                                <div class="mpgroup <%= second_level_data[group]['option']%> <%= second_level_data[group]['pg']['acronym'].replace(' ', '_') %>">
+                                    <ul class="person-list">
+                                    <% for (mp in second_level_data[group]['mps']) { %>
+                                        <li class="person">
+                                            <a href="" class="portrait column">
+                                                <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= second_level_data[group]['mps'][mp]['gov_id'] %>.png">
+                                            </a>
+                                            <div class="column name">
+                                                <a href="" class="funblue-light-hover"><%= second_level_data[group]['mps'][mp]['name'] %></a>
+                                                <br/>
+                                                <a href="" class="funblue-light-hover"><%= second_level_data[group]['mps'][mp]['party']['acronym'] %></a>
+                                            </div>
+                                            <%
+                                                var option;
+                                                switch (second_level_data[group]['option']){
+                                                    case 'for':
+                                                        option = 'za';
+                                                        break;
+                                                    case 'against':
+                                                        option = 'proti';
+                                                        break;
+                                                    case 'kvorum':
+                                                        option = 'vzdrzan';
+                                                        break;
+                                                    case 'not_present':
+                                                        option = 'ni';
+                                                        break;
+                                                }
+                                            %>
+                                            <div class="vote-icon <%= option %> column"></div>
+                                        </li>
+                                    <% } %>
+                                </div>
+                            <% } %>
+                        </div>
                     </div>
                 </div>
             </div>
-
+            <div class="card-content-info hidden">
+                <div class="card-back-content">
+                    <div class="scroller" id="tvojamtka">
+                        <p class="info-text">
+                            Glasovanja najprej združimo glede na vrednost glasovnice (ZA, PROTI, VZDRŽAN/-A, NI GLASOVAL/-A), nato pa znotraj teh kategorij poslance razdelimo še po poslanskih skupinah. Rezultat glasovanja izrišemo v interaktivnem krožnem diagramu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content-embed hidden">
+                <div class="card-back-content">
+                    <div class="embed-content">
+                        <div class="embed-divider"></div>
+                        <div class="embed-switch-container">
+                            <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                            <div class="embed-switch-big-box">
+                                <div class="embed-switch-box">
+                                    <div class="embed-switch">
+                                        <div class="embed-switches">
+                                            <div class="leftswitch">
+                                                DA
+                                            </div>
+                                            <div class="rightswitch">
+                                                NE
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="embed-switch-ball"></div>
+                            </div>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-script">
+                            <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?embed=true&altHeader=true"></textarea>
+                            <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-export">
+                            <div class="embed-label">Izvozi kartico kot sliko <button class="btn-parlameter btn-blue btn-margin-left">PRENESI</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content-share hidden">
+                <div class="card-back-content">
+                    <div class="share-content">
+                        <label for="share-url">Neposredna povezava do kartice</label>
+                        <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?frame=true&altHeader=true"/>
+                        <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                    </div>
+                </div>
+            </div>
+            <!-- delete this placeholder, this is the content of your card -->
         </div>
         <div class="card-footer">
                 <div class="card-logo hidden">
-                     <a href="https://skoraj.parlameter.si/">
-                         <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
-                     </a>
-                 </div>
+                        <a href="https://skoraj.parlameter.si/">
+                            <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+                        </a>
+                    </div>
 
-            <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed"></div>
-            <div class="card-circle-button card-info">i</div>
+            <div class="card-circle-button card-share" data-back="share"></div>
+            <div class="card-circle-button card-embed" data-back="embed"></div>
+            <div class="card-circle-button card-info" data-back="info">i</div>
         </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->

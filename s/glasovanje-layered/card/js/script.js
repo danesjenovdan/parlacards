@@ -109,7 +109,7 @@ function drawPie(data) {
                     .duration(300)
                     .style('opacity', 0);
 
-                if (d3.selectAll('.active')[0].length === 0) { // no selection is active
+                if (d3.selectAll('path.active')[0].length === 0) { // no selection is active
                     // show labels
                     d3.selectAll('.label-option')
                         .transition()
@@ -511,9 +511,9 @@ function drawPartyLabels(data) {
 // initial setup
 var margin = {
     top: 50,
-    right: 50,
+    right: 80,
     bottom: 50,
-    left: 50
+    left: 80
 };
 var width = 400 - margin.left - margin.right;
 var height = 400 - margin.top - margin.bottom;
@@ -640,4 +640,7 @@ $('.option').on('click', function() {
     console.log($(this).data('option'));
     $('.mpgroup.' + $(this).data('option')).removeClass('hidden');
 });
+
+makeEmbedSwitch();
+activateCopyButton();
 addCardRippling();
