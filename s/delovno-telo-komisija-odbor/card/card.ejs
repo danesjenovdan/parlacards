@@ -35,230 +35,281 @@
             <div class="card-container card-halfling <%= className %>">
                 <div class="card-header">
                     <div class="card-header-border"></div>
-                    <h1>Delovno telo / komisija / odbor</h1>
+                    <h1><%= data.organization.name %></h1>
                     <!-- this text is the only thing you touch in .card-header -->
                 </div>
                 <div class="card-content">
+                    <div class="card-content-front">
+                        <div class="session-container">
 
-                    <div class="session-container">
-
-                        <div class="row">
+                            <div class="row">
 
 
-                            <div class="paneltab border-right col-md-4">
-                                <h2 class="upcase">Osnovne informacije</h2>
+                                <div class="paneltab border-right col-md-4">
+                                    <h2 class="upcase">Osnovne informacije</h2>
 
-                                <%       %>
+                                    <%       %>
 
-                                <div class="dt-member row verticalmember ">
-                                    <div class="col-xs-3 ">
-                                        <div class="image respo">
+                                    <div class="dt-member row verticalmember ">
+                                        <div class="col-xs-3 ">
+                                            <div class="image respo">
 
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.president.id].slug%><%=urlsData.personLink.pregled%>">
-                                            <img class="media-object img-circle img-responsive"
-                                                 src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.president.gov_id %>.png"
-                                                 alt=""/>
-                                                </a>
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.president.id].slug%><%=urlsData.personLink.pregled%>">
+                                                <img class="media-object img-circle img-responsive"
+                                                    src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.president.gov_id %>.png"
+                                                    alt=""/>
+                                                    </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-8 member_data">
-                                        <h3>
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.president.id].slug%><%=urlsData.personLink.pregled%>">
-                                                <%= data.info.president.name %>
-                                            </a>
-                                        </h3>
-                                        <h4>
-                                            <%
-                                            var title = "Predsednik";
-                                            if (data.info.president.gender == "f") {
-                                                title = "Predsednica";
-                                            } else {
-
-                                            } %>
-                                            <%= title %>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <%      %>
-
-                                <% for(item in data.info.vice_president){ %>
-
-                                <div class="dt-member row verticalmember">
-                                    <div class="col-xs-3">
-                                        <div class="image respo">
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.vice_president[item].id].slug%><%=urlsData.personLink.pregled%>">
-                                            <img class="media-object img-circle img-responsive"
-                                                 src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.vice_president[item].gov_id %>.png"
-                                                 alt=""/>
+                                        <div class="col-xs-8 member_data">
+                                            <h3>
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.president.id].slug%><%=urlsData.personLink.pregled%>">
+                                                    <%= data.info.president.name %>
                                                 </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-8 member_data">
-                                        <h3>
-                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.vice_president[item].id].slug%><%=urlsData.personLink.pregled%>">
-                                            <%= data.info.vice_president[item].name %>
-                                                </a>
-                                        </h3>
-                                        <h4>
-                                            <%
-                                                var title = "Podpredsednik";
-                                                if (data.info.vice_president[item].gender == "f") {
-                                                    title = "Podpredsednica";
+                                            </h3>
+                                            <h4>
+                                                <%
+                                                var title = "Predsednik";
+                                                if (data.info.president.gender == "f") {
+                                                    title = "Predsednica";
                                                 } else {
 
                                                 } %>
-                                            <%= title %></h4>
+                                                <%= title %>
+                                            </h4>
+                                        </div>
                                     </div>
-                                </div>
-                                <% } %>
+                                    <%      %>
 
-                                <div class="dt-member clearfix">
-                                    <h2>Člani in članice</h2>
-                                    <div class="session_other_members">
-                                        <% for(item in data.info.members){ %>
-                                        <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.members[item].id].slug%><%=urlsData.personLink.pregled%>"
-                                           title="<%= data.info.members[item].name %>">
-                                            <img class="img-circle"
-                                                 src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.members[item].gov_id %>.png"
-                                                 alt="<%= data.info.members[item].name %>"/>
-                                        </a>
-                                        <% } %>
-                                    </div>
-                                </div>
+                                    <% for(item in data.info.vice_president){ %>
 
-                                <% if(data.info.viceMember.length > 0){
-                                %>
-                                <div class="dt-member clearfix">
-                                    <h2>Nadomestni člani in članice</h2>
-                                    <div class="session_other_members">
-                                        <% for(item in data.info.viceMember){ %>
-                                        <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.viceMember[item].id].slug%><%=urlsData.personLink.pregled%>"
-                                           title="<%= data.info.viceMember[item].name %>">
-                                            <img class="img-circle"
-                                                 src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.viceMember[item].gov_id %>.png"
-                                                 alt="<%= data.info.viceMember[item].name %>"/>
-                                        </a>
-                                        <% } %>
-                                    </div>
-                                </div>
-                                <% } %>
-
-                                <% if(typeof data.info.sekretarka !== "undefined"){
-                                %>
-                                <div class="clearfix">
-                                    <h2>Sektretarke</h2>
-                                    <div class="session_other_members">
-
-                                        <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.sekretarka.id].slug%><%=urlsData.personLink.pregled%>"
-                                           title="<%= data.info.sekretarka.name %>">
-
-                                            <%= data.info.sekretarka.name %>
-                                        </a>
-                                    </div>
-                                </div>
-                                <% } %>
-
-                            </div>
-
-                            <div class="paneltab border-right col-md-4">
-                                <h2 class="upcase">Razmerje med koalicijo in opozicijo</h2>
-
-                                <div class="progress hugebar">
-                                    <div class="progress-bar funblue" style="width: <%= data.ratio.coalition %>%">
-                                        <div class="cptin">K</div>
-                                        <span class="sr-only"><%= data.ratio.coalition %>% Complete (success)</span>
-                                    </div>
-                                    <div class="progress-bar red" style="width: <%= data.ratio.opposition %>%">
-                                        <div class="cptin">O</div>
-                                        <span class="sr-only"><%= data.ratio.opposition %>% Complete (danger)</span>
-                                    </div>
-                                </div>
-
-
-                                <h2>Število sedežev</h2>
-                                <%
-                                var allSeats = 0;
-                                for (item in data.seats_per_pg) {
-                                    allSeats += data.seats_per_pg[item].seats;
-                                }
-
-                                        for(item in data.seats_per_pg){
-                                    var opocoaColor = "funblue";
-                                    if (data.seats_per_pg[item].coalition == "opposition") {
-                                        opocoaColor = "red";
-                                    }
-                                    var index = 0;
-                                    var indexInPercent = (data.seats_per_pg[item].seats / allSeats) * 100;
-                                %>
-                                <div class="other_poslanec clearfix">
-                                    <div class="col150">
-                                <span class="poslanec_title">
-                                        <%= data.seats_per_pg[item].party.acronym %>
-                                    </span>
-                                    </div>
-                                    <div class="col280">
-                                        <div class="progress smallbar avgmin">
-                                            <div style="width: <%= indexInPercent %>%;" aria-valuemax="100"
-                                                 aria-valuemin="0" aria-valuenow="<%= indexInPercent %>"
-                                                 role="progressbar" class="progress-bar <%= opocoaColor %>">
-                                                <span class="sr-only"><%= indexInPercent %>% Complete</span>
+                                    <div class="dt-member row verticalmember">
+                                        <div class="col-xs-3">
+                                            <div class="image respo">
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.vice_president[item].id].slug%><%=urlsData.personLink.pregled%>">
+                                                <img class="media-object img-circle img-responsive"
+                                                    src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.vice_president[item].gov_id %>.png"
+                                                    alt=""/>
+                                                    </a>
                                             </div>
-                                            <div class="progress_number">
-                                                <%= data.seats_per_pg[item].seats %>
+                                        </div>
+                                        <div class="col-xs-8 member_data">
+                                            <h3>
+                                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.vice_president[item].id].slug%><%=urlsData.personLink.pregled%>">
+                                                <%= data.info.vice_president[item].name %>
+                                                    </a>
+                                            </h3>
+                                            <h4>
+                                                <%
+                                                    var title = "Podpredsednik";
+                                                    if (data.info.vice_president[item].gender == "f") {
+                                                        title = "Podpredsednica";
+                                                    } else {
+
+                                                    } %>
+                                                <%= title %></h4>
+                                        </div>
+                                    </div>
+                                    <% } %>
+
+                                    <div class="dt-member clearfix">
+                                        <h2>Člani in članice</h2>
+                                        <div class="session_other_members">
+                                            <% for(item in data.info.members){ %>
+                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.members[item].id].slug%><%=urlsData.personLink.pregled%>"
+                                            title="<%= data.info.members[item].name %>">
+                                                <img class="img-circle tooltipme" data-name="<%= data.info.members[item].name %>"
+                                                    src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.members[item].gov_id %>.png"
+                                                    alt="<%= data.info.members[item].name %>"/>
+                                            </a>
+                                            <% } %>
+                                        </div>
+                                    </div>
+
+                                    <% if(data.info.viceMember.length > 0){
+                                    %>
+                                    <div class="dt-member clearfix">
+                                        <h2>Nadomestni člani in članice</h2>
+                                        <div class="session_other_members">
+                                            <% for(item in data.info.viceMember){ %>
+                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.viceMember[item].id].slug%><%=urlsData.personLink.pregled%>"
+                                            title="<%= data.info.viceMember[item].name %>">
+                                                <img class="img-circle tooltipme" data-name="<%= data.info.viceMember[item].name %>"
+                                                    src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.info.viceMember[item].gov_id %>.png"
+                                                    alt="<%= data.info.viceMember[item].name %>"/>
+                                            </a>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                    <% } %>
+
+                                    <% if(typeof data.info.sekretarka !== "undefined"){
+                                    %>
+                                    <div class="clearfix">
+                                        <h2>Sektretarke</h2>
+                                        <div class="session_other_members">
+
+                                            <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.info.sekretarka.id].slug%><%=urlsData.personLink.pregled%>"
+                                            title="<%= data.info.sekretarka.name %>">
+
+                                                <%= data.info.sekretarka.name %>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <% } %>
+
+                                </div>
+
+                                <div class="paneltab border-right col-md-4">
+                                    <h2 class="upcase">Razmerje med koalicijo in opozicijo</h2>
+
+                                    <div class="progress hugebar">
+                                        <div class="progress-bar funblue" style="width: <%= data.ratio.coalition %>%">
+                                            <div class="cptin">K</div>
+                                            <span class="sr-only"><%= data.ratio.coalition %>% Complete (success)</span>
+                                        </div>
+                                        <div class="progress-bar red" style="width: <%= data.ratio.opposition %>%">
+                                            <div class="cptin">O</div>
+                                            <span class="sr-only"><%= data.ratio.opposition %>% Complete (danger)</span>
+                                        </div>
+                                    </div>
+
+
+                                    <h2>Število sedežev</h2>
+                                    <%
+                                    var allSeats = 0;
+                                    for (item in data.seats_per_pg) {
+                                        allSeats += data.seats_per_pg[item].seats;
+                                    }
+
+                                            for(item in data.seats_per_pg){
+                                        var opocoaColor = "funblue";
+                                        if (data.seats_per_pg[item].coalition == "opposition") {
+                                            opocoaColor = "red";
+                                        }
+                                        var index = 0;
+                                        var indexInPercent = (data.seats_per_pg[item].seats / allSeats) * 100;
+                                    %>
+                                    <div class="other_poslanec clearfix">
+                                        <div class="col150">
+                                    <span class="poslanec_title">
+                                            <%= data.seats_per_pg[item].party.acronym %>
+                                        </span>
+                                        </div>
+                                        <div class="col280">
+                                            <div class="progress smallbar avgmin">
+                                                <div style="width: <%= indexInPercent %>%;" aria-valuemax="100"
+                                                    aria-valuemin="0" aria-valuenow="<%= indexInPercent %>"
+                                                    role="progressbar" class="progress-bar <%= opocoaColor %>">
+                                                    <span class="sr-only"><%= indexInPercent %>% Complete</span>
+                                                </div>
+                                                <div class="progress_number">
+                                                    <%= data.seats_per_pg[item].seats %>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <% } %>
+
                                 </div>
-                                <% } %>
 
-                            </div>
+                                <div class="paneltab col-md-4">
+                                    <h2 class="upcase">Seje</h2>
+                                    <div class="sessionsGetSessionByDate">
+                                        <div class="scroller" id="dtko-sessions-<%=Math.floor(Math.random() * 10000); %>">
+                                        <ul class="tab-content">
+                                            <% if (data.sessions.length === 0) { %>
+                                                <style>.sessionsGetSessionByDate .scroller .tab-content {
+                                                    text-align: center;
+                                                }</style>
+                                                <b><i>Za to delovno telo ni pregledanih sej.</i></b>
+                                            <% } %>
+                                            <% for(item in data.sessions){ %>
+                                            <li  class="clearfix">
 
-                            <div class="paneltab col-md-4">
-                                <h2 class="upcase">Seje</h2>
-                                <div class="sessionsGetSessionByDate">
-                                    <div class="scroller" id="dtko-sessions-<%=Math.floor(Math.random() * 10000); %>">
-                                    <ul class="tab-content">
-                                        <% if (data.sessions.length === 0) { %>
-                                            <style>.sessionsGetSessionByDate .scroller .tab-content {
-                                                text-align: center;
-                                            }</style>
-                                            <b><i>Za to delovno telo ni pregledanih sej.</i></b>
-                                        <% } %>
-                                        <% for(item in data.sessions){ %>
-                                        <li  class="clearfix">
+                                                <span class="date col-sm-3"><%= data.sessions[item].date %></span>
+                                                <p class=" col-sm-9">
+                                                    <a href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%= data.sessions[item].id %>"><%= data.sessions[item].name %></a>
+                                                </p>
 
-                                            <span class="date col-sm-3"><%= data.sessions[item].date %></span>
-                                            <p class=" col-sm-9">
-                                                <a href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%= data.sessions[item].id %>"><%= data.sessions[item].name %></a>
-                                            </p>
-
-                                        </li>
-                                        <% } %>
-                                    </ul>
+                                            </li>
+                                            <% } %>
+                                        </ul>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
 
+
+                        </div>
+                    </div>
+                    <div class="card-content-info hidden">
+                        <div class="card-back-content">
+                            <div class="scroller" id="tvojamtka">
+                                <p class="info-text">
+                                    Člane delovnega telesa in njihove vloge prepišemo s <a href="http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/DelovnaTelesa">spletnega mesta DZ</a>. Razmerje med koalicijskimi in opozicijskimi poslanci izrišemo na naloženem paličnem grafikonu, na razvrstilnem paličnem grafikonu pa prikažemo število članov odbora v posamezni poslanski skupini. Kartica vsebuje tudi povezave do vseh sej tega delovnega telesa.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content-embed hidden">
+                        <div class="card-back-content">
+                            <div class="embed-content">
+                                <div class="embed-divider"></div>
+                                <div class="embed-switch-container">
+                                    <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                                    <div class="embed-switch-big-box">
+                                        <div class="embed-switch-box">
+                                            <div class="embed-switch">
+                                                <div class="embed-switches">
+                                                    <div class="leftswitch">
+                                                        DA
+                                                    </div>
+                                                    <div class="rightswitch">
+                                                        NE
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="embed-switch-ball"></div>
+                                    </div>
+                                </div>
+                                <div class="embed-divider"></div>
+                                <div class="embed-script">
+                                    <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?embed=true&altHeader=true"></textarea>
+                                    <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                                </div>
+                                <div class="embed-divider"></div>
+                                <div class="embed-export">
+                                    <div class="embed-label">Izvozi kartico kot sliko <button class="btn-parlameter btn-blue btn-margin-left">PRENESI</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content-share hidden">
+                        <div class="card-back-content">
+                            <div class="share-content">
+                                <label for="share-url">Neposredna povezava do kartice</label>
+                                <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?frame=true&altHeader=true"/>
+                                <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                            </div>
+                        </div>
+                    </div>
+                <!-- delete this placeholder, this is the content of your card -->
+                </div>
+                <div class="card-footer">
+                        <div class="card-logo hidden">
+                            <a href="https://skoraj.parlameter.si/">
+                                <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+                            </a>
                         </div>
 
-
-                    </div>
-                </div>
-
-                <div class="card-footer">
-                <div class="card-logo hidden">
-                     <a href="https://skoraj.parlameter.si/">
-                         <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
-                     </a>
-                 </div>
-
-                    <div class="card-circle-button card-share"></div>
-                    <div class="card-circle-button card-embed"></div>
-                    <div class="card-circle-button card-info">i</div>
+                    <div class="card-circle-button card-share" data-back="share"></div>
+                    <div class="card-circle-button card-embed" data-back="embed"></div>
+                    <div class="card-circle-button card-info" data-back="info">i</div>
                 </div>
             </div>
-
-
         </div><!-- removeme -->
     </div><!-- removeme -->
 </div><!-- removeme -->
