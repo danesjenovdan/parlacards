@@ -1,5 +1,4 @@
 .poslanec_title {
-    font-weight: 300 !important;
     line-height: 30px;
     height: 30px;
     padding-right: 10px;
@@ -8,29 +7,24 @@
 .term, .frequency {
     display: block;
     float: left;
-
-    height: 40px;
+    height: 30px;
 }
 .term span, .frequency div span {
-    line-height: 40px;
-}
-.hugebar2 {
-    height: 38px !important;
+    line-height: 30px;
 }
 .progress-bar, .progress_number {
-    // display: block;
     float: left;
 }
 
 .tfidf-bar {
-    height: 38px;
-    margin-bottom: 10px;
+    height: 30px;
+    margin-bottom: 8px;
 }
 .progress-bar {
     border-bottom-width: 0;
 }
 .progress_number {
-    line-height: 40px !important;
+    line-height: 30px !important;
 }
 
 
