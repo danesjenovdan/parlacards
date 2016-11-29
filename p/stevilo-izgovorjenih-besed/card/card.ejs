@@ -121,7 +121,10 @@
                                             for (var i = 0; i < data.results.max.mps.length; i++) {
 
                                         %>
-                                        <div data-name="<%= data.results.max.mps[i].name %>" class="avgminimg img-circle" style="margin-left: <%= -30 * (data.results.max.mps.length - i - 1) %>px; background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.max.mps[i]['gov_id'] %>.png');"></div>
+                                        <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.max.mps[i].id].slug%><%=urlsData.personLink.pregled%>"
+                                           data-name="<%= data.results.max.mps[i].name %>"
+                                           class="avgminimg img-circle"
+                                           style="background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.max.mps[i]['gov_id'] %>.png');"></a>
                                         <%
                                             }
                                         }
