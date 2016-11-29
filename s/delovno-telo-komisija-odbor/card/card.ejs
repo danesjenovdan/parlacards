@@ -218,6 +218,12 @@
                                 <div class="sessionsGetSessionByDate">
                                     <div class="scroller" id="dtko-sessions-<%=Math.floor(Math.random() * 10000); %>">
                                     <ul class="tab-content">
+                                        <% if (data.sessions.length === 0) { %>
+                                            <style>.sessionsGetSessionByDate .scroller .tab-content {
+                                                text-align: center;
+                                            }</style>
+                                            <b><i>Za to delovno telo ni pregledanih sej.</i></b>
+                                        <% } %>
                                         <% for(item in data.sessions){ %>
                                         <li  class="clearfix">
 
