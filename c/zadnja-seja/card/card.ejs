@@ -40,7 +40,7 @@
     <div class="smalldate"><br><%= data.session.date %></div>
 
         <div class="indexsessionpart seja_transkript clearfix">
-            <div class="link"><a class="funblue-light-hover" href=""><span class="glyphicon glyphicon-comment"></span> Transkript</a></div>
+            <div class="link"><a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%=data.session.id%>"><span class="glyphicon glyphicon-comment"></span> Transkript</a></div>
 
 
 
@@ -137,7 +137,7 @@
         </div>
 
         <div class="indexsessionpart clearfix">
-            <div class="link"><a href=""><span class="glyphicon glyphicon-comment"></span> Prisotnost</a></div>
+            <div class="link"><a href="<%=urlsData.base%><%=urlsData.sessionLink.prisotnost%><%=data.session.id%>"><span class="glyphicon glyphicon-comment"></span> Prisotnost</a></div>
             <%
             var presence = data.presence;
             var stPgs = (presence.length > 7) ? "11.3" : "13.1";
@@ -182,7 +182,7 @@
         </div>
 
         <div class="indexsessionpart clearfix">
-            <div class="link"><a href=""><span class="glyphicon glyphicon-comment"></span> Glasovanja</a></div>
+            <div class="link"><a href="<%=urlsData.base%><%=urlsData.sessionLink.glasovanja%><%=data.session.id%>"><span class="glyphicon glyphicon-comment"></span> Glasovanja</a></div>
 
 
                 <div  id="votingCard">
