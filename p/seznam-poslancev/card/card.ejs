@@ -171,6 +171,8 @@
                     <%= function() {
                       var value = result.results[state.analysis];
 
+                      if (value === null) { return 'Ni dovolj podatkov'; };
+
                       if (value !== 0) {
                         if (columns[state.analysis].round) { value = Math.round(value * 10) / 10; }
                         if (columns[state.analysis].scientific) { value = value.toExponential(); }
