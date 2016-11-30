@@ -1,0 +1,52 @@
+{
+  "person": {
+    "party": {
+      "acronym": "DeSUS",
+      "id": 3,
+      "name": "PS Demokratska Stranka Upokojencev Slovenije",
+      "is_coalition": -1
+    },
+    "gender": "f",
+    "name": "Marija Antonija Kova\u010di\u010d",
+    "gov_id": "P297",
+    "id": 96
+  },
+  "date_of_card": "14.09.2016",
+  "results": {
+    "voters": 1186,
+    "acronym": "DeSUS",
+    "mandates": 1,
+    "party_id": 3,
+    "groups": [
+      {
+        "group_id": 22,
+        "group_name": "Odbor za kulturo"
+      },
+      {
+        "group_id": 98,
+        "group_name": "Preiskovalna komisija o ugotavljanju zlorab v slovenskem ban\u010dnem sistemu ter ugotavljanju vzrokov in odgovornosti za \u017ee drugo sanacijo ban\u010dnega sistema v samostojni Sloveniji"
+      },
+      {
+        "group_id": 27,
+        "group_name": "Odbor za zdravstvo"
+      },
+      {
+        "group_id": 17,
+        "group_name": "Odbor za finance in monetarno politiko"
+      }
+    ],
+    "education": "VI. / 2",
+    "previous_occupation": "upokojenka",
+    "name": "Marija Antonija Kova\u010di\u010d",
+    "district": null,
+    "age": 70,
+    "social": [
+      {
+        "twitter": "https://twitter.com/danesjenovdan",
+        "facebook": "https://www.facebook.com/danesjenovdan",
+        "linkedin": null
+      }
+    ],
+    "party": "PS Demokratska Stranka Upokojencev Slovenije"
+  }
+}

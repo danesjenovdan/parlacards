@@ -101,6 +101,10 @@ $medium-gray: #d0d0d0;
   margin: 36px 0;
   padding: 0 133px;
   position: relative;
+
+  @include respond-to(mobile) {
+    padding: 0;
+  }
 }
 
 .quote-button {

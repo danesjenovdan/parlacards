@@ -17,3 +17,7 @@ equalizeWidth();
 $(window).on('resize', function() {
     equalizeWidth();
 });
+
+makeEmbedSwitch();
+activateCopyButton();
+addCardRippling();

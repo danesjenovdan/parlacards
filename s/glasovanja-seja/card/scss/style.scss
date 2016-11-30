@@ -1,3 +1,5 @@
+@import 'parlassets/scss/breakpoints';
+
 .card-header h1, .card-footer h1{
   color: #525252;
 }
@@ -65,6 +67,10 @@
 .session_voting .session_title {
   height: 95px;
   margin: 0;
+  @include respond-to(mobile) {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
 }
 .session_voting .session_title p {
   position: relative;
@@ -73,6 +79,7 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   font-family: Roboto Slab;
+  margin-top: 6px;
 }
 
 

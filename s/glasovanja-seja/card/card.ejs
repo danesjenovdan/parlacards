@@ -40,119 +40,173 @@
         <!-- this text is the only thing you touch in .card-header -->
     </div>
     <div class="card-content">
+        <div class="card-content-front">
 
-        <div  id="votingCard">
+            <div  id="votingCard">
 
-            <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller session_voting">
+                <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller session_voting">
 
-                <% var data = data.results; %>
+                    <% var data = data.results; %>
 
-                <% for (var i = 0; i < data.length ; i++) { %>
+                    <% for (var i = 0; i < data.length ; i++) { %>
 
-                <% var rnd = (Math.floor((Math.random() * 2)) == 1); %>
-                <% var ayeney = rnd ? "aye" : "nay"; %>
-                <% var ayeneygly = rnd ? "glyphicon-ok" : "glyphicon-remove"; %>
-
-
-                <% var ayeney = (data[i].results.result == true)  ? "aye" : "nay"; %>
-                <% var ayeneygly = (data[i].results.result == true) ? "glyphicon-ok" : "glyphicon-remove"; %>
+                    <% var rnd = (Math.floor((Math.random() * 2)) == 1); %>
+                    <% var ayeney = rnd ? "aye" : "nay"; %>
+                    <% var ayeneygly = rnd ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
-
-                <%
-                    var allInVotes = data[i].results.votes_for + data[i].results.against + data[i].results.abstain +data[i].results.not_present;
-                var percent_votes_for = Math.floor( (data[i].results.votes_for / allInVotes) * 100) ;
-                var percent_against = Math.floor( (data[i].results.against / allInVotes) * 100);
-                var percent_abstain = Math.floor( (data[i].results.abstain / allInVotes) * 100);
-                var percent_not_present = Math.floor( (data[i].results.not_present / allInVotes) * 100);
-
-                    var resulttext = '';
-                    if(data[i].results.text.length > 150){
-                        resulttext = data[i].results.text.substring(0, 150) + "...";
-                    }else{
-                        resulttext = data[i].results.text;
-                    }
-
- %>
+                    <% var ayeney = (data[i].results.result == true)  ? "aye" : "nay"; %>
+                    <% var ayeneygly = (data[i].results.result == true) ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
-                    <div class="clearfix single_voting">
-                        <a href="/seja/glasovanje/<%=data[i].session.id%>/<%=data[i].results.motion_id%>">
-                            <div class=" col-md-1 ">
-                                <div class="accepted <%= ayeney %> ">
-                                    <p>
-                                        <i class="glyphicon <%=ayeneygly%> "></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-11 border-left ">
-                                <div class="col-md-6 ">
-                                    <div class="session_title ">
-                                        <p><%=resulttext %></p>
+
+                    <%
+                        var allInVotes = data[i].results.votes_for + data[i].results.against + data[i].results.abstain +data[i].results.not_present;
+                    var percent_votes_for = Math.floor( (data[i].results.votes_for / allInVotes) * 100) ;
+                    var percent_against = Math.floor( (data[i].results.against / allInVotes) * 100);
+                    var percent_abstain = Math.floor( (data[i].results.abstain / allInVotes) * 100);
+                    var percent_not_present = Math.floor( (data[i].results.not_present / allInVotes) * 100);
+
+                        var resulttext = '';
+                        if(data[i].results.text.length > 150){
+                            resulttext = data[i].results.text.substring(0, 150) + "...";
+                        }else{
+                            resulttext = data[i].results.text;
+                        }
+
+    %>
+
+
+                        <div class="clearfix single_voting">
+                            <a href="/seja/glasovanje/<%=data[i].session.id%>/<%=data[i].results.motion_id%>">
+                                <div class=" col-md-1 ">
+                                    <div class="accepted <%= ayeney %> ">
+                                        <p>
+                                            <i class="glyphicon <%=ayeneygly%> "></i>
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="col-md-6 ">
-                                    <div class="session_votes ">
-                                        <div class="progress smallbar ">
-                                            <div class="progress-bar fontblue " style="width: <%= percent_votes_for %>% ">
-                                                <span class="sr-only "><%= percent_votes_for %>% Complete (success)</span>
-                                            </div>
-                                            <div class="progress-bar funblue " style="width: <%= percent_against %>% ">
-                                                <span class="sr-only "><%= percent_against %>% Complete (warning)</span>
-                                            </div>
-                                            <div class="progress-bar ignoreblue " style="width: <%= percent_abstain %>% ">
-                                                <span class="sr-only "><%= percent_abstain %>% Complete (danger)</span>
-                                            </div>
-                                            <div class="progress-bar noblue " style="width: <%= percent_not_present %>% ">
-                                                <span class="sr-only "><%= percent_not_present %>% Complete (danger)</span>
-                                            </div>
-                                        </div>
-                                        <div class="row ">
-                                            <div class="col-xs-3 ">
-                                                <%= data[i].results.votes_for %>
-                                                <div class="type ">Za</div>
-                                                <div class="indicator aye ">&nbsp;</div>
-                                            </div>
-                                            <div class="col-xs-3 ">
-                                                <%= data[i].results.against %>
-                                                <div class="type ">Proti</div>
-                                                <div class="indicator ney ">&nbsp;</div>
-                                            </div>
-                                            <div class="col-xs-3 ">
-                                                <%= data[i].results.abstain %>
-                                                <div class="type ">Vzdržan</div>
-                                                <div class="indicator abstention ">&nbsp;</div>
-                                            </div>
-                                            <div class="col-xs-3 ">
-                                                <%= data[i].results.not_present %>
-                                                <div class="type ">Niso</div>
-                                                <div class="indicator not ">&nbsp;</div>
-                                            </div>
+                                <div class="col-md-11 border-left ">
+                                    <div class="col-md-6 ">
+                                        <div class="session_title ">
+                                            <p><%=resulttext %></p>
                                         </div>
                                     </div>
+                                    <div class="col-md-6 ">
+                                        <div class="session_votes ">
+                                            <div class="progress smallbar ">
+                                                <div class="progress-bar fontblue " style="width: <%= percent_votes_for %>% ">
+                                                    <span class="sr-only "><%= percent_votes_for %>% Complete (success)</span>
+                                                </div>
+                                                <div class="progress-bar funblue " style="width: <%= percent_against %>% ">
+                                                    <span class="sr-only "><%= percent_against %>% Complete (warning)</span>
+                                                </div>
+                                                <div class="progress-bar ignoreblue " style="width: <%= percent_abstain %>% ">
+                                                    <span class="sr-only "><%= percent_abstain %>% Complete (danger)</span>
+                                                </div>
+                                                <div class="progress-bar noblue " style="width: <%= percent_not_present %>% ">
+                                                    <span class="sr-only "><%= percent_not_present %>% Complete (danger)</span>
+                                                </div>
+                                            </div>
+                                            <div class="row ">
+                                                <div class="col-xs-3 ">
+                                                    <%= data[i].results.votes_for %>
+                                                    <div class="type ">Za</div>
+                                                    <div class="indicator aye ">&nbsp;</div>
+                                                </div>
+                                                <div class="col-xs-3 ">
+                                                    <%= data[i].results.against %>
+                                                    <div class="type ">Proti</div>
+                                                    <div class="indicator ney ">&nbsp;</div>
+                                                </div>
+                                                <div class="col-xs-3 ">
+                                                    <%= data[i].results.abstain %>
+                                                    <div class="type ">Vzdržan</div>
+                                                    <div class="indicator abstention ">&nbsp;</div>
+                                                </div>
+                                                <div class="col-xs-3 ">
+                                                    <%= data[i].results.not_present %>
+                                                    <div class="type ">Niso</div>
+                                                    <div class="indicator not ">&nbsp;</div>
+                                                </div>
+                                            </div>
+                                        </div>
 
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
 
-                <% }%>
+                    <% }%>
+
+                </div>
 
             </div>
-
         </div>
-
+        <div class="card-content-info hidden">
+            <div class="card-back-content">
+                <div class="scroller" id="tvojamtka">
+                    <p class="info-text">
+                        Za vsa glasovanja na posamezni seji preštejemo vse glasove (ZA, PROTI, VZDRŽAN/-A) in število poslancev, ki niso glasovali, ter izpišemo rezultate.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-content-embed hidden">
+            <div class="card-back-content">
+                <div class="embed-content">
+                    <div class="embed-divider"></div>
+                    <div class="embed-switch-container">
+                        <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                        <div class="embed-switch-big-box">
+                            <div class="embed-switch-box">
+                                <div class="embed-switch">
+                                    <div class="embed-switches">
+                                        <div class="leftswitch">
+                                            DA
+                                        </div>
+                                        <div class="rightswitch">
+                                            NE
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="embed-switch-ball"></div>
+                        </div>
+                    </div>
+                    <div class="embed-divider"></div>
+                    <div class="embed-script">
+                        <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?embed=true&altHeader=true"></textarea>
+                        <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                    </div>
+                    <div class="embed-divider"></div>
+                    <div class="embed-export">
+                        <div class="embed-label">Izvozi kartico kot sliko <button class="btn-parlameter btn-blue btn-margin-left">PRENESI</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-content-share hidden">
+            <div class="card-back-content">
+                <div class="share-content">
+                    <label for="share-url">Neposredna povezava do kartice</label>
+                    <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?frame=true&altHeader=true"/>
+                    <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                </div>
+            </div>
+        </div>
+        <!-- delete this placeholder, this is the content of your card -->
     </div>
     <div class="card-footer">
-                <div class="card-logo hidden">
-                     <a href="https://skoraj.parlameter.si/">
-                         <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
-                     </a>
-                 </div>
+            <div class="card-logo hidden">
+                    <a href="https://skoraj.parlameter.si/">
+                        <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+                    </a>
+                </div>
 
-        <div class="card-circle-button card-share"></div>
-        <div class="card-circle-button card-embed"></div>
-        <div class="card-circle-button card-info">i</div>
+        <div class="card-circle-button card-share" data-back="share"></div>
+        <div class="card-circle-button card-embed" data-back="embed"></div>
+        <div class="card-circle-button card-info" data-back="info">i</div>
     </div>
 </div>
 <!-- everything below here is part of the page and not part of the card -->

@@ -1,0 +1,59 @@
+.parlaicon-container {
+    padding-left: 0;
+    padding-right: 0;
+    /*padding-top: 7px;
+    padding-bottom: 3px;*/
+}
+a span {
+    color: #197197;
+}
+
+.socialicon-container {
+    background-color: transparent !important;
+}
+.parlaicon-facebook, .parlaicon-twitter {
+    svg {
+        width: 22px;
+        height: 22px;
+
+        path {
+            fill: #197197;
+        }
+    }
+
+    &:hover {
+        svg path {
+            fill: #009cdd;
+        }
+    }
+}
+
+a strong {
+    font-weight: 500;
+}
+a:hover {
+  background-color: #e1f6ff;
+  text-decoration: none; 
+}
+
+.card-content-front {
+    height: 100%;
+}
+
+.oi {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.oi .row {
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    margin: 0;
+}
+.oi .row > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

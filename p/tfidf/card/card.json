@@ -1,1 +1,1 @@
-{"_id":"57f836232bd2ed9a65b598cc","name":"Besede, ki ga zaznamujejo","group":"p","method":"tfidf","dataUrl":"https://isci.parlameter.si/tfidf/p"}
+{"_id":"57f836232bd2ed9a65b598cc","name":"Besede, ki ga zaznamujejo","group":"p","method":"tfidf","dataUrl":"https://analize.parlameter.si/v1/p/getTFIDF"}
