@@ -229,7 +229,15 @@
 
                                                 <span class="date col-sm-3"><%= data.sessions[item].date %></span>
                                                 <p class=" col-sm-9">
-                                                    <a href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%= data.sessions[item].id %>"><%= data.sessions[item].name %></a>
+                                                    <% if (data.sessions[item].speeches){%>
+                                                    <a href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%= data.sessions[item].id %>">
+                                                        <%= data.sessions[item].name %>
+                                                    </a>
+                                                    <% }else{ %>
+                                                    <span style="font-size: 16px;">
+                                                        <%= data.sessions[item].name %>
+                                                    </span>
+                                                    <% } %>
                                                 </p>
 
                                             </li>

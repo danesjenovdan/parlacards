@@ -4,6 +4,188 @@
       {
         "is_active": false,
         "district": [
+          83
+        ],
+        "name": "Marko Ferluga",
+        "gov_id": "P250",
+        "gender": "m",
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "mp",
+        "id": 21,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          26
+        ],
+        "name": "Suzana Lep \u0160imenko",
+        "gov_id": "P268",
+        "gender": "f",
+        "party": {
+          "acronym": "SDS",
+          "is_coalition": false,
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "type": "mp",
+        "id": 51,
+        "has_function": false
+      }
+    ],
+    "president": {
+      "is_active": false,
+      "district": [
+        63
+      ],
+      "name": "Andreja Poto\u010dnik",
+      "gov_id": "P278",
+      "gender": "f",
+      "party": {
+        "acronym": "SMC",
+        "is_coalition": true,
+        "id": 1,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp",
+      "id": 67,
+      "has_function": false
+    },
+    "members": [
+      {
+        "is_active": false,
+        "district": [
+          46
+        ],
+        "name": "Uro\u0161 Prikl",
+        "gov_id": "P280",
+        "gender": "m",
+        "party": {
+          "acronym": "DeSUS",
+          "is_coalition": true,
+          "id": 3,
+          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+        },
+        "type": "mp",
+        "id": 69,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          24
+        ],
+        "name": "Franc Breznik",
+        "gov_id": "P167",
+        "gender": "m",
+        "party": {
+          "acronym": "SDS",
+          "is_coalition": false,
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "type": "mp",
+        "id": 10,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          80
+        ],
+        "name": "Toma\u017e Gantar",
+        "gov_id": "P251",
+        "gender": "m",
+        "party": {
+          "acronym": "DeSUS",
+          "is_coalition": true,
+          "id": 3,
+          "name": "PS Demokratska Stranka Upokojencev Slovenije"
+        },
+        "type": "mp",
+        "id": 22,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          55
+        ],
+        "name": "Danijel Krivec",
+        "gov_id": "P040",
+        "gender": "m",
+        "party": {
+          "acronym": "SDS",
+          "is_coalition": false,
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "type": "mp",
+        "id": 47,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          64
+        ],
+        "name": "Marko Poga\u010dnik",
+        "gov_id": "P196",
+        "gender": "m",
+        "party": {
+          "acronym": "SDS",
+          "is_coalition": false,
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "type": "mp",
+        "id": 65,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          40
+        ],
+        "name": "Ivan \u0160kodnik",
+        "gov_id": "P286",
+        "gender": "m",
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "mp",
+        "id": 76,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          39
+        ],
+        "name": "Danilo Anton Ranc",
+        "gov_id": "P282",
+        "gender": "m",
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "mp",
+        "id": 71,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
           57
         ],
         "name": "Maru\u0161a \u0160kopac",
@@ -17,62 +199,6 @@
         },
         "type": "mp",
         "id": 77,
-        "has_function": false
-      }
-    ],
-    "president": {
-      "is_active": true,
-      "district": [
-        76
-      ],
-      "name": "Matja\u017e Han\u017eek",
-      "gov_id": "P256",
-      "gender": "m",
-      "party": {
-        "acronym": "ZL",
-        "is_coalition": false,
-        "id": 8,
-        "name": "PS Zdru\u017eena Levica"
-      },
-      "type": "mp",
-      "id": 31,
-      "has_function": false
-    },
-    "members": [
-      {
-        "is_active": true,
-        "district": [
-          14
-        ],
-        "name": "Ivan Hr\u0161ak",
-        "gov_id": "P176",
-        "gender": "m",
-        "party": {
-          "acronym": "DeSUS",
-          "is_coalition": true,
-          "id": 3,
-          "name": "PS Demokratska Stranka Upokojencev Slovenije"
-        },
-        "type": "mp",
-        "id": 34,
-        "has_function": false
-      },
-      {
-        "is_active": true,
-        "district": [
-          13
-        ],
-        "name": "Matja\u017e Han",
-        "gov_id": "P018",
-        "gender": "m",
-        "party": {
-          "acronym": "SD",
-          "is_coalition": true,
-          "id": 7,
-          "name": "PS Socialni Demokrati"
-        },
-        "type": "mp",
-        "id": 30,
         "has_function": false
       },
       {
@@ -94,104 +220,31 @@
         "has_function": false
       },
       {
-        "is_active": true,
-        "district": [
-          55
-        ],
-        "name": "Danijel Krivec",
-        "gov_id": "P040",
-        "gender": "m",
-        "party": {
-          "acronym": "SDS",
-          "is_coalition": false,
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
-        "type": "mp",
-        "id": 47,
-        "has_function": false
-      },
-      {
         "is_active": false,
-        "district": [
-          89
-        ],
-        "name": "Jernej Vrtovec",
-        "gov_id": "P292",
-        "gender": "m",
-        "party": {
-          "acronym": "NSI",
-          "is_coalition": false,
-          "id": 6,
-          "name": "PS Nova Slovenija"
-        },
-        "type": "mp",
-        "id": 86,
-        "has_function": false
-      }
-    ],
-    "viceMember": [
-      {
-        "is_active": false,
-        "district": [
-          87
-        ],
-        "name": "Mirjam Bon Klanj\u0161\u010dek",
-        "gov_id": "P235",
-        "gender": "f",
-        "party": {
-          "acronym": "PS NP",
-          "is_coalition": false,
-          "id": 109,
-          "name": "PS nepovezanih poslancev "
-        },
-        "type": "mp",
-        "id": 7,
-        "has_function": false
-      },
-      {
-        "is_active": false,
-        "district": [
-          87
-        ],
-        "name": "Mirjam Bon Klanj\u0161\u010dek",
-        "gov_id": "P235",
-        "gender": "f",
-        "party": {
-          "acronym": "PS NP",
-          "is_coalition": false,
-          "id": 109,
-          "name": "PS nepovezanih poslancev "
-        },
-        "type": "mp",
-        "id": 7,
-        "has_function": false
-      },
-      {
-        "is_active": true,
         "district": [
           17
         ],
-        "name": "Jo\u017eef Horvat",
-        "gov_id": "P020",
+        "name": "Franc Laj",
+        "gov_id": "P267",
         "gender": "m",
         "party": {
-          "acronym": "NSI",
+          "acronym": "PS NP",
           "is_coalition": false,
-          "id": 6,
-          "name": "PS Nova Slovenija"
+          "id": 109,
+          "name": "PS nepovezanih poslancev "
         },
         "type": "mp",
-        "id": 32,
+        "id": 50,
         "has_function": false
       },
       {
         "is_active": false,
         "district": [
-          81
+          50,
+          49
         ],
-        "name": "Tilen Bo\u017ei\u010d",
-        "gov_id": "P242",
+        "name": "Bojan Krajnc",
+        "gov_id": "P299",
         "gender": "m",
         "party": {
           "acronym": "SMC",
@@ -200,61 +253,7 @@
           "name": "PS Stranka modernega centra"
         },
         "type": "mp",
-        "id": 8,
-        "has_function": false
-      },
-      {
-        "is_active": true,
-        "district": [
-          34
-        ],
-        "name": "Ljubo \u017dnidar",
-        "gov_id": "P212",
-        "gender": "m",
-        "party": {
-          "acronym": "SDS",
-          "is_coalition": false,
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
-        "type": "mp",
-        "id": 91,
-        "has_function": false
-      },
-      {
-        "is_active": true,
-        "district": [
-          49
-        ],
-        "name": "Franc Tr\u010dek ",
-        "gov_id": "P290",
-        "gender": "m",
-        "party": {
-          "acronym": "ZL",
-          "is_coalition": false,
-          "id": 8,
-          "name": "PS Zdru\u017eena Levica"
-        },
-        "type": "mp",
-        "id": 82,
-        "has_function": false
-      },
-      {
-        "is_active": false,
-        "district": [
-          45
-        ],
-        "name": "Marjana Kotnik Poropat",
-        "gov_id": "P186",
-        "gender": "f",
-        "party": {
-          "acronym": "DeSUS",
-          "is_coalition": true,
-          "id": 3,
-          "name": "PS Demokratska Stranka Upokojencev Slovenije"
-        },
-        "type": "mp",
-        "id": 45,
+        "id": 1354,
         "has_function": false
       },
       {
@@ -274,36 +273,849 @@
         "type": "mp",
         "id": 1356,
         "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          66
+        ],
+        "name": "Matej Tonin",
+        "gov_id": "P204",
+        "gender": "m",
+        "party": {
+          "acronym": "NSI",
+          "is_coalition": false,
+          "id": 6,
+          "name": "PS Nova Slovenija"
+        },
+        "type": "mp",
+        "id": 81,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          49
+        ],
+        "name": "Franc Tr\u010dek ",
+        "gov_id": "P290",
+        "gender": "m",
+        "party": {
+          "acronym": "ZL",
+          "is_coalition": false,
+          "id": 8,
+          "name": "PS Zdru\u017eena Levica"
+        },
+        "type": "mp",
+        "id": 82,
+        "has_function": false
+      },
+      {
+        "is_active": false,
+        "district": [
+          26
+        ],
+        "name": "Suzana Lep \u0160imenko",
+        "gov_id": "P268",
+        "gender": "f",
+        "party": {
+          "acronym": "SDS",
+          "is_coalition": false,
+          "id": 5,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "type": "mp",
+        "id": 51,
+        "has_function": false
       }
-    ]
+    ],
+    "viceMember": []
   },
   "created_for": "13.11.2016",
   "ratio": {
-    "coalition": 38.4615384615385,
-    "opposition": 61.5384615384615
+    "coalition": 52.9411764705882,
+    "opposition": 47.0588235294118
   },
-  "sessions": [],
+  "sessions": [
+    {
+      "votes": false,
+      "name": "21. redna seja",
+      "date": "2. 11. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6248
+    },
+    {
+      "votes": false,
+      "name": "38. nujna seja",
+      "date": "28. 10. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6249
+    },
+    {
+      "votes": false,
+      "name": "37. nujna seja (skupna seja)",
+      "date": "17. 10. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6250
+    },
+    {
+      "votes": false,
+      "name": "36. nujna seja",
+      "date": "6. 10. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6251
+    },
+    {
+      "votes": false,
+      "name": "20. redna seja (skupna seja)",
+      "date": "6. 9. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6252
+    },
+    {
+      "votes": false,
+      "name": "35. nujna seja",
+      "date": "29. 6. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6253
+    },
+    {
+      "votes": false,
+      "name": "19. redna seja",
+      "date": "29. 6. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6254
+    },
+    {
+      "votes": false,
+      "name": "18. redna seja",
+      "date": "23. 6. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6255
+    },
+    {
+      "votes": false,
+      "name": "34. nujna seja",
+      "date": "31. 5. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6256
+    },
+    {
+      "votes": false,
+      "name": "17. redna seja",
+      "date": "31. 5. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6257
+    },
+    {
+      "votes": false,
+      "name": "16. redna seja (skupna seja)",
+      "date": "27. 5. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6258
+    },
+    {
+      "votes": false,
+      "name": "33. nujna seja",
+      "date": "25. 5. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6259
+    },
+    {
+      "votes": false,
+      "name": "32. nujna seja (skupna seja)",
+      "date": "12. 5. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6260
+    },
+    {
+      "votes": false,
+      "name": "31. nujna seja",
+      "date": "5. 5. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6261
+    },
+    {
+      "votes": false,
+      "name": "15. redna seja",
+      "date": "3. 5. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6262
+    },
+    {
+      "votes": false,
+      "name": "30. nujna seja (skupna seja)",
+      "date": "7. 4. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6263
+    },
+    {
+      "votes": false,
+      "name": "29. nujna seja (skupna seja)",
+      "date": "8. 3. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6264
+    },
+    {
+      "votes": false,
+      "name": "28. nujna seja",
+      "date": "22. 2. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6265
+    },
+    {
+      "votes": false,
+      "name": "27. nujna seja (skupna seja)",
+      "date": "19. 2. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6266
+    },
+    {
+      "votes": false,
+      "name": "14. redna seja",
+      "date": "9. 2. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6267
+    },
+    {
+      "votes": false,
+      "name": "13. redna seja",
+      "date": "13. 1. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6268
+    },
+    {
+      "votes": false,
+      "name": "12. redna seja (skupna seja)",
+      "date": "13. 1. 2016",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6269
+    },
+    {
+      "votes": false,
+      "name": "11. redna seja",
+      "date": "11. 12. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6270
+    },
+    {
+      "votes": false,
+      "name": "26. nujna seja (skupna seja)",
+      "date": "8. 12. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6271
+    },
+    {
+      "votes": false,
+      "name": "25. nujna seja (skupna seja)",
+      "date": "2. 12. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6272
+    },
+    {
+      "votes": false,
+      "name": "24. nujna seja (skupna seja)",
+      "date": "16. 11. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6273
+    },
+    {
+      "votes": false,
+      "name": "23. nujna seja (skupna seja)",
+      "date": "28. 10. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6274
+    },
+    {
+      "votes": false,
+      "name": "22. nujna seja (skupna seja)",
+      "date": "28. 10. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6275
+    },
+    {
+      "votes": false,
+      "name": "21. nujna seja",
+      "date": "9. 10. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6276
+    },
+    {
+      "votes": false,
+      "name": "10. redna seja",
+      "date": "1. 10. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6277
+    },
+    {
+      "votes": false,
+      "name": "20. nujna seja (skupna seja)",
+      "date": "25. 9. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6278
+    },
+    {
+      "votes": false,
+      "name": "9. redna seja",
+      "date": "9. 9. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6279
+    },
+    {
+      "votes": false,
+      "name": "19. nujna seja (skupna seja)",
+      "date": "25. 8. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6280
+    },
+    {
+      "votes": false,
+      "name": "18. nujna seja",
+      "date": "8. 7. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6281
+    },
+    {
+      "votes": false,
+      "name": "8. redna seja",
+      "date": "24. 6. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6282
+    },
+    {
+      "votes": false,
+      "name": "17. nujna seja (skupna seja)",
+      "date": "2. 6. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6283
+    },
+    {
+      "votes": false,
+      "name": "7. redna seja",
+      "date": "27. 5. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6284
+    },
+    {
+      "votes": false,
+      "name": "16. nujna seja (skupna seja)",
+      "date": "8. 5. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6285
+    },
+    {
+      "votes": false,
+      "name": "15. nujna seja (skupna seja)",
+      "date": "7. 5. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6286
+    },
+    {
+      "votes": false,
+      "name": "14. nujna seja (skupna seja)",
+      "date": "5. 5. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6287
+    },
+    {
+      "votes": false,
+      "name": "13. nujna seja (skupna seja)",
+      "date": "17. 4. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6288
+    },
+    {
+      "votes": false,
+      "name": "12. nujna seja (skupna seja)",
+      "date": "8. 4. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6289
+    },
+    {
+      "votes": false,
+      "name": "6. redna seja",
+      "date": "19. 3. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6290
+    },
+    {
+      "votes": false,
+      "name": "11. nujna seja (skupna seja)",
+      "date": "18. 2. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6291
+    },
+    {
+      "votes": false,
+      "name": "5. redna seja (skupna seja)",
+      "date": "12. 2. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6292
+    },
+    {
+      "votes": false,
+      "name": "10. nujna seja",
+      "date": "11. 2. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6293
+    },
+    {
+      "votes": false,
+      "name": "4. redna seja",
+      "date": "5. 2. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6294
+    },
+    {
+      "votes": false,
+      "name": "3. redna seja",
+      "date": "14. 1. 2015",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6295
+    },
+    {
+      "votes": false,
+      "name": "2. redna seja (skupna seja)",
+      "date": "12. 12. 2014",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6296
+    },
+    {
+      "votes": false,
+      "name": "8. nujna seja (skupna seja)",
+      "date": "10. 12. 2014",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": false,
+      "id": 6297
+    },
+    {
+      "votes": false,
+      "name": "1. redna seja (skupna seja)",
+      "date": "4. 12. 2014",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6298
+    },
+    {
+      "votes": false,
+      "name": "9. nujna seja",
+      "date": "2. 12. 2014",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6299
+    },
+    {
+      "votes": false,
+      "name": "7. nujna seja",
+      "date": "14. 11. 2014",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": false,
+      "id": 6300
+    },
+    {
+      "votes": false,
+      "name": "6. nujna seja",
+      "date": "14. 11. 2014",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6301
+    },
+    {
+      "votes": false,
+      "name": "5. nujna seja",
+      "date": "14. 11. 2014",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6302
+    },
+    {
+      "votes": false,
+      "name": "4. nujna seja",
+      "date": "6. 11. 2014",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": false,
+      "id": 6303
+    },
+    {
+      "votes": false,
+      "name": "3. nujna seja (skupna seja)",
+      "date": "4. 11. 2014",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6304
+    },
+    {
+      "votes": false,
+      "name": "2. nujna seja",
+      "date": "15. 9. 2014",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6305
+    },
+    {
+      "votes": false,
+      "name": "1. nujna seja",
+      "date": "15. 9. 2014",
+      "org": {
+        "acronym": "",
+        "is_coalition": false,
+        "id": 18,
+        "name": "Odbor za gospodarstvo"
+      },
+      "speeches": true,
+      "id": 6306
+    }
+  ],
   "created_at": "13.11.2016",
   "seats_per_pg": [
     {
       "party": {
-        "acronym": "ZL",
-        "is_coalition": false,
-        "name": "PS Zdru\u017eena Levica",
-        "id": 8
+        "acronym": "SMC",
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra",
+        "id": 1
       },
-      "coalition": "opposition",
-      "seats": 2
-    },
-    {
-      "party": {
-        "acronym": "NSI",
-        "is_coalition": false,
-        "name": "PS Nova Slovenija",
-        "id": 6
-      },
-      "coalition": "opposition",
-      "seats": 2
+      "coalition": "coalition",
+      "seats": 6
     },
     {
       "party": {
@@ -313,7 +1125,7 @@
         "id": 5
       },
       "coalition": "opposition",
-      "seats": 2
+      "seats": 4
     },
     {
       "party": {
@@ -323,16 +1135,6 @@
         "id": 109
       },
       "coalition": "opposition",
-      "seats": 2
-    },
-    {
-      "party": {
-        "acronym": "SD",
-        "is_coalition": true,
-        "name": "PS Socialni Demokrati",
-        "id": 7
-      },
-      "coalition": "coalition",
       "seats": 2
     },
     {
@@ -347,10 +1149,30 @@
     },
     {
       "party": {
-        "acronym": "SMC",
+        "acronym": "ZL",
+        "is_coalition": false,
+        "name": "PS Zdru\u017eena Levica",
+        "id": 8
+      },
+      "coalition": "opposition",
+      "seats": 1
+    },
+    {
+      "party": {
+        "acronym": "NSI",
+        "is_coalition": false,
+        "name": "PS Nova Slovenija",
+        "id": 6
+      },
+      "coalition": "opposition",
+      "seats": 1
+    },
+    {
+      "party": {
+        "acronym": "SD",
         "is_coalition": true,
-        "name": "PS Stranka modernega centra",
-        "id": 1
+        "name": "PS Socialni Demokrati",
+        "id": 7
       },
       "coalition": "coalition",
       "seats": 1
@@ -359,7 +1181,7 @@
   "organization": {
     "acronym": "",
     "is_coalition": false,
-    "id": 101,
-    "name": "Preiskovalna komisija za ugotavljanje politi\u010dne odgovornosti nosilcev javnih funkcij pri investiciji v blok 6 Termoelektrarne \u0160o\u0161tanj"
+    "id": 18,
+    "name": "Odbor za gospodarstvo"
   }
 }
