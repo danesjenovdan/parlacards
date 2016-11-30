@@ -36,6 +36,7 @@
     </div>
     <div class="card-content full">
         <div class="card-content-front">
+            <% if (data.results.length > 0) { %>
             <ul class="person-list">
                 <% data.results.forEach(function(member) { %>
                 <li class="person">
@@ -54,6 +55,9 @@
 
                 <% }) %>
             </ul>
+            <% } else { %>
+                <div class="no-results">Brez odsotnih poslancev</div>
+            <% } %>
         </div>
     </div>
     <div class="card-footer">
