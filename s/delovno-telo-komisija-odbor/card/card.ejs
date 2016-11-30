@@ -192,9 +192,23 @@
                                     %>
                                     <div class="other_poslanec clearfix">
                                         <div class="col150">
-                                    <span class="poslanec_title">
-                                            <%= data.seats_per_pg[item].party.acronym %>
-                                        </span>
+
+                                            <% if (data.seats_per_pg[item].party.acronym.indexOf('NeP') === -1) { %>
+                                                <span class="poslanec_title">
+                                                    <a href="<%= urlsData.base + urlsData.partyLink.base + urlsData.party[data.seats_per_pg[item].party.id].acronym + urlsData.partyLink.pregled %>" class="funblue-light-hover">
+                                                        <%= data.seats_per_pg[item].party.acronym %>
+                                                    </a>
+                                                </span>
+                                            <% } else { %>
+                                                <span class="poslanec_title">
+                                                    <%= data.seats_per_pg[item].party.acronym %>
+                                                </span>
+                                            <% } %>
+
+
+
+
+                                            </a>
                                         </div>
                                         <div class="col280">
                                             <div class="progress smallbar avgmin">
@@ -230,7 +244,7 @@
                                                 <span class="date col-sm-3"><%= data.sessions[item].date %></span>
                                                 <p class=" col-sm-9">
                                                     <% if (data.sessions[item].speeches){%>
-                                                    <a href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%= data.sessions[item].id %>">
+                                                    <a href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%= data.sessions[item].id %>/dt">
                                                         <%= data.sessions[item].name %>
                                                     </a>
                                                     <% }else{ %>
