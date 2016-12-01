@@ -45,7 +45,7 @@ var randomId = makeId();
 
     if (!selector) {
       selector = $this.attr('href')
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, ' ') // strip for ie7
     }
 
     if ($this.parent('li').hasClass('active')) return
@@ -311,4 +311,9 @@ $.get('https://isci.parlameter.si/mlt/' + $('#' + randomId2 + 'id').val(), funct
   similarSpeechWrapperElement.find('.similar-speech-tabs ul').append(tabs);
   similarSpeechWrapperElement.find('.similar-speech-content').append(tabContents);
 })
+
+makeEmbedSwitch();
+activateCopyButton();
+addCardRippling();
+
 })();

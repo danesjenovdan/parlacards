@@ -218,4 +218,8 @@ if (url.indexOf('#!') !== -1) {
   }, 1000);;
 }
 
+makeEmbedSwitch();
+activateCopyButton();
+addCardRippling();
+
 })();
