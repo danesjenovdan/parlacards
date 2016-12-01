@@ -67,7 +67,13 @@
             <input type="hidden" class="myid" id="<%= randomId2 %>id" value="<%= data2.results.speech_id %>">
             <div class="card-header card-header-person">
                 <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%- data2.person.gov_id ? data2.person.gov_id : 'null' %>.png')"></div>
-                <h1 class="name"><a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.person.id].slug%><%=urlsData.personLink.pregled%>" class="funblue-light-hover"><%= data.person.name %></a></h1>
+                <h1 class="name">
+                    <% if (data2.person.party.acronym) { %>
+                        <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data2.person.id].slug%><%=urlsData.personLink.pregled%>" class="funblue-light-hover"><%= data2.person.name %></a>
+                    <% } else { %>
+                        <%= data2.person.name %>
+                    <% } %>
+                </h1>
             </div>
             <div class="card-content <% if (data2.results.quoted_text) { %>just-quote<% } %> closed">
               <div class="card-content-front">
