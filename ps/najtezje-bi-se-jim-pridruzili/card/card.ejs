@@ -50,7 +50,7 @@
                         <% } %>
                     </div>
                     <div class="column large-number">
-                        <%= member.ratio.toFixed(2) %>
+                        <%= String(member.ratio.toFixed(2)).replace('.', ','); %>
                     </div>
                 </li>
 

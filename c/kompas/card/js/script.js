@@ -2,7 +2,14 @@
 
 function makeSwitchEvent2(selection) {
     $('#partyswitch-' + d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '_')).on('click', function() {
+        var smallparty = d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '-').toLowerCase();
+
         if (!$(this).hasClass('turnedon')) {
+
+            if (kompasState.parties.indexOf(smallparty) === -1) {
+                kompasState.parties.push(smallparty);
+            }
+            updateShareURL();
 
             $(this).addClass(d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '_').toLowerCase() + '-background');
 
@@ -17,6 +24,9 @@ function makeSwitchEvent2(selection) {
             console.log(Math.floor(selection[0].length / 2));
             centerCompass();
         } else {
+
+            kompasState.parties.splice(kompasState.parties.indexOf(smallparty), 1);
+            
             $(this).removeClass(d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '_').toLowerCase() + '-background');
 
             for (var i = 0; i < selection[0].length; i++) {
@@ -373,6 +383,18 @@ function moveToFront(parent, selected) {
 
 function showPersonPicture(datum) {
 
+    function hasID(element) {
+        return element.id == datum.person.id;
+    }
+
+    var elementfound = kompasState.people.find(hasID);
+    console.log(elementfound);
+
+    if (!elementfound) {
+        kompasState.people.push({'id': parseInt(datum.person.id)});
+    }
+    updateShareURL();
+
     // display card
     $('#kompas-personcard' + datum.person.id).removeClass('hidden').detach().prependTo('.kompas-people-wide');
     updatePeopleScroller();
@@ -387,6 +409,20 @@ function showPersonPicture(datum) {
         })
         .classed('turnedon', true)
         .on('click', function() {
+
+            var _this = this;
+
+            function hasID(element) {
+                return element.id == d3.select(_this).datum().person.id;
+            }
+
+            var elementfound = kompasState.people.find(hasID);
+
+            if (elementfound) {
+                kompasState.people.splice(kompasState.people.indexOf(elementfound), 1);
+            }
+            updateShareURL();
+
             d3.select('#kompas-personcard' + d3.select(this).datum().person.id).classed('hidden', true);
             d3.select(this)
                 .attr('r', function(d) {
@@ -574,6 +610,19 @@ $('.kompas-person-close').on('click', function(e) {
 
     $(this).parent().addClass('hidden');
 
+    var _this = this;
+
+    function hasID(element) {
+        return element.id == $(_this).parent().data('id');
+    }
+
+    var elementfound = kompasState.people.find(hasID);
+
+    if (elementfound) {
+        kompasState.people.splice(kompasState.people.indexOf(elementfound), 1);
+    }
+    updateShareURL();
+
     // turn picture back to dot
     svg.select('#_' + $(this).parent().data('id'))
         .attr('r', function(d) {
@@ -721,5 +770,18 @@ if (kompasState.parties.length > 0) {
 makeEmbedSwitch();
 activateCopyButton();
 addCardRippling();
+
+function updateShareURL() {
+    $('.card-kompas .share-url').val('https://glej.parlameter.si/c/kompas/?frame=true&state=' + encodeURIComponent(JSON.stringify(kompasState)));
+    // $('.card-kompas .card-footer').data('shortened', 'false');
+    // updateEmbedURL();
+}
+// function updateEmbedURL() {
+//     var embedbase = '<script>(function(d,script){script=d.createElement(\'script\');script.type=\'text/javascript\';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = \'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js\';d.getElementsByTagName(\'head\')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/c/kompas/?embed=true&state=';
+//     var embedextra = encodeURIComponent(JSON.stringify(kompasState)) + '">';
+//     var embedcode = embedbase + '' + embedextra;
+//     $('.card-kompas .embed-script textarea').val(embedcode);
+// }
+
 
 })();

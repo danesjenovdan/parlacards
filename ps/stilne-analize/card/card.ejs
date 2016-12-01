@@ -47,7 +47,7 @@
                                     <span class="sr-only"><%= data.results.privzdignjeno.toFixed(2) %></span>
                                 </div>
                                 <div class="progress_number" <% if (Math.round(data.results.privzdignjeno) === 0) {%> style="padding-left: 0;" <%} %>>
-                                    <%= data.results.privzdignjeno.toFixed(2); %>
+                                    <%= String(data.results.privzdignjeno.toFixed(2)).replace('.', ','); %>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                                     <span class="sr-only"><%= data.results.preprosto.toFixed(2) %></span>
                                 </div>
                                 <div class="progress_number" <% if (Math.round(data.results.preprosto) === 0) {%> style="padding-left: 0;" <%} %>>
-                                    <%= data.results.preprosto.toFixed(2); %>
+                                    <%= String(data.results.preprosto.toFixed(2)).replace('.', ','); %>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                     <span class="sr-only"><%= data.results.problematicno.toFixed(2) %></span>
                                 </div>
                                 <div class="progress_number" <% if (Math.round(data.results.problematicno) === 0) {%> style="padding-left: 0;" <%} %>>
-                                    <%= data.results.problematicno.toFixed(2); %>
+                                    <%= String(data.results.problematicno.toFixed(2)).replace('.', ','); %>
                                 </div>
 
                             </div>
