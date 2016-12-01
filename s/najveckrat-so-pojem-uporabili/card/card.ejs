@@ -35,28 +35,32 @@
     </div>
     <div class="card-content full">
         <div class="card-content-front">
-            <ul class="person-list">
-                <% data.facet_counts.facet_fields.speaker_i.forEach(function(member) {
-                    if (member.score > 0) { %>
-                    <li class="person">
-                        <a href="<%= urlsData.base + urlsData.personLink.base + urlsData.person[member.person.id].slug + urlsData.personLink.pregled %>" class="portrait column">
-                            <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(member.person.gov_id) %>.png" />
-                        </a>
-                        <div class="column name">
-                            <a href="<%= urlsData.base + urlsData.personLink.base + urlsData.person[member.person.id].slug + urlsData.personLink.pregled %>" class="funblue-light-hover"><%= member.person.name %></a><br>
-                            <% if (member.person.party.acronym.indexOf('NeP') === -1) { %>
-                                <a href="<%=urlsData.base + urlsData.partyLink.base + urlsData.party[member.person.party.id].acronym + urlsData.partyLink.pregled %>" class="funblue-light-hover"><%= member.person.party.acronym %></a>
-                            <% } else { %>
-                                <%= member.person.party.acronym %>
-                            <% } %>
-                        </div>
-                        <div class="column large-number">
-                            <%= member.score %>
-                        </div>
-                    </li>
-                    <% } %>
-                <% }) %>
-            </ul>
+            <% if (data.response.numFound === 0) { %>
+                <b style="text-align: center; display: block; margin-top: 200px;"><i>Brez zadetkov.</i></b>
+            <% } else { %>
+                <ul class="person-list">
+                    <% data.facet_counts.facet_fields.speaker_i.forEach(function(member) {
+                        if (member.score > 0) { %>
+                        <li class="person">
+                            <a href="<%= urlsData.base + urlsData.personLink.base + urlsData.person[member.person.id].slug + urlsData.personLink.pregled %>" class="portrait column">
+                                <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(member.person.gov_id) %>.png" />
+                            </a>
+                            <div class="column name">
+                                <a href="<%= urlsData.base + urlsData.personLink.base + urlsData.person[member.person.id].slug + urlsData.personLink.pregled %>" class="funblue-light-hover"><%= member.person.name %></a><br>
+                                <% if (member.person.party.acronym.indexOf('NeP') === -1) { %>
+                                    <a href="<%=urlsData.base + urlsData.partyLink.base + urlsData.party[member.person.party.id].acronym + urlsData.partyLink.pregled %>" class="funblue-light-hover"><%= member.person.party.acronym %></a>
+                                <% } else { %>
+                                    <%= member.person.party.acronym %>
+                                <% } %>
+                            </div>
+                            <div class="column large-number">
+                                <%= member.score %>
+                            </div>
+                        </li>
+                        <% } %>
+                    <% }) %>
+                </ul>
+            <% } %>
         </div>
         <div class="card-content-info hidden">
             <div class="card-back-content">

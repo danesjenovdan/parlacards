@@ -40,11 +40,12 @@ function drawPie(data) {
     g.append('path')
         .attr('d', arc)
         .attr('class', function(d) {
-            return d.data.option + '-arc'
+            var optionstring = ((d.data.option === 'not_present') ? 'ni' : d.data.option);
+            return d.data.option + '-arc ' + optionstring + '-fill';
         })
-        .style('fill', function(d) {
-            return color(d.data.option);
-        })
+        // .style('fill', function(d) {
+        //     return color(d.data.option);
+        // })
         .style('stroke', function(d) {
             return color(d.data.option);
         })

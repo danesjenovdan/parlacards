@@ -38,11 +38,15 @@
         </div>
         <div class="card-content full">
             <div class="card-content-front">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="partychart2"></div>
+                <% if (data.response.numFound === 0) { %>
+                    <b style="text-align: center; display: block; margin-top: 200px;"><i>Brez zadetkov.</i></b>
+                <% } else { %>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="partychart2"></div>
+                        </div>
                     </div>
-                </div>
+                <% } %>
             </div>
             <div class="card-content-info hidden">
                 <div class="card-back-content">

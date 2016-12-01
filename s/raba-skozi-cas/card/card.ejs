@@ -38,47 +38,51 @@
         </div>
         <div class="card-content">
             <div class="card-content-front">
+                <% if (data.response.numFound === 0) { %>
+                    <b style="text-align: center; display: block; margin-top: 60px;"><i>Brez zadetkov.</i></b>
+                <% } else { %>
 
-                <!-- get random id -->
-                <%
-                    function makeid() {
-                        var text = "";
-                        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+                    <!-- get random id -->
+                    <%
+                        function makeid() {
+                            var text = "";
+                            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-                        for( var i=0; i < 5; i++ ) {
-                            text += possible.charAt(Math.floor(Math.random() * possible.length));
+                            for( var i=0; i < 5; i++ ) {
+                                text += possible.charAt(Math.floor(Math.random() * possible.length));
+                            }
+
+                            return text;
                         }
 
-                        return text;
-                    }
+                        var random_id = makeid();
 
-                    var random_id = makeid();
+                    %>
 
-                %>
+                    <script>
+                        var random_id = '<%- random_id %>';
+                    </script>
 
-                <script>
-                    var random_id = '<%- random_id %>';
-                </script>
-
-                <div class="row poslanec">
-                    <div class="col-xs-12">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active">
-                                <a id="bigdata<%= random_id %>" href="#cel-mandat" aria-controls="Cel mandat" role="tab" data-toggle="tab">Cel mandat</a>
-                            </li>
-                            <li role="presentation">
-                                <a id="smalldata<%= random_id %>" href="#zadnje-leto" aria-controls="Zadnje leto" role="tab" data-toggle="tab">Zadnje leto</a>
-                            </li>
-                        </ul>
+                    <div class="row poslanec">
+                        <div class="col-xs-12">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a id="bigdata<%= random_id %>" href="#cel-mandat" aria-controls="Cel mandat" role="tab" data-toggle="tab">Cel mandat</a>
+                                </li>
+                                <li role="presentation">
+                                    <a id="smalldata<%= random_id %>" href="#zadnje-leto" aria-controls="Zadnje leto" role="tab" data-toggle="tab">Zadnje leto</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="timechart"></div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="timechart"></div>
+                        </div>
                     </div>
-                </div>
+                <% } %>
             </div>
             <div class="card-content-info hidden">
                 <div class="card-back-content">
