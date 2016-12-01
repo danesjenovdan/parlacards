@@ -85,7 +85,7 @@ gulp.task('ejs', function() {
             'vocab' : jsonVocab,
             'cardData' : cardData,
             'urlsData': urlsData,
-            'customUrl' : 'https://isci.parlameter.si/q/banana'
+            'customUrl' : 'https://isci.parlameter.si/q/hrana'
         }, {
             ext: '.html'
         }))

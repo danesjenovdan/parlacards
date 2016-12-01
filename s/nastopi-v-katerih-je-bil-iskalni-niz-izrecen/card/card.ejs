@@ -12,7 +12,13 @@
     <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <script src="https://unpkg.com/vue@2.0.5/dist/vue.min.js"></script>
     <!-- endbuild -->
+    <script>
+        var nastopiVKaterihData = <%- JSON.stringify(data); %>;
+        var nastopiVKaterihUrlsData = <%- JSON.stringify(urlsData); %>;
+        var nastopiVKaterihCustomUrl = <%- JSON.stringify(customUrl); %>;
+    </script>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
     <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/css/perfect-scrollbar.css" data-remove="false" data-concat="false"> <!-- removeme -->
@@ -33,41 +39,35 @@
             <h1>Nastopi, v katerih je bil iskalni niz izrečen</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content full">
-            <div class="card-content-front">
-                <% if (data.response.numFound === 0) { %>
-                    <b style="text-align: center; display: block; margin-top: 200px;"><i>Brez zadetkov.</i></b>
-                <% } else { %>
-                    <% function formatDate(unformattedDate) {
-                    var date = new Date(unformattedDate);
-                    return date.getDate() + ". " + (date.getMonth() + 1) + ". " + date.getFullYear()
-                    } %>
+            <div class="card-content-front" id="nastopi-v-katerih-je-bil-iskalni-niz-izrecen">
+                <div v-if="rawSpeeches.length === 0" class="no-results">Brez zadetkov.</div>
+                <ul v-else class="person-list">
+                    <li v-for="speech in speeches" class="person">
+                        <template v-if="speech.person.type === 'mp'">
+                            <a class="column portrait" :href="speech.memberUrl">
+                                <img :src="speech.memberImageUrl" />
+                            </a>
+                            <div class="column name">
+                                <a class="funblue-light-hover" :href="speech.memberUrl">{{ speech.person.name }}</a><br/>
+                                <a class="funblue-light-hover" :href="speech.partyUrl">{{ speech.person.party.acronym }}</a>
+                            </div>
+                        </template>
+                        <template v-else>
+                            <div class="column portrait">
+                              <img :src="speech.memberImageUrl" />
+                            </div>
+                            <div class="column name">
+                              {{ speech.person.name }}<br/>
+                              {{ speech.person.party.acronym }}
+                            </div>
+                        </template>
 
-                    <ul class="person-list">
-                        <% data.highlighting.forEach(function(result, index) { %>
-                        <li class="person">
-                            <% if (result.person.type === "mp") { %>
-                                <a class="column portrait" href="<%= urlsData.base + urlsData.personLink.base + urlsData.person[result.person.id].slug + urlsData.personLink.pregled %>">
-                                    <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(result.person.gov_id) %>.png" />
-                                </a>
-                                <div class="column name">
-                                    <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.personLink.base + urlsData.person[result.person.id].slug + urlsData.personLink.pregled %>"><%= result.person.name %></a><br/>
-                                    <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.partyLink.base + urlsData.party[result.person.party.id].acronym + urlsData.partyLink.pregled %>"><%= result.person.party.acronym %></a>
-                                </div>
-                            <% } else { %>
-                                <div class="column portrait">
-                                  <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(result.person.gov_id) %>.png" />
-                                </div>
-                                <div class="column name">
-                                    <%= result.person.name %><br/>
-                                    <%= result.person.party.acronym %>
-                                </div>
-                            <% } %>
-                            <div class="column date"><%= formatDate(result.date) %></div>
-                            <div class="column quote"><a class="funblue-light-hover" href="<%= urlsData.base + urlsData.sessionLink.transkript + result.session_id + '/#!' + result.speech_id %>"><%- result.content_t %></a></div>
-                        </li>
-                        <% }) %>
-                    </ul>
-                <% } %>
+                        <div class="column date">{{ speech.formattedDate }}</div>
+                        <div class="column quote">
+                            <a class="funblue-light-hover" :href="speech.speechUrl">{{ speech.content_t }}</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="card-content-info hidden">
                 <div class="card-back-content">
