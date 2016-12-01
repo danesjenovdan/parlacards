@@ -153,38 +153,42 @@
                   <div data-sort="analysis" class="column">Analiza</div>
                 <% } %>
               </li>
-              <% data.data.forEach(function(result, index) { %>
-              <li class="person" data-index="<%= index %>">
+              <% if (data.data.length === 0) { %>
+                <div class="no-results">Brez poslancev</div>
+              <% } else { %>
+                <% data.data.forEach(function(result, index) { %>
+                <li class="person" data-index="<%= index %>">
 
-                  <a class="portrait column" href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[result.person.id].slug%><%=urlsData.personLink.pregled%>">
-                      <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= result.person.gov_id %>.png" />
-                  </a>
-                  <div class="column wider name">
-                      <a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[result.person.id].slug%><%=urlsData.personLink.pregled%>"><%= result.person.name %></a>
-                  </div>
-                <div class="column">
-                  <% if (result.person.party.acronym.indexOf('NeP') === -1) { %><a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.partyLink.base%><%=urlsData.party[result.person.party.id].acronym%><%=urlsData.partyLink.pregled%>"><%= result.person.party.acronym %></a><% } else { %> <%= result.person.party.acronym %> <% } %>
-                </div>
-                <div class="column district"><%= result.person.formattedDistrict %></div>
-                <% if (state && state.analysis) { %>
+                    <a class="portrait column" href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[result.person.id].slug%><%=urlsData.personLink.pregled%>">
+                        <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= result.person.gov_id %>.png" />
+                    </a>
+                    <div class="column wider name">
+                        <a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[result.person.id].slug%><%=urlsData.personLink.pregled%>"><%= result.person.name %></a>
+                    </div>
                   <div class="column">
-                    <%= function() {
-                      var value = result.results[state.analysis];
-
-                      if (value === null) { return 'Ni dovolj podatkov'; };
-
-                      if (value !== 0) {
-                        if (columns[state.analysis].round) { value = Math.round(value * 10) / 10; }
-                        if (columns[state.analysis].scientific) { value = value.toExponential(); }
-                      }
-                      if (columns[state.analysis].unit === 'percent') { value += '%'; }
-
-                      return value;
-                    }() %>
+                    <% if (result.person.party.acronym.indexOf('NeP') === -1) { %><a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.partyLink.base%><%=urlsData.party[result.person.party.id].acronym%><%=urlsData.partyLink.pregled%>"><%= result.person.party.acronym %></a><% } else { %> <%= result.person.party.acronym %> <% } %>
                   </div>
-                <% } %>
-              </li>
-              <% }) %>
+                  <div class="column district"><%= result.person.formattedDistrict %></div>
+                  <% if (state && state.analysis) { %>
+                    <div class="column">
+                      <%= function() {
+                        var value = result.results[state.analysis];
+
+                        if (value === null) { return 'Ni dovolj podatkov'; };
+
+                        if (value !== 0) {
+                          if (columns[state.analysis].round) { value = Math.round(value * 10) / 10; }
+                          if (columns[state.analysis].scientific) { value = value.toExponential(); }
+                        }
+                        if (columns[state.analysis].unit === 'percent') { value += '%'; }
+
+                        return value;
+                      }() %>
+                    </div>
+                  <% } %>
+                </li>
+                <% }) %>
+              <% } %>
             </ul>
           </div>
           <div class="card-content-info hidden">
