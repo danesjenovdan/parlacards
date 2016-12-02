@@ -1,4 +1,4 @@
-if (kompasState != {}) {
+if (kompasState == kompasState) {
     kompasState['people'] = [];
     kompasState['parties'] = [];
 }
