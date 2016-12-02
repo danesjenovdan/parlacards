@@ -34,3 +34,7 @@ $(window).on('resize', function() {
     // $('.pspris-container').width(newwidth);
 
 });
+
+makeEmbedSwitch();
+activateCopyButton();
+addCardRippling();
