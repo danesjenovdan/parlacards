@@ -36,7 +36,7 @@
     <div class="card-content full">
         <div class="card-content-front">
             <% if (data.response.numFound === 0) { %>
-                <b style="text-align: center; display: block; margin-top: 200px;"><i>Brez zadetkov.</i></b>
+                <div class="no-results">Brez zadetkov.</div>
             <% } else { %>
                 <ul class="person-list">
                     <% data.facet_counts.facet_fields.speaker_i.forEach(function(member) {
