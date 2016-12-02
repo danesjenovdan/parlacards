@@ -36,7 +36,8 @@
               <select
                 name="analysis"
                 id="analysis"
-                v-model="currentAnalysis">
+                v-model="currentAnalysis"
+                @change="selectAnalysis(currentAnalysis)">
                 <option
                   v-for="analysis in analyses"
                   :value="analysis.id">
@@ -426,6 +427,7 @@
         })
         that.memberData = response.data
       })
+      this.shortenUrl(this.generatedCardUrl)
     },
     methods: {
       selectAnalysis: function(analysisId) {
@@ -490,9 +492,6 @@
       generatedCardUrl: function(newValue) {
         this.shortenUrl(newValue)
       }
-    },
-    mounted: function() {
-      this.shortenUrl(this.generatedCardUrl)
     }
   })
 
