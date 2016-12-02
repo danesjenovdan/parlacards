@@ -1,5 +1,5 @@
 (function() {
-  var PAGE_SIZE = 50
+  var PAGE_SIZE = 49
 
   new Vue({
     el: '#nastopi-v-katerih-je-bil-iskalni-niz-izrecen',
@@ -48,7 +48,7 @@
         this.fetching = true
         $.get(this.dataUrl + this.page, function(response) {
           if (response.highlighting.length === 0) {
-            that.$el.removeEventListener('scroll', this.checkIfBottom)
+            that.$el.removeEventListener('scroll', that.checkIfBottom)
           }
           else {
             that.rawSpeeches = that.rawSpeeches.concat(response.highlighting)
@@ -58,8 +58,7 @@
       }
     },
     mounted: function() {
-      // if (rawSpeeches.length === PAGE_SIZE) {
-      if (this.rawSpeeches.length > 0) {
+      if (this.rawSpeeches.length >= PAGE_SIZE) {
         this.$el.addEventListener('scroll', this.checkIfBottom)
       }
     }

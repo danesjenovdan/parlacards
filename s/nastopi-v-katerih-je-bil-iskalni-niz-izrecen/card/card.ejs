@@ -39,7 +39,7 @@
             <h1>Nastopi, v katerih je bil iskalni niz izrečen</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content full">
-            <div class="card-content-front" id="nastopi-v-katerih-je-bil-iskalni-niz-izrecen">
+            <div class="card-content-front" id="nastopi-v-katerih-je-bil-iskalni-niz-izrecen" v-cloak>
                 <div v-if="rawSpeeches.length === 0" class="no-results">Brez zadetkov.</div>
                 <ul v-else class="person-list">
                     <li v-for="speech in speeches" class="person">
@@ -64,10 +64,13 @@
 
                         <div class="column date">{{ speech.formattedDate }}</div>
                         <div class="column quote">
-                            <a class="funblue-light-hover" :href="speech.speechUrl">{{ speech.content_t }}</a>
+                            <a class="funblue-light-hover" :href="speech.speechUrl" v-html="speech.content_t"></a>
                         </div>
                     </li>
                 </ul>
+                <div v-show="fetching" class="infinite-scroll-loader">
+                  <div class="nalagalnik"></div>
+                </div>
             </div>
             <div class="card-content-info hidden">
                 <div class="card-back-content">

@@ -1,5 +1,19 @@
+@import 'parlassets/scss/colors';
+
 .card-content-front { overflow-y: auto; }
-.funblue-light-hover { color: #6d6d6d; }
+.funblue-light-hover { color: $black; }
+.infinite-scroll-loader {
+  background: rgba($white, 0.75);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  .nalagalnik {
+    position: absolute;
+    top: calc(50% - 50px);
+  }
+}
 .person-list {
   .person {
     .date {
