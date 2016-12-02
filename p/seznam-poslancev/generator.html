@@ -13,7 +13,7 @@
     <!-- <link rel="stylesheet" href="../../../parlassets/scss/style.css" data-remove="false" data-concat="false"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" data-remove="false" data-concat="false"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
-    <script src="https://unpkg.com/vue@2.0.5/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vue@2.1.4/dist/vue.min.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/search-dropdown.js"></script>
 </head>
 
@@ -145,13 +145,13 @@
                 <div class="card-back-content card-content">
                   <div class="share-content">
                     <label for="share-url">Neposredna povezava do kartice</label>
-                    <input type="url" class="form-control share-url" id="share-url" :value="generatedCardUrl + '&frame=true'"/>
+                    <input type="url" class="form-control share-url" id="share-url" :value="shortenedCardUrl"/>
                     <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card-footer">
+            <div class="card-footer" data-shortened="true">
               <div class="card-circle-button card-share" data-back="share"></div>
               <div class="card-circle-button card-embed" data-back="embed"></div>
               <div class="card-circle-button card-info" data-back="info">i</div>
@@ -261,7 +261,8 @@
       currentParties: [],
       parties: ['DeSUS', 'IMNS', 'NSI', 'PS NP', 'SD', 'SDS', 'SMC', 'ZL'],
       excludePresiding: false,
-      slugs: null
+      slugs: null,
+      shortenedCardUrl: ''
     },
     computed: {
       columns: function() {
@@ -477,7 +478,21 @@
         return this.slugs
           ? this.slugs.base + this.slugs.partyLink.base + this.slugs.party[party.id].acronym + this.slugs.partyLink.pregled
           : '/poslanska-skupina/' + party.acronym + '/pregled'
+      },
+      shortenUrl: function(url) {
+        var that = this
+        $.get('https://parla.me/shortner/generate?url=' + window.encodeURIComponent(url + '&frame=true'), function(response) {
+            that.shortenedCardUrl = response
+        });
       }
+    },
+    watch: {
+      generatedCardUrl: function(newValue) {
+        this.shortenUrl(newValue)
+      }
+    },
+    mounted: function() {
+      this.shortenUrl(this.generatedCardUrl)
     }
   })
 
