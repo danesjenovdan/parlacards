@@ -74,110 +74,160 @@
             <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
-            <div class="row">
-                <div class="col-md-12 besedni-zaklad-flex-container">
-                    <div class="hidden-xs besedni-zaklad-search-container">
-                        <div class="besedni-zaklad-search">
-                            <%
-                                var searchpeople = [];
+            <div class="card-content-front">
+                <div class="row">
+                    <div class="col-md-12 besedni-zaklad-flex-container">
+                        <div class="hidden-xs besedni-zaklad-search-container">
+                            <div class="besedni-zaklad-search">
+                                <%
+                                    var searchpeople = [];
 
-                                var kompas_data = data;
+                                    var kompas_data = data;
 
-                                for (person_i in kompas_data.data) {
-                                    searchpeople.push(kompas_data.data[person_i]['person']);
-                                }
-                            %>
-                            <script>var searchpeople = <%- JSON.stringify(searchpeople) %>;</script>
-                            <input type="text" class="besedni-zaklad-search-input" id="the-besedni-zaklad-search-input" />
-                            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" class="search-icon">
+                                    for (person_i in kompas_data.data) {
+                                        searchpeople.push(kompas_data.data[person_i]['person']);
+                                    }
+                                %>
+                                <script>var searchpeople = <%- JSON.stringify(searchpeople) %>;</script>
+                                <input type="text" class="besedni-zaklad-search-input" id="the-besedni-zaklad-search-input" />
+                                <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" class="search-icon">
 
-                            <g>
-                                <title>background</title>
-                                <rect fill="none" id="canvas_background" height="102" width="102" y="-1" x="-1"/>
-                            </g>
-                            <g>
-                                <title>Layer 1</title>
-                                <path class="svg_1" d="m101,93.254997l-31.361,-31.361996c4.902,-6.543003 7.556999,-14.458 7.556999,-22.780003c0,-10.179998 -3.965996,-19.747999 -11.163002,-26.945999c-7.195995,-7.199 -16.763996,-11.162 -26.945995,-11.162c-10.179001,0 -19.748001,3.963 -26.945002,11.162c-14.856,14.856001 -14.856,39.032001 -0.002,53.889999c7.197999,7.198997 16.766999,11.163002 26.945998,11.163002c8.338001,0 16.264,-2.663002 22.815002,-7.581001l31.356003,31.356003l7.742996,-7.740005zm-61.915001,-25.962997c-7.525999,0 -14.603998,-2.931 -19.926998,-8.251999c-5.323001,-5.323002 -8.254001,-12.401001 -8.254001,-19.929001c0,-7.528 2.932,-14.604 8.255,-19.927c5.323,-5.321 12.400999,-8.252 19.926998,-8.252c7.529003,0 14.606003,2.931 19.926003,8.252999c10.987999,10.987001 10.987999,28.866999 0,39.855001c-5.322002,5.320999 -12.396999,8.251999 -19.927002,8.251999z" fill="#505050"/>
-                            </g>
-                            </svg>
+                                <g>
+                                    <title>background</title>
+                                    <rect fill="none" id="canvas_background" height="102" width="102" y="-1" x="-1"/>
+                                </g>
+                                <g>
+                                    <title>Layer 1</title>
+                                    <path class="svg_1" d="m101,93.254997l-31.361,-31.361996c4.902,-6.543003 7.556999,-14.458 7.556999,-22.780003c0,-10.179998 -3.965996,-19.747999 -11.163002,-26.945999c-7.195995,-7.199 -16.763996,-11.162 -26.945995,-11.162c-10.179001,0 -19.748001,3.963 -26.945002,11.162c-14.856,14.856001 -14.856,39.032001 -0.002,53.889999c7.197999,7.198997 16.766999,11.163002 26.945998,11.163002c8.338001,0 16.264,-2.663002 22.815002,-7.581001l31.356003,31.356003l7.742996,-7.740005zm-61.915001,-25.962997c-7.525999,0 -14.603998,-2.931 -19.926998,-8.251999c-5.323001,-5.323002 -8.254001,-12.401001 -8.254001,-19.929001c0,-7.528 2.932,-14.604 8.255,-19.927c5.323,-5.321 12.400999,-8.252 19.926998,-8.252c7.529003,0 14.606003,2.931 19.926003,8.252999c10.987999,10.987001 10.987999,28.866999 0,39.855001c-5.322002,5.320999 -12.396999,8.251999 -19.927002,8.251999z" fill="#505050"/>
+                                </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="besedni-zaklad-parties-container">
+                                <% for (party_i in parties) {
+                                    var selected = false;
+                                    if (state.parties) {
+                                        if (state.parties.length > 0) {
+                                            for (state_party_i in state.parties) {
+                                                if (state.parties[state_party_i].acronym === parties[party_i]) {
+                                                    selected = true;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    if (parties[party_i].toLowerCase().indexOf('nep') === -1) { %>
+                                    <div data-acronym="<%= parties[party_i].replace(/ /g, '_') %>" class="<% if (selected) { %>turnedon <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-background<% } %> party-button noselect <%= parties[party_i].replace(/ /g, '_').toLowerCase() %> <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-hover" id="besedni-zaklad-partyswitch-<%= parties[party_i].replace(/ /g, '_') %>"><%= parties[party_i] %></div>
+                                    <%  }
+                                } %>
                         </div>
                     </div>
-                    <div class="besedni-zaklad-parties-container">
-                            <% for (party_i in parties) {
-                                var selected = false;
-                                if (state.parties) {
-                                    if (state.parties.length > 0) {
-                                        for (state_party_i in state.parties) {
-                                            if (state.parties[state_party_i].acronym === parties[party_i]) {
-                                                selected = true;
-                                            }
-                                        }
-                                    }
-                                }
-                                if (parties[party_i].toLowerCase().indexOf('nep') === -1) { %>
-                                <div data-acronym="<%= parties[party_i].replace(/ /g, '_') %>" class="<% if (selected) { %>turnedon <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-background<% } %> party-button noselect <%= parties[party_i].replace(/ /g, '_').toLowerCase() %> <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-hover" id="besedni-zaklad-partyswitch-<%= parties[party_i].replace(/ /g, '_') %>"><%= parties[party_i] %></div>
-                                <%  }
-                            } %>
-                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 hidden-xs besedni-zaklad-people-container">
-                    <div class="besedni-zaklad-people">
-                        <div class="besedni-zaklad-people-wide">
-                            <% for (person_i in data.data) {
-                                var selected = false;
-                                if (state.people) {
-                                    if (state.people.length > 0) {
-                                        for (state_person_i in state.people) {
-                                            if (state.people[state_person_i].id === data.data[person_i].person.id) {
-                                                selected = true;
+                <div class="row">
+                    <div class="col-xs-12 hidden-xs besedni-zaklad-people-container">
+                        <div class="besedni-zaklad-people">
+                            <div class="besedni-zaklad-people-wide">
+                                <% for (person_i in data.data) {
+                                    var selected = false;
+                                    if (state.people) {
+                                        if (state.people.length > 0) {
+                                            for (state_person_i in state.people) {
+                                                if (state.people[state_person_i].id === data.data[person_i].person.id) {
+                                                    selected = true;
+                                                }
                                             }
                                         }
                                     }
-                                }
-                                %>
-                                <div class="besedni-zaklad-person <% if (!selected) { %>hidden<% } %> noselect" id="personcard<%= data.data[person_i]['person']['id'] %>" data-id="<%= data.data[person_i]['person']['id'] %>" data-acronym="<%= data.data[person_i]['person']['party']['acronym'] %>">
+                                    %>
+                                    <div class="besedni-zaklad-person <% if (!selected) { %>hidden<% } %> noselect" id="personcard<%= data.data[person_i]['person']['id'] %>" data-id="<%= data.data[person_i]['person']['id'] %>" data-acronym="<%= data.data[person_i]['person']['party']['acronym'] %>">
 
-                                    <div class="besedni-zaklad-person-party <%= data.data[person_i]['person']['party']['acronym'].replace(/ /g, '_').toLowerCase() %>-background">
-                                        <%= data.data[person_i]['person']['party']['acronym'] %>
-                                    </div>
-                                    <div class="besedni-zaklad-person-score">
-                                        Besedni<br />zaklad<br />
-                                        <span class="score"><%= data.data[person_i]['score'] %></span>
-                                    </div>
-                                    <div class="besedni-zaklad-person-internal-container">
-                                        <div class="besedni-zaklad-person-image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.data[person_i]['person']['gov_id'] %>.png)"></div>
-                                        <div class="besedni-zaklad-person-name">
-                                            <%= data.data[person_i]['person']['name'] %>
+                                        <div class="besedni-zaklad-person-party <%= data.data[person_i]['person']['party']['acronym'].replace(/ /g, '_').toLowerCase() %>-background">
+                                            <%= data.data[person_i]['person']['party']['acronym'] %>
+                                        </div>
+                                        <div class="besedni-zaklad-person-score">
+                                            Besedni<br />zaklad<br />
+                                            <span class="score"><%= data.data[person_i]['score'] %></span>
+                                        </div>
+                                        <div class="besedni-zaklad-person-internal-container">
+                                            <div class="besedni-zaklad-person-image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.data[person_i]['person']['gov_id'] %>.png)"></div>
+                                            <div class="besedni-zaklad-person-name">
+                                                <%= data.data[person_i]['person']['name'] %>
+                                            </div>
+                                        </div>
+                                        <div class="besedni-zaklad-person-close">
+                                            ×
                                         </div>
                                     </div>
-                                    <div class="besedni-zaklad-person-close">
-                                        ×
-                                    </div>
-                                </div>
-                            <% } %>
+                                <% } %>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="vocabulary-chart"></div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div id="vocabulary-chart"></div>
+            <div class="card-content-info hidden">
+                <div class="card-back-content">
+                    <div class="scroller" id="tvojamtka">
+                        <p class="info-text">
+                            ADD INFO TEXT
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content-embed hidden">
+                <div class="card-back-content">
+                    <div class="embed-content">
+                        <div class="embed-divider"></div>
+                        <div class="embed-switch-container">
+                            <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                            <div class="embed-switch-big-box">
+                                <div class="embed-switch-box">
+                                    <div class="embed-switch">
+                                        <div class="embed-switches">
+                                            <div class="leftswitch">
+                                                DA
+                                            </div>
+                                            <div class="rightswitch">
+                                                NE
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="embed-switch-ball"></div>
+                            </div>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-script">
+                            <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?embed=true&state=<%- encodeURIComponent(JSON.stringify(state)) %>"></textarea>
+                            <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-content-share hidden">
+                <div class="card-back-content">
+                    <div class="share-content">
+                        <label for="share-url">Neposredna povezava do kartice</label>
+                        <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?frame=true&state=<%- encodeURIComponent(JSON.stringify(state)) %>"/>
+                        <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                    </div>
                 </div>
             </div>
             <!-- delete this placeholder, this is the content of your card -->
         </div>
         <div class="card-footer">
-                <div class="card-logo hidden">
-                     <a href="https://skoraj.parlameter.si/">
-                         <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
-                     </a>
-                 </div>
-
-            <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed"></div>
-            <div class="card-circle-button card-info">i</div>
+            <div class="card-logo hidden">
+                <a href="https://skoraj.parlameter.si/">
+                    <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+                </a>
+            </div>
+            <div class="card-circle-button card-share" data-back="share"></div>
+            <div class="card-circle-button card-embed" data-back="embed"></div>
+            <div class="card-circle-button card-info" data-back="info">i</div>
         </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->

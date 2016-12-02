@@ -40,7 +40,7 @@ function makeSwitchEvent(acronym) {
             });
 
         } else { // .turnedon
-            
+
             $(this).removeClass(acronym.replace(/ /g, '_').toLowerCase() + '-background');
             partymembers.classed('selected', false);
             $(this).removeClass('turnedon');
@@ -508,4 +508,7 @@ function addSearchPerson(datum) {
     poslancisearch.initialize(true);
 }
 })();
+
+makeEmbedSwitch();
+activateCopyButton();
 addCardRippling();
