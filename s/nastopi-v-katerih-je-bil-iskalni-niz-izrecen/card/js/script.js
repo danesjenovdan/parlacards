@@ -34,9 +34,7 @@
     },
     methods: {
       checkIfBottom: function(event) {
-        var el = this.$el
-
-        if(el.scrollTop + el.offsetHeight >= el.scrollHeight) {
+        if(this.$el.scrollTop + this.$el.offsetHeight >= this.$el.scrollHeight) {
           this.fetchNextPage()
         }
       },
@@ -44,9 +42,9 @@
         if (this.fetching === true) return
 
         var that = this
+        this.fetching = true
         this.page++
 
-        this.fetching = true
         $.get(this.dataUrl + this.page, function(response) {
           that.rawSpeeches = that.rawSpeeches.concat(response.highlighting)
 
