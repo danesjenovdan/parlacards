@@ -1,5 +1,5 @@
 (function() {
-  var PAGE_SIZE = 49
+  var PAGE_SIZE = 50
 
   new Vue({
     el: '#nastopi-v-katerih-je-bil-iskalni-niz-izrecen',
@@ -27,6 +27,7 @@
         rawSpeeches: nastopiVKaterihData.highlighting,
         urls: nastopiVKaterihUrlsData,
         dataUrl: nastopiVKaterihCustomUrl + '/',
+        allResults: nastopiVKaterihData.response.numFound,
         page: 0,
         fetching: false
       }
@@ -47,18 +48,18 @@
 
         this.fetching = true
         $.get(this.dataUrl + this.page, function(response) {
-          if (response.highlighting.length === 0) {
+          that.rawSpeeches = that.rawSpeeches.concat(response.highlighting)
+
+          if (that.allResults <= (that.page + 1) * PAGE_SIZE) {
             that.$el.removeEventListener('scroll', that.checkIfBottom)
           }
-          else {
-            that.rawSpeeches = that.rawSpeeches.concat(response.highlighting)
-          }
+
           that.fetching = false
         })
       }
     },
     mounted: function() {
-      if (this.rawSpeeches.length >= PAGE_SIZE) {
+      if (this.allResults > PAGE_SIZE) {
         this.$el.addEventListener('scroll', this.checkIfBottom)
       }
     }
