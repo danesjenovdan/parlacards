@@ -61,61 +61,64 @@
             <div class="card-content-front">
                 <div class="bgwhite poslanec">
                     <% var max = Math.max(data.results.privzdignjeno, data.results.preprosto, data.results.problematicno); %>
-                    <div class="me_poslanec_mini clearfix">
-                        <div class="col150">
-                            <span class="poslanec_title stilne_title">
-                                Privzdignjeno <br>besedje
-                            </span>
-                        </div>
-                        <div class="col280">
-                            <div class="progress smallbar">
-                                <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.privzdignjeno/max * 100 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.privzdignjeno/max * 60 %>%;">
-                                    <span class="sr-only"><%= data.results.privzdignjeno.toFixed(2) %></span>
-                                </div>
-                                <div class="progress_number" <% if (Math.round(data.results.privzdignjeno) === 0) {%> style="padding-left: 0;" <%} %>>
-                                    <%= String(data.results.privzdignjeno.toFixed(2)).replace('.', ','); %>
+                    <% if (max === 0) { %>
+                        <div class="no-results" style="margin-top: 40px;">Brez govorov.</div>
+                    <% } else { %>
+                        <div class="me_poslanec_mini clearfix">
+                            <div class="col150">
+                                <span class="poslanec_title stilne_title">
+                                    Privzdignjeno <br>besedje
+                                </span>
+                            </div>
+                            <div class="col280">
+                                <div class="progress smallbar">
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.privzdignjeno/max * 100 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.privzdignjeno/max * 60 %>%;">
+                                        <span class="sr-only"><%= data.results.privzdignjeno.toFixed(2) %></span>
+                                    </div>
+                                    <div class="progress_number" <% if (Math.round(data.results.privzdignjeno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                        <%= String(data.results.privzdignjeno.toFixed(2)).replace('.', ','); %>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="me_poslanec_mini clearfix">
-                        <div class="col150">
-                            <span class="poslanec_title stilne_title">
-                                Preprosto <br>besedje
-                            </span>
-                        </div>
-                        <div class="col280">
-                            <div class="progress smallbar avgmin">
-                                <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.preprosto/max * 100 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.preprosto/max * 60 %>%;">
-                                    <span class="sr-only"><%= data.results.preprosto.toFixed(2) %></span>
-                                </div>
-                                <div class="progress_number" <% if (Math.round(data.results.preprosto) === 0) {%> style="padding-left: 0;" <%} %>>
-                                    <%= String(data.results.preprosto.toFixed(2)).replace('.', ','); %>
+                        <div class="me_poslanec_mini clearfix">
+                            <div class="col150">
+                                <span class="poslanec_title stilne_title">
+                                    Preprosto <br>besedje
+                                </span>
+                            </div>
+                            <div class="col280">
+                                <div class="progress smallbar avgmin">
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.preprosto/max * 100 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.preprosto/max * 60 %>%;">
+                                        <span class="sr-only"><%= data.results.preprosto.toFixed(2) %></span>
+                                    </div>
+                                    <div class="progress_number" <% if (Math.round(data.results.preprosto) === 0) {%> style="padding-left: 0;" <%} %>>
+                                        <%= String(data.results.preprosto.toFixed(2)).replace('.', ','); %>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="me_poslanec_mini clearfix">
-                        <div class="col150">
-                            <span class="poslanec_title stilne_title">
-                                Ekscesno <br>besedje
-                            </span>
-                        </div>
-                        <div class="col280">
-                            <div class="progress smallbar avgmin">
-                                <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.problematicno/max * 100 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.problematicno/max * 60 %>%;">
-                                    <span class="sr-only"><%= data.results.problematicno.toFixed(2) %></span>
-                                </div>
-                                <div class="progress_number" <% if (Math.round(data.results.problematicno) === 0) {%> style="padding-left: 0;" <%} %>>
-                                    <%= String(data.results.problematicno.toFixed(2)).replace('.', ','); %>
-                                </div>
+                        <div class="me_poslanec_mini clearfix">
+                            <div class="col150">
+                                <span class="poslanec_title stilne_title">
+                                    Ekscesno <br>besedje
+                                </span>
+                            </div>
+                            <div class="col280">
+                                <div class="progress smallbar avgmin">
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.problematicno/max * 100 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.problematicno/max * 60 %>%;">
+                                        <span class="sr-only"><%= data.results.problematicno.toFixed(2) %></span>
+                                    </div>
+                                    <div class="progress_number" <% if (Math.round(data.results.problematicno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                        <%= String(data.results.problematicno.toFixed(2)).replace('.', ','); %>
+                                    </div>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-
+                    <% } %>
 
 
                 </div>
