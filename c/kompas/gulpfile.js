@@ -175,11 +175,11 @@ gulp.task('remove-minify', function() {
         .pipe(rename({
             'basename': 'card.min'
         }))
-        // .pipe(htmlmin({ // piping directly to minifyhtml
-        //     'collapseWhitespace': true,
-        //     'conservativeCollapse': false,
-        //     'removeComments': true
-        // }))
+        .pipe(htmlmin({ // piping directly to minifyhtml
+            'collapseWhitespace': true,
+            'conservativeCollapse': true,
+            'removeComments': true
+        }))
         .pipe(replace(/<%= *className *%>/g, className))
         .pipe(replace(/\n/g, '')) // cleaning up newlines that were left
         .pipe(replace(/\s\s+/g, ' ')) // cleaning up multiple spaces that were left

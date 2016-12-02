@@ -1,3 +1,8 @@
+if (kompasState != {}) {
+    kompasState['people'] = [];
+    kompasState['parties'] = [];
+}
+
 (function() {
 
 function makeSwitchEvent2(selection) {
@@ -30,6 +35,20 @@ function makeSwitchEvent2(selection) {
             $(this).removeClass(d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '_').toLowerCase() + '-background');
 
             for (var i = 0; i < selection[0].length; i++) {
+
+                var _this = selection[0][i];
+                function hasID(element) {
+                    return element.id == d3.select(_this).datum().person.id;
+                }
+
+                var elementfound = kompasState.people.find(hasID);
+                if (elementfound) {
+                    kompasState.people.splice(kompasState.people.indexOf(elementfound), 1);
+                }
+                updateShareURL();
+
+
+
                 d3.select('#kompas-personcard' + d3.select(selection[0][i]).datum().person.id).classed('hidden', true);
                 d3.select(selection[0][i])
                     .attr('r', function(d) {
@@ -773,15 +792,16 @@ addCardRippling();
 
 function updateShareURL() {
     $('.card-kompas .share-url').val('https://glej.parlameter.si/c/kompas/?frame=true&state=' + encodeURIComponent(JSON.stringify(kompasState)));
-    // $('.card-kompas .card-footer').data('shortened', 'false');
-    // updateEmbedURL();
+    $('.card-kompas .card-footer').data('shortened', 'false');
+    updateEmbedURL();
 }
-// function updateEmbedURL() {
-//     var embedbase = '<script>(function(d,script){script=d.createElement(\'script\');script.type=\'text/javascript\';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = \'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js\';d.getElementsByTagName(\'head\')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/c/kompas/?embed=true&state=';
-//     var embedextra = encodeURIComponent(JSON.stringify(kompasState)) + '">';
-//     var embedcode = embedbase + '' + embedextra;
-//     $('.card-kompas .embed-script textarea').val(embedcode);
-// }
+function updateEmbedURL() {
+    var $textarea = $('.card-kompas .embed-script textarea');
+    var embedbase = $textarea.val().split('100%" src="')[0] + '100%" src="';
+    var embedextra = 'https://glej.parlameter.si/c/kompas/?embed=true&state=' + encodeURIComponent(JSON.stringify(kompasState)) + '">';
+    var embedcode = embedbase + embedextra;
+    $('.card-kompas .embed-script textarea').val(embedcode);
+}
 
 
 })();
