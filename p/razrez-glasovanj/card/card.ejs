@@ -115,10 +115,10 @@
                                 <a href="#Glasovala_PROTI<%= random_id %>" aria-controls="PROTI" role="tab" data-toggle="tab">PROTI</a>
                             </li>
                             <li role="presentation">
-                                <a href="#se_VZDRŽALA<%= random_id %>" aria-controls="se VZDRŽALA" role="tab" data-toggle="tab">se VZDRŽALA</a> <!-- TODO -->
+                                <a href="#se_VZDRŽALA<%= random_id %>" aria-controls="se VZDRŽALA" role="tab" data-toggle="tab">se VZDRŽAL<% if (data.person.gender == 'f') { %>A<% } %></a> <!-- TODO -->
                             </li>
                             <li role="presentation">
-                                <a href="#NI_glasovala<%= random_id %>" aria-controls="NI glasovala" role="tab" data-toggle="tab">NI glasovala</a>
+                                <a href="#NI_glasovala<%= random_id %>" aria-controls="NI glasovala" role="tab" data-toggle="tab">NI glasoval<% if (data.person.gender == 'f') { %>a<% } %></a>
                             </li>
                         </ul>
 
