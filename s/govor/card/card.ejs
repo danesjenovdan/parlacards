@@ -46,9 +46,9 @@
     <script>
       var randomId2 = '<%= randomId2 %>';
     </script>
-    <div class="card-container card-halfling <%= className %>" id="<%= randomId2 %>">
-        <input type="hidden" id="<%= randomId2 %>words" value="<%= data.results.content.replace(/\n+/g, ' ').trim() %>">
-        <input type="hidden" id="<%= randomId2 %>id" value="<%= data.results.speech_id %>">
+    <div class="card-container card-halfling <%= className %>" id="<%= randomId2 %>" data-randomid="<%= randomId2 %>">
+        <input type="hidden" class="mywords" id="<%= randomId2 %>words" value="<%= data.results.content.replace(/\n+/g, ' ').trim() %>">
+        <input type="hidden" class="myid" id="<%= randomId2 %>id" value="<%= data.results.speech_id %>">
         <div class="card-header card-header-person">
             <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.person.gov_id %>.png')"></div>
             <h1 class="name">
@@ -110,25 +110,6 @@
           <div class="card-content-embed hidden">
               <div class="card-back-content">
                   <div class="embed-content">
-                      <div class="embed-divider"></div>
-                      <div class="embed-switch-container">
-                          <div class="embed-label">Podatki naj se vedno osvežujejo</div>
-                          <div class="embed-switch-big-box">
-                              <div class="embed-switch-box">
-                                  <div class="embed-switch">
-                                      <div class="embed-switches">
-                                          <div class="leftswitch">
-                                              DA
-                                          </div>
-                                          <div class="rightswitch">
-                                              NE
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="embed-switch-ball"></div>
-                          </div>
-                      </div>
                       <div class="embed-divider"></div>
                       <div class="embed-script">
                           <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<% if (data.results.quote_id) { %><%= data.results.quote_id %><% } else { %><%= data.results.speech_id %><% } %>?embed=true"></textarea>

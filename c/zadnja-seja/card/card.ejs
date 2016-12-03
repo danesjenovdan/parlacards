@@ -146,36 +146,34 @@
 
                 %>
 
-                <div class="card-placeholder bgwhite presence-of-pg <%=stPgs0%>" style="">
+                <div class="card-placeholder bgwhite presence-of-pg" style="">
                     <%
 
                     var colors = {
-                        ["id1"]: '#91d0ed',
-                        ["id2"]: '#b8584b',
-                        ["id3"]: '#5287a8',
-                        ["id4"]: '3!',
-                        ["id5"]: '#23a3de',
-                        ["id6"]: '#b58889',
-                        ["id7"]: '#4f6378',
-                        ["id8"]: '#857799',
-                        ["id97"]: '#d9776c',
-                    };
-                    %>
-                    <div class="pspris-clearfix">
-                        <% for (ps in presence) { %>
+                                ["id1"]: '#91d0ed',
+                                ["id2"]: '#b8584b',
+                                ["id3"]: '#5287a8',
+                                ["id4"]: '3!',
+                                ["id5"]: '#23a3de',
+                                ["id6"]: '#b58889',
+                                ["id7"]: '#4f6378',
+                                ["id8"]: '#857799',
+                                ["id97"]: '#d9776c',
+                            };
+                            %>
+                <div class="clearfix">
+                    <% for (ps in presence) { %>
 
-                        <div class="pspris-container">
-                            <div class="pspris">
-                                <span><%= presence[ps].percent %> %</span>
-                                <font><%= presence[ps].org.acronym %></font>
-                                <div class="" style="">
-                                    <div class="border" style="width: <%= presence[ps].percent %>%; background-color: <%=colors['id' + presence[ps].org.id]%>;"></div>
-                                </div>
-                            </div>
+                    <div class="pspris">
+                        <span><%= presence[ps].percent %> %</span>
+                        <font><%= presence[ps].org.acronym %></font>
+                        <div class="" style="">
+                            <div class="border" style="width: <%= presence[ps].percent %>%; background-color: <%=colors['id' + presence[ps].org.id]%>;"></div>
                         </div>
+                    </div>
 
 
-                        <%  }%>
+                    <%  }%>
                     </div>
                 </div>
 

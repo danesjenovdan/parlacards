@@ -235,3 +235,7 @@ a.document:hover {
         background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/vzdrzan.svg');
     }
 }
+
+.person-list .person:last-child {
+    border-bottom: 1px solid #f0f0f0;
+}
