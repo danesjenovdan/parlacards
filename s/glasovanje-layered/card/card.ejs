@@ -126,7 +126,11 @@
                                             <div class="column name">
                                                 <a href="" class="funblue-light-hover"><%= second_level_data[group]['mps'][mp]['name'] %></a>
                                                 <br/>
-                                                <a href="" class="funblue-light-hover"><%= second_level_data[group]['mps'][mp]['party']['acronym'] %></a>
+                                                <% if (second_level_data[group]['mps'][mp]['party']['acronym'].indexOf('NeP') === -1) { %>
+                                                    <a href="<%=urlsData.base + urlsData.partyLink.base + urlsData.party[second_level_data[group]['mps'][mp]['party']['id']].acronym + urlsData.partyLink.pregled %>" class="funblue-light-hover"><%= second_level_data[group]['mps'][mp]['party']['acronym'] %></a>
+                                                <% } else { %>
+                                                    <%= second_level_data[group]['mps'][mp]['party']['acronym'] %>
+                                                <% } %>
                                             </div>
                                             <%
                                                 var option;

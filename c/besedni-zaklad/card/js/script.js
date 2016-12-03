@@ -5,7 +5,7 @@
 
 // Define the div for the tooltip
 var tooltipdiv = d3.select("#vocabulary-chart").append("div")
-    .attr("class", "kompastooltip");
+    .attr("class", "besedni-zaklad-tooltip");
 
 // tooltip end
 

@@ -82,7 +82,7 @@ rect {
     stroke-width: 1;
 }
 
-/* kompas switches */
+/* besedni-zaklad switches */
 .besedni-zaklad-stranke {
     width: 52px;
     float: right;
@@ -228,7 +228,7 @@ rect {
     filter: url(#glow);
 }
 
-.kompastooltip {
+.besedni-zaklad-tooltip {
     position: absolute;
     text-align: center;
     border: 0px;
@@ -276,4 +276,49 @@ rect {
 #besedni-zaklad-scatter {
     @include card(1);
     margin-bottom: 10px;
+}
+
+// FLEXXER
+.besedni-zaklad-flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /*justify-content: space-between;*/
+    padding-bottom: 12px;
+}
+.besedni-zaklad-search-container {
+    display: flex;
+    width: 220px;
+    flex-shrink: 0;
+    margin-top: 16px;
+    margin-right: 20px;
+}
+.besedni-zaklad-parties-container {
+    display: flex;
+    overflow: hidden;
+
+    .party-button {
+        width: 51px;
+        flex: 1;
+    }
+}
+
+.party-button {
+    margin-left: 3px;
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+#besedni-zaklad-scatter {
+    @include card(1);
+    margin-bottom: 10px;
+}
+
+.centerme:hover {
+    path {
+        fill: #009CDD;
+    }
+
+    cursor: pointer;
 }
