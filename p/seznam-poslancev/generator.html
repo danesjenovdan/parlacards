@@ -485,6 +485,7 @@
         var that = this
         $.get('https://parla.me/shortner/generate?url=' + window.encodeURIComponent(url + '&frame=true'), function(response) {
             that.shortenedCardUrl = response
+            that.$el.querySelector('.card-content-share button').textContent = 'KOPIRAJ'
         });
       }
     },

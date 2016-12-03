@@ -68,11 +68,6 @@
 }
 .poslanec .key{
   padding: 10px 0;
-  font-weight: 300;
-
-  strong {
-    font-weight: 400;
-  }
 
   a:hover {
     background-color: #e1f6ff;
@@ -89,7 +84,7 @@
 }
 .verticalmember .col-xs-3{
   //width: 19%;
-  width: 65px;
+  width: 55px;
   padding: 0;
 }
 .verticalmember .member_data {
@@ -105,6 +100,9 @@
 }
 .verticalmember .member_data h4 {
   margin: 5px 0;
+}
+.verticalmember .member_data a {
+  color: #505050;
 }
 
 @media (max-width: 991px) {
