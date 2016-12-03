@@ -46,35 +46,39 @@
 
                 <div id="scrollbar-voting-card<%=Math.floor(Math.random() * 10000); %>" class="scroller session_voting">
 
-                    <% var data = data.results; %>
+                    <% var sessionid = data.session.id %>
 
-                    <% for (var i = 0; i < data.length ; i++) { %>
+                    <% if (data.results.length != 0) { %>
 
-                    <% var rnd = (Math.floor((Math.random() * 2)) == 1); %>
-                    <% var ayeney = rnd ? "aye" : "nay"; %>
-                    <% var ayeneygly = rnd ? "glyphicon-ok" : "glyphicon-remove"; %>
+                        <% var data = data.results; %>
+
+                        <% for (var i = 0; i < data.length ; i++) { %>
+
+                        <% var rnd = (Math.floor((Math.random() * 2)) == 1); %>
+                        <% var ayeney = rnd ? "aye" : "nay"; %>
+                        <% var ayeneygly = rnd ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
-                    <% var ayeney = (data[i].results.result == true)  ? "aye" : "nay"; %>
-                    <% var ayeneygly = (data[i].results.result == true) ? "glyphicon-ok" : "glyphicon-remove"; %>
+                        <% var ayeney = (data[i].results.result == true)  ? "aye" : "nay"; %>
+                        <% var ayeneygly = (data[i].results.result == true) ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
 
-                    <%
-                        var allInVotes = data[i].results.votes_for + data[i].results.against + data[i].results.abstain +data[i].results.not_present;
-                    var percent_votes_for = Math.floor( (data[i].results.votes_for / allInVotes) * 100) ;
-                    var percent_against = Math.floor( (data[i].results.against / allInVotes) * 100);
-                    var percent_abstain = Math.floor( (data[i].results.abstain / allInVotes) * 100);
-                    var percent_not_present = Math.floor( (data[i].results.not_present / allInVotes) * 100);
+                        <%
+                            var allInVotes = data[i].results.votes_for + data[i].results.against + data[i].results.abstain +data[i].results.not_present;
+                        var percent_votes_for = Math.floor( (data[i].results.votes_for / allInVotes) * 100) ;
+                        var percent_against = Math.floor( (data[i].results.against / allInVotes) * 100);
+                        var percent_abstain = Math.floor( (data[i].results.abstain / allInVotes) * 100);
+                        var percent_not_present = Math.floor( (data[i].results.not_present / allInVotes) * 100);
 
-                        var resulttext = '';
-                        if(data[i].results.text.length > 150){
-                            resulttext = data[i].results.text.substring(0, 150) + "...";
-                        }else{
-                            resulttext = data[i].results.text;
-                        }
+                            var resulttext = '';
+                            if(data[i].results.text.length > 150){
+                                resulttext = data[i].results.text.substring(0, 150) + "...";
+                            }else{
+                                resulttext = data[i].results.text;
+                            }
 
-    %>
+                        %>
 
 
                         <div class="clearfix single_voting">
@@ -137,7 +141,10 @@
                             </a>
                         </div>
 
-                    <% }%>
+                        <% }%>
+                    <% } else { %>
+                        <div class="no-results" style="margin-top: 30px;">Brez glasovanj.</div>
+                    <% } %>
 
                 </div>
 
@@ -176,7 +183,7 @@
                     </div>
                     <div class="embed-divider"></div>
                     <div class="embed-script">
-                        <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?embed=true&altHeader=true"></textarea>
+                        <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= sessionid %>?embed=true"></textarea>
                         <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                     </div>
                     
@@ -187,7 +194,7 @@
             <div class="card-back-content">
                 <div class="share-content">
                     <label for="share-url">Neposredna povezava do kartice</label>
-                    <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?frame=true&altHeader=true"/>
+                    <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= sessionid %>?frame=true"/>
                     <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
                 </div>
             </div>

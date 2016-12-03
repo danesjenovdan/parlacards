@@ -49,7 +49,7 @@
                                     <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.privzdignjeno/max * 100 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.privzdignjeno/max * 60 %>%;">
                                         <span class="sr-only"><%= data.results.privzdignjeno.toFixed(2) %></span>
                                     </div>
-                                    <div class="progress_number" <% if (Math.round(data.results.privzdignjeno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                    <div class="progress_number" <% if (data.results.privzdignjeno < 0.001) {%> style="padding-left: 0;" <%} %>>
                                         <%= String(data.results.privzdignjeno.toFixed(2)).replace('.', ','); %>
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@
                                     <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.preprosto/max * 100 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.preprosto/max * 60 %>%;">
                                         <span class="sr-only"><%= data.results.preprosto.toFixed(2) %></span>
                                     </div>
-                                    <div class="progress_number" <% if (Math.round(data.results.preprosto) === 0) {%> style="padding-left: 0;" <%} %>>
+                                    <div class="progress_number" <% if (data.results.preprosto < 0.001) {%> style="padding-left: 0;" <%} %>>
                                         <%= String(data.results.preprosto.toFixed(2)).replace('.', ','); %>
                                     </div>
                                 </div>
@@ -85,7 +85,7 @@
                                     <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.problematicno/max * 100 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.problematicno/max * 60 %>%;">
                                         <span class="sr-only"><%= data.results.problematicno.toFixed(2) %></span>
                                     </div>
-                                    <div class="progress_number" <% if (Math.round(data.results.problematicno) === 0) {%> style="padding-left: 0;" <%} %>>
+                                    <div class="progress_number" <% if (data.results.problematicno < 0.001) {%> style="padding-left: 0;" <%} %>>
                                         <%= String(data.results.problematicno.toFixed(2)).replace('.', ','); %>
                                     </div>
 

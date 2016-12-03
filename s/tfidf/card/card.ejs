@@ -63,6 +63,7 @@
                         <%
 
                         for (var i=0; i < 5; i++) {
+                            if (i < data.results.length) {
                                 var word = data.results[i];
                                 word.score = Math.round(word['scores']['tf-idf'] * 100);
                         %>
@@ -86,6 +87,7 @@
 
                         <%
                             }
+                            }
                         %>
 
                         </div>
@@ -95,6 +97,7 @@
                         <%
 
                         for (var i=5; i < 10; i++) {
+                            if (i < data.results.length) {
                                 var word = data.results[i];
                                 word.score = Math.round(word['scores']['tf-idf'] * 100);
                         %>
@@ -117,6 +120,7 @@
                             </div>
 
                         <%
+                            }
                             }
                         %>
 

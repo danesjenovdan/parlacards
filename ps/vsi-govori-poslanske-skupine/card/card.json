@@ -1,1 +1,1 @@
-{"_id":"57ab5ca214740366603d1d63","name":"Vsi govori poslanske skupine","group":"ps","method":"vsi-govori-poslanske-skupine","dataUrl":"https://analize.parlameter.si/v1/pg/getSpeechesOfPG"}
+{"_id":"57ab5ca214740366603d1d63","name":"Zadnji govori poslanske skupine","group":"ps","method":"vsi-govori-poslanske-skupine","dataUrl":"https://analize.parlameter.si/v1/pg/getSpeechesOfPG"}

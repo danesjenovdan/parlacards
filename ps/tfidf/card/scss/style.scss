@@ -5,24 +5,31 @@
 }
 
 .term, .frequency {
-    display: block;
-    float: left;
+    display: flex;
     height: 30px;
 }
 .term span, .frequency div span {
     line-height: 30px;
 }
-.progress-bar, .progress_number {
-    float: left;
-}
 
 .tfidf-bar {
     height: 30px;
     margin-bottom: 19px;
-}
-.progress-bar {
-    border-bottom-width: 0;
+    display: flex;
+    .progress-bar {
+        border-bottom-width: 0;    
+    }
 }
 .progress_number {
     line-height: 30px !important;
+}
+
+.term {
+    flex: 2;
+}
+.frequency {
+    flex: 5;
+    .progress {
+        width: 100%;
+    }
 }
