@@ -61,7 +61,7 @@
                                             </div>
                                             <div class="col-xs-9 member_data">
                                                 <h3>
-                                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.headOfPG.id].slug%><%=urlsData.personLink.pregled%>" style="color: #6d6d6d;" class="funblue-light-hover"><%= data.headOfPG.name %></a>
+                                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.headOfPG.id].slug%><%=urlsData.personLink.pregled%>" class="funblue-light-hover"><%= data.headOfPG.name %></a>
                                                 </h3>
                                                 <h4>
                                                     <%
@@ -98,7 +98,7 @@
                                             </div>
                                             <div class="col-xs-9 member_data">
                                                 <h3>
-                                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.viceOfPG[item].id].slug%><%=urlsData.personLink.pregled%>" style="color: #6d6d6d;" class="funblue-light-hover"><%= data.viceOfPG[item].name %></a>
+                                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.viceOfPG[item].id].slug%><%=urlsData.personLink.pregled%>" class="funblue-light-hover"><%= data.viceOfPG[item].name %></a>
                                                 </h3>
                                                 <h4>
                                                     <%
@@ -147,7 +147,7 @@
                                 </div>
                                 <div class="col-xs-10 bordertop0">
                                     <span class="key">
-                                        Kontakt: <strong><a href="mailto:<%= data.email %>"><%= data.social.email %></a></strong>
+                                        Kontakt: <a href="mailto:<%= data.email %>"><%= data.social.email %></a>
                                     </span>
                                 </div>
                             </div>
