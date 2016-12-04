@@ -71,6 +71,7 @@
           '/<br>' +
           '<br>' +
           'Za vsako poslansko skupino seštejemo rezultate poslancev in delimo s številom poslancev v njej. Posamezne seštevke delimo s skupnim seštevkom in normaliziramo (min 1 - max 100).',
+        roundingPrecision: 3
       },
       preprosto: {
         titleSuffix: 's preprostim besedjem',
@@ -82,6 +83,7 @@
           'pogovorno (pog.)<br>' +
           '<br>' +
           'Za vsako poslansko skupino seštejemo rezultate poslancev in delimo s številom poslancev v njej. Posamezne seštevke delimo s skupnim seštevkom in normaliziramo (min 1 - max 100).',
+        roundingPrecision: 3
       },
       problematicno: {
         titleSuffix: 'z ekscesnim besedjem',
@@ -93,6 +95,7 @@
           'slabšalno (slabš.), vulgarno (vulg.)<br>' +
           '<br>' +
           'Za vsako poslansko skupino seštejemo rezultate poslancev in delimo s številom poslancev v njej. Posamezne seštevke delimo s skupnim seštevkom in normaliziramo (min 1 - max 100).',
+        roundingPrecision: 3
       },
     };
     var analysis = state && state.analysis ? state.analysis : 'seat_count';
@@ -120,7 +123,7 @@
                 </div>
                 <div class="column chart">
                 <% var rawValue = result.results[analysis];
-                   var displayValue = round(rawValue, 1) + (analyses[analysis].unit === 'percent' ? '%' : '');
+                   var displayValue = (round(rawValue, analyses[analysis].roundingPrecision || 1) + (analyses[analysis].unit === 'percent' ? '%' : '')).replace('.', ',');
                    var chartWidth = rawValue ? rawValue / maxValue * 80 + '%' : '1px'; %>
                     <div class="progress hugebar">
                         <div class="progress-bar funblue" role="progressbar" style="width: <%= chartWidth %>"></div>

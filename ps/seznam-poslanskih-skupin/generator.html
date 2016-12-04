@@ -180,6 +180,7 @@
             '/<br>' +
             '<br>' +
             'Za vsako poslansko skupino seštejemo rezultate poslancev in delimo s številom poslancev v njej. Posamezne seštevke delimo s skupnim seštevkom in normaliziramo (min 1 - max 100).',
+          roundingPrecision: 3
         },
         {
           id: 'preprosto',
@@ -193,6 +194,7 @@
             'pogovorno (pog.)<br>' +
             '<br>' +
             'Za vsako poslansko skupino seštejemo rezultate poslancev in delimo s številom poslancev v njej. Posamezne seštevke delimo s skupnim seštevkom in normaliziramo (min 1 - max 100).',
+          roundingPrecision: 3
         },
         {
           id: 'problematicno',
@@ -206,6 +208,7 @@
             'slabšalno (slabš.), vulgarno (vulg.)<br>' +
             '<br>' +
             'Za vsako poslansko skupino seštejemo rezultate poslancev in delimo s številom poslancev v njej. Posamezne seštevke delimo s skupnim seštevkom in normaliziramo (min 1 - max 100).',
+          roundingPrecision: 3
         },
       ]
     },
@@ -231,7 +234,7 @@
 
         return this.partyData.map(function(party) {
           var rawValue = party.results[that.currentAnalysis]
-          party.displayValue = that.round(rawValue, 1) + (that.currentAnalysisData.unit === 'percent' ? '%' : '')
+          party.displayValue = (that.round(rawValue, that.currentAnalysisData.roundingPrecision || 1) + (that.currentAnalysisData.unit === 'percent' ? '%' : '')).replace('.', ',')
           party.chartWidth = rawValue ? rawValue / maxValue * 80 + '%' : '1px'
           return party
         })
