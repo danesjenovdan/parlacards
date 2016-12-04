@@ -46,7 +46,7 @@
     <script>
       var randomId2 = '<%= randomId2 %>';
     </script>
-    <div class="card-container card-halfling <%= className %>" id="<%= randomId2 %>" data-randomid="<%= randomId2 %>">
+    <div class="card-container card-halfling <%= className %>" id="<%= randomId2 %>" data-randomid="<%= randomId2 %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
         <input type="hidden" class="mywords" id="<%= randomId2 %>words" value="<%= data.results.content.replace(/\n+/g, ' ').trim() %>">
         <input type="hidden" class="myid" id="<%= randomId2 %>id" value="<%= data.results.speech_id %>">
         <div class="card-header card-header-person">

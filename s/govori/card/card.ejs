@@ -61,7 +61,7 @@
 
         var randomId2 = makeId();
       %>
-      <div class="justaspeechcontainer <% if (i == 9) { %>last<% } %>">
+      <div class="justaspeechcontainer <% if (i == 9) { %>last<% } %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
         <div class="card-container card-halfling <%= className %> <% if (i > 9) { %>hidden<% } %> s<%= data2.results.speech_id %>" id="<%= randomId2 %>" data-randomid="<%= randomId2 %>">
             <input type="hidden" class="mywords" id="<%= randomId2 %>words" value="<%= data2.results.content.replace(/\n+/g, ' ').trim() %>">
             <input type="hidden" class="myid" id="<%= randomId2 %>id" value="<%= data2.results.speech_id %>">
