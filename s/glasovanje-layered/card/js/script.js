@@ -1,3 +1,5 @@
+if (!isMSIE) {
+
 var openOption = false;
 
 // utilities
@@ -641,6 +643,10 @@ $('.option').on('click', function() {
     console.log($(this).data('option'));
     $('.mpgroup.' + $(this).data('option')).removeClass('hidden');
 });
+
+} else {
+    $('.card-glasovanje-layered .card-content-front').html('<div class="no-results" style="width: 300px; margin-top: -20px;">Tvoj brskalnik žal ne podpira tehnologij, ki poganjajo to kartico.</div>')
+}
 
 makeEmbedSwitch();
 activateCopyButton();

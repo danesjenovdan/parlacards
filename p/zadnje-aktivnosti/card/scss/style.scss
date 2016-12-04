@@ -13,3 +13,19 @@
         min-height: 30px;
     }
 }
+
+.recent-activity {
+    section {
+        ul {
+            li {
+                span {
+                    top: -5px;
+                    background-size: 25px;
+                }
+                p {
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+}

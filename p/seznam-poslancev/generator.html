@@ -352,15 +352,15 @@
               case 'name':
                 var a = memberA.person.name
                 var b = memberB.person.name
-                return a.localeCompare(b)
+                return a.localeCompare(b, 'sl')
               case 'district':
                 var a = memberA.person.formattedDistrict
                 var b = memberB.person.formattedDistrict
-                return a.localeCompare(b)
+                return a.localeCompare(b, 'sl')
               case 'party':
                 var a = memberA.person.party.acronym
                 var b = memberB.person.party.acronym
-                return a.localeCompare(b)
+                return a.localeCompare(b, 'sl')
               default:
                 break
             }

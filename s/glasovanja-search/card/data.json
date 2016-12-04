@@ -1,0 +1,146 @@
+[
+    {
+        "created_for": "2016-11-07",
+        "session": {
+            "date": "7. 11. 2016",
+            "org": {
+                "acronym": "DZ",
+                "is_coalition": false,
+                "name": "Državni zbor",
+                "id": 95
+            },
+            "id": 5585,
+            "name": "36. izredna seja",
+            "in_review": false
+        },
+        "results": {
+            "abstain": 2,
+            "text": "Interpelacija o delu in odgovornosti ministrice za izobraževanje, znanost in šport dr. Maje Makovec Brenčič - Glasovanje o interpelaciji",
+            "votes_for": 18,
+            "against": 48,
+            "motion_id": 6514,
+            "not_present": 22,
+            "result": false
+        }
+    },
+    {
+        "created_for": "2015-09-21",
+        "session": {
+            "date": "21. 9. 2015",
+            "org": {
+                "acronym": "DZ",
+                "is_coalition": false,
+                "name": "Državni zbor",
+                "id": 95
+            },
+            "id": 6674,
+            "name": "11. redna seja",
+            "in_review": false
+        },
+        "results": {
+            "abstain": 3,
+            "text": "Interpelacija o delu in odgovornosti ministrice za notranje zadeve mag. Vesne Györkös Žnidar - Glasovanje o interpelaciji",
+            "votes_for": 25,
+            "against": 50,
+            "motion_id": 5801,
+            "not_present": 12,
+            "result": false
+        }
+    },
+    {
+        "created_for": "2016-06-13",
+        "session": {
+            "date": "13. 6. 2016",
+            "org": {
+                "acronym": "DZ",
+                "is_coalition": false,
+                "name": "Državni zbor",
+                "id": 95
+            },
+            "id": 5576,
+            "name": "20. redna seja",
+            "in_review": false
+        },
+        "results": {
+            "abstain": 1,
+            "text": "Interpelacija o delu in odgovornosti ministrice za delo, družino, socialne zadeve in enake možnosti, dr. Anje Kopač Mrak - Glasovanje o interpelaciji - MiDDSZEM Anja Kopač Mrak",
+            "votes_for": 43,
+            "against": 38,
+            "motion_id": 4966,
+            "not_present": 8,
+            "result": false
+        }
+    },
+    {
+        "created_for": "2016-02-29",
+        "session": {
+            "date": "29. 2. 2016",
+            "org": {
+                "acronym": "DZ",
+                "is_coalition": false,
+                "name": "Državni zbor",
+                "id": 95
+            },
+            "id": 5580,
+            "name": "16. redna seja",
+            "in_review": false
+        },
+        "results": {
+            "abstain": 4,
+            "text": "Interpelacija o delu in odgovornosti ministra za zunanje zadeve Karla Viktorja Erjavca - Glasovanje o interpelaciji - MiZZ Karl Viktor Erjavec",
+            "votes_for": 20,
+            "against": 51,
+            "motion_id": 5190,
+            "not_present": 15,
+            "result": false
+        }
+    },
+    {
+        "created_for": "2016-10-17",
+        "session": {
+            "date": "17. 10. 2016",
+            "org": {
+                "acronym": "DZ",
+                "is_coalition": false,
+                "name": "Državni zbor",
+                "id": 95
+            },
+            "id": 5573,
+            "name": "23. redna seja",
+            "in_review": false
+        },
+        "results": {
+            "abstain": 7,
+            "text": "Interpelacija o delu in odgovornosti ministrice za zdravje Milojke Kolar Celarc - Glasovanje o interpelaciji",
+            "votes_for": 24,
+            "against": 49,
+            "motion_id": 4776,
+            "not_present": 10,
+            "result": false
+        }
+    },
+    {
+        "created_for": "2016-09-19",
+        "session": {
+            "date": "19. 9. 2016",
+            "org": {
+                "acronym": "DZ",
+                "is_coalition": false,
+                "name": "Državni zbor",
+                "id": 95
+            },
+            "id": 5574,
+            "name": "22. redna seja",
+            "in_review": false
+        },
+        "results": {
+            "abstain": 22,
+            "text": "Interpelacija o delu in odgovornosti ministra za infrastrukturo, dr. Petra Gašperšiča - Glasovanje o interpelaciji",
+            "votes_for": 13,
+            "against": 48,
+            "motion_id": 4843,
+            "not_present": 7,
+            "result": false
+        }
+    }
+]

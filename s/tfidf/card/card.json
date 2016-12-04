@@ -1,1 +1,1 @@
-{"_id":"57bc7e9a433f8ca0187fd7ca","name":"Besede, ki so zaznamovale sejo","group":"s","method":"besede-ki-so-zaznamovale-sejo","dataUrl":"https://analize.parlameter.si/v1/s/getTFIDF"}
+{"_id":"57bc7e9a433f8ca0187fd7ca","name":"Besede, ki so zaznamovale sejo","group":"s","method":"tfidf","dataUrl":"https://analize.parlameter.si/v1/s/getTFIDF"}

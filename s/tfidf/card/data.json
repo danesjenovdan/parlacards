@@ -1,85 +1,138 @@
 {
+    "created_at": "01.12.2016",
+    "created_for": "01.12.2016",
+    "session": {
+        "date": "25. 11. 2016",
+        "org": {
+            "acronym": "DZ",
+            "is_coalition": false,
+            "id": 95,
+            "name": "Državni zbor"
+        },
+        "name": "38. izredna seja",
+        "in_review": false,
+        "id": 7522
+    },
     "results": [
         {
-            "term": "genetski",
+            "term": "vojakinja možakinja",
             "scores": {
-                "tf": 25,
-                "df": 37,
-                "tf-idf": 0.6756756756756757
+                "tf": 27,
+                "df": 45,
+                "tf-idf": 0.6
             }
         },
         {
-            "term": "skrob",
+            "term": "vojska",
             "scores": {
-                "tf": 2,
-                "df": 4,
-                "tf-idf": 0.5
+                "tf": 492,
+                "df": 2133,
+                "tf-idf": 0.23066104078762306
             }
         },
         {
-            "term": "soja",
+            "term": "služenje",
             "scores": {
-                "tf": 8,
-                "df": 30,
-                "tf-idf": 0.26666666666666666
+                "tf": 20,
+                "df": 101,
+                "tf-idf": 0.19801980198019803
             }
         },
         {
-            "term": "gso",
+            "term": "pripadnik",
             "scores": {
-                "tf": 17,
-                "df": 69,
-                "tf-idf": 0.2463768115942029
+                "tf": 157,
+                "df": 1006,
+                "tf-idf": 0.15606361829025844
             }
         },
         {
-            "term": "beljakovinski",
+            "term": "podčastnik",
             "scores": {
-                "tf": 7,
-                "df": 32,
-                "tf-idf": 0.21875
+                "tf": 11,
+                "df": 94,
+                "tf-idf": 0.11702127659574468
             }
         },
         {
-            "term": "mikroorganizem",
+            "term": "puška",
             "scores": {
-                "tf": 2,
-                "df": 14,
-                "tf-idf": 0.14285714285714285
+                "tf": 11,
+                "df": 108,
+                "tf-idf": 0.10185185185185185
             }
         },
         {
-            "term": "krmiti",
+            "term": "poveljnik",
             "scores": {
-                "tf": 3,
-                "df": 32,
-                "tf-idf": 0.09375
+                "tf": 24,
+                "df": 275,
+                "tf-idf": 0.08727272727272728
             }
         },
         {
-            "term": "koruzen",
+            "term": "armada",
             "scores": {
-                "tf": 2,
-                "df": 27,
-                "tf-idf": 0.07407407407407407
+                "tf": 13,
+                "df": 164,
+                "tf-idf": 0.07926829268292683
             }
         },
         {
-            "term": "osvescati",
+            "term": "plačen",
             "scores": {
-                "tf": 2,
-                "df": 33,
-                "tf-idf": 0.06060606060606061
+                "tf": 43,
+                "df": 568,
+                "tf-idf": 0.07570422535211267
             }
         },
         {
-            "term": "rastlina",
+            "term": "obramba",
             "scores": {
-                "tf": 9,
-                "df": 169,
-                "tf-idf": 0.05325443786982249
+                "tf": 173,
+                "df": 2516,
+                "tf-idf": 0.06875993640699524
+            }
+        },
+        {
+            "term": "zmogljivost",
+            "scores": {
+                "tf": 27,
+                "df": 612,
+                "tf-idf": 0.04411764705882353
+            }
+        },
+        {
+            "term": "oprema",
+            "scores": {
+                "tf": 50,
+                "df": 1669,
+                "tf-idf": 0.029958058717795086
+            }
+        },
+        {
+            "term": "in",
+            "scores": {
+                "tf": 1460,
+                "df": 57254,
+                "tf-idf": 0.025500401718657213
+            }
+        },
+        {
+            "term": "uslužbenec",
+            "scores": {
+                "tf": 31,
+                "df": 1280,
+                "tf-idf": 0.02421875
+            }
+        },
+        {
+            "term": "enkraten",
+            "scores": {
+                "tf": 14,
+                "df": 598,
+                "tf-idf": 0.023411371237458192
             }
         }
-    ],
-    "session_id": 3210
+    ]
 }

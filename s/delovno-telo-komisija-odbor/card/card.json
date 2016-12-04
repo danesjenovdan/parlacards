@@ -1,1 +1,1 @@
-{"_id":"57ee5d1b0e22be4da08be050","name":"delovno telo komisija odbor","group":"pg","method":"getWorkingBodies","dataUrl":"https://analize.parlameter.si/v1/pg/getWorkingBodies"}
+{"_id":"57ee5d1b0e22be4da08be050","name":"Delovno telo","group":"wb","method":"getWorkingBodies","dataUrl":"https://analize.parlameter.si/v1/pg/getWorkingBodies"}

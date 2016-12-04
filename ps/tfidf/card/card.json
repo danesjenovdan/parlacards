@@ -1,1 +1,1 @@
-{"_id":"57f838832bd2ed9a65b598cd","name":"Besede, ki jih delajo posebne","group":"ps","method":"tfidf","dataUrl":"https://analize.parlameter.si/v1/pg/getTFIDF"}
+{"_id":"57f838832bd2ed9a65b598cd","name":"Besede, ki jih delajo zaznamujejo","group":"ps","method":"tfidf","dataUrl":"https://analize.parlameter.si/v1/pg/getTFIDF"}

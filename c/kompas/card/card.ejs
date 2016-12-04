@@ -70,6 +70,14 @@
         var kompasState = <%- JSON.stringify(state); %>;
     </script> <!-- TODO this is a dirty hack -->
 
+    <!-- IE stuff -->
+    <script>
+        var isMSIE = false;
+        if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv 11/)) || $.browser.msie == 1) {
+            isMSIE = true;
+        }
+    </script>
+
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container <%= className %>">
         <div class="card-header">
