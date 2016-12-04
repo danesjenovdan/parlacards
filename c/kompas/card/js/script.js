@@ -801,14 +801,14 @@ if (!isMSIE) {
     }
 
     function updateShareURL() {
-        $('.card-kompas .share-url').val('https://glej.parlameter.si/c/kompas/?frame=true&state=' + encodeURIComponent(JSON.stringify(kompasState)));
+        $('.card-kompas .share-url').val('https://glej.parlameter.si/c/kompas/?frame=true&altHeader=true&state=' + encodeURIComponent(JSON.stringify(kompasState)));
         $('.card-kompas .card-footer').data('shortened', 'false');
         updateEmbedURL();
     }
     function updateEmbedURL() {
         var $textarea = $('.card-kompas .embed-script textarea');
         var embedbase = $textarea.val().split('100%" src="')[0] + '100%" src="';
-        var embedextra = 'https://glej.parlameter.si/c/kompas/?embed=true&state=' + encodeURIComponent(JSON.stringify(kompasState)) + '">';
+        var embedextra = 'https://glej.parlameter.si/c/kompas/?embed=true&altHeader=true&state=' + encodeURIComponent(JSON.stringify(kompasState)) + '">';
         var embedcode = embedbase + embedextra;
         $('.card-kompas .embed-script textarea').val(embedcode);
     }
