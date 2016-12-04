@@ -1,91 +1,12 @@
+@import 'parlassets/scss/breakpoints';
+
 .card-header h1, .card-footer h1 {
   color: #525252;
 }
 
-.pspris span {
-  color: #525252;
-  font-weight: 500;
-}
-
 .presence-of-pg {
   height: 120px;
-}
-
-@media (max-width: 950px) {
-  .presence-of-pg .pspris {
-    margin-bottom: 20px;
-  }
-  .presence-of-pg {
-    height: auto;
-  }
-}
-
-
-.pspris {
-  /*width: 10%;*/
-  /*width: 13.1%;*/
-}
-
-.popgoptmin .pspris {
-  width: 11.3%;
-}
-.popgoptmax .pspris {
-  width: 13.1%;
-}
-
-.pspris span {
-  font-size: 32px;
-}
-
-@media (max-width: 390px) {
-  .popgoptmin .pspris,
-  .popgoptmax .pspris{
-    width: 22.7%;
-  }
-
-}
-
-@media (max-width: 980px) {
-  .popgoptmin .pspris,
-  .popgoptmax .pspris{
-    width: 31.8%;
-    margin-bottom: 10px;
-  }
-  .popgoptmin .pspris:nth-child(3n),
-  .popgoptmax .pspris:nth-child(3n){
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 530px) {
-  .popgoptmin .pspris,
-  .popgoptmax .pspris{
-    width: 30.5%;
-  }
-  .popgoptmin .pspris:nth-child(3n),
-  .popgoptmax .pspris:nth-child(3n){
-    margin-right: 0;
-  }
-    .popgoptmin .pspris:nth-child(4n),
-    .popgoptmax .pspris:nth-child(4n){
-    margin-right: 10px;
-  }
-      .popgoptmin .pspris span,
-      .popgoptmax .pspris span{
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 38px;
-  }
-        .popgoptmin .pspris font,
-        .popgoptmax .pspris font{
-    font-size: 18px;
-    line-height: 34px;
-  }
-          .popgoptmin .pspris div ,
-          .popgoptmax .pspris div {
-    margin-top: 0;
-  }
-
+  @include respond-to(up-to-limbo) { height: auto; }
 }
 
 .card-content {
