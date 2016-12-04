@@ -24,6 +24,7 @@
 
     <script>
         var data = <%- JSON.stringify(data.data); %>;
+        var urlsData = <%- JSON.stringify(urlsData); %>;
     </script>
 
 </head> <!-- removeme -->
@@ -234,7 +235,7 @@
         </div>
         <div class="card-footer">
             <div class="card-logo hidden">
-                <a href="https://skoraj.parlameter.si/">
+                <a href="<%= urlsData.base %>">
                     <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
                 </a>
             </div>

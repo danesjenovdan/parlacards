@@ -65,7 +65,7 @@
                   <ul>
                     <li v-for="ballot in votingDay.ballots">
                       <div :class="['icon', ballot.option]"></div>
-                      <div class="motion">{{ ballot.label }} <a class="funblue-light-hover" :href="'https://skoraj.parlameter.si/seja/glasovanje/' + ballot.session_id + '/' + ballot.vote_id + ''">{{ ballot.motion }}</a></div>
+                      <div class="motion">{{ ballot.label }} <a class="funblue-light-hover" :href="'<%= urlsData.base %>/seja/glasovanje/' + ballot.session_id + '/' + ballot.vote_id + ''">{{ ballot.motion }}</a></div>
                     </li>
                   </ul>
                 </template>
@@ -107,7 +107,7 @@
                             <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?embed=true&altHeader=true"></textarea>
                             <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
         </div>
         <div class="card-footer">
                 <div class="card-logo hidden">
-                     <a href="https://skoraj.parlameter.si/">
+                     <a href="<%= urlsData.base %>">
                          <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
                      </a>
                  </div>

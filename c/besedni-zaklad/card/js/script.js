@@ -433,7 +433,7 @@ if (!isMSIE) {
         updatePeopleScroller();
     });
     $('.besedni-zaklad-person').on('click', function() {
-        document.location.href = 'https://skoraj.parlameter.si/p/id/' + $(this).data('id');
+        document.location.href = urlsData.base + urlsData.personLink.base + urlsData.person[$(this).data('id')].slug + urlsData.personLink.pregled;
     });
 
 

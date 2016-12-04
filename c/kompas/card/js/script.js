@@ -31,7 +31,7 @@ if (!isMSIE) {
             } else {
 
                 kompasState.parties.splice(kompasState.parties.indexOf(smallparty), 1);
-                
+
                 $(this).removeClass(d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '_').toLowerCase() + '-background');
 
                 for (var i = 0; i < selection[0].length; i++) {
@@ -680,8 +680,7 @@ if (!isMSIE) {
         }
     });
     $('.kompas-person').on('click', function() {
-        document.location.href = 'https://skoraj.parlameter.si/p/id/' + $(this).data('id');
-
+        document.location.href = urlsData.base + urlsData.personLink.base + urlsData.person[$(this).data('id')].slug + urlsData.personLink.pregled;
     });
 
     var poslancisearch = new Bloodhound({
