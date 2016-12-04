@@ -19,7 +19,7 @@
 
 <body>
   <div id="member-list-generator-container">
-    <div class="container member-list-generator">
+    <div class="member-list-generator">
       <div class="row">
         <div class="col-md-12">
           <ul class="analyses">
@@ -36,7 +36,8 @@
               <select
                 name="analysis"
                 id="analysis"
-                v-model="currentAnalysis">
+                v-model="currentAnalysis"
+                @change="selectAnalysis(currentAnalysis)">
                 <option
                   v-for="analysis in analyses"
                   :value="analysis.id">
