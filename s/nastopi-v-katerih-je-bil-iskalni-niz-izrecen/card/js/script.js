@@ -2,7 +2,7 @@
   var PAGE_SIZE = 50
 
   new Vue({
-    el: '#nastopi-v-katerih-je-bil-iskalni-niz-izrecen',
+    el: '#vue-nvkjbini',
     computed: {
       speeches: function() {
         var that = this
