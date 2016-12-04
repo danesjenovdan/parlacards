@@ -130,14 +130,13 @@
   </div>
 
   <script>
-      function measure(c,a,n,v) {
-
-          console.log(c);
-          console.log(a);
-          console.log(n);
-          console.log(v);
-          console.log('-----------');
-      }
+  function measure(c,a,n,v) {
+      console.log(c);
+      console.log(a);
+      console.log(n);
+      console.log(v);
+      console.log('-----------');
+  }
   new Vue({
     el: '#member-list-generator-container',
     data: {
@@ -269,11 +268,12 @@
           return a < b ? 1 : (a > b ? -1 : 0)
         })
       })
+      this.shortenUrl(this.generatedCardUrl)
     },
     methods: {
       selectAnalysis: function(analysisId) {
-        this.currentAnalysis = analysisId;
-        this.measurePiwik(analysisId);
+        this.currentAnalysis = analysisId
+        this.measurePiwik(analysisId)
       },
       round: function(value, precision) {
         var multiplier = Math.pow(10, precision || 0)
@@ -284,7 +284,7 @@
         $.get('https://parla.me/shortner/generate?url=' + window.encodeURIComponent(url + '&frame=true'), function(response) {
             that.shortenedCardUrl = response
             that.$el.querySelector('.card-content-share button').textContent = 'KOPIRAJ'
-        });
+        })
       },
       getPartyUrl: function(party) {
         return this.slugs
