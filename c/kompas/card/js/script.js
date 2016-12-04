@@ -766,22 +766,24 @@ if (!isMSIE) {
         poslancisearch.initialize(true);
     }
 
-    if (kompasState.people.length > 0) {
-        for (person_i in kompasState.people) {
-            showPersonPicture(svg.select('#_' + kompasState.people[person_i].id).datum());
-            kompasState.people[person_i]['name'] = svg.select('#_' + kompasState.people[person_i].id).datum().person.name;
-            // move to front
-            var parent = $('#_' + kompasState.people[person_i].id).parent()[0];
-            moveToFront(parent, svg.select('#_' + kompasState.people[person_i].id).datum());
+    if (kompasState.people && kompasState.parties) {
+        if (kompasState.people.length > 0) {
+            for (person_i in kompasState.people) {
+                showPersonPicture(svg.select('#_' + kompasState.people[person_i].id).datum());
+                kompasState.people[person_i]['name'] = svg.select('#_' + kompasState.people[person_i].id).datum().person.name;
+                // move to front
+                var parent = $('#_' + kompasState.people[person_i].id).parent()[0];
+                moveToFront(parent, svg.select('#_' + kompasState.people[person_i].id).datum());
+            }
         }
-    }
 
-    if (kompasState.parties.length > 0) {
-        for (party_i in kompasState.parties) {
-            if (kompasState.parties[party_i] === 'desus') {
-                $('#partyswitch-DeSUS').click();
-            } else {
-                $('#partyswitch-' + kompasState.parties[party_i].replace(/-/g, '_').toUpperCase()).click();
+        if (kompasState.parties.length > 0) {
+            for (party_i in kompasState.parties) {
+                if (kompasState.parties[party_i] === 'desus') {
+                    $('#partyswitch-DeSUS').click();
+                } else {
+                    $('#partyswitch-' + kompasState.parties[party_i].replace(/-/g, '_').toUpperCase()).click();
+                }
             }
         }
     }
