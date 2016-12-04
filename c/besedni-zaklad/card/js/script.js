@@ -40,7 +40,9 @@ if (!isMSIE) {
                     $('#personcard' + d.person.id).removeClass('hidden');
                     updatePeopleScroller();
                 });
-
+                if(typeof measure == 'function') {
+                    measure("besedni-zaklad","party",acronym,'');
+                }
             } else { // .turnedon
 
                 $(this).removeClass(acronym.replace(/ /g, '_').toLowerCase() + '-background');
@@ -55,6 +57,7 @@ if (!isMSIE) {
                     $('#personcard' + d.person.id).addClass('hidden');
                     updatePeopleScroller();
                 });
+
             }
         });
     }
@@ -321,6 +324,9 @@ if (!isMSIE) {
         if (!clicked_element.classed('selected')) {
             clicked_element.classed('selected', true);
             $('#personcard' + datum.person.id).removeClass('hidden');
+            if(typeof measure == 'function') {
+                measure("besedni-zaklad","person",datum.person.name,'');
+            }
         } else {
             clicked_element.classed('selected', false);
             $('#personcard' + datum.person.id).addClass('hidden');
@@ -337,6 +343,7 @@ if (!isMSIE) {
                 $('#besedni-zaklad-partyswitch-' + partyacronym)
                     .removeClass(backgroundclassname);
             }
+
         }
 
         if ($('.dot.selected').length === 0) {
@@ -356,6 +363,10 @@ if (!isMSIE) {
         if (!clicked_element.classed('selected')) {
             clicked_element.classed('selected', true);
             $('#personcard' + datum.id).removeClass('hidden');
+            if(typeof measure == 'function') {
+                measure("besedni-zaklad","person",datum.name,'');
+            }
+
         } else {
             clicked_element.classed('selected', false);
             $('#personcard' + datum.id).addClass('hidden');
@@ -482,10 +493,18 @@ if (!isMSIE) {
 
             if (datum.acronym) {
                 $('#besedni-zaklad-partyswitch-' + datum.acronym.replace(' ', '_')).click();
+                if(typeof measure == 'function') {
+                    measure("besedni-zaklad","party",acronym,'');
+                }
+
             } else {
 
                 exposeHer(datum);
                 removeSearchPerson(datum);
+                if(typeof measure == 'function') {
+                    measure("besedni-zaklad","person",datumn.name,'');
+                }
+
             }
 
             $('.besedni-zaklad-search-input').typeahead('close').typeahead('val', '');

@@ -28,6 +28,9 @@ if (!isMSIE) {
                 }
                 console.log(Math.floor(selection[0].length / 2));
                 centerCompass();
+                if(typeof measure == 'function') {
+                    measure("kompas","party",smallparty,'');
+                }
             } else {
 
                 kompasState.parties.splice(kompasState.parties.indexOf(smallparty), 1);
@@ -278,7 +281,9 @@ if (!isMSIE) {
                 // move to front
                 var parent = $('#_' + d.person.id).parent()[0];
                 moveToFront(parent, d);
-
+                if(typeof measure == 'function') {
+                    measure("kompas","person",d.person.name,'');
+                }
                 //     element.classed('selected', true);
                 // }
             })
@@ -382,6 +387,7 @@ if (!isMSIE) {
                 d3.select('#kompas-personcard' + svg.select(this).attr('data-id')).classed('hidden', true);
                 svg.select(this).remove();
             });
+
     }
 
     function moveToFront(parent, selected) {
@@ -727,6 +733,9 @@ if (!isMSIE) {
 
             if (datum.acronym) {
                 $('#partyswitch-' + datum.acronym.replace(/ /g, '_')).click();
+                if(typeof measure == 'function') {
+                    measure("kompas","party",datum.acronym,'');
+                }
             } else {
 
                 // show photos
@@ -741,6 +750,9 @@ if (!isMSIE) {
 
                 // zoom in
                 zoomIn(svg.select('#_' + datum.id).datum(), 4);
+                if(typeof measure == 'function') {
+                    measure("kompas","person",datum.name,'');
+                }
             }
 
             $('.kompas-search-input').typeahead('close').typeahead('val', '');
