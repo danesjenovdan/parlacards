@@ -1,23 +1,12 @@
+@import 'parlassets/scss/breakpoints';
+
 .card-header h1, .card-footer h1 {
   color: #525252;
 }
 
-.pspris span {
-  color: #525252;
-  font-weight: 500;
-}
-
 .presence-of-pg {
   height: 120px;
-}
-
-@media (max-width: 950px) {
-  .presence-of-pg .pspris {
-    margin-bottom: 20px;
-  }
-  .presence-of-pg {
-    height: auto;
-  }
+  @include respond-to(up-to-limbo) { height: auto; }
 }
 
 .card-container {
@@ -42,53 +31,6 @@
   width: auto;
   padding-right: 20px;
   padding-left: 20px;
-}
-
-
-.pspris span {
-  font-size: 32px;
-}
-
-@media (max-width: 390px) {
-  .pspris {
-    width: 22.7%;
-  }
-
-}
-
-@media (max-width: 980px) {
-  .pspris {
-    width: 31.8%;
-    margin-bottom: 10px;
-  }
-  .pspris:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 530px) {
-  .pspris {
-    width: 30.5%;
-  }
-  .pspris:nth-child(3n) {
-    margin-right: 0;
-  }
-  .pspris:nth-child(4n) {
-    margin-right: 10px;
-  }
-  .pspris span {
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 38px;
-  }
-  .pspris font {
-    font-size: 18px;
-    line-height: 34px;
-  }
-  .pspris div {
-    margin-top: 0;
-  }
-
 }
 
 #votingCard{
@@ -222,23 +164,4 @@
 }
 .seja_anchor:hover {
   color: #525252;
-}
-
-.pspris-clearfix {
-  text-align: left;
-
-  .pspris-container {
-
-    display: inline-block !important;
-
-    /*overflow: hidden;*/
-
-    min-width: 100px;
-    max-width: 200px;
-    display: block;
-
-    .pspris {
-      width: 100%;
-    }
-  }
 }

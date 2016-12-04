@@ -161,19 +161,16 @@
                                 ["id97"]: '#d9776c',
                             };
                             %>
-                <div class="clearfix">
-                    <% for (ps in presence) { %>
+                    <div class="presence-list">
+                        <% presence.forEach(function(party) { %>
 
-                    <div class="pspris">
-                        <span><%= presence[ps].percent %> %</span>
-                        <font><%= presence[ps].org.acronym %></font>
-                        <div class="" style="">
-                            <div class="border" style="width: <%= presence[ps].percent %>%; background-color: <%=colors['id' + presence[ps].org.id]%>;"></div>
+                        <div class="presence">
+                            <div class="percent"><%= party.percent %> %</div>
+                            <div class="party"><%= party.org.acronym %></div>
+                            <div class="line <%= party.org.acronym.replace(/ /g, '_').toLowerCase() %>-background" style="width: <%= party.percent %>%;"></div>
                         </div>
-                    </div>
 
-
-                    <%  }%>
+                        <% }); %>
                     </div>
                 </div>
 
