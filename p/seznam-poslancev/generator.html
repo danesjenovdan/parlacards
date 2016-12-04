@@ -442,6 +442,7 @@
           this.currentSort = 'analysis'
           this.currentSortOrder = 'desc'
         }
+          this.measurePiwik(analysisId, '', '', '');
       },
       selectSort: function(sortId) {
         if (this.currentSort === sortId) {
@@ -451,6 +452,7 @@
           this.currentSort = sortId
           this.currentSortOrder = 'asc'
         }
+          this.measurePiwik('', '', sortId, this.currentSortOrder);
       },
       selectParty: function(partyId) {
         if (this.currentParties.indexOf(partyId) > -1) {
@@ -459,6 +461,7 @@
         else {
           this.currentParties.push(partyId)
         }
+          this.measurePiwik('', partyId, '', '');
       },
       getFormattedAnalysisValue: function(member) {
         var value = member.results[this.currentAnalysis]
@@ -493,6 +496,17 @@
       round: function(value, precision) {
         var multiplier = Math.pow(10, precision || 0)
         return Math.round(value * multiplier) / multiplier
+      },
+      measurePiwik: function (analysisId, partyId, sort, order) {
+        if(typeof measure == 'function') {
+          if(sort!=''){
+              measure("p","analysis-sort",sort+' '+order,'');
+          }else if(partyId!=''){
+              measure("p","analysis-party",partyId,'');
+          }else if(analysisId!=''){
+              measure("p","analysis",analysisId,'');
+          }
+        }
       }
     },
     watch: {

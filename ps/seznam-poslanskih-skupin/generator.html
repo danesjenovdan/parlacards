@@ -134,6 +134,14 @@
   </div>
 
   <script>
+      function measure(c,a,n,v) {
+
+          console.log(c);
+          console.log(a);
+          console.log(n);
+          console.log(v);
+          console.log('-----------');
+      }
   new Vue({
     el: '#member-list-generator-container',
     data: {
@@ -268,7 +276,8 @@
     },
     methods: {
       selectAnalysis: function(analysisId) {
-        this.currentAnalysis = analysisId
+        this.currentAnalysis = analysisId;
+        this.measurePiwik(analysisId);
       },
       round: function(value, precision) {
         var multiplier = Math.pow(10, precision || 0)
@@ -285,6 +294,12 @@
         return this.slugs
           ? this.slugs.base + this.slugs.partyLink.base + this.slugs.party[party.id].acronym + this.slugs.partyLink.pregled
           : '/poslanska-skupina/' + party.acronym + '/pregled'
+      }
+      ,
+      measurePiwik: function (analysisId) {
+        if(typeof measure == 'function') {
+          measure("ps","analysis",analysisId,'');
+        }
       }
     },
     watch: {
