@@ -118,8 +118,8 @@
           <div class="card-content-front">
             <ul class="party-list">
               <% data.data.forEach(function(result, index) { %>
-              <li class="party">
-                <div class="column name">
+              <li class="labeled-chart">
+                <div class="column label">
                   <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.partyLink.base + urlsData.party[result.party.id].acronym + urlsData.partyLink.pregled %>"><%= result.party.acronym %></a>
                 </div>
                 <div class="column chart">
