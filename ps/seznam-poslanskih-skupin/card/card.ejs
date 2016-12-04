@@ -120,7 +120,7 @@
               <% data.data.forEach(function(result, index) { %>
               <li class="party">
                 <div class="column name">
-                  <a class="funblue-light-hover" href="<%= urlsData.partyLink.base + urlsData.party[result.party.id].acronym + urlsData.partyLink.pregled %>"><%= result.party.acronym %></a>
+                  <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.partyLink.base + urlsData.party[result.party.id].acronym + urlsData.partyLink.pregled %>"><%= result.party.acronym %></a>
                 </div>
                 <div class="column chart">
                 <% var rawValue = result.results[analysis];

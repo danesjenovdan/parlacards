@@ -30,9 +30,6 @@
 <!-- https://analize.parlameter.si/v1/p/getAllSpeeches/80 -->
 
 
-<style>     #recent-speeches-do-nje-govorov{} </style>
-
-
 <div class="container"><div class="row"><div class="col-md-6"><!-- removeme -->
 
 
@@ -64,7 +61,7 @@
 
                         <li class="clearfix">
                             <% for(var speechIndex = 0; speechIndex < data.results[result].speeches.length; speechIndex++ ){ var tmp = (speechIndex+1); %>
-                                <a class="parlaicon speech" href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%= data.results[result].speeches[0].session_id %>#!<%= data.results[result].speeches[speechIndex].speech_id %>"><%= tmp %></a>
+                                <a class="parlaicon speech" href="https://glej.parlameter.si/s/speech/<%= data.results[result].speeches[speechIndex].speech_id %>?frame=true&altHeader=true"><%= tmp %></a>
                             <% } %>
                         </li>
                     </ul>
@@ -110,7 +107,7 @@
                         <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?embed=true&altHeader=true"></textarea>
                         <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
