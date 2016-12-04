@@ -1,4 +1,4 @@
-if (kompasState != kompasState) {
+if (Object.keys(kompasState).length === 0) {
     kompasState['people'] = [];
     kompasState['parties'] = [];
 }

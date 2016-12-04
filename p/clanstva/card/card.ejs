@@ -95,11 +95,11 @@
                                     <% if (tab === 'Delovna telesa') { %>
                                         <% if (membershipItem.name === 'Kolegij predsednika državnega zbora') { %>
                                             <li class="key">
-                                            <a href="<%=urlsData.base%>/seje/tip/seje-kolegija-predsednika-dz"> <%= membershipItem.name %></a>
+                                            <a target="_blank" href="<%=urlsData.base%>/seje/tip/seje-kolegija-predsednika-dz"> <%= membershipItem.name %></a>
                                             </li>
                                         <% } else { %>
                                         <li class="key">
-                                            <a href="<%=urlsData.base%>/seje/tip/seje-delovnih-teles/#session-<%= membershipItem.org_id %>"> <%= membershipItem.name %></a>
+                                            <a target="_blank" href="https://glej.parlameter.si/wb/getWorkingBodies/<%= membershipItem.org_id %>?frame=true&altHeader=true"> <%= membershipItem.name %></a>
                                         </li>
                                         <% } %>
                                     <% } else { %>
