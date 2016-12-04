@@ -16,7 +16,7 @@
 
           speech.memberImageUrl = 'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + String(speech.person.gov_id) + '.png'
           speech.formattedDate = date.getDate() + ". " + (date.getMonth() + 1) + ". " + date.getFullYear()
-          speech.speechUrl = that.urls.base + that.urls.sessionLink.transkript + speech.session_id + '/#!' + speech.speech_id
+          speech.speechUrl = 'https://glej.parlameter.si/s/speech/' + speech.speech_id + '?frame=true&altHeader=true';
 
           return speech
         })
