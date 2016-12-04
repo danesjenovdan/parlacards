@@ -60,34 +60,21 @@
                         <div class="nospeeches"><i>Brez govorov.</i></div>
                     <% } %>
 
-                    <%
-                    for (var i=0; i < data.results.length; i++) {
-                            var word = data.results[i];
-                            word.score = Math.round(word.scores['tf-idf'] * 5000);
-                    %>
+                    <ul class="word-list">
+                        <% data.results.forEach(function(word) {
+                            word.score = Math.round(word.scores['tf-idf'] * 5000); %>
 
-                    <div class="me_poslanec clearfix tfidf-bar">
-
-                        <div class="term">
-                            <span class="poslanec_title">
-                                            <a href="<%=urlsData.base%>/seje/isci?q=<%= word.term.replace(' ', '+') %>" class="funblue-light-hover"><%= word.term %></a>
-                                        </span>
-                        </div>
-                        <div class="frequency">
-                            <div class="progress hugebar avgmin">
-                                <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="0" aria-valuemax="<%= max %>" style="width: <%= word.score / max * 100 > 1 ? word.score / max * 100 : 1 %>%;">
-                                    <span class="sr-only"><%= word.score %></span>
+                            <li class="labeled-chart">
+                                <div class="column label"><a href="<%=urlsData.base%>/seje/isci?q=<%= word.term.replace(' ', '+') %>" class="funblue-light-hover"><%= word.term %></a></div>
+                                <div class="column chart">
+                                    <div class="progress hugebar">
+                                        <div role="progressbar" class="progress-bar funblue" style="width: <%= word.score / max * 100 > 1 ? word.score / max * 100 : 1 %>%;"></div>
+                                    </div>
                                 </div>
+                            </li>
 
-                            </div>
-                        </div>
-                    </div>
-
-                    <%
-                        }
-                    %>
-
-
+                        <% }) %>
+                    </ul>
 
                 </div>
                 <!-- delete this placeholder, this is the content of your card -->
@@ -131,7 +118,7 @@
                             <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>?embed=true&altHeader=true"></textarea>
                             <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

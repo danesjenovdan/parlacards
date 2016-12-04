@@ -18,7 +18,7 @@
             "tf-idf": 0.18181818181818182
         }
     }, {
-        "term": "optimalizirati",
+        "term": "optimalizirati bebavost",
         "scores": {
             "tf": 3,
             "df": 25,
