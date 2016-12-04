@@ -63,7 +63,7 @@
                     </li>
                     <li v-for="party in processedPartyData" class="party">
                       <div class="column name">
-                        <a class="funblue-light-hover" :href="'/ps/id/' + party.party.id">{{ party.party.acronym }}</a>
+                        <a class="funblue-light-hover" :href="getPartyUrl(party.party)">{{ party.party.acronym }}</a>
                       </div>
                       <div class="column chart">
                         <div class="progress hugebar">
@@ -139,6 +139,7 @@
       partyData: [],
       currentAnalysis: 'seat_count',
       shortenedCardUrl: '',
+      slugs: null,
       analyses: [
         {
           id: 'seat_count',
@@ -252,6 +253,10 @@
     },
     created: function() {
       var that = this
+
+      $.getJSON('https://analize.parlameter.si/v1/p/getSlugs/', function(response) {
+        that.slugs = response
+      })
       $.getJSON('https://analize.parlameter.si/v1/pg/getListOfPGs/', function(response) {
         that.partyData = response.data.sort(function(partyA, partyB) {
           var a = partyA.results.seat_count
@@ -274,6 +279,11 @@
             that.shortenedCardUrl = response
             that.$el.querySelector('.card-content-share button').textContent = 'KOPIRAJ'
         });
+      },
+      getPartyUrl: function(party) {
+        return this.slugs
+          ? this.slugs.base + this.slugs.partyLink.base + this.slugs.party[party.id].acronym + this.slugs.partyLink.pregled
+          : '/poslanska-skupina/' + party.acronym + '/pregled'
       }
     },
     watch: {
