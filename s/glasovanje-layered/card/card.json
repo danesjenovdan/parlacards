@@ -1,1 +1,1 @@
-{"_id":"57279e0dc33c714e03229d7a","name":"Glasovanje layered","group":"s","method":"glasovanje-layered","dataUrl":"https://analize.parlameter.si/v1/s/getMotionGraph"}
+{"_id":"57279e0dc33c714e03229d7a","name":"Glasovanje","group":"s","method":"glasovanje-layered","dataUrl":"https://analize.parlameter.si/v1/s/getMotionGraph"}

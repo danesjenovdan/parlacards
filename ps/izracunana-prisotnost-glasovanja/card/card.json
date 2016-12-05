@@ -1,1 +1,1 @@
-{"_id":"583346842cd45a08b320ccb5","name":"Izračunana prisotnost glasovanja","group":"ps","method":"izracunana-prisotnost-glasovanja","dataUrl":"https://analize.parlameter.si/v1/pg/getPercentOFAttendedSessionPG"}
+{"_id":"583346842cd45a08b320ccb5","name":"Izračunana prisotnost na glasovanjih sej DZ","group":"ps","method":"izracunana-prisotnost-glasovanja","dataUrl":"https://analize.parlameter.si/v1/pg/getPercentOFAttendedSessionPG"}
