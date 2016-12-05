@@ -590,8 +590,8 @@ if (!isMSIE) {
     }
 
     function updateShareURL() {
-        $('.card-kompas .share-url').val('https://glej.parlameter.si/c/besedni-zaklad/?frame=true&altHeader=true&state=' + encodeURIComponent(JSON.stringify(vocabsize_state)));
-        $('.card-kompas .card-footer').data('shortened', 'false');
+        $('.card-besedni-zaklad .share-url').val('https://glej.parlameter.si/c/besedni-zaklad/?frame=true&altHeader=true&state=' + encodeURIComponent(JSON.stringify(vocabsize_state)));
+        $('.card-besedni-zaklad .card-footer').data('shortened', 'false');
         updateEmbedURL();
     }
     function updateEmbedURL() {
@@ -599,7 +599,7 @@ if (!isMSIE) {
         var embedbase = $textarea.val().split('100%" src="')[0] + '100%" src="';
         var embedextra = 'https://glej.parlameter.si/c/besedni-zaklad/?embed=true&altHeader=true&state=' + encodeURIComponent(JSON.stringify(vocabsize_state)) + '">';
         var embedcode = embedbase + embedextra;
-        $('.card-kompas .embed-script textarea').val(embedcode);
+        $('.card-besedni-zaklad .embed-script textarea').val(embedcode);
     }
 
 } else {
