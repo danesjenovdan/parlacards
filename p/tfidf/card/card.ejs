@@ -60,21 +60,26 @@
                         <div class="nospeeches"><i>Brez govorov.</i></div>
                     <% } %>
 
-                    <ul class="word-list">
-                        <% data.results.forEach(function(word) {
-                            word.score = Math.round(word.scores['tf-idf'] * 5000); %>
-
-                            <li class="labeled-chart">
-                                <div class="column chart-label"><a href="<%=urlsData.base%>/seje/isci?q=<%- '%22' + word.term.replace(' ', '+') + '%22' %>" class="funblue-light-hover"><%= word.term %></a></div>
-                                <div class="column chart">
+                    <div class="word-list">
+                        <div class="labeled-chart">
+                            <div class="column chart-label">
+                                <% data.results.forEach(function(word) {
+                                    word.score = Math.round(word.scores['tf-idf'] * 5000); %>
+                                    <div class="label-container">
+                                        <a href="<%=urlsData.base%>/seje/isci?q=<%- '%22' + word.term.replace(' ', '+') + '%22' %>" class="funblue-light-hover"><%= word.term %></a>
+                                    </div>
+                                <% }) %>
+                            </div>
+                            <div class="column chart">
+                                <% data.results.forEach(function(word) {
+                                    word.score = Math.round(word.scores['tf-idf'] * 5000); %>
                                     <div class="progress hugebar">
                                         <div role="progressbar" class="progress-bar funblue" style="width: <%= word.score / max * 100 > 1 ? word.score / max * 100 : 1 %>%;"></div>
                                     </div>
-                                </div>
-                            </li>
-
-                        <% }) %>
-                    </ul>
+                                <% }) %>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- delete this placeholder, this is the content of your card -->
