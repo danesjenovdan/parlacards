@@ -50,39 +50,39 @@
 
                     <% if (data.results.length != 0) { %>
 
-                        <% var data = data.results; %>
+                        <% var mydata = data.results; %>
 
-                        <% for (var i = 0; i < data.length ; i++) { %>
+                        <% for (var i = 0; i < mydata.length ; i++) { %>
 
                         <% var rnd = (Math.floor((Math.random() * 2)) == 1); %>
                         <% var ayeney = rnd ? "aye" : "nay"; %>
                         <% var ayeneygly = rnd ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
-                        <% var ayeney = (data[i].results.result == true)  ? "aye" : "nay"; %>
-                        <% var ayeneygly = (data[i].results.result == true) ? "glyphicon-ok" : "glyphicon-remove"; %>
+                        <% var ayeney = (mydata[i].results.result == true)  ? "aye" : "nay"; %>
+                        <% var ayeneygly = (mydata[i].results.result == true) ? "glyphicon-ok" : "glyphicon-remove"; %>
 
 
 
                         <%
-                            var allInVotes = data[i].results.votes_for + data[i].results.against + data[i].results.abstain +data[i].results.not_present;
-                        var percent_votes_for = Math.floor( (data[i].results.votes_for / allInVotes) * 100) ;
-                        var percent_against = Math.floor( (data[i].results.against / allInVotes) * 100);
-                        var percent_abstain = Math.floor( (data[i].results.abstain / allInVotes) * 100);
-                        var percent_not_present = Math.floor( (data[i].results.not_present / allInVotes) * 100);
+                            var allInVotes = mydata[i].results.votes_for + mydata[i].results.against + mydata[i].results.abstain +mydata[i].results.not_present;
+                        var percent_votes_for = Math.floor( (mydata[i].results.votes_for / allInVotes) * 100) ;
+                        var percent_against = Math.floor( (mydata[i].results.against / allInVotes) * 100);
+                        var percent_abstain = Math.floor( (mydata[i].results.abstain / allInVotes) * 100);
+                        var percent_not_present = Math.floor( (mydata[i].results.not_present / allInVotes) * 100);
 
                             var resulttext = '';
-                            if(data[i].results.text.length > 150){
-                                resulttext = data[i].results.text.substring(0, 150) + "...";
+                            if(mydata[i].results.text.length > 150){
+                                resulttext = mydata[i].results.text.substring(0, 150) + "...";
                             }else{
-                                resulttext = data[i].results.text;
+                                resulttext = mydata[i].results.text;
                             }
 
                         %>
 
 
                         <div class="clearfix single_voting">
-                            <a href="/seja/glasovanje/<%=data[i].session.id%>/<%=data[i].results.motion_id%>">
+                            <a href="/seja/glasovanje/<%=mydata[i].session.id%>/<%=mydata[i].results.motion_id%>">
                                 <div class=" col-md-1 ">
                                     <div class="accepted <%= ayeney %> ">
                                         <p>
@@ -114,22 +114,22 @@
                                             </div>
                                             <div class="row ">
                                                 <div class="col-xs-3 ">
-                                                    <%= data[i].results.votes_for %>
+                                                    <%= mydata[i].results.votes_for %>
                                                     <div class="type ">Za</div>
                                                     <div class="indicator aye ">&nbsp;</div>
                                                 </div>
                                                 <div class="col-xs-3 ">
-                                                    <%= data[i].results.against %>
+                                                    <%= mydata[i].results.against %>
                                                     <div class="type ">Proti</div>
                                                     <div class="indicator ney ">&nbsp;</div>
                                                 </div>
                                                 <div class="col-xs-3 ">
-                                                    <%= data[i].results.abstain %>
+                                                    <%= mydata[i].results.abstain %>
                                                     <div class="type ">Vzdržan</div>
                                                     <div class="indicator abstention ">&nbsp;</div>
                                                 </div>
                                                 <div class="col-xs-3 ">
-                                                    <%= data[i].results.not_present %>
+                                                    <%= mydata[i].results.not_present %>
                                                     <div class="type ">Niso</div>
                                                     <div class="indicator not ">&nbsp;</div>
                                                 </div>
