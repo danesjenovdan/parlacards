@@ -1,0 +1,167 @@
+@import 'parlassets/scss/breakpoints';
+
+.card-header h1, .card-footer h1 {
+  color: #525252;
+}
+
+.presence-of-pg {
+  height: 120px;
+  @include respond-to(up-to-limbo) { height: auto; }
+}
+
+.card-container {
+  width: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding-left: 0px;
+  padding-right: 0;
+}
+
+.card-header {
+  width: auto;
+}
+
+.card-content {
+  width: auto;
+
+}
+
+.card-footer {
+  width: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#votingCard{
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+#votingCardHorizontal div.member {
+  width: 115px;
+}
+
+#votingCardHorizontal .slider {
+  width: auto;
+}
+
+#votingCardHorizontal div.member .image {
+  float: none;
+}
+
+#votingCardHorizontal div.member p {
+  float: none;
+}
+
+#votingCardHorizontal div.member span {
+  float: none;
+}
+
+@media (max-width: 991px) {
+  #votingCardHorizontal div.member {
+    width: 130px;
+  }
+  #votingCardHorizontal .slider {
+    width: 323px;
+  }
+
+}
+
+.session_voting .session_votes .progress.smallbar {
+  height: 15px;
+}
+
+.session_voting .session_votes {
+  font-size: 30px;
+  line-height: 40px;
+  margin: 15px 0 10px 0;
+}
+
+.session_voting .session_votes .type {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/*@media (max-width: 480px) {
+}
+*/
+.session_voting {
+  font-weight: 400;
+}
+
+.accepted.nay {
+  color: #ff5e41;
+}
+
+.accepted.aye {
+
+}
+
+.session_voting .accepted {
+  line-height: normal;
+  height: 103px;
+}
+
+.session_voting .accepted p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-bottom: 0;
+}
+
+.session_voting .session_title {
+  height: 103px;
+  margin: 0;
+}
+
+.session_voting .session_title p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: Roboto Slab;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .session_voting .accepted,
+  .session_voting .session_title {
+    height: 93px;
+  }
+
+}
+
+.session_voting .session_title p {
+  font-size: 14px;
+}
+
+
+.session_voting .single_voting{
+
+}
+.session_voting{
+  padding: 0 0 20px 0;
+}
+
+@import 'tfidf';
+
+.smalldate {
+  margin-top: -18px;
+  line-height: 16px;
+}
+
+.single_voting:hover {
+  background-color: #e1f6ff;
+
+  .border-left {
+    border-left-color: #cadde6;
+  }
+}
+.seja_anchor:hover {
+  color: #525252;
+}
