@@ -34,6 +34,7 @@ if (!isMSIE) {
             } else {
 
                 kompasState.parties.splice(kompasState.parties.indexOf(smallparty), 1);
+                updateShareURL();
 
                 $(this).removeClass(d3.select(selection[0][0]).datum().person.party.acronym.replace(/ /g, '_').toLowerCase() + '-background');
 
