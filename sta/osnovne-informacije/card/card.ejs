@@ -19,7 +19,21 @@
 
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
-
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(["setDomains", ["*.parlameter.si"]]);
+        _paq.push(["disableCookies"]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//zy.si/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '13']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
