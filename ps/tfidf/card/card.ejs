@@ -63,7 +63,7 @@
 
                         <div class="term">
                             <span class="poslanec_title">
-                                            <a href="<%=urlsData.base%>/seje/isci?q=<%= word.term.replace(' ', '+') %>" class="funblue-light-hover"><%= word.term %></a>
+                                            <a href="<%=urlsData.base%>/seje/isci?q=<%- '%22' + word.term.replace(' ', '+') + '%22' %>" class="funblue-light-hover"><%= word.term %></a>
                                         </span>
                         </div>
                         <div class="frequency">

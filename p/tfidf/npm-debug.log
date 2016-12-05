@@ -55,8 +55,8 @@
 33 verbose correctMkdir /Users/muki/.npm/_git-remotes correctMkdir not in flight; initializing
 34 verbose request uri https://registry.npmjs.org/request
 35 verbose request no auth needed
-36 info attempt registry request try #1 at 09:37:20
-37 verbose request id 01b0b128ffac1479
+36 info attempt registry request try #1 at 09:45:21
+37 verbose request id 47ab86d41088f04d
 38 verbose etag W/"58440e6d-34ec3"
 39 verbose lastModified Sun, 04 Dec 2016 12:39:09 GMT
 40 http request GET https://registry.npmjs.org/request
@@ -65,28 +65,28 @@
 43 verbose validateExistingRemote git+ssh://git@github.com/muki/parlassets.git is updating existing cached remote /Users/muki/.npm/_git-remotes/git-ssh-git-github-com-muki-parlassets-git-4c773461
 44 info git [ 'fetch', '-a', 'origin' ]
 45 http 304 https://registry.npmjs.org/request
-46 verbose headers { date: 'Mon, 05 Dec 2016 08:37:23 GMT',
+46 verbose headers { date: 'Mon, 05 Dec 2016 08:45:24 GMT',
 46 verbose headers   via: '1.1 varnish',
 46 verbose headers   'cache-control': 'max-age=300',
 46 verbose headers   etag: 'W/"58440e6d-34ec3"',
-46 verbose headers   age: '92',
+46 verbose headers   age: '39',
 46 verbose headers   connection: 'keep-alive',
-46 verbose headers   'x-served-by': 'cache-lhr6332-LHR',
+46 verbose headers   'x-served-by': 'cache-lcy1123-LCY',
 46 verbose headers   'x-cache': 'HIT',
-46 verbose headers   'x-cache-hits': '2785',
-46 verbose headers   'x-timer': 'S1480927043.761507,VS0,VE0',
+46 verbose headers   'x-cache-hits': '3',
+46 verbose headers   'x-timer': 'S1480927524.911905,VS0,VE0',
 46 verbose headers   vary: 'Accept-Encoding' }
 47 silly get cb [ 304,
-47 silly get   { date: 'Mon, 05 Dec 2016 08:37:23 GMT',
+47 silly get   { date: 'Mon, 05 Dec 2016 08:45:24 GMT',
 47 silly get     via: '1.1 varnish',
 47 silly get     'cache-control': 'max-age=300',
 47 silly get     etag: 'W/"58440e6d-34ec3"',
-47 silly get     age: '92',
+47 silly get     age: '39',
 47 silly get     connection: 'keep-alive',
-47 silly get     'x-served-by': 'cache-lhr6332-LHR',
+47 silly get     'x-served-by': 'cache-lcy1123-LCY',
 47 silly get     'x-cache': 'HIT',
-47 silly get     'x-cache-hits': '2785',
-47 silly get     'x-timer': 'S1480927043.761507,VS0,VE0',
+47 silly get     'x-cache-hits': '3',
+47 silly get     'x-timer': 'S1480927524.911905,VS0,VE0',
 47 silly get     vary: 'Accept-Encoding' } ]
 48 verbose etag https://registry.npmjs.org/request from cache
 49 verbose get saving request to /Users/muki/.npm/registry.npmjs.org/request/.cache.json
