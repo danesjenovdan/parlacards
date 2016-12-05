@@ -1,0 +1,1689 @@
+{
+    "created_at": "21.11.2016",
+    "created_for": "13.06.2016",
+    "session": {
+        "date": "13. 6. 2016",
+        "org": {
+            "acronym": "DZ",
+            "is_coalition": false,
+            "id": 95,
+            "name": "Državni zbor"
+        },
+        "name": "20. redna seja",
+        "id": 5570
+    },
+    "results": [
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 2,
+                "text": "Zakon o ratifikaciji Sporazuma o enotnem sodišču za patente - Evidenčni sklep - umik točke z dnevnega reda",
+                "against": 17,
+                "votes_for": 52,
+                "motion_id": 4494,
+                "not_present": 19,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 3,
+                "text": "Dnevni red v celoti",
+                "against": 0,
+                "votes_for": 68,
+                "motion_id": 4493,
+                "not_present": 19,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 21,
+                "text": "Zakon o reševanju in prisilnem prenehanju bank - Amandma: K 215. členu 10.6.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+                "against": 0,
+                "votes_for": 49,
+                "motion_id": 4492,
+                "not_present": 20,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 20,
+                "text": "Zakon o reševanju in prisilnem prenehanju bank - Amandma: K 233. členu 10.6.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+                "against": 0,
+                "votes_for": 51,
+                "motion_id": 4491,
+                "not_present": 19,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 3,
+                "text": "Zakon o reševanju in prisilnem prenehanju bank - Amandma: K 259. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 47,
+                "votes_for": 21,
+                "motion_id": 4490,
+                "not_present": 19,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 2,
+                "text": "Zakon o reševanju in prisilnem prenehanju bank - Amandma: K 260. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 47,
+                "votes_for": 22,
+                "motion_id": 4489,
+                "not_present": 19,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 15,
+                "text": "Zakon o reševanju in prisilnem prenehanju bank - Amandma: K 268. členu 10.6.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+                "against": 37,
+                "votes_for": 17,
+                "motion_id": 4488,
+                "not_present": 21,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 22,
+                "text": "Zakon o reševanju in prisilnem prenehanju bank - Amandma: K 268. členu 13.6.2016 [SD - Poslanska skupina Socialnih demokratov]",
+                "against": 1,
+                "votes_for": 48,
+                "motion_id": 4487,
+                "not_present": 19,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 20,
+                "text": "Zakon o reševanju in prisilnem prenehanju bank - Amandma: K 268. a. členu 10.6.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+                "against": 0,
+                "votes_for": 51,
+                "motion_id": 4486,
+                "not_present": 19,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 19,
+                "text": "Zakon o reševanju in prisilnem prenehanju bank - Glasovanje o zakonu v celoti",
+                "against": 3,
+                "votes_for": 49,
+                "motion_id": 4485,
+                "not_present": 19,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 2,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o bančništvu - Evidenčni sklep o primernosti predloga zakona 14.6.2016",
+                "against": 20,
+                "votes_for": 50,
+                "motion_id": 4484,
+                "not_present": 18,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Zakon o trošarinah - Amandma: K 79. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 47,
+                "votes_for": 21,
+                "motion_id": 4483,
+                "not_present": 17,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 22,
+                "text": "Zakon o trošarinah - Amandma: K 92. členu 7.6.2016 [SMC - Poslanska skupina Stranke modernega centra]",
+                "against": 0,
+                "votes_for": 50,
+                "motion_id": 4482,
+                "not_present": 18,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 18,
+                "text": "Zakon o trošarinah - Evidenčni sklep da se tretja obravnava opravi na isti seji 14.6.2016",
+                "against": 2,
+                "votes_for": 52,
+                "motion_id": 4481,
+                "not_present": 18,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 7,
+                "text": "Zakon o varnosti na smučiščih - Amandma: K 1. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 47,
+                "votes_for": 19,
+                "motion_id": 4480,
+                "not_present": 17,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Zakon o varnosti na smučiščih - Amandma: K 2. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 47,
+                "votes_for": 20,
+                "motion_id": 4479,
+                "not_present": 18,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Zakon o varnosti na smučiščih - Amandma: K 3. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 47,
+                "votes_for": 21,
+                "motion_id": 4478,
+                "not_present": 17,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Zakon o varnosti na smučiščih - Amandma: K 6. členu 8.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 47,
+                "votes_for": 21,
+                "motion_id": 4477,
+                "not_present": 17,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Zakon o varnosti na smučiščih - Amandma: K 14. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 47,
+                "votes_for": 20,
+                "motion_id": 4476,
+                "not_present": 18,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Zakon o varnosti na smučiščih - Amandma: K 23. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 47,
+                "votes_for": 21,
+                "motion_id": 4475,
+                "not_present": 17,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Zakon o varnosti na smučiščih - Amandma: K 27. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 46,
+                "votes_for": 20,
+                "motion_id": 4474,
+                "not_present": 19,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 18,
+                "text": "Zakon o varnosti na smučiščih - Glasovanje o zakonu v celoti",
+                "against": 0,
+                "votes_for": 55,
+                "motion_id": 4473,
+                "not_present": 17,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o spodbujanju skladnega regionalnega razvoja - Amandma: K 7. členu 7.6.2016 [IMNS - Poslanska skupina italijanske in madžarske narodne skupnosti]",
+                "against": 29,
+                "votes_for": 31,
+                "motion_id": 4472,
+                "not_present": 25,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o spodbujanju skladnega regionalnega razvoja - Amandma: K 9. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 46,
+                "votes_for": 21,
+                "motion_id": 4471,
+                "not_present": 18,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 3,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o spodbujanju skladnega regionalnega razvoja - Amandma: K 10. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 42,
+                "votes_for": 25,
+                "motion_id": 4470,
+                "not_present": 20,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 4,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o spodbujanju skladnega regionalnega razvoja - Amandma: K 19.b členu 9.6.2016 [IMNS - Poslanska skupina italijanske in madžarske narodne skupnosti]",
+                "against": 3,
+                "votes_for": 65,
+                "motion_id": 4469,
+                "not_present": 18,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 16,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o spodbujanju skladnega regionalnega razvoja - Evidenčni sklep da se tretja obravnava opravi na isti seji 14.6.2016",
+                "against": 2,
+                "votes_for": 54,
+                "motion_id": 4468,
+                "not_present": 18,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 1,
+                "text": "Predlog sklepa (razprava o odgovoru predsednika Vlade dr. Mira Cerarja na poslansko vprašanje mag. Mateja Tonina v zvezi s pripravo reform do konca mandata Vlade).",
+                "against": 50,
+                "votes_for": 20,
+                "motion_id": 4467,
+                "not_present": 19,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 0,
+                "text": "Predlog sklepa (razprava o odgovoru predsednika Vlade dr. Mira Cerarja na poslansko vprašanje Franca Laja v zvezi z delovanjem gospodarske družbe Slovenski državni gozdovi, d. o. o.)",
+                "against": 41,
+                "votes_for": 23,
+                "motion_id": 4466,
+                "not_present": 26,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 1,
+                "text": "Predlog sklepa (razprava o odgovoru predsednika Vlade dr. Mira Cerarja na poslansko vprašanje Jelke Godec v zvezi s kršitvami zakonodaje.)",
+                "against": 46,
+                "votes_for": 16,
+                "motion_id": 4465,
+                "not_present": 27,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 3,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za kmetijstvo, gozdarstvo in prehrano mag. Dejana Židana na poslansko vprašanje Ljuba Žnidarja v zvezi s pavšalnim obdavčevanjem kmetijskega gospodarstva.)",
+                "against": 44,
+                "votes_for": 15,
+                "motion_id": 4464,
+                "not_present": 28,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 1,
+                "text": "Predlog sklepa (razprava o odgovoru ministrice za notranje zadeve mag. Vesne Györkös Žnidar na poslansko vprašanje Žana Mahniča v zvezi z aktivnostmi pri iskanju kemičnih in ubojnih sredstev Službe državne varnosti.)",
+                "against": 47,
+                "votes_for": 13,
+                "motion_id": 4463,
+                "not_present": 29,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 13,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za finance dr. Dušana Mramorja ter ministra za infrastrukturo dr. Petra Gašperšiča na poslansko vprašanje dr. Mateja T. Vatovca v zvezi z vlogo Vlade kot Skupščine SDH, izgradnjo drugega tira ter menjave Nadzornega sveta Luke Koper.)",
+                "against": 37,
+                "votes_for": 10,
+                "motion_id": 4462,
+                "not_present": 30,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 14,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za zunanje zadeve Karla Viktorja Erjavca na poslansko vprašanje Matjaža Hanžka v zvezi z odpravo sankcij proti Ruski federaciji.)",
+                "against": 42,
+                "votes_for": 5,
+                "motion_id": 4461,
+                "not_present": 29,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Predlog sklepa (razprava o odgovoru ministrice za okolje in prostor Irene Majcen na poslansko vprašanje Ljuba Žnidarja v zvezi z načrtovanimi davki ob spremembi namembnosti zemljišča.)",
+                "against": 43,
+                "votes_for": 14,
+                "motion_id": 4460,
+                "not_present": 28,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 4,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za gospodarski razvoj in tehnologijo Zdravka Počivalška na poslansko vprašanje Jožefa Horvata v zvezi s pripravo predloga Dogovora za razvoj regije v Pomurju.)",
+                "against": 41,
+                "votes_for": 14,
+                "motion_id": 4459,
+                "not_present": 31,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 2,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za kulturo Antona Peršaka na poslansko vprašanje Anje Bah Žibert v zvezi z zagotavljanjem uresničevanja Zakona o Radioteleviziji Slovenija.)",
+                "against": 46,
+                "votes_for": 12,
+                "motion_id": 4458,
+                "not_present": 30,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 1,
+                "text": "Predlog sklepa (razprava o odgovoru na poslansko vprašanje)",
+                "against": 40,
+                "votes_for": 18,
+                "motion_id": 4457,
+                "not_present": 31,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 8,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za gospodarski razvoj in tehnologijo Zdravka Počivalška ter ministrice za okolje in prostor Irene Majcen na poslansko vprašanje Violete Tomić v zvezi z določbami sporazuma CETA, ki omogočajo podeljevanje koncesij za rabo naravnih virov (tudi vode) v komercialne namene in glede zagotavljanja zaščite pred privatizacijo vodnih virov v Republiki Sloveniji.)",
+                "against": 41,
+                "votes_for": 11,
+                "motion_id": 4456,
+                "not_present": 30,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 4,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za finance dr. Dušana Mramorja na poslansko vprašanje mag. Anžeta Logarja v zvezi s kadrovsko politiko SDH.)",
+                "against": 44,
+                "votes_for": 14,
+                "motion_id": 4455,
+                "not_present": 28,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za pravosodje mag. Gorana Klemenčiča na poslansko vprašanje mag. Marka Pogačnika v zvezi s počasnim reševanjem gospodarskih sporov.)",
+                "against": 43,
+                "votes_for": 13,
+                "motion_id": 4454,
+                "not_present": 29,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 1,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za finance dr. Dušana Mramorja na poslansko vprašanje mag. Andreja Širclja v zvezi s predlogom davčnih sprememb.)",
+                "against": 47,
+                "votes_for": 13,
+                "motion_id": 4453,
+                "not_present": 29,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 4,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za pravosodje mag. Gorana Klemenčiča na poslansko vprašanje dr. Vinka Gorenaka v zvezi s preiskovanjem sumov kaznivih dejanj bančne kriminalitete.)",
+                "against": 42,
+                "votes_for": 16,
+                "motion_id": 4452,
+                "not_present": 28,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 14,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za gospodarski razvoj in tehnologijo Zdravka Počivalška na poslansko vprašanje Luke Mesca v zvezi z deregulacijo cen naftnih derivatov.)",
+                "against": 39,
+                "votes_for": 6,
+                "motion_id": 4451,
+                "not_present": 31,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Predlog sklepa (razprava o odgovoru ministra za kmetijstvo, gozdarstvo in prehrano mag. Dejana Židana na poslansko vprašanje Zvonka Laha v zvezi s koncesijami za upravljanje z gozdovi v državni lasti.)",
+                "against": 43,
+                "votes_for": 15,
+                "motion_id": 4450,
+                "not_present": 27,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 3,
+                "text": "Predlog za imenovanje druge namestnice predsednika Računskega sodišča - Glasovanje o sestavi komisije za tajno glasovanje",
+                "against": 0,
+                "votes_for": 77,
+                "motion_id": 4449,
+                "not_present": 10,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 1,
+                "text": "Interpelacija o delu in odgovornosti ministrice za delo, družino, socialne zadeve in enake možnosti, dr. Anje Kopač Mrak - Glasovanje o interpelaciji - MiDDSZEM Anja Kopač Mrak",
+                "against": 38,
+                "votes_for": 43,
+                "motion_id": 4448,
+                "not_present": 8,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 9,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o izvrševanju proračunov Republike Slovenije za leti 2016 in 2017 - Glasovanje o zakonu v celoti",
+                "against": 9,
+                "votes_for": 47,
+                "motion_id": 4447,
+                "not_present": 25,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 10,
+                "text": "Zakon o spremembi in dopolnitvi Zakona o letalstvu - Glasovanje o zakonu v celoti",
+                "against": 2,
+                "votes_for": 52,
+                "motion_id": 4446,
+                "not_present": 26,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 2,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o odvetništvu - Amandma: K 1. členu 7.6.2016 [SDS - Poslanska skupina Slovenske demokratske stranke]",
+                "against": 44,
+                "votes_for": 20,
+                "motion_id": 4445,
+                "not_present": 24,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 15,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o odvetništvu - Glasovanje o zakonu v celoti",
+                "against": 0,
+                "votes_for": 49,
+                "motion_id": 4444,
+                "not_present": 26,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 18,
+                "text": "Zakon o izvajanju mednarodnih programov s področja vzgoje in izobraževanja - Glasovanje o zakonu v celoti",
+                "against": 0,
+                "votes_for": 47,
+                "motion_id": 4443,
+                "not_present": 25,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 18,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o organizaciji in financiranju vzgoje in izobraževanja - Glasovanje o zakonu v celoti",
+                "against": 0,
+                "votes_for": 48,
+                "motion_id": 4442,
+                "not_present": 24,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 6,
+                "text": "Zakon o dimnikarskih storitvah - Evidenčni sklep o primernosti predloga zakona 16.6.2016",
+                "against": 13,
+                "votes_for": 45,
+                "motion_id": 4441,
+                "not_present": 26,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 16,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o spodbujanju skladnega regionalnega razvoja - Glasovanje o zakonu v celoti",
+                "against": 3,
+                "votes_for": 47,
+                "motion_id": 4440,
+                "not_present": 24,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 16,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o plačilnih storitvah in sistemih - Glasovanje o zakonu v celoti",
+                "against": 0,
+                "votes_for": 59,
+                "motion_id": 4439,
+                "not_present": 15,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 2,
+                "text": "Priporočilo v zvezi s problematiko poenostavljene pripojitve Probanke d.d. in Factor Banke d.d. k DUTB d.d., zaradi česar naj bi nastala potreba po njeni dokapitalizaciji - Glasovanje",
+                "against": 0,
+                "votes_for": 73,
+                "motion_id": 4438,
+                "not_present": 15,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 2,
+                "text": "Sklep o izbiri revizorske družbe za revidiranje  računovodskih izkazov Računskega sodišča Republike Slovenije za leto 2015 - Glasovanje",
+                "against": 0,
+                "votes_for": 74,
+                "motion_id": 4437,
+                "not_present": 14,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o zdravstvenem varstvu in zdravstvenem zavarovanju - Evidenčni sklep MDT 21.6.2016",
+                "against": 19,
+                "votes_for": 52,
+                "motion_id": 4436,
+                "not_present": 14,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 4,
+                "text": "Zakon o dopolnitvi Kazenskega zakonika - Evidenčni sklep o primernosti predloga zakona 21.6.2016",
+                "against": 51,
+                "votes_for": 21,
+                "motion_id": 4435,
+                "not_present": 14,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 2,
+                "text": "Zakon o spremembah in dopolnitvah Zakona o dohodnini - Evidenčni sklep o primernosti predloga zakona 21.6.2016",
+                "against": 52,
+                "votes_for": 20,
+                "motion_id": 4434,
+                "not_present": 16,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 7,
+                "text": "Zakon o ugotavljanju katastrskega dohodka - Evidenčni sklep o primernosti predloga zakona 21.6.2016",
+                "against": 18,
+                "votes_for": 49,
+                "motion_id": 4433,
+                "not_present": 16,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 5,
+                "text": "Zakon o sodelovanju delavcev pri upravljanju - Evidenčni sklep o primernosti predloga zakona 21.6.2016",
+                "against": 61,
+                "votes_for": 7,
+                "motion_id": 4432,
+                "not_present": 17,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 0,
+                "text": "Zakon o ratifikaciji Sporazuma med Vlado Republike Slovenije in Vlado Italijanske republike o izmenjavi in medsebojnem varovanju tajnih podatkov - Glasovanje o zakonu v celoti",
+                "against": 0,
+                "votes_for": 72,
+                "motion_id": 4431,
+                "not_present": 18,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 0,
+                "text": "Zakon o ratifikaciji Pogodbe med Republiko Slovenijo in Madžarsko o prilagoditvi črte državne meje zaradi vodnogospodarske ureditve potoka Ledava - Glasovanje o zakonu v celoti",
+                "against": 0,
+                "votes_for": 68,
+                "motion_id": 4430,
+                "not_present": 22,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 0,
+                "text": "Zakon o ratifikaciji Sporazuma med Vlado Republike Slovenije in Vlado Madžarske o izmenjavi in medsebojnem varovanju tajnih podatkov - Glasovanje o zakonu v celoti",
+                "against": 0,
+                "votes_for": 72,
+                "motion_id": 4429,
+                "not_present": 18,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 0,
+                "text": "Zakon o ratifikaciji Atenske konvencije o prevozu potnikov in njihove prtljage po morju, 1974, in Protokola 2002 k Atenski konvenciji o prevozu potnikov in njihove prtljage po morju, 1974 - Glasovanje o zakonu v celoti",
+                "against": 0,
+                "votes_for": 68,
+                "motion_id": 4428,
+                "not_present": 22,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 0,
+                "text": "Zakon o ratifikaciji Konvencije med Vlado Republike Slovenije in Vlado Republike Kazahstan o izogibanju dvojnega obdavčevanja in preprečevanju davčnih utaj v zvezi z davki od dohodka in premoženja, s protokolom - Glasovanje o zakonu v celoti",
+                "against": 0,
+                "votes_for": 68,
+                "motion_id": 4427,
+                "not_present": 22,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 1,
+                "text": "Proceduralni predlog za prestavitev točke (Uradno prečiščeno besedilo Pomorskega zakonika)",
+                "against": 0,
+                "votes_for": 66,
+                "motion_id": 4426,
+                "not_present": 23,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 0,
+                "text": "Uradno prečiščeno besedilo",
+                "against": 0,
+                "votes_for": 66,
+                "motion_id": 4425,
+                "not_present": 24,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 15,
+                "text": "Predlog za izvolitev v sodniško funkcijo na sodniško mesto okrožne sodnice na Delovnem in socialnem sodišču v Ljubljani in na sodniški mesti okrožnih sodnikov na Okrožnem sodišču v Ljubljani - Glasovanje o sklepu - Živa Gliha",
+                "against": 6,
+                "votes_for": 47,
+                "motion_id": 4424,
+                "not_present": 22,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 6,
+                "text": "Predlog za izvolitev v sodniško funkcijo na sodniško mesto okrožne sodnice na Delovnem in socialnem sodišču v Ljubljani in na sodniški mesti okrožnih sodnikov na Okrožnem sodišču v Ljubljani - Glasovanje o sklepu - Karmen Erčulj",
+                "against": 15,
+                "votes_for": 48,
+                "motion_id": 4423,
+                "not_present": 21,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 20,
+                "text": "Predlog za izvolitev v sodniško funkcijo na sodniško mesto okrožne sodnice na Delovnem in socialnem sodišču v Ljubljani in na sodniški mesti okrožnih sodnikov na Okrožnem sodišču v Ljubljani - Glasovanje o sklepu - Gregor Klun",
+                "against": 1,
+                "votes_for": 49,
+                "motion_id": 4422,
+                "not_present": 20,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 21,
+                "text": "Sklep o imenovanju članov Sveta za elektronske komunikacije Republike Slovenije - Glasovanje",
+                "against": 1,
+                "votes_for": 50,
+                "motion_id": 4421,
+                "not_present": 18,
+                "result": false
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 1,
+                "text": "Sklep o razrešitvi podpredsednika in imenovanju podpredsednice Odbora za zunanjo politiko - Glasovanje",
+                "against": 0,
+                "votes_for": 70,
+                "motion_id": 4420,
+                "not_present": 19,
+                "result": true
+            }
+        },
+        {
+            "session": {
+                "date": "13. 6. 2016",
+                "org": {
+                    "acronym": "DZ",
+                    "is_coalition": false,
+                    "id": 95,
+                    "name": "Državni zbor"
+                },
+                "name": "20. redna seja",
+                "id": 5570
+            },
+            "results": {
+                "abstain": 19,
+                "text": "Zakon o trošarinah - Glasovanje o zakonu v celoti",
+                "against": 2,
+                "votes_for": 51,
+                "motion_id": 4419,
+                "not_present": 18,
+                "result": false
+            }
+        }
+    ]
+}

@@ -30,7 +30,7 @@
 <div class="card-container card-halfling <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
     <div class="card-header">
         <div class="card-header-border"></div>
-        <h1>Odstopanje od poslanske skupine</h1>
+        <h1>Ujemanje s poslansko skupino</h1>
         <!-- this text is the only thing you touch in .card-header -->
     </div>
     <div class="card-content full">
@@ -60,6 +60,9 @@
         </div>
         <div class="card-content-info hidden">
             <div class="card-back-content">
+                <p class="info-text">
+                    Poslanke in poslanci so razvrščeni od najbolj do najmanj odstopajočih. Manjši rezultat pomeni večje odstopanje in obratno.
+                </p>
                 <p class="info-text">
                     Za vsako glasovanje izračunamo "glas poslanske skupine", ki ji poslanec ali poslanka pripada. Nato seštejemo v številke pretvorjene vrednosti vsakega glasovanja za vsakega/-o poslanca/-ko PS in delimo s številom poslancev v PS. Nazadnje izračunamo Pearsonov koeficient med pridobljenim nizom rezultatov in nizom glasov poslank in poslancev.
                 </p>
