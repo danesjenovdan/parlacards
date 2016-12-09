@@ -1,0 +1,6 @@
+&.card-container {
+  background-color: #F0F0F0;
+}
+&.card-container:before {
+  display: none !important;
+}

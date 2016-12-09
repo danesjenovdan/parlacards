@@ -1,3 +1,8 @@
+if (Object.keys(vocabsize_state).length === 0) {
+    vocabsize_state['people'] = [];
+    vocabsize_state['parties'] = [];
+}
+
 (function() {
 
 if (!isMSIE) {
@@ -29,7 +34,15 @@ if (!isMSIE) {
         $('#besedni-zaklad-partyswitch-' + acronym).on('click', function() {
             var partymembers = svg.select('#kompasgroup' + $(this).data('acronym')).selectAll('.dot');
 
+            var smallparty = $(this).data('acronym').replace(/ /g, '-').toLowerCase();
+
             if (!$(this).hasClass('turnedon')) { // !.turnedon
+
+                if (vocabsize_state.parties.indexOf(smallparty) === -1) {
+                    vocabsize_state.parties.push(smallparty);
+                }
+                updateShareURL();
+
                 $(this).addClass(acronym.replace(/ /g, '_').toLowerCase() + '-background');
                 partymembers.classed('selected', true);
                 $('#vocabulary-chart').addClass('selection-active');
@@ -44,6 +57,11 @@ if (!isMSIE) {
                     measure("besedni-zaklad","party",acronym,'');
                 }
             } else { // .turnedon
+
+                if (vocabsize_state.parties.indexOf(smallparty) != -1) {
+                    vocabsize_state.parties.splice(vocabsize_state.parties.indexOf(smallparty), 1);
+                }
+                updateShareURL();
 
                 $(this).removeClass(acronym.replace(/ /g, '_').toLowerCase() + '-background');
                 partymembers.classed('selected', false);
@@ -263,6 +281,28 @@ if (!isMSIE) {
 
             makeSwitchEvent(groupedNodes[group][0].person.party.acronym.replace(' ', '_'));
         }
+
+        // handle state
+        window.setTimeout(function() {
+            if (vocabsize_state.people && vocabsize_state.parties) {
+                if (vocabsize_state.people.length > 0) {
+                    for (person_i in vocabsize_state.people) {
+                        exposeMe(svg.select('#_' + String(vocabsize_state.people[i].id).datum()));
+                    }
+                }
+
+                if (vocabsize_state.parties.length > 0) {
+                    for (party_i in vocabsize_state.parties) {
+                        if (vocabsize_state.parties[party_i] === 'desus') {
+                            $('#besedni-zaklad-partyswitch-DeSUS').click();
+                        } else {
+                            console.log('#besedni-zaklad-partyswitch-' + vocabsize_state.parties[party_i].replace(/-/g, '_').toUpperCase());
+                            $('#besedni-zaklad-partyswitch-' + vocabsize_state.parties[party_i].replace(/-/g, '_').toUpperCase()).click();
+                        }
+                    }
+                }
+            }
+        }, 1000);
     }
 
     var color = d3.scale.ordinal()
@@ -321,13 +361,33 @@ if (!isMSIE) {
         }
 
         var clicked_element = svg.select('#_' + datum.person.id);
+
+        // state search
+        function hasID(element) {
+            return element.id == datum.person.id;
+        }
+
+        var elementfound = vocabsize_state.people.find(hasID);
+
         if (!clicked_element.classed('selected')) {
+
+            if (!elementfound) {
+                vocabsize_state.people.push({'id': parseInt(datum.person.id), 'name': datum.person.name});
+            }
+            updateShareURL();
+
             clicked_element.classed('selected', true);
             $('#personcard' + datum.person.id).removeClass('hidden');
             if(typeof measure == 'function') {
                 measure("besedni-zaklad","person",datum.person.name,'');
             }
         } else {
+
+            if (elementfound) {
+                vocabsize_state.people.splice(vocabsize_state.people.indexOf(elementfound), 1);
+            }
+            updateShareURL();
+
             clicked_element.classed('selected', false);
             $('#personcard' + datum.person.id).addClass('hidden');
             // if all party members are hidden, disable partyswitch
@@ -530,6 +590,20 @@ if (!isMSIE) {
         poslancisearch.local = searchpeople;
         poslancisearch.initialize(true);
     }
+
+    function updateShareURL() {
+        $('.card-besedni-zaklad .share-url').val('https://glej.parlameter.si/c/besedni-zaklad-vsi/?frame=true&altHeader=true&state=' + encodeURIComponent(JSON.stringify(vocabsize_state)));
+        $('.card-besedni-zaklad .card-footer').data('shortened', 'false');
+        updateEmbedURL();
+    }
+    function updateEmbedURL() {
+        var $textarea = $('.card-besedni-zaklad .embed-script textarea');
+        var embedbase = $textarea.val().split('100%" src="')[0] + '100%" src="';
+        var embedextra = 'https://glej.parlameter.si/c/besedni-zaklad-vsi/?embed=true&altHeader=true&state=' + encodeURIComponent(JSON.stringify(vocabsize_state)) + '">';
+        var embedcode = embedbase + embedextra;
+        $('.card-besedni-zaklad .embed-script textarea').val(embedcode);
+    }
+
 } else {
     $('.card-besedni-zaklad .card-content-front').html('<div class="no-results" style="width: 300px; margin-top: -20px;">Tvoj brskalnik žal ne podpira tehnologij, ki poganjajo to kartico.</div>')
 }

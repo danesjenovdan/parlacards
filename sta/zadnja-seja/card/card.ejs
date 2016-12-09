@@ -20,7 +20,22 @@
 
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
-
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(["setDomains", ["*.parlameter.si"]]);
+        _paq.push(["disableCookies"]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        _paq.push(['enableHeartBeatTimer']);
+        (function() {
+            var u="//zy.si/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '13']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
@@ -216,20 +231,20 @@
 
                             <div class="clearfix single_voting">
                                 <a href="/seja/glasovanje/<%=data.motions[i].session.id%>/<%=motion.motion_id%>">
-                                    <div class=" col-md-1 ">
+                                    <div class=" col-sm-1 ">
                                         <div class="accepted <%= ayeney %> ">
                                             <p>
                                             <i class="glyphicon <%=ayeneygly%> "></i>
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-md-11 border-left ">
-                                        <div class="col-md-6 ">
+                                    <div class="col-sm-11 border-left ">
+                                        <div class="col-sm-6 ">
                                             <div class="session_title ">
                                                 <p><%=resulttext %></p>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 ">
+                                        <div class="col-sm-6 ">
                                             <div class="session_votes ">
                                                 <div class="progress smallbar ">
                                                     <div class="progress-bar fontblue " style="width: <%= percent_votes_for %>% ">

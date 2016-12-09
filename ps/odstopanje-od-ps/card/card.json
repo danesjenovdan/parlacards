@@ -1,1 +1,1 @@
-{"_id":"5798d31ce08f4df165a85098","name":"Odstopanje od poslanske skupine","group":"pg","method":"odstopanje-od-poslanske-skupine","dataUrl":"https://analize.parlameter.si/v1/pg/getDeviationInOrg"}
+{"_id":"5798d31ce08f4df165a85098","name":"Ujemanje s poslansko skupino","group":"pg","method":"odstopanje-od-poslanske-skupine","dataUrl":"https://analize.parlameter.si/v1/pg/getDeviationInOrg"}

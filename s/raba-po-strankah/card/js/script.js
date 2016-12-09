@@ -39,7 +39,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
                 data.push({
                     'party': firstpiece,
                     'occurences': secondpiece,
-                    'percentage': Math.round(secondpiece / sum * 100)
+                    'percentage': isNaN(secondpiece / sum) ? 0 : Math.round(secondpiece / sum * 100)
                 });
             }
         }
@@ -117,7 +117,6 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
                     return parties[d.data.party]['acronym'] + ' | ' + d.data.percentage + ' %';
                 } else {
                     console.log('no', d);
-                    
                     return 'Zunanji govorci | ' + d.data.percentage + ' %';
                 }
             })
