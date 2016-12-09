@@ -33,15 +33,15 @@ var options = minimist(process.argv.slice(2), knownOptions);
 
 // read data.json
 var fs = require('fs');
-var jsonData = JSON.parse(fs.readFileSync(options.path + '/card/data.json', 'utf-8'));
-var jsonVocab = JSON.parse(fs.readFileSync(options.path + '/card/vocab.json', 'utf-8'));
-var cardData = JSON.parse(fs.readFileSync(options.path + '/card/card.json', 'utf-8'));
-var stateData = fs.existsSync(options.path + '/card/state.json')
-  ? JSON.parse(fs.readFileSync(options.path + '/card/state.json', 'utf-8'))
+var jsonData = JSON.parse(fs.readFileSync(options.path + '/data.json', 'utf-8'));
+var jsonVocab = JSON.parse(fs.readFileSync(options.path + '/vocab.json', 'utf-8'));
+var cardData = JSON.parse(fs.readFileSync(options.path + '/card.json', 'utf-8'));
+var stateData = fs.existsSync(options.path + '/state.json')
+  ? JSON.parse(fs.readFileSync(options.path + '/state.json', 'utf-8'))
   : {};
-var urlsData = JSON.parse(fs.readFileSync(options.path + '/card/urls.json', 'utf-8'));
-var customUrl = fs.existsSync(options.path + '/card/customUrl.json')
-  ? JSON.parse(fs.readFileSync(options.path + '/card/customUrl.json', 'utf-8'))
+var urlsData = JSON.parse(fs.readFileSync(options.path + '/urls.json', 'utf-8'));
+var customUrl = fs.existsSync(options.path + '/customUrl.json')
+  ? JSON.parse(fs.readFileSync(options.path + '/customUrl.json', 'utf-8'))
   : "";
 
 // generate CSS class name to use for sandboxing
@@ -54,7 +54,7 @@ var className = 'card-' + directoryName;
 
 // SASS/SCSS compiler
 gulp.task('sass', function() {
-    return gulp.src(options.path + '/card/scss/style.scss')
+    return gulp.src(options.path + '/scss/style.scss')
         .pipe(wrap('.' + className + '{<%= contents %>}', {}, { parse: false }))
         .pipe(sass({includePaths: 'node_modules'})) // Converts Sass to CSS with gulp-sass
         .pipe(gulp.dest('temp/css'))
@@ -74,20 +74,20 @@ gulp.task('minify:css', function() {
 
 // js uglifyer
 gulp.task('js', function() {
-    return gulp.src(options.path + '/card/js/script.js')
+    return gulp.src(options.path + '/js/script.js')
         .pipe(uglify())
         .pipe(gulp.dest('temp/js'));
 });
 
 // js copier (without uglify, for debug)
 gulp.task('js-no-uglify', function() {
-    return gulp.src(options.path + '/card/js/script.js')
+    return gulp.src(options.path + '/js/script.js')
         .pipe(gulp.dest('temp/js'));
 });
 
 // ejs compiler
 gulp.task('ejs', function() {
-    return gulp.src(options.path + '/card/card.ejs')
+    return gulp.src(options.path + '/card.ejs')
         .pipe(ejs({
             'data': jsonData,
             'className' : className,
@@ -115,7 +115,7 @@ gulp.task('browserSync', function() {
 
 // useref task to remove script files etc.
 gulp.task('useref', function() {
-    return gulp.src(options.path + '/card/card.ejs')
+    return gulp.src(options.path + '/card.ejs')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify())) //uglify/minify JS files
         .pipe(gulp.dest('temp'));
@@ -162,9 +162,9 @@ gulp.task('remove-minify', function() {
 
 // watch task for serve
 gulp.task('watch', function() {
-    gulp.watch(options.path + '/card/scss/**/*.scss', ['sass']);
-    gulp.watch(options.path + '/card/card.ejs', ['ejs', browserSync.reload]);
-    gulp.watch(options.path + '/card/js/**/*.js', ['js-no-uglify', browserSync.reload]);
+    gulp.watch(options.path + '/scss/**/*.scss', ['sass']);
+    gulp.watch(options.path + '/card.ejs', ['ejs', browserSync.reload]);
+    gulp.watch(options.path + '/js/**/*.js', ['js-no-uglify', browserSync.reload]);
 });
 
 // clean temp folder
@@ -203,7 +203,7 @@ gulp.task('push', function() {
             url: 'https://glej.parlameter.si/api/card/' + cardData._id + '/updateEjs',
             json: { ejs: data }
         }, function(err, response) {
-            fs.writeFile(options.path + '/card/card.json', JSON.stringify(response.body), 'utf-8');
+            fs.writeFile(options.path + '/card.json', JSON.stringify(response.body), 'utf-8');
         });
     });
 });
@@ -220,7 +220,7 @@ gulp.task('push-build', function(callback) {
 // copy card
 gulp.task('copy:card', function() {
     return gulp.src('card/**/*.*')
-        .pipe(gulp.dest(options.path + '/card'))
+        .pipe(gulp.dest(options.path))
 });
 // copy gulpfile and package.json
 gulp.task('copy:scaffolding', function() {
