@@ -36,8 +36,13 @@ var fs = require('fs');
 var jsonData = JSON.parse(fs.readFileSync(options.path + '/card/data.json', 'utf-8'));
 var jsonVocab = JSON.parse(fs.readFileSync(options.path + '/card/vocab.json', 'utf-8'));
 var cardData = JSON.parse(fs.readFileSync(options.path + '/card/card.json', 'utf-8'));
-var stateData = JSON.parse(fs.readFileSync(options.path + '/card/state.json', 'utf-8'));
+var stateData = fs.existsSync(options.path + '/card/state.json')
+  ? JSON.parse(fs.readFileSync(options.path + '/card/state.json', 'utf-8'))
+  : {};
 var urlsData = JSON.parse(fs.readFileSync(options.path + '/card/urls.json', 'utf-8'));
+var customUrl = fs.existsSync(options.path + '/card/customUrl.json')
+  ? JSON.parse(fs.readFileSync(options.path + '/card/customUrl.json', 'utf-8'))
+  : "";
 
 // generate CSS class name to use for sandboxing
 var directoryName = options.path.split('/').pop();
@@ -89,7 +94,8 @@ gulp.task('ejs', function() {
             'vocab' : jsonVocab,
             'cardData' : cardData,
             'state' : stateData,
-            'urlsData': urlsData
+            'urlsData': urlsData,
+            'customUrl': customUrl
         }, {
             ext: '.html'
         }))
