@@ -1,3 +1,5 @@
+var defaultPath = 'newcard';
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
@@ -24,18 +26,22 @@ var minimist = require('minimist');
 
 var knownOptions = {
   string: 'name',
-  default: { path: process.env.NODE_ENV || 'newcard' }
+  default: { path: process.env.NODE_ENV || defaultPath }
 };
 
 var options = minimist(process.argv.slice(2), knownOptions);
 
 // read data.json
 var fs = require('fs');
-var jsonData = JSON.parse(fs.readFileSync('card/data.json', 'utf-8'));
+var jsonData = JSON.parse(fs.readFileSync(options.path + '/card/data.json', 'utf-8'));
+var jsonVocab = JSON.parse(fs.readFileSync(options.path + '/card/vocab.json', 'utf-8'));
+var cardData = JSON.parse(fs.readFileSync(options.path + '/card/card.json', 'utf-8'));
+var stateData = JSON.parse(fs.readFileSync(options.path + '/card/state.json', 'utf-8'));
+var urlsData = JSON.parse(fs.readFileSync(options.path + '/card/urls.json', 'utf-8'));
 
 // generate CSS class name to use for sandboxing
-var directoryName = __dirname.replace(/\\/g, '/').split('/').pop()
-var className = 'card-' + directoryName
+var directoryName = options.path.split('/').pop();
+var className = 'card-' + directoryName;
 
 //#################
 //## tasks below ##
@@ -43,7 +49,7 @@ var className = 'card-' + directoryName
 
 // SASS/SCSS compiler
 gulp.task('sass', function() {
-    return gulp.src('card/scss/style.scss')
+    return gulp.src(options.path + '/card/scss/style.scss')
         .pipe(wrap('.' + className + '{<%= contents %>}', {}, { parse: false }))
         .pipe(sass({includePaths: 'node_modules'})) // Converts Sass to CSS with gulp-sass
         .pipe(gulp.dest('temp/css'))
@@ -63,23 +69,27 @@ gulp.task('minify:css', function() {
 
 // js uglifyer
 gulp.task('js', function() {
-    return gulp.src('card/js/script.js')
+    return gulp.src(options.path + '/card/js/script.js')
         .pipe(uglify())
         .pipe(gulp.dest('temp/js'));
 });
 
 // js copier (without uglify, for debug)
 gulp.task('js-no-uglify', function() {
-    return gulp.src('card/js/script.js')
+    return gulp.src(options.path + '/card/js/script.js')
         .pipe(gulp.dest('temp/js'));
 });
 
 // ejs compiler
 gulp.task('ejs', function() {
-    return gulp.src('card/card.ejs')
+    return gulp.src(options.path + '/card/card.ejs')
         .pipe(ejs({
             'data': jsonData,
-            'className' : className
+            'className' : className,
+            'vocab' : jsonVocab,
+            'cardData' : cardData,
+            'state' : stateData,
+            'urlsData': urlsData
         }, {
             ext: '.html'
         }))
@@ -99,10 +109,9 @@ gulp.task('browserSync', function() {
 
 // useref task to remove script files etc.
 gulp.task('useref', function() {
-    return gulp.src('card/card.ejs')
+    return gulp.src(options.path + '/card/card.ejs')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify())) //uglify/minify JS files
-        // .pipe(gulpif('*.css', cssnano())) //minify CSS files TODO remove
         .pipe(gulp.dest('temp'));
 });
 
@@ -123,39 +132,6 @@ gulp.task('inline', function() {
         .pipe(gulp.dest('temp'));
 });
 
-// build
-gulp.task('build', function(callback) {
-    runSequence(
-        ['clean:dist', 'clean:temp'], ['sass', 'js', 'useref'],
-        'minify:css',
-        'inline',
-        'remove-minify',
-        callback
-    );
-});
-
-// push file contents to server
-gulp.task('push', function() {
-    return fs.readFile('dist/card.min.ejs', 'utf8', (err, data) => {
-        request.post({
-            url: 'https://glej.parlameter.si/api/card/' + cardData._id + '/updateEjs',
-            json: { ejs: data }
-        }, function(err, response) {
-            fs.writeFile('card/card.json', JSON.stringify(response.body), 'utf-8');
-            // request.get('https://glej.parlameter.si/' + response.body.group + '/' + response.body.method + '/?forceRender=true');
-        });
-    });
-});
-
-// build and push
-gulp.task('push-build', function(callback) {
-    runSequence(
-        'build',
-        'push',
-        callback
-    );
-});
-
 // remove lines task
 gulp.task('remove-minify', function() {
     return gulp.src('temp/card-inline.ejs')
@@ -169,7 +145,7 @@ gulp.task('remove-minify', function() {
         }))
         .pipe(htmlmin({ // piping directly to minifyhtml
             'collapseWhitespace': true,
-            'conservativeCollapse': false,
+            'conservativeCollapse': true,
             'removeComments': true
         }))
         .pipe(replace(/<%= *className *%>/g, className))
@@ -180,9 +156,9 @@ gulp.task('remove-minify', function() {
 
 // watch task for serve
 gulp.task('watch', function() {
-    gulp.watch('card/scss/**/*.scss', ['sass']);
-    gulp.watch('card/card.ejs', ['ejs', browserSync.reload]);
-    gulp.watch('card/js/**/*.js', ['js-no-uglify', browserSync.reload]);
+    gulp.watch(options.path + '/card/scss/**/*.scss', ['sass']);
+    gulp.watch(options.path + '/card/card.ejs', ['ejs', browserSync.reload]);
+    gulp.watch(options.path + '/card/js/**/*.js', ['js-no-uglify', browserSync.reload]);
 });
 
 // clean temp folder
@@ -221,8 +197,7 @@ gulp.task('push', function() {
             url: 'https://glej.parlameter.si/api/card/' + cardData._id + '/updateEjs',
             json: { ejs: data }
         }, function(err, response) {
-            fs.writeFile('card/card.json', JSON.stringify(response.body), 'utf-8');
-            // request.get('https://glej.parlameter.si/' + response.body.group + '/' + response.body.method + '/?forceRender=true');
+            fs.writeFile(options.path + '/card/card.json', JSON.stringify(response.body), 'utf-8');
         });
     });
 });
@@ -246,18 +221,12 @@ gulp.task('copy:scaffolding', function() {
     return gulp.src(['gulpfile.js', 'package.json'])
         .pipe(gulp.dest(options.path))
 });
-// run npm install
-gulp.task('install:package.json', function() {
-    return gulp.src(options.path + '/package.json')
-        .pipe(install());
-});
 
 // create
 gulp.task('create', function(callback) {
     runSequence(
         'copy:card',
         'copy:scaffolding',
-        'install:package.json',
         callback
     );
 })
