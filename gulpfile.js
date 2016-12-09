@@ -216,23 +216,3 @@ gulp.task('push-build', function(callback) {
         callback
     );
 });
-
-// copy card
-gulp.task('copy:card', function() {
-    return gulp.src('card/**/*.*')
-        .pipe(gulp.dest(options.path))
-});
-// copy gulpfile and package.json
-gulp.task('copy:scaffolding', function() {
-    return gulp.src(['gulpfile.js', 'package.json'])
-        .pipe(gulp.dest(options.path))
-});
-
-// create
-gulp.task('create', function(callback) {
-    runSequence(
-        'copy:card',
-        'copy:scaffolding',
-        callback
-    );
-})

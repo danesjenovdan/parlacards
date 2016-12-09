@@ -13,3 +13,8 @@ You may run commands from the root directory with `gulp <command> --path=<path-t
 - `push-build` - compiles specified card and pushes it to CMS
 
 If you are working on a single card for a while, you may edit `gulpfile.js` and set `defaultPath` to that card (e.g. `'p/seznam-poslancev'`) to avoid specifying `--path=<path-to-card>` every time.
+
+## Creating a new card
+```bash
+mkdir -p path/to/new/card && cp -R card/* "$_"
+```
