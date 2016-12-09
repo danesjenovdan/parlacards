@@ -3,7 +3,8 @@
 ## Initial setup
 ```bash
 npm install
-npm install gulp -g```
+npm install gulp -g
+```
 
 ## Running gulp tasks
 You may run commands from the root directory with `gulp <command> --path=<path-to-card>`. The following are available:
