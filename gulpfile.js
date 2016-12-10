@@ -8,7 +8,6 @@ var gutil = require('gulp-util');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpif = require('gulp-if');
-var cssnano = require('gulp-cssnano'); // TODO remove
 var cleancss = require('gulp-clean-css');
 var del = require('del');
 var runSequence = require('run-sequence');
@@ -16,12 +15,8 @@ var rename = require('gulp-rename');
 var htmlmin = require('gulp-htmlmin');
 var deleteLines = require('gulp-delete-lines');
 var replace = require('gulp-replace');
-var install = require("gulp-install");
 var wrap = require('gulp-wrap');
 var request = require('request');
-
-var debug = require('gulp-debug');
-
 var minimist = require('minimist');
 
 var knownOptions = {
