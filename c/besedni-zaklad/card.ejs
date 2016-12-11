@@ -69,13 +69,6 @@
         var vocabsize_state = <%- JSON.stringify(state); %>;
     </script> <!-- TODO this is a dirty hack -->
 
-    <script>
-        var isMSIE = false;
-        if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv 11/)) || $.browser.msie == 1) {
-            isMSIE = true;
-        }
-    </script>
-
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
         <div class="card-header">
@@ -245,6 +238,25 @@
         </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(["setDomains", ["*.parlameter.si"]]);
+    _paq.push(["disableCookies"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//zy.si/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '13']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+    <noscript><p><img src="//zy.si/piwik.php?idsite=13" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+
 
     <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <!-- inline temp/js/script.js as <script> -->
