@@ -1,0 +1,2158 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@3.8.3
+3 info using node@v5.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData browser-sync
+20 silly mapToRegistry name browser-sync
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'browser-sync',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   name: 'browser-sync',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri https://registry.npmjs.org/browser-sync
+25 silly fetchNamedPackageData del
+26 silly mapToRegistry name del
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry https://registry.npmjs.org/
+29 silly mapToRegistry data Result {
+29 silly mapToRegistry   raw: 'del',
+29 silly mapToRegistry   scope: null,
+29 silly mapToRegistry   name: 'del',
+29 silly mapToRegistry   rawSpec: '',
+29 silly mapToRegistry   spec: 'latest',
+29 silly mapToRegistry   type: 'tag' }
+30 silly mapToRegistry uri https://registry.npmjs.org/del
+31 silly fetchNamedPackageData gulp-clean-css
+32 silly mapToRegistry name gulp-clean-css
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry https://registry.npmjs.org/
+35 silly mapToRegistry data Result {
+35 silly mapToRegistry   raw: 'gulp-clean-css',
+35 silly mapToRegistry   scope: null,
+35 silly mapToRegistry   name: 'gulp-clean-css',
+35 silly mapToRegistry   rawSpec: '',
+35 silly mapToRegistry   spec: 'latest',
+35 silly mapToRegistry   type: 'tag' }
+36 silly mapToRegistry uri https://registry.npmjs.org/gulp-clean-css
+37 silly fetchNamedPackageData gulp-cssnano
+38 silly mapToRegistry name gulp-cssnano
+39 silly mapToRegistry using default registry
+40 silly mapToRegistry registry https://registry.npmjs.org/
+41 silly mapToRegistry data Result {
+41 silly mapToRegistry   raw: 'gulp-cssnano',
+41 silly mapToRegistry   scope: null,
+41 silly mapToRegistry   name: 'gulp-cssnano',
+41 silly mapToRegistry   rawSpec: '',
+41 silly mapToRegistry   spec: 'latest',
+41 silly mapToRegistry   type: 'tag' }
+42 silly mapToRegistry uri https://registry.npmjs.org/gulp-cssnano
+43 silly fetchNamedPackageData gulp-debug
+44 silly mapToRegistry name gulp-debug
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry data Result {
+47 silly mapToRegistry   raw: 'gulp-debug',
+47 silly mapToRegistry   scope: null,
+47 silly mapToRegistry   name: 'gulp-debug',
+47 silly mapToRegistry   rawSpec: '',
+47 silly mapToRegistry   spec: 'latest',
+47 silly mapToRegistry   type: 'tag' }
+48 silly mapToRegistry uri https://registry.npmjs.org/gulp-debug
+49 silly fetchNamedPackageData gulp-delete-lines
+50 silly mapToRegistry name gulp-delete-lines
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry data Result {
+53 silly mapToRegistry   raw: 'gulp-delete-lines',
+53 silly mapToRegistry   scope: null,
+53 silly mapToRegistry   name: 'gulp-delete-lines',
+53 silly mapToRegistry   rawSpec: '',
+53 silly mapToRegistry   spec: 'latest',
+53 silly mapToRegistry   type: 'tag' }
+54 silly mapToRegistry uri https://registry.npmjs.org/gulp-delete-lines
+55 silly fetchNamedPackageData gulp-ejs
+56 silly mapToRegistry name gulp-ejs
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry data Result {
+59 silly mapToRegistry   raw: 'gulp-ejs',
+59 silly mapToRegistry   scope: null,
+59 silly mapToRegistry   name: 'gulp-ejs',
+59 silly mapToRegistry   rawSpec: '',
+59 silly mapToRegistry   spec: 'latest',
+59 silly mapToRegistry   type: 'tag' }
+60 silly mapToRegistry uri https://registry.npmjs.org/gulp-ejs
+61 silly fetchNamedPackageData gulp-htmlmin
+62 silly mapToRegistry name gulp-htmlmin
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry https://registry.npmjs.org/
+65 silly mapToRegistry data Result {
+65 silly mapToRegistry   raw: 'gulp-htmlmin',
+65 silly mapToRegistry   scope: null,
+65 silly mapToRegistry   name: 'gulp-htmlmin',
+65 silly mapToRegistry   rawSpec: '',
+65 silly mapToRegistry   spec: 'latest',
+65 silly mapToRegistry   type: 'tag' }
+66 silly mapToRegistry uri https://registry.npmjs.org/gulp-htmlmin
+67 silly fetchNamedPackageData gulp-if
+68 silly mapToRegistry name gulp-if
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry https://registry.npmjs.org/
+71 silly mapToRegistry data Result {
+71 silly mapToRegistry   raw: 'gulp-if',
+71 silly mapToRegistry   scope: null,
+71 silly mapToRegistry   name: 'gulp-if',
+71 silly mapToRegistry   rawSpec: '',
+71 silly mapToRegistry   spec: 'latest',
+71 silly mapToRegistry   type: 'tag' }
+72 silly mapToRegistry uri https://registry.npmjs.org/gulp-if
+73 silly fetchNamedPackageData gulp-install
+74 silly mapToRegistry name gulp-install
+75 silly mapToRegistry using default registry
+76 silly mapToRegistry registry https://registry.npmjs.org/
+77 silly mapToRegistry data Result {
+77 silly mapToRegistry   raw: 'gulp-install',
+77 silly mapToRegistry   scope: null,
+77 silly mapToRegistry   name: 'gulp-install',
+77 silly mapToRegistry   rawSpec: '',
+77 silly mapToRegistry   spec: 'latest',
+77 silly mapToRegistry   type: 'tag' }
+78 silly mapToRegistry uri https://registry.npmjs.org/gulp-install
+79 silly fetchNamedPackageData gulp-rename
+80 silly mapToRegistry name gulp-rename
+81 silly mapToRegistry using default registry
+82 silly mapToRegistry registry https://registry.npmjs.org/
+83 silly mapToRegistry data Result {
+83 silly mapToRegistry   raw: 'gulp-rename',
+83 silly mapToRegistry   scope: null,
+83 silly mapToRegistry   name: 'gulp-rename',
+83 silly mapToRegistry   rawSpec: '',
+83 silly mapToRegistry   spec: 'latest',
+83 silly mapToRegistry   type: 'tag' }
+84 silly mapToRegistry uri https://registry.npmjs.org/gulp-rename
+85 silly fetchNamedPackageData gulp-replace
+86 silly mapToRegistry name gulp-replace
+87 silly mapToRegistry using default registry
+88 silly mapToRegistry registry https://registry.npmjs.org/
+89 silly mapToRegistry data Result {
+89 silly mapToRegistry   raw: 'gulp-replace',
+89 silly mapToRegistry   scope: null,
+89 silly mapToRegistry   name: 'gulp-replace',
+89 silly mapToRegistry   rawSpec: '',
+89 silly mapToRegistry   spec: 'latest',
+89 silly mapToRegistry   type: 'tag' }
+90 silly mapToRegistry uri https://registry.npmjs.org/gulp-replace
+91 silly fetchNamedPackageData gulp-sass
+92 silly mapToRegistry name gulp-sass
+93 silly mapToRegistry using default registry
+94 silly mapToRegistry registry https://registry.npmjs.org/
+95 silly mapToRegistry data Result {
+95 silly mapToRegistry   raw: 'gulp-sass',
+95 silly mapToRegistry   scope: null,
+95 silly mapToRegistry   name: 'gulp-sass',
+95 silly mapToRegistry   rawSpec: '',
+95 silly mapToRegistry   spec: 'latest',
+95 silly mapToRegistry   type: 'tag' }
+96 silly mapToRegistry uri https://registry.npmjs.org/gulp-sass
+97 silly fetchNamedPackageData gulp-uglify
+98 silly mapToRegistry name gulp-uglify
+99 silly mapToRegistry using default registry
+100 silly mapToRegistry registry https://registry.npmjs.org/
+101 silly mapToRegistry data Result {
+101 silly mapToRegistry   raw: 'gulp-uglify',
+101 silly mapToRegistry   scope: null,
+101 silly mapToRegistry   name: 'gulp-uglify',
+101 silly mapToRegistry   rawSpec: '',
+101 silly mapToRegistry   spec: 'latest',
+101 silly mapToRegistry   type: 'tag' }
+102 silly mapToRegistry uri https://registry.npmjs.org/gulp-uglify
+103 silly fetchNamedPackageData gulp-useref
+104 silly mapToRegistry name gulp-useref
+105 silly mapToRegistry using default registry
+106 silly mapToRegistry registry https://registry.npmjs.org/
+107 silly mapToRegistry data Result {
+107 silly mapToRegistry   raw: 'gulp-useref',
+107 silly mapToRegistry   scope: null,
+107 silly mapToRegistry   name: 'gulp-useref',
+107 silly mapToRegistry   rawSpec: '',
+107 silly mapToRegistry   spec: 'latest',
+107 silly mapToRegistry   type: 'tag' }
+108 silly mapToRegistry uri https://registry.npmjs.org/gulp-useref
+109 silly fetchNamedPackageData gulp-wrap
+110 silly mapToRegistry name gulp-wrap
+111 silly mapToRegistry using default registry
+112 silly mapToRegistry registry https://registry.npmjs.org/
+113 silly mapToRegistry data Result {
+113 silly mapToRegistry   raw: 'gulp-wrap',
+113 silly mapToRegistry   scope: null,
+113 silly mapToRegistry   name: 'gulp-wrap',
+113 silly mapToRegistry   rawSpec: '',
+113 silly mapToRegistry   spec: 'latest',
+113 silly mapToRegistry   type: 'tag' }
+114 silly mapToRegistry uri https://registry.npmjs.org/gulp-wrap
+115 silly fetchNamedPackageData request
+116 silly mapToRegistry name request
+117 silly mapToRegistry using default registry
+118 silly mapToRegistry registry https://registry.npmjs.org/
+119 silly mapToRegistry data Result {
+119 silly mapToRegistry   raw: 'request',
+119 silly mapToRegistry   scope: null,
+119 silly mapToRegistry   name: 'request',
+119 silly mapToRegistry   rawSpec: '',
+119 silly mapToRegistry   spec: 'latest',
+119 silly mapToRegistry   type: 'tag' }
+120 silly mapToRegistry uri https://registry.npmjs.org/request
+121 silly fetchNamedPackageData run-sequence
+122 silly mapToRegistry name run-sequence
+123 silly mapToRegistry using default registry
+124 silly mapToRegistry registry https://registry.npmjs.org/
+125 silly mapToRegistry data Result {
+125 silly mapToRegistry   raw: 'run-sequence',
+125 silly mapToRegistry   scope: null,
+125 silly mapToRegistry   name: 'run-sequence',
+125 silly mapToRegistry   rawSpec: '',
+125 silly mapToRegistry   spec: 'latest',
+125 silly mapToRegistry   type: 'tag' }
+126 silly mapToRegistry uri https://registry.npmjs.org/run-sequence
+127 silly fetchOtherPackageData parlassets@git+ssh://git@github.com/muki/parlassets.git
+128 silly cache add args [ 'parlassets@git+ssh://git@github.com/muki/parlassets.git',
+128 silly cache add   null ]
+129 verbose cache add spec parlassets@git+ssh://git@github.com/muki/parlassets.git
+130 silly cache add parsed spec Result {
+130 silly cache add   raw: 'parlassets@git+ssh://git@github.com/muki/parlassets.git',
+130 silly cache add   scope: null,
+130 silly cache add   name: 'parlassets',
+130 silly cache add   rawSpec: 'git+ssh://git@github.com/muki/parlassets.git',
+130 silly cache add   spec: 'git+ssh://git@github.com/muki/parlassets.git',
+130 silly cache add   type: 'hosted',
+130 silly cache add   hosted:
+130 silly cache add    { type: 'github',
+130 silly cache add      ssh: 'git@github.com:muki/parlassets.git',
+130 silly cache add      sshUrl: 'git+ssh://git@github.com/muki/parlassets.git',
+130 silly cache add      httpsUrl: 'git+https://github.com/muki/parlassets.git',
+130 silly cache add      gitUrl: 'git://github.com/muki/parlassets.git',
+130 silly cache add      shortcut: 'github:muki/parlassets',
+130 silly cache add      directUrl: 'https://raw.githubusercontent.com/muki/parlassets/master/package.json' } }
+131 verbose addRemoteGit caching git+ssh://git@github.com/muki/parlassets.git
+132 verbose addRemoteGit git+ssh://git@github.com/muki/parlassets.git is a repository hosted by github
+133 silly tryClone cloning git+ssh://git@github.com/muki/parlassets.git via git+ssh://git@github.com/muki/parlassets.git
+134 verbose tryClone git-ssh-git-github-com-muki-parlassets-git-4c773461 not in flight; caching
+135 verbose correctMkdir /Users/muki/.npm/_git-remotes correctMkdir not in flight; initializing
+136 verbose request uri https://registry.npmjs.org/del
+137 verbose request no auth needed
+138 info attempt registry request try #1 at 16:29:31
+139 verbose request id 80e1e0e77bd8e6b9
+140 verbose etag W/"584036bd-7200"
+141 verbose lastModified Thu, 01 Dec 2016 14:42:05 GMT
+142 http request GET https://registry.npmjs.org/del
+143 verbose request uri https://registry.npmjs.org/gulp-debug
+144 verbose request no auth needed
+145 info attempt registry request try #1 at 16:29:31
+146 verbose etag W/"58372db8-4fd8"
+147 verbose lastModified Thu, 24 Nov 2016 18:13:12 GMT
+148 http request GET https://registry.npmjs.org/gulp-debug
+149 verbose request uri https://registry.npmjs.org/gulp-delete-lines
+150 verbose request no auth needed
+151 info attempt registry request try #1 at 16:29:31
+152 verbose etag W/"57f57ba3-30ba"
+153 verbose lastModified Wed, 05 Oct 2016 22:16:03 GMT
+154 http request GET https://registry.npmjs.org/gulp-delete-lines
+155 verbose request uri https://registry.npmjs.org/browser-sync
+156 verbose request no auth needed
+157 info attempt registry request try #1 at 16:29:31
+158 verbose etag W/"5842e571-7d8bd"
+159 verbose lastModified Sat, 03 Dec 2016 15:32:01 GMT
+160 http request GET https://registry.npmjs.org/browser-sync
+161 verbose request uri https://registry.npmjs.org/gulp-cssnano
+162 verbose request no auth needed
+163 info attempt registry request try #1 at 16:29:31
+164 verbose etag W/"5837f2fb-3054"
+165 verbose lastModified Fri, 25 Nov 2016 08:14:51 GMT
+166 http request GET https://registry.npmjs.org/gulp-cssnano
+167 verbose request uri https://registry.npmjs.org/gulp-ejs
+168 verbose request no auth needed
+169 info attempt registry request try #1 at 16:29:31
+170 verbose etag W/"57ea9204-8b70"
+171 verbose lastModified Tue, 27 Sep 2016 15:36:36 GMT
+172 http request GET https://registry.npmjs.org/gulp-ejs
+173 verbose request uri https://registry.npmjs.org/gulp-htmlmin
+174 verbose request no auth needed
+175 info attempt registry request try #1 at 16:29:31
+176 verbose etag W/"583712c3-6849"
+177 verbose lastModified Thu, 24 Nov 2016 16:18:11 GMT
+178 http request GET https://registry.npmjs.org/gulp-htmlmin
+179 verbose request uri https://registry.npmjs.org/gulp-if
+180 verbose request no auth needed
+181 info attempt registry request try #1 at 16:29:31
+182 verbose etag W/"58414267-6a63"
+183 verbose lastModified Fri, 02 Dec 2016 09:44:07 GMT
+184 http request GET https://registry.npmjs.org/gulp-if
+185 verbose request uri https://registry.npmjs.org/gulp-install
+186 verbose request no auth needed
+187 info attempt registry request try #1 at 16:29:31
+188 verbose etag W/"582e00c5-49a2"
+189 verbose lastModified Thu, 17 Nov 2016 19:11:01 GMT
+190 http request GET https://registry.npmjs.org/gulp-install
+191 verbose request uri https://registry.npmjs.org/gulp-rename
+192 verbose request no auth needed
+193 info attempt registry request try #1 at 16:29:31
+194 verbose etag W/"5842e736-3afd"
+195 verbose lastModified Sat, 03 Dec 2016 15:39:34 GMT
+196 http request GET https://registry.npmjs.org/gulp-rename
+197 verbose request uri https://registry.npmjs.org/gulp-replace
+198 verbose request no auth needed
+199 info attempt registry request try #1 at 16:29:31
+200 verbose etag W/"58369de0-370c"
+201 verbose lastModified Thu, 24 Nov 2016 07:59:28 GMT
+202 http request GET https://registry.npmjs.org/gulp-replace
+203 verbose request uri https://registry.npmjs.org/gulp-uglify
+204 verbose request no auth needed
+205 info attempt registry request try #1 at 16:29:31
+206 verbose etag W/"5842e6fa-ba77"
+207 verbose lastModified Sat, 03 Dec 2016 15:38:34 GMT
+208 http request GET https://registry.npmjs.org/gulp-uglify
+209 verbose request uri https://registry.npmjs.org/gulp-sass
+210 verbose request no auth needed
+211 info attempt registry request try #1 at 16:29:31
+212 verbose etag W/"584473f5-d939"
+213 verbose lastModified Sun, 04 Dec 2016 19:52:21 GMT
+214 http request GET https://registry.npmjs.org/gulp-sass
+215 verbose request uri https://registry.npmjs.org/gulp-useref
+216 verbose request no auth needed
+217 info attempt registry request try #1 at 16:29:31
+218 verbose etag W/"583df3aa-1037a"
+219 verbose lastModified Tue, 29 Nov 2016 21:31:22 GMT
+220 http request GET https://registry.npmjs.org/gulp-useref
+221 verbose request uri https://registry.npmjs.org/gulp-wrap
+222 verbose request no auth needed
+223 info attempt registry request try #1 at 16:29:31
+224 verbose etag W/"57fa0fcd-6714"
+225 verbose lastModified Sun, 09 Oct 2016 09:37:17 GMT
+226 http request GET https://registry.npmjs.org/gulp-wrap
+227 verbose request uri https://registry.npmjs.org/gulp-clean-css
+228 verbose request no auth needed
+229 info attempt registry request try #1 at 16:29:31
+230 verbose etag W/"5844e08d-7ec4"
+231 verbose lastModified Mon, 05 Dec 2016 03:35:41 GMT
+232 http request GET https://registry.npmjs.org/gulp-clean-css
+233 verbose request uri https://registry.npmjs.org/run-sequence
+234 verbose request no auth needed
+235 info attempt registry request try #1 at 16:29:31
+236 verbose etag W/"583bf50f-78cc"
+237 verbose lastModified Mon, 28 Nov 2016 09:12:47 GMT
+238 http request GET https://registry.npmjs.org/run-sequence
+239 verbose request uri https://registry.npmjs.org/request
+240 verbose request no auth needed
+241 info attempt registry request try #1 at 16:29:31
+242 verbose etag W/"58440e6d-34ec3"
+243 verbose lastModified Sun, 04 Dec 2016 12:39:09 GMT
+244 http request GET https://registry.npmjs.org/request
+245 info git [ 'config', '--get', 'remote.origin.url' ]
+246 silly validateExistingRemote git+ssh://git@github.com/muki/parlassets.git remote.origin.url: ssh://git@github.com/muki/parlassets.git
+247 verbose validateExistingRemote git+ssh://git@github.com/muki/parlassets.git is updating existing cached remote /Users/muki/.npm/_git-remotes/git-ssh-git-github-com-muki-parlassets-git-4c773461
+248 info git [ 'fetch', '-a', 'origin' ]
+249 http 304 https://registry.npmjs.org/gulp-delete-lines
+250 verbose headers { date: 'Mon, 05 Dec 2016 15:29:38 GMT',
+250 verbose headers   via: '1.1 varnish',
+250 verbose headers   'cache-control': 'max-age=300',
+250 verbose headers   etag: 'W/"57f57ba3-30ba"',
+250 verbose headers   age: '0',
+250 verbose headers   connection: 'keep-alive',
+250 verbose headers   'x-served-by': 'cache-lhr6346-LHR',
+250 verbose headers   'x-cache': 'HIT',
+250 verbose headers   'x-cache-hits': '1',
+250 verbose headers   'x-timer': 'S1480951778.984610,VS0,VE17',
+250 verbose headers   vary: 'Accept-Encoding' }
+251 silly get cb [ 304,
+251 silly get   { date: 'Mon, 05 Dec 2016 15:29:38 GMT',
+251 silly get     via: '1.1 varnish',
+251 silly get     'cache-control': 'max-age=300',
+251 silly get     etag: 'W/"57f57ba3-30ba"',
+251 silly get     age: '0',
+251 silly get     connection: 'keep-alive',
+251 silly get     'x-served-by': 'cache-lhr6346-LHR',
+251 silly get     'x-cache': 'HIT',
+251 silly get     'x-cache-hits': '1',
+251 silly get     'x-timer': 'S1480951778.984610,VS0,VE17',
+251 silly get     vary: 'Accept-Encoding' } ]
+252 verbose etag https://registry.npmjs.org/gulp-delete-lines from cache
+253 verbose get saving gulp-delete-lines to /Users/muki/.npm/registry.npmjs.org/gulp-delete-lines/.cache.json
+254 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+255 silly resolveWithNewModule gulp-delete-lines@0.0.7 checking installable status
+256 silly cache add args [ 'gulp-delete-lines@0.0.7', null ]
+257 verbose cache add spec gulp-delete-lines@0.0.7
+258 silly cache add parsed spec Result {
+258 silly cache add   raw: 'gulp-delete-lines@0.0.7',
+258 silly cache add   scope: null,
+258 silly cache add   name: 'gulp-delete-lines',
+258 silly cache add   rawSpec: '0.0.7',
+258 silly cache add   spec: '0.0.7',
+258 silly cache add   type: 'version' }
+259 silly addNamed gulp-delete-lines@0.0.7
+260 verbose addNamed "0.0.7" is a plain semver version for gulp-delete-lines
+261 silly mapToRegistry name gulp-delete-lines
+262 silly mapToRegistry using default registry
+263 silly mapToRegistry registry https://registry.npmjs.org/
+264 silly mapToRegistry data Result {
+264 silly mapToRegistry   raw: 'gulp-delete-lines',
+264 silly mapToRegistry   scope: null,
+264 silly mapToRegistry   name: 'gulp-delete-lines',
+264 silly mapToRegistry   rawSpec: '',
+264 silly mapToRegistry   spec: 'latest',
+264 silly mapToRegistry   type: 'tag' }
+265 silly mapToRegistry uri https://registry.npmjs.org/gulp-delete-lines
+266 verbose addNameVersion registry:https://registry.npmjs.org/gulp-delete-lines not in flight; fetching
+267 verbose get https://registry.npmjs.org/gulp-delete-lines not expired, no request
+268 silly cache afterAdd gulp-delete-lines@0.0.7
+269 verbose afterAdd /Users/muki/.npm/gulp-delete-lines/0.0.7/package/package.json not in flight; writing
+270 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+271 verbose afterAdd /Users/muki/.npm/gulp-delete-lines/0.0.7/package/package.json written
+272 http 304 https://registry.npmjs.org/del
+273 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+273 verbose headers   via: '1.1 varnish',
+273 verbose headers   'cache-control': 'max-age=300',
+273 verbose headers   etag: 'W/"584036bd-7200"',
+273 verbose headers   age: '14',
+273 verbose headers   connection: 'keep-alive',
+273 verbose headers   'x-served-by': 'cache-lhr6342-LHR',
+273 verbose headers   'x-cache': 'HIT',
+273 verbose headers   'x-cache-hits': '2',
+273 verbose headers   'x-timer': 'S1480951779.033223,VS0,VE0',
+273 verbose headers   vary: 'Accept-Encoding' }
+274 silly get cb [ 304,
+274 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+274 silly get     via: '1.1 varnish',
+274 silly get     'cache-control': 'max-age=300',
+274 silly get     etag: 'W/"584036bd-7200"',
+274 silly get     age: '14',
+274 silly get     connection: 'keep-alive',
+274 silly get     'x-served-by': 'cache-lhr6342-LHR',
+274 silly get     'x-cache': 'HIT',
+274 silly get     'x-cache-hits': '2',
+274 silly get     'x-timer': 'S1480951779.033223,VS0,VE0',
+274 silly get     vary: 'Accept-Encoding' } ]
+275 verbose etag https://registry.npmjs.org/del from cache
+276 verbose get saving del to /Users/muki/.npm/registry.npmjs.org/del/.cache.json
+277 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+278 silly resolveWithNewModule del@2.2.2 checking installable status
+279 silly cache add args [ 'del@^2.2.0', null ]
+280 verbose cache add spec del@^2.2.0
+281 silly cache add parsed spec Result {
+281 silly cache add   raw: 'del@^2.2.0',
+281 silly cache add   scope: null,
+281 silly cache add   name: 'del',
+281 silly cache add   rawSpec: '^2.2.0',
+281 silly cache add   spec: '>=2.2.0 <3.0.0',
+281 silly cache add   type: 'range' }
+282 silly addNamed del@>=2.2.0 <3.0.0
+283 verbose addNamed ">=2.2.0 <3.0.0" is a valid semver range for del
+284 silly addNameRange { name: 'del', range: '>=2.2.0 <3.0.0', hasData: false }
+285 silly mapToRegistry name del
+286 silly mapToRegistry using default registry
+287 silly mapToRegistry registry https://registry.npmjs.org/
+288 silly mapToRegistry data Result {
+288 silly mapToRegistry   raw: 'del',
+288 silly mapToRegistry   scope: null,
+288 silly mapToRegistry   name: 'del',
+288 silly mapToRegistry   rawSpec: '',
+288 silly mapToRegistry   spec: 'latest',
+288 silly mapToRegistry   type: 'tag' }
+289 silly mapToRegistry uri https://registry.npmjs.org/del
+290 verbose addNameRange registry:https://registry.npmjs.org/del not in flight; fetching
+291 verbose get https://registry.npmjs.org/del not expired, no request
+292 silly addNameRange number 2 { name: 'del', range: '>=2.2.0 <3.0.0', hasData: true }
+293 silly addNameRange versions [ 'del',
+293 silly addNameRange   [ '0.1.0',
+293 silly addNameRange     '0.1.1',
+293 silly addNameRange     '0.1.2',
+293 silly addNameRange     '0.1.3',
+293 silly addNameRange     '1.0.0',
+293 silly addNameRange     '1.1.0',
+293 silly addNameRange     '1.1.1',
+293 silly addNameRange     '1.2.0',
+293 silly addNameRange     '1.2.1',
+293 silly addNameRange     '2.0.0',
+293 silly addNameRange     '2.0.1',
+293 silly addNameRange     '2.0.2',
+293 silly addNameRange     '2.1.0',
+293 silly addNameRange     '2.2.0',
+293 silly addNameRange     '2.2.1',
+293 silly addNameRange     '2.2.2' ] ]
+294 silly addNamed del@2.2.2
+295 verbose addNamed "2.2.2" is a plain semver version for del
+296 silly cache afterAdd del@2.2.2
+297 verbose afterAdd /Users/muki/.npm/del/2.2.2/package/package.json not in flight; writing
+298 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+299 verbose afterAdd /Users/muki/.npm/del/2.2.2/package/package.json written
+300 http 304 https://registry.npmjs.org/gulp-debug
+301 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+301 verbose headers   via: '1.1 varnish',
+301 verbose headers   'cache-control': 'max-age=300',
+301 verbose headers   etag: 'W/"58372db8-4fd8"',
+301 verbose headers   age: '28',
+301 verbose headers   connection: 'keep-alive',
+301 verbose headers   'x-served-by': 'cache-lhr6347-LHR',
+301 verbose headers   'x-cache': 'HIT',
+301 verbose headers   'x-cache-hits': '1',
+301 verbose headers   'x-timer': 'S1480951779.557476,VS0,VE0',
+301 verbose headers   vary: 'Accept-Encoding' }
+302 silly get cb [ 304,
+302 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+302 silly get     via: '1.1 varnish',
+302 silly get     'cache-control': 'max-age=300',
+302 silly get     etag: 'W/"58372db8-4fd8"',
+302 silly get     age: '28',
+302 silly get     connection: 'keep-alive',
+302 silly get     'x-served-by': 'cache-lhr6347-LHR',
+302 silly get     'x-cache': 'HIT',
+302 silly get     'x-cache-hits': '1',
+302 silly get     'x-timer': 'S1480951779.557476,VS0,VE0',
+302 silly get     vary: 'Accept-Encoding' } ]
+303 verbose etag https://registry.npmjs.org/gulp-debug from cache
+304 verbose get saving gulp-debug to /Users/muki/.npm/registry.npmjs.org/gulp-debug/.cache.json
+305 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+306 silly resolveWithNewModule gulp-debug@2.1.2 checking installable status
+307 silly cache add args [ 'gulp-debug@^2.1.2', null ]
+308 verbose cache add spec gulp-debug@^2.1.2
+309 silly cache add parsed spec Result {
+309 silly cache add   raw: 'gulp-debug@^2.1.2',
+309 silly cache add   scope: null,
+309 silly cache add   name: 'gulp-debug',
+309 silly cache add   rawSpec: '^2.1.2',
+309 silly cache add   spec: '>=2.1.2 <3.0.0',
+309 silly cache add   type: 'range' }
+310 silly addNamed gulp-debug@>=2.1.2 <3.0.0
+311 verbose addNamed ">=2.1.2 <3.0.0" is a valid semver range for gulp-debug
+312 silly addNameRange { name: 'gulp-debug', range: '>=2.1.2 <3.0.0', hasData: false }
+313 silly mapToRegistry name gulp-debug
+314 silly mapToRegistry using default registry
+315 silly mapToRegistry registry https://registry.npmjs.org/
+316 silly mapToRegistry data Result {
+316 silly mapToRegistry   raw: 'gulp-debug',
+316 silly mapToRegistry   scope: null,
+316 silly mapToRegistry   name: 'gulp-debug',
+316 silly mapToRegistry   rawSpec: '',
+316 silly mapToRegistry   spec: 'latest',
+316 silly mapToRegistry   type: 'tag' }
+317 silly mapToRegistry uri https://registry.npmjs.org/gulp-debug
+318 verbose addNameRange registry:https://registry.npmjs.org/gulp-debug not in flight; fetching
+319 verbose get https://registry.npmjs.org/gulp-debug not expired, no request
+320 silly addNameRange number 2 { name: 'gulp-debug', range: '>=2.1.2 <3.0.0', hasData: true }
+321 silly addNameRange versions [ 'gulp-debug',
+321 silly addNameRange   [ '0.1.0',
+321 silly addNameRange     '0.1.1',
+321 silly addNameRange     '0.1.2',
+321 silly addNameRange     '0.2.0',
+321 silly addNameRange     '0.3.0',
+321 silly addNameRange     '0.3.1',
+321 silly addNameRange     '1.0.0',
+321 silly addNameRange     '1.0.1',
+321 silly addNameRange     '2.0.0',
+321 silly addNameRange     '2.0.1',
+321 silly addNameRange     '2.1.0',
+321 silly addNameRange     '2.1.1',
+321 silly addNameRange     '2.1.2',
+321 silly addNameRange     '3.0.0' ] ]
+322 silly addNamed gulp-debug@2.1.2
+323 verbose addNamed "2.1.2" is a plain semver version for gulp-debug
+324 silly cache afterAdd gulp-debug@2.1.2
+325 verbose afterAdd /Users/muki/.npm/gulp-debug/2.1.2/package/package.json not in flight; writing
+326 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+327 verbose afterAdd /Users/muki/.npm/gulp-debug/2.1.2/package/package.json written
+328 http 304 https://registry.npmjs.org/gulp-cssnano
+329 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+329 verbose headers   via: '1.1 varnish',
+329 verbose headers   'cache-control': 'max-age=300',
+329 verbose headers   etag: 'W/"5837f2fb-3054"',
+329 verbose headers   age: '136',
+329 verbose headers   connection: 'keep-alive',
+329 verbose headers   'x-served-by': 'cache-lhr6343-LHR',
+329 verbose headers   'x-cache': 'HIT',
+329 verbose headers   'x-cache-hits': '3',
+329 verbose headers   'x-timer': 'S1480951779.584603,VS0,VE0',
+329 verbose headers   vary: 'Accept-Encoding' }
+330 silly get cb [ 304,
+330 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+330 silly get     via: '1.1 varnish',
+330 silly get     'cache-control': 'max-age=300',
+330 silly get     etag: 'W/"5837f2fb-3054"',
+330 silly get     age: '136',
+330 silly get     connection: 'keep-alive',
+330 silly get     'x-served-by': 'cache-lhr6343-LHR',
+330 silly get     'x-cache': 'HIT',
+330 silly get     'x-cache-hits': '3',
+330 silly get     'x-timer': 'S1480951779.584603,VS0,VE0',
+330 silly get     vary: 'Accept-Encoding' } ]
+331 verbose etag https://registry.npmjs.org/gulp-cssnano from cache
+332 verbose get saving gulp-cssnano to /Users/muki/.npm/registry.npmjs.org/gulp-cssnano/.cache.json
+333 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+334 silly resolveWithNewModule gulp-cssnano@2.1.2 checking installable status
+335 silly cache add args [ 'gulp-cssnano@^2.1.2', null ]
+336 verbose cache add spec gulp-cssnano@^2.1.2
+337 silly cache add parsed spec Result {
+337 silly cache add   raw: 'gulp-cssnano@^2.1.2',
+337 silly cache add   scope: null,
+337 silly cache add   name: 'gulp-cssnano',
+337 silly cache add   rawSpec: '^2.1.2',
+337 silly cache add   spec: '>=2.1.2 <3.0.0',
+337 silly cache add   type: 'range' }
+338 silly addNamed gulp-cssnano@>=2.1.2 <3.0.0
+339 verbose addNamed ">=2.1.2 <3.0.0" is a valid semver range for gulp-cssnano
+340 silly addNameRange { name: 'gulp-cssnano', range: '>=2.1.2 <3.0.0', hasData: false }
+341 silly mapToRegistry name gulp-cssnano
+342 silly mapToRegistry using default registry
+343 silly mapToRegistry registry https://registry.npmjs.org/
+344 silly mapToRegistry data Result {
+344 silly mapToRegistry   raw: 'gulp-cssnano',
+344 silly mapToRegistry   scope: null,
+344 silly mapToRegistry   name: 'gulp-cssnano',
+344 silly mapToRegistry   rawSpec: '',
+344 silly mapToRegistry   spec: 'latest',
+344 silly mapToRegistry   type: 'tag' }
+345 silly mapToRegistry uri https://registry.npmjs.org/gulp-cssnano
+346 verbose addNameRange registry:https://registry.npmjs.org/gulp-cssnano not in flight; fetching
+347 verbose get https://registry.npmjs.org/gulp-cssnano not expired, no request
+348 silly addNameRange number 2 { name: 'gulp-cssnano', range: '>=2.1.2 <3.0.0', hasData: true }
+349 silly addNameRange versions [ 'gulp-cssnano',
+349 silly addNameRange   [ '1.0.0', '1.1.0', '2.0.0', '2.0.1', '2.1.0', '2.1.1', '2.1.2' ] ]
+350 silly addNamed gulp-cssnano@2.1.2
+351 verbose addNamed "2.1.2" is a plain semver version for gulp-cssnano
+352 silly cache afterAdd gulp-cssnano@2.1.2
+353 verbose afterAdd /Users/muki/.npm/gulp-cssnano/2.1.2/package/package.json not in flight; writing
+354 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+355 verbose afterAdd /Users/muki/.npm/gulp-cssnano/2.1.2/package/package.json written
+356 http 304 https://registry.npmjs.org/gulp-ejs
+357 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+357 verbose headers   via: '1.1 varnish',
+357 verbose headers   'cache-control': 'max-age=300',
+357 verbose headers   etag: 'W/"57ea9204-8b70"',
+357 verbose headers   age: '68',
+357 verbose headers   connection: 'keep-alive',
+357 verbose headers   'x-served-by': 'cache-lhr6345-LHR',
+357 verbose headers   'x-cache': 'HIT',
+357 verbose headers   'x-cache-hits': '1',
+357 verbose headers   'x-timer': 'S1480951779.597476,VS0,VE0',
+357 verbose headers   vary: 'Accept-Encoding' }
+358 silly get cb [ 304,
+358 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+358 silly get     via: '1.1 varnish',
+358 silly get     'cache-control': 'max-age=300',
+358 silly get     etag: 'W/"57ea9204-8b70"',
+358 silly get     age: '68',
+358 silly get     connection: 'keep-alive',
+358 silly get     'x-served-by': 'cache-lhr6345-LHR',
+358 silly get     'x-cache': 'HIT',
+358 silly get     'x-cache-hits': '1',
+358 silly get     'x-timer': 'S1480951779.597476,VS0,VE0',
+358 silly get     vary: 'Accept-Encoding' } ]
+359 verbose etag https://registry.npmjs.org/gulp-ejs from cache
+360 verbose get saving gulp-ejs to /Users/muki/.npm/registry.npmjs.org/gulp-ejs/.cache.json
+361 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+362 silly resolveWithNewModule gulp-ejs@2.2.1 checking installable status
+363 silly cache add args [ 'gulp-ejs@^2.1.1', null ]
+364 verbose cache add spec gulp-ejs@^2.1.1
+365 silly cache add parsed spec Result {
+365 silly cache add   raw: 'gulp-ejs@^2.1.1',
+365 silly cache add   scope: null,
+365 silly cache add   name: 'gulp-ejs',
+365 silly cache add   rawSpec: '^2.1.1',
+365 silly cache add   spec: '>=2.1.1 <3.0.0',
+365 silly cache add   type: 'range' }
+366 silly addNamed gulp-ejs@>=2.1.1 <3.0.0
+367 verbose addNamed ">=2.1.1 <3.0.0" is a valid semver range for gulp-ejs
+368 silly addNameRange { name: 'gulp-ejs', range: '>=2.1.1 <3.0.0', hasData: false }
+369 silly mapToRegistry name gulp-ejs
+370 silly mapToRegistry using default registry
+371 silly mapToRegistry registry https://registry.npmjs.org/
+372 silly mapToRegistry data Result {
+372 silly mapToRegistry   raw: 'gulp-ejs',
+372 silly mapToRegistry   scope: null,
+372 silly mapToRegistry   name: 'gulp-ejs',
+372 silly mapToRegistry   rawSpec: '',
+372 silly mapToRegistry   spec: 'latest',
+372 silly mapToRegistry   type: 'tag' }
+373 silly mapToRegistry uri https://registry.npmjs.org/gulp-ejs
+374 verbose addNameRange registry:https://registry.npmjs.org/gulp-ejs not in flight; fetching
+375 verbose get https://registry.npmjs.org/gulp-ejs not expired, no request
+376 silly addNameRange number 2 { name: 'gulp-ejs', range: '>=2.1.1 <3.0.0', hasData: true }
+377 silly addNameRange versions [ 'gulp-ejs',
+377 silly addNameRange   [ '0.0.1',
+377 silly addNameRange     '0.0.2',
+377 silly addNameRange     '0.0.3',
+377 silly addNameRange     '0.1.0',
+377 silly addNameRange     '0.1.1',
+377 silly addNameRange     '0.1.2',
+377 silly addNameRange     '0.1.3',
+377 silly addNameRange     '0.1.4',
+377 silly addNameRange     '0.1.5',
+377 silly addNameRange     '0.2.0',
+377 silly addNameRange     '0.2.1',
+377 silly addNameRange     '0.2.2',
+377 silly addNameRange     '0.3.0',
+377 silly addNameRange     '0.3.1',
+377 silly addNameRange     '1.0.0',
+377 silly addNameRange     '1.1.0',
+377 silly addNameRange     '1.1.1',
+377 silly addNameRange     '1.2.0',
+377 silly addNameRange     '1.2.1',
+377 silly addNameRange     '1.2.2',
+377 silly addNameRange     '2.0.0',
+377 silly addNameRange     '2.1.0',
+377 silly addNameRange     '2.1.1',
+377 silly addNameRange     '2.1.2',
+377 silly addNameRange     '2.1.3',
+377 silly addNameRange     '2.2.0',
+377 silly addNameRange     '2.2.1' ] ]
+378 silly addNamed gulp-ejs@2.2.1
+379 verbose addNamed "2.2.1" is a plain semver version for gulp-ejs
+380 silly cache afterAdd gulp-ejs@2.2.1
+381 verbose afterAdd /Users/muki/.npm/gulp-ejs/2.2.1/package/package.json not in flight; writing
+382 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+383 verbose afterAdd /Users/muki/.npm/gulp-ejs/2.2.1/package/package.json written
+384 http 304 https://registry.npmjs.org/gulp-htmlmin
+385 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+385 verbose headers   via: '1.1 varnish',
+385 verbose headers   'cache-control': 'max-age=300',
+385 verbose headers   etag: 'W/"583712c3-6849"',
+385 verbose headers   age: '73',
+385 verbose headers   connection: 'keep-alive',
+385 verbose headers   'x-served-by': 'cache-lhr6338-LHR',
+385 verbose headers   'x-cache': 'HIT',
+385 verbose headers   'x-cache-hits': '1',
+385 verbose headers   'x-timer': 'S1480951779.740162,VS0,VE0',
+385 verbose headers   vary: 'Accept-Encoding' }
+386 silly get cb [ 304,
+386 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+386 silly get     via: '1.1 varnish',
+386 silly get     'cache-control': 'max-age=300',
+386 silly get     etag: 'W/"583712c3-6849"',
+386 silly get     age: '73',
+386 silly get     connection: 'keep-alive',
+386 silly get     'x-served-by': 'cache-lhr6338-LHR',
+386 silly get     'x-cache': 'HIT',
+386 silly get     'x-cache-hits': '1',
+386 silly get     'x-timer': 'S1480951779.740162,VS0,VE0',
+386 silly get     vary: 'Accept-Encoding' } ]
+387 verbose etag https://registry.npmjs.org/gulp-htmlmin from cache
+388 verbose get saving gulp-htmlmin to /Users/muki/.npm/registry.npmjs.org/gulp-htmlmin/.cache.json
+389 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+390 silly resolveWithNewModule gulp-htmlmin@2.0.0 checking installable status
+391 silly cache add args [ 'gulp-htmlmin@^2.0.0', null ]
+392 verbose cache add spec gulp-htmlmin@^2.0.0
+393 silly cache add parsed spec Result {
+393 silly cache add   raw: 'gulp-htmlmin@^2.0.0',
+393 silly cache add   scope: null,
+393 silly cache add   name: 'gulp-htmlmin',
+393 silly cache add   rawSpec: '^2.0.0',
+393 silly cache add   spec: '>=2.0.0 <3.0.0',
+393 silly cache add   type: 'range' }
+394 silly addNamed gulp-htmlmin@>=2.0.0 <3.0.0
+395 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for gulp-htmlmin
+396 silly addNameRange { name: 'gulp-htmlmin', range: '>=2.0.0 <3.0.0', hasData: false }
+397 silly mapToRegistry name gulp-htmlmin
+398 silly mapToRegistry using default registry
+399 silly mapToRegistry registry https://registry.npmjs.org/
+400 silly mapToRegistry data Result {
+400 silly mapToRegistry   raw: 'gulp-htmlmin',
+400 silly mapToRegistry   scope: null,
+400 silly mapToRegistry   name: 'gulp-htmlmin',
+400 silly mapToRegistry   rawSpec: '',
+400 silly mapToRegistry   spec: 'latest',
+400 silly mapToRegistry   type: 'tag' }
+401 silly mapToRegistry uri https://registry.npmjs.org/gulp-htmlmin
+402 verbose addNameRange registry:https://registry.npmjs.org/gulp-htmlmin not in flight; fetching
+403 verbose get https://registry.npmjs.org/gulp-htmlmin not expired, no request
+404 silly addNameRange number 2 { name: 'gulp-htmlmin', range: '>=2.0.0 <3.0.0', hasData: true }
+405 silly addNameRange versions [ 'gulp-htmlmin',
+405 silly addNameRange   [ '0.1.0',
+405 silly addNameRange     '0.1.1',
+405 silly addNameRange     '0.1.2',
+405 silly addNameRange     '0.1.3',
+405 silly addNameRange     '0.2.0',
+405 silly addNameRange     '1.0.0',
+405 silly addNameRange     '1.1.0',
+405 silly addNameRange     '1.1.1',
+405 silly addNameRange     '1.1.2',
+405 silly addNameRange     '1.1.3',
+405 silly addNameRange     '1.1.4',
+405 silly addNameRange     '1.2.0',
+405 silly addNameRange     '1.3.0',
+405 silly addNameRange     '2.0.0',
+405 silly addNameRange     '3.0.0' ] ]
+406 silly addNamed gulp-htmlmin@2.0.0
+407 verbose addNamed "2.0.0" is a plain semver version for gulp-htmlmin
+408 silly cache afterAdd gulp-htmlmin@2.0.0
+409 verbose afterAdd /Users/muki/.npm/gulp-htmlmin/2.0.0/package/package.json not in flight; writing
+410 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+411 verbose afterAdd /Users/muki/.npm/gulp-htmlmin/2.0.0/package/package.json written
+412 http 304 https://registry.npmjs.org/gulp-if
+413 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+413 verbose headers   via: '1.1 varnish',
+413 verbose headers   'cache-control': 'max-age=300',
+413 verbose headers   etag: 'W/"58414267-6a63"',
+413 verbose headers   age: '73',
+413 verbose headers   connection: 'keep-alive',
+413 verbose headers   'x-served-by': 'cache-lhr6344-LHR',
+413 verbose headers   'x-cache': 'HIT',
+413 verbose headers   'x-cache-hits': '1',
+413 verbose headers   'x-timer': 'S1480951779.749405,VS0,VE0',
+413 verbose headers   vary: 'Accept-Encoding' }
+414 silly get cb [ 304,
+414 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+414 silly get     via: '1.1 varnish',
+414 silly get     'cache-control': 'max-age=300',
+414 silly get     etag: 'W/"58414267-6a63"',
+414 silly get     age: '73',
+414 silly get     connection: 'keep-alive',
+414 silly get     'x-served-by': 'cache-lhr6344-LHR',
+414 silly get     'x-cache': 'HIT',
+414 silly get     'x-cache-hits': '1',
+414 silly get     'x-timer': 'S1480951779.749405,VS0,VE0',
+414 silly get     vary: 'Accept-Encoding' } ]
+415 verbose etag https://registry.npmjs.org/gulp-if from cache
+416 verbose get saving gulp-if to /Users/muki/.npm/registry.npmjs.org/gulp-if/.cache.json
+417 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+418 silly resolveWithNewModule gulp-if@2.0.2 checking installable status
+419 silly cache add args [ 'gulp-if@^2.0.1', null ]
+420 verbose cache add spec gulp-if@^2.0.1
+421 silly cache add parsed spec Result {
+421 silly cache add   raw: 'gulp-if@^2.0.1',
+421 silly cache add   scope: null,
+421 silly cache add   name: 'gulp-if',
+421 silly cache add   rawSpec: '^2.0.1',
+421 silly cache add   spec: '>=2.0.1 <3.0.0',
+421 silly cache add   type: 'range' }
+422 silly addNamed gulp-if@>=2.0.1 <3.0.0
+423 verbose addNamed ">=2.0.1 <3.0.0" is a valid semver range for gulp-if
+424 silly addNameRange { name: 'gulp-if', range: '>=2.0.1 <3.0.0', hasData: false }
+425 silly mapToRegistry name gulp-if
+426 silly mapToRegistry using default registry
+427 silly mapToRegistry registry https://registry.npmjs.org/
+428 silly mapToRegistry data Result {
+428 silly mapToRegistry   raw: 'gulp-if',
+428 silly mapToRegistry   scope: null,
+428 silly mapToRegistry   name: 'gulp-if',
+428 silly mapToRegistry   rawSpec: '',
+428 silly mapToRegistry   spec: 'latest',
+428 silly mapToRegistry   type: 'tag' }
+429 silly mapToRegistry uri https://registry.npmjs.org/gulp-if
+430 verbose addNameRange registry:https://registry.npmjs.org/gulp-if not in flight; fetching
+431 verbose get https://registry.npmjs.org/gulp-if not expired, no request
+432 silly addNameRange number 2 { name: 'gulp-if', range: '>=2.0.1 <3.0.0', hasData: true }
+433 silly addNameRange versions [ 'gulp-if',
+433 silly addNameRange   [ '0.0.3',
+433 silly addNameRange     '0.0.4',
+433 silly addNameRange     '0.0.5',
+433 silly addNameRange     '1.0.0',
+433 silly addNameRange     '1.1.0',
+433 silly addNameRange     '1.2.0',
+433 silly addNameRange     '1.2.1',
+433 silly addNameRange     '1.2.2',
+433 silly addNameRange     '1.2.3',
+433 silly addNameRange     '1.2.4',
+433 silly addNameRange     '1.2.5',
+433 silly addNameRange     '2.0.0',
+433 silly addNameRange     '2.0.1',
+433 silly addNameRange     '2.0.2' ] ]
+434 silly addNamed gulp-if@2.0.2
+435 verbose addNamed "2.0.2" is a plain semver version for gulp-if
+436 silly cache afterAdd gulp-if@2.0.2
+437 verbose afterAdd /Users/muki/.npm/gulp-if/2.0.2/package/package.json not in flight; writing
+438 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+439 verbose afterAdd /Users/muki/.npm/gulp-if/2.0.2/package/package.json written
+440 http 304 https://registry.npmjs.org/gulp-install
+441 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+441 verbose headers   via: '1.1 varnish',
+441 verbose headers   'cache-control': 'max-age=300',
+441 verbose headers   etag: 'W/"582e00c5-49a2"',
+441 verbose headers   age: '161',
+441 verbose headers   connection: 'keep-alive',
+441 verbose headers   'x-served-by': 'cache-lhr6340-LHR',
+441 verbose headers   'x-cache': 'HIT',
+441 verbose headers   'x-cache-hits': '1',
+441 verbose headers   'x-timer': 'S1480951779.753498,VS0,VE0',
+441 verbose headers   vary: 'Accept-Encoding' }
+442 silly get cb [ 304,
+442 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+442 silly get     via: '1.1 varnish',
+442 silly get     'cache-control': 'max-age=300',
+442 silly get     etag: 'W/"582e00c5-49a2"',
+442 silly get     age: '161',
+442 silly get     connection: 'keep-alive',
+442 silly get     'x-served-by': 'cache-lhr6340-LHR',
+442 silly get     'x-cache': 'HIT',
+442 silly get     'x-cache-hits': '1',
+442 silly get     'x-timer': 'S1480951779.753498,VS0,VE0',
+442 silly get     vary: 'Accept-Encoding' } ]
+443 verbose etag https://registry.npmjs.org/gulp-install from cache
+444 verbose get saving gulp-install to /Users/muki/.npm/registry.npmjs.org/gulp-install/.cache.json
+445 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+446 silly resolveWithNewModule gulp-install@0.6.0 checking installable status
+447 silly cache add args [ 'gulp-install@^0.6.0', null ]
+448 verbose cache add spec gulp-install@^0.6.0
+449 silly cache add parsed spec Result {
+449 silly cache add   raw: 'gulp-install@^0.6.0',
+449 silly cache add   scope: null,
+449 silly cache add   name: 'gulp-install',
+449 silly cache add   rawSpec: '^0.6.0',
+449 silly cache add   spec: '>=0.6.0 <0.7.0',
+449 silly cache add   type: 'range' }
+450 silly addNamed gulp-install@>=0.6.0 <0.7.0
+451 verbose addNamed ">=0.6.0 <0.7.0" is a valid semver range for gulp-install
+452 silly addNameRange { name: 'gulp-install', range: '>=0.6.0 <0.7.0', hasData: false }
+453 silly mapToRegistry name gulp-install
+454 silly mapToRegistry using default registry
+455 silly mapToRegistry registry https://registry.npmjs.org/
+456 silly mapToRegistry data Result {
+456 silly mapToRegistry   raw: 'gulp-install',
+456 silly mapToRegistry   scope: null,
+456 silly mapToRegistry   name: 'gulp-install',
+456 silly mapToRegistry   rawSpec: '',
+456 silly mapToRegistry   spec: 'latest',
+456 silly mapToRegistry   type: 'tag' }
+457 silly mapToRegistry uri https://registry.npmjs.org/gulp-install
+458 verbose addNameRange registry:https://registry.npmjs.org/gulp-install not in flight; fetching
+459 verbose get https://registry.npmjs.org/gulp-install not expired, no request
+460 silly addNameRange number 2 { name: 'gulp-install', range: '>=0.6.0 <0.7.0', hasData: true }
+461 silly addNameRange versions [ 'gulp-install',
+461 silly addNameRange   [ '0.1.1',
+461 silly addNameRange     '0.1.3',
+461 silly addNameRange     '0.1.4',
+461 silly addNameRange     '0.1.5',
+461 silly addNameRange     '0.1.6',
+461 silly addNameRange     '0.1.7',
+461 silly addNameRange     '0.1.8',
+461 silly addNameRange     '0.2.0',
+461 silly addNameRange     '0.3.0',
+461 silly addNameRange     '0.4.0',
+461 silly addNameRange     '0.5.0',
+461 silly addNameRange     '0.6.0' ] ]
+462 silly addNamed gulp-install@0.6.0
+463 verbose addNamed "0.6.0" is a plain semver version for gulp-install
+464 silly cache afterAdd gulp-install@0.6.0
+465 verbose afterAdd /Users/muki/.npm/gulp-install/0.6.0/package/package.json not in flight; writing
+466 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+467 verbose afterAdd /Users/muki/.npm/gulp-install/0.6.0/package/package.json written
+468 http 200 https://registry.npmjs.org/gulp-rename
+469 verbose headers { server: 'nginx/1.10.1',
+469 verbose headers   'content-type': 'application/json',
+469 verbose headers   'last-modified': 'Mon, 05 Dec 2016 05:04:14 GMT',
+469 verbose headers   etag: 'W/"5844f54e-3b15"',
+469 verbose headers   'content-encoding': 'gzip',
+469 verbose headers   'cache-control': 'max-age=300',
+469 verbose headers   'content-length': '4005',
+469 verbose headers   'accept-ranges': 'bytes',
+469 verbose headers   date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+469 verbose headers   via: '1.1 varnish',
+469 verbose headers   age: '182',
+469 verbose headers   connection: 'keep-alive',
+469 verbose headers   'x-served-by': 'cache-lhr6336-LHR',
+469 verbose headers   'x-cache': 'HIT',
+469 verbose headers   'x-cache-hits': '3',
+469 verbose headers   'x-timer': 'S1480951779.767142,VS0,VE0',
+469 verbose headers   vary: 'Accept-Encoding' }
+470 silly get cb [ 200,
+470 silly get   { server: 'nginx/1.10.1',
+470 silly get     'content-type': 'application/json',
+470 silly get     'last-modified': 'Mon, 05 Dec 2016 05:04:14 GMT',
+470 silly get     etag: 'W/"5844f54e-3b15"',
+470 silly get     'content-encoding': 'gzip',
+470 silly get     'cache-control': 'max-age=300',
+470 silly get     'content-length': '4005',
+470 silly get     'accept-ranges': 'bytes',
+470 silly get     date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+470 silly get     via: '1.1 varnish',
+470 silly get     age: '182',
+470 silly get     connection: 'keep-alive',
+470 silly get     'x-served-by': 'cache-lhr6336-LHR',
+470 silly get     'x-cache': 'HIT',
+470 silly get     'x-cache-hits': '3',
+470 silly get     'x-timer': 'S1480951779.767142,VS0,VE0',
+470 silly get     vary: 'Accept-Encoding' } ]
+471 verbose get saving gulp-rename to /Users/muki/.npm/registry.npmjs.org/gulp-rename/.cache.json
+472 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+473 silly resolveWithNewModule gulp-rename@1.2.2 checking installable status
+474 silly cache add args [ 'gulp-rename@^1.2.2', null ]
+475 verbose cache add spec gulp-rename@^1.2.2
+476 silly cache add parsed spec Result {
+476 silly cache add   raw: 'gulp-rename@^1.2.2',
+476 silly cache add   scope: null,
+476 silly cache add   name: 'gulp-rename',
+476 silly cache add   rawSpec: '^1.2.2',
+476 silly cache add   spec: '>=1.2.2 <2.0.0',
+476 silly cache add   type: 'range' }
+477 silly addNamed gulp-rename@>=1.2.2 <2.0.0
+478 verbose addNamed ">=1.2.2 <2.0.0" is a valid semver range for gulp-rename
+479 silly addNameRange { name: 'gulp-rename', range: '>=1.2.2 <2.0.0', hasData: false }
+480 silly mapToRegistry name gulp-rename
+481 silly mapToRegistry using default registry
+482 silly mapToRegistry registry https://registry.npmjs.org/
+483 silly mapToRegistry data Result {
+483 silly mapToRegistry   raw: 'gulp-rename',
+483 silly mapToRegistry   scope: null,
+483 silly mapToRegistry   name: 'gulp-rename',
+483 silly mapToRegistry   rawSpec: '',
+483 silly mapToRegistry   spec: 'latest',
+483 silly mapToRegistry   type: 'tag' }
+484 silly mapToRegistry uri https://registry.npmjs.org/gulp-rename
+485 verbose addNameRange registry:https://registry.npmjs.org/gulp-rename not in flight; fetching
+486 verbose get https://registry.npmjs.org/gulp-rename not expired, no request
+487 silly addNameRange number 2 { name: 'gulp-rename', range: '>=1.2.2 <2.0.0', hasData: true }
+488 silly addNameRange versions [ 'gulp-rename',
+488 silly addNameRange   [ '0.1.0', '0.2.1', '0.2.2', '1.0.0', '1.1.0', '1.2.0', '1.2.2' ] ]
+489 silly addNamed gulp-rename@1.2.2
+490 verbose addNamed "1.2.2" is a plain semver version for gulp-rename
+491 silly cache afterAdd gulp-rename@1.2.2
+492 verbose afterAdd /Users/muki/.npm/gulp-rename/1.2.2/package/package.json not in flight; writing
+493 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+494 verbose afterAdd /Users/muki/.npm/gulp-rename/1.2.2/package/package.json written
+495 http 304 https://registry.npmjs.org/gulp-replace
+496 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+496 verbose headers   via: '1.1 varnish',
+496 verbose headers   'cache-control': 'max-age=300',
+496 verbose headers   etag: 'W/"58369de0-370c"',
+496 verbose headers   age: '267',
+496 verbose headers   connection: 'keep-alive',
+496 verbose headers   'x-served-by': 'cache-lhr6347-LHR',
+496 verbose headers   'x-cache': 'HIT',
+496 verbose headers   'x-cache-hits': '2',
+496 verbose headers   'x-timer': 'S1480951779.817981,VS0,VE0',
+496 verbose headers   vary: 'Accept-Encoding' }
+497 silly get cb [ 304,
+497 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+497 silly get     via: '1.1 varnish',
+497 silly get     'cache-control': 'max-age=300',
+497 silly get     etag: 'W/"58369de0-370c"',
+497 silly get     age: '267',
+497 silly get     connection: 'keep-alive',
+497 silly get     'x-served-by': 'cache-lhr6347-LHR',
+497 silly get     'x-cache': 'HIT',
+497 silly get     'x-cache-hits': '2',
+497 silly get     'x-timer': 'S1480951779.817981,VS0,VE0',
+497 silly get     vary: 'Accept-Encoding' } ]
+498 verbose etag https://registry.npmjs.org/gulp-replace from cache
+499 verbose get saving gulp-replace to /Users/muki/.npm/registry.npmjs.org/gulp-replace/.cache.json
+500 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+501 silly resolveWithNewModule gulp-replace@0.5.4 checking installable status
+502 silly cache add args [ 'gulp-replace@^0.5.4', null ]
+503 verbose cache add spec gulp-replace@^0.5.4
+504 silly cache add parsed spec Result {
+504 silly cache add   raw: 'gulp-replace@^0.5.4',
+504 silly cache add   scope: null,
+504 silly cache add   name: 'gulp-replace',
+504 silly cache add   rawSpec: '^0.5.4',
+504 silly cache add   spec: '>=0.5.4 <0.6.0',
+504 silly cache add   type: 'range' }
+505 silly addNamed gulp-replace@>=0.5.4 <0.6.0
+506 verbose addNamed ">=0.5.4 <0.6.0" is a valid semver range for gulp-replace
+507 silly addNameRange { name: 'gulp-replace', range: '>=0.5.4 <0.6.0', hasData: false }
+508 silly mapToRegistry name gulp-replace
+509 silly mapToRegistry using default registry
+510 silly mapToRegistry registry https://registry.npmjs.org/
+511 silly mapToRegistry data Result {
+511 silly mapToRegistry   raw: 'gulp-replace',
+511 silly mapToRegistry   scope: null,
+511 silly mapToRegistry   name: 'gulp-replace',
+511 silly mapToRegistry   rawSpec: '',
+511 silly mapToRegistry   spec: 'latest',
+511 silly mapToRegistry   type: 'tag' }
+512 silly mapToRegistry uri https://registry.npmjs.org/gulp-replace
+513 verbose addNameRange registry:https://registry.npmjs.org/gulp-replace not in flight; fetching
+514 verbose get https://registry.npmjs.org/gulp-replace not expired, no request
+515 silly addNameRange number 2 { name: 'gulp-replace', range: '>=0.5.4 <0.6.0', hasData: true }
+516 silly addNameRange versions [ 'gulp-replace',
+516 silly addNameRange   [ '0.1.0',
+516 silly addNameRange     '0.2.0',
+516 silly addNameRange     '0.3.0',
+516 silly addNameRange     '0.4.0',
+516 silly addNameRange     '0.5.0',
+516 silly addNameRange     '0.5.1',
+516 silly addNameRange     '0.5.2',
+516 silly addNameRange     '0.5.3',
+516 silly addNameRange     '0.5.4' ] ]
+517 silly addNamed gulp-replace@0.5.4
+518 verbose addNamed "0.5.4" is a plain semver version for gulp-replace
+519 silly cache afterAdd gulp-replace@0.5.4
+520 verbose afterAdd /Users/muki/.npm/gulp-replace/0.5.4/package/package.json not in flight; writing
+521 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+522 verbose afterAdd /Users/muki/.npm/gulp-replace/0.5.4/package/package.json written
+523 http 304 https://registry.npmjs.org/gulp-sass
+524 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+524 verbose headers   via: '1.1 varnish',
+524 verbose headers   'cache-control': 'max-age=300',
+524 verbose headers   etag: 'W/"584473f5-d939"',
+524 verbose headers   age: '268',
+524 verbose headers   connection: 'keep-alive',
+524 verbose headers   'x-served-by': 'cache-lhr6344-LHR',
+524 verbose headers   'x-cache': 'HIT',
+524 verbose headers   'x-cache-hits': '5',
+524 verbose headers   'x-timer': 'S1480951779.853381,VS0,VE0',
+524 verbose headers   vary: 'Accept-Encoding' }
+525 silly get cb [ 304,
+525 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+525 silly get     via: '1.1 varnish',
+525 silly get     'cache-control': 'max-age=300',
+525 silly get     etag: 'W/"584473f5-d939"',
+525 silly get     age: '268',
+525 silly get     connection: 'keep-alive',
+525 silly get     'x-served-by': 'cache-lhr6344-LHR',
+525 silly get     'x-cache': 'HIT',
+525 silly get     'x-cache-hits': '5',
+525 silly get     'x-timer': 'S1480951779.853381,VS0,VE0',
+525 silly get     vary: 'Accept-Encoding' } ]
+526 verbose etag https://registry.npmjs.org/gulp-sass from cache
+527 verbose get saving gulp-sass to /Users/muki/.npm/registry.npmjs.org/gulp-sass/.cache.json
+528 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+529 silly resolveWithNewModule gulp-sass@2.3.2 checking installable status
+530 silly cache add args [ 'gulp-sass@^2.3.1', null ]
+531 verbose cache add spec gulp-sass@^2.3.1
+532 silly cache add parsed spec Result {
+532 silly cache add   raw: 'gulp-sass@^2.3.1',
+532 silly cache add   scope: null,
+532 silly cache add   name: 'gulp-sass',
+532 silly cache add   rawSpec: '^2.3.1',
+532 silly cache add   spec: '>=2.3.1 <3.0.0',
+532 silly cache add   type: 'range' }
+533 silly addNamed gulp-sass@>=2.3.1 <3.0.0
+534 verbose addNamed ">=2.3.1 <3.0.0" is a valid semver range for gulp-sass
+535 silly addNameRange { name: 'gulp-sass', range: '>=2.3.1 <3.0.0', hasData: false }
+536 silly mapToRegistry name gulp-sass
+537 silly mapToRegistry using default registry
+538 silly mapToRegistry registry https://registry.npmjs.org/
+539 silly mapToRegistry data Result {
+539 silly mapToRegistry   raw: 'gulp-sass',
+539 silly mapToRegistry   scope: null,
+539 silly mapToRegistry   name: 'gulp-sass',
+539 silly mapToRegistry   rawSpec: '',
+539 silly mapToRegistry   spec: 'latest',
+539 silly mapToRegistry   type: 'tag' }
+540 silly mapToRegistry uri https://registry.npmjs.org/gulp-sass
+541 verbose addNameRange registry:https://registry.npmjs.org/gulp-sass not in flight; fetching
+542 verbose get https://registry.npmjs.org/gulp-sass not expired, no request
+543 silly addNameRange number 2 { name: 'gulp-sass', range: '>=2.3.1 <3.0.0', hasData: true }
+544 silly addNameRange versions [ 'gulp-sass',
+544 silly addNameRange   [ '0.1.0',
+544 silly addNameRange     '0.2.1',
+544 silly addNameRange     '0.2.2',
+544 silly addNameRange     '0.2.3',
+544 silly addNameRange     '0.3.0',
+544 silly addNameRange     '0.4.0',
+544 silly addNameRange     '0.4.1',
+544 silly addNameRange     '0.5.0',
+544 silly addNameRange     '0.5.1',
+544 silly addNameRange     '0.5.2',
+544 silly addNameRange     '0.6.0',
+544 silly addNameRange     '0.7.0',
+544 silly addNameRange     '0.7.1',
+544 silly addNameRange     '0.7.2',
+544 silly addNameRange     '0.7.3',
+544 silly addNameRange     '1.0.0',
+544 silly addNameRange     '1.1.0',
+544 silly addNameRange     '1.2.0',
+544 silly addNameRange     '1.2.1',
+544 silly addNameRange     '1.2.2',
+544 silly addNameRange     '1.2.3',
+544 silly addNameRange     '1.2.4',
+544 silly addNameRange     '1.3.0',
+544 silly addNameRange     '1.3.1',
+544 silly addNameRange     '1.3.2',
+544 silly addNameRange     '1.3.3',
+544 silly addNameRange     '2.0.0-alpha.1',
+544 silly addNameRange     '2.0.0',
+544 silly addNameRange     '2.0.2',
+544 silly addNameRange     '2.0.3',
+544 silly addNameRange     '2.0.4',
+544 silly addNameRange     '2.1.0-beta',
+544 silly addNameRange     '2.1.0',
+544 silly addNameRange     '2.1.1',
+544 silly addNameRange     '2.2.0',
+544 silly addNameRange     '2.3.0-beta.1',
+544 silly addNameRange     '2.3.0',
+544 silly addNameRange     '2.3.1',
+544 silly addNameRange     '2.3.2' ] ]
+545 silly addNamed gulp-sass@2.3.2
+546 verbose addNamed "2.3.2" is a plain semver version for gulp-sass
+547 silly cache afterAdd gulp-sass@2.3.2
+548 verbose afterAdd /Users/muki/.npm/gulp-sass/2.3.2/package/package.json not in flight; writing
+549 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+550 verbose afterAdd /Users/muki/.npm/gulp-sass/2.3.2/package/package.json written
+551 http 200 https://registry.npmjs.org/gulp-uglify
+552 verbose headers { server: 'nginx/1.10.1',
+552 verbose headers   'content-type': 'application/json',
+552 verbose headers   'last-modified': 'Mon, 05 Dec 2016 06:55:48 GMT',
+552 verbose headers   etag: 'W/"58450f74-ba86"',
+552 verbose headers   'content-encoding': 'gzip',
+552 verbose headers   'cache-control': 'max-age=300',
+552 verbose headers   'content-length': '9025',
+552 verbose headers   'accept-ranges': 'bytes',
+552 verbose headers   date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+552 verbose headers   via: '1.1 varnish',
+552 verbose headers   age: '29',
+552 verbose headers   connection: 'keep-alive',
+552 verbose headers   'x-served-by': 'cache-lhr6346-LHR',
+552 verbose headers   'x-cache': 'HIT',
+552 verbose headers   'x-cache-hits': '2',
+552 verbose headers   'x-timer': 'S1480951779.863401,VS0,VE0',
+552 verbose headers   vary: 'Accept-Encoding' }
+553 silly get cb [ 200,
+553 silly get   { server: 'nginx/1.10.1',
+553 silly get     'content-type': 'application/json',
+553 silly get     'last-modified': 'Mon, 05 Dec 2016 06:55:48 GMT',
+553 silly get     etag: 'W/"58450f74-ba86"',
+553 silly get     'content-encoding': 'gzip',
+553 silly get     'cache-control': 'max-age=300',
+553 silly get     'content-length': '9025',
+553 silly get     'accept-ranges': 'bytes',
+553 silly get     date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+553 silly get     via: '1.1 varnish',
+553 silly get     age: '29',
+553 silly get     connection: 'keep-alive',
+553 silly get     'x-served-by': 'cache-lhr6346-LHR',
+553 silly get     'x-cache': 'HIT',
+553 silly get     'x-cache-hits': '2',
+553 silly get     'x-timer': 'S1480951779.863401,VS0,VE0',
+553 silly get     vary: 'Accept-Encoding' } ]
+554 verbose get saving gulp-uglify to /Users/muki/.npm/registry.npmjs.org/gulp-uglify/.cache.json
+555 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+556 silly resolveWithNewModule gulp-uglify@1.5.4 checking installable status
+557 silly cache add args [ 'gulp-uglify@^1.5.3', null ]
+558 verbose cache add spec gulp-uglify@^1.5.3
+559 silly cache add parsed spec Result {
+559 silly cache add   raw: 'gulp-uglify@^1.5.3',
+559 silly cache add   scope: null,
+559 silly cache add   name: 'gulp-uglify',
+559 silly cache add   rawSpec: '^1.5.3',
+559 silly cache add   spec: '>=1.5.3 <2.0.0',
+559 silly cache add   type: 'range' }
+560 silly addNamed gulp-uglify@>=1.5.3 <2.0.0
+561 verbose addNamed ">=1.5.3 <2.0.0" is a valid semver range for gulp-uglify
+562 silly addNameRange { name: 'gulp-uglify', range: '>=1.5.3 <2.0.0', hasData: false }
+563 silly mapToRegistry name gulp-uglify
+564 silly mapToRegistry using default registry
+565 silly mapToRegistry registry https://registry.npmjs.org/
+566 silly mapToRegistry data Result {
+566 silly mapToRegistry   raw: 'gulp-uglify',
+566 silly mapToRegistry   scope: null,
+566 silly mapToRegistry   name: 'gulp-uglify',
+566 silly mapToRegistry   rawSpec: '',
+566 silly mapToRegistry   spec: 'latest',
+566 silly mapToRegistry   type: 'tag' }
+567 silly mapToRegistry uri https://registry.npmjs.org/gulp-uglify
+568 verbose addNameRange registry:https://registry.npmjs.org/gulp-uglify not in flight; fetching
+569 verbose get https://registry.npmjs.org/gulp-uglify not expired, no request
+570 silly addNameRange number 2 { name: 'gulp-uglify', range: '>=1.5.3 <2.0.0', hasData: true }
+571 silly addNameRange versions [ 'gulp-uglify',
+571 silly addNameRange   [ '0.0.1',
+571 silly addNameRange     '0.0.3',
+571 silly addNameRange     '0.0.4',
+571 silly addNameRange     '0.1.0',
+571 silly addNameRange     '0.2.0',
+571 silly addNameRange     '0.2.1',
+571 silly addNameRange     '0.3.0',
+571 silly addNameRange     '0.3.1',
+571 silly addNameRange     '0.3.2',
+571 silly addNameRange     '1.0.0-0',
+571 silly addNameRange     '1.0.0',
+571 silly addNameRange     '1.0.1',
+571 silly addNameRange     '1.0.2',
+571 silly addNameRange     '1.1.0',
+571 silly addNameRange     '1.2.0',
+571 silly addNameRange     '1.3.0',
+571 silly addNameRange     '1.4.0',
+571 silly addNameRange     '1.4.1',
+571 silly addNameRange     '1.4.2',
+571 silly addNameRange     '1.5.1',
+571 silly addNameRange     '1.5.2',
+571 silly addNameRange     '1.5.3',
+571 silly addNameRange     '1.5.4',
+571 silly addNameRange     '2.0.0' ] ]
+572 silly addNamed gulp-uglify@1.5.4
+573 verbose addNamed "1.5.4" is a plain semver version for gulp-uglify
+574 silly cache afterAdd gulp-uglify@1.5.4
+575 verbose afterAdd /Users/muki/.npm/gulp-uglify/1.5.4/package/package.json not in flight; writing
+576 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+577 verbose afterAdd /Users/muki/.npm/gulp-uglify/1.5.4/package/package.json written
+578 http 304 https://registry.npmjs.org/gulp-wrap
+579 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+579 verbose headers   via: '1.1 varnish',
+579 verbose headers   'cache-control': 'max-age=300',
+579 verbose headers   etag: 'W/"57fa0fcd-6714"',
+579 verbose headers   age: '203',
+579 verbose headers   connection: 'keep-alive',
+579 verbose headers   'x-served-by': 'cache-lhr6349-LHR',
+579 verbose headers   'x-cache': 'HIT',
+579 verbose headers   'x-cache-hits': '1',
+579 verbose headers   'x-timer': 'S1480951779.898393,VS0,VE0',
+579 verbose headers   vary: 'Accept-Encoding' }
+580 silly get cb [ 304,
+580 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+580 silly get     via: '1.1 varnish',
+580 silly get     'cache-control': 'max-age=300',
+580 silly get     etag: 'W/"57fa0fcd-6714"',
+580 silly get     age: '203',
+580 silly get     connection: 'keep-alive',
+580 silly get     'x-served-by': 'cache-lhr6349-LHR',
+580 silly get     'x-cache': 'HIT',
+580 silly get     'x-cache-hits': '1',
+580 silly get     'x-timer': 'S1480951779.898393,VS0,VE0',
+580 silly get     vary: 'Accept-Encoding' } ]
+581 verbose etag https://registry.npmjs.org/gulp-wrap from cache
+582 verbose get saving gulp-wrap to /Users/muki/.npm/registry.npmjs.org/gulp-wrap/.cache.json
+583 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+584 http 304 https://registry.npmjs.org/gulp-clean-css
+585 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+585 verbose headers   via: '1.1 varnish',
+585 verbose headers   'cache-control': 'max-age=300',
+585 verbose headers   etag: 'W/"5844e08d-7ec4"',
+585 verbose headers   age: '281',
+585 verbose headers   connection: 'keep-alive',
+585 verbose headers   'x-served-by': 'cache-lhr6336-LHR',
+585 verbose headers   'x-cache': 'HIT',
+585 verbose headers   'x-cache-hits': '1',
+585 verbose headers   'x-timer': 'S1480951779.903463,VS0,VE0',
+585 verbose headers   vary: 'Accept-Encoding' }
+586 silly get cb [ 304,
+586 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+586 silly get     via: '1.1 varnish',
+586 silly get     'cache-control': 'max-age=300',
+586 silly get     etag: 'W/"5844e08d-7ec4"',
+586 silly get     age: '281',
+586 silly get     connection: 'keep-alive',
+586 silly get     'x-served-by': 'cache-lhr6336-LHR',
+586 silly get     'x-cache': 'HIT',
+586 silly get     'x-cache-hits': '1',
+586 silly get     'x-timer': 'S1480951779.903463,VS0,VE0',
+586 silly get     vary: 'Accept-Encoding' } ]
+587 verbose etag https://registry.npmjs.org/gulp-clean-css from cache
+588 verbose get saving gulp-clean-css to /Users/muki/.npm/registry.npmjs.org/gulp-clean-css/.cache.json
+589 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+590 http 200 https://registry.npmjs.org/gulp-useref
+591 verbose headers { server: 'nginx/1.10.1',
+591 verbose headers   'content-type': 'application/json',
+591 verbose headers   'last-modified': 'Mon, 05 Dec 2016 08:59:58 GMT',
+591 verbose headers   etag: 'W/"58452c8e-10389"',
+591 verbose headers   'content-encoding': 'gzip',
+591 verbose headers   'cache-control': 'max-age=300',
+591 verbose headers   'content-length': '8770',
+591 verbose headers   'accept-ranges': 'bytes',
+591 verbose headers   date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+591 verbose headers   via: '1.1 varnish',
+591 verbose headers   age: '16',
+591 verbose headers   connection: 'keep-alive',
+591 verbose headers   'x-served-by': 'cache-lhr6345-LHR',
+591 verbose headers   'x-cache': 'HIT',
+591 verbose headers   'x-cache-hits': '1',
+591 verbose headers   'x-timer': 'S1480951779.879464,VS0,VE0',
+591 verbose headers   vary: 'Accept-Encoding' }
+592 silly get cb [ 200,
+592 silly get   { server: 'nginx/1.10.1',
+592 silly get     'content-type': 'application/json',
+592 silly get     'last-modified': 'Mon, 05 Dec 2016 08:59:58 GMT',
+592 silly get     etag: 'W/"58452c8e-10389"',
+592 silly get     'content-encoding': 'gzip',
+592 silly get     'cache-control': 'max-age=300',
+592 silly get     'content-length': '8770',
+592 silly get     'accept-ranges': 'bytes',
+592 silly get     date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+592 silly get     via: '1.1 varnish',
+592 silly get     age: '16',
+592 silly get     connection: 'keep-alive',
+592 silly get     'x-served-by': 'cache-lhr6345-LHR',
+592 silly get     'x-cache': 'HIT',
+592 silly get     'x-cache-hits': '1',
+592 silly get     'x-timer': 'S1480951779.879464,VS0,VE0',
+592 silly get     vary: 'Accept-Encoding' } ]
+593 verbose get saving gulp-useref to /Users/muki/.npm/registry.npmjs.org/gulp-useref/.cache.json
+594 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+595 silly resolveWithNewModule gulp-wrap@0.13.0 checking installable status
+596 silly cache add args [ 'gulp-wrap@^0.13.0', null ]
+597 verbose cache add spec gulp-wrap@^0.13.0
+598 silly cache add parsed spec Result {
+598 silly cache add   raw: 'gulp-wrap@^0.13.0',
+598 silly cache add   scope: null,
+598 silly cache add   name: 'gulp-wrap',
+598 silly cache add   rawSpec: '^0.13.0',
+598 silly cache add   spec: '>=0.13.0 <0.14.0',
+598 silly cache add   type: 'range' }
+599 silly addNamed gulp-wrap@>=0.13.0 <0.14.0
+600 verbose addNamed ">=0.13.0 <0.14.0" is a valid semver range for gulp-wrap
+601 silly addNameRange { name: 'gulp-wrap', range: '>=0.13.0 <0.14.0', hasData: false }
+602 silly mapToRegistry name gulp-wrap
+603 silly mapToRegistry using default registry
+604 silly mapToRegistry registry https://registry.npmjs.org/
+605 silly mapToRegistry data Result {
+605 silly mapToRegistry   raw: 'gulp-wrap',
+605 silly mapToRegistry   scope: null,
+605 silly mapToRegistry   name: 'gulp-wrap',
+605 silly mapToRegistry   rawSpec: '',
+605 silly mapToRegistry   spec: 'latest',
+605 silly mapToRegistry   type: 'tag' }
+606 silly mapToRegistry uri https://registry.npmjs.org/gulp-wrap
+607 verbose addNameRange registry:https://registry.npmjs.org/gulp-wrap not in flight; fetching
+608 silly resolveWithNewModule gulp-useref@3.1.2 checking installable status
+609 silly cache add args [ 'gulp-useref@^3.1.0', null ]
+610 verbose cache add spec gulp-useref@^3.1.0
+611 silly cache add parsed spec Result {
+611 silly cache add   raw: 'gulp-useref@^3.1.0',
+611 silly cache add   scope: null,
+611 silly cache add   name: 'gulp-useref',
+611 silly cache add   rawSpec: '^3.1.0',
+611 silly cache add   spec: '>=3.1.0 <4.0.0',
+611 silly cache add   type: 'range' }
+612 silly addNamed gulp-useref@>=3.1.0 <4.0.0
+613 verbose addNamed ">=3.1.0 <4.0.0" is a valid semver range for gulp-useref
+614 silly addNameRange { name: 'gulp-useref', range: '>=3.1.0 <4.0.0', hasData: false }
+615 silly mapToRegistry name gulp-useref
+616 silly mapToRegistry using default registry
+617 silly mapToRegistry registry https://registry.npmjs.org/
+618 silly mapToRegistry data Result {
+618 silly mapToRegistry   raw: 'gulp-useref',
+618 silly mapToRegistry   scope: null,
+618 silly mapToRegistry   name: 'gulp-useref',
+618 silly mapToRegistry   rawSpec: '',
+618 silly mapToRegistry   spec: 'latest',
+618 silly mapToRegistry   type: 'tag' }
+619 silly mapToRegistry uri https://registry.npmjs.org/gulp-useref
+620 verbose addNameRange registry:https://registry.npmjs.org/gulp-useref not in flight; fetching
+621 silly resolveWithNewModule gulp-clean-css@2.0.13 checking installable status
+622 silly cache add args [ 'gulp-clean-css@^2.0.7', null ]
+623 verbose cache add spec gulp-clean-css@^2.0.7
+624 silly cache add parsed spec Result {
+624 silly cache add   raw: 'gulp-clean-css@^2.0.7',
+624 silly cache add   scope: null,
+624 silly cache add   name: 'gulp-clean-css',
+624 silly cache add   rawSpec: '^2.0.7',
+624 silly cache add   spec: '>=2.0.7 <3.0.0',
+624 silly cache add   type: 'range' }
+625 silly addNamed gulp-clean-css@>=2.0.7 <3.0.0
+626 verbose addNamed ">=2.0.7 <3.0.0" is a valid semver range for gulp-clean-css
+627 silly addNameRange { name: 'gulp-clean-css',
+627 silly addNameRange   range: '>=2.0.7 <3.0.0',
+627 silly addNameRange   hasData: false }
+628 silly mapToRegistry name gulp-clean-css
+629 silly mapToRegistry using default registry
+630 silly mapToRegistry registry https://registry.npmjs.org/
+631 silly mapToRegistry data Result {
+631 silly mapToRegistry   raw: 'gulp-clean-css',
+631 silly mapToRegistry   scope: null,
+631 silly mapToRegistry   name: 'gulp-clean-css',
+631 silly mapToRegistry   rawSpec: '',
+631 silly mapToRegistry   spec: 'latest',
+631 silly mapToRegistry   type: 'tag' }
+632 silly mapToRegistry uri https://registry.npmjs.org/gulp-clean-css
+633 verbose addNameRange registry:https://registry.npmjs.org/gulp-clean-css not in flight; fetching
+634 verbose get https://registry.npmjs.org/gulp-wrap not expired, no request
+635 silly addNameRange number 2 { name: 'gulp-wrap', range: '>=0.13.0 <0.14.0', hasData: true }
+636 silly addNameRange versions [ 'gulp-wrap',
+636 silly addNameRange   [ '0.0.1',
+636 silly addNameRange     '0.2.0',
+636 silly addNameRange     '0.3.0',
+636 silly addNameRange     '0.4.0',
+636 silly addNameRange     '0.5.0',
+636 silly addNameRange     '0.6.0',
+636 silly addNameRange     '0.7.0',
+636 silly addNameRange     '0.8.0',
+636 silly addNameRange     '0.9.0',
+636 silly addNameRange     '0.10.0',
+636 silly addNameRange     '0.10.1',
+636 silly addNameRange     '0.11.0',
+636 silly addNameRange     '0.12.0',
+636 silly addNameRange     '0.13.0' ] ]
+637 silly addNamed gulp-wrap@0.13.0
+638 verbose addNamed "0.13.0" is a plain semver version for gulp-wrap
+639 verbose get https://registry.npmjs.org/gulp-useref not expired, no request
+640 silly addNameRange number 2 { name: 'gulp-useref', range: '>=3.1.0 <4.0.0', hasData: true }
+641 silly addNameRange versions [ 'gulp-useref',
+641 silly addNameRange   [ '0.1.0',
+641 silly addNameRange     '0.1.1',
+641 silly addNameRange     '0.1.2',
+641 silly addNameRange     '0.2.0',
+641 silly addNameRange     '0.2.1',
+641 silly addNameRange     '0.2.2',
+641 silly addNameRange     '0.3.0',
+641 silly addNameRange     '0.3.1',
+641 silly addNameRange     '0.4.0',
+641 silly addNameRange     '0.4.1',
+641 silly addNameRange     '0.4.2',
+641 silly addNameRange     '0.4.3',
+641 silly addNameRange     '0.4.4',
+641 silly addNameRange     '0.4.5',
+641 silly addNameRange     '0.5.0',
+641 silly addNameRange     '0.6.0',
+641 silly addNameRange     '1.0.0',
+641 silly addNameRange     '1.0.1',
+641 silly addNameRange     '1.0.2',
+641 silly addNameRange     '1.1.0',
+641 silly addNameRange     '1.1.1',
+641 silly addNameRange     '1.1.2',
+641 silly addNameRange     '1.2.0',
+641 silly addNameRange     '1.3.0',
+641 silly addNameRange     '2.0.0',
+641 silly addNameRange     '2.0.1',
+641 silly addNameRange     '2.1.0',
+641 silly addNameRange     '3.0.0',
+641 silly addNameRange     '3.0.1',
+641 silly addNameRange     '3.0.2',
+641 silly addNameRange     '3.0.3',
+641 silly addNameRange     '3.0.4',
+641 silly addNameRange     '3.0.5',
+641 silly addNameRange     '3.0.6',
+641 silly addNameRange     '3.0.7',
+641 silly addNameRange     '3.0.8',
+641 silly addNameRange     '3.1.0',
+641 silly addNameRange     '3.1.1',
+641 silly addNameRange     '3.1.2' ] ]
+642 silly addNamed gulp-useref@3.1.2
+643 verbose addNamed "3.1.2" is a plain semver version for gulp-useref
+644 verbose get https://registry.npmjs.org/gulp-clean-css not expired, no request
+645 silly addNameRange number 2 { name: 'gulp-clean-css',
+645 silly addNameRange   range: '>=2.0.7 <3.0.0',
+645 silly addNameRange   hasData: true }
+646 silly addNameRange versions [ 'gulp-clean-css',
+646 silly addNameRange   [ '1.0.0',
+646 silly addNameRange     '1.0.1',
+646 silly addNameRange     '1.0.2',
+646 silly addNameRange     '2.0.0',
+646 silly addNameRange     '2.0.1',
+646 silly addNameRange     '2.0.2',
+646 silly addNameRange     '2.0.3',
+646 silly addNameRange     '2.0.4',
+646 silly addNameRange     '2.0.5',
+646 silly addNameRange     '2.0.6',
+646 silly addNameRange     '2.0.7',
+646 silly addNameRange     '2.0.8',
+646 silly addNameRange     '2.0.9',
+646 silly addNameRange     '2.0.10',
+646 silly addNameRange     '2.0.11',
+646 silly addNameRange     '2.0.12',
+646 silly addNameRange     '2.0.13' ] ]
+647 silly addNamed gulp-clean-css@2.0.13
+648 verbose addNamed "2.0.13" is a plain semver version for gulp-clean-css
+649 silly cache afterAdd gulp-wrap@0.13.0
+650 verbose afterAdd /Users/muki/.npm/gulp-wrap/0.13.0/package/package.json not in flight; writing
+651 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+652 silly cache afterAdd gulp-useref@3.1.2
+653 verbose afterAdd /Users/muki/.npm/gulp-useref/3.1.2/package/package.json not in flight; writing
+654 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+655 silly cache afterAdd gulp-clean-css@2.0.13
+656 verbose afterAdd /Users/muki/.npm/gulp-clean-css/2.0.13/package/package.json not in flight; writing
+657 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+658 verbose afterAdd /Users/muki/.npm/gulp-wrap/0.13.0/package/package.json written
+659 verbose afterAdd /Users/muki/.npm/gulp-useref/3.1.2/package/package.json written
+660 verbose afterAdd /Users/muki/.npm/gulp-clean-css/2.0.13/package/package.json written
+661 http 304 https://registry.npmjs.org/run-sequence
+662 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+662 verbose headers   via: '1.1 varnish',
+662 verbose headers   'cache-control': 'max-age=300',
+662 verbose headers   etag: 'W/"583bf50f-78cc"',
+662 verbose headers   age: '171',
+662 verbose headers   connection: 'keep-alive',
+662 verbose headers   'x-served-by': 'cache-lhr6346-LHR',
+662 verbose headers   'x-cache': 'HIT',
+662 verbose headers   'x-cache-hits': '2',
+662 verbose headers   'x-timer': 'S1480951779.912718,VS0,VE0',
+662 verbose headers   vary: 'Accept-Encoding' }
+663 silly get cb [ 304,
+663 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+663 silly get     via: '1.1 varnish',
+663 silly get     'cache-control': 'max-age=300',
+663 silly get     etag: 'W/"583bf50f-78cc"',
+663 silly get     age: '171',
+663 silly get     connection: 'keep-alive',
+663 silly get     'x-served-by': 'cache-lhr6346-LHR',
+663 silly get     'x-cache': 'HIT',
+663 silly get     'x-cache-hits': '2',
+663 silly get     'x-timer': 'S1480951779.912718,VS0,VE0',
+663 silly get     vary: 'Accept-Encoding' } ]
+664 verbose etag https://registry.npmjs.org/run-sequence from cache
+665 verbose get saving run-sequence to /Users/muki/.npm/registry.npmjs.org/run-sequence/.cache.json
+666 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+667 http 304 https://registry.npmjs.org/request
+668 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+668 verbose headers   via: '1.1 varnish',
+668 verbose headers   'cache-control': 'max-age=300',
+668 verbose headers   etag: 'W/"58440e6d-34ec3"',
+668 verbose headers   age: '176',
+668 verbose headers   connection: 'keep-alive',
+668 verbose headers   'x-served-by': 'cache-lhr6336-LHR',
+668 verbose headers   'x-cache': 'HIT',
+668 verbose headers   'x-cache-hits': '15',
+668 verbose headers   'x-timer': 'S1480951779.919913,VS0,VE0',
+668 verbose headers   vary: 'Accept-Encoding' }
+669 silly get cb [ 304,
+669 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+669 silly get     via: '1.1 varnish',
+669 silly get     'cache-control': 'max-age=300',
+669 silly get     etag: 'W/"58440e6d-34ec3"',
+669 silly get     age: '176',
+669 silly get     connection: 'keep-alive',
+669 silly get     'x-served-by': 'cache-lhr6336-LHR',
+669 silly get     'x-cache': 'HIT',
+669 silly get     'x-cache-hits': '15',
+669 silly get     'x-timer': 'S1480951779.919913,VS0,VE0',
+669 silly get     vary: 'Accept-Encoding' } ]
+670 verbose etag https://registry.npmjs.org/request from cache
+671 verbose get saving request to /Users/muki/.npm/registry.npmjs.org/request/.cache.json
+672 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+673 http 304 https://registry.npmjs.org/browser-sync
+674 verbose headers { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+674 verbose headers   via: '1.1 varnish',
+674 verbose headers   'cache-control': 'max-age=300',
+674 verbose headers   etag: 'W/"5842e571-7d8bd"',
+674 verbose headers   age: '76',
+674 verbose headers   connection: 'keep-alive',
+674 verbose headers   'x-served-by': 'cache-lhr6322-LHR',
+674 verbose headers   'x-cache': 'HIT',
+674 verbose headers   'x-cache-hits': '1',
+674 verbose headers   'x-timer': 'S1480951779.947298,VS0,VE0',
+674 verbose headers   vary: 'Accept-Encoding' }
+675 silly get cb [ 304,
+675 silly get   { date: 'Mon, 05 Dec 2016 15:29:39 GMT',
+675 silly get     via: '1.1 varnish',
+675 silly get     'cache-control': 'max-age=300',
+675 silly get     etag: 'W/"5842e571-7d8bd"',
+675 silly get     age: '76',
+675 silly get     connection: 'keep-alive',
+675 silly get     'x-served-by': 'cache-lhr6322-LHR',
+675 silly get     'x-cache': 'HIT',
+675 silly get     'x-cache-hits': '1',
+675 silly get     'x-timer': 'S1480951779.947298,VS0,VE0',
+675 silly get     vary: 'Accept-Encoding' } ]
+676 verbose etag https://registry.npmjs.org/browser-sync from cache
+677 verbose get saving browser-sync to /Users/muki/.npm/registry.npmjs.org/browser-sync/.cache.json
+678 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+679 silly resolveWithNewModule run-sequence@1.2.2 checking installable status
+680 silly cache add args [ 'run-sequence@^1.1.5', null ]
+681 verbose cache add spec run-sequence@^1.1.5
+682 silly cache add parsed spec Result {
+682 silly cache add   raw: 'run-sequence@^1.1.5',
+682 silly cache add   scope: null,
+682 silly cache add   name: 'run-sequence',
+682 silly cache add   rawSpec: '^1.1.5',
+682 silly cache add   spec: '>=1.1.5 <2.0.0',
+682 silly cache add   type: 'range' }
+683 silly addNamed run-sequence@>=1.1.5 <2.0.0
+684 verbose addNamed ">=1.1.5 <2.0.0" is a valid semver range for run-sequence
+685 silly addNameRange { name: 'run-sequence', range: '>=1.1.5 <2.0.0', hasData: false }
+686 silly mapToRegistry name run-sequence
+687 silly mapToRegistry using default registry
+688 silly mapToRegistry registry https://registry.npmjs.org/
+689 silly mapToRegistry data Result {
+689 silly mapToRegistry   raw: 'run-sequence',
+689 silly mapToRegistry   scope: null,
+689 silly mapToRegistry   name: 'run-sequence',
+689 silly mapToRegistry   rawSpec: '',
+689 silly mapToRegistry   spec: 'latest',
+689 silly mapToRegistry   type: 'tag' }
+690 silly mapToRegistry uri https://registry.npmjs.org/run-sequence
+691 verbose addNameRange registry:https://registry.npmjs.org/run-sequence not in flight; fetching
+692 silly resolveWithNewModule request@2.79.0 checking installable status
+693 silly cache add args [ 'request@^2.78.0', null ]
+694 verbose cache add spec request@^2.78.0
+695 silly cache add parsed spec Result {
+695 silly cache add   raw: 'request@^2.78.0',
+695 silly cache add   scope: null,
+695 silly cache add   name: 'request',
+695 silly cache add   rawSpec: '^2.78.0',
+695 silly cache add   spec: '>=2.78.0 <3.0.0',
+695 silly cache add   type: 'range' }
+696 silly addNamed request@>=2.78.0 <3.0.0
+697 verbose addNamed ">=2.78.0 <3.0.0" is a valid semver range for request
+698 silly addNameRange { name: 'request', range: '>=2.78.0 <3.0.0', hasData: false }
+699 silly mapToRegistry name request
+700 silly mapToRegistry using default registry
+701 silly mapToRegistry registry https://registry.npmjs.org/
+702 silly mapToRegistry data Result {
+702 silly mapToRegistry   raw: 'request',
+702 silly mapToRegistry   scope: null,
+702 silly mapToRegistry   name: 'request',
+702 silly mapToRegistry   rawSpec: '',
+702 silly mapToRegistry   spec: 'latest',
+702 silly mapToRegistry   type: 'tag' }
+703 silly mapToRegistry uri https://registry.npmjs.org/request
+704 verbose addNameRange registry:https://registry.npmjs.org/request not in flight; fetching
+705 verbose get https://registry.npmjs.org/run-sequence not expired, no request
+706 silly addNameRange number 2 { name: 'run-sequence', range: '>=1.1.5 <2.0.0', hasData: true }
+707 silly addNameRange versions [ 'run-sequence',
+707 silly addNameRange   [ '0.3.1',
+707 silly addNameRange     '0.3.2',
+707 silly addNameRange     '0.3.3',
+707 silly addNameRange     '0.3.4',
+707 silly addNameRange     '0.3.5',
+707 silly addNameRange     '0.3.6',
+707 silly addNameRange     '0.3.7',
+707 silly addNameRange     '1.0.0',
+707 silly addNameRange     '1.0.1',
+707 silly addNameRange     '1.0.2',
+707 silly addNameRange     '1.1.0',
+707 silly addNameRange     '1.1.1',
+707 silly addNameRange     '1.1.2',
+707 silly addNameRange     '1.1.3',
+707 silly addNameRange     '1.1.4',
+707 silly addNameRange     '1.1.5',
+707 silly addNameRange     '1.2.0',
+707 silly addNameRange     '1.2.1',
+707 silly addNameRange     '1.2.2' ] ]
+708 silly addNamed run-sequence@1.2.2
+709 verbose addNamed "1.2.2" is a plain semver version for run-sequence
+710 silly resolveWithNewModule browser-sync@2.18.2 checking installable status
+711 silly cache add args [ 'browser-sync@^2.12.8', null ]
+712 verbose cache add spec browser-sync@^2.12.8
+713 silly cache add parsed spec Result {
+713 silly cache add   raw: 'browser-sync@^2.12.8',
+713 silly cache add   scope: null,
+713 silly cache add   name: 'browser-sync',
+713 silly cache add   rawSpec: '^2.12.8',
+713 silly cache add   spec: '>=2.12.8 <3.0.0',
+713 silly cache add   type: 'range' }
+714 silly addNamed browser-sync@>=2.12.8 <3.0.0
+715 verbose addNamed ">=2.12.8 <3.0.0" is a valid semver range for browser-sync
+716 silly addNameRange { name: 'browser-sync',
+716 silly addNameRange   range: '>=2.12.8 <3.0.0',
+716 silly addNameRange   hasData: false }
+717 silly mapToRegistry name browser-sync
+718 silly mapToRegistry using default registry
+719 silly mapToRegistry registry https://registry.npmjs.org/
+720 silly mapToRegistry data Result {
+720 silly mapToRegistry   raw: 'browser-sync',
+720 silly mapToRegistry   scope: null,
+720 silly mapToRegistry   name: 'browser-sync',
+720 silly mapToRegistry   rawSpec: '',
+720 silly mapToRegistry   spec: 'latest',
+720 silly mapToRegistry   type: 'tag' }
+721 silly mapToRegistry uri https://registry.npmjs.org/browser-sync
+722 verbose addNameRange registry:https://registry.npmjs.org/browser-sync not in flight; fetching
+723 verbose get https://registry.npmjs.org/request not expired, no request
+724 silly addNameRange number 2 { name: 'request', range: '>=2.78.0 <3.0.0', hasData: true }
+725 silly addNameRange versions [ 'request',
+725 silly addNameRange   [ '0.10.0',
+725 silly addNameRange     '0.8.3',
+725 silly addNameRange     '0.9.0',
+725 silly addNameRange     '0.9.1',
+725 silly addNameRange     '0.9.5',
+725 silly addNameRange     '1.0.0',
+725 silly addNameRange     '1.1.0',
+725 silly addNameRange     '1.1.1',
+725 silly addNameRange     '1.2.0',
+725 silly addNameRange     '1.9.0',
+725 silly addNameRange     '1.9.1',
+725 silly addNameRange     '1.9.2',
+725 silly addNameRange     '1.9.3',
+725 silly addNameRange     '1.9.5',
+725 silly addNameRange     '1.9.7',
+725 silly addNameRange     '1.9.8',
+725 silly addNameRange     '1.9.9',
+725 silly addNameRange     '2.0.0',
+725 silly addNameRange     '2.0.1',
+725 silly addNameRange     '2.0.2',
+725 silly addNameRange     '2.0.3',
+725 silly addNameRange     '2.0.4',
+725 silly addNameRange     '2.0.5',
+725 silly addNameRange     '2.1.0',
+725 silly addNameRange     '2.1.1',
+725 silly addNameRange     '2.2.0',
+725 silly addNameRange     '2.2.5',
+725 silly addNameRange     '2.2.6',
+725 silly addNameRange     '2.2.9',
+725 silly addNameRange     '2.9.0',
+725 silly addNameRange     '2.9.1',
+725 silly addNameRange     '2.9.2',
+725 silly addNameRange     '2.9.3',
+725 silly addNameRange     '2.9.100',
+725 silly addNameRange     '2.9.150',
+725 silly addNameRange     '2.9.151',
+725 silly addNameRange     '2.9.152',
+725 silly addNameRange     '2.9.153',
+725 silly addNameRange     '2.9.200',
+725 silly addNameRange     '2.9.201',
+725 silly addNameRange     '2.9.202',
+725 silly addNameRange     '2.9.203',
+725 silly addNameRange     '2.10.0',
+725 silly addNameRange     '2.11.0',
+725 silly addNameRange     '2.11.1',
+725 silly addNameRange     '2.11.2',
+725 silly addNameRange     '2.11.3',
+725 silly addNameRange     '2.11.4',
+725 silly addNameRange     '2.12.0',
+725 silly addNameRange     '2.14.0',
+725 silly addNameRange     '2.16.0',
+725 silly addNameRange     '2.16.2',
+725 silly addNameRange     '2.16.4',
+725 silly addNameRange     '2.16.6',
+725 silly addNameRange     '2.18.0',
+725 silly addNameRange     '2.19.0',
+725 silly addNameRange     '2.20.0',
+725 silly addNameRange     '2.21.0',
+725 silly addNameRange     '2.22.0',
+725 silly addNameRange     '2.23.0',
+725 silly addNameRange     '2.24.0',
+725 silly addNameRange     '2.25.0',
+725 silly addNameRange     '2.26.0',
+725 silly addNameRange     '2.27.0',
+725 silly addNameRange     '2.28.0',
+725 silly addNameRange     '2.29.0',
+725 silly addNameRange     '2.30.0',
+725 silly addNameRange     '2.31.0',
+725 silly addNameRange     '2.32.0',
+725 silly addNameRange     '2.33.0',
+725 silly addNameRange     '2.34.0',
+725 silly addNameRange     '2.35.0',
+725 silly addNameRange     '2.36.0',
+725 silly addNameRange     '2.37.0',
+725 silly addNameRange     '2.38.0',
+725 silly addNameRange     '2.39.0',
+725 silly addNameRange     '2.40.0',
+725 silly addNameRange     '2.41.0',
+725 silly addNameRange     '2.42.0',
+725 silly addNameRange     '2.43.0',
+725 silly addNameRange     '2.44.0',
+725 silly addNameRange     '2.45.0',
+725 silly addNameRange     '2.46.0',
+725 silly addNameRange     '2.47.0',
+725 silly addNameRange     '2.48.0',
+725 silly addNameRange     '2.49.0',
+725 silly addNameRange     '2.50.0',
+725 silly addNameRange     '2.51.0',
+725 silly addNameRange     '2.52.0',
+725 silly addNameRange     '2.53.0',
+725 silly addNameRange     '2.54.0',
+725 silly addNameRange     '2.55.0',
+725 silly addNameRange     '2.56.0',
+725 silly addNameRange     '2.57.0',
+725 silly addNameRange     '2.58.0',
+725 silly addNameRange     '2.59.0',
+725 silly addNameRange     '2.60.0',
+725 silly addNameRange     '2.61.0',
+725 silly addNameRange     '2.62.0',
+725 silly addNameRange     '2.63.0',
+725 silly addNameRange     '2.64.0',
+725 silly addNameRange     '2.65.0',
+725 silly addNameRange     '2.66.0',
+725 silly addNameRange     '2.67.0',
+725 silly addNameRange     '2.68.0',
+725 silly addNameRange     '2.69.0',
+725 silly addNameRange     '2.70.0',
+725 silly addNameRange     '2.71.0',
+725 silly addNameRange     '2.72.0',
+725 silly addNameRange     '2.73.0',
+725 silly addNameRange     '2.74.0',
+725 silly addNameRange     '2.75.0',
+725 silly addNameRange     '2.76.0',
+725 silly addNameRange     '2.77.0',
+725 silly addNameRange     '2.78.0',
+725 silly addNameRange     '2.79.0' ] ]
+726 silly addNamed request@2.79.0
+727 verbose addNamed "2.79.0" is a plain semver version for request
+728 verbose get https://registry.npmjs.org/browser-sync not expired, no request
+729 silly addNameRange number 2 { name: 'browser-sync', range: '>=2.12.8 <3.0.0', hasData: true }
+730 silly addNameRange versions [ 'browser-sync',
+730 silly addNameRange   [ '0.1.0',
+730 silly addNameRange     '0.1.1',
+730 silly addNameRange     '0.1.3',
+730 silly addNameRange     '0.1.5',
+730 silly addNameRange     '0.1.6',
+730 silly addNameRange     '0.1.7',
+730 silly addNameRange     '0.1.8',
+730 silly addNameRange     '0.1.9',
+730 silly addNameRange     '0.1.10',
+730 silly addNameRange     '0.2.0',
+730 silly addNameRange     '0.2.1',
+730 silly addNameRange     '0.3.0',
+730 silly addNameRange     '0.3.1',
+730 silly addNameRange     '0.3.2',
+730 silly addNameRange     '0.3.3',
+730 silly addNameRange     '0.3.4',
+730 silly addNameRange     '0.3.5',
+730 silly addNameRange     '0.3.6',
+730 silly addNameRange     '0.3.7',
+730 silly addNameRange     '0.3.8',
+730 silly addNameRange     '0.3.10',
+730 silly addNameRange     '0.4.0',
+730 silly addNameRange     '0.4.1',
+730 silly addNameRange     '0.4.2',
+730 silly addNameRange     '0.4.21',
+730 silly addNameRange     '0.4.3',
+730 silly addNameRange     '0.4.4',
+730 silly addNameRange     '0.4.5',
+730 silly addNameRange     '0.4.6',
+730 silly addNameRange     '0.4.7',
+730 silly addNameRange     '0.4.8',
+730 silly addNameRange     '0.4.9',
+730 silly addNameRange     '0.4.10',
+730 silly addNameRange     '0.4.11',
+730 silly addNameRange     '0.4.12',
+730 silly addNameRange     '0.5.0',
+730 silly addNameRange     '0.5.1',
+730 silly addNameRange     '0.5.2',
+730 silly addNameRange     '0.5.3',
+730 silly addNameRange     '0.5.4',
+730 silly addNameRange     '0.5.5',
+730 silly addNameRange     '0.5.6',
+730 silly addNameRange     '0.5.7',
+730 silly addNameRange     '0.5.8',
+730 silly addNameRange     '0.5.9',
+730 silly addNameRange     '0.6.0',
+730 silly addNameRange     '0.6.1',
+730 silly addNameRange     '0.6.2',
+730 silly addNameRange     '0.7.0',
+730 silly addNameRange     '0.7.1',
+730 silly addNameRange     '0.7.2',
+730 silly addNameRange     '0.7.3',
+730 silly addNameRange     '0.7.4',
+730 silly addNameRange     '0.7.5',
+730 silly addNameRange     '0.7.7',
+730 silly addNameRange     '0.8.0',
+730 silly addNameRange     '0.8.1',
+730 silly addNameRange     '0.8.2',
+730 silly addNameRange     '0.9.0',
+730 silly addNameRange     '0.9.1',
+730 silly addNameRange     '1.0.0',
+730 silly addNameRange     '1.1.0',
+730 silly addNameRange     '1.1.1',
+730 silly addNameRange     '1.1.2',
+730 silly addNameRange     '1.2.0',
+730 silly addNameRange     '1.2.1',
+730 silly addNameRange     '1.3.0',
+730 silly addNameRange     '1.3.2',
+730 silly addNameRange     '1.3.3',
+730 silly addNameRange     '1.3.4',
+730 silly addNameRange     '1.3.5',
+730 silly addNameRange     '1.3.6',
+730 silly addNameRange     '1.3.7',
+730 silly addNameRange     '1.5.0',
+730 silly addNameRange     '1.5.1',
+730 silly addNameRange     '1.5.2',
+730 silly addNameRange     '1.5.3',
+730 silly addNameRange     '1.5.4',
+730 silly addNameRange     '1.5.5',
+730 silly addNameRange     '1.5.6',
+730 silly addNameRange     '1.5.7',
+730 silly addNameRange     '1.5.8',
+730 silly addNameRange     '1.5.9',
+730 silly addNameRange     '1.6.0',
+730 silly addNameRange     '1.6.1',
+730 silly addNameRange     '1.6.2',
+730 silly addNameRange     '1.6.3',
+730 silly addNameRange     '1.6.4',
+730 silly addNameRange     '1.6.5',
+730 silly addNameRange     '1.7.0',
+730 silly addNameRange     '1.7.1',
+730 silly addNameRange     '1.7.2',
+730 silly addNameRange     '1.7.3',
+730 silly addNameRange     '1.8.0',
+730 silly addNameRange     '1.8.1',
+730 silly addNameRange     '1.8.2',
+730 silly addNameRange     '1.8.3',
+730 silly addNameRange     '1.9.0',
+730 silly addNameRange     '1.9.1',
+730 silly addNameRange     '2.0.0-rc1',
+730 silly addNameRange     '2.0.0-rc2',
+730 silly addNameRange     '2.0.0-rc3',
+730 silly addNameRange     '2.0.0-rc4',
+730 silly addNameRange     '2.0.0-rc5',
+730 silly addNameRange     '2.0.0-rc6',
+730 silly addNameRange     '2.0.0-rc7',
+730 silly addNameRange     '2.0.0-rc8',
+730 silly addNameRange     '2.0.0-rc9',
+730 silly addNameRange     '2.0.0-rc10',
+730 silly addNameRange     '2.0.0',
+730 silly addNameRange     '2.0.1',
+730 silly addNameRange     '2.1.0',
+730 silly addNameRange     '2.1.1',
+730 silly addNameRange     '2.1.2',
+730 silly addNameRange     '2.1.3',
+730 silly addNameRange     '2.1.4',
+730 silly addNameRange     '2.1.6',
+730 silly addNameRange     '2.2.0',
+730 silly addNameRange     '2.2.1',
+730 silly addNameRange     '2.2.2',
+730 silly addNameRange     '2.2.3',
+730 silly addNameRange     '2.2.4',
+730 silly addNameRange     '2.2.5',
+730 silly addNameRange     '2.3.0',
+730 silly addNameRange     '2.3.1',
+730 silly addNameRange     '2.3.2',
+730 silly addNameRange     '2.4.0',
+730 silly addNameRange     '2.4.1',
+730 silly addNameRange     '2.5.0',
+730 silly addNameRange     '2.5.1',
+730 silly addNameRange     '2.5.2',
+730 silly addNameRange     '2.5.3',
+730 silly addNameRange     '2.6.0',
+730 silly addNameRange     '2.6.1',
+730 silly addNameRange     '2.6.2',
+730 silly addNameRange     '2.6.3',
+730 silly addNameRange     '2.6.4',
+730 silly addNameRange     '2.6.5',
+730 silly addNameRange     '2.6.6',
+730 silly addNameRange     '1.9.2',
+730 silly addNameRange     '2.6.7',
+730 silly addNameRange     '2.6.8',
+730 silly addNameRange     '2.6.9',
+730 silly addNameRange     '2.6.10',
+730 silly addNameRange     '2.6.11',
+730 silly addNameRange     '2.7.0',
+730 silly addNameRange     '2.7.1',
+730 silly addNameRange     '2.7.2',
+730 silly addNameRange     '2.7.3',
+730 silly addNameRange     '2.7.4',
+730 silly addNameRange     '2.7.5',
+730 silly addNameRange     '2.7.6',
+730 silly addNameRange     '2.7.7',
+730 silly addNameRange     '2.7.8',
+730 silly addNameRange     '2.7.9',
+730 silly addNameRange     '2.7.10',
+730 silly addNameRange     '2.7.11',
+730 silly addNameRange     '2.7.12',
+730 silly addNameRange     '2.7.13',
+730 silly addNameRange     '2.8.0',
+730 silly addNameRange     '2.8.1',
+730 silly addNameRange     '2.8.2',
+730 silly addNameRange     '2.8.3',
+730 silly addNameRange     '2.9.0',
+730 silly addNameRange     '2.9.1',
+730 silly addNameRange     '2.9.2',
+730 silly addNameRange     '2.9.3',
+730 silly addNameRange     '2.9.4',
+730 silly addNameRange     '2.9.5',
+730 silly addNameRange     '2.9.6',
+730 silly addNameRange     '2.9.7',
+730 silly addNameRange     '2.9.8',
+730 silly addNameRange     '2.9.9',
+730 silly addNameRange     '2.9.10',
+730 silly addNameRange     '2.9.11',
+730 silly addNameRange     '2.9.12',
+730 silly addNameRange     '2.10.0',
+730 silly addNameRange     '2.10.1',
+730 silly addNameRange     '2.11.0',
+730 silly addNameRange     '2.11.1',
+730 silly addNameRange     '2.11.2',
+730 silly addNameRange     '2.12.1',
+730 silly addNameRange     '2.12.2',
+730 silly addNameRange     '2.12.3',
+730 silly addNameRange     '2.12.4',
+730 silly addNameRange     '2.12.5',
+730 silly addNameRange     '2.12.6',
+730 silly addNameRange     '2.12.7',
+730 silly addNameRange     '2.12.8',
+730 silly addNameRange     '2.12.9',
+730 silly addNameRange     '2.12.10',
+730 silly addNameRange     '2.12.11',
+730 silly addNameRange     '2.12.12',
+730 silly addNameRange     '2.13.0',
+730 silly addNameRange     '2.14.0',
+730 silly addNameRange     '2.14.1',
+730 silly addNameRange     '2.14.2',
+730 silly addNameRange     '2.14.3',
+730 silly addNameRange     '2.15.0',
+730 silly addNameRange     '2.16.0',
+730 silly addNameRange     '2.16.1',
+730 silly addNameRange     '2.17.0',
+730 silly addNameRange     '2.17.1',
+730 silly addNameRange     '2.17.2',
+730 silly addNameRange     '2.17.3',
+730 silly addNameRange     '2.17.4',
+730 silly addNameRange     '2.17.5',
+730 silly addNameRange     '2.17.6',
+730 silly addNameRange     '2.18.0',
+730 silly addNameRange     '2.18.1',
+730 silly addNameRange     '2.18.2' ] ]
+731 silly addNamed browser-sync@2.18.2
+732 verbose addNamed "2.18.2" is a plain semver version for browser-sync
+733 silly cache afterAdd run-sequence@1.2.2
+734 verbose afterAdd /Users/muki/.npm/run-sequence/1.2.2/package/package.json not in flight; writing
+735 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+736 silly cache afterAdd request@2.79.0
+737 verbose afterAdd /Users/muki/.npm/request/2.79.0/package/package.json not in flight; writing
+738 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+739 silly cache afterAdd browser-sync@2.18.2
+740 verbose afterAdd /Users/muki/.npm/browser-sync/2.18.2/package/package.json not in flight; writing
+741 verbose correctMkdir /Users/muki/.npm correctMkdir not in flight; initializing
+742 verbose afterAdd /Users/muki/.npm/run-sequence/1.2.2/package/package.json written
+743 verbose afterAdd /Users/muki/.npm/browser-sync/2.18.2/package/package.json written
+744 verbose afterAdd /Users/muki/.npm/request/2.79.0/package/package.json written
+745 error git fetch -a origin (ssh://git@github.com/muki/parlassets.git) Permission denied (publickey).
+745 error git fetch -a origin (ssh://git@github.com/muki/parlassets.git) fatal: Could not read from remote repository.
+745 error git fetch -a origin (ssh://git@github.com/muki/parlassets.git)
+745 error git fetch -a origin (ssh://git@github.com/muki/parlassets.git) Please make sure you have the correct access rights
+745 error git fetch -a origin (ssh://git@github.com/muki/parlassets.git) and the repository exists.
+746 silly fetchPackageMetaData Error: Command failed: git fetch -a origin
+746 silly fetchPackageMetaData Permission denied (publickey).
+746 silly fetchPackageMetaData fatal: Could not read from remote repository.
+746 silly fetchPackageMetaData
+746 silly fetchPackageMetaData Please make sure you have the correct access rights
+746 silly fetchPackageMetaData and the repository exists.
+746 silly fetchPackageMetaData
+746 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:202:12)
+746 silly fetchPackageMetaData     at emitTwo (events.js:100:13)
+746 silly fetchPackageMetaData     at ChildProcess.emit (events.js:185:7)
+746 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:850:16)
+746 silly fetchPackageMetaData     at Socket.<anonymous> (internal/child_process.js:323:11)
+746 silly fetchPackageMetaData     at emitOne (events.js:90:13)
+746 silly fetchPackageMetaData     at Socket.emit (events.js:182:7)
+746 silly fetchPackageMetaData     at Pipe._onclose (net.js:477:12)
+746 silly fetchPackageMetaData  error for parlassets@git+ssh://git@github.com/muki/parlassets.git { [Error: Command failed: git fetch -a origin
+746 silly fetchPackageMetaData Permission denied (publickey).
+746 silly fetchPackageMetaData fatal: Could not read from remote repository.
+746 silly fetchPackageMetaData
+746 silly fetchPackageMetaData Please make sure you have the correct access rights
+746 silly fetchPackageMetaData and the repository exists.
+746 silly fetchPackageMetaData ]
+746 silly fetchPackageMetaData   killed: false,
+746 silly fetchPackageMetaData   code: 128,
+746 silly fetchPackageMetaData   signal: null,
+746 silly fetchPackageMetaData   cmd: 'git fetch -a origin' }
+747 silly rollbackFailedOptional Starting
+748 silly rollbackFailedOptional Finishing
+749 silly runTopLevelLifecycles Starting
+750 silly runTopLevelLifecycles Finishing
+751 silly install printInstalled
+752 verbose stack Error: Command failed: git fetch -a origin
+752 verbose stack Permission denied (publickey).
+752 verbose stack fatal: Could not read from remote repository.
+752 verbose stack
+752 verbose stack Please make sure you have the correct access rights
+752 verbose stack and the repository exists.
+752 verbose stack
+752 verbose stack     at ChildProcess.exithandler (child_process.js:202:12)
+752 verbose stack     at emitTwo (events.js:100:13)
+752 verbose stack     at ChildProcess.emit (events.js:185:7)
+752 verbose stack     at maybeClose (internal/child_process.js:850:16)
+752 verbose stack     at Socket.<anonymous> (internal/child_process.js:323:11)
+752 verbose stack     at emitOne (events.js:90:13)
+752 verbose stack     at Socket.emit (events.js:182:7)
+752 verbose stack     at Pipe._onclose (net.js:477:12)
+753 verbose cwd /Users/muki/code/djnd/parlacards
+754 error Darwin 15.6.0
+755 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+756 error node v5.10.0
+757 error npm  v3.8.3
+758 error code 128
+759 error Command failed: git fetch -a origin
+759 error Permission denied (publickey).
+759 error fatal: Could not read from remote repository.
+759 error
+759 error Please make sure you have the correct access rights
+759 error and the repository exists.
+760 error If you need help, you may report this error at:
+760 error     <https://github.com/npm/npm/issues>
+761 verbose exit [ 1, true ]

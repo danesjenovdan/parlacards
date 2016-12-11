@@ -34,6 +34,7 @@
         </div>
         <div class="card-content">
             <div class="card-content-front">
+                <% if (data.results.length > 0) { %>
                 <div class="bgwhite poslanec">
 
                     <%
@@ -131,6 +132,11 @@
 
 
                 </div>
+                <% } else { %>
+                    <div class="bgwhite poslanec">
+                        <div class="no-results">Seja v obdelavi.</div>
+                    </div>
+                <% } %>
             </div>
             <div class="card-content-info hidden">
                 <div class="card-back-content">
