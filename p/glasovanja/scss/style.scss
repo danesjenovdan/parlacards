@@ -1,8 +1,8 @@
 $blue-dark: #197197;
-$white: #ffffff;
+$white: #fff;
 $grey-light: #f0f0f0;
 $grey: #c8c8c8;
-$black: #000000;
+$black: #000;
 
 .card-content-front {
   display: flex;
@@ -14,42 +14,48 @@ $black: #000000;
   // list-style: none;
   overflow-y: auto;
   margin-top: 18px;
-
   position: relative;
+
   &:empty::after {
     color: #c8c8c8;
-    content: 'Ni rezultatov.';
+    content: "Ni rezultatov.";
     left: calc(50% - 41px);
     position: absolute;
     top: calc(50% - 10px);
   }
+
   ul {
     list-style: none;
-    margin: 0 0 7px 0;
+    margin: 0 0 7px;
     padding: 0;
   }
+
   li {
     display: flex;
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
+
     .date {
       height: auto;
       margin: 0 0 -18px 16px;
       padding: 16px 0;
       width: 54px;
     }
+
     .icon {
       background-position: center;
       background-repeat: no-repeat;
       background-size: 25px;
       height: 48px;
       width: 52px;
-      &.za { background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/za.svg'); }
-      &.proti { background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/proti.svg'); }
-      &.ni { background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/ni.svg'); }
-      &.kvorum { background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/vzdrzan.svg'); }
+
+      &.za { background-image: url("https://cdn.parlameter.si/v1/parlassets/icons/za.svg"); }
+      &.proti { background-image: url("https://cdn.parlameter.si/v1/parlassets/icons/proti.svg"); }
+      &.ni { background-image: url("https://cdn.parlameter.si/v1/parlassets/icons/ni.svg"); }
+      &.kvorum { background-image: url("https://cdn.parlameter.si/v1/parlassets/icons/vzdrzan.svg"); }
     }
+
     .motion {
       flex: 1;
       font-weight: 300;

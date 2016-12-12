@@ -29,10 +29,21 @@
     "minimist": "^1.2.0",
     "parlassets": "git+ssh://git@github.com:muki/parlassets.git",
     "request": "^2.79.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "stylelint": "^7.6.0",
+    "stylelint-config-standard": "^15.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/muki/parlacards.git"
+  },
+  "babel": {
+    "presets": ["es2015"]
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
   }
 }
