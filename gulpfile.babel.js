@@ -126,7 +126,7 @@ gulp.task('inline', () =>
   gulp.src('temp/card.ejs')
       .pipe(replace(/<link data-inline="true" [^>]*>/, () => {
         const style = fs.readFileSync('temp/css/style.css', 'utf8');
-        return `<script>${style}</script>`;
+        return `<style>${style}</style>`;
       }))
       .pipe(replace(/<script data-inline="true" [^>]*>/, () => {
         const style = fs.readFileSync('temp/js/script.js', 'utf8');
