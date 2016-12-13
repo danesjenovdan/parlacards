@@ -1,14 +1,5 @@
-.card-content-front {
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-tabs { padding-bottom: 0; }
-
-.tab-content {
-  flex: 1;
-  overflow-y: auto;
-}
+.card-content-front { display: flex; }
+.tabs { flex: 1; }
 
 .membership-list {
   margin: 13px 0;
@@ -20,17 +11,7 @@
     padding: 4px 0;
     text-align: left;
     width: 100%;
-
-    a:hover {
-      background-color: #e1f6ff;
-      text-decoration: none;
-    }
   }
 }
 
-.nomemberships {
-  position: relative;
-  margin: auto;
-  text-align: center;
-  margin-top: 40px;
-}
+.no-results { top: 98px; }

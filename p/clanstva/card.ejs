@@ -12,6 +12,8 @@
     <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <script src="https://unpkg.com/vue@2.0.5/dist/vue.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/search-dropdown.js"></script>
     <!-- endbuild -->
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
@@ -33,90 +35,60 @@
             <h1>Članstva</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content half">
-            <div class="card-content-front">
-                <!-- get random id -->
+            <div class="card-content-front" id="clanstva">
                 <%
-                    function makeId() {
-                        var text = "";
-                        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-                        for(var i = 0; i < 5; i++) {
-                            text += possible.charAt(Math.floor(Math.random() * possible.length));
-                        }
-
-                        return text;
-                    }
-
-                    var randomId = makeId();
-                    var membershipTabMap = {
+                  var membershipTabMap = {
                     'odbor': 'Delovna telesa',
                     'kolegij': 'Delovna telesa',
                     'komisija' : 'Delovna telesa',
                     'delegacija' : 'Stalne delegacije',
                     'skupina prijateljstva': 'Skupine prijateljstva'
-                };
-                    var tabs = {
+                  };
+
+                  var tabs = {
                     'Delovna telesa': [],
                     'Stalne delegacije': [],
                     'Skupine prijateljstva': []
-                };
+                  };
 
-                    for (membership in data.memberships) {
-                        if (membership in membershipTabMap) {
-                            var tabId = membershipTabMap[membership];
-                            tabs[tabId] = tabs[tabId].concat(data.memberships[membership]);
-                        }
+                  for (membership in data.memberships) {
+                    if (membership in membershipTabMap) {
+                      var tabId = membershipTabMap[membership];
+                      tabs[tabId] = tabs[tabId].concat(data.memberships[membership]);
                     }
+                  };
                 %>
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <% var i = 0; for (tab in tabs) { %>
+                <tabs>
+                  <%
+                    var i = 0;
+                    for (tab in tabs) {
+                      var currentTab = tabs[tab]; %>
 
-                    <li role="presentation" class="<%= i === 0 ? 'active' : '' %>">
-                        <a href="#<%= tab.replace(/ /g, '_') %>_<%= randomId %>" aria-controls="<%= tab %>" role="tab" data-toggle="tab">
-                        <span><%= tab %></span>
-                    </a>
-                    </li>
-
-                    <% i++ } %>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <%
-                      var i = 0;
-                      for (tab in tabs) {
-                          var currentTab = tabs[tab]; %>
-
-                          <div role="tabpanel" class="tab-pane<%= i === 0 ? ' active' : '' %>" id="<%= tab.replace(/ /g, '_') %>_<%= randomId %>">
-                              <ul class="membership-list">
-                              <% if (currentTab.length > 0) { %>
-                                <% currentTab.forEach(function(membershipItem) { %>
-                                    <% if (tab === 'Delovna telesa') { %>
-                                        <% if (membershipItem.name === 'Kolegij predsednika državnega zbora') { %>
-                                            <li class="key">
-                                            <a target="_blank" href="<%=urlsData.base%>/seje/tip/seje-kolegija-predsednika-dz"> <%= membershipItem.name %></a>
-                                            </li>
-                                        <% } else { %>
-                                        <li class="key">
-                                            <a target="_blank" href="<%=urlsData.base%>/seje/tip/seje-delovnih-teles"> <%= membershipItem.name %></a>
-                                            <a target="_blank" href="https://glej.parlameter.si/wb/getWorkingBodies/<%= membershipItem.org_id %>?frame=true&altHeader=true"> <%= membershipItem.name %></a>
-                                        </li>
-                                        <% } %>
-                                    <% } else { %>
-                                        <li class="key">
-                                            <%= membershipItem.name %>
-                                        </li>
-                                    <% } %>
-                                <% }) %>
+                      <tab header="<%= tab %>">
+                        <ul class="membership-list">
+                        <% if (currentTab.length > 0) { %>
+                          <% currentTab.forEach(function(membershipItem) { %>
+                              <% if (tab === 'Delovna telesa') { %>
+                                <% if (membershipItem.name === 'Kolegij predsednika državnega zbora') { %>
+                                  <li class="key">
+                                    <a class="funblue-light-hover" target="_blank" href="<%=urlsData.base%>/seje/tip/seje-kolegija-predsednika-dz"> <%= membershipItem.name %></a>
+                                  </li>
+                                <% } else { %>
+                                <li class="key">
+                                  <a class="funblue-light-hover" target="_blank" href="https://glej.parlameter.si/wb/getWorkingBodies/<%= membershipItem.org_id %>?frame=true&altHeader=true"> <%= membershipItem.name %></a>
+                                </li>
+                                <% } %>
                               <% } else { %>
-                                  <div class="nomemberships"><i>Brez članstev.</i></div>
+                                <li class="key"><%= membershipItem.name %></li>
                               <% } %>
-                              </ul>
-                          </div>
-
-                    <% i++ } %>
-                </div>
+                          <% }) %>
+                        <% } else { %>
+                            <div class="no-results"><i>Brez članstev.</i></div>
+                        <% } %>
+                        </ul>
+                      </tab>
+                  <% i++ } %>
+                </tabs>
             </div>
             <div class="card-content-info hidden">
                 <div class="card-back-content">
@@ -154,7 +126,6 @@
                             <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?embed=true&altHeader=true"></textarea>
                             <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                         </div>
-                        
                     </div>
                 </div>
             </div>
