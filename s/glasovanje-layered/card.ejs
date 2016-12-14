@@ -46,50 +46,30 @@
                         <div class="greybox">
                             <div class="legend-container">
                                 <div class="option za" data-option="for">
-                                    <div class="option-marker option-marker-za"></div>
                                     <div class="option-text">
-                                        <div class="option-number">
-                                            <%= data.all.for.total_votes %>
-                                        </div>
-                                        <div class="option-option">
-                                            ZA
-                                        </div>
+                                        <div class="option-number"><%= data.all.for.total_votes %></div>
+                                        <div class="option-option">za</div>
                                     </div>
                                 </div>
 
                                 <div class="option proti" data-option="against">
-                                    <div class="option-marker option-marker-proti"></div>
                                     <div class="option-text">
-                                        <div class="option-number">
-                                            <%= data.all.against.total_votes %>
-                                        </div>
-                                        <div class="option-option">
-                                            PROTI
-                                        </div>
+                                        <div class="option-number"><%= data.all.against.total_votes %></div>
+                                        <div class="option-option">proti</div>
                                     </div>
                                 </div>
 
                                 <div class="option vzdrzani" data-option="kvorum">
-                                    <div class="option-marker option-marker-vzdrzani"></div>
                                     <div class="option-text">
-                                        <div class="option-number">
-                                            <%= data.all.kvorum.total_votes %>
-                                        </div>
-                                        <div class="option-option">
-                                            VZDRŽANI
-                                        </div>
+                                        <div class="option-number"><%= data.all.kvorum.total_votes %></div>
+                                        <div class="option-option">vzdržani</div>
                                     </div>
                                 </div>
 
                                 <div class="option niso" data-option="not_present">
-                                    <div class="option-marker option-marker-niso"></div>
                                     <div class="option-text">
-                                        <div class="option-number">
-                                            <%= data.all.not_present.total_votes %>
-                                        </div>
-                                        <div class="option-option">
-                                            NISO
-                                        </div>
+                                        <div class="option-number"><%= data.all.not_present.total_votes %></div>
+                                        <div class="option-option">niso</div>
                                     </div>
                                 </div>
                             </div>
@@ -200,7 +180,7 @@
                             <textarea class="form-control" data-id="<%= data.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.id %>?embed=true&altHeader=true"></textarea>
                             <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

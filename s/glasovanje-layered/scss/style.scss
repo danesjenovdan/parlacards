@@ -5,238 +5,194 @@
 text {
   font: 12px sans-serif;
   text-anchor: middle;
-  color: #505050;
+  color: $black;
   font-weight: 300;
 }
 
-path.pointer {
-  // stroke-width: 0.6;
-  stroke: #505050;
-}
+path.pointer { stroke: $black; }
 
-.card-header {
-    height: auto;
-}
+.card-header { height: auto; }
+
 .slab {
-
-    font-family: 'Roboto Slab', serif;
-    font-size: 16px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
 }
 
 a.document {
-    display: inline-block;
-    border-radius: 50%;
-
-    height: 35px;
-    width: 35px;
-    background-color: #00628c;
-
-    line-height: 35px;
-    text-align: center;
-    color: #ffffff;
-
-    margin-left: 10px;
+  background-color: $fontblue;
+  border-radius: 50%;
+  color: $white;
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 10px;
+  text-align: center;
+  width: 35px;
 }
+
 a.document:hover {
-    text-decoration: none;
-    background-color: #009cdd;
+  background-color: $funblue;
+  text-decoration: none;
 }
 
 .greybox {
-    background-color: #f7f7f7;
-    padding: 15px;
-    margin-top: 15px;
-
-    overflow: hidden;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  background-color: $grey;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  overflow: hidden;
+  padding: 15px;
 }
-.legend-container, .right-container {
-    display: flex;
+
+.legend-container,
+.right-container {
+  display: flex;
+  flex: 1 0 auto;
 }
+
 .legend-container {
+  height: 48px;
 
-    height: 48px;
+  @include respond-to(mobile) { justify-content: space-between; }
 
+  .option {
+    cursor: pointer;
     display: flex;
-    flex: 1;
+    height: 100%;
+    margin-right: 20px;
 
-    .option {
-        cursor: pointer;
-        display: flex;
-        height: 100%;
-        margin-right: 20px;
+    &.za .option-text { border-left-color: $fontblue; }
+    &.proti .option-text { border-left-color: $funblue; }
+    &.vzdrzani .option-text { border-left-color: $ignoreblue; }
+    &.niso .option-text { border-left-color: $noblue; }
 
-        .option-marker {
-            display: inline-block;
-            background-color: #000000;
-            width: 10px;
-            height: 100%;
-            margin-right: 10px;
+    .option-text {
+      display: inline-block;
+      border-left: 10px solid transparent;
+      padding-left: 10px;
 
-            @include respond-to(mobile) {
-                margin-right: 5px;
-            }
-        }
-        .option-marker-za {
-            background-color: #00628C;
-        }
-        .option-marker-proti {
-            background-color: #009CDD;
-        }
-        .option-marker-vzdrzani {
-            background-color: #003B54;
-        }
-        .option-marker-niso {
-            background-color: #99E1FF;
-        }
-        .option-text {
-            display: inline-block;
-        }
-        .option-number {
-            font-size: 30px;
-            font-weight: 400;
-            color: #515151;
-            line-height: 30px;
-            padding: 0;
-            margin: 0;
-
-            @include respond-to(mobile) {
-                font-size: 20px;
-            }
-        }
-        .option-option {
-            font-size: 16px;
-            color: #515151;
-            line-height: 16px;
-
-            @include respond-to(mobile) {
-                font-size: 12px;
-            }
-        }
+      @include respond-to(mobile) { padding-left: 5px; }
     }
+
+    .option-number {
+      color: #515151;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 30px;
+      margin: 0;
+      padding: 0;
+
+      @include respond-to(mobile) { font-size: 20px; }
+    }
+
+    .option-option {
+      color: #515151;
+      font-size: 16px;
+      line-height: 16px;
+      text-transform: uppercase;
+
+      @include respond-to(mobile) { font-size: 12px; }
+    }
+  }
 }
 
 .right-container {
+  justify-content: flex-end;
 
-    @include respond-to(mobile) {
-        margin-top: 15px;
-        justify-content: center;
+  @include respond-to(mobile) {
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .status-container {
+    display: block;
+    font-size: 16px;
+    height: 48px;
+    margin-right: 20px;
+    position: relative;
+
+    @include respond-to(mobile) { margin: auto; }
+
+    .status {
+      display: inline-block;
+      font-weight: 700;
+      line-height: 48px;
     }
 
-    .status-container {
-        display: block;
-        position: relative;
-
-        height: 48px;
-
-        font-size: 16px;
-
-        margin-right: 20px;
-
-        @include respond-to(mobile) {
-            margin-right: 0;
-            margin: auto;
-        }
-
-        .status {
-            display: inline-block;
-            line-height: 48px;
-
-            font-weight: 700;
-        }
-
-        i {
-            font-size: 14px;
-            margin-left: 5px;
-        }
-
-        .glyphicon-remove {
-            color: #FF5E41;
-        }
-        .glyphicon-ok {
-            color: #7AE7BF;
-        }
-
+    i {
+      font-size: 14px;
+      margin-left: 5px;
     }
+
+    .glyphicon-remove { color: $red; }
+    .glyphicon-ok { color: $green; }
+  }
 }
 
 .required-majority {
-    display: block;
-    float: left;
-
-    line-height: 48px;
+  display: block;
+  float: left;
+  line-height: 48px;
 }
 
 .member {
-    overflow: hidden;
-    @extend %flex;
+  overflow: hidden;
 
-    p {
-        font-size: 18px;
-        margin: 0;
+  @extend %flex;
 
-        @include respond-to(mobile) {
-            font-size: 14px;
-        }
-    }
+  p {
+    font-size: 18px;
+    margin: 0;
+
+    @include respond-to(mobile) { font-size: 14px; }
+  }
 }
 
 .label-party {
-    opacity: 0;
+  opacity: 0;
 }
 
 .arc path {
-    transition: all 1s ease-in;
-    cursor: pointer;
+  transition: all 1s ease-in;
+  cursor: pointer;
 }
 
 .pointer-party {
-    opacity: 0;
+  opacity: 0;
 }
-.label, .pointer {
-    transition: opacity 0.3 ease-out;
+
+.label,
+.pointer {
+  transition: opacity 0.3 ease-out;
 }
 
 .card-content {
-    height: 600px !important;
-    overflow: hidden;
+  height: 600px !important;
+  overflow: hidden;
 }
 
 .people-ballots {
-    height: 507px;
-    overflow-x: hidden;
-    overflow-y: auto;
+  height: 507px;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-    @include respond-to(mobile) {
-        height: 444px;
-    }
+  @include respond-to(mobile) { height: 444px; }
 }
 
 .vote-icon {
-    display: flex;
-    width: 25px;
-    height: 25px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right center;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
 
-    &.za {
-        background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/za.svg');
-    }
-    &.proti {
-        background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/proti.svg');
-    }
-    &.ni {
-        background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/ni.svg');
-    }
-    &.vzdrzan {
-        background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/vzdrzan.svg');
-    }
+  &.za { background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/za.svg'); }
+  &.proti { background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/proti.svg'); }
+  &.ni { background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/ni.svg'); }
+  &.vzdrzan { background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/vzdrzan.svg'); }
 }
 
 .person-list .person:last-child {
-    border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid $grey;
 }
