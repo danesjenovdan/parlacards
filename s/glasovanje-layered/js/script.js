@@ -1,26 +1,24 @@
 if (!isMSIE) {
-
-const openOption = false;
-
-// utilities
-  function groupBy(array, f) {
+  // utilities
+  const groupBy = (array, f) => {
     const groups = {};
     array.forEach((o) => {
-        const group = JSON.stringify(f(o));
-    groups[group] = groups[group] || [];
-    groups[group].push(o);
-  });
-    return Object.keys(groups).map((group) => groups[group]);
-  }
+      const group = JSON.stringify(f(o));
+      groups[group] = groups[group] || [];
+      groups[group].push(o);
+    });
 
-// draw the pie
-  function drawPie(data) {
+    return Object.keys(groups).map(group => groups[group]);
+  };
+
+  // draw the pie
+  const drawPie = function (data) {
     const arc = d3.svg.arc()
-        .outerRadius(radius * 2 - 10);
+      .outerRadius((radius * 2) - 10);
 
     const labelArc = d3.svg.arc()
-        .outerRadius(radius * 1.5 - 50)
-        .innerRadius(radius * 1.5 - 100);
+      .outerRadius((radius * 1.5) - 50)
+      .innerRadius((radius * 1.5) - 100);
 
     const pie = d3.layout.pie()
         .sort(null)
@@ -132,8 +130,7 @@ const openOption = false;
             d3.selectAll('.mpgroup').classed('hidden', true);
             var mp_list = d3.selectAll(`.${ d.data.option}`);
             mp_list.classed('hidden', false);
-          } else if (d3.selectAll(`.${ d.data.option }-arc`).classed('active')) { // current selection is ac
-              tive;
+          } else if (d3.selectAll(`.${ d.data.option }-arc`).classed('active')) { // current selection is active;
 
               if (d3.select(this).classed('chosen')) {
  // clicked slice is chosen
