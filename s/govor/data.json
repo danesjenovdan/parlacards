@@ -1,2 +1,40 @@
-
-{"person": {"is_active": false, "district": [76], "name": "Milan Brglez", "gov_id": "P243", "gender": "m", "party": {"acronym": "SMC", "is_coalition": true, "id": 1, "name": "PS Stranka modernega centra"}, "type": "mp", "id": 11, "has_function": true}, "created_at": "01.12.2016", "created_for": "01.12.2016", "results": {"quote_id": 153, "content": "Spo\u0161tovani kolegice poslanke in kolegi poslanci, gospe in gospodje! \nZa\u010denjam 24. sejo Dr\u017eavnega zbora, ki je bila sklicana na podlagi prvega odstavka 57. \u010dlena Poslovnika Dr\u017eavnega zbora. Obve\u0161\u010den sem, da se dana\u0161nje seje ne morejo udele\u017eiti naslednji poslanci: gospod Kamal Izidor Shaker, gospod Sa\u0161a Tabakovi\u0107, mag. Marko Poga\u010dnik, gospod \u017dan Mahni\u010d do 15. ure, dr. Franc Tr\u010dek in gospod Igor Zor\u010di\u010d od 16. ure dalje.\nNa sejo sem vabil predsednika Vlade, ministrice in minister ter generalno sekretarko Vlade k 1. in 38. to\u010dki dnevnega reda, direktorico Agencije za energijo mag. Du\u0161ko Godina k 36. to\u010dki dnevnega reda, dr. Marka Novaka, predsednika Sodnega sveta k 40.a to\u010dki ter predstavnike Vlade k vsem to\u010dkam dnevnega reda. Vse prisotne lepo pozdravljam.\nPreden preidemo na dolo\u010ditev dnevnega reda seje, vas moram obvestiti, da je umrl gospod Maksimiljan Maks Lavrinc, poslanec Dr\u017eavnega zbora v mandatnih obdobjih od leta 1992 do leta 2004.\nProsim vas, da spomin nanj po\u010dastimo z minuto molka. \n/ minuta molka/\nSlava mu!\nPrehajamo na dolo\u010ditev dnevnega reda 24. seje Dr\u017eavnega zbora. \nPredlog dnevnega reda ste prejeli v petek, 4. novembra 2016, s sklicem seje. O predlogu dnevnega reda bomo odlo\u010dili na podlagi prvega in petega odstavka 64. \u010dlena Poslovnika Dr\u017eavnega zbora. Odbor za zdravstvo Dr\u017eavnemu zboru predlaga, da z dnevnega reda 24. seje umakne 18. to\u010dko, to je Predlog zakona o spremembah in dopolnitvah dolo\u010denih zakonov s podro\u010dja zdravstvene dejavnosti ter jo uvrsti na naslednjo sejo zbora. Predlog ste prejeli 11. 11. 2016 in je objavljen na e-klopi. \nV skladu s petim odstavkom 64. \u010dlena Poslovnika Dr\u017eavnega zbora se ta to\u010dka umakne z dnevnega reda brez razprave in glasovanja. Ugotavljam, da je 18. to\u010dka umaknjena z dnevnega reda 24. seje zbora. Predlogov za \u0161iritev dnevnega reda seje nisem prejel. Prehajamo na glasovanje o dolo\u010ditvi dnevnega reda. Zboru predlagam, da za dana\u0161njo sejo dolo\u010di dnevni red, kot ste ga prejeli s sklicem in ugotovljeno spremembo. \nPostopkovno, mag. Alenka Bratu\u0161ek.", "session": {"date": "14. 11. 2016", "org": {"acronym": "DZ", "is_coalition": false, "id": 95, "name": "Dr\u017eavni zbor"}, "name": "24. redna seja", "in_review": true, "id": 5572}, "quoted_text": "o\u010ditev dnevnega reda 24. seje Dr\u017eavnega zbora. \u205fPredlog dnevnega reda ste prejeli v petek, 4. novembra 2016, s sklicem seje. O predlogu dnevnega reda bomo odlo\u010dili na podlagi prvega in petega odstavka 64. \u010dlena Poslovnika Dr\u017eavnega zbora. Odbor za zdravstvo Dr\u017eavnemu zboru predlaga, da z dnevnega reda 24. seje umakne 18. to\u010dko, to je Predlog zakona o spremembah in dopolnitvah dolo\u010denih zakonov s podro\u010dja zdravstvene dejavnosti ter jo uvrsti na naslednjo sejo zbo", "speech_id": 504077, "end_idx": 1512, "start_idx": 1046}}
+{
+  "person": {
+    "is_active": false,
+    "district": [76],
+    "name": "Milan Brglez",
+    "gov_id": "P243",
+    "gender": "m",
+    "party": {
+      "acronym": "SMC",
+      "is_coalition": true,
+      "id": 1,
+      "name": "PS Stranka modernega centra"
+    },
+    "type": "mp",
+    "id": 11,
+    "has_function": true
+  },
+  "created_at": "01.12.2016",
+  "created_for": "01.12.2016",
+  "results": {
+    "quote_id": 153,
+    "content": "Spo\u0161tovani kolegice poslanke in kolegi poslanci, gospe in gospodje! \nZa\u010denjam 24. sejo Dr\u017eavnega zbora, ki je bila sklicana na podlagi prvega odstavka 57. \u010dlena Poslovnika Dr\u017eavnega zbora. Obve\u0161\u010den sem, da se dana\u0161nje seje ne morejo udele\u017eiti naslednji poslanci: gospod Kamal Izidor Shaker, gospod Sa\u0161a Tabakovi\u0107, mag. Marko Poga\u010dnik, gospod \u017dan Mahni\u010d do 15. ure, dr. Franc Tr\u010dek in gospod Igor Zor\u010di\u010d od 16. ure dalje.\nNa sejo sem vabil predsednika Vlade, ministrice in minister ter generalno sekretarko Vlade k 1. in 38. to\u010dki dnevnega reda, direktorico Agencije za energijo mag. Du\u0161ko Godina k 36. to\u010dki dnevnega reda, dr. Marka Novaka, predsednika Sodnega sveta k 40.a to\u010dki ter predstavnike Vlade k vsem to\u010dkam dnevnega reda. Vse prisotne lepo pozdravljam.\nPreden preidemo na dolo\u010ditev dnevnega reda seje, vas moram obvestiti, da je umrl gospod Maksimiljan Maks Lavrinc, poslanec Dr\u017eavnega zbora v mandatnih obdobjih od leta 1992 do leta 2004.\nProsim vas, da spomin nanj po\u010dastimo z minuto molka. \n/ minuta molka/\nSlava mu!\nPrehajamo na dolo\u010ditev dnevnega reda 24. seje Dr\u017eavnega zbora. \nPredlog dnevnega reda ste prejeli v petek, 4. novembra 2016, s sklicem seje. O predlogu dnevnega reda bomo odlo\u010dili na podlagi prvega in petega odstavka 64. \u010dlena Poslovnika Dr\u017eavnega zbora. Odbor za zdravstvo Dr\u017eavnemu zboru predlaga, da z dnevnega reda 24. seje umakne 18. to\u010dko, to je Predlog zakona o spremembah in dopolnitvah dolo\u010denih zakonov s podro\u010dja zdravstvene dejavnosti ter jo uvrsti na naslednjo sejo zbora. Predlog ste prejeli 11. 11. 2016 in je objavljen na e-klopi. \nV skladu s petim odstavkom 64. \u010dlena Poslovnika Dr\u017eavnega zbora se ta to\u010dka umakne z dnevnega reda brez razprave in glasovanja. Ugotavljam, da je 18. to\u010dka umaknjena z dnevnega reda 24. seje zbora. Predlogov za \u0161iritev dnevnega reda seje nisem prejel. Prehajamo na glasovanje o dolo\u010ditvi dnevnega reda. Zboru predlagam, da za dana\u0161njo sejo dolo\u010di dnevni red, kot ste ga prejeli s sklicem in ugotovljeno spremembo. \nPostopkovno, mag. Alenka Bratu\u0161ek.",
+    "session": {
+      "date": "14. 11. 2016",
+      "org": {
+        "acronym": "DZ",
+        "is_coalition": false,
+        "id": 95,
+        "name": "Dr\u017eavni zbor"
+      },
+      "name": "24. redna seja",
+      "in_review": true,
+      "id": 5572
+    },
+    "quoted_text": "o\u010ditev dnevnega reda 24. seje Dr\u017eavnega zbora. \u205fPredlog dnevnega reda ste prejeli v petek, 4. novembra 2016, s sklicem seje. O predlogu dnevnega reda bomo odlo\u010dili na podlagi prvega in petega odstavka 64. \u010dlena Poslovnika Dr\u017eavnega zbora. Odbor za zdravstvo Dr\u017eavnemu zboru predlaga, da z dnevnega reda 24. seje umakne 18. to\u010dko, to je Predlog zakona o spremembah in dopolnitvah dolo\u010denih zakonov s podro\u010dja zdravstvene dejavnosti ter jo uvrsti na naslednjo sejo zbo",
+    "speech_id": 798206,
+    "end_idx": 1512,
+    "start_idx": 1046
+  }
+}
