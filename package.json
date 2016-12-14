@@ -13,6 +13,7 @@
     "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.2.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^2.2.1",
     "gulp-delete-lines": "0.0.7",
@@ -38,7 +39,9 @@
     "url": "git://github.com/muki/parlacards.git"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015"
+    ]
   },
   "eslintConfig": {
     "extends": "airbnb-base"

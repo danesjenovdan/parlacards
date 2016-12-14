@@ -7,6 +7,7 @@ import useref from 'gulp-useref';
 import uglify from 'gulp-uglify';
 import gulpif from 'gulp-if';
 import cleancss from 'gulp-clean-css';
+import autoprefixer from 'gulp-autoprefixer';
 import del from 'del';
 import runSequence from 'run-sequence';
 import rename from 'gulp-rename';
@@ -53,6 +54,7 @@ gulp.task('sass', () =>
   gulp.src(`${options.path}/scss/style.scss`)
       .pipe(wrap(`.${className}{<%= contents %>}`, {}, { parse: false }))
       .pipe(sass({ includePaths: 'node_modules' })) // Converts Sass to CSS with gulp-sass
+      .pipe(autoprefixer())
       .pipe(gulp.dest('temp/css'))
       .pipe(browserSync.reload({ stream: true })),
 );
