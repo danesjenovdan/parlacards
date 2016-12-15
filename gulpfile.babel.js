@@ -164,6 +164,7 @@ gulp.task('remove-minify', () =>
         removeComments: true,
       }))
       .pipe(replace(/<%= *className *%>/g, className))
+      .pipe(replace(/<%= *randomId *%>/g, randomId))
       .pipe(replace(/\n/g, '')) // cleaning up newlines that were left
       .pipe(replace(/\s\s+/g, ' ')) // cleaning up multiple spaces that were left
       .pipe(gulp.dest('dist')),
