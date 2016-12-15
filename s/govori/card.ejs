@@ -48,9 +48,9 @@
         var data2 = newdata[i];
       %>
       <div class="justaspeechcontainer <% if (i == 9) { %>last<% } %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
-        <div class="card-container card-halfling <%= className %> <% if (i > 9) { %>hidden<% } %> s<%= data2.results.speech_id %>" id="<%= fancyRandomId %>">
-            <input type="hidden" class="mywords" id="<%= fancyRandomId %>words" value="<%= data2.results.content.replace(/\n+/g, ' ').trim() %>">
-            <input type="hidden" class="myid" id="<%= fancyRandomId %>id" value="<%= data2.results.speech_id %>">
+        <div class="card-container card-halfling <%= className %> <% if (i > 9) { %>hidden<% } %> s<%= data2.results.speech_id %>" id="<%= randomId %>">
+            <input type="hidden" class="mywords" id="<%= randomId %>words" value="<%= data2.results.content.replace(/\n+/g, ' ').trim() %>">
+            <input type="hidden" class="myid" id="<%= randomId %>id" value="<%= data2.results.speech_id %>">
             <div class="card-header card-header-person">
                 <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%- data2.person.gov_id ? data2.person.gov_id : 'null' %>.png')"></div>
                 <h1 class="name">
