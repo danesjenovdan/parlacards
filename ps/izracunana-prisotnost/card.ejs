@@ -33,38 +33,21 @@
                 <!-- this text is the only thing you touch in .card-header -->
             </div>
             <div class="card-content half">
-
-                <!-- get random id -->
-                <%
-                    function makeid() {
-                        var text = "";
-                        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-                        for( var i=0; i < 5; i++ ) {
-                            text += possible.charAt(Math.floor(Math.random() * possible.length));
-                        }
-
-                        return text;
-                    }
-
-                    var random_id = makeid();
-                %>
-
                 <div class="bgwhite poslanec poslanec-small">
 
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active">
-                            <a href="#prisotnost_na_sejah<%= random_id %>" aria-controls="Prisotnost na sejah DZ" role="tab" data-toggle="tab">Prisotnost na sejah DZ</a>
+                            <a href="#prisotnost_na_sejah<%= randomId %>" aria-controls="Prisotnost na sejah DZ" role="tab" data-toggle="tab">Prisotnost na sejah DZ</a>
                         </li>
                         <li role="presentation">
-                            <a href="#prisotnost_na_glasovanjih<%= random_id %>" aria-controls="Prisotnost na glasovanjih sej DZ" role="tab" data-toggle="tab">Prisotnost na glasovanjih sej DZ</a>
+                            <a href="#prisotnost_na_glasovanjih<%= randomId %>" aria-controls="Prisotnost na glasovanjih sej DZ" role="tab" data-toggle="tab">Prisotnost na glasovanjih sej DZ</a>
                         </li>
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="prisotnost_na_sejah<%= random_id %>">
+                        <div role="tabpanel" class="tab-pane active" id="prisotnost_na_sejah<%= randomId %>">
 
                             <div class="me_poslanec clearfix">
                                 <div class="col150">
@@ -135,7 +118,7 @@
                             </div>
 
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="prisotnost_na_glasovanjih<%= random_id %>">
+                        <div role="tabpanel" class="tab-pane" id="prisotnost_na_glasovanjih<%= randomId %>">
 
                             <div class="me_poslanec clearfix">
                                 <div class="col150">
