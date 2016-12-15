@@ -1,19 +1,4 @@
-
-
-(function(){
-
-function makeId() {
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-    for(var i = 0; i < 5; i++) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-
-    return text;
-}
-
-var randomId = makeId();
+(function(randomId){
 
 function formatDate(unformattedDate) {
   var date = new Date(unformattedDate);
@@ -49,8 +34,6 @@ function makeSpeechesEventful() {
     var quoteElement = cardElement.find('.everything .quote-button');
     var toggleElement = cardElement.find('.toggle-arrow');
     var speechId = cardElement.find('.myid').val();
-    var cardId = cardElement.data('randomid');
-    
 
     speechTextElement.on('mouseup', function() {
         event.preventDefault();
@@ -85,7 +68,7 @@ function makeSpeechesEventful() {
     quoteElement.on('click', function(event) {
       selectedText = quoteElement.data().text.trim();
       //allText = speechData.results.content.replace(/\n+/g, '').trim();
-      allText = $('#' + cardId + 'words').val();
+      allText = $('#' + randomId + 'words').val();
       startIndex = allText.indexOf(selectedText);
       endIndex = startIndex + selectedText.length;
       url = 'https://analize.parlameter.si/v1/s/setQuote/' + speechId + '/' + startIndex + '/' + endIndex;
@@ -93,7 +76,7 @@ function makeSpeechesEventful() {
       console.log(url);
       console.log(selectedText);
 
-      
+
 
       $.get(url, function(result) {
         var newCardUrl = 'https://glej.parlameter.si/s/citat/' + result.id;
@@ -143,7 +126,7 @@ function makeSpeechesEventful() {
       speeches.forEach(function(speech, index) {
         tabs.push($(
           '<li role="tab"' + (index === 0 ? 'class="active"' : '') + '>\
-            <a class="speech" href="#' + speech.speech_id + '_' + cardId + '" data-toggle="tab">\
+            <a class="speech" href="#' + speech.speech_id + '_' + randomId + '" data-toggle="tab">\
               <div class="portrait" style="background-image: url(\'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + speech.person.gov_id + '.png\')"></div>\
               <div class="name">' + speech.person.name + '</div>\
               <div class="date">' + formatDate(speech.date) + '</div>\
@@ -153,7 +136,7 @@ function makeSpeechesEventful() {
         ));
 
         tabContents.push($(
-          '<div role="tabpanel" class="tab-pane' + (index === 0 ? ' active' : '') + '" id="' + speech.speech_id + '_' + cardId + '">\
+          '<div role="tabpanel" class="tab-pane' + (index === 0 ? ' active' : '') + '" id="' + speech.speech_id + '_' + randomId + '">\
             <div class="similar-speech-heading">' +
               speech.session_name + ', ' + formatDate(speech.date) +
               '<div class="close-button"></div>\
@@ -184,7 +167,7 @@ $(document).on('scroll', function() {
     $next.addClass('last');
 
     makeSpeechesEventful();
-    
+
   }
 });
 
@@ -222,4 +205,4 @@ makeEmbedSwitch();
 activateCopyButton();
 addCardRippling();
 
-})();
+})(/* SCRIPT_PARAMS */);

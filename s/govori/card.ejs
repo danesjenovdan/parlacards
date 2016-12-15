@@ -31,18 +31,6 @@
 
     <!-- everything above here is part of the page and not part of the card -->
     <%
-
-      function makeId() {
-          var text = "";
-          var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-          for(var i = 0; i < 5; i++) {
-              text += possible.charAt(Math.floor(Math.random() * possible.length));
-          }
-
-          return text;
-      }
-
       function compare(a, b) {
         if (a.results.speech_id < b.results.speech_id) {
           return -1;
@@ -58,13 +46,11 @@
 
       for (i = 0; i < data.results.length; i++) {
         var data2 = newdata[i];
-
-        var randomId2 = makeId();
       %>
       <div class="justaspeechcontainer <% if (i == 9) { %>last<% } %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
-        <div class="card-container card-halfling <%= className %> <% if (i > 9) { %>hidden<% } %> s<%= data2.results.speech_id %>" id="<%= randomId2 %>" data-randomid="<%= randomId2 %>">
-            <input type="hidden" class="mywords" id="<%= randomId2 %>words" value="<%= data2.results.content.replace(/\n+/g, ' ').trim() %>">
-            <input type="hidden" class="myid" id="<%= randomId2 %>id" value="<%= data2.results.speech_id %>">
+        <div class="card-container card-halfling <%= className %> <% if (i > 9) { %>hidden<% } %> s<%= data2.results.speech_id %>" id="<%= fancyRandomId %>">
+            <input type="hidden" class="mywords" id="<%= fancyRandomId %>words" value="<%= data2.results.content.replace(/\n+/g, ' ').trim() %>">
+            <input type="hidden" class="myid" id="<%= fancyRandomId %>id" value="<%= data2.results.speech_id %>">
             <div class="card-header card-header-person">
                 <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%- data2.person.gov_id ? data2.person.gov_id : 'null' %>.png')"></div>
                 <h1 class="name">

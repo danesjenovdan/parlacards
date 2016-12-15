@@ -1,10 +1,10 @@
-(function(){
+(function(randomId){
   function capitalise(string) {
     return string[0].toUpperCase() + string.substring(1)
   }
 
   new Vue({
-    el: '#glasovanja-' + pGlasovanjaRandomId,
+    el: '#glasovanja-' + randomId,
     components: ['SearchDropdown'],
     computed: {
       inputPlaceholder: function() {
@@ -64,9 +64,10 @@
         person: voteData.person
       }
     }
-  })
-})();
+  });
 
-makeEmbedSwitch();
-activateCopyButton();
-addCardRippling();
+
+  makeEmbedSwitch();
+  activateCopyButton();
+  addCardRippling();
+})(/* SCRIPT_PARAMS */);

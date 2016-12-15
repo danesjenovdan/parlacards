@@ -1,9 +1,9 @@
 /* global makeEmbedSwitch activateCopyButton addCardRippling */
 
-(() => {
-  new Vue({ el: '#clanstva' });
+((randomId) => {
+  new Vue({ el: `#clanstva-${randomId}` });
 
   makeEmbedSwitch();
   activateCopyButton();
   addCardRippling();
-})();
+})(/* SCRIPT_PARAMS */);
