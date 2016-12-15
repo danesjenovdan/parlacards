@@ -120,7 +120,7 @@
                                         }
                                     }
                                     if (parties[party_i].toLowerCase().indexOf('nep') === -1) { %>
-                                    <div data-acronym="<%= parties[party_i].replace(/ /g, '_') %>" class="<% if (selected) { %>turnedon <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-background<% } %> party-button noselect <%= parties[party_i].replace(/ /g, '_').toLowerCase() %> <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-hover" id="besedni-zaklad-partyswitch-<%= parties[party_i].replace(/ /g, '_') %>"><%= parties[party_i] %></div>
+                                    <div data-acronym="<%= parties[party_i].replace(/ /g, '_') %>" class="<% if (selected) { %>turnedon <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-background<% } %> party-button noselect <%= parties[party_i].replace(/ /g, '_').toLowerCase() %> <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-hover" id="besedni-zaklad-partyswitch-<%= parties[party_i].replace(/ /g, '_') %>"><%= parties[party_i].replace(/ /g, '\xa0') %></div>
                                     <%  }
                                 } %>
                         </div>
