@@ -41,45 +41,21 @@
                 <% if (data.response.numFound === 0) { %>
                     <div class="no-results">Brez zadetkov.</div>
                 <% } else { %>
-
-                    <!-- get random id -->
-                    <%
-                        function makeid() {
-                            var text = "";
-                            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-                            for( var i=0; i < 5; i++ ) {
-                                text += possible.charAt(Math.floor(Math.random() * possible.length));
-                            }
-
-                            return text;
-                        }
-
-                        var random_id = makeid();
-
-                    %>
-
-                    <script>
-                        var random_id = '<%- random_id %>';
-                    </script>
-
                     <div class="row poslanec">
                         <div class="col-xs-12">
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a id="bigdata<%= random_id %>" href="#cel-mandat" aria-controls="Cel mandat" role="tab" data-toggle="tab">Cel mandat</a>
-                                </li>
-                                <li role="presentation">
-                                    <a id="smalldata<%= random_id %>" href="#zadnje-leto" aria-controls="Zadnje leto" role="tab" data-toggle="tab">Zadnje leto</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="timechart"></div>
+                            <div class="tabs">
+                                <div class="tabs-headers">
+                                    <a id="bigdata<%= randomId %>" class="tabs-header active">
+                                      Cel mandat
+                                    </a>
+                                    <a id="smalldata<%= randomId %>" class="tabs-header">
+                                      Zadnje leto
+                                    </a>
+                                </div>
+                                <div class="tabs-content">
+                                    <div class="timechart"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <% } %>
@@ -120,7 +96,7 @@
                             <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?embed=true&altHeader=true&customUrl=<%- encodeURIComponent(customUrl) %>"></textarea>
                             <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

@@ -45,6 +45,12 @@ const cardData = getFileContents('card.json');
 // generate CSS class with card name from path param to use for sandboxing
 const className = `card-${options.path.split('/').pop()}`;
 
+// generate random id
+const randomId = (() => {
+  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  return Array(5).fill(0).map(() => possible.charAt(Math.floor(Math.random() * possible.length))).join('');
+})();
+
 // #################
 // ## tasks below ##
 // #################
@@ -71,6 +77,7 @@ gulp.task('minify:css', () =>
 // js uglifyer
 gulp.task('js', () =>
   gulp.src(`${options.path}/js/script.js`)
+      .pipe(replace('/* SCRIPT_PARAMS */', `"${randomId}", "${className}"`))
       .pipe(babel({
         presets: ['es2015'],
       }))
@@ -81,6 +88,7 @@ gulp.task('js', () =>
 // js copier (without uglify, for debug)
 gulp.task('js-no-uglify', () =>
   gulp.src(`${options.path}/js/script.js`)
+      .pipe(replace('/* SCRIPT_PARAMS */', `"${randomId}", "${className}"`))
       .pipe(babel({
         presets: ['es2015'],
       }))
@@ -98,6 +106,7 @@ gulp.task('ejs', () =>
         state: getFileContents('state.json'),
         urlsData: getFileContents('urls.json'),
         customUrl: getFileContents('customUrl.json'),
+        randomId,
       }, {
         ext: '.html',
       }))
@@ -155,6 +164,7 @@ gulp.task('remove-minify', () =>
         removeComments: true,
       }))
       .pipe(replace(/<%= *className *%>/g, className))
+      .pipe(replace(/<%= *randomId *%>/g, randomId))
       .pipe(replace(/\n/g, '')) // cleaning up newlines that were left
       .pipe(replace(/\s\s+/g, ' ')) // cleaning up multiple spaces that were left
       .pipe(gulp.dest('dist')),

@@ -1,6 +1,6 @@
 /* global window document $ makeEmbedSwitch activateCopyButton addCardRippling */
 
-(() => {
+((randomId) => {
   function formatDate(unformattedDate) {
     const date = new Date(unformattedDate);
     return `${date.getDate()}. ${date.getMonth() + 1}. ${date.getFullYear()}`;
@@ -30,7 +30,6 @@
       const quoteElement = cardElement.find('.everything .quote-button');
       const toggleElement = cardElement.find('.toggle-arrow');
       const speechId = cardElement.find('.myid').val();
-      const cardId = cardElement.data('randomid');
 
       speechTextElement.on('mouseup', (event) => {
         event.preventDefault();
@@ -63,7 +62,7 @@
 
       quoteElement.on('click', () => {
         const selectedText = quoteElement.data().text.trim();
-        const allText = $(`#${cardId}words`).val();
+        const allText = $(`#${randomId}words`).val();
         const startIndex = allText.indexOf(selectedText);
         const endIndex = startIndex + selectedText.length;
         const url = `https://analize.parlameter.si/v1/s/setQuote/${speechId}/${startIndex}/${endIndex}`;
@@ -113,7 +112,7 @@
         speeches.forEach((speech, index) => {
           tabs.push($(
           `<li role="tab"${index === 0 ? 'class="active"' : ''}>\
-            <a class="speech" href="#${speech.speech_id}_${cardId}" data-toggle="tab">\
+            <a class="speech" href="#${speech.speech_id}_${randomId}" data-toggle="tab">\
               <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/${speech.person.gov_id}.png')"></div>\
               <div class="name">${speech.person.name}</div>\
               <div class="date">${formatDate(speech.date)}</div>\
@@ -123,7 +122,7 @@
         ));
 
           tabContents.push($(
-          `<div role="tabpanel" class="tab-pane${index === 0 ? ' active' : ''}" id="${speech.speech_id}_${cardId}">\
+          `<div role="tabpanel" class="tab-pane${index === 0 ? ' active' : ''}" id="${speech.speech_id}_${randomId}">\
             <div class="similar-speech-heading">${
               speech.session_name}, ${formatDate(speech.date)
               }<div class="close-button"></div>\
@@ -184,4 +183,4 @@
   makeEmbedSwitch();
   activateCopyButton();
   addCardRippling();
-})();
+})(/* SCRIPT_PARAMS */);

@@ -26,29 +26,10 @@
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
-
-
     <!-- everything above here is part of the page and not part of the card -->
-    <%
-      function makeId() {
-          var text = "";
-          var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-          for(var i = 0; i < 5; i++) {
-              text += possible.charAt(Math.floor(Math.random() * possible.length));
-          }
-
-          return text;
-      }
-
-      var randomId2 = makeId();
-    %>
-    <script>
-      var randomId2 = '<%= randomId2 %>';
-    </script>
-    <div class="card-container card-halfling <%= className %>" id="<%= randomId2 %>" data-randomid="<%= randomId2 %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
-        <input type="hidden" class="mywords" id="<%= randomId2 %>words" value="<%= data.results.content.replace(/\n+/g, ' ').trim() %>">
-        <input type="hidden" class="myid" id="<%= randomId2 %>id" value="<%= data.results.speech_id %>">
+    <div class="card-container card-halfling <%= className %>" id="<%= randomId %>" data-randomid="<%= randomId %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
+        <input type="hidden" class="mywords" id="<%= randomId %>words" value="<%= data.results.content.replace(/\n+/g, ' ').trim() %>">
+        <input type="hidden" class="myid" id="<%= randomId %>id" value="<%= data.results.speech_id %>">
         <div class="card-header card-header-person">
             <div class="portrait" style="background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.person.gov_id %>.png')"></div>
             <h1 class="name">

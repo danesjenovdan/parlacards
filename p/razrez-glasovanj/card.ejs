@@ -12,6 +12,8 @@
         <script src="https://cdn.parlameter.si/v1/parlassets/js/perfect-scrollbar.jquery.js"></script>
         <%# <script src="https://raw.githubusercontent.com/twbs/bootstrap/master/js/tab.js"></script>%>
         <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+        <script src="https://unpkg.com/vue@2.0.5/dist/vue.min.js"></script>
+        <script src="https://cdn.parlameter.si/v1/parlassets/js/search-dropdown.js"></script>
         <!-- endbuild -->
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"><!-- removeme -->
@@ -20,17 +22,9 @@
 
         <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
         <link data-inline="true" rel="stylesheet" href="css/style.css">
-
-        <script>
-            var razrez_data = <%- JSON.stringify(data); %>;
-        </script>
-
     </head><!-- removeme -->
 
     <body><!-- removeme -->
-
-        <script>var className = '<%= className %>';</script>
-
         <!-- everything above here is part of the page and not part of the card -->
         <div class="card-container card-halfling <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
             <div class="card-header">
@@ -40,29 +34,8 @@
             </div>
             <div class="card-content full">
                 <div class="card-content-front">
-
-                    <!-- get random id -->
                     <%
-                        function makeid() {
-                            var text = "";
-                            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-                            for( var i=0; i < 5; i++ ) {
-                                text += possible.charAt(Math.floor(Math.random() * possible.length));
-                            }
-
-                            return text;
-                        }
-
-                        var random_id = makeid();
-
-                    %>
-
-                    <!-- max-min -->
-                    <%
-
                         function getMax(myresults) {
-
                             var max = 0;
                             var min = 10000000000;
 
@@ -76,7 +49,6 @@
                             }
 
                             return max;
-
                         }
 
                         var max = getMax([
@@ -105,27 +77,10 @@
                     %>
 
                     <div class="bgwhite poslanec">
+                      <div id="razrez-glasovanj-<%= randomId %>" v-cloak>
 
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active">
-                                <a href="#Glasovala_ZA<%= random_id %>" aria-controls="ZA" role="tab" data-toggle="tab">ZA</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#Glasovala_PROTI<%= random_id %>" aria-controls="PROTI" role="tab" data-toggle="tab">PROTI</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#se_VZDRŽALA<%= random_id %>" aria-controls="se VZDRŽALA" role="tab" data-toggle="tab">se VZDRŽAL<% if (data.person.gender == 'f') { %>A<% } %></a> <!-- TODO -->
-                            </li>
-                            <li role="presentation">
-                                <a href="#NI_glasovala<%= random_id %>" aria-controls="NI glasovala" role="tab" data-toggle="tab">NI glasoval<% if (data.person.gender == 'f') { %>a<% } %></a>
-                            </li>
-                        </ul>
-
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="Glasovala_ZA<%= random_id %>">
-
+                        <tabs>
+                            <tab header="ZA">
                                 <div class="me_poslanec clearfix progress_flex">
                                     <div class="column progress_title">
                                         <span class="poslanec_title">
@@ -242,10 +197,9 @@
                                         </div>
                                     </div>
                                 </div>
+                            </tab>
 
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="Glasovala_PROTI<%= random_id %>">
-
+                            <tab header="PROTI">
                                 <div class="me_poslanec clearfix progress_flex">
                                     <div class="column progress_title">
                                         <span class="poslanec_title">
@@ -362,10 +316,9 @@
                                         </div>
                                     </div>
                                 </div>
+                            </tab>
 
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="se_VZDRŽALA<%= random_id %>">
-
+                            <tab header="se VZDRŽAL<% if (data.person.gender == 'f') { %>A<% } %>">
                                 <div class="me_poslanec clearfix progress_flex">
                                     <div class="column progress_title">
                                         <span class="poslanec_title">
@@ -482,9 +435,9 @@
                                         </div>
                                     </div>
                                 </div>
+                            </tab>
 
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="NI_glasovala<%= random_id %>">
+                            <tab header="NI glasoval<% if (data.person.gender == 'f') { %>a<% } %>">
 
                                 <div class="me_poslanec clearfix progress_flex">
                                     <div class="column progress_title">
@@ -602,10 +555,9 @@
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-                        </div>
-
+                            </tab>
+                        </tabs>
+                      </div>
                     </div>
                     <!-- delete this placeholder, this is the content of your card -->
                 </div>
@@ -645,7 +597,7 @@
                                 <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>?embed=true&altHeader=true"></textarea>
                                 <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

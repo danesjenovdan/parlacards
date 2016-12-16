@@ -1,10 +1,12 @@
+@import "parlassets/scss/colors";
+
+.tabs-headers { margin-bottom: 40px; }
+
 .avgminimg-party {
-    line-height: 27px;
-    cursor: pointer;
-    font-size: 11px;
-    color: #ffffff;
-    
-    &:hover {
-        text-decoration: none;
-    }
+  color: $white;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 27px;
+
+  &:hover { text-decoration: none; }
 }
