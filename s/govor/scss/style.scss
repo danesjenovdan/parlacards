@@ -2,24 +2,29 @@
 
 @import 'parlassets/scss/breakpoints';
 
-.card-content-info, .card-content-embed, .card-content-share {
-    padding-top: 20px;
+.card-content-info,
+.card-content-embed,
+.card-content-share {
+  padding-top: 20px;
 }
+
 .card-header-person {
-    .portrait {
-        @include respond-to(mobile) {
-            margin-left: 13px;
-            margin-right: 5px;
-        }
+  .portrait {
+    @include respond-to(mobile) {
+      margin-left: 13px;
+      margin-right: 5px;
     }
-    h1.name {
-        @include respond-to(mobile) {
-            font-size: 14px !important;
-        }
-        a {
-            @include respond-to(mobile) {
-                font-size: 14px;
-            }
-        }
+  }
+
+  h1.name {
+    @include respond-to(mobile) {
+      font-size: 14px !important;
     }
+
+    a {
+      @include respond-to(mobile) {
+        font-size: 14px;
+      }
+    }
+  }
 }
