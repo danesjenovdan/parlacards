@@ -57,21 +57,19 @@
                 </div>
                 <div class="card-content-info hidden">
                     <div class="card-back-content">
-                        <div class="scroller" id="tvojamtka">
-                            <p class="info-text">
-                                Izračunamo <a href="https://en.wikipedia.org/wiki/Euclidean_distance">evklidsko razdaljo</a> med rezultati <%= vocab['poslanca'][data.person.gender] %> glasovanj in rezultati vseh ostalih (pri čemer vrednosti glasov pretvorimo v številčne vrednosti med -1 in 1).
-                            </p>
-                            <p class="info-text">
-                                Ko izračunamo "razdaljo" med vsemi poslanci, jih razvrstimo glede na rezultat in prikažemo prvih pet.
-                            </p>
-                            <div class="info-text">
-                                Številčne vrednosti glasov
-                                <ul class="info-text">
-                                    <li>-1: proti</li>
-                                    <li>0: vzdržan/-a ali ni prisoten/-na</li>
-                                    <li>1: za</li>
-                                </ul>
-                            </div>
+                        <p class="info-text">
+                            Izračunamo <a href="https://en.wikipedia.org/wiki/Euclidean_distance">evklidsko razdaljo</a> med rezultati <%= vocab['poslanca'][data.person.gender] %> glasovanj in rezultati vseh ostalih (pri čemer vrednosti glasov pretvorimo v številčne vrednosti med -1 in 1).
+                        </p>
+                        <p class="info-text">
+                            Ko izračunamo "razdaljo" med vsemi poslanci, jih razvrstimo glede na rezultat in prikažemo prvih pet.
+                        </p>
+                        <div class="info-text">
+                            Številčne vrednosti glasov
+                            <ul class="info-text">
+                                <li>-1: proti</li>
+                                <li>0: vzdržan/-a ali ni prisoten/-na</li>
+                                <li>1: za</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -102,7 +100,7 @@
                                 <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>?embed=true&altHeader=true"></textarea>
                                 <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

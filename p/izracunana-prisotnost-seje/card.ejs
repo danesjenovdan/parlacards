@@ -109,11 +109,9 @@
                 </div>
                 <div class="card-content-info hidden">
                     <div class="card-back-content">
-                        <div class="scroller" id="tvojamtka">
-                            <p class="info-text">
-                                Preštejemo vse seje in preverimo, če je <%= vocab['poslanec'][data.person.gender] %> <%= vocab['glasovati'][data.person.gender] %> na vsaj enem glasovanju na posamezni seji. Če je <%= vocab['glasovati'][data.person.gender] %> vsaj enkrat, <%= vocab['on'][data.person.gender] %> štejemo kot <%= vocab['prisoten'][data.person.gender] %> na posamezni seji. Delimo število sej, ko je <%= vocab['biti'][data.person.gender] %> <%= vocab['prisoten2'][data.person.gender] %>, s številom vseh sej in normaliziramo (min 1 - max 100).
-                            </p>
-                        </div>
+                        <p class="info-text">
+                            Preštejemo vse seje in preverimo, če je <%= vocab['poslanec'][data.person.gender] %> <%= vocab['glasovati'][data.person.gender] %> na vsaj enem glasovanju na posamezni seji. Če je <%= vocab['glasovati'][data.person.gender] %> vsaj enkrat, <%= vocab['on'][data.person.gender] %> štejemo kot <%= vocab['prisoten'][data.person.gender] %> na posamezni seji. Delimo število sej, ko je <%= vocab['biti'][data.person.gender] %> <%= vocab['prisoten2'][data.person.gender] %>, s številom vseh sej in normaliziramo (min 1 - max 100).
+                        </p>
                     </div>
                 </div>
                 <div class="card-content-embed hidden">
@@ -143,7 +141,7 @@
                                 <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>?embed=true&altHeader=true"></textarea>
                                 <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

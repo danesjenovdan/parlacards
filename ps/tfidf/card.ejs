@@ -87,14 +87,12 @@
             </div>
             <div class="card-content-info hidden">
                 <div class="card-back-content">
-                    <div class="scroller" id="tvojamtka">
-                        <p class="info-text">
-                            Analizo izvajamo po statistiki <a href="https://en.wikipedia.org/wiki/Tf-idf">tf-idf</a>.
-                        </p>
-                        <p class="info-text">
-                            Korpus predstavljajo vsi govori, dokument pa vsi govori poslanske skupine.
-                        </p>
-                    </div>
+                    <p class="info-text">
+                        Analizo izvajamo po statistiki <a href="https://en.wikipedia.org/wiki/Tf-idf">tf-idf</a>.
+                    </p>
+                    <p class="info-text">
+                        Korpus predstavljajo vsi govori, dokument pa vsi govori poslanske skupine.
+                    </p>
                 </div>
             </div>
             <div class="card-content-embed hidden">
@@ -124,7 +122,7 @@
                             <textarea class="form-control" data-id="<%= data.party.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.party.id %>?embed=true&altHeader=true"></textarea>
                             <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
