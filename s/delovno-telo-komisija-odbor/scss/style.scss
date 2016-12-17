@@ -1,15 +1,12 @@
-a {
-  font-size: 16px;
-}
-p.info-text a {
-  font-size: 14px;
-}
+a { font-size: 16px; }
+p.info-text a { font-size: 14px; }
+
 a:hover {
   background-color: #e1f6ff;
   text-decoration: none;
 }
 
-.session-container{
+.session-container {
   height: auto;
   left: auto;
   margin-left: 0;
@@ -19,21 +16,24 @@ a:hover {
   padding: 0;
   position: inherit;
   top: auto;
+
   .paneltab {
-    padding-top:0;
-    padding-bottom:0;
+    padding-top: 0;
+    padding-bottom: 0;
+
     .session_other_members {
       a {
         width: 12.67%;
         float: left;
         margin: 2%;
       }
-      img { width:100%; }
+      img { width: 100%; }
     }
+
     .dt-member {
       .image {
         width: auto;
-        height:auto;
+        height: auto;
       }
 
       h3 { margin-top: 0; }
@@ -41,22 +41,21 @@ a:hover {
   }
 }
 
-.other_poslanec{
-  padding-bottom: 10px;
-}
-.progress.hugebar{
-  margin-bottom: 30px;
-}
+.other_poslanec { padding-bottom: 10px; }
+.progress.hugebar { margin-bottom: 30px; }
 
-.sessionsGetSessionByDate{
+.sessionsGetSessionByDate {
   height: 500px;
   overflow-y: auto;
+
   ul {
     padding: 0;
+
     li {
       list-style: none;
       padding-bottom: 10px;
       span { padding-left: 0; }
+
       p {
         border-bottom: 1px solid #f0f0f0;
         margin-bottom: 10px;
@@ -66,27 +65,25 @@ a:hover {
   }
 }
 
-.verticalmember{
+.verticalmember {
   height: 85px;
+
   .dt-member_data {
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
 }
 
 @media (max-width: 991px) {
-  .verticalmember{
+  .verticalmember {
     height: auto;
-  }
-  .verticalmember .dt-member_data {
-    position: relative;
-    top: auto;
-    -webkit-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    transform: translateY(0%);
+
+    .dt-member_data {
+      position: relative;
+      top: auto;
+      transform: translateY(0%);
+    }
   }
 }
 
@@ -94,12 +91,13 @@ a:hover {
 
 .dt-member {
   h3 {
-      font-size: 18px;
-      font-weight: 400;
-      margin: 12px 0 0 0;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 12px 0 0;
   }
+
   h4 {
-      font-size: 14px;
-      font-weight: 300;
+    font-size: 14px;
+    font-weight: 300;
   }
 }
