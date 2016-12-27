@@ -95,7 +95,7 @@
 
                                 <div class="term">
                                     <span class="poslanec_title">
-                                                    <a href="<%=urlsData.base%>/seje/isci?q=<%- '%22' + word.term.replace(' ', '+') + '%22' %>" class="funblue-light-hover"><%= word.term %></a>
+                                                    <a target="_blank" href="<%=urlsData.base%>/seje/isci?q=<%- '%22' + word.term.replace(' ', '+') + '%22' %>" class="funblue-light-hover"><%= word.term %></a>
                                                 </span>
                                 </div>
                                 <div class="frequency">
@@ -127,7 +127,7 @@
 
                                 <div class="term">
                                     <span class="poslanec_title">
-                                                    <a href="<%=urlsData.base%>/seje/isci?q=<%- '%22' + word.term.replace(' ', '+') + '%22' %>" class="funblue-light-hover"><%= word.term %></a>
+                                                    <a target="_blank" href="<%=urlsData.base%>/seje/isci?q=<%- '%22' + word.term.replace(' ', '+') + '%22' %>" class="funblue-light-hover"><%= word.term %></a>
                                                 </span>
                                 </div>
                                 <div class="frequency">
@@ -151,7 +151,7 @@
             </div>
 
             <div class="indexsessionpart clearfix">
-                <div class="link"><a href="<%=urlsData.base%><%=urlsData.sessionLink.prisotnost%><%=data.session.id%>"><span class="glyphicon glyphicon-comment"></span> Prisotnost</a></div>
+                <div class="link"><a  target="_blank" href="<%=urlsData.base%><%=urlsData.sessionLink.prisotnost%><%=data.session.id%>"><span class="glyphicon glyphicon-comment"></span> Prisotnost</a></div>
                 <%
                 var presence = data.presence;
                 var stPgs = (presence.length > 7) ? "11.3" : "13.1";
@@ -191,7 +191,7 @@
             </div>
 
             <div class="indexsessionpart clearfix">
-                <div class="link"><a href="<%=urlsData.base%><%=urlsData.sessionLink.glasovanja%><%=data.session.id%>"><span class="glyphicon glyphicon-comment"></span> Glasovanja</a></div>
+                <div class="link"><a target="_blank" href="<%=urlsData.base%><%=urlsData.sessionLink.glasovanja%><%=data.session.id%>"><span class="glyphicon glyphicon-comment"></span> Glasovanja</a></div>
 
 
                     <div  id="votingCard">
@@ -227,7 +227,7 @@
 
 
                             <div class="clearfix single_voting">
-                                <a href="/seja/glasovanje/<%=data.motions[i].session.id%>/<%=motion.motion_id%>">
+                                <a target="_blank" href="/seja/glasovanje/<%=data.motions[i].session.id%>/<%=motion.motion_id%>">
                                     <div class=" col-sm-1 ">
                                         <div class="accepted <%= ayeney %> ">
                                             <p>
@@ -349,7 +349,7 @@
         </div>
     <div class="card-footer">
         <div class="card-logo hidden">
-            <a href="<%= urlsData.base %>">
+            <a target="_blank" href="<%= urlsData.base %>">
                 <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
             </a>
         </div>

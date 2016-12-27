@@ -66,6 +66,32 @@
 
                     <div class="row">
                         <div class="col-xs-2 parlaicon-container text-center btn-lg">
+                            <span class="parlaicon parlaicon-skupina" aria-hidden="true"></span>
+                        </div>
+                        <div class="col-xs-10 bordertop">
+                            <span class="key">
+                                Funkcije v DT:
+                                <%
+
+                                    function sklanjajPredsednik(data) {
+                                        return (data.person.gender === 'f') ? 'predsednica' : 'predsednik';
+                                    }
+                                    function sklanjajPodpredsednik(data) {
+                                        return (data.person.gender === 'f') ? 'podpredsednica' : 'podpredsednik';
+                                    }
+
+                                    data.results.working_bodies_functions.forEach(function(wb) {
+                                %>
+                                    <b><%= wb.wb.name %>, <%- (wb.role === 'president') ? sklanjajPredsednik(data) : sklanjajPodpredsednik(data) %></b>
+                                <%
+                                    });
+                                %>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-2 parlaicon-container text-center btn-lg">
                             <span class="parlaicon parlaicon-delaza" aria-hidden="true"></span>
                         </div>
                         <div class="col-xs-10 bordertop">

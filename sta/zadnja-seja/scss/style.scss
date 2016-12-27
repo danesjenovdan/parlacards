@@ -1,3 +1,4 @@
+@import 'parlassets/scss/colors';
 @import 'parlassets/scss/breakpoints';
 
 .card-header h1, .card-footer h1 {
@@ -164,4 +165,56 @@
 }
 .seja_anchor:hover {
   color: #525252;
+}
+
+
+
+.presence-list {
+  display: flex;
+  .presence {
+    background: $grey;
+    flex: 1;
+    margin-right: 10px;
+    text-align: center;
+    &:last-child { margin-right: 0; }
+    .percent {
+      color: $black;
+      font-size: 32px;
+      font-weight: 500;
+      @include respond-to(mobile) {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 38px;
+      }
+    }
+
+    .party {
+      text-transform: uppercase;
+      color: black;
+      font-size: 22px;
+      line-height: 36px;
+      display: block;
+      @include respond-to(mobile) {
+        font-size: 18px;
+        line-height: 34px;
+      }
+    }
+
+    .line {
+      height: 5px;
+      font-size: 5px;
+      line-height: 5px;
+      margin-top: 10px;
+      @include respond-to(mobile) { margin-top: 0; }
+    }
+    @include respond-to(up-to-limbo) {
+      flex: none;
+      margin-bottom: 20px;
+      max-width: 120px;
+      &:nth-child(3n) {
+        margin-right: 10px;
+      }
+    }
+  }
+  @include respond-to(up-to-limbo) { flex-wrap: wrap; }
 }

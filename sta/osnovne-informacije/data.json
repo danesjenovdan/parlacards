@@ -1,52 +1,114 @@
 {
+  "created_at": "15.12.2016",
+  "created_for": "01.12.2016",
   "person": {
+    "district": [10,
+      11
+    ],
+    "gender": "m",
+    "gov_id": "P272",
+    "has_function": false,
+    "id": 57,
+    "is_active": true,
+    "name": "Dragan Matić",
     "party": {
-      "acronym": "DeSUS",
-      "id": 3,
-      "name": "PS Demokratska Stranka Upokojencev Slovenije",
-      "is_coalition": -1
+      "acronym": "SMC",
+      "id": 1,
+      "is_coalition": true,
+      "name": "PS Stranka modernega centra"
     },
-    "gender": "f",
-    "name": "Marija Antonija Kova\u010di\u010d",
-    "gov_id": "P297",
-    "id": 96
+    "type": "mp"
   },
-  "date_of_card": "14.09.2016",
   "results": {
-    "voters": 1186,
-    "acronym": "DeSUS",
+    "acronym": "SMC",
+    "age": 52,
+    "district": ["Brežice",
+      "Krško"
+    ],
+    "education": "VIII. / 2",
+    "groups": [{
+      "group_id": 33,
+      "group_name": "Delegacija Državnega zbora v Parlamentarni dimenziji Srednjeevropske pobude"
+    }, {
+      "group_id": 22,
+      "group_name": "Odbor za kulturo"
+    }, {
+      "group_id": 23,
+      "group_name": "Odbor za notranje zadeve, javno upravo in lokalno samoupravo"
+    }, {
+      "group_id": 40,
+      "group_name": "Skupina prijateljstva z Avstrijo"
+    }, {
+      "group_id": 44,
+      "group_name": "Skupina prijateljstva z Bosno in Hercegovino"
+    }, {
+      "group_id": 15,
+      "group_name": "Mandatno-volilna komisija"
+    }, {
+      "group_id": 46,
+      "group_name": "Skupina prijateljstva s Češko"
+    }, {
+      "group_id": 47,
+      "group_name": "Skupina prijateljstva s Črno goro"
+    }, {
+      "group_id": 53,
+      "group_name": "Skupina prijateljstva s Hrvaško"
+    }, {
+      "group_id": 55,
+      "group_name": "Skupina prijateljstva z Italijo"
+    }, {
+      "group_id": 20,
+      "group_name": "Odbor za izobraževanje, znanost, šport in mladino"
+    }, {
+      "group_id": 67,
+      "group_name": "Skupina prijateljstva z Nemčijo"
+    }, {
+      "group_id": 68,
+      "group_name": "Skupina prijateljstva z Nizozemsko"
+    }, {
+      "group_id": 71,
+      "group_name": "Skupina prijateljstva z Rusijo"
+    }, {
+      "group_id": 72,
+      "group_name": "Skupina prijateljstva s Slovaško"
+    }, {
+      "group_id": 73,
+      "group_name": "Skupina prijateljstva s Srbijo"
+    }, {
+      "group_id": 69,
+      "group_name": "Skupina prijateljstva z Norveško"
+    }, {
+      "group_id": 75,
+      "group_name": "Skupina prijateljstva s Švedsko"
+    }, {
+      "group_id": 79,
+      "group_name": "Skupina prijateljstva z Veliko Britanijo"
+    }, {
+      "group_id": 76,
+      "group_name": "Skupina prijateljstva s Švico"
+    }, {
+      "group_id": 94,
+      "group_name": "Skupina prijateljstva s Kuvajtom"
+    }],
     "mandates": 1,
-    "party_id": 3,
-    "groups": [
-      {
-        "group_id": 22,
-        "group_name": "Odbor za kulturo"
-      },
-      {
-        "group_id": 98,
-        "group_name": "Preiskovalna komisija o ugotavljanju zlorab v slovenskem ban\u010dnem sistemu ter ugotavljanju vzrokov in odgovornosti za \u017ee drugo sanacijo ban\u010dnega sistema v samostojni Sloveniji"
-      },
-      {
-        "group_id": 27,
-        "group_name": "Odbor za zdravstvo"
-      },
-      {
-        "group_id": 17,
-        "group_name": "Odbor za finance in monetarno politiko"
+    "name": "Dragan Matić",
+    "party": "PS Stranka modernega centra",
+    "party_id": 1,
+    "previous_occupation": "direktor Zgodovinskega arhiva Ljubljana",
+    "social": [{
+      "facebook": "https://www.facebook.com/DraganMaticSMC",
+      "linkedin": null,
+      "twitter": null
+    }],
+    "voters": null,
+    "working_bodies_functions": [{
+      "role": "president",
+      "wb": {
+        "acronym": "",
+        "id": 22,
+        "is_coalition": false,
+        "name": "Odbor za kulturo"
       }
-    ],
-    "education": "VI. / 2",
-    "previous_occupation": "upokojenka",
-    "name": "Marija Antonija Kova\u010di\u010d",
-    "district": null,
-    "age": 70,
-    "social": [
-      {
-        "twitter": "https://twitter.com/danesjenovdan",
-        "facebook": "https://www.facebook.com/danesjenovdan",
-        "linkedin": null
-      }
-    ],
-    "party": "PS Demokratska Stranka Upokojencev Slovenije"
+    }]
   }
 }
