@@ -58,12 +58,20 @@
         <div class="card-content-info hidden">
             <div class="card-back-content">
                 <p class="info-text">
-                    "Za vsako glasovanje izračunamo ""glas poslanske skupine"". To naredimo tako, da seštejemo v številke pretvorjene vrednosti vsakega glasovanja za vsakega/-o poslanca/-ko PS in delimo s številom poslancev v PS. Potem izračunamo Pearsonov koeficient med pridobljenim nizom rezultatov in nizom glasov vsake/-ga poslanke/-ca. Razvrstimo glede na rezultat (med -1 in 1) in prikažemo prvih oz. zadnjih 5.
-                    Številčne vrednosti glasov
-                    -1: proti
-                    0: vzdržan/-a ali ni prisoten/-na
-                    1: za"
+                    Za vsako glasovanje izračunamo "glas poslanske skupine." To naredimo tako, da seštejemo v številke pretvorjene vrednosti vsakega glasovanja za vsakega/-o poslanca/-ko PS in delimo s številom poslancev v PS. Potem izračunamo <a href="https://en.wikipedia.org/wiki/Euclidean_distance">evklidsko razdaljo</a> med rezultati
+                    glasovanj poslanske skupine in rezultati vseh poslank in poslancev (pri čemer vrednosti glasov pretvorimo v številčne vrednosti med -1 in 1).
                 </p>
+                <p class="info-text">
+                    Ko izračunamo "razdaljo" med poslansko skupino in vsemi poslanci, jih razvrstimo glede na rezultat in prikažemo prvih pet.
+                </p>
+                <div class="info-text">
+                    Številčne vrednosti glasov
+                    <ul class="info-text">
+                    <li>-1: proti</li>
+                    <li>0: vzdržan/-a ali ni prisoten/-na</li>
+                    <li>1: za</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="card-content-embed hidden">
