@@ -8,7 +8,7 @@ npm install gulp -g
 
 ## Running gulp tasks
 You may run commands from the root directory with `gulp <command> --path=<path-to-card>`. The following are available:
-- `build` - compiles specified card into `dist/card.min.ejs`
+- `build` - compiles specified card into root's `dist/card.min.ejs`
 - `serve` - starts live server serving specified card
 - `push-build` - compiles specified card and pushes it to CMS
 
