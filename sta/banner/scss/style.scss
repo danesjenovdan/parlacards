@@ -1,0 +1,44 @@
+&.banner {
+  position: relative;
+
+  width: 300px;
+  height: 133px;
+
+  background-image: url('https://cdn.parlameter.si/v1/parlassets/img/sta/parlament.jpg');
+  background-size: cover;
+
+  color: #ffffff;
+  font-family: 'Arial Bold', sans-serif;
+  font-weight: bold;
+
+  .banner-overlay {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .banner-top-text {
+    font-size: 12px;
+    line-height: 1.2em;
+    padding-top: 18px;
+    padding-left: 12px;
+  }
+
+  .banner-bottom-text {
+    font-size: 24px;
+    line-height: 20px;
+    padding-top: 18px;
+    padding-left: 12px;
+
+    span.secondline {
+      font-size: 14px;
+      line-height: 14px;;
+    }
+  }
+
+}

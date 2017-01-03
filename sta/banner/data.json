@@ -1,0 +1,248 @@
+{
+  "created_at": "03.01.2017",
+  "created_for": "13.12.2016",
+  "motions": [{
+    "results": {
+      "abstain": 9,
+      "against": 10,
+      "motion_id": 6649,
+      "not_present": 10,
+      "result": true,
+      "text": "Zakon o spremembi Zakona o praznikih in dela prostih dnevih v Republiki Sloveniji - Glasovanje o zakonu v celoti",
+      "votes_for": 61
+    },
+    "session": {
+      "date": "13. 12. 2016",
+      "id": 7656,
+      "in_review": true,
+      "name": "40. izredna seja",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "is_coalition": false,
+        "name": "Državni zbor"
+      }
+    }
+  }, {
+    "results": {
+      "abstain": 1,
+      "against": 1,
+      "motion_id": 6650,
+      "not_present": 23,
+      "result": true,
+      "text": "Dnevni red v celoti",
+      "votes_for": 65
+    },
+    "session": {
+      "date": "13. 12. 2016",
+      "id": 7656,
+      "in_review": true,
+      "name": "40. izredna seja",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "is_coalition": false,
+        "name": "Državni zbor"
+      }
+    }
+  }],
+  "presence": [{
+    "org": {
+      "acronym": "ZL",
+      "id": 8,
+      "is_coalition": false,
+      "name": "PS Združena Levica"
+    },
+    "percent": 100
+  }, {
+    "org": {
+      "acronym": "SMC",
+      "id": 1,
+      "is_coalition": true,
+      "name": "PS Stranka modernega centra"
+    },
+    "percent": 95
+  }, {
+    "org": {
+      "acronym": "SD",
+      "id": 7,
+      "is_coalition": true,
+      "name": "PS Socialni Demokrati"
+    },
+    "percent": 91
+  }, {
+    "org": {
+      "acronym": "DeSUS",
+      "id": 3,
+      "is_coalition": true,
+      "name": "PS Demokratska Stranka Upokojencev Slovenije"
+    },
+    "percent": 90
+  }, {
+    "org": {
+      "acronym": "PS NP",
+      "id": 109,
+      "is_coalition": false,
+      "name": "PS nepovezanih poslancev "
+    },
+    "percent": 87
+  }, {
+    "org": {
+      "acronym": "NSI",
+      "id": 6,
+      "is_coalition": false,
+      "name": "PS Nova Slovenija"
+    },
+    "percent": 80
+  }, {
+    "org": {
+      "acronym": "IMNS",
+      "id": 2,
+      "is_coalition": false,
+      "name": "PS italijanske in madžarske narodne skupnosti"
+    },
+    "percent": 50
+  }, {
+    "org": {
+      "acronym": "SDS",
+      "id": 5,
+      "is_coalition": false,
+      "name": "PS Slovenska Demokratska Stranka"
+    },
+    "percent": 42
+  }],
+  "session": {
+    "date": "13. 12. 2016",
+    "id": 7656,
+    "in_review": true,
+    "name": "40. izredna seja",
+    "org": {
+      "acronym": "DZ",
+      "id": 95,
+      "is_coalition": false,
+      "name": "Državni zbor"
+    }
+  },
+  "tfidf": {
+    "created_at": "14.12.2016",
+    "created_for": "14.12.2016",
+    "results": [{
+      "scores": {
+        "df": 21275,
+        "tf": 72,
+        "tf-idf": 0.3384253819036428
+      },
+      "term": "dela prost"
+    }, {
+      "scores": {
+        "df": 6140,
+        "tf": 12,
+        "tf-idf": 0.1954397394136808
+      },
+      "term": "ponoven"
+    }, {
+      "scores": {
+        "df": 10288,
+        "tf": 20,
+        "tf-idf": 0.1944012441679627
+      },
+      "term": "ukrep"
+    }, {
+      "scores": {
+        "df": 48873,
+        "tf": 85,
+        "tf-idf": 0.1739201604157715
+      },
+      "term": "biti"
+    }, {
+      "scores": {
+        "df": 9153,
+        "tf": 14,
+        "tf-idf": 0.1529553151972031
+      },
+      "term": "evro"
+    }, {
+      "scores": {
+        "df": 10108,
+        "tf": 14,
+        "tf-idf": 0.13850415512465375
+      },
+      "term": "stranka"
+    }, {
+      "scores": {
+        "df": 18016,
+        "tf": 21,
+        "tf-idf": 0.11656305506216695
+      },
+      "term": "zbor"
+    }, {
+      "scores": {
+        "df": 16324,
+        "tf": 17,
+        "tf-idf": 0.10414114187699093
+      },
+      "term": "poslanski"
+    }, {
+      "scores": {
+        "df": 28345,
+        "tf": 29,
+        "tf-idf": 0.10231081319456695
+      },
+      "term": "slovenija"
+    }, {
+      "scores": {
+        "df": 10787,
+        "tf": 11,
+        "tf-idf": 0.10197459905441734
+      },
+      "term": "stališče"
+    }, {
+      "scores": {
+        "df": 10850,
+        "tf": 11,
+        "tf-idf": 0.10138248847926266
+      },
+      "term": "takrat"
+    }, {
+      "scores": {
+        "df": 20978,
+        "tf": 21,
+        "tf-idf": 0.10010487177042615
+      },
+      "term": "država"
+    }, {
+      "scores": {
+        "df": 23209,
+        "tf": 23,
+        "tf-idf": 0.09909948726787021
+      },
+      "term": "vlada"
+    }, {
+      "scores": {
+        "df": 17176,
+        "tf": 14,
+        "tf-idf": 0.0815090824406148
+      },
+      "term": "seja"
+    }, {
+      "scores": {
+        "df": 17290,
+        "tf": 14,
+        "tf-idf": 0.0008097165991902834
+      },
+      "term": "kolega"
+    }],
+    "session": {
+      "date": "13. 12. 2016",
+      "id": 7656,
+      "in_review": true,
+      "name": "40. izredna seja",
+      "org": {
+        "acronym": "DZ",
+        "id": 95,
+        "is_coalition": false,
+        "name": "Državni zbor"
+      }
+    }
+  }
+}
