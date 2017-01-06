@@ -1,0 +1,208 @@
+<!DOCTYPE html><!-- removeme -->
+<html><!-- removeme -->
+
+    <head><!-- removeme -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/><!-- removeme -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><!-- removeme -->
+
+        <!-- build:remove -->
+        <!-- these script files are removed on build -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+        <!-- endbuild -->
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"><!-- removeme -->
+        <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"><!-- removeme -->
+
+        <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+        <link data-inline="true" rel="stylesheet" href="css/style.css">
+
+    </head><!-- removeme -->
+
+    <body><!-- removeme -->
+
+        <script>var className = '<%= className %>';</script>
+
+        <!-- everything above here is part of the page and not part of the card -->
+        <div class="card-container card-halfling <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
+            <div class="card-header">
+                <div class="card-header-border"></div>
+                <h1>Št. poslanskih vprašanj in pobud</h1>
+                <!-- this text is the only thing you touch in .card-header -->
+            </div>
+            <div class="card-content half">
+                <div class="card-content-front">
+                    <!-- max-min -->
+                    <%
+
+                        var score = data.results.score;
+                        var average = data.results.average;
+                        var maximum = data.results.max.score;
+
+                        var myresults = [score, average, maximum];
+
+                        var max = 0;
+                        var min = 10000000000;
+
+                        for (var i = 0; i < myresults.length; i++) {
+                            var current = myresults[i];
+                            if (Math.round(current) > max) {
+                                max = Math.round(current);
+                            } else if (+current < min) {
+                                min = Math.round(current);
+                            }
+                        }
+
+                        var diff = max - min;
+
+                    %>
+
+                    <div class="bgwhite poslanec poslanec-small">
+
+
+
+                        <div class="me_poslanec clearfix progress_flex">
+                            <div class="column progress_title">
+                                <span class="poslanec_title">
+                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.person.id].slug%><%=urlsData.personLink.pregled%>" class="funblue-light-hover">
+                                        <%= data.person.name %>
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="column progress_bar">
+                                <div class="progress smallbar">
+                                    <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.score/max * 70 %>%;">
+                                        <span class="sr-only"><%= data.results.score %>% Complete</span>
+                                    </div>
+                                    <div class="progress_number">
+                                        <%= data.results.score %>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="other_poslanec clearfix progress_flex">
+                            <div class="column progress_title">
+                                <span class="poslanec_title">
+                                    Povprečje
+                                </span>
+                            </div>
+                            <div class="column progress_bar">
+                                <div class="progress smallbar avgmin">
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average/max* 70 %>%;">
+                                        <span class="sr-only"><%= data.results.average %>% Complete</span>
+                                    </div>
+                                    <div class="progress_number">
+                                        <%= Math.round(data.results.average) %>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="other_poslanec clearfix progress_flex">
+                            <div class="column progress_title">
+                                <span class="poslanec_title">
+                                    Največ
+                                </span>
+                            </div>
+                            <div class="column progress_bar">
+                                <div class="progress smallbar avgmin">
+                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.max.score/max * 70 %>%;">
+                                        <span class="sr-only"><%= data.results.max.score %>% Complete</span>
+                                        <%
+
+                                        if (data.results.max.mps) {
+                                            for (var i = 0; i < data.results.max.mps.length; i++) {
+
+                                        %>
+                                        <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.max.mps[i].id].slug%><%=urlsData.personLink.pregled%>"
+                                           data-name="<%= data.results.max.mps[i].name %>"
+                                           class="avgminimg img-circle"
+                                           style="background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.max.mps[i]['gov_id'] %>.png');"></a>
+                                        <%
+                                            }
+                                        }
+                                        %>
+                                    </div>
+                                    <div class="progress_number">
+                                        <%= data.results.max.score %>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- delete this placeholder, this is the content of your card -->
+                </div>
+                <div class="card-content-info hidden">
+                    <div class="card-back-content">
+                        <p class="info-text">
+                            Število besed, ki jih je <%= vocab['poslanec'][data.person.gender] %> <%= vocab['izgovoriti'][data.person.gender] %> v vseh svojih dosedanjih govorih v DZ.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-content-embed hidden">
+                    <div class="card-back-content">
+                        <div class="embed-content">
+                            <div class="embed-divider"></div>
+                            <div class="embed-switch-container">
+                                <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                                <div class="embed-switch-big-box">
+                                    <div class="embed-switch-box">
+                                        <div class="embed-switch">
+                                            <div class="embed-switches">
+                                                <div class="leftswitch">
+                                                    DA
+                                                </div>
+                                                <div class="rightswitch">
+                                                    NE
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="embed-switch-ball"></div>
+                                </div>
+                            </div>
+                            <div class="embed-divider"></div>
+                            <div class="embed-script">
+                                <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>?embed=true&altHeader=true"></textarea>
+                                <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content-share hidden">
+                    <div class="card-back-content">
+                        <div class="share-content">
+                            <label for="share-url">Neposredna povezava do kartice</label>
+                            <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>?frame=true&altHeader=true"/>
+                            <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="card-logo hidden">
+                     <a href="<%= urlsData.base %>">
+                         <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+                     </a>
+                 </div>
+
+                <div class="card-circle-button card-share" data-back="share"></div>
+                <div class="card-circle-button card-embed" data-back="embed"></div>
+                <div class="card-circle-button card-info" data-back="info">i</div>
+            </div>
+        </div>
+        <!-- everything below here is part of the page and not part of the card -->
+
+        <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+        <!-- inline temp/js/script.js as <script> -->
+        <script data-inline="true" src="js/script.js"></script>
+
+    </body><!-- removeme -->
+
+</html><!-- removeme -->

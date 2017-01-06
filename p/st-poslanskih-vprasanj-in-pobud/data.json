@@ -1,0 +1,58 @@
+{
+  "created_at": "05.01.2017",
+  "created_for": "05.01.2017",
+  "person": {
+    "district": null,
+    "gender": "m",
+    "gov_id": "P025",
+    "has_function": false,
+    "id": 36,
+    "is_active": true,
+    "name": "Janez Janša",
+    "party": {
+      "acronym": "SDS",
+      "id": 5,
+      "is_coalition": false,
+      "name": "PS Slovenska Demokratska Stranka"
+    },
+    "type": "mp"
+  },
+  "results": {
+    "average": 0.022222222222222223,
+    "max": {
+      "mps": [{
+        "district": [26],
+        "gender": "f",
+        "gov_id": "P268",
+        "has_function": false,
+        "id": 51,
+        "is_active": true,
+        "name": "Suzana Lep Šimenko",
+        "party": {
+          "acronym": "SDS",
+          "id": 5,
+          "is_coalition": false,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "type": "mp"
+      }, {
+        "district": null,
+        "gender": "m",
+        "gov_id": "P025",
+        "has_function": false,
+        "id": 36,
+        "is_active": true,
+        "name": "Janez Janša",
+        "party": {
+          "acronym": "SDS",
+          "id": 5,
+          "is_coalition": false,
+          "name": "PS Slovenska Demokratska Stranka"
+        },
+        "type": "mp"
+      }],
+      "score": 1
+    },
+    "score": 1
+  }
+}
