@@ -18,10 +18,13 @@
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
 
+    <script>
+      var seznamSejData = <%- JSON.stringify(data); %>;
+    </script>
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
-
+    <div style="width: 980px; margin: 30px auto;">
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
@@ -31,25 +34,27 @@
         </div>
         <div class="card-content">
           <div class="card-content-front">
-            <ul class="person-list">
+            <ul class="session-list">
               <li class="headers">
                 <div data-sort="name" class="column wider sort">Ime</div>
-                <div data-sort="party" class="column">Začetek</div>
-                <div data-sort="party" class="column">Sprememba</div>
-                <div data-sort="party" class="column">Organizacija</div>
+                <div data-sort="date" class="column">Začetek</div>
+                <div data-sort="updated" class="column optional">Sprememba</div>
+                <div data-sort="workingBody" class="column wider optional">Organizacija</div>
               </li>
               <% if (data.sessions.length === 0) { %>
                 <div class="no-results">Brez rezultatov.</div>
               <% } else { %>
                 <% data.sessions.forEach(function(session, index) { %>
-                <li class="person" data-index="<%= index %>">
-                    <div class="session-<%= session.name.split(' ')[1] %>"></div>
-                    <div class="column wider name">
-                      <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.sessionLink.glasovanja + session.id %>"><%= session.name %></a>
-                    </div>
+                <li class="item" data-index="<%= index %>">
+                  <div class="column image">
+                    <img src="https://cdn.parlameter.si/v1/parlassets/icons/seja-<%= session.name.split(' ')[1] %>.svg" alt="parlameter logo">
+                  </div>
+                  <div class="column wider name">
+                    <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.sessionLink.glasovanja + session.id %>"><%= session.name %></a>
+                  </div>
                   <div class="column"><%= session.date %></div>
-                  <div class="column"><%= session.updated_at %></div>
-                  <div class="column district">
+                  <div class="column optional"><%= session.updated_at %></div>
+                  <div class="column wider optional">
                     <a class="funblue-light-hover" href="https://glej.parlameter.si/wb/getWorkingBodies/<%= session.org.id %>?frame=true&altHeader=true"><%= session.org.name %></a>
                   </div>
                 </li>
@@ -66,12 +71,13 @@
                  </div>
 
             <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed">&lt;/&gt;</div>
+            <div class="card-circle-button card-embed"></div>
             <div class="card-circle-button card-info">i</div>
         </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->
 
+    </div>
     <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <!-- inline temp/js/script.js as <script> -->
     <script data-inline="true" src="js/script.js"></script>
