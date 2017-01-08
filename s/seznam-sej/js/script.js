@@ -10,8 +10,8 @@ activateCopyButton addCardRippling */
   let currentReverseOrder = false;
   const sortPropGetters = {
     name: item => item.name,
-    date: item => item.date,
-    updated: item => item.updated_at,
+    date: item => item.date_ts,
+    updated: item => item.updated_at_ts,
     workingBody: item => item.org.name,
   };
 

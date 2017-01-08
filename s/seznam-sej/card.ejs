@@ -21,6 +21,10 @@
     <script>
       var seznamSejData = <%- JSON.stringify(data); %>;
     </script>
+    <% function formatDate(isoDate) {
+      var date = new Date(isoDate);
+      return `${date.getDate()}. ${date.getMonth() + 1}. ${date.getFullYear()}`
+    } %>
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
@@ -52,8 +56,8 @@
                   <div class="column wider name">
                     <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.sessionLink.glasovanja + session.id %>"><%= session.name %></a>
                   </div>
-                  <div class="column"><%= session.date %></div>
-                  <div class="column optional"><%= session.updated_at %></div>
+                  <div class="column"><%= formatDate(session.date_ts) %></div>
+                  <div class="column optional"><%= formatDate(session.updated_at_ts) %></div>
                   <div class="column wider optional">
                     <a class="funblue-light-hover" href="https://glej.parlameter.si/wb/getWorkingBodies/<%= session.org.id %>?frame=true&altHeader=true"><%= session.org.name %></a>
                   </div>
