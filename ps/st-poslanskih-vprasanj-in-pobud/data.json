@@ -1,0 +1,23 @@
+{
+  "created_at": "05.01.2017",
+  "created_for": "05.01.2017",
+  "party": {
+    "acronym": "SDS",
+    "id": 5,
+    "is_coalition": false,
+    "name": "PS Slovenska Demokratska Stranka"
+  },
+  "results": {
+    "average": 0.20000000000000001,
+    "max": {
+      "parties": [{
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      }],
+      "score": 2
+    },
+    "score": 2
+  }
+}

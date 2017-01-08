@@ -1,2 +1,23 @@
-
-{"party": {"acronym": "SMC", "is_coalition": true, "id": 1, "name": "PS Stranka modernega centra"}, "created_at": "08.11.2016", "created_for": "04.03.2015", "results": {"max": {"score": 137.149787332108, "parties": [{"acronym": "SMC", "is_coalition": true, "id": 1, "name": "PS Stranka modernega centra"}]}, "average": 109.336086885249, "score": 90.0}}
+{
+  "party": {
+    "acronym": "SMC",
+    "is_coalition": true,
+    "id": 1,
+    "name": "PS Stranka modernega centra"
+  },
+  "created_at": "08.11.2016",
+  "created_for": "04.03.2015",
+  "results": {
+    "max": {
+      "score": 137.149787332108,
+      "parties": [{
+        "acronym": "SMC",
+        "is_coalition": true,
+        "id": 1,
+        "name": "PS Stranka modernega centra"
+      }]
+    },
+    "average": 109.336086885249,
+    "score": 90.0
+  }
+}

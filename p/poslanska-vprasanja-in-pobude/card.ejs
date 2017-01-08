@@ -26,7 +26,7 @@
 <div class="card-container card-halfling <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
     <div class="card-header">
         <div class="card-header-border"></div>
-        <h1>Zadnje aktivnosti</h1>
+        <h1>Poslanska vprašanja in pobude</h1>
         <!-- this text is the only thing you touch in .card-header -->
     </div>
     <div class="card-content recent-activity full">
@@ -42,72 +42,18 @@
 
                     <ul>
 
-                        <% for (var j = 0; j < day.events.length; j++) {
-                            var event = day.events[j];
-                            var icon = '';
-                            var verb = '';
-                            var thing = '';
-                            var thingwhere = '';
-
-                        if(event.type === 'ballot'){
-
-                            switch (event.option) {
-                                case 'za':
-                                    icon = 'parlaicon-za';
-                                    verb = (data.person.gender == 'm') ? 'Glasoval ZA' : 'Glasovala ZA';
-                                    break;
-                                case 'proti':
-                                    icon = 'parlaicon-proti';
-                                    verb = 'Glasovala PROTI';
-                                    verb = (data.person.gender == 'm') ? 'Glasoval PROTI' : 'Glasovala PROTI';
-                                    break;
-                                case 'ni':
-                                    icon = 'parlaicon-ni';
-                                    verb = 'NI glasovala za';
-                                    verb = (data.person.gender == 'm') ? 'NI glasoval za' : 'NI glasovala za';
-                                    break;
-                                case 'kvorum':
-                                    icon = 'parlaicon-kvorum';
-                                    verb = 'VZDRŽALA se je glasovanja o';
-                                    verb = (data.person.gender == 'm') ? 'VZDRŽAL se je glasovanja o' : 'VZDRŽALA se je glasovanja o';
-                                    break;
-                            }
-
-                            thing = event.vote_name;
+                        <% for (var j = 0; j < day.questions.length; j++) {
+                            var event = day.questions[j];
+                            var icon = 'parlaicon-vprasanje';
+                            var verb = day.questions[j].recipient_text.split(' ')[0] === 'minister' ? 'ministru ' + day.questions[j].recipient_text.split('minister ')[1] : 'ministrici' + day.questions[j].recipient_text.split('ministrica ')[1];
+                            var thing = day.questions[j].title;
+                            var thingwhere = day.questions[j].url;
                         %>
 
                         <li>
                             <span class="parlaicon <%= icon %>"></span>
-                            <p><%= verb %> <a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.sessionLink.glasovanje%><%= event.session_id %>/<%= event.vote_id %>"><%= thing %></a></p>
+                            <p><%= verb %> <a class="funblue-light-hover" href="<%= thingwhere %>"><%= thing %></a></p>
                         </li>
-
-                        <%
-                        } else if (event.type === 'speech') {
-                            icon = 'parlaicon-govor';
-                            verb = 'Govorila';
-                            verb = (data.person.gender == 'm') ? 'Govoril' : 'Govorila';
-                            thing = event.session.name;
-                            thingwhere = event.session.org.name
-                        %>
-
-                        <li>
-                            <span class="parlaicon <%= icon %>"></span>
-                            <p><a class="funblue-light-hover" href="https://glej.parlameter.si/s/speech/<%= event.speech_id %>?frame=true&altHeader=true"><%= verb %></a>&nbsp;na&nbsp;<a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.sessionLink.transkript%><%= event.session.id %>"><%= thing %> <%=thingwhere%></a></p>
-                        </li>
-
-                        <%
-                        } else { 
-
-                            icon = 'parlaicon-vprasanje';
-                            verb = event.recipient_text.split(' ')[0] === 'minister' ? 'ministru ' + event.recipient_text.split('minister ')[1] : 'ministrici' + event.recipient_text.split('ministrica ')[1];;
-                            thing = event.title;
-                            thingwhere = event.url
-                        %> 
-                        <li>
-                            <span class="parlaicon <%= icon %>"></span>
-                            <p><%- data.person.gender === 'm' ? 'Zastavil je vprašanje ' : 'Zastavila je vprašanje ' %><%= verb %> <a class="funblue-light-hover" href="<%= thingwhere %>"><%= thing %></a></p>
-                        </li>
-                        <% } %>
 
                         <% } %>
                     </ul>

@@ -1,0 +1,38 @@
+{
+  "created_at": "05. 01. 2017",
+  "created_for": "20. 10. 2016",
+  "person": {
+    "district": null,
+    "gender": "m",
+    "gov_id": "P025",
+    "has_function": false,
+    "id": 36,
+    "is_active": true,
+    "name": "Janez Janša",
+    "party": {
+      "acronym": "SDS",
+      "id": 5,
+      "is_coalition": false,
+      "name": "PS Slovenska Demokratska Stranka"
+    },
+    "type": "mp"
+  },
+  "results": [{
+    "date": "20. 10. 2016",
+    "questions": [{
+      "id": 3,
+      "recipient_text": "minister za infrastrukturo",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z nepravilnostmi pri pomoči beguncem",
+      "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/PoslankeInPoslanci/poslanec?idOseba=P268"
+    }, {
+      "id": 4,
+      "recipient_text": "minister za infrastrukturo",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z nepravilnostmi pri pomoči beguncem",
+      "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/PoslankeInPoslanci/poslanec?idOseba=P268"
+    }]
+  }]
+}
