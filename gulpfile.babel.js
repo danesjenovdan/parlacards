@@ -101,10 +101,10 @@ gulp.task('ejs', () =>
       .pipe(ejs({
         data: getFileContents('data.json'),
         className,
-        vocab: getFileContents('vocab.json'),
+        vocab: getFileContents('../../vocab.json'),
         cardData,
         state: getFileContents('state.json'),
-        urlsData: getFileContents('urls.json'),
+        urlsData: getFileContents('../../urls.json'),
         customUrl: getFileContents('customUrl.json'),
         randomId,
       }, {
