@@ -74,7 +74,7 @@ if (!isMSIE) {
                 }
 
                 updatePeopleScroller();
-                for (i in selection[0]) {
+                for (var i in selection[0]) {
                     console.log(d3.select(selection[0][i]).datum());
                     addSearchPerson(d3.select(selection[0][i]).datum());
                 }
@@ -153,7 +153,7 @@ if (!isMSIE) {
         .tickSize(0);
 
     var parties = [];
-    for (group in groupedData) {
+    for (var group in groupedData) {
         parties.push(groupedData[group][0].person.party.acronym.replace(/ /g, '_'));
     }
 
@@ -206,7 +206,7 @@ if (!isMSIE) {
 
     var defs = svg.append('defs');
 
-    for (i in kompas_data) {
+    for (var i in kompas_data) {
         defs.append("pattern")
             .attr("id", kompas_data[i].person.gov_id)
             .attr("patternUnits", "userSpaceOnUse")
@@ -242,7 +242,7 @@ if (!isMSIE) {
 
     // tooltip end
 
-    for (group in groupedData) {
+    for (var group in groupedData) {
 
         var currentselection = svg.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(/ /g, '_')).classed('partygroup', true)
             .selectAll('.dot')
@@ -703,7 +703,7 @@ if (!isMSIE) {
     });
 
     function updatePeopleSearch() {
-        peoplesearchtypeahead = $('.kompas-search-input').typeahead({
+        var peoplesearchtypeahead = $('.kompas-search-input').typeahead({
             'hint': false,
             'highlight': true
         }, {
@@ -763,7 +763,7 @@ if (!isMSIE) {
     updatePeopleSearch();
 
     function removeSearchPerson(datum) {
-        for (person_i in searchpeople) {
+        for (var person_i in searchpeople) {
             if (searchpeople[person_i]['name'] == datum.name) {
                 searchpeople.splice(person_i, 1);
             }
@@ -781,7 +781,7 @@ if (!isMSIE) {
 
     if (kompasState.people && kompasState.parties) {
         if (kompasState.people.length > 0) {
-            for (person_i in kompasState.people) {
+            for (var person_i in kompasState.people) {
                 showPersonPicture(svg.select('#_' + kompasState.people[person_i].id).datum());
                 kompasState.people[person_i]['name'] = svg.select('#_' + kompasState.people[person_i].id).datum().person.name;
                 // move to front
@@ -791,7 +791,7 @@ if (!isMSIE) {
         }
 
         if (kompasState.parties.length > 0) {
-            for (party_i in kompasState.parties) {
+            for (var party_i in kompasState.parties) {
                 if (kompasState.parties[party_i] === 'desus') {
                     $('#partyswitch-DeSUS').click();
                 } else {

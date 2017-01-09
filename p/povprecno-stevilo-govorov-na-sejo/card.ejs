@@ -138,8 +138,14 @@
                 </div>
                 <div class="card-content-info hidden">
                     <div class="card-back-content">
+                        <p class="info-text lead">
+                            Povprečno število govorov <%= vocab['poslanec3'][data.person.gender] %> na sejo v primerjavi s povprečno in največjo vrednostjo.
+                        </p>
+                        <p class="info-text heading">
+                            METODOLOGIJA
+                        </p>
                         <p class="info-text">
-                            Preštejemo <%= vocab['poslanca2'][data.person.gender] %> govore in število delimo s številom sej, na katerih je <%= vocab['poslanec'][data.person.gender] %> <%= vocab['govoriti'][data.person.gender] %>. Število vseh govorov delimo najprej s številom poslancev, potem pa še s številom vseh sej (na katerih se je govorilo). Individualni rezultat primerjamo s povprečnim.
+                            Preštejemo <%= vocab['poslanca2'][data.person.gender] %> govore, ki jih najdemo v transkriptih, pridobljenih s spletnega mesta <a href="https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDrzavnegaZbora/PoDatumuSeje" target="_blank" class="funblue-light-hover">DZ RS</a> in število delimo s številom sej, na katerih je <%= vocab['biti'][data.person.gender] %> <%= vocab['poslanec'][data.person.gender] %> <%= vocab['prisoten2'][data.person.gender] %>. Število vseh govorov delimo najprej s številom poslancev, potem pa še s številom vseh sej (na katerih se je govorilo). Individualni rezultat primerjamo s povprečnim in najvišjim.
                         </p>
                     </div>
                 </div>

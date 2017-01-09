@@ -64,13 +64,13 @@
 
     <script>
         var parties_data = <%- JSON.stringify(getPartyObjects(data.data)); %>;
-        var kompasState = <%- JSON.stringify(state); %>;
+        var kompasState = <%- JSON.stringify(state || {}) %>;
     </script> <!-- TODO this is a dirty hack -->
 
     <!-- IE stuff -->
     <script>
         var isMSIE = false;
-        if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv 11/)) || $.browser.msie == 1) {
+        if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv 11/)) || ($.browser && $.browser.msie == 1)) {
             isMSIE = true;
         }
     </script>
@@ -176,8 +176,14 @@
             </div>
             <div class="card-content-info hidden">
                 <div class="card-back-content">
+                    <p class="info-text lead">
+                        Pregled poslancev v koordinatnem sistemu glede na podobnost njihovih glasovanj. Dlje kot sta poslanca na političnem kompasu, bolj se njuna glasovalna zgodovina razlikuje.
+                    </p>
+                    <p class="info-text heading">
+                        METODOLOGIJA
+                    </p>
                     <p class="info-text">
-                        Za vsakega/-o poslanca/-ko posebej prikličemo zgodovino glasovanj (ali neprisotnosti). Zgodovino glasovanj vsake/-ga poslanke/-ca primejamo z zgodovino glasovanj vseh drugih poslancev in preštejemo, kolikokrat sta poslanca glasovala enako. Rezultate postavimo v dvodimenzionalno matriko (vrstice in stolpci so poslanci, vrednost na Xi,j predstavlja, kolikokrat sta dva poslanca glasovala enako (poslanca sta i in j). Nato matriko razbijemo na <a class="funblue-light-hover" target="_blank" href="https://en.wikipedia.org/wiki/Singular_value_decomposition">lastne vrednosti</a>.
+                        Za vsakega/-o poslanca/-ko posebej prikličemo zgodovino glasovanj (ali neprisotnosti). Zgodovino glasovanj vsake/-ga poslanke/-ca primejamo z zgodovino glasovanj vseh drugih poslancev in preštejemo, kolikokrat sta poslanca glasovala enako. Rezultate postavimo v dvodimenzionalno matriko (vrstice in stolpci so poslanci, vrednost na Xi,j predstavlja, kolikokrat sta dva poslanca glasovala enako (poslanca sta i in j). Nato matriko razbijemo na lastne vrednosti.
                     </p>
                     <p class="info-text">
                         Algoritem vrne tri matrike - u, s in V-transpose. O V-transpose matriki lahko razmišljamo kot o novem naboru koordinat poslancev. Iz V-transpose vzamemo tisti dve vrstici, ki pojasnjujeta največji del prejšnje matrike in ju vizualiziramo v dvodimenzionalnem koordinatnem sistemu.
