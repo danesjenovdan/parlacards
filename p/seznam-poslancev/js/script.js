@@ -5,7 +5,7 @@ activateCopyButton addCardRippling */
   const personListElement = $('.card-seznam-poslancev .person-list');
   const headersElement = personListElement.find('.headers');
   let personElements = personListElement.children('.person');
-  const infoTextElement = $('.card-seznam-poslancev .info-text');
+  const infoTextElement = $('.card-seznam-poslancev .card-content-info .card-back-content');
   let currentSortProperty = 'name';
   let currentReverseOrder = false;
   const sortPropGetters = {
@@ -71,7 +71,8 @@ activateCopyButton addCardRippling */
       thirdLine = seznamPoslancevColumns[seznamPoslancevState.analysis].explanation;
     }
 
-    return `${firstLine}<br><br>${secondLine}${thirdLine ? `<br><br>${thirdLine}` : ''}`;
+    // return `${firstLine}<br><br>${secondLine}${thirdLine ? `<br><br>${thirdLine}` : ''}`;
+    return `<p class="info-text lead">${firstLine} ${secondLine}</p>${thirdLine ? `<p class="info-text heading">METODOLOGIJA</p><p class="info-text">${thirdLine}</p>` : ''}`;
   }
 
   function updateInfoText(sortProperty) {
