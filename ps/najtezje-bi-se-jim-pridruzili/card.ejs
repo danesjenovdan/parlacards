@@ -56,12 +56,14 @@
         </div>
         <div class="card-content-info hidden">
             <div class="card-back-content">
-                <p class="info-text">
-                    Za vsako glasovanje izračunamo "glas poslanske skupine." To naredimo tako, da seštejemo v številke pretvorjene vrednosti vsakega glasovanja za vsakega/-o poslanca/-ko PS in delimo s številom poslancev v PS. Potem izračunamo <a href="https://en.wikipedia.org/wiki/Euclidean_distance">evklidsko razdaljo</a> med rezultati
-                    glasovanj poslanske skupine in rezultati vseh poslank in poslancev (pri čemer vrednosti glasov pretvorimo v številčne vrednosti med -1 in 1).
+                <p class="info-text lead">
+                    Seznam 5 poslancev, ki največkrat glasujejo enako kot "glas poslanske skupine", razvrščenih glede na vrednosti od največje proti najmanjši. Večja kot je vrednost, manjše je ujemanje glasovanj.
+                </p>
+                <p class="info-text heading">
+                    METODOLOGIJA
                 </p>
                 <p class="info-text">
-                    Ko izračunamo "razdaljo" med poslansko skupino in vsemi poslanci, jih razvrstimo glede na rezultat in prikažemo zadnjih pet.
+                    Za vsako glasovanje izračunamo "glas poslanske skupine". To naredimo tako, da seštejemo v številke pretvorjene vrednosti vsakega glasovanja za vsakega/-o poslanca/-ko PS in delimo s številom poslancev v PS. Potem izračunamo Pearsonov koeficient med pridobljenim nizom rezultatov in nizom glasov vsake/-ga poslanke/-ca. Razvrstimo glede na rezultat (med -1 in 1) in prikažemo prvih oz. zadnjih 5.
                 </p>
                 <div class="info-text">
                     Številčne vrednosti glasov
@@ -100,7 +102,7 @@
                         <textarea class="form-control" data-id="<%= data.organization.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.organization.id %>?embed=true&altHeader=true"></textarea>
                         <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
