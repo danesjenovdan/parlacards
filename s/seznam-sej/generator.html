@@ -251,7 +251,7 @@
         }
 
         return 'https://glej.parlameter.si/s/seznam-sej/' +
-          '?customUrl=' + encodeURIComponent('https://analize.parlameter.si/v1/s/getListOfSessions') +
+          '?customUrl=' + encodeURIComponent('https://analize.parlameter.si/v1/s/getSessionsList') +
           (Object.keys(params).length > 0 ? '&state=' + encodeURIComponent(JSON.stringify(params)) : '')
       }
     },
