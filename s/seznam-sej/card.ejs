@@ -18,13 +18,44 @@
     <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
     <link data-inline="true" rel="stylesheet" href="css/style.css">
 
+    <%
+    function formatDate(isoDate) {
+      var date = new Date(isoDate);
+      return `${date.getDate()}. ${date.getMonth() + 1}. ${date.getFullYear()}`
+    }
+
+    data.sessions = data.sessions
+      .sort(function(a, b) {
+        return a.date_ts > b.date_ts ? -1 : (a.date_ts < b.date_ts ? 1 : 0);
+      })
+      .filter(function(session) {
+        if (!state.filters) {
+          return true;
+        }
+        else if (state.filters && state.filters.indexOf('Seje DZ') > -1 && session.org.id === 95) {
+          return true;
+        }
+        else if (state.filters && state.filters.indexOf('Seje kolegija predsednika DZ') > -1 && session.org.id === 9) {
+          return true;
+        }
+        else if (state.filters && state.filters.indexOf('Seje delovnih teles') > -1) {
+          if (state.workingBodies.length === 0) {
+            return session.org.id !== 9 && session.org.id !== 95;
+          }
+          else {
+            return state.workingBodies.indexOf(String(session.org.id)) > -1;
+          }
+        }
+        return false;
+      })
+      .filter(function(session, index) {
+        return !state.onlyLatest || index < 5;
+      })
+    %>
+
     <script>
       var seznamSejData = <%- JSON.stringify(data); %>;
     </script>
-    <% function formatDate(isoDate) {
-      var date = new Date(isoDate);
-      return `${date.getDate()}. ${date.getMonth() + 1}. ${date.getFullYear()}`
-    } %>
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
@@ -40,8 +71,8 @@
           <div class="card-content-front">
             <ul class="session-list">
               <li class="headers">
-                <div data-sort="name" class="column wider sort">Ime</div>
-                <div data-sort="date" class="column">Začetek</div>
+                <div data-sort="name" class="column wider">Ime</div>
+                <div data-sort="date" class="column sort reverse">Začetek</div>
                 <div data-sort="updated" class="column optional">Sprememba</div>
                 <div data-sort="workingBody" class="column wider optional">Organizacija</div>
               </li>
@@ -50,9 +81,9 @@
               <% } else { %>
                 <% data.sessions.forEach(function(session, index) { %>
                 <li class="item" data-index="<%= index %>">
-                  <div class="column image">
+                  <a class="column image" href="<%= urlsData.base + urlsData.sessionLink.glasovanja + session.id %>">
                     <img src="https://cdn.parlameter.si/v1/parlassets/icons/seja-<%= session.name.split(' ')[1] %>.svg" alt="parlameter logo">
-                  </div>
+                  </a>
                   <div class="column wider name">
                     <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.sessionLink.glasovanja + session.id %>"><%= session.name %></a>
                   </div>

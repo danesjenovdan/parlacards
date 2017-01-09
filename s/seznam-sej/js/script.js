@@ -6,8 +6,8 @@ activateCopyButton addCardRippling */
   const headersElement = personListElement.find('.headers');
   let sessionElements = personListElement.children('.item');
   // const infoTextElement = $('.card-seznam-sej .info-text');
-  let currentSortProperty = 'name';
-  let currentReverseOrder = false;
+  let currentSortProperty = 'date';
+  let currentReverseOrder = true;
   const sortPropGetters = {
     name: item => item.name,
     date: item => item.date_ts,
