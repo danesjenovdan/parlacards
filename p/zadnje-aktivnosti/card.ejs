@@ -101,7 +101,7 @@
                             icon = 'parlaicon-vprasanje';
                             verb = event.recipient_text.split(' ')[0] === 'minister' ? 'ministru ' + event.recipient_text.split('minister ')[1] : 'ministrici' + event.recipient_text.split('ministrica ')[1];;
                             thing = event.title;
-                            thingwhere = event.url
+                            thingwhere = event.content_url
                         %> 
                         <li>
                             <span class="parlaicon <%= icon %>"></span>
