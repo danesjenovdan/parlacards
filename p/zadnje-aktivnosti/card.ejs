@@ -96,7 +96,7 @@
                         </li>
 
                         <%
-                        } else { 
+                        } else {
 
                             icon = 'parlaicon-vprasanje';
                             verb = event.recipient_text.split(' ')[0] === 'minister' ? 'ministru ' + event.recipient_text.split('minister ')[1] : 'ministrici' + event.recipient_text.split('ministrica ')[1];;
@@ -121,8 +121,14 @@
         </div>
         <div class="card-content-info hidden">
             <div class="card-back-content">
+                <p class="info-text lead">
+                    Povezave do vseh <%= vocab['poslanca'][data.person.gender] %> glasovanj in govorov, ki so se zgodili v zadnjih desetih dneh, ko je <%= vocab['biti'][data.person.gender] %> <%= vocab['poslanec'][data.person.gender] %> <%= vocab['aktiven'][data.person.gender] %>.
+                </p>
+                <p class="info-text heading">
+                    METODOLOGIJA
+                </p>
                 <p class="info-text">
-                    Na kartici izpisujemo povezave do vseh <%= vocab['poslanca'][data.person.gender] %> glasovanj in govorov, ki so se zgodili v zadnjih desetih dneh, ko je <%= vocab['biti'][data.person.gender] %> <%= vocab['poslanec'][data.person.gender] %> <%= vocab['aktiven'][data.person.gender] %>
+                    Podatke dobimo s spletnega mesta Državnega zbora. Na kartici izpisujemo povezave do vseh <%= vocab['poslanca'][data.person.gender] %> glasovanj in govorov, ki so se zgodili v zadnjih desetih dneh, ko je <%= vocab['biti'][data.person.gender] %> <%= vocab['poslanec'][data.person.gender] %> <%= vocab['aktiven'][data.person.gender] %>.
                 </p>
             </div>
         </div>

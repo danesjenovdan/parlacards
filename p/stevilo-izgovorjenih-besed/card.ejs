@@ -139,8 +139,14 @@
                 </div>
                 <div class="card-content-info hidden">
                     <div class="card-back-content">
+                        <p class="info-text lead">
+                            Število besed, ki jih je <%= vocab['poslanec'][data.person.gender] %> <%= vocab['izgovoriti'][data.person.gender] %> v vseh svojih dosedanjih govorih v DZ v primerjavi s povprečno in največjo vrednostjo.
+                        </p>
+                        <p class="info-text heading">
+                            METODOLOGIJA
+                        </p>
                         <p class="info-text">
-                            Število besed, ki jih je <%= vocab['poslanec'][data.person.gender] %> <%= vocab['izgovoriti'][data.person.gender] %> v vseh svojih dosedanjih govorih v DZ.
+                            Seštejemo besede v govorih <%= vocab['poslanca'][data.person.gender] %>, ki jih najdemo v transkriptih, pridobljenih s spletnega mesta <a href="https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDrzavnegaZbora/PoDatumuSeje" target="_blank" class="funblue-light-hover">DZ RS</a>.
                         </p>
                     </div>
                 </div>

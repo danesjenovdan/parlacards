@@ -55,6 +55,12 @@
         </div>
         <div class="card-content-info hidden">
             <div class="card-back-content">
+                <p class="info-text lead">
+                    Seznam 5 poslancev, ki najmanjkrat glasujejo enako kot <%= vocab['izbrani'][data.person.gender] %> <%= vocab['poslanec'][data.person.gender] %>. Poslanci so razvrščeni glede na vrednosti od največje proti najmanjši. Večja kot je vrednost, manjše je ujemanje glasovanj.
+                </p>
+                <p class="info-text heading">
+                    METODOLOGIJA
+                </p>
                 <p class="info-text">
                     Izračunamo <a href="https://en.wikipedia.org/wiki/Euclidean_distance">evklidsko razdaljo</a> med rezultati <%= vocab['poslanca'][data.person.gender] %> glasovanj in rezultati vseh ostalih (pri čemer vrednosti glasov pretvorimo v številčne vrednosti med -1 in 1).
                 </p>
