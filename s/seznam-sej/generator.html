@@ -204,7 +204,7 @@
           })
 
           if (this.onlyLatest) {
-            sortedAndFiltered = sortedAndFiltered.sort(function(a, b) {
+            sortedAndFiltered = sortedAndFiltered.sort(function(b, a) {
               return a.date_ts < b.date_ts ? -1 : (a.date_ts > b.date_ts ? 1 : 0)
             }).slice(0, 5)
           }
@@ -330,6 +330,21 @@
     watch: {
       generatedCardUrl: function(newValue) {
         this.shortenUrl(newValue)
+      },
+      currentFilters: function(newValue, oldValue) {
+        if (newValue.indexOf('Seje delovnih teles') === -1) {
+          this.workingBodies.map(function(wb) {
+            wb.selected = false;
+            return wb;
+          });
+        }
+      },
+      currentWorkingBodies: function(newValue, oldValue) {
+        if (newValue.length !== 0) {
+          if (this.currentFilters.indexOf('Seje delovnih teles') === -1) {
+            this.currentFilters.push('Seje delovnih teles');
+          }
+        }
       }
     }
   })
