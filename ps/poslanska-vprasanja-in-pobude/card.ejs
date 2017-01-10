@@ -24,26 +24,120 @@
 
 
     <!-- everything above here is part of the page and not part of the card -->
-    <div class="card-container card-halfling <%= className %>">
+    <div class="card-container card-halfling <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
         <div class="card-header">
             <div class="card-header-border"></div>
-            <h1>Naslov kartice</h1> <!-- this text is the only thing you touch in .card-header -->
+            <h1>Poslanska vprašanja in pobude</h1>
+            <!-- this text is the only thing you touch in .card-header -->
         </div>
-        <div class="card-content">
+        <div class="card-content recent-activity full">
+            <div class="card-content-front stickinme">
+                <div class="2scrollbar-recent-activity date-list">
 
+                    <% for (var i = 0; i < data.results.length; i++) {
+                        var day = data.results[i];
+                    %>
 
+                    <div class="date"><%= day.date %></div>
+                    <section>
 
+                        <ul>
+
+                            <% for (var j = 0; j < day.questions.length; j++) {
+                                var event = day.questions[j];
+                                var icon = 'parlaicon-vprasanje';
+                                if (day.questions[j].recipient_text !== 'Vlada') {
+                                    if (day.questions[j].recipient_text !== 'predsednik Vlade') {
+                                        var verb = day.questions[j].recipient_text.split(' ')[0] === 'minister' ? 'ministru ' + day.questions[j].recipient_text.split('minister ')[1] : 'ministrici' + day.questions[j].recipient_text.split('ministrica ')[1];
+                                    } else {
+                                        var verb = 'predsedniku Vlade'
+                                    }
+                                } else {
+                                    var verb = 'Vladi'
+                                }
+                                var thing = day.questions[j].title;
+                                var thingwhere = day.questions[j].url;
+                            %>
+
+                            <li>
+                                <span class="parlaicon <%= icon %>"></span>
+                                <p><%= verb %> <a class="funblue-light-hover" href="<%= thingwhere %>" target="_blank"><%= thing %></a></p>
+                            </li>
+
+                            <% } %>
+                        </ul>
+
+                    </section>
+
+                    <% } %>
+
+                </div>
+                <!-- delete this placeholder, this is the content of your card -->
+            </div>
+            <div class="card-content-info hidden">
+                <div class="card-back-content">
+                    <p class="info-text lead">
+                        Izpis vseh poslanskih vprašanj in pobud, ki ji je <%= vocab['poslanec'][data.person.gender] %> <%= vocab['postaviti'][data.person.gender] %> v tem sklicu DZ RS.
+                    </p>
+                    <p class="info-text heading">
+                        METODOLOGIJA
+                    </p>
+                    <p class="info-text">
+                        Podatke pridobivamo s spletnega mesta DZ RS: <a href="https://www.dz-rs.si/wps/portal/Home/deloDZ/poslanskaVprasanjaInPobude/">https://www.dz-rs.si/wps/portal/Home/deloDZ/poslanskaVprasanjaInPobude/</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="card-content-embed hidden">
+                <div class="card-back-content">
+                    <div class="embed-content">
+                        <div class="embed-divider"></div>
+                        <div class="embed-switch-container">
+                            <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                            <div class="embed-switch-big-box">
+                                <div class="embed-switch-box">
+                                    <div class="embed-switch">
+                                        <div class="embed-switches">
+                                            <div class="leftswitch">
+                                                DA
+                                            </div>
+                                            <div class="rightswitch">
+                                                NE
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="embed-switch-ball"></div>
+                            </div>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-script">
+                            <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?embed=true&altHeader=true"></textarea>
+                            <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-content-share hidden">
+                <div class="card-back-content">
+                    <div class="share-content">
+                        <label for="share-url">Neposredna povezava do kartice</label>
+                        <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?frame=true&altHeader=true"/>
+                        <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="card-footer">
-                <div class="card-logo hidden">
-                     <a href="<%= urlsData.base %>">
-                         <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
-                     </a>
-                 </div>
+                    <div class="card-logo hidden">
+                        <a href="<%= urlsData.base %>">
+                            <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+                        </a>
+                    </div>
 
-            <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed">&lt;/&gt;</div>
-            <div class="card-circle-button card-info">i</div>
+            <div class="card-circle-button card-share" data-back="share"></div>
+            <div class="card-circle-button card-embed" data-back="embed"></div>
+            <div class="card-circle-button card-info" data-back="info">i</div>
         </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->
