@@ -1,2614 +1,2706 @@
 {
-    "districts": [{
-        "91": "Lendava 1"
-    }, {
-        "102": "Ljubljana-\u0160i\u0161ka I"
-    }, {
-        "101": "Ljubljana-\u0160i\u0161ka II"
-    }, {
-        "100": "Ljubljana-\u0160i\u0161ka III"
-    }, {
-        "99": "Ljubljana-\u0160i\u0161ka IV"
-    }, {
-        "97": "Ljubljana Vi\u010d-Rudnik I"
-    }, {
-        "96": "Ljubljana Vi\u010d-Rudnik II"
-    }, {
-        "95": "Ljubljana Vi\u010d-Rudnik III"
-    }, {
-        "94": "Ljubljana Vi\u010d-Rudnik IV"
-    }, {
-        "93": "Vrhnika"
-    }, {
-        "92": "Cerknica- Logatec"
-    }, {
-        "90": "Koper 1"
-    }, {
-        "89": "Ajdov\u0161\u010dina"
-    }, {
-        "88": "Nova Gorica I"
-    }, {
-        "87": "Nova Gorica II"
-    }, {
-        "86": "Postojna"
-    }, {
-        "85": "Ilirska Bistrica"
-    }, {
-        "84": "Se\u017eana"
-    }, {
-        "83": "Koper I"
-    }, {
-        "82": "Koper II"
-    }, {
-        "81": "Izola"
-    }, {
-        "80": "Piran"
-    }, {
-        "79": "Dom\u017eale I"
-    }, {
-        "77": "Ljubljana Be\u017eigrad I"
-    }, {
-        "76": "Ljubljana Be\u017eigrad II"
-    }, {
-        "75": "Ljubljana Moste-Polje I"
-    }, {
-        "74": "Ljubljana Moste-Polje II"
-    }, {
-        "73": "Ljubljana Moste-Polje III"
-    }, {
-        "72": "Litija"
-    }, {
-        "71": "Grosuplje"
-    }, {
-        "70": "Ribnica"
-    }, {
-        "69": "Ko\u010devje"
-    }, {
-        "67": "Idrija"
-    }, {
-        "66": "Kamnik"
-    }, {
-        "65": "\u0160kofja Loka II"
-    }, {
-        "64": "\u0160kofja Loka I"
-    }, {
-        "63": "Tr\u017ei\u010d"
-    }, {
-        "62": "Kranj I"
-    }, {
-        "61": "Kranj II"
-    }, {
-        "60": "Kranj III "
-    }, {
-        "59": "Radovljica I"
-    }, {
-        "58": "Radovljica II"
-    }, {
-        "57": "Jesenice"
-    }, {
-        "55": "Tolmin"
-    }, {
-        "52": "Maribor I"
-    }, {
-        "51": "Maribor II"
-    }, {
-        "50": "Maribor III"
-    }, {
-        "49": "Maribor IV"
-    }, {
-        "48": "Maribor V"
-    }, {
-        "47": "Maribor VI"
-    }, {
-        "46": "Maribor VII"
-    }, {
-        "45": "Ru\u0161e"
-    }, {
-        "44": "Slovenske Konjice"
-    }, {
-        "43": "Slovenska Bistrica"
-    }, {
-        "40": "Dravograd- Radlje"
-    }, {
-        "39": "Ravne na Koro\u0161kem"
-    }, {
-        "37": "Velenje I"
-    }, {
-        "36": "Velenje II"
-    }, {
-        "35": "Mozirje"
-    }, {
-        "34": "\u017dalec I"
-    }, {
-        "33": "\u017dalec II"
-    }, {
-        "32": "Celje I"
-    }, {
-        "31": "Celje II"
-    }, {
-        "30": "\u0160entjur"
-    }, {
-        "28": "Ptuj I "
-    }, {
-        "27": "Ptuj II"
-    }, {
-        "26": "Ptuj III"
-    }, {
-        "25": "Pesnica"
-    }, {
-        "24": "Lenart"
-    }, {
-        "23": "Gornja Radgona"
-    }, {
-        "22": "Murska Sobota I"
-    }, {
-        "20": "Murska Sobota II"
-    }, {
-        "19": "Ljutomer"
-    }, {
-        "18": "Ormo\u017e"
-    }, {
-        "17": "Lendava"
-    }, {
-        "16": "Zagorje"
-    }, {
-        "15": "Trbovlje"
-    }, {
-        "14": "Hrastnik"
-    }, {
-        "13": "La\u0161ko"
-    }, {
-        "11": "Kr\u0161ko"
-    }, {
-        "10": "Bre\u017eice"
-    }, {
-        "9": "Trebnje"
-    }, {
-        "7": "Novo mesto I"
-    }, {
-        "8": "Novo mesto II"
-    }, {
-        "6": "\u010crnomelj- Metlika"
-    }, {
-        "42": "\u0160marje pri Jel\u0161ah"
-    }, {
-        "38": "Slovenj Gradec"
-    }, {
-        "12": "Sevnica"
-    }, {
-        "78": "Dom\u017eale II"
-    }, {
-        "103": "Ljubljana- center"
-    }],
-    "data": [{
-        "person": {
-            "name": "Aleksander Kav\u010di\u010d",
-            "gov_id": "P259",
-            "gender": "m",
-            "is_active": false,
-            "district": [19],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 39,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 478.0,
-            "presence_votes": 89.1581632653061,
-            "presence_sessions": 90.0,
-            "problematicno": 9.38967136150235,
-            "speeches_per_session": 1.0,
-            "spoken_words": 1128,
-            "preprosto": 40.6885758998435
-        }
-    }, {
-        "person": {
-            "name": "Alenka Bratu\u0161ek",
-            "gov_id": "P166",
-            "gender": "f",
-            "is_active": false,
-            "district": [62],
-            "party": {
-                "acronym": "PS NP",
-                "is_coalition": false,
-                "name": "PS nepovezanih poslancev ",
-                "id": 109
-            },
-            "type": "mp",
-            "id": 9,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 548.0,
-            "presence_votes": 44.3239795918367,
-            "presence_sessions": 71.6666666666667,
-            "problematicno": 9.770395701025889,
-            "speeches_per_session": 5.0,
-            "spoken_words": 33155,
-            "preprosto": 24.425989252564698
-        }
-    }, {
-        "person": {
-            "name": "Andrej \u010cu\u0161",
-            "gov_id": "P225",
-            "gender": "m",
-            "is_active": false,
-            "district": [28],
-            "party": {
-                "acronym": "NeP - A\u010c",
-                "is_coalition": false,
-                "name": "Nepovezani poslanec Andrej \u010cu\u0161",
-                "id": 108
-            },
-            "type": "mp",
-            "id": 15,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 607.0,
-            "presence_votes": 56.5688775510204,
-            "presence_sessions": 68.3333333333333,
-            "problematicno": 12.8899200824955,
-            "speeches_per_session": 3.0,
-            "spoken_words": 62688,
-            "preprosto": 30.9358081979892
-        }
-    }, {
-        "person": {
-            "name": "Andrej \u0160ircelj",
-            "gov_id": "P201",
-            "gender": "m",
-            "is_active": false,
-            "district": [92],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 75,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 584.0,
-            "presence_votes": 71.0459183673469,
-            "presence_sessions": 86.6666666666667,
-            "problematicno": 19.3283401787871,
-            "speeches_per_session": 12.0,
-            "spoken_words": 201997,
-            "preprosto": 26.5764677458323
-        }
-    }, {
-        "person": {
-            "name": "Andreja Poto\u010dnik",
-            "gov_id": "P278",
-            "gender": "f",
-            "is_active": false,
-            "district": [63],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 67,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 569.0,
-            "presence_votes": 94.0051020408163,
-            "presence_sessions": 91.6666666666667,
-            "problematicno": 6.32511068943707,
-            "speeches_per_session": 8.0,
-            "spoken_words": 12502,
-            "preprosto": 23.192072527935903
-        }
-    }, {
-        "person": {
-            "name": "Anita Kole\u0161a",
-            "gov_id": "P260",
-            "gender": "f",
-            "is_active": false,
-            "district": [30],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 40,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 682.0,
-            "presence_votes": 97.5765306122449,
-            "presence_sessions": 93.3333333333333,
-            "problematicno": 9.970089730807581,
-            "speeches_per_session": 1.0,
-            "spoken_words": 20935,
-            "preprosto": 24.9252243270189
-        }
-    }, {
-        "person": {
-            "name": "Anja Bah \u017dibert",
-            "gov_id": "P239",
-            "gender": "f",
-            "is_active": false,
-            "district": [7],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 2,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 551.0,
-            "presence_votes": 70.280612244898,
-            "presence_sessions": 80.0,
-            "problematicno": 15.3806716226609,
-            "speeches_per_session": 5.0,
-            "spoken_words": 126260,
-            "preprosto": 33.3247885157652
-        }
-    }, {
-        "person": {
-            "name": "An\u017ee Logar",
-            "gov_id": "P238",
-            "gender": "m",
-            "is_active": false,
-            "district": [94],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 54,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 626.0,
-            "presence_votes": 61.6709183673469,
-            "presence_sessions": 81.6666666666667,
-            "problematicno": 9.93213044197981,
-            "speeches_per_session": 3.0,
-            "spoken_words": 87428,
-            "preprosto": 28.1410362522761
-        }
-    }, {
-        "person": {
-            "name": "Benedikt Kopmajer",
-            "gov_id": "P261",
-            "gender": "m",
-            "is_active": false,
-            "district": [40],
-            "party": {
-                "acronym": "DeSUS",
-                "is_coalition": true,
-                "name": "PS Demokratska Stranka Upokojencev Slovenije",
-                "id": 3
-            },
-            "type": "mp",
-            "id": 41,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 654.0,
-            "presence_votes": 91.2627551020408,
-            "presence_sessions": 96.6666666666667,
-            "problematicno": 12.7510360216768,
-            "speeches_per_session": 1.0,
-            "spoken_words": 6131,
-            "preprosto": 38.2531080650303
-        }
-    }, {
-        "person": {
-            "name": "Bojan Dobov\u0161ek",
-            "gov_id": "P248",
-            "gender": "m",
-            "is_active": false,
-            "district": [77],
-            "party": {
-                "acronym": "PS NP",
-                "is_coalition": false,
-                "name": "PS nepovezanih poslancev ",
-                "id": 109
-            },
-            "type": "mp",
-            "id": 18,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 480.0,
-            "presence_votes": 68.6224489795918,
-            "presence_sessions": 83.3333333333333,
-            "problematicno": 10.6980476063118,
-            "speeches_per_session": 2.0,
-            "spoken_words": 9297,
-            "preprosto": 29.4196309173576
-        }
-    }, {
-        "person": {
-            "name": "Bojan Krajnc",
-            "gov_id": "P299",
-            "gender": "m",
-            "is_active": false,
-            "district": [50, 49],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 1354,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": null,
-            "presence_votes": 96.7150496562261,
-            "presence_sessions": 95.7446808510638,
-            "problematicno": 8.66701334720055,
-            "speeches_per_session": 1.0,
-            "spoken_words": null,
-            "preprosto": 19.0674293638412
-        }
-    }, {
-        "person": {
-            "name": "Bojan Podkraj\u0161ek",
-            "gov_id": "P277",
-            "gender": "m",
-            "is_active": false,
-            "district": [44],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 64,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 553.0,
-            "presence_votes": 80.8673469387755,
-            "presence_sessions": 86.6666666666667,
-            "problematicno": 15.3233220962305,
-            "speeches_per_session": 2.0,
-            "spoken_words": 18253,
-            "preprosto": 36.775973030953104
-        }
-    }, {
-        "person": {
-            "name": "Bojana Mur\u0161i\u010d",
-            "gov_id": "P275",
-            "gender": "f",
-            "is_active": false,
-            "district": [45],
-            "party": {
-                "acronym": "SD",
-                "is_coalition": true,
-                "name": "PS Socialni Demokrati",
-                "id": 7
-            },
-            "type": "mp",
-            "id": 61,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 723.0,
-            "presence_votes": 90.5612244897959,
-            "presence_sessions": 98.3333333333333,
-            "problematicno": 9.86436498150432,
-            "speeches_per_session": 26.0,
-            "spoken_words": 36069,
-            "preprosto": 27.1270036991369
-        }
-    }, {
-        "person": {
-            "name": "Branislav Raji\u0107",
-            "gov_id": "P281",
-            "gender": "m",
-            "is_active": false,
-            "district": [46],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 70,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 692.0,
-            "presence_votes": 95.1530612244898,
-            "presence_sessions": 88.3333333333333,
-            "problematicno": 12.7388535031847,
-            "speeches_per_session": 2.0,
-            "spoken_words": 10763,
-            "preprosto": 28.0254777070064
-        }
-    }, {
-        "person": {
-            "name": "Branko Grims",
-            "gov_id": "P016",
-            "gender": "m",
-            "is_active": false,
-            "district": [60],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 26,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 567.0,
-            "presence_votes": 56.3775510204082,
-            "presence_sessions": 85.0,
-            "problematicno": 9.58772770853308,
-            "speeches_per_session": 4.0,
-            "spoken_words": 79974,
-            "preprosto": 28.7631831255992
-        }
-    }, {
-        "person": {
-            "name": "Branko Zorman",
-            "gov_id": "P295",
-            "gender": "m",
-            "is_active": false,
-            "district": [62],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 89,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 669.0,
-            "presence_votes": 94.8341836734694,
-            "presence_sessions": 91.6666666666667,
-            "problematicno": 18.143332325370398,
-            "speeches_per_session": 2.0,
-            "spoken_words": 9890,
-            "preprosto": 33.2627759298458
-        }
-    }, {
-        "person": {
-            "name": "Danijel Krivec",
-            "gov_id": "P040",
-            "gender": "m",
-            "is_active": false,
-            "district": [55],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 47,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 538.0,
-            "presence_votes": 72.7678571428571,
-            "presence_sessions": 91.6666666666667,
-            "problematicno": 14.2755174875089,
-            "speeches_per_session": 4.0,
-            "spoken_words": 95373,
-            "preprosto": 39.2576730906495
-        }
-    }, {
-        "person": {
-            "name": "Danilo Anton Ranc",
-            "gov_id": "P282",
-            "gender": "m",
-            "is_active": false,
-            "district": [39],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 71,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 572.0,
-            "presence_votes": 97.5127551020408,
-            "presence_sessions": 96.6666666666667,
-            "problematicno": 20.9643605870021,
-            "speeches_per_session": 3.0,
-            "spoken_words": 22392,
-            "preprosto": 45.4227812718379
-        }
-    }, {
-        "person": {
-            "name": "Dragan Mati\u0107",
-            "gov_id": "P272",
-            "gender": "m",
-            "is_active": false,
-            "district": [74],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 57,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 664.0,
-            "presence_votes": 92.155612244898,
-            "presence_sessions": 93.3333333333333,
-            "problematicno": 10.1874490627547,
-            "speeches_per_session": 11.0,
-            "spoken_words": 39045,
-            "preprosto": 32.599837000815
-        }
-    }, {
-        "person": {
-            "name": "Du\u0161an Radi\u010d",
-            "gov_id": "P300",
-            "gender": "m",
-            "is_active": false,
-            "district": [20],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 1357,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": null,
-            "presence_votes": 95.2066115702479,
-            "presence_sessions": 93.1818181818182,
-            "problematicno": 13.7883488452258,
-            "speeches_per_session": 1.0,
-            "spoken_words": null,
-            "preprosto": 41.3650465356774
-        }
-    }, {
-        "person": {
-            "name": "Du\u0161an Verbi\u010d",
-            "gov_id": "P296",
-            "gender": "m",
-            "is_active": false,
-            "district": [99],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 92,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 638.0,
-            "presence_votes": 96.5960179833012,
-            "presence_sessions": 89.6551724137931,
-            "problematicno": 7.64759865402264,
-            "speeches_per_session": 3.0,
-            "spoken_words": 10166,
-            "preprosto": 18.3542367696543
-        }
-    }, {
-        "person": {
-            "name": "Erika Dekleva",
-            "gov_id": "P247",
-            "gender": "f",
-            "is_active": false,
-            "district": [86],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 16,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 673.0,
-            "presence_votes": 89.859693877551,
-            "presence_sessions": 88.3333333333333,
-            "problematicno": 13.535462912831601,
-            "speeches_per_session": 1.0,
-            "spoken_words": 10348,
-            "preprosto": 40.6063887384949
-        }
-    }, {
-        "person": {
-            "name": "Eva Irgl",
-            "gov_id": "P023",
-            "gender": "f",
-            "is_active": false,
-            "district": [89],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 35,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 577.0,
-            "presence_votes": 71.875,
-            "presence_sessions": 83.3333333333333,
-            "problematicno": 8.56164383561644,
-            "speeches_per_session": 3.0,
-            "spoken_words": 44595,
-            "preprosto": 18.3463796477495
-        }
-    }, {
-        "person": {
-            "name": "Franc Breznik",
-            "gov_id": "P167",
-            "gender": "m",
-            "is_active": false,
-            "district": [24],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 10,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 638.0,
-            "presence_votes": 63.1377551020408,
-            "presence_sessions": 78.3333333333333,
-            "problematicno": 6.564551422319471,
-            "speeches_per_session": 3.0,
-            "spoken_words": 85246,
-            "preprosto": 26.2582056892779
-        }
-    }, {
-        "person": {
-            "name": "Franc Jur\u0161a",
-            "gov_id": "P122",
-            "gender": "m",
-            "is_active": false,
-            "district": [19],
-            "party": {
-                "acronym": "DeSUS",
-                "is_coalition": true,
-                "name": "PS Demokratska Stranka Upokojencev Slovenije",
-                "id": 3
-            },
-            "type": "mp",
-            "id": 37,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 618.0,
-            "presence_votes": 91.1352040816327,
-            "presence_sessions": 88.3333333333333,
-            "problematicno": 10.1626016260163,
-            "speeches_per_session": 3.0,
-            "spoken_words": 32408,
-            "preprosto": 28.4552845528455
-        }
-    }, {
-        "person": {
-            "name": "Franc Laj",
-            "gov_id": "P267",
-            "gender": "m",
-            "is_active": false,
-            "district": [17],
-            "party": {
-                "acronym": "PS NP",
-                "is_coalition": false,
-                "name": "PS nepovezanih poslancev ",
-                "id": 109
-            },
-            "type": "mp",
-            "id": 50,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 575.0,
-            "presence_votes": 76.4668367346939,
-            "presence_sessions": 85.0,
-            "problematicno": 17.5592625109745,
-            "speeches_per_session": 1.0,
-            "spoken_words": 11072,
-            "preprosto": 35.1185250219491
-        }
-    }, {
-        "person": {
-            "name": "Franc Tr\u010dek ",
-            "gov_id": "P290",
-            "gender": "m",
-            "is_active": false,
-            "district": [49],
-            "party": {
-                "acronym": "ZL",
-                "is_coalition": false,
-                "name": "PS Zdru\u017eena Levica",
-                "id": 8
-            },
-            "type": "mp",
-            "id": 82,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 701.0,
-            "presence_votes": 58.4821428571429,
-            "presence_sessions": 75.0,
-            "problematicno": 9.39319932368965,
-            "speeches_per_session": 6.0,
-            "spoken_words": 201175,
-            "preprosto": 31.9368777005448
-        }
-    }, {
-        "person": {
-            "name": "Igor Zor\u010di\u010d",
-            "gov_id": "P294",
-            "gender": "m",
-            "is_active": false,
-            "district": [10],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 88,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 604.0,
-            "presence_votes": 96.1734693877551,
-            "presence_sessions": 96.6666666666667,
-            "problematicno": 9.38438438438438,
-            "speeches_per_session": 13.0,
-            "spoken_words": 45983,
-            "preprosto": 26.2762762762763
-        }
-    }, {
-        "person": {
-            "name": "Irena Gro\u0161elj Ko\u0161nik",
-            "gov_id": "P253",
-            "gender": "f",
-            "is_active": false,
-            "district": [15],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 27,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 593.0,
-            "presence_votes": 80.5484693877551,
-            "presence_sessions": 86.6666666666667,
-            "problematicno": 10.5764145954521,
-            "speeches_per_session": 1.0,
-            "spoken_words": 7178,
-            "preprosto": 23.7969328397673
-        }
-    }, {
-        "person": {
-            "name": "Irena Kotnik",
-            "gov_id": "P264",
-            "gender": "f",
-            "is_active": false,
-            "district": [58],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 44,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 566.0,
-            "presence_votes": 89.3494897959184,
-            "presence_sessions": 96.6666666666667,
-            "problematicno": 13.769363166953498,
-            "speeches_per_session": 1.0,
-            "spoken_words": 7559,
-            "preprosto": 24.096385542168697
-        }
-    }, {
-        "person": {
-            "name": "Iva Dimic",
-            "gov_id": "P169",
-            "gender": "f",
-            "is_active": false,
-            "district": [92],
-            "party": {
-                "acronym": "NSI",
-                "is_coalition": false,
-                "name": "PS Nova Slovenija",
-                "id": 6
-            },
-            "type": "mp",
-            "id": 17,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 654.0,
-            "presence_votes": 65.3698979591837,
-            "presence_sessions": 85.0,
-            "problematicno": 14.1776937618147,
-            "speeches_per_session": 11.0,
-            "spoken_words": 79499,
-            "preprosto": 25.992438563327
-        }
-    }, {
-        "person": {
-            "name": "Ivan Hr\u0161ak",
-            "gov_id": "P176",
-            "gender": "m",
-            "is_active": false,
-            "district": [14],
-            "party": {
-                "acronym": "DeSUS",
-                "is_coalition": true,
-                "name": "PS Demokratska Stranka Upokojencev Slovenije",
-                "id": 3
-            },
-            "type": "mp",
-            "id": 34,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 624.0,
-            "presence_votes": 91.9005102040816,
-            "presence_sessions": 93.3333333333333,
-            "problematicno": 13.7080191912269,
-            "speeches_per_session": 6.0,
-            "spoken_words": 14781,
-            "preprosto": 20.5620287868403
-        }
-    }, {
-        "person": {
-            "name": "Ivan Prelog",
-            "gov_id": "P279",
-            "gender": "m",
-            "is_active": false,
-            "district": [52],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 68,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 530.0,
-            "presence_votes": 97.5765306122449,
-            "presence_sessions": 98.3333333333333,
-            "problematicno": 23.598820058997003,
-            "speeches_per_session": 1.0,
-            "spoken_words": 7300,
-            "preprosto": 41.297935103244804
-        }
-    }, {
-        "person": {
-            "name": "Ivan \u0160kodnik",
-            "gov_id": "P286",
-            "gender": "m",
-            "is_active": false,
-            "district": [40],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 76,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 517.0,
-            "presence_votes": 97.4489795918367,
-            "presence_sessions": 96.6666666666667,
-            "problematicno": 9.89902989507028,
-            "speeches_per_session": 1.0,
-            "spoken_words": 16104,
-            "preprosto": 25.7374777271827
-        }
-    }, {
-        "person": {
-            "name": "Jan \u0160koberne",
-            "gov_id": "P301",
-            "gender": "m",
-            "is_active": false,
-            "district": [36],
-            "party": {
-                "acronym": "SD",
-                "is_coalition": true,
-                "name": "PS Socialni Demokrati",
-                "id": 7
-            },
-            "type": "mp",
-            "id": 1356,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": null,
-            "presence_votes": 79.0534618755478,
-            "presence_sessions": 77.5,
-            "problematicno": 7.7172403148634,
-            "speeches_per_session": 6.0,
-            "spoken_words": null,
-            "preprosto": 20.0648248186449
-        }
-    }, {
-        "person": {
-            "name": "Janez Jan\u0161a",
-            "gov_id": "P025",
-            "gender": "m",
-            "is_active": false,
-            "district": [71],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 36,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 549.0,
-            "presence_votes": 44.7143795141169,
-            "presence_sessions": 71.1864406779661,
-            "problematicno": 6.642752756742389,
-            "speeches_per_session": 3.0,
-            "spoken_words": 41037,
-            "preprosto": 19.9282582702272
-        }
-    }, {
-        "person": {
-            "name": "Jani M\u00f6derndorfer",
-            "gov_id": "P191",
-            "gender": "m",
-            "is_active": false,
-            "district": [76],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 59,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 516.0,
-            "presence_votes": 68.0484693877551,
-            "presence_sessions": 85.0,
-            "problematicno": 10.785547366528899,
-            "speeches_per_session": 4.0,
-            "spoken_words": 244361,
-            "preprosto": 26.9638684163221
-        }
-    }, {
-        "person": {
-            "name": "Janja Sluga",
-            "gov_id": "P284",
-            "gender": "f",
-            "is_active": false,
-            "district": [31],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 73,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 648.0,
-            "presence_votes": 91.2627551020408,
-            "presence_sessions": 91.6666666666667,
-            "problematicno": 7.28155339805825,
-            "speeches_per_session": 3.0,
-            "spoken_words": 23709,
-            "preprosto": 29.126213592233
-        }
-    }, {
-        "person": {
-            "name": "Janko Veber",
-            "gov_id": "P081",
-            "gender": "m",
-            "is_active": false,
-            "district": [69],
-            "party": {
-                "acronym": "SD",
-                "is_coalition": true,
-                "name": "PS Socialni Demokrati",
-                "id": 7
-            },
-            "type": "mp",
-            "id": 83,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 510.0,
-            "presence_votes": 89.1286307053942,
-            "presence_sessions": 91.304347826087,
-            "problematicno": 10.7758620689655,
-            "speeches_per_session": 3.0,
-            "spoken_words": 28234,
-            "preprosto": 25.862068965517203
-        }
-    }, {
-        "person": {
-            "name": "Jasna Murgel",
-            "gov_id": "P274",
-            "gender": "f",
-            "is_active": false,
-            "district": [48],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 60,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 570.0,
-            "presence_votes": 93.9413265306122,
-            "presence_sessions": 100.0,
-            "problematicno": 8.762961881115821,
-            "speeches_per_session": 2.0,
-            "spoken_words": 18111,
-            "preprosto": 16.065430115378998
-        }
-    }, {
-        "person": {
-            "name": "Jelka Godec",
-            "gov_id": "P252",
-            "gender": "f",
-            "is_active": false,
-            "district": [30],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 23,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 508.0,
-            "presence_votes": 50.3188775510204,
-            "presence_sessions": 80.0,
-            "problematicno": 7.71381737537364,
-            "speeches_per_session": 4.0,
-            "spoken_words": 60797,
-            "preprosto": 15.4276347507473
-        }
-    }, {
-        "person": {
-            "name": "Jernej Vrtovec",
-            "gov_id": "P292",
-            "gender": "m",
-            "is_active": false,
-            "district": [89],
-            "party": {
-                "acronym": "NSI",
-                "is_coalition": false,
-                "name": "PS Nova Slovenija",
-                "id": 6
-            },
-            "type": "mp",
-            "id": 86,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 664.0,
-            "presence_votes": 67.6020408163265,
-            "presence_sessions": 86.6666666666667,
-            "problematicno": 11.5580212667591,
-            "speeches_per_session": 3.0,
-            "spoken_words": 84214,
-            "preprosto": 32.3624595469256
-        }
-    }, {
-        "person": {
-            "name": "Jo\u017ee Tanko",
-            "gov_id": "P077",
-            "gender": "m",
-            "is_active": false,
-            "district": [70],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 78,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 571.0,
-            "presence_votes": 85.6505102040816,
-            "presence_sessions": 98.3333333333333,
-            "problematicno": 14.9962509372657,
-            "speeches_per_session": 7.0,
-            "spoken_words": 173854,
-            "preprosto": 34.991252186953304
-        }
-    }, {
-        "person": {
-            "name": "Jo\u017eef Horvat",
-            "gov_id": "P020",
-            "gender": "m",
-            "is_active": false,
-            "district": [17],
-            "party": {
-                "acronym": "NSI",
-                "is_coalition": false,
-                "name": "PS Nova Slovenija",
-                "id": 6
-            },
-            "type": "mp",
-            "id": 32,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 738.0,
-            "presence_votes": 74.7448979591837,
-            "presence_sessions": 88.3333333333333,
-            "problematicno": 10.4014978156855,
-            "speeches_per_session": 7.0,
-            "spoken_words": 249246,
-            "preprosto": 31.2044934470564
-        }
-    }, {
-        "person": {
-            "name": "Julijana Bizjak Mlakar",
-            "gov_id": "P158",
-            "gender": "f",
-            "is_active": false,
-            "district": [66],
-            "party": {
-                "acronym": "DeSUS",
-                "is_coalition": true,
-                "name": "PS Demokratska Stranka Upokojencev Slovenije",
-                "id": 3
-            },
-            "type": "mp",
-            "id": 5,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 552.0,
-            "presence_votes": 92.3728813559322,
-            "presence_sessions": 100.0,
-            "problematicno": 11.4103149246919,
-            "speeches_per_session": 3.0,
-            "spoken_words": 37666,
-            "preprosto": 27.3847558192606
-        }
-    }, {
-        "person": {
-            "name": "Kamal Izidor Shaker",
-            "gov_id": "P283",
-            "gender": "m",
-            "is_active": false,
-            "district": [78],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 72,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 577.0,
-            "presence_votes": 89.9234693877551,
-            "presence_sessions": 95.0,
-            "problematicno": 16.6168162180126,
-            "speeches_per_session": 12.0,
-            "spoken_words": 74478,
-            "preprosto": 36.5569956796278
-        }
-    }, {
-        "person": {
-            "name": "Ksenija Korenjak Kramar",
-            "gov_id": "P263",
-            "gender": "f",
-            "is_active": false,
-            "district": [51],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 43,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 535.0,
-            "presence_votes": 78.8265306122449,
-            "presence_sessions": 90.0,
-            "problematicno": 7.54574608564422,
-            "speeches_per_session": 5.0,
-            "spoken_words": 15766,
-            "preprosto": 16.9779286926995
-        }
-    }, {
-        "person": {
-            "name": "Ljubo \u017dnidar",
-            "gov_id": "P212",
-            "gender": "m",
-            "is_active": false,
-            "district": [34],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 91,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 629.0,
-            "presence_votes": 73.8520408163265,
-            "presence_sessions": 90.0,
-            "problematicno": 23.7154150197628,
-            "speeches_per_session": 2.0,
-            "spoken_words": 44562,
-            "preprosto": 35.5731225296443
-        }
-    }, {
-        "person": {
-            "name": "Ljudmila Novak",
-            "gov_id": "P193",
-            "gender": "f",
-            "is_active": false,
-            "district": [70],
-            "party": {
-                "acronym": "NSI",
-                "is_coalition": false,
-                "name": "PS Nova Slovenija",
-                "id": 6
-            },
-            "type": "mp",
-            "id": 63,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 593.0,
-            "presence_votes": 68.5586734693878,
-            "presence_sessions": 81.6666666666667,
-            "problematicno": 12.9065565307176,
-            "speeches_per_session": 3.0,
-            "spoken_words": 29534,
-            "preprosto": 30.975735673722202
-        }
-    }, {
-        "person": {
-            "name": "Luka Mesec",
-            "gov_id": "P273",
-            "gender": "m",
-            "is_active": false,
-            "district": [15],
-            "party": {
-                "acronym": "ZL",
-                "is_coalition": false,
-                "name": "PS Zdru\u017eena Levica",
-                "id": 8
-            },
-            "type": "mp",
-            "id": 58,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 631.0,
-            "presence_votes": 77.4872448979592,
-            "presence_sessions": 86.6666666666667,
-            "problematicno": 12.0685493603669,
-            "speeches_per_session": 5.0,
-            "spoken_words": 84405,
-            "preprosto": 31.3782283369539
-        }
-    }, {
-        "person": {
-            "name": "L\u00e1szl\u00f3 G\u00f6ncz",
-            "gov_id": "P117",
-            "gender": "m",
-            "is_active": false,
-            "district": [91],
-            "party": {
-                "acronym": "IMNS",
-                "is_coalition": false,
-                "name": "PS italijanske in mad\u017earske narodne skupnosti",
-                "id": 2
-            },
-            "type": "mp",
-            "id": 24,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 489.0,
-            "presence_votes": 94.1326530612245,
-            "presence_sessions": 88.3333333333333,
-            "problematicno": 7.673124880107419,
-            "speeches_per_session": 1.0,
-            "spoken_words": 6452,
-            "preprosto": 21.1010934202954
-        }
-    }, {
-        "person": {
-            "name": "Marija Antonija Kova\u010di\u010d",
-            "gov_id": "P297",
-            "gender": "f",
-            "is_active": false,
-            "district": [37],
-            "party": {
-                "acronym": "DeSUS",
-                "is_coalition": true,
-                "name": "PS Demokratska Stranka Upokojencev Slovenije",
-                "id": 3
-            },
-            "type": "mp",
-            "id": 96,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 720.0,
-            "presence_votes": 93.2126696832579,
-            "presence_sessions": 94.6428571428571,
-            "problematicno": 18.604651162790702,
-            "speeches_per_session": 2.0,
-            "spoken_words": 8854,
-            "preprosto": 46.5116279069767
-        }
-    }, {
-        "person": {
-            "name": "Marija Ba\u010di\u010d",
-            "gov_id": "P298",
-            "gender": "f",
-            "is_active": false,
-            "district": [22],
-            "party": {
-                "acronym": "SD",
-                "is_coalition": true,
-                "name": "PS Socialni Demokrati",
-                "id": 7
-            },
-            "type": "mp",
-            "id": 95,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 693.0,
-            "presence_votes": 90.7563025210084,
-            "presence_sessions": 89.2857142857143,
-            "problematicno": 13.0208333333333,
-            "speeches_per_session": 2.0,
-            "spoken_words": 12167,
-            "preprosto": 35.8072916666667
-        }
-    }, {
-        "person": {
-            "name": "Marijan Pojbi\u010d",
-            "gov_id": "P098",
-            "gender": "m",
-            "is_active": false,
-            "district": [25],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 66,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 504.0,
-            "presence_votes": 57.780612244898,
-            "presence_sessions": 75.0,
-            "problematicno": 7.34645900675874,
-            "speeches_per_session": 4.0,
-            "spoken_words": 38032,
-            "preprosto": 26.447252424331502
-        }
-    }, {
-        "person": {
-            "name": "Marinka Levi\u010dar",
-            "gov_id": "P269",
-            "gender": "f",
-            "is_active": false,
-            "district": [69],
-            "party": {
-                "acronym": "DeSUS",
-                "is_coalition": true,
-                "name": "PS Demokratska Stranka Upokojencev Slovenije",
-                "id": 3
-            },
-            "type": "mp",
-            "id": 52,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 577.0,
-            "presence_votes": 87.3724489795918,
-            "presence_sessions": 91.6666666666667,
-            "problematicno": 18.29587036069,
-            "speeches_per_session": 3.0,
-            "spoken_words": 12994,
-            "preprosto": 33.9780449555672
-        }
-    }, {
-        "person": {
-            "name": "Marjan Dolin\u0161ek",
-            "gov_id": "P249",
-            "gender": "m",
-            "is_active": false,
-            "district": [16],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 19,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 578.0,
-            "presence_votes": 86.5433673469388,
-            "presence_sessions": 96.6666666666667,
-            "problematicno": 13.6798905608755,
-            "speeches_per_session": 3.0,
-            "spoken_words": 6940,
-            "preprosto": 44.4596443228454
-        }
-    }, {
-        "person": {
-            "name": "Marjana Kotnik Poropat",
-            "gov_id": "P186",
-            "gender": "f",
-            "is_active": false,
-            "district": [45],
-            "party": {
-                "acronym": "DeSUS",
-                "is_coalition": true,
-                "name": "PS Demokratska Stranka Upokojencev Slovenije",
-                "id": 3
-            },
-            "type": "mp",
-            "id": 45,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 654.0,
-            "presence_votes": 87.4362244897959,
-            "presence_sessions": 96.6666666666667,
-            "problematicno": 7.448789571694601,
-            "speeches_per_session": 2.0,
-            "spoken_words": 20946,
-            "preprosto": 24.208566108007403
-        }
-    }, {
-        "person": {
-            "name": "Marko Ferluga",
-            "gov_id": "P250",
-            "gender": "m",
-            "is_active": false,
-            "district": [83],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 21,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 463.0,
-            "presence_votes": 91.2627551020408,
-            "presence_sessions": 93.3333333333333,
-            "problematicno": 8.86524822695035,
-            "speeches_per_session": 2.0,
-            "spoken_words": 25955,
-            "preprosto": 24.822695035461
-        }
-    }, {
-        "person": {
-            "name": "Marko Poga\u010dnik",
-            "gov_id": "P196",
-            "gender": "m",
-            "is_active": false,
-            "district": [64],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 65,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 572.0,
-            "presence_votes": 82.3341836734694,
-            "presence_sessions": 78.3333333333333,
-            "problematicno": 7.1157495256167005,
-            "speeches_per_session": 7.0,
-            "spoken_words": 129486,
-            "preprosto": 28.462998102466802
-        }
-    }, {
-        "person": {
-            "name": "Maru\u0161a \u0160kopac",
-            "gov_id": "P287",
-            "gender": "f",
-            "is_active": false,
-            "district": [57],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 77,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 656.0,
-            "presence_votes": 96.2372448979592,
-            "presence_sessions": 93.3333333333333,
-            "problematicno": 8.79700901693424,
-            "speeches_per_session": 1.0,
-            "spoken_words": 9088,
-            "preprosto": 21.9925225423356
-        }
-    }, {
-        "person": {
-            "name": "Matej Ta\u0161ner Vatovec",
-            "gov_id": "P288",
-            "gender": "m",
-            "is_active": false,
-            "district": [83],
-            "party": {
-                "acronym": "ZL",
-                "is_coalition": false,
-                "name": "PS Zdru\u017eena Levica",
-                "id": 8
-            },
-            "type": "mp",
-            "id": 79,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 622.0,
-            "presence_votes": 68.9413265306122,
-            "presence_sessions": 73.3333333333333,
-            "problematicno": 17.4266627940749,
-            "speeches_per_session": 5.0,
-            "spoken_words": 52402,
-            "preprosto": 43.5666569851873
-        }
-    }, {
-        "person": {
-            "name": "Matej Tonin",
-            "gov_id": "P204",
-            "gender": "m",
-            "is_active": false,
-            "district": [66],
-            "party": {
-                "acronym": "NSI",
-                "is_coalition": false,
-                "name": "PS Nova Slovenija",
-                "id": 6
-            },
-            "type": "mp",
-            "id": 81,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 545.0,
-            "presence_votes": 52.2959183673469,
-            "presence_sessions": 78.3333333333333,
-            "problematicno": 13.239187996469601,
-            "speeches_per_session": 3.0,
-            "spoken_words": 74141,
-            "preprosto": 35.3045013239188
-        }
-    }, {
-        "person": {
-            "name": "Matja\u017e Han",
-            "gov_id": "P018",
-            "gender": "m",
-            "is_active": false,
-            "district": [13],
-            "party": {
-                "acronym": "SD",
-                "is_coalition": true,
-                "name": "PS Socialni Demokrati",
-                "id": 7
-            },
-            "type": "mp",
-            "id": 30,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 680.0,
-            "presence_votes": 92.8571428571429,
-            "presence_sessions": 96.6666666666667,
-            "problematicno": 12.755102040816299,
-            "speeches_per_session": 2.0,
-            "spoken_words": 26782,
-            "preprosto": 33.1632653061224
-        }
-    }, {
-        "person": {
-            "name": "Matja\u017e Han\u017eek",
-            "gov_id": "P256",
-            "gender": "m",
-            "is_active": false,
-            "district": [76],
-            "party": {
-                "acronym": "ZL",
-                "is_coalition": false,
-                "name": "PS Zdru\u017eena Levica",
-                "id": 8
-            },
-            "type": "mp",
-            "id": 31,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 679.0,
-            "presence_votes": 47.1938775510204,
-            "presence_sessions": 75.0,
-            "problematicno": 14.6896804994491,
-            "speeches_per_session": 3.0,
-            "spoken_words": 18303,
-            "preprosto": 40.3966213734851
-        }
-    }, {
-        "person": {
-            "name": "Matja\u017e Nemec",
-            "gov_id": "P276",
-            "gender": "m",
-            "is_active": false,
-            "district": [88],
-            "party": {
-                "acronym": "SD",
-                "is_coalition": true,
-                "name": "PS Socialni Demokrati",
-                "id": 7
-            },
-            "type": "mp",
-            "id": 62,
-            "has_function": true
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 639.0,
-            "presence_votes": 85.5229591836735,
-            "presence_sessions": 91.6666666666667,
-            "problematicno": 0.0,
-            "speeches_per_session": 9.0,
-            "spoken_words": 37102,
-            "preprosto": 0.0
-        }
-    }, {
-        "person": {
-            "name": "Miha Kordi\u0161",
-            "gov_id": "P262",
-            "gender": "m",
-            "is_active": false,
-            "district": [64],
-            "party": {
-                "acronym": "ZL",
-                "is_coalition": false,
-                "name": "PS Zdru\u017eena Levica",
-                "id": 8
-            },
-            "type": "mp",
-            "id": 42,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 643.0,
-            "presence_votes": 71.6198979591837,
-            "presence_sessions": 83.3333333333333,
-            "problematicno": 12.8087831655993,
-            "speeches_per_session": 5.0,
-            "spoken_words": 90998,
-            "preprosto": 29.2772186642269
-        }
-    }, {
-        "person": {
-            "name": "Milan Brglez",
-            "gov_id": "P243",
-            "gender": "m",
-            "is_active": false,
-            "district": [76],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 11,
-            "has_function": true
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 608.0,
-            "presence_votes": 95.5994897959184,
-            "presence_sessions": 98.3333333333333,
-            "problematicno": 38.0952380952381,
-            "speeches_per_session": 54.0,
-            "spoken_words": 170980,
-            "preprosto": 28.5714285714286
-        }
-    }, {
-        "person": {
-            "name": "Mirjam Bon Klanj\u0161\u010dek",
-            "gov_id": "P235",
-            "gender": "f",
-            "is_active": false,
-            "district": [87],
-            "party": {
-                "acronym": "PS NP",
-                "is_coalition": false,
-                "name": "PS nepovezanih poslancev ",
-                "id": 109
-            },
-            "type": "mp",
-            "id": 7,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 708.0,
-            "presence_votes": 62.1811224489796,
-            "presence_sessions": 93.3333333333333,
-            "problematicno": 12.853470437018,
-            "speeches_per_session": 15.0,
-            "spoken_words": 54966,
-            "preprosto": 38.560411311054004
-        }
-    }, {
-        "person": {
-            "name": "Mitja Horvat",
-            "gov_id": "P257",
-            "gender": "m",
-            "is_active": false,
-            "district": [96],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 33,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 528.0,
-            "presence_votes": 92.5382653061224,
-            "presence_sessions": 98.3333333333333,
-            "problematicno": 11.2443778110945,
-            "speeches_per_session": 2.0,
-            "spoken_words": 9383,
-            "preprosto": 17.4912543728136
-        }
-    }, {
-        "person": {
-            "name": "Nada Brinov\u0161ek",
-            "gov_id": "P244",
-            "gender": "f",
-            "is_active": false,
-            "district": [35],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 12,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 592.0,
-            "presence_votes": 63.3290816326531,
-            "presence_sessions": 93.3333333333333,
-            "problematicno": 7.50562922191644,
-            "speeches_per_session": 2.0,
-            "spoken_words": 19159,
-            "preprosto": 20.015011258443803
-        }
-    }, {
-        "person": {
-            "name": "Peter Vilfan",
-            "gov_id": "P207",
-            "gender": "m",
-            "is_active": false,
-            "district": [101],
-            "party": {
-                "acronym": "DeSUS",
-                "is_coalition": true,
-                "name": "PS Demokratska Stranka Upokojencev Slovenije",
-                "id": 3
-            },
-            "type": "mp",
-            "id": 85,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 688.0,
-            "presence_votes": 72.3214285714286,
-            "presence_sessions": 90.0,
-            "problematicno": 5.92329335110321,
-            "speeches_per_session": 7.0,
-            "spoken_words": 28361,
-            "preprosto": 19.2507033910854
-        }
-    }, {
-        "person": {
-            "name": "Primo\u017e Hainz",
-            "gov_id": "P255",
-            "gender": "m",
-            "is_active": false,
-            "district": [93],
-            "party": {
-                "acronym": "DeSUS",
-                "is_coalition": true,
-                "name": "PS Demokratska Stranka Upokojencev Slovenije",
-                "id": 3
-            },
-            "type": "mp",
-            "id": 29,
-            "has_function": true
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 572.0,
-            "presence_votes": 84.2474489795918,
-            "presence_sessions": 93.3333333333333,
-            "problematicno": 0.0,
-            "speeches_per_session": 36.0,
-            "spoken_words": 42356,
-            "preprosto": 165.289256198347
-        }
-    }, {
-        "person": {
-            "name": "Roberto Battelli",
-            "gov_id": "P005",
-            "gender": "m",
-            "is_active": false,
-            "district": [90],
-            "party": {
-                "acronym": "IMNS",
-                "is_coalition": false,
-                "name": "PS italijanske in mad\u017earske narodne skupnosti",
-                "id": 2
-            },
-            "type": "mp",
-            "id": 4,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 580.0,
-            "presence_votes": 60.6505102040816,
-            "presence_sessions": 65.0,
-            "problematicno": 11.7647058823529,
-            "speeches_per_session": 8.0,
-            "spoken_words": 16391,
-            "preprosto": 29.4117647058824
-        }
-    }, {
-        "person": {
-            "name": "Sa\u0161a Tabakovi\u0107",
-            "gov_id": "P302",
-            "gender": "m",
-            "is_active": false,
-            "district": [37],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 1355,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": null,
-            "presence_votes": 95.7264957264957,
-            "presence_sessions": 94.4444444444444,
-            "problematicno": 6.39631572214405,
-            "speeches_per_session": 2.0,
-            "spoken_words": null,
-            "preprosto": 15.3511577331457
-        }
-    }, {
-        "person": {
-            "name": "Simon Zajc",
-            "gov_id": "P293",
-            "gender": "m",
-            "is_active": false,
-            "district": [100],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 87,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 533.0,
-            "presence_votes": 97.0025510204082,
-            "presence_sessions": 91.6666666666667,
-            "problematicno": 7.4183976261127595,
-            "speeches_per_session": 3.0,
-            "spoken_words": 12858,
-            "preprosto": 20.4005934718101
-        }
-    }, {
-        "person": {
-            "name": "Simona Kustec Lipicer",
-            "gov_id": "P266",
-            "gender": "f",
-            "is_active": false,
-            "district": [102],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 48,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 636.0,
-            "presence_votes": 96.1734693877551,
-            "presence_sessions": 91.6666666666667,
-            "problematicno": 14.430014430014399,
-            "speeches_per_session": 2.0,
-            "spoken_words": 33186,
-            "preprosto": 36.0750360750361
-        }
-    }, {
-        "person": {
-            "name": "Suzana Lep \u0160imenko",
-            "gov_id": "P268",
-            "gender": "f",
-            "is_active": false,
-            "district": [26],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 51,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 632.0,
-            "presence_votes": 66.7091836734694,
-            "presence_sessions": 95.0,
-            "problematicno": 9.832841691248769,
-            "speeches_per_session": 2.0,
-            "spoken_words": 35904,
-            "preprosto": 23.598820058997003
-        }
-    }, {
-        "person": {
-            "name": "Tanja Cink",
-            "gov_id": "P246",
-            "gender": "f",
-            "is_active": false,
-            "district": [101],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 14,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 505.0,
-            "presence_votes": 79.8469387755102,
-            "presence_sessions": 83.3333333333333,
-            "problematicno": 12.647554806070799,
-            "speeches_per_session": 1.0,
-            "spoken_words": 2478,
-            "preprosto": 27.4030354131535
-        }
-    }, {
-        "person": {
-            "name": "Teja Ljubi\u010d",
-            "gov_id": "P304",
-            "gender": "f",
-            "is_active": false,
-            "district": [85],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 2933,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": null,
-            "presence_votes": 94.7368421052632,
-            "presence_sessions": 100.0,
-            "problematicno": 0.0,
-            "speeches_per_session": 0.0,
-            "spoken_words": null,
-            "preprosto": 0.0
-        }
-    }, {
-        "person": {
-            "name": "Toma\u017e Gantar",
-            "gov_id": "P251",
-            "gender": "m",
-            "is_active": false,
-            "district": [80],
-            "party": {
-                "acronym": "DeSUS",
-                "is_coalition": true,
-                "name": "PS Demokratska Stranka Upokojencev Slovenije",
-                "id": 3
-            },
-            "type": "mp",
-            "id": 22,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 572.0,
-            "presence_votes": 87.5637755102041,
-            "presence_sessions": 95.0,
-            "problematicno": 9.3984962406015,
-            "speeches_per_session": 13.0,
-            "spoken_words": 19121,
-            "preprosto": 30.5451127819549
-        }
-    }, {
-        "person": {
-            "name": "Toma\u017e Lisec",
-            "gov_id": "P187",
-            "gender": "m",
-            "is_active": false,
-            "district": [12],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 53,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 694.0,
-            "presence_votes": 70.2168367346939,
-            "presence_sessions": 83.3333333333333,
-            "problematicno": 7.90424570912376,
-            "speeches_per_session": 7.0,
-            "spoken_words": 145206,
-            "preprosto": 19.1960252935863
-        }
-    }, {
-        "person": {
-            "name": "Uro\u0161 Prikl",
-            "gov_id": "P280",
-            "gender": "m",
-            "is_active": false,
-            "district": [46],
-            "party": {
-                "acronym": "DeSUS",
-                "is_coalition": true,
-                "name": "PS Demokratska Stranka Upokojencev Slovenije",
-                "id": 3
-            },
-            "type": "mp",
-            "id": 69,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 670.0,
-            "presence_votes": 94.1326530612245,
-            "presence_sessions": 98.3333333333333,
-            "problematicno": 14.598540145985401,
-            "speeches_per_session": 11.0,
-            "spoken_words": 92397,
-            "preprosto": 43.7956204379562
-        }
-    }, {
-        "person": {
-            "name": "Ur\u0161ka Ban",
-            "gov_id": "P240",
-            "gender": "f",
-            "is_active": false,
-            "district": [8],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 3,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 645.0,
-            "presence_votes": 98.6607142857143,
-            "presence_sessions": 98.3333333333333,
-            "problematicno": 5.14072741292893,
-            "speeches_per_session": 27.0,
-            "spoken_words": 78596,
-            "preprosto": 11.5666366790901
-        }
-    }, {
-        "person": {
-            "name": "Vesna Vervega",
-            "gov_id": "P291",
-            "gender": "f",
-            "is_active": false,
-            "district": [25],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 84,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 612.0,
-            "presence_votes": 93.8137755102041,
-            "presence_sessions": 98.3333333333333,
-            "problematicno": 18.4842883548983,
-            "speeches_per_session": 1.0,
-            "spoken_words": 4420,
-            "preprosto": 32.3475046210721
-        }
-    }, {
-        "person": {
-            "name": "Vinko Gorenak",
-            "gov_id": "P116",
-            "gender": "m",
-            "is_active": false,
-            "district": [42],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 25,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 608.0,
-            "presence_votes": 68.3673469387755,
-            "presence_sessions": 83.3333333333333,
-            "problematicno": 14.4508670520231,
-            "speeches_per_session": 6.0,
-            "spoken_words": 155126,
-            "preprosto": 34.3208092485549
-        }
-    }, {
-        "person": {
-            "name": "Violeta Tomi\u0107",
-            "gov_id": "P289",
-            "gender": "f",
-            "is_active": false,
-            "district": [103],
-            "party": {
-                "acronym": "ZL",
-                "is_coalition": false,
-                "name": "PS Zdru\u017eena Levica",
-                "id": 8
-            },
-            "type": "mp",
-            "id": 80,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 778.0,
-            "presence_votes": 73.9158163265306,
-            "presence_sessions": 85.0,
-            "problematicno": 20.905923344947702,
-            "speeches_per_session": 4.0,
-            "spoken_words": 41051,
-            "preprosto": 41.811846689895496
-        }
-    }, {
-        "person": {
-            "name": "Vlasta Po\u010dkaj",
-            "gov_id": "P303",
-            "gender": "f",
-            "is_active": false,
-            "district": [84],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 2934,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": null,
-            "presence_votes": 94.7368421052632,
-            "presence_sessions": 100.0,
-            "problematicno": 0.0,
-            "speeches_per_session": 0.0,
-            "spoken_words": null,
-            "preprosto": 0.0
-        }
-    }, {
-        "person": {
-            "name": "Vojka \u0160ergan",
-            "gov_id": "P285",
-            "gender": "f",
-            "is_active": false,
-            "district": [14],
-            "party": {
-                "acronym": "SMC",
-                "is_coalition": true,
-                "name": "PS Stranka modernega centra",
-                "id": 1
-            },
-            "type": "mp",
-            "id": 74,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 440.0,
-            "presence_votes": 98.0867346938776,
-            "presence_sessions": 96.6666666666667,
-            "problematicno": 10.4253544620517,
-            "speeches_per_session": 1.0,
-            "spoken_words": 16155,
-            "preprosto": 22.9357798165138
-        }
-    }, {
-        "person": {
-            "name": "Zvonko Lah",
-            "gov_id": "P129",
-            "gender": "m",
-            "is_active": false,
-            "district": [9],
-            "party": {
-                "acronym": "NeP - ZL",
-                "is_coalition": false,
-                "name": "Nepovezani poslanec Zvonko Lah",
-                "id": 111
-            },
-            "type": "mp",
-            "id": 49,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 547.0,
-            "presence_votes": 78.5076530612245,
-            "presence_sessions": 93.3333333333333,
-            "problematicno": 10.9481059776659,
-            "speeches_per_session": 3.0,
-            "spoken_words": 132213,
-            "preprosto": 21.8962119553317
-        }
-    }, {
-        "person": {
-            "name": "\u017dan Mahni\u010d",
-            "gov_id": "P270",
-            "gender": "m",
-            "is_active": false,
-            "district": [65],
-            "party": {
-                "acronym": "SDS",
-                "is_coalition": false,
-                "name": "PS Slovenska Demokratska Stranka",
-                "id": 5
-            },
-            "type": "mp",
-            "id": 55,
-            "has_function": false
-        },
-        "results": {
-            "privzdignjeno": 0.0,
-            "vocabulary_size": 673.0,
-            "presence_votes": 67.7295918367347,
-            "presence_sessions": 81.6666666666667,
-            "problematicno": 20.6355757325629,
-            "speeches_per_session": 10.0,
-            "spoken_words": 66146,
-            "preprosto": 30.9533635988444
-        }
-    }]
+  "data": [{
+    "person": {
+      "district": [19],
+      "gender": "m",
+      "gov_id": "P259",
+      "has_function": false,
+      "id": 39,
+      "is_active": false,
+      "name": "Aleksander Kavčič",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 3.815973378746808,
+      "presence_sessions": 90.769230769230802,
+      "presence_votes": 89.148580968280498,
+      "privzdignjeno": 3.4537693203647906,
+      "problematicno": 4.485771781249043,
+      "speeches_per_session": 1.0,
+      "spoken_words": 11036,
+      "vocabulary_size": 135.0
+    }
+  }, {
+    "person": {
+      "district": [62],
+      "gender": "f",
+      "gov_id": "P166",
+      "has_function": false,
+      "id": 9,
+      "is_active": false,
+      "name": "Alenka Bratušek",
+      "party": {
+        "acronym": "PS NP",
+        "id": 109,
+        "is_coalition": false,
+        "name": "PS nepovezanih poslancev "
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 2.0,
+      "preprosto": 0.4892744859355309,
+      "presence_sessions": 70.769230769230802,
+      "presence_votes": 48.080133555926501,
+      "privzdignjeno": 0.4040596673177302,
+      "problematicno": 0.5589528174922301,
+      "speeches_per_session": 5.0,
+      "spoken_words": 259976,
+      "vocabulary_size": 96.0
+    }
+  }, {
+    "person": {
+      "district": [28],
+      "gender": "m",
+      "gov_id": "P225",
+      "has_function": false,
+      "id": 15,
+      "is_active": false,
+      "name": "Andrej Čuš",
+      "party": {
+        "acronym": "NeP - AČ",
+        "id": 108,
+        "is_coalition": false,
+        "name": "Nepovezani poslanec Andrej Čuš"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 22.0,
+      "preprosto": 1.0696434596414062,
+      "presence_sessions": 69.230769230769198,
+      "presence_votes": 55.8708959376739,
+      "privzdignjeno": 0.823560997862381,
+      "problematicno": 0.8913707367400201,
+      "speeches_per_session": 3.0,
+      "spoken_words": 126137,
+      "vocabulary_size": 114.0
+    }
+  }, {
+    "person": {
+      "district": [92],
+      "gender": "m",
+      "gov_id": "P201",
+      "has_function": false,
+      "id": 75,
+      "is_active": false,
+      "name": "Andrej Šircelj",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 16.0,
+      "preprosto": 0.28080630416008673,
+      "presence_sessions": 86.153846153846203,
+      "presence_votes": 70.562047857540307,
+      "privzdignjeno": 0.30476609746771843,
+      "problematicno": 0.2433391203948823,
+      "speeches_per_session": 12.0,
+      "spoken_words": 517766,
+      "vocabulary_size": 100.0
+    }
+  }, {
+    "person": {
+      "district": [63],
+      "gender": "f",
+      "gov_id": "P278",
+      "has_function": false,
+      "id": 67,
+      "is_active": false,
+      "name": "Andreja Potočnik",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 0.9018475287339334,
+      "presence_sessions": 92.307692307692307,
+      "presence_votes": 94.657762938230405,
+      "privzdignjeno": 0.7857124340240539,
+      "problematicno": 0.948240125288384,
+      "speeches_per_session": 9.0,
+      "spoken_words": 93026,
+      "vocabulary_size": 139.0
+    }
+  }, {
+    "person": {
+      "district": [30],
+      "gender": "f",
+      "gov_id": "P260",
+      "has_function": false,
+      "id": 40,
+      "is_active": false,
+      "name": "Anita Koleša",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 1.076003995845002,
+      "presence_sessions": 93.846153846153797,
+      "presence_votes": 97.774067890929302,
+      "privzdignjeno": 1.0564093682432238,
+      "problematicno": 1.083212714927822,
+      "speeches_per_session": 1.0,
+      "spoken_words": 74968,
+      "vocabulary_size": 107.0
+    }
+  }, {
+    "person": {
+      "district": [7],
+      "gender": "f",
+      "gov_id": "P239",
+      "has_function": false,
+      "id": 2,
+      "is_active": false,
+      "name": "Anja Bah Žibert",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 17.0,
+      "preprosto": 0.4668893340488431,
+      "presence_sessions": 83.076923076923094,
+      "presence_votes": 70.116861435726193,
+      "privzdignjeno": 0.3670542688313397,
+      "problematicno": 0.4364446099884737,
+      "speeches_per_session": 5.0,
+      "spoken_words": 411784,
+      "vocabulary_size": 90.0
+    }
+  }, {
+    "person": {
+      "district": [94],
+      "gender": "m",
+      "gov_id": "P238",
+      "has_function": false,
+      "id": 54,
+      "is_active": false,
+      "name": "Anže Logar",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 13.0,
+      "preprosto": 0.6706713292647973,
+      "presence_sessions": 83.076923076923094,
+      "presence_votes": 59.821925431274302,
+      "privzdignjeno": 0.7698818705279631,
+      "problematicno": 0.6715922117304639,
+      "speeches_per_session": 4.0,
+      "spoken_words": 271098,
+      "vocabulary_size": 109.0
+    }
+  }, {
+    "person": {
+      "district": [40],
+      "gender": "m",
+      "gov_id": "P261",
+      "has_function": false,
+      "id": 41,
+      "is_active": false,
+      "name": "Benedikt Kopmajer",
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.393052124217685,
+      "presence_sessions": 98.461538461538495,
+      "presence_votes": 92.153589315525906,
+      "privzdignjeno": 1.6730198932744342,
+      "problematicno": 1.086463039449036,
+      "speeches_per_session": 1.0,
+      "spoken_words": 32239,
+      "vocabulary_size": 144.0
+    }
+  }, {
+    "person": {
+      "district": [77],
+      "gender": "m",
+      "gov_id": "P248",
+      "has_function": false,
+      "id": 18,
+      "is_active": false,
+      "name": "Bojan Dobovšek",
+      "party": {
+        "acronym": "PS NP",
+        "id": 109,
+        "is_coalition": false,
+        "name": "PS nepovezanih poslancev "
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 3.0,
+      "preprosto": 1.0754815651509484,
+      "presence_sessions": 81.538461538461505,
+      "presence_votes": 68.892598775737298,
+      "privzdignjeno": 1.1618108766108335,
+      "problematicno": 0.660860764378531,
+      "speeches_per_session": 2.0,
+      "spoken_words": 77072,
+      "vocabulary_size": 92.0
+    }
+  }, {
+    "person": {
+      "district": [50,
+        49
+      ],
+      "gender": "m",
+      "gov_id": "P299",
+      "has_function": false,
+      "id": 1354,
+      "is_active": false,
+      "name": "Bojan Krajnc",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 1.068181619341685,
+      "presence_sessions": 96.153846153846203,
+      "presence_votes": 97.204161248374504,
+      "privzdignjeno": 1.3509100325057128,
+      "problematicno": 1.39744376441638,
+      "speeches_per_session": 1.0,
+      "spoken_words": 47529,
+      "vocabulary_size": 119.0
+    }
+  }, {
+    "person": {
+      "district": [44],
+      "gender": "m",
+      "gov_id": "P277",
+      "has_function": false,
+      "id": 64,
+      "is_active": false,
+      "name": "Bojan Podkrajšek",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 9.0,
+      "preprosto": 1.0864739583325103,
+      "presence_sessions": 81.538461538461505,
+      "presence_votes": 75.403450194769107,
+      "privzdignjeno": 0.8053025513462495,
+      "problematicno": 1.168326877216512,
+      "speeches_per_session": 2.0,
+      "spoken_words": 69523,
+      "vocabulary_size": 92.0
+    }
+  }, {
+    "person": {
+      "district": [45],
+      "gender": "f",
+      "gov_id": "P275",
+      "has_function": false,
+      "id": 61,
+      "is_active": false,
+      "name": "Bojana Muršič",
+      "party": {
+        "acronym": "SD",
+        "id": 7,
+        "is_coalition": true,
+        "name": "PS Socialni Demokrati"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.5562787240284927,
+      "presence_sessions": 96.923076923076906,
+      "presence_votes": 89.593767390094598,
+      "privzdignjeno": 0.5789996234040995,
+      "problematicno": 0.5547595755779695,
+      "speeches_per_session": 24.0,
+      "spoken_words": 194750,
+      "vocabulary_size": 160.0
+    }
+  }, {
+    "person": {
+      "district": [46],
+      "gender": "m",
+      "gov_id": "P281",
+      "has_function": false,
+      "id": 70,
+      "is_active": false,
+      "name": "Branislav Rajić",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 2.5588069967073324,
+      "presence_sessions": 86.153846153846203,
+      "presence_votes": 95.269894268224803,
+      "privzdignjeno": 2.790144830036985,
+      "problematicno": 2.470808988256319,
+      "speeches_per_session": 2.0,
+      "spoken_words": 28717,
+      "vocabulary_size": 136.0
+    }
+  }, {
+    "person": {
+      "district": [60],
+      "gender": "m",
+      "gov_id": "P016",
+      "has_function": false,
+      "id": 26,
+      "is_active": false,
+      "name": "Branko Grims",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 17.0,
+      "preprosto": 0.6737051273482935,
+      "presence_sessions": 83.076923076923094,
+      "presence_votes": 56.816917084028901,
+      "privzdignjeno": 0.43271014491070975,
+      "problematicno": 0.8279552153228005,
+      "speeches_per_session": 5.0,
+      "spoken_words": 335052,
+      "vocabulary_size": 95.0
+    }
+  }, {
+    "person": {
+      "district": [62],
+      "gender": "m",
+      "gov_id": "P295",
+      "has_function": false,
+      "id": 89,
+      "is_active": false,
+      "name": "Branko Zorman",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.2557664876037085,
+      "presence_sessions": 90.769230769230802,
+      "presence_votes": 95.214245965498094,
+      "privzdignjeno": 1.3070575810280232,
+      "problematicno": 1.3058557788245997,
+      "speeches_per_session": 2.0,
+      "spoken_words": 52866,
+      "vocabulary_size": 107.0
+    }
+  }, {
+    "person": {
+      "district": [55],
+      "gender": "m",
+      "gov_id": "P040",
+      "has_function": false,
+      "id": 47,
+      "is_active": false,
+      "name": "Danijel Krivec",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 18.0,
+      "preprosto": 0.7386815875979805,
+      "presence_sessions": 89.230769230769198,
+      "presence_votes": 72.175848636616607,
+      "privzdignjeno": 0.7310402073726252,
+      "problematicno": 0.49110954194025885,
+      "speeches_per_session": 4.0,
+      "spoken_words": 150414,
+      "vocabulary_size": 93.0
+    }
+  }, {
+    "person": {
+      "district": [39],
+      "gender": "m",
+      "gov_id": "P282",
+      "has_function": false,
+      "id": 71,
+      "is_active": false,
+      "name": "Danilo Anton Ranc",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.8639040256980132,
+      "presence_sessions": 96.923076923076906,
+      "presence_votes": 97.440178074568706,
+      "privzdignjeno": 0.9060017550653865,
+      "problematicno": 0.9289889415367245,
+      "speeches_per_session": 3.0,
+      "spoken_words": 87476,
+      "vocabulary_size": 104.0
+    }
+  }, {
+    "person": {
+      "district": [74],
+      "gender": "m",
+      "gov_id": "P272",
+      "has_function": false,
+      "id": 57,
+      "is_active": false,
+      "name": "Dragan Matić",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 1.0312474230741764,
+      "presence_sessions": 93.846153846153797,
+      "presence_votes": 92.765720645520304,
+      "privzdignjeno": 0.9029922602848724,
+      "problematicno": 1.2447282099268435,
+      "speeches_per_session": 10.0,
+      "spoken_words": 141054,
+      "vocabulary_size": 125.0
+    }
+  }, {
+    "person": {
+      "district": [20],
+      "gender": "m",
+      "gov_id": "P300",
+      "has_function": false,
+      "id": 1357,
+      "is_active": false,
+      "name": "Dušan Radič",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 3.176266418111879,
+      "presence_sessions": 93.877551020408205,
+      "presence_votes": 95.482974287699804,
+      "privzdignjeno": 4.343175521872764,
+      "problematicno": 5.0515851263741585,
+      "speeches_per_session": 1.0,
+      "spoken_words": 9823,
+      "vocabulary_size": 153.0
+    }
+  }, {
+    "person": {
+      "district": [99],
+      "gender": "m",
+      "gov_id": "P296",
+      "has_function": false,
+      "id": 92,
+      "is_active": false,
+      "name": "Dušan Verbič",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.4208488856606632,
+      "presence_sessions": 88.8888888888889,
+      "presence_votes": 96.528555431130997,
+      "privzdignjeno": 0.5484381060614907,
+      "problematicno": 0.4162873924897522,
+      "speeches_per_session": 4.0,
+      "spoken_words": 189990,
+      "vocabulary_size": 114.0
+    }
+  }, {
+    "person": {
+      "district": [86],
+      "gender": "f",
+      "gov_id": "P247",
+      "has_function": false,
+      "id": 16,
+      "is_active": false,
+      "name": "Erika Dekleva",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.6097951878567132,
+      "presence_sessions": 89.230769230769198,
+      "presence_votes": 90.372843628269294,
+      "privzdignjeno": 1.3604863845275168,
+      "problematicno": 1.3950048101685306,
+      "speeches_per_session": 1.0,
+      "spoken_words": 43840,
+      "vocabulary_size": 112.0
+    }
+  }, {
+    "person": {
+      "district": [89],
+      "gender": "f",
+      "gov_id": "P023",
+      "has_function": false,
+      "id": 35,
+      "is_active": false,
+      "name": "Eva Irgl",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 13.0,
+      "preprosto": 0.7545248277726422,
+      "presence_sessions": 81.538461538461505,
+      "presence_votes": 70.562047857540307,
+      "privzdignjeno": 0.6937196327942641,
+      "problematicno": 0.8500059533638841,
+      "speeches_per_session": 3.0,
+      "spoken_words": 163202,
+      "vocabulary_size": 105.0
+    }
+  }, {
+    "person": {
+      "district": [24],
+      "gender": "m",
+      "gov_id": "P167",
+      "has_function": false,
+      "id": 10,
+      "is_active": false,
+      "name": "Franc Breznik",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 29.0,
+      "preprosto": 0.5199704110225931,
+      "presence_sessions": 78.461538461538495,
+      "presence_votes": 57.762938230384002,
+      "privzdignjeno": 0.4804786711057638,
+      "problematicno": 0.5219731924256162,
+      "speeches_per_session": 4.0,
+      "spoken_words": 451335,
+      "vocabulary_size": 107.0
+    }
+  }, {
+    "person": {
+      "district": [19],
+      "gender": "m",
+      "gov_id": "P122",
+      "has_function": false,
+      "id": 37,
+      "is_active": false,
+      "name": "Franc Jurša",
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.234575225098198,
+      "presence_sessions": 89.230769230769198,
+      "presence_votes": 92.042292710072303,
+      "privzdignjeno": 0.9494727934043512,
+      "problematicno": 1.3908041890508038,
+      "speeches_per_session": 2.0,
+      "spoken_words": 92310,
+      "vocabulary_size": 96.0
+    }
+  }, {
+    "person": {
+      "district": [17],
+      "gender": "m",
+      "gov_id": "P267",
+      "has_function": false,
+      "id": 50,
+      "is_active": false,
+      "name": "Franc Laj",
+      "party": {
+        "acronym": "PS NP",
+        "id": 109,
+        "is_coalition": false,
+        "name": "PS nepovezanih poslancev "
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.0283731168216241,
+      "presence_sessions": 83.076923076923094,
+      "presence_votes": 73.288814691151899,
+      "privzdignjeno": 1.0703764527368895,
+      "problematicno": 0.731689449322764,
+      "speeches_per_session": 1.0,
+      "spoken_words": 69041,
+      "vocabulary_size": 92.0
+    }
+  }, {
+    "person": {
+      "district": [49],
+      "gender": "m",
+      "gov_id": "P290",
+      "has_function": false,
+      "id": 82,
+      "is_active": false,
+      "name": "Franc Trček ",
+      "party": {
+        "acronym": "ZL",
+        "id": 8,
+        "is_coalition": false,
+        "name": "PS Združena Levica"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 28.0,
+      "preprosto": 0.6400439966949861,
+      "presence_sessions": 73.846153846153896,
+      "presence_votes": 59.9888703394546,
+      "privzdignjeno": 0.4331309894711586,
+      "problematicno": 0.7067601949691272,
+      "speeches_per_session": 6.0,
+      "spoken_words": 582162,
+      "vocabulary_size": 107.0
+    }
+  }, {
+    "person": {
+      "district": [10],
+      "gender": "m",
+      "gov_id": "P294",
+      "has_function": false,
+      "id": 88,
+      "is_active": false,
+      "name": "Igor Zorčič",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.5825908282359653,
+      "presence_sessions": 93.846153846153797,
+      "presence_votes": 94.268224819143001,
+      "privzdignjeno": 0.5494487380174777,
+      "problematicno": 0.6100952765662662,
+      "speeches_per_session": 12.0,
+      "spoken_words": 233816,
+      "vocabulary_size": 121.0
+    }
+  }, {
+    "person": {
+      "district": [15],
+      "gender": "f",
+      "gov_id": "P253",
+      "has_function": false,
+      "id": 27,
+      "is_active": false,
+      "name": "Irena Grošelj Košnik",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.5333757110743613,
+      "presence_sessions": 87.692307692307693,
+      "presence_votes": 82.582081246521994,
+      "privzdignjeno": 2.371841656994759,
+      "problematicno": 2.1592703698769626,
+      "speeches_per_session": 1.0,
+      "spoken_words": 28643,
+      "vocabulary_size": 108.0
+    }
+  }, {
+    "person": {
+      "district": [58],
+      "gender": "f",
+      "gov_id": "P264",
+      "has_function": false,
+      "id": 44,
+      "is_active": false,
+      "name": "Irena Kotnik",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.5810805893231064,
+      "presence_sessions": 96.923076923076906,
+      "presence_votes": 90.484140233722897,
+      "privzdignjeno": 2.0570736985051434,
+      "problematicno": 2.6717369612077535,
+      "speeches_per_session": 1.0,
+      "spoken_words": 22666,
+      "vocabulary_size": 114.0
+    }
+  }, {
+    "person": {
+      "district": [92],
+      "gender": "f",
+      "gov_id": "P169",
+      "has_function": false,
+      "id": 17,
+      "is_active": false,
+      "name": "Iva Dimic",
+      "party": {
+        "acronym": "NSI",
+        "id": 6,
+        "is_coalition": false,
+        "name": "PS Nova Slovenija"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 0.5381091329071152,
+      "presence_sessions": 87.692307692307693,
+      "presence_votes": 62.715637173066199,
+      "privzdignjeno": 0.4484761850401525,
+      "problematicno": 0.43488547620283613,
+      "speeches_per_session": 11.0,
+      "spoken_words": 321696,
+      "vocabulary_size": 120.0
+    }
+  }, {
+    "person": {
+      "district": [14],
+      "gender": "m",
+      "gov_id": "P176",
+      "has_function": false,
+      "id": 34,
+      "is_active": false,
+      "name": "Ivan Hršak",
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 2.238586486700375,
+      "presence_sessions": 92.307692307692307,
+      "presence_votes": 87.590428491930993,
+      "privzdignjeno": 1.751646484657666,
+      "problematicno": 1.2877622628185046,
+      "speeches_per_session": 5.0,
+      "spoken_words": 40234,
+      "vocabulary_size": 132.0
+    }
+  }, {
+    "person": {
+      "district": [52],
+      "gender": "m",
+      "gov_id": "P279",
+      "has_function": false,
+      "id": 68,
+      "is_active": false,
+      "name": "Ivan Prelog",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 2.0,
+      "preprosto": 4.765172344966507,
+      "presence_sessions": 96.923076923076906,
+      "presence_votes": 97.607122982749004,
+      "privzdignjeno": 3.5820800858544826,
+      "problematicno": 2.684089848960518,
+      "speeches_per_session": 1.0,
+      "spoken_words": 9151,
+      "vocabulary_size": 130.0
+    }
+  }, {
+    "person": {
+      "district": [40],
+      "gender": "m",
+      "gov_id": "P286",
+      "has_function": false,
+      "id": 76,
+      "is_active": false,
+      "name": "Ivan Škodnik",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.047171411871055,
+      "presence_sessions": 96.923076923076906,
+      "presence_votes": 97.495826377295501,
+      "privzdignjeno": 0.9315748323394348,
+      "problematicno": 0.9074503189290885,
+      "speeches_per_session": 1.0,
+      "spoken_words": 62833,
+      "vocabulary_size": 84.0
+    }
+  }, {
+    "person": {
+      "district": [36],
+      "gender": "m",
+      "gov_id": "P301",
+      "has_function": false,
+      "id": 1356,
+      "is_active": false,
+      "name": "Jan Škoberne",
+      "party": {
+        "acronym": "SD",
+        "id": 7,
+        "is_coalition": true,
+        "name": "PS Socialni Demokrati"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 2.0,
+      "preprosto": 0.7861033258389972,
+      "presence_sessions": 82.2222222222222,
+      "presence_votes": 81.0948905109489,
+      "privzdignjeno": 1.008153190472958,
+      "problematicno": 0.47441814820357203,
+      "speeches_per_session": 6.0,
+      "spoken_words": 124297,
+      "vocabulary_size": 116.0
+    }
+  }, {
+    "person": {
+      "district": [71],
+      "gender": "m",
+      "gov_id": "P025",
+      "has_function": false,
+      "id": 36,
+      "is_active": false,
+      "name": "Janez Janša",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.1533423598477826,
+      "presence_sessions": 67.1875,
+      "presence_votes": 40.068493150684901,
+      "privzdignjeno": 1.0356823494482776,
+      "problematicno": 0.917147106647258,
+      "speeches_per_session": 4.0,
+      "spoken_words": 126126,
+      "vocabulary_size": 81.0
+    }
+  }, {
+    "person": {
+      "district": [76],
+      "gender": "m",
+      "gov_id": "P191",
+      "has_function": false,
+      "id": 59,
+      "is_active": false,
+      "name": "Jani Möderndorfer",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.48278452510376624,
+      "presence_sessions": 86.153846153846203,
+      "presence_votes": 71.841958820255996,
+      "privzdignjeno": 0.37631935834882524,
+      "problematicno": 0.5221232187573015,
+      "speeches_per_session": 4.0,
+      "spoken_words": 637135,
+      "vocabulary_size": 88.0
+    }
+  }, {
+    "person": {
+      "district": [31],
+      "gender": "f",
+      "gov_id": "P284",
+      "has_function": false,
+      "id": 73,
+      "is_active": false,
+      "name": "Janja Sluga",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.7772015874956483,
+      "presence_sessions": 92.307692307692307,
+      "presence_votes": 92.376182526432899,
+      "privzdignjeno": 0.9566106987987075,
+      "problematicno": 0.7504734317759751,
+      "speeches_per_session": 3.0,
+      "spoken_words": 98569,
+      "vocabulary_size": 115.0
+    }
+  }, {
+    "person": {
+      "district": [69],
+      "gender": "m",
+      "gov_id": "P081",
+      "has_function": false,
+      "id": 83,
+      "is_active": false,
+      "name": "Janko Veber",
+      "party": {
+        "acronym": "SD",
+        "id": 7,
+        "is_coalition": true,
+        "name": "PS Socialni Demokrati"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 3.0,
+      "preprosto": 0.32239429830388544,
+      "presence_sessions": 90.196078431372598,
+      "presence_votes": 88.981868898186903,
+      "privzdignjeno": 0.33929078677587526,
+      "problematicno": 0.18159579565978753,
+      "speeches_per_session": 3.0,
+      "spoken_words": 325706,
+      "vocabulary_size": 97.0
+    }
+  }, {
+    "person": {
+      "district": [48],
+      "gender": "f",
+      "gov_id": "P274",
+      "has_function": false,
+      "id": 60,
+      "is_active": false,
+      "name": "Jasna Murgel",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.7485270391296993,
+      "presence_sessions": 100.0,
+      "presence_votes": 94.7134112409571,
+      "privzdignjeno": 0.7924181678929649,
+      "problematicno": 0.7783838550423688,
+      "speeches_per_session": 2.0,
+      "spoken_words": 105891,
+      "vocabulary_size": 97.0
+    }
+  }, {
+    "person": {
+      "district": [30],
+      "gender": "f",
+      "gov_id": "P252",
+      "has_function": false,
+      "id": 23,
+      "is_active": false,
+      "name": "Jelka Godec",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 21.0,
+      "preprosto": 0.5701665304148466,
+      "presence_sessions": 78.461538461538495,
+      "presence_votes": 45.854201446855903,
+      "privzdignjeno": 0.46077171503414716,
+      "problematicno": 0.46998884539977603,
+      "speeches_per_session": 4.0,
+      "spoken_words": 240959,
+      "vocabulary_size": 98.0
+    }
+  }, {
+    "person": {
+      "district": [89],
+      "gender": "m",
+      "gov_id": "P292",
+      "has_function": false,
+      "id": 86,
+      "is_active": false,
+      "name": "Jernej Vrtovec",
+      "party": {
+        "acronym": "NSI",
+        "id": 6,
+        "is_coalition": false,
+        "name": "PS Nova Slovenija"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 0.5908688390931521,
+      "presence_sessions": 84.615384615384599,
+      "presence_votes": 61.046188091263197,
+      "privzdignjeno": 0.558871367376884,
+      "problematicno": 0.6180944389669768,
+      "speeches_per_session": 3.0,
+      "spoken_words": 261281,
+      "vocabulary_size": 114.0
+    }
+  }, {
+    "person": {
+      "district": [70],
+      "gender": "m",
+      "gov_id": "P077",
+      "has_function": false,
+      "id": 78,
+      "is_active": false,
+      "name": "Jože Tanko",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 11.0,
+      "preprosto": 0.502661471325109,
+      "presence_sessions": 96.923076923076906,
+      "presence_votes": 83.361157484696705,
+      "privzdignjeno": 0.56679177037383,
+      "problematicno": 0.7016831614124122,
+      "speeches_per_session": 7.0,
+      "spoken_words": 454044,
+      "vocabulary_size": 94.0
+    }
+  }, {
+    "person": {
+      "district": [17],
+      "gender": "m",
+      "gov_id": "P020",
+      "has_function": false,
+      "id": 32,
+      "is_active": false,
+      "name": "Jožef Horvat",
+      "party": {
+        "acronym": "NSI",
+        "id": 6,
+        "is_coalition": false,
+        "name": "PS Nova Slovenija"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 2.0,
+      "preprosto": 0.36265407397225186,
+      "presence_sessions": 84.615384615384599,
+      "presence_votes": 73.010573177518097,
+      "privzdignjeno": 0.30556810343628765,
+      "problematicno": 0.3676914257656065,
+      "speeches_per_session": 7.0,
+      "spoken_words": 704233,
+      "vocabulary_size": 135.0
+    }
+  }, {
+    "person": {
+      "district": [66],
+      "gender": "f",
+      "gov_id": "P158",
+      "has_function": false,
+      "id": 5,
+      "is_active": false,
+      "name": "Julijana Bizjak Mlakar",
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 2.0,
+      "preprosto": 0.7829727561621591,
+      "presence_sessions": 100.0,
+      "presence_votes": 91.938250428816502,
+      "privzdignjeno": 0.7705008753645712,
+      "problematicno": 0.6735683690432863,
+      "speeches_per_session": 3.0,
+      "spoken_words": 134269,
+      "vocabulary_size": 99.0
+    }
+  }, {
+    "person": {
+      "district": [78],
+      "gender": "m",
+      "gov_id": "P283",
+      "has_function": false,
+      "id": 72,
+      "is_active": false,
+      "name": "Kamal Izidor Shaker",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.5294960362015121,
+      "presence_sessions": 93.846153846153797,
+      "presence_votes": 90.762381747356699,
+      "privzdignjeno": 0.5541848058902571,
+      "problematicno": 0.5368508627399803,
+      "speeches_per_session": 11.0,
+      "spoken_words": 215393,
+      "vocabulary_size": 129.0
+    }
+  }, {
+    "person": {
+      "district": [51],
+      "gender": "f",
+      "gov_id": "P263",
+      "has_function": false,
+      "id": 43,
+      "is_active": false,
+      "name": "Ksenija Korenjak Kramar",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.2291890327044503,
+      "presence_sessions": 87.692307692307693,
+      "presence_votes": 80.745687256538702,
+      "privzdignjeno": 1.2664714069387661,
+      "problematicno": 1.0070810200015006,
+      "speeches_per_session": 5.0,
+      "spoken_words": 52027,
+      "vocabulary_size": 112.0
+    }
+  }, {
+    "person": {
+      "district": [34],
+      "gender": "m",
+      "gov_id": "P212",
+      "has_function": false,
+      "id": 91,
+      "is_active": false,
+      "name": "Ljubo Žnidar",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 26.0,
+      "preprosto": 0.857301916574752,
+      "presence_sessions": 89.230769230769198,
+      "presence_votes": 73.121869782971601,
+      "privzdignjeno": 0.7435982859541159,
+      "problematicno": 0.7511691748345861,
+      "speeches_per_session": 2.0,
+      "spoken_words": 111728,
+      "vocabulary_size": 99.0
+    }
+  }, {
+    "person": {
+      "district": [70],
+      "gender": "f",
+      "gov_id": "P193",
+      "has_function": false,
+      "id": 63,
+      "is_active": false,
+      "name": "Ljudmila Novak",
+      "party": {
+        "acronym": "NSI",
+        "id": 6,
+        "is_coalition": false,
+        "name": "PS Nova Slovenija"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 2.0,
+      "preprosto": 0.9145813193134097,
+      "presence_sessions": 80.0,
+      "presence_votes": 67.334446299387906,
+      "privzdignjeno": 0.7879922047728458,
+      "problematicno": 1.0303167472257708,
+      "speeches_per_session": 3.0,
+      "spoken_words": 121829,
+      "vocabulary_size": 101.0
+    }
+  }, {
+    "person": {
+      "district": [15],
+      "gender": "m",
+      "gov_id": "P273",
+      "has_function": false,
+      "id": 58,
+      "is_active": false,
+      "name": "Luka Mesec",
+      "party": {
+        "acronym": "ZL",
+        "id": 8,
+        "is_coalition": false,
+        "name": "PS Združena Levica"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 6.0,
+      "preprosto": 0.38061403758012824,
+      "presence_sessions": 86.153846153846203,
+      "presence_votes": 76.794657762938201,
+      "privzdignjeno": 0.45811095712476874,
+      "problematicno": 0.2858524870829579,
+      "speeches_per_session": 5.0,
+      "spoken_words": 390160,
+      "vocabulary_size": 111.0
+    }
+  }, {
+    "person": {
+      "district": [91],
+      "gender": "m",
+      "gov_id": "P117",
+      "has_function": false,
+      "id": 24,
+      "is_active": false,
+      "name": "László Göncz",
+      "party": {
+        "acronym": "IMNS",
+        "id": 2,
+        "is_coalition": false,
+        "name": "PS italijanske in madžarske narodne skupnosti"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 1.9014995177797451,
+      "presence_sessions": 89.230769230769198,
+      "presence_votes": 94.657762938230405,
+      "privzdignjeno": 2.2086336542620697,
+      "problematicno": 1.6764450440917806,
+      "speeches_per_session": 1.0,
+      "spoken_words": 23775,
+      "vocabulary_size": 94.0
+    }
+  }, {
+    "person": {
+      "district": [37],
+      "gender": "f",
+      "gov_id": "P297",
+      "has_function": false,
+      "id": 96,
+      "is_active": false,
+      "name": "Marija Antonija Kovačič",
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.353118900285423,
+      "presence_sessions": 95.081967213114794,
+      "presence_votes": 93.862612612612594,
+      "privzdignjeno": 1.7909109735780773,
+      "problematicno": 1.3549768348874591,
+      "speeches_per_session": 2.0,
+      "spoken_words": 36497,
+      "vocabulary_size": 148.0
+    }
+  }, {
+    "person": {
+      "district": [22],
+      "gender": "f",
+      "gov_id": "P298",
+      "has_function": false,
+      "id": 95,
+      "is_active": false,
+      "name": "Marija Bačič",
+      "party": {
+        "acronym": "SD",
+        "id": 7,
+        "is_coalition": true,
+        "name": "PS Socialni Demokrati"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 0.9800940322705687,
+      "presence_sessions": 86.885245901639294,
+      "presence_votes": 91.610360360360403,
+      "privzdignjeno": 1.4476065703157697,
+      "problematicno": 1.7034990389255404,
+      "speeches_per_session": 2.0,
+      "spoken_words": 64151,
+      "vocabulary_size": 134.0
+    }
+  }, {
+    "person": {
+      "district": [25],
+      "gender": "m",
+      "gov_id": "P098",
+      "has_function": false,
+      "id": 66,
+      "is_active": false,
+      "name": "Marijan Pojbič",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 26.0,
+      "preprosto": 0.5961401251642436,
+      "presence_sessions": 76.923076923076906,
+      "presence_votes": 57.317751808569803,
+      "privzdignjeno": 0.45078270971382584,
+      "problematicno": 0.8782180443202038,
+      "speeches_per_session": 4.0,
+      "spoken_words": 242460,
+      "vocabulary_size": 88.0
+    }
+  }, {
+    "person": {
+      "district": [69],
+      "gender": "f",
+      "gov_id": "P269",
+      "has_function": false,
+      "id": 52,
+      "is_active": false,
+      "name": "Marinka Levičar",
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.4559758678542818,
+      "presence_sessions": 87.692307692307693,
+      "presence_votes": 87.868670005564795,
+      "privzdignjeno": 1.1786789805810756,
+      "problematicno": 1.8745393279539115,
+      "speeches_per_session": 3.0,
+      "spoken_words": 50233,
+      "vocabulary_size": 109.0
+    }
+  }, {
+    "person": {
+      "district": [16],
+      "gender": "m",
+      "gov_id": "P249",
+      "has_function": false,
+      "id": 19,
+      "is_active": false,
+      "name": "Marjan Dolinšek",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.5689286223655112,
+      "presence_sessions": 96.923076923076906,
+      "presence_votes": 87.646076794657802,
+      "privzdignjeno": 1.4431256919536526,
+      "problematicno": 1.4797408521308162,
+      "speeches_per_session": 3.0,
+      "spoken_words": 49733,
+      "vocabulary_size": 117.0
+    }
+  }, {
+    "person": {
+      "district": [45],
+      "gender": "f",
+      "gov_id": "P186",
+      "has_function": false,
+      "id": 45,
+      "is_active": false,
+      "name": "Marjana Kotnik Poropat",
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.0243599752743326,
+      "presence_sessions": 96.923076923076906,
+      "presence_votes": 87.423483583750695,
+      "privzdignjeno": 1.0496691734207504,
+      "problematicno": 0.6440859412353891,
+      "speeches_per_session": 2.0,
+      "spoken_words": 74959,
+      "vocabulary_size": 114.0
+    }
+  }, {
+    "person": {
+      "district": [83],
+      "gender": "m",
+      "gov_id": "P250",
+      "has_function": false,
+      "id": 21,
+      "is_active": false,
+      "name": "Marko Ferluga",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 3.0,
+      "preprosto": 0.9829450270110389,
+      "presence_sessions": 93.846153846153797,
+      "presence_votes": 92.320534223706204,
+      "privzdignjeno": 0.8441360375530989,
+      "problematicno": 0.8551669168180215,
+      "speeches_per_session": 2.0,
+      "spoken_words": 189106,
+      "vocabulary_size": 83.0
+    }
+  }, {
+    "person": {
+      "district": [64],
+      "gender": "m",
+      "gov_id": "P196",
+      "has_function": false,
+      "id": 65,
+      "is_active": false,
+      "name": "Marko Pogačnik",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 14.0,
+      "preprosto": 0.4471615116982905,
+      "presence_sessions": 78.461538461538495,
+      "presence_votes": 78.909293266555395,
+      "privzdignjeno": 0.3692813274508482,
+      "problematicno": 0.3405616465774962,
+      "speeches_per_session": 7.0,
+      "spoken_words": 287150,
+      "vocabulary_size": 98.0
+    }
+  }, {
+    "person": {
+      "district": [57],
+      "gender": "f",
+      "gov_id": "P287",
+      "has_function": false,
+      "id": 77,
+      "is_active": false,
+      "name": "Maruša Škopac",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.5384106048657809,
+      "presence_sessions": 93.846153846153797,
+      "presence_votes": 96.716750139120805,
+      "privzdignjeno": 1.9651657200159651,
+      "problematicno": 1.417981359983067,
+      "speeches_per_session": 1.0,
+      "spoken_words": 23682,
+      "vocabulary_size": 141.0
+    }
+  }, {
+    "person": {
+      "district": [83],
+      "gender": "m",
+      "gov_id": "P288",
+      "has_function": false,
+      "id": 79,
+      "is_active": false,
+      "name": "Matej Tašner Vatovec",
+      "party": {
+        "acronym": "ZL",
+        "id": 8,
+        "is_coalition": false,
+        "name": "PS Združena Levica"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 4.0,
+      "preprosto": 0.4852793659972289,
+      "presence_sessions": 75.384615384615401,
+      "presence_votes": 65.943238731218699,
+      "privzdignjeno": 0.5030217333318739,
+      "problematicno": 0.404954742728336,
+      "speeches_per_session": 4.0,
+      "spoken_words": 285240,
+      "vocabulary_size": 107.0
+    }
+  }, {
+    "person": {
+      "district": [66],
+      "gender": "m",
+      "gov_id": "P204",
+      "has_function": false,
+      "id": 81,
+      "is_active": false,
+      "name": "Matej Tonin",
+      "party": {
+        "acronym": "NSI",
+        "id": 6,
+        "is_coalition": false,
+        "name": "PS Nova Slovenija"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 0.6512008283681543,
+      "presence_sessions": 78.461538461538495,
+      "presence_votes": 55.091819699499197,
+      "privzdignjeno": 0.5279954179059165,
+      "problematicno": 0.6698149485470978,
+      "speeches_per_session": 3.0,
+      "spoken_words": 257677,
+      "vocabulary_size": 100.0
+    }
+  }, {
+    "person": {
+      "district": [13],
+      "gender": "m",
+      "gov_id": "P018",
+      "has_function": false,
+      "id": 30,
+      "is_active": false,
+      "name": "Matjaž Han",
+      "party": {
+        "acronym": "SD",
+        "id": 7,
+        "is_coalition": true,
+        "name": "PS Socialni Demokrati"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.2754308009949904,
+      "presence_sessions": 95.384615384615401,
+      "presence_votes": 92.932665553700602,
+      "privzdignjeno": 0.9199515853388615,
+      "problematicno": 1.247773266434855,
+      "speeches_per_session": 3.0,
+      "spoken_words": 126315,
+      "vocabulary_size": 98.0
+    }
+  }, {
+    "person": {
+      "district": [76],
+      "gender": "m",
+      "gov_id": "P256",
+      "has_function": false,
+      "id": 31,
+      "is_active": false,
+      "name": "Matjaž Hanžek",
+      "party": {
+        "acronym": "ZL",
+        "id": 8,
+        "is_coalition": false,
+        "name": "PS Združena Levica"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 2.0,
+      "preprosto": 1.5135938834894291,
+      "presence_sessions": 75.384615384615401,
+      "presence_votes": 47.690595436839203,
+      "privzdignjeno": 1.1613642082106241,
+      "problematicno": 1.3772213398566884,
+      "speeches_per_session": 3.0,
+      "spoken_words": 67561,
+      "vocabulary_size": 114.0
+    }
+  }, {
+    "person": {
+      "district": [88],
+      "gender": "m",
+      "gov_id": "P276",
+      "has_function": true,
+      "id": 62,
+      "is_active": false,
+      "name": "Matjaž Nemec",
+      "party": {
+        "acronym": "SD",
+        "id": 7,
+        "is_coalition": true,
+        "name": "PS Socialni Demokrati"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 2.0,
+      "preprosto": 0.6313789926696812,
+      "presence_sessions": 90.769230769230802,
+      "presence_votes": 82.971619365609399,
+      "privzdignjeno": 0.7647736663396034,
+      "problematicno": 0.5989698225332235,
+      "speeches_per_session": 9.0,
+      "spoken_words": 156773,
+      "vocabulary_size": 137.0
+    }
+  }, {
+    "person": {
+      "district": [64],
+      "gender": "m",
+      "gov_id": "P262",
+      "has_function": false,
+      "id": 42,
+      "is_active": false,
+      "name": "Miha Kordiš",
+      "party": {
+        "acronym": "ZL",
+        "id": 8,
+        "is_coalition": false,
+        "name": "PS Združena Levica"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 9.0,
+      "preprosto": 0.640875689416881,
+      "presence_sessions": 83.076923076923094,
+      "presence_votes": 71.675013912075698,
+      "privzdignjeno": 0.66705190544409998,
+      "problematicno": 0.5096294948768159,
+      "speeches_per_session": 5.0,
+      "spoken_words": 330705,
+      "vocabulary_size": 123.0
+    }
+  }, {
+    "person": {
+      "district": [76],
+      "gender": "m",
+      "gov_id": "P243",
+      "has_function": true,
+      "id": 11,
+      "is_active": false,
+      "name": "Milan Brglez",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.26932626830936734,
+      "presence_sessions": 98.461538461538495,
+      "presence_votes": 95.826377295492506,
+      "privzdignjeno": 0.3366481085885391,
+      "problematicno": 0.2493765064553414,
+      "speeches_per_session": 50.0,
+      "spoken_words": 484302,
+      "vocabulary_size": 138.0
+    }
+  }, {
+    "person": {
+      "district": [87],
+      "gender": "f",
+      "gov_id": "P235",
+      "has_function": false,
+      "id": 7,
+      "is_active": false,
+      "name": "Mirjam Bon Klanjšček",
+      "party": {
+        "acronym": "PS NP",
+        "id": 109,
+        "is_coalition": false,
+        "name": "PS nepovezanih poslancev "
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 4.0,
+      "preprosto": 0.8065994354816651,
+      "presence_sessions": 92.307692307692307,
+      "presence_votes": 60.990539788536402,
+      "privzdignjeno": 0.7110896436515498,
+      "problematicno": 0.8043966831029109,
+      "speeches_per_session": 15.0,
+      "spoken_words": 142293,
+      "vocabulary_size": 146.0
+    }
+  }, {
+    "person": {
+      "district": [96],
+      "gender": "m",
+      "gov_id": "P257",
+      "has_function": false,
+      "id": 33,
+      "is_active": false,
+      "name": "Mitja Horvat",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.044397384131974,
+      "presence_sessions": 98.461538461538495,
+      "presence_votes": 93.210907067334404,
+      "privzdignjeno": 1.0176687188954987,
+      "problematicno": 1.2015935472333887,
+      "speeches_per_session": 18.0,
+      "spoken_words": 214853,
+      "vocabulary_size": 130.0
+    }
+  }, {
+    "person": {
+      "district": [35],
+      "gender": "f",
+      "gov_id": "P244",
+      "has_function": false,
+      "id": 12,
+      "is_active": false,
+      "name": "Nada Brinovšek",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 26.0,
+      "preprosto": 0.7809672081921241,
+      "presence_sessions": 92.307692307692307,
+      "presence_votes": 59.933222036727898,
+      "privzdignjeno": 0.7882331010583531,
+      "problematicno": 0.9597757932521624,
+      "speeches_per_session": 2.0,
+      "spoken_words": 98517,
+      "vocabulary_size": 113.0
+    }
+  }, {
+    "person": {
+      "district": [101],
+      "gender": "m",
+      "gov_id": "P207",
+      "has_function": false,
+      "id": 85,
+      "is_active": false,
+      "name": "Peter Vilfan",
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.1898259403929086,
+      "presence_sessions": 89.230769230769198,
+      "presence_votes": 75.180856983862,
+      "privzdignjeno": 1.075220601343742,
+      "problematicno": 1.4962516678163118,
+      "speeches_per_session": 7.0,
+      "spoken_words": 64196,
+      "vocabulary_size": 132.0
+    }
+  }, {
+    "person": {
+      "district": [93],
+      "gender": "m",
+      "gov_id": "P255",
+      "has_function": true,
+      "id": 29,
+      "is_active": false,
+      "name": "Primož Hainz",
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 0.7716888704020859,
+      "presence_sessions": 93.846153846153797,
+      "presence_votes": 85.141903171953302,
+      "privzdignjeno": 0.6655152655054749,
+      "problematicno": 0.8196653282324183,
+      "speeches_per_session": 31.0,
+      "spoken_words": 148059,
+      "vocabulary_size": 135.0
+    }
+  }, {
+    "person": {
+      "district": [90],
+      "gender": "m",
+      "gov_id": "P005",
+      "has_function": false,
+      "id": 4,
+      "is_active": false,
+      "name": "Roberto Battelli",
+      "party": {
+        "acronym": "IMNS",
+        "id": 2,
+        "is_coalition": false,
+        "name": "PS italijanske in madžarske narodne skupnosti"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.3086710238879034,
+      "presence_sessions": 64.615384615384599,
+      "presence_votes": 62.9938786867001,
+      "privzdignjeno": 1.259963751023728,
+      "problematicno": 1.3268487772959578,
+      "speeches_per_session": 8.0,
+      "spoken_words": 56186,
+      "vocabulary_size": 103.0
+    }
+  }, {
+    "person": {
+      "district": [37],
+      "gender": "m",
+      "gov_id": "P302",
+      "has_function": false,
+      "id": 1355,
+      "is_active": false,
+      "name": "Saša Tabaković",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 0.979304835883921,
+      "presence_sessions": 97.560975609756099,
+      "presence_votes": 96.333853354134206,
+      "privzdignjeno": 1.4689969480612886,
+      "problematicno": 1.1681266049334371,
+      "speeches_per_session": 2.0,
+      "spoken_words": 57961,
+      "vocabulary_size": 112.0
+    }
+  }, {
+    "person": {
+      "district": [100],
+      "gender": "m",
+      "gov_id": "P293",
+      "has_function": false,
+      "id": 87,
+      "is_active": false,
+      "name": "Simon Zajc",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.9890494860441631,
+      "presence_sessions": 92.307692307692307,
+      "presence_votes": 97.161936560934905,
+      "privzdignjeno": 0.9358606089350157,
+      "problematicno": 1.2155001453020737,
+      "speeches_per_session": 3.0,
+      "spoken_words": 76633,
+      "vocabulary_size": 95.0
+    }
+  }, {
+    "person": {
+      "district": [102],
+      "gender": "f",
+      "gov_id": "P266",
+      "has_function": false,
+      "id": 48,
+      "is_active": false,
+      "name": "Simona Kustec Lipicer",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.9155106427066423,
+      "presence_sessions": 92.307692307692307,
+      "presence_votes": 96.382860322760195,
+      "privzdignjeno": 1.1284391519637718,
+      "problematicno": 0.6513875820495073,
+      "speeches_per_session": 2.0,
+      "spoken_words": 83907,
+      "vocabulary_size": 119.0
+    }
+  }, {
+    "person": {
+      "district": [26],
+      "gender": "f",
+      "gov_id": "P268",
+      "has_function": false,
+      "id": 51,
+      "is_active": false,
+      "name": "Suzana Lep Šimenko",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 25.0,
+      "preprosto": 0.6343501739046802,
+      "presence_sessions": 92.307692307692307,
+      "presence_votes": 65.108514190317194,
+      "privzdignjeno": 0.5998439240350164,
+      "problematicno": 0.5885137446268962,
+      "speeches_per_session": 2.0,
+      "spoken_words": 156367,
+      "vocabulary_size": 106.0
+    }
+  }, {
+    "person": {
+      "district": [101],
+      "gender": "f",
+      "gov_id": "P246",
+      "has_function": false,
+      "id": 14,
+      "is_active": false,
+      "name": "Tanja Cink",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 2.3034712531407804,
+      "presence_sessions": 84.615384615384599,
+      "presence_votes": 82.192543127434604,
+      "privzdignjeno": 2.961685925555976,
+      "problematicno": 3.663477677767804,
+      "speeches_per_session": 1.0,
+      "spoken_words": 14558,
+      "vocabulary_size": 124.0
+    }
+  }, {
+    "person": {
+      "district": [85],
+      "gender": "f",
+      "gov_id": "P304",
+      "has_function": false,
+      "id": 2933,
+      "is_active": false,
+      "name": "Teja Ljubič",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0,
+      "presence_sessions": 100.0,
+      "presence_votes": 96.853146853146896,
+      "privzdignjeno": 0,
+      "problematicno": 0,
+      "speeches_per_session": 1.0,
+      "spoken_words": 555,
+      "vocabulary_size": 70.0
+    }
+  }, {
+    "person": {
+      "district": [80],
+      "gender": "m",
+      "gov_id": "P251",
+      "has_function": false,
+      "id": 22,
+      "is_active": false,
+      "name": "Tomaž Gantar",
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.6847033960312954,
+      "presence_sessions": 93.846153846153797,
+      "presence_votes": 83.583750695603797,
+      "privzdignjeno": 0.6079837815547172,
+      "problematicno": 0.6275381603668818,
+      "speeches_per_session": 13.0,
+      "spoken_words": 156446,
+      "vocabulary_size": 114.0
+    }
+  }, {
+    "person": {
+      "district": [12],
+      "gender": "m",
+      "gov_id": "P187",
+      "has_function": false,
+      "id": 53,
+      "is_active": false,
+      "name": "Tomaž Lisec",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 39.0,
+      "preprosto": 0.5233732973322588,
+      "presence_sessions": 84.615384615384599,
+      "presence_votes": 68.725653867557,
+      "privzdignjeno": 0.40121284026589654,
+      "problematicno": 0.5053743595847283,
+      "speeches_per_session": 7.0,
+      "spoken_words": 358597,
+      "vocabulary_size": 121.0
+    }
+  }, {
+    "person": {
+      "district": [46],
+      "gender": "m",
+      "gov_id": "P280",
+      "has_function": false,
+      "id": 69,
+      "is_active": false,
+      "name": "Uroš Prikl",
+      "party": {
+        "acronym": "DeSUS",
+        "id": 3,
+        "is_coalition": true,
+        "name": "PS Demokratska Stranka Upokojencev Slovenije"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 2.0,
+      "preprosto": 0.47339167544050914,
+      "presence_sessions": 98.461538461538495,
+      "presence_votes": 93.711741791875298,
+      "privzdignjeno": 0.49272709877836723,
+      "problematicno": 0.5068960517430308,
+      "speeches_per_session": 11.0,
+      "spoken_words": 396371,
+      "vocabulary_size": 125.0
+    }
+  }, {
+    "person": {
+      "district": [8],
+      "gender": "f",
+      "gov_id": "P240",
+      "has_function": false,
+      "id": 3,
+      "is_active": false,
+      "name": "Urška Ban",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.3156216460713924,
+      "presence_sessions": 98.461538461538495,
+      "presence_votes": 98.775737340011105,
+      "privzdignjeno": 0.3332740976308388,
+      "problematicno": 0.41739874721264647,
+      "speeches_per_session": 27.0,
+      "spoken_words": 274406,
+      "vocabulary_size": 130.0
+    }
+  }, {
+    "person": {
+      "district": [25],
+      "gender": "f",
+      "gov_id": "P291",
+      "has_function": false,
+      "id": 84,
+      "is_active": false,
+      "name": "Vesna Vervega",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 1.4549715845609577,
+      "presence_sessions": 96.923076923076906,
+      "presence_votes": 93.989983305509199,
+      "privzdignjeno": 1.8980468731413211,
+      "problematicno": 0.7867634601255077,
+      "speeches_per_session": 1.0,
+      "spoken_words": 30102,
+      "vocabulary_size": 137.0
+    }
+  }, {
+    "person": {
+      "district": [42],
+      "gender": "m",
+      "gov_id": "P116",
+      "has_function": false,
+      "id": 25,
+      "is_active": false,
+      "name": "Vinko Gorenak",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 35.0,
+      "preprosto": 0.7080839701521917,
+      "presence_sessions": 84.615384615384599,
+      "presence_votes": 67.278797996661098,
+      "privzdignjeno": 0.3550304963995426,
+      "problematicno": 0.6793216072003609,
+      "speeches_per_session": 6.0,
+      "spoken_words": 433179,
+      "vocabulary_size": 92.0
+    }
+  }, {
+    "person": {
+      "district": [103],
+      "gender": "f",
+      "gov_id": "P289",
+      "has_function": false,
+      "id": 80,
+      "is_active": false,
+      "name": "Violeta Tomić",
+      "party": {
+        "acronym": "ZL",
+        "id": 8,
+        "is_coalition": false,
+        "name": "PS Združena Levica"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 4.0,
+      "preprosto": 0.7672725937932705,
+      "presence_sessions": 86.153846153846203,
+      "presence_votes": 71.452420701168606,
+      "privzdignjeno": 0.700017419330988,
+      "problematicno": 0.48020382318887356,
+      "speeches_per_session": 4.0,
+      "spoken_words": 253664,
+      "vocabulary_size": 129.0
+    }
+  }, {
+    "person": {
+      "district": [84],
+      "gender": "f",
+      "gov_id": "P303",
+      "has_function": false,
+      "id": 2934,
+      "is_active": false,
+      "name": "Vlasta Počkaj",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0,
+      "presence_sessions": 100.0,
+      "presence_votes": 97.2027972027972,
+      "privzdignjeno": 0,
+      "problematicno": 0,
+      "speeches_per_session": 0.0,
+      "spoken_words": 0,
+      "vocabulary_size": 0.0
+    }
+  }, {
+    "person": {
+      "district": [14],
+      "gender": "f",
+      "gov_id": "P285",
+      "has_function": false,
+      "id": 74,
+      "is_active": false,
+      "name": "Vojka Šergan",
+      "party": {
+        "acronym": "SMC",
+        "id": 1,
+        "is_coalition": true,
+        "name": "PS Stranka modernega centra"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 1.0,
+      "preprosto": 0.9557882368802908,
+      "presence_sessions": 96.923076923076906,
+      "presence_votes": 97.829716193656097,
+      "privzdignjeno": 0.9268045321985987,
+      "problematicno": 0.49695608410621506,
+      "speeches_per_session": 1.0,
+      "spoken_words": 70100,
+      "vocabulary_size": 87.0
+    }
+  }, {
+    "person": {
+      "district": [9],
+      "gender": "m",
+      "gov_id": "P129",
+      "has_function": false,
+      "id": 49,
+      "is_active": false,
+      "name": "Zvonko Lah",
+      "party": {
+        "acronym": "NeP - ZL",
+        "id": 111,
+        "is_coalition": false,
+        "name": "Nepovezani poslanec Zvonko Lah"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 0.0,
+      "preprosto": 0.651758670475988,
+      "presence_sessions": 92.307692307692307,
+      "presence_votes": 76.071229827490299,
+      "privzdignjeno": 0.391297100820868,
+      "problematicno": 0.45969513338152174,
+      "speeches_per_session": 3.0,
+      "spoken_words": 325773,
+      "vocabulary_size": 91.0
+    }
+  }, {
+    "person": {
+      "district": [65],
+      "gender": "m",
+      "gov_id": "P270",
+      "has_function": false,
+      "id": 55,
+      "is_active": false,
+      "name": "Žan Mahnič",
+      "party": {
+        "acronym": "SDS",
+        "id": 5,
+        "is_coalition": false,
+        "name": "PS Slovenska Demokratska Stranka"
+      },
+      "type": "mp"
+    },
+    "results": {
+      "number_of_questions": 26.0,
+      "preprosto": 0.6914454826215276,
+      "presence_sessions": 84.615384615384599,
+      "presence_votes": 67.612687813021694,
+      "privzdignjeno": 0.4943305979784642,
+      "problematicno": 0.5192961671783551,
+      "speeches_per_session": 10.0,
+      "spoken_words": 270845,
+      "vocabulary_size": 108.0
+    }
+  }],
+  "districts": [{
+    "91": "Lendava 1"
+  }, {
+    "102": "Ljubljana-Šiška I"
+  }, {
+    "101": "Ljubljana-Šiška II"
+  }, {
+    "100": "Ljubljana-Šiška III"
+  }, {
+    "99": "Ljubljana-Šiška IV"
+  }, {
+    "97": "Ljubljana Vič-Rudnik I"
+  }, {
+    "96": "Ljubljana Vič-Rudnik II"
+  }, {
+    "95": "Ljubljana Vič-Rudnik III"
+  }, {
+    "94": "Ljubljana Vič-Rudnik IV"
+  }, {
+    "93": "Vrhnika"
+  }, {
+    "90": "Koper 1"
+  }, {
+    "92": "Cerknica - Logatec"
+  }, {
+    "89": "Ajdovščina"
+  }, {
+    "88": "Nova Gorica I"
+  }, {
+    "87": "Nova Gorica II"
+  }, {
+    "86": "Postojna"
+  }, {
+    "85": "Ilirska Bistrica"
+  }, {
+    "84": "Sežana"
+  }, {
+    "83": "Koper I"
+  }, {
+    "82": "Koper II"
+  }, {
+    "81": "Izola"
+  }, {
+    "80": "Piran"
+  }, {
+    "79": "Domžale I"
+  }, {
+    "77": "Ljubljana Bežigrad I"
+  }, {
+    "76": "Ljubljana Bežigrad II"
+  }, {
+    "75": "Ljubljana Moste-Polje I"
+  }, {
+    "74": "Ljubljana Moste-Polje II"
+  }, {
+    "73": "Ljubljana Moste-Polje III"
+  }, {
+    "72": "Litija"
+  }, {
+    "71": "Grosuplje"
+  }, {
+    "70": "Ribnica"
+  }, {
+    "69": "Kočevje"
+  }, {
+    "67": "Idrija"
+  }, {
+    "66": "Kamnik"
+  }, {
+    "65": "Škofja Loka II"
+  }, {
+    "64": "Škofja Loka I"
+  }, {
+    "63": "Tržič"
+  }, {
+    "62": "Kranj I"
+  }, {
+    "61": "Kranj II"
+  }, {
+    "60": "Kranj III "
+  }, {
+    "59": "Radovljica I"
+  }, {
+    "58": "Radovljica II"
+  }, {
+    "57": "Jesenice"
+  }, {
+    "55": "Tolmin"
+  }, {
+    "52": "Maribor I"
+  }, {
+    "51": "Maribor II"
+  }, {
+    "50": "Maribor III"
+  }, {
+    "49": "Maribor IV"
+  }, {
+    "48": "Maribor V"
+  }, {
+    "47": "Maribor VI"
+  }, {
+    "46": "Maribor VII"
+  }, {
+    "45": "Ruše"
+  }, {
+    "44": "Slovenske Konjice"
+  }, {
+    "43": "Slovenska Bistrica"
+  }, {
+    "39": "Ravne na Koroškem"
+  }, {
+    "37": "Velenje I"
+  }, {
+    "36": "Velenje II"
+  }, {
+    "35": "Mozirje"
+  }, {
+    "34": "Žalec I"
+  }, {
+    "33": "Žalec II"
+  }, {
+    "32": "Celje I"
+  }, {
+    "31": "Celje II"
+  }, {
+    "30": "Šentjur"
+  }, {
+    "28": "Ptuj I "
+  }, {
+    "27": "Ptuj II"
+  }, {
+    "26": "Ptuj III"
+  }, {
+    "25": "Pesnica"
+  }, {
+    "24": "Lenart"
+  }, {
+    "23": "Gornja Radgona"
+  }, {
+    "22": "Murska Sobota I"
+  }, {
+    "20": "Murska Sobota II"
+  }, {
+    "19": "Ljutomer"
+  }, {
+    "18": "Ormož"
+  }, {
+    "17": "Lendava"
+  }, {
+    "16": "Zagorje"
+  }, {
+    "15": "Trbovlje"
+  }, {
+    "14": "Hrastnik"
+  }, {
+    "13": "Laško"
+  }, {
+    "11": "Krško"
+  }, {
+    "10": "Brežice"
+  }, {
+    "9": "Trebnje"
+  }, {
+    "7": "Novo mesto I"
+  }, {
+    "8": "Novo mesto II"
+  }, {
+    "42": "Šmarje pri Jelšah"
+  }, {
+    "38": "Slovenj Gradec"
+  }, {
+    "12": "Sevnica"
+  }, {
+    "78": "Domžale II"
+  }, {
+    "6": "Črnomelj - Metlika"
+  }, {
+    "40": "Dravograd - Radlje"
+  }, {
+    "103": "Ljubljana - center"
+  }]
 }

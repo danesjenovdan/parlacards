@@ -1,14 +1,14 @@
 {
-  "created_at": "05. 01. 2017",
-  "created_for": "20. 10. 2016",
+  "created_at": "9. 1. 2017",
+  "created_for": "5. 1. 2017",
   "person": {
-    "district": null,
+    "district": [12],
     "gender": "m",
-    "gov_id": "P025",
+    "gov_id": "P187",
     "has_function": false,
-    "id": 36,
-    "is_active": true,
-    "name": "Janez Janša",
+    "id": 53,
+    "is_active": false,
+    "name": "Tomaž Lisec",
     "party": {
       "acronym": "SDS",
       "id": 5,
@@ -18,21 +18,496 @@
     "type": "mp"
   },
   "results": [{
-    "date": "20. 10. 2016",
+    "date": "5. 1. 2017",
     "questions": [{
-      "id": 3,
-      "recipient_text": "minister za infrastrukturo",
+      "id": 762,
+      "recipient_text": "Vlada",
       "session_id": "Unknown",
       "session_name": "Unknown",
-      "title": "v zvezi z nepravilnostmi pri pomoči beguncem",
-      "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/PoslankeInPoslanci/poslanec?idOseba=P268"
+      "title": "v zvezi z naselitvijo beguncev",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0053545a351f4ff5db6230aa250e06165ab8707d336eb9901dba5ba647e"
+    }]
+  }, {
+    "date": "23. 12. 2016",
+    "questions": [{
+      "id": 776,
+      "recipient_text": "ministrica za notranje zadeve",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s sektorskim merjenjem hitrosti na štajerski avtocesti na Trojanah",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b7d446f706af4cfc174120a7aa0371a031936a7335fb835b297417ce"
+    }]
+  }, {
+    "date": "20. 12. 2016",
+    "questions": [{
+      "id": 784,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z odkupom parcel",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005577bd31ed8e3b5cfc116202d1b36dd8a8ee1d3045739391d23dc401a"
+    }]
+  }, {
+    "date": "15. 12. 2016",
+    "questions": [{
+      "id": 798,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z reševanjem problematike podlubnikov",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00589d08e627feef351090f7c84024a92189291e424345dac625e2df0e7"
     }, {
-      "id": 4,
+      "id": 799,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano MiJU - minister za javno upravo",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s kupovanjem kmetijskih zemljišč v obmejnih predelih s strani tujcev",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00588d48b96d98a53e64ff8af06d37d33f285eae06cd7d64b4f76b23ba4"
+    }]
+  }, {
+    "date": "15. 12. 2016",
+    "questions": [{
+      "id": 798,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z reševanjem problematike podlubnikov",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00589d08e627feef351090f7c84024a92189291e424345dac625e2df0e7"
+    }, {
+      "id": 799,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano MiJU - minister za javno upravo",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s kupovanjem kmetijskih zemljišč v obmejnih predelih s strani tujcev",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00588d48b96d98a53e64ff8af06d37d33f285eae06cd7d64b4f76b23ba4"
+    }, {
+      "id": 801,
+      "recipient_text": "ministrica za izobraževanje znanost in šport",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s problematiko športne infrastrukture",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005f5015e8444a4f12807cbfab0de7caa356d510b35d79c7498886feaa0"
+    }]
+  }, {
+    "date": "6. 12. 2016",
+    "questions": [{
+      "id": 860,
+      "recipient_text": "ministrica za izobraževanje znanost in šport",
+      "session_id": 7546,
+      "session_name": "39. izredna seja",
+      "title": "v zvezi s spremembo določila v Pravilniku o šolskem koledarju za osnovne šole, ki velja za učence, ki se šolajo na domu",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005d5c827dbeca93b5cf1d28b3627ad778276270966357391e62eec3a47"
+    }, {
+      "id": 859,
+      "recipient_text": "ministrica za izobraževanje znanost in šport",
+      "session_id": 7546,
+      "session_name": "39. izredna seja",
+      "title": "v zvezi s pripravo zakonodaje s področja visokega šolstva in raziskovalne dejavnosti",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b52282116dc07c9677390f545ac3716356a0216fae9120590fd8a8ab"
+    }]
+  }, {
+    "date": "1. 12. 2016",
+    "questions": [{
+      "id": 871,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z delovanjem podjetja Slovenski državni gozdovi d.o.o.",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00572540075ada3c1fb34c54c339a3b78fc704fbcfc127609835da5dd21"
+    }]
+  }, {
+    "date": "1. 12. 2016",
+    "questions": [{
+      "id": 871,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z delovanjem podjetja Slovenski državni gozdovi d.o.o.",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00572540075ada3c1fb34c54c339a3b78fc704fbcfc127609835da5dd21"
+    }, {
+      "id": 874,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z izračunom katastrskega dohodka pri proizvodnji belih špargljev",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00575bea83c8aba0d8021e3e70172d0da1d290d209929e63dcb86739184"
+    }]
+  }, {
+    "date": "30. 11. 2016",
+    "questions": [{
+      "id": 874,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z izračunom katastrskega dohodka pri proizvodnji belih špargljev",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00575bea83c8aba0d8021e3e70172d0da1d290d209929e63dcb86739184"
+    }, {
+      "id": 882,
+      "recipient_text": "ministrica za izobraževanje znanost in šport",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s pripravništvi na področju šolstva",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0058c46e92d2cd387853fecef9d423feaa057e064a4a05aaf9faf35aefa"
+    }, {
+      "id": 883,
+      "recipient_text": "minister za javno upravo",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z napredovanji v naziv v javnem sektorju",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0058e09fc6ee085a1479cb017e9908de6043362de7e53b72b1098d358b0"
+    }]
+  }, {
+    "date": "29. 11. 2016",
+    "questions": [{
+      "id": 882,
+      "recipient_text": "ministrica za izobraževanje znanost in šport",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s pripravništvi na področju šolstva",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0058c46e92d2cd387853fecef9d423feaa057e064a4a05aaf9faf35aefa"
+    }, {
+      "id": 883,
+      "recipient_text": "minister za javno upravo",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z napredovanji v naziv v javnem sektorju",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0058e09fc6ee085a1479cb017e9908de6043362de7e53b72b1098d358b0"
+    }, {
+      "id": 892,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s podjetjem Slovenski državni gozdovi",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00515aa2d82dc02c6378f6aa21c7db7bc3cc1d675f3be2303faa40b6764"
+    }, {
+      "id": 893,
+      "recipient_text": "ministrica za delo družino socialne zadeve in enake možnosti",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z določbami za dodelitev štipendije",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00514dd300896ee6d356eea56e8358eb7dee4a92e60f1e2168479af262a"
+    }, {
+      "id": 894,
       "recipient_text": "minister za infrastrukturo",
       "session_id": "Unknown",
       "session_name": "Unknown",
-      "title": "v zvezi z nepravilnostmi pri pomoči beguncem",
-      "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/PoslankeInPoslanci/poslanec?idOseba=P268"
+      "title": "v zvezi z vzdrževanjem cest in železnic",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005166eec46cd1dc757675dd2578042c471dcaedf884928fa4ce7f73067"
+    }, {
+      "id": 895,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s konkurenčnostjo države",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005170b3e377ccdc6ad9fae778ff3f0eef0e33a5d8da09312d4c8ba3cc4"
+    }]
+  }, {
+    "date": "25. 11. 2016",
+    "questions": [{
+      "id": 899,
+      "recipient_text": "minister za javno upravo",
+      "session_id": 7523,
+      "session_name": "37. izredna seja",
+      "title": "v zvezi s pasivno volilno zakonodajo",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a29c88241ce73451abfd6e754583447c9e23005ffeb33c78c7895bae"
+    }, {
+      "id": 902,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": 7523,
+      "session_name": "37. izredna seja",
+      "title": "v zvezi s projekti Leader",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a1180d87909210e72433e27842744c5d2a4a0ee960d584a1650e5038"
+    }, {
+      "id": 903,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": 7523,
+      "session_name": "37. izredna seja",
+      "title": "v zvezi z mladimi prevzemniki kmetij",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005d5c47b00d0d35d204cdfbe6f83fc148c52067f7c16446f0186f29b55"
+    }]
+  }, {
+    "date": "25. 11. 2016",
+    "questions": [{
+      "id": 899,
+      "recipient_text": "minister za javno upravo",
+      "session_id": 7523,
+      "session_name": "37. izredna seja",
+      "title": "v zvezi s pasivno volilno zakonodajo",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a29c88241ce73451abfd6e754583447c9e23005ffeb33c78c7895bae"
+    }, {
+      "id": 902,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": 7523,
+      "session_name": "37. izredna seja",
+      "title": "v zvezi s projekti Leader",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a1180d87909210e72433e27842744c5d2a4a0ee960d584a1650e5038"
+    }, {
+      "id": 903,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": 7523,
+      "session_name": "37. izredna seja",
+      "title": "v zvezi z mladimi prevzemniki kmetij",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005d5c47b00d0d35d204cdfbe6f83fc148c52067f7c16446f0186f29b55"
+    }, {
+      "id": 904,
+      "recipient_text": "minister za javno upravo MiIZŠ - ministrica za izobraževanje znanost in šport",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z dvigom plač vzgojiteljic – pomočnic",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0052dfefce3c72357287c0df41020c5a6cf0ec019a1cb5b1790a2407601"
+    }, {
+      "id": 905,
+      "recipient_text": "ministrica za zdravje",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s korupcijo v zdravstvu",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a74bcfe13c4f3ed4f58c88fa76697541f17d946f36204cfb43c2d560"
+    }, {
+      "id": 906,
+      "recipient_text": "ministrica za okolje in prostor",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z izgradnjo HE Mokrice",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0052b5f43d6e0a762a50b05b034488f06dd3fa4812d9b3153c60d6cc2ef"
+    }, {
+      "id": 907,
+      "recipient_text": "ministrica za finance MiGT - minister za gospodarski razvoj in tehnologijo MiDDSZEM - ministrica za delo družino socialne zadeve in enake možnosti",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s plačnim sistemom",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00525703a98a7ba20617a80726d8374a5bd1550dc0276579f981a0bae6a"
+    }]
+  }, {
+    "date": "22. 11. 2016",
+    "questions": [{
+      "id": 917,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s sledljivostjo lesa iz podjetja Slovenski državni gozdovi d.o.o.",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00579e2850f0ed2c7d5bacbbde89d29fb77202d516ffa8025c2b9ab6872"
+    }]
+  }, {
+    "date": "16. 11. 2016",
+    "questions": [{
+      "id": 933,
+      "recipient_text": "ministrica za delo družino socialne zadeve in enake možnosti",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s hibridnimi zaposlitvami",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e3933f694b34ed3b3419818bdafdd4d96cb121b558f137c4cb7bf0fa"
+    }, {
+      "id": 934,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano MiDDSZEM - ministrica za delo družino socialne zadeve in enake možnosti",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s pravilnikom o varstvu pri delu v gozdarstvu",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00582402ce0eb2e83c3021f8008a0854b987e7d2511e53173942a51e0f5"
+    }]
+  }, {
+    "date": "16. 11. 2016",
+    "questions": [{
+      "id": 933,
+      "recipient_text": "ministrica za delo družino socialne zadeve in enake možnosti",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s hibridnimi zaposlitvami",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e3933f694b34ed3b3419818bdafdd4d96cb121b558f137c4cb7bf0fa"
+    }, {
+      "id": 934,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano MiDDSZEM - ministrica za delo družino socialne zadeve in enake možnosti",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s pravilnikom o varstvu pri delu v gozdarstvu",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00582402ce0eb2e83c3021f8008a0854b987e7d2511e53173942a51e0f5"
+    }, {
+      "id": 945,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s pravilnikom o zakupu kmetijskih zemljišč",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0056af73b7de9acbc6d5a05bee5b9d7ff79bafb4dea8698c460169b0883"
+    }, {
+      "id": 946,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s položajem dolgoročnega zakupnika pri nakupu kmetijskega zemljišča",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0056f40f806186537e441f72193645af6d17cda6c7442598fee3a8e333e"
+    }]
+  }, {
+    "date": "15. 11. 2016",
+    "questions": [{
+      "id": 945,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s pravilnikom o zakupu kmetijskih zemljišč",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0056af73b7de9acbc6d5a05bee5b9d7ff79bafb4dea8698c460169b0883"
+    }, {
+      "id": 946,
+      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s položajem dolgoročnega zakupnika pri nakupu kmetijskega zemljišča",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0056f40f806186537e441f72193645af6d17cda6c7442598fee3a8e333e"
+    }, {
+      "id": 989,
+      "recipient_text": "Vlada",
+      "session_id": 5572,
+      "session_name": "24. redna seja",
+      "title": "v zvezi z debirokratizacijo šolstva",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0050ecc780930f1bcf6fba7ad35d32bfcf0c8730bcaa5bdb2bdb7634865"
+    }]
+  }, {
+    "date": "11. 11. 2016",
+    "questions": [{
+      "id": 1004,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s povračilom škode na področju divjih zveri",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005338ce173fe8bef299c9385334d6152d0412015546351d0d76be4998b"
+    }, {
+      "id": 1026,
+      "recipient_text": "ministrica za okolje in prostor",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z izgradnjo hidroelektrarn na Spodnji Savi",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b72bbdede4f8f940bb2f1c10a9129942de91fd2ce92c0b2aa064c6c7"
+    }]
+  }, {
+    "date": "11. 11. 2016",
+    "questions": [{
+      "id": 1004,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s povračilom škode na področju divjih zveri",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005338ce173fe8bef299c9385334d6152d0412015546351d0d76be4998b"
+    }, {
+      "id": 1026,
+      "recipient_text": "ministrica za okolje in prostor",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z izgradnjo hidroelektrarn na Spodnji Savi",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b72bbdede4f8f940bb2f1c10a9129942de91fd2ce92c0b2aa064c6c7"
+    }, {
+      "id": 1061,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s Skladom kmetijskih zemljišč in gozdov Republike Slovenije",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0051ce0e6724cc1d3f9874b03b656aec33bb4bd502b036582b515b599c4"
+    }]
+  }, {
+    "date": "10. 11. 2016",
+    "questions": [{
+      "id": 1061,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s Skladom kmetijskih zemljišč in gozdov Republike Slovenije",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0051ce0e6724cc1d3f9874b03b656aec33bb4bd502b036582b515b599c4"
+    }, {
+      "id": 1093,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s poročili o primanjkljaju in dolgu sektorja države",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005659ea6f07f55caf294b472d44e6f8c9ef0b8052345495bd1a6a0ebf1"
+    }]
+  }, {
+    "date": "9. 11. 2016",
+    "questions": [{
+      "id": 1093,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s poročili o primanjkljaju in dolgu sektorja države",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005659ea6f07f55caf294b472d44e6f8c9ef0b8052345495bd1a6a0ebf1"
+    }, {
+      "id": 1127,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s posvojitvami",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0055a1c84e2471869c78b3322b7d5c67e6134825633abf10f8dd81fbabb"
+    }]
+  }, {
+    "date": "8. 11. 2016",
+    "questions": [{
+      "id": 1127,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s posvojitvami",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0055a1c84e2471869c78b3322b7d5c67e6134825633abf10f8dd81fbabb"
+    }, {
+      "id": 1148,
+      "recipient_text": "Vlada",
+      "session_id": 5585,
+      "session_name": "36. izredna seja",
+      "title": "v zvezi z ustanavljanjem pokrajin",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00560de2db44fd8ed81b076c8139cd900d1dc4cc4619fc438952a491c9d"
+    }]
+  }, {
+    "date": "4. 11. 2016",
+    "questions": [{
+      "id": 1188,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z maturo",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00571081c116eba05c74d29ccdc66899bf1013ea8712902ec9dc88924eb"
+    }]
+  }, {
+    "date": "4. 11. 2016",
+    "questions": [{
+      "id": 1188,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z maturo",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00571081c116eba05c74d29ccdc66899bf1013ea8712902ec9dc88924eb"
+    }, {
+      "id": 1211,
+      "recipient_text": "ministrica za zdravje",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z zdravniško oskrbo",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e2f5943691035e95271bae22b042b730cab9dddca272542fb454f565"
+    }, {
+      "id": 1218,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s koruptivnimi in klientelističnimi delovanji funkcionarjev in državnih uradnikov",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0050ed605821a8ed70bf20c5327c9228a2e0f9eb20732a6478d2f2e443e"
+    }]
+  }, {
+    "date": "3. 11. 2016",
+    "questions": [{
+      "id": 1211,
+      "recipient_text": "ministrica za zdravje",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi z zdravniško oskrbo",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e2f5943691035e95271bae22b042b730cab9dddca272542fb454f565"
+    }, {
+      "id": 1218,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s koruptivnimi in klientelističnimi delovanji funkcionarjev in državnih uradnikov",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0050ed605821a8ed70bf20c5327c9228a2e0f9eb20732a6478d2f2e443e"
+    }, {
+      "id": 1241,
+      "recipient_text": "Vlada",
+      "session_id": "Unknown",
+      "session_name": "Unknown",
+      "title": "v zvezi s črpanjem evropskih sredstev",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005cd4a6d488600f7e602bcca4c4fc920df626c3183446c9c455b9dbf91"
     }]
   }]
 }

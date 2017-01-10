@@ -1,14 +1,14 @@
 {
-  "created_at": "05.01.2017",
-  "created_for": "05.01.2017",
+  "created_at": "09.01.2017",
+  "created_for": "09.01.2017",
   "person": {
-    "district": null,
+    "district": [12],
     "gender": "m",
-    "gov_id": "P025",
+    "gov_id": "P187",
     "has_function": false,
-    "id": 36,
-    "is_active": true,
-    "name": "Janez Janša",
+    "id": 53,
+    "is_active": false,
+    "name": "Tomaž Lisec",
     "party": {
       "acronym": "SDS",
       "id": 5,
@@ -18,31 +18,16 @@
     "type": "mp"
   },
   "results": {
-    "average": 0.022222222222222223,
+    "average": 5.5444444444444398,
     "max": {
       "mps": [{
-        "district": [26],
-        "gender": "f",
-        "gov_id": "P268",
-        "has_function": false,
-        "id": 51,
-        "is_active": true,
-        "name": "Suzana Lep Šimenko",
-        "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "is_coalition": false,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
-        "type": "mp"
-      }, {
-        "district": null,
+        "district": [12],
         "gender": "m",
-        "gov_id": "P025",
+        "gov_id": "P187",
         "has_function": false,
-        "id": 36,
-        "is_active": true,
-        "name": "Janez Janša",
+        "id": 53,
+        "is_active": false,
+        "name": "Tomaž Lisec",
         "party": {
           "acronym": "SDS",
           "id": 5,
@@ -51,8 +36,8 @@
         },
         "type": "mp"
       }],
-      "score": 1
+      "score": 39.0
     },
-    "score": 1
+    "score": 39.0
   }
 }

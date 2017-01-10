@@ -1,0 +1,35 @@
+.card-content-front {
+    height: 100%;
+    overflow-y: auto;
+}
+
+& section {
+    overflow: hidden;
+}
+
+.recent-activity section ul li {
+    min-height: 30px;
+    p {
+        min-height: 30px;
+    }
+}
+
+.recent-activity {
+    section {
+        ul {
+            li {
+                span {
+                    top: -5px;
+                    background-size: 25px;
+                }
+                p {
+                    margin-left: 50px;
+
+                    a {
+                      cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
