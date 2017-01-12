@@ -57,84 +57,84 @@
 
                     %>
 
-                    <div class="bgwhite poslanec poslanec-small">
+                
 
 
 
-                        <div class="me_poslanec clearfix progress_flex">
-                            <div class="column progress_title">
-                                <span class="poslanec_title">
-                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.person.id].slug%><%=urlsData.personLink.pregled%>" class="funblue-light-hover">
-                                        <%= data.person.name %>
-                                    </a>
-                                </span>
-                            </div>
-                            <div class="column progress_bar">
-                                <div class="progress smallbar">
-                                    <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.score/max * 70 %>%;">
-                                        <span class="sr-only"><%= data.results.score %>% Complete</span>
-                                    </div>
-                                    <div class="progress_number">
-                                        <%= data.results.score %>
-                                    </div>
-
+                    <div class="me_poslanec clearfix progress_flex">
+                        <div class="column progress_title">
+                            <span class="poslanec_title">
+                                <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.person.id].slug%><%=urlsData.personLink.pregled%>" class="funblue-light-hover">
+                                    <%= data.person.name %>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="column progress_bar">
+                            <div class="progress smallbar">
+                                <div class="progress-bar red" role="progressbar" aria-valuenow="<%= data.results.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.score/max * 70 %>%;">
+                                    <span class="sr-only"><%= data.results.score %>% Complete</span>
                                 </div>
+                                <div class="progress_number">
+                                    <%= data.results.score %>
+                                </div>
+
                             </div>
                         </div>
-
-                        <div class="other_poslanec clearfix progress_flex">
-                            <div class="column progress_title">
-                                <span class="poslanec_title">
-                                    Povprečje
-                                </span>
-                            </div>
-                            <div class="column progress_bar">
-                                <div class="progress smallbar avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average/max* 70 %>%;">
-                                        <span class="sr-only"><%= data.results.average %>% Complete</span>
-                                    </div>
-                                    <div class="progress_number">
-                                        <%= Math.round(data.results.average) %>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="other_poslanec clearfix progress_flex">
-                            <div class="column progress_title">
-                                <span class="poslanec_title">
-                                    Največ
-                                </span>
-                            </div>
-                            <div class="column progress_bar">
-                                <div class="progress smallbar avgmin">
-                                    <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.max.score/max * 70 %>%;">
-                                        <span class="sr-only"><%= data.results.max.score %>% Complete</span>
-                                        <%
-
-                                        if (data.results.max.mps) {
-                                            for (var i = 0; i < data.results.max.mps.length; i++) {
-
-                                        %>
-                                        <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.max.mps[i].id].slug%><%=urlsData.personLink.pregled%>"
-                                           data-name="<%= data.results.max.mps[i].name %>"
-                                           class="avgminimg img-circle"
-                                           style="background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.max.mps[i]['gov_id'] %>.png');"></a>
-                                        <%
-                                            }
-                                        }
-                                        %>
-                                    </div>
-                                    <div class="progress_number">
-                                        <%= data.results.max.score %>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <div class="other_poslanec clearfix progress_flex">
+                        <div class="column progress_title">
+                            <span class="poslanec_title">
+                                Povprečje
+                            </span>
+                        </div>
+                        <div class="column progress_bar">
+                            <div class="progress smallbar avgmin">
+                                <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.average %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.average/max* 70 %>%;">
+                                    <span class="sr-only"><%= data.results.average %>% Complete</span>
+                                </div>
+                                <div class="progress_number">
+                                    <%= Math.round(data.results.average) %>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="other_poslanec clearfix progress_flex">
+                        <div class="column progress_title">
+                            <span class="poslanec_title">
+                                Največ
+                            </span>
+                        </div>
+                        <div class="column progress_bar">
+                            <div class="progress smallbar avgmin">
+                                <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= data.results.max.score %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= data.results.max.score/max * 70 %>%;">
+                                    <span class="sr-only"><%= data.results.max.score %>% Complete</span>
+                                    <%
+
+                                    if (data.results.max.mps) {
+                                        for (var i = 0; i < data.results.max.mps.length; i++) {
+
+                                    %>
+                                    <a href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[data.results.max.mps[i].id].slug%><%=urlsData.personLink.pregled%>"
+                                        data-name="<%= data.results.max.mps[i].name %>"
+                                        class="avgminimg img-circle"
+                                        style="background-image: url('https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.results.max.mps[i]['gov_id'] %>.png');"></a>
+                                    <%
+                                        }
+                                    }
+                                    %>
+                                </div>
+                                <div class="progress_number">
+                                    <%= data.results.max.score %>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    
                     <!-- delete this placeholder, this is the content of your card -->
                 </div>
                 <div class="card-content-info hidden">

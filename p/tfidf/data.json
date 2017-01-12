@@ -18,6 +18,41 @@
             "tf-idf": 0.18181818181818182
         }
     }, {
+        "term": "poslovilen",
+        "scores": {
+            "tf": 2,
+            "df": 11,
+            "tf-idf": 0.18181818181818182
+        }
+    }, {
+        "term": "poslovilen",
+        "scores": {
+            "tf": 2,
+            "df": 11,
+            "tf-idf": 0.18181818181818182
+        }
+    }, {
+        "term": "poslovilen",
+        "scores": {
+            "tf": 2,
+            "df": 11,
+            "tf-idf": 0.18181818181818182
+        }
+    }, {
+        "term": "poslovilen",
+        "scores": {
+            "tf": 2,
+            "df": 11,
+            "tf-idf": 0.18181818181818182
+        }
+    }, {
+        "term": "poslovilen",
+        "scores": {
+            "tf": 2,
+            "df": 11,
+            "tf-idf": 0.18181818181818182
+        }
+    }, {
         "term": "optimalizirati bebavost",
         "scores": {
             "tf": 3,
