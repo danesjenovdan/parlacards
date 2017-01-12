@@ -47,7 +47,7 @@
                             var icon = 'parlaicon-vprasanje';
                             if (day.questions[j].recipient_text !== 'Vlada') {
                                 if (day.questions[j].recipient_text !== 'predsednik Vlade') {
-                                    var verb = day.questions[j].recipient_text.split(' ')[0] === 'minister' ? 'ministru ' + day.questions[j].recipient_text.split('minister ')[1] : 'ministrici' + day.questions[j].recipient_text.split('ministrica ')[1];
+                                    var verb = day.questions[j].recipient_text.split(' ')[0] === 'minister' ? 'ministru ' + day.questions[j].recipient_text.split('minister ')[1] : 'ministrici ' + day.questions[j].recipient_text.split('ministrica ')[1];
                                 } else {
                                     var verb = 'predsedniku Vlade'
                                 }
