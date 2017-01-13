@@ -22,13 +22,14 @@ import fs from 'fs';
 
 browserSync.create();
 
-const defaultPath = 'newcard';
+const defaultPath = 'p/besedni-zaklad';
 const knownOptions = {
   string: 'name',
   default: { path: process.env.NODE_ENV || defaultPath },
 };
 
 const options = minimist(process.argv.slice(2), knownOptions);
+console.log(process.argv);
 
 function getFileContents(filePath, defaultValue = false) {
   const fullPath = `${options.path}/${filePath}`;
@@ -43,7 +44,7 @@ function getFileContents(filePath, defaultValue = false) {
 const cardData = getFileContents('card.json');
 
 // generate CSS class with card name from path param to use for sandboxing
-const className = `card-${options.path.split('/').pop()}`;
+const className = `card-${options.path.split('/')[1]}`;
 
 // generate random id
 const randomId = (() => {
