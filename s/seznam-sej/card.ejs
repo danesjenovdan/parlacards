@@ -81,11 +81,11 @@
               <% } else { %>
                 <% data.sessions.forEach(function(session, index) { %>
                 <li class="item" data-index="<%= index %>">
-                  <a class="column image" href="<%= urlsData.base + urlsData.sessionLink.glasovanja + session.id %>">
+                  <a class="column image" href="<%= urlsData.base + urlsData.sessionLink.transkript + session.id %>">
                     <img src="https://cdn.parlameter.si/v1/parlassets/icons/seja-<%= session.name.split(' ')[1] %>.svg" alt="parlameter logo">
                   </a>
                   <div class="column wider name">
-                    <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.sessionLink.glasovanja + session.id %>"><%= session.name %></a>
+                    <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.sessionLink.transkript + session.id %>"><%= session.name %></a>
                   </div>
                   <div class="column"><%= formatDate(session.date_ts) %></div>
                   <div class="column optional"><%= formatDate(session.updated_at_ts) %></div>
