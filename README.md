@@ -18,3 +18,9 @@ If you are working on a single card for a while, you may edit `gulpfile.js` and 
 ```bash
 mkdir -p path/to/new/card && cp -R card/* "$_"
 ```
+
+## Updating all cards
+If you made a card-wide change and don't want to manually push-build them one by one, run:
+```bash
+./update-all.sh
+```
