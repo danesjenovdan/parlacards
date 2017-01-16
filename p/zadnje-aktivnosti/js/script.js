@@ -1,5 +1,3 @@
-lastActivity.initalizeScrollbar();
-
 makeEmbedSwitch();
 activateCopyButton();
 addCardRippling();
