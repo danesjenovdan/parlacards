@@ -1,18 +1,81 @@
 ((randomId) => {
-  let data = [];
-  let smalldata = [];
-  let bigdata = [];
+  let time_query;
+  if (typeof query !== 'undefined') {
+    time_query = query;
+  } else {
+    time_query = getQueryParams(customUrl.split('?')[1]);
+    time_query['q'] = customUrl.split('/').pop().split('?')[0];
+  }
 
-  let mydata = raba_data;
-  let raw_data = raba_data.facet_counts.facet_ranges.datetime_dt;
+  function getQueryParams(str) {
+    return (str || document.location.search).replace(/(^\?)/, '').split('&').map(function (n) {
+      return n = n.split('='), this[n[0]] = n[1], this;
+    }.bind({}))[0];
+  }
 
-  let date_formatter = d3.time.format('%Y-%m-%dT%H:%M:%SZ');
+  function generateSearchUrl(queryParams) {
+    let searchurl = 'https://parlameter.si/seje/isci/filter/?q=' + time_query.q;
+    if (queryParams.people && queryParams.people.length > 0) {
+      if (!searchurl.endsWith('?')) {
+        searchurl = `${searchurl  }&people=${  queryParams.people}`;
+      } else {
+        searchurl = `${searchurl  }people=${  queryParams.people}`;
+      }
+    }
+    if (queryParams.parties && queryParams.parties.length > 0) {
+      if (!searchurl.endsWith('?')) {
+        searchurl = `${searchurl  }&parties=${  queryParams.parties}`;
+      } else {
+        searchurl = `${searchurl  }parties=${  queryParams.parties}`;
+      }
+    }
+    if (queryParams.time_filter && queryParams.time_filter.length > 0) {
+      if (!searchurl.endsWith('?')) {
+        searchurl = `${searchurl  }&time_filter=${  queryParams.time_filter}`;
+      } else {
+        searchurl = `${searchurl  }time_filter=${  queryParams.time_filter}`;
+      }
+    }
+    if (queryParams.wb && queryParams.wb.length > 0) {
+      if (!searchurl.endsWith('?')) {
+        searchurl = `${searchurl  }&wb=${  queryParams.wb}`;
+      } else {
+        searchurl = `${searchurl  }wb=${  queryParams.wb}`;
+      }
+    }
+    if (queryParams.dz) {
+      if (!searchurl.endsWith('?')) {
+        searchurl = `${searchurl  }&dz=${  queryParams.dz}`;
+      } else {
+        searchurl = `${searchurl  }dz=${  queryParams.dz}`;
+      }
+    }
+    if (queryParams.council) {
+      if (!searchurl.endsWith('?')) {
+        searchurl = `${searchurl  }&council=${  queryParams.council}`;
+      } else {
+        searchurl = `${searchurl  }council=${  queryParams.council}`;
+      }
+    }
 
-  let ticks = [];
+
+    return searchurl;
+  }
+
+  const data = [];
+  const smalldata = [];
+  const bigdata = [];
+
+  const mydata = raba_data;
+  const raw_data = raba_data.facet_counts.facet_ranges.datetime_dt;
+
+  const date_formatter = d3.time.format('%Y-%m-%dT%H:%M:%SZ');
+
+  const ticks = [];
 
   // create small data
-  let dates = [];
-  let occurences = [];
+  const dates = [];
+  const occurences = [];
   for (let i = 0; i < raw_data.counts.length; i += 1) {
     if (i % 2 === 0 && i > raw_data.counts.length - 25) {
       dates.push(date_formatter.parse(raw_data.counts[i]));
@@ -29,8 +92,8 @@
   }
 
   // create big data
-  let bigDates = [];
-  let bigOccurences = [];
+  const bigDates = [];
+  const bigOccurences = [];
   for (let i = 0; i < raw_data.counts.length; i += 1) {
     if (i % 2 === 0) {
       bigDates.push(date_formatter.parse(raw_data.counts[i]));
@@ -42,45 +105,37 @@
     }
   }
 
-  data.sort((x, y) => {
-    return date_formatter.parse(x.date) - date_formatter.parse(y.date);
-  });
-  smalldata.sort((x, y) => {
-    return date_formatter.parse(x.date) - date_formatter.parse(y.date);
-  });
-  bigdata.sort((x, y) => {
-    return date_formatter.parse(x.date) - date_formatter.parse(y.date);
-  });
+  data.sort((x, y) => date_formatter.parse(x.date) - date_formatter.parse(y.date));
+  smalldata.sort((x, y) => date_formatter.parse(x.date) - date_formatter.parse(y.date));
+  bigdata.sort((x, y) => date_formatter.parse(x.date) - date_formatter.parse(y.date));
 
   // global stuff for the chart
-  let margin = {
+  const margin = {
     top: 50,
     right: 30,
     bottom: 30,
     left: 30,
   };
-  let width = 960 - margin.left - margin.right;
-  let height = 400 - margin.top - margin.bottom;
+  const width = 960 - margin.left - margin.right;
+  const height = 400 - margin.top - margin.bottom;
 
-  let SI = d3.locale({
-    'decimal': ',',
+  const SI = d3.locale({
+    decimal: ',',
     thousands: ' ',
     grouping: [3],
     currency: ['EUR', ''],
     dateTime: '%d. %m. %Y %H:%M',
-    'date': '%d. %m. %Y',
-    'time': '%H:%M:%S',
-    'periods': ['AM', 'PM'],
+    date: '%d. %m. %Y',
+    time: '%H:%M:%S',
+    periods: ['AM', 'PM'],
     days: ['nedelja', 'ponedeljek', 'torek', 'sreda', 'četrtek', 'petek', 'sobota'],
     shortDays: ['ned', 'pon', 'tor', 'sre', 'čet', 'pet', 'sob'],
-    'months': ['januar', 'februar', 'marec', 'april', 'maj', 'junij', 'julij', 'avgust', 'september', 'oktober', 'november', 'december'],
-    'shortMonths': ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'avg', 'sep', 'okt', 'nov', 'dec'],
+    months: ['januar', 'februar', 'marec', 'april', 'maj', 'junij', 'julij', 'avgust', 'september', 'oktober', 'november', 'december'],
+    shortMonths: ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'avg', 'sep', 'okt', 'nov', 'dec'],
   });
 
-  let parseDate = d3.time.format('%Y-%m-%dT%H:%M:%SZ').parse;
-  let bisectDate = d3.bisector((d) => {
-    return d.date;
-  }).left;
+  const parseDate = d3.time.format('%Y-%m-%dT%H:%M:%SZ').parse;
+  const bisectDate = d3.bisector((d) => d.date).left;
   data.forEach((d) => {
     d.date = parseDate(d.date);
     d.occurences = +d.occurences;
@@ -94,12 +149,12 @@
     d.occurences = +d.occurences;
   });
 
-  let svg = d3.select('.timechart').append('svg')
+  const svg = d3.select('.timechart').append('svg')
     .attr('class', 'smalldata')
     .attr('viewBox', '0 0 960 400')
     .attr('preserveAspectRatio', 'xMidYMid meet')
     .append('g')
-    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    .attr('transform', `translate(${  margin.left  },${  margin.top  })`);
 
 
   function createSmallChart(data) {
@@ -109,148 +164,112 @@
     svg.selectAll('.axis').remove();
     svg.on('mousemove', null);
 
-    let x = d3.scale.ordinal().rangeRoundBands([0, width], 0.05);
+    const x = d3.scale.ordinal().rangeRoundBands([0, width], 0.05);
 
-    let y = d3.scale.linear()
+    const y = d3.scale.linear()
       .range([height, 0]);
 
-    x.domain(data.map((d) => {
-      return d.date;
-    }));
-    y.domain([0, d3.max(data, (d) => {
-      return d.occurences;
-    })]);
+    x.domain(data.map((d) => d.date));
+    y.domain([0, d3.max(data, (d) => d.occurences)]);
 
-    let xAxis = d3.svg.axis()
+    const xAxis = d3.svg.axis()
       .scale(x)
       .orient('bottom')
       .tickFormat(SI.timeFormat('%b %y'));
 
-    let yAxis = d3.svg.axis()
+    const yAxis = d3.svg.axis()
       .scale(y)
       .orient('left');
 
     svg.append('g')
       .attr('class', 'x axis smalldata')
-      .attr('transform', 'translate(0,' + height + ')')
+      .attr('transform', `translate(0,${  height  })`)
       .call(xAxis);
 
-    let barcontainers = svg.selectAll('.smallbarcontainer')
+    const barcontainers = svg.selectAll('.smallbarcontainer')
       .data(data)
       .enter()
       .append('g')
       .attr('class', 'smallbarcontainer');
 
     barcontainers.append('text')
-      .text((d) => {
-        return d.occurences;
-      })
-      .attr('x', (d) => {
-        return x(d.date);
-      })
-      .attr('y', (d) => {
-        return y(d.occurences);
-      })
+      .text((d) => d.occurences)
+      .attr('x', (d) => x(d.date))
+      .attr('y', (d) => y(d.occurences))
       .attr('width', x.rangeBand)
       .attr('text-anchor', 'middle')
-      .attr('transform', `translate(${  x.rangeBand()/2  }, -4)`);
+      .attr('transform', `translate(${x.rangeBand() / 2 }, -4)`);
 
     barcontainers.append('rect')
       .attr('class', 'bar')
-      .attr('x', (d) => {
-        return x(d.date);
-      })
+      .attr('x', (d) => x(d.date))
       .attr('width', x.rangeBand())
-      .attr('y', (d) => {
-        return y(d.occurences);
-      })
-      .attr('height', (d) => {
-        return height - y(d.occurences);
-      });
+      .attr('y', (d) => y(d.occurences))
+      .attr('height', (d) => height - y(d.occurences));
   }
 
   function createBigChart(data) {
     svg.selectAll('.smallbarcontainer').remove();
     svg.selectAll('.axis').remove();
 
-    let x = d3.scale.ordinal().rangeRoundBands([0, width], 0.05);
+    const x = d3.scale.ordinal().rangeRoundBands([0, width], 0.05);
 
-    let y = d3.scale.linear()
+    const y = d3.scale.linear()
       .range([height, 0]);
 
-    x.domain(data.map((d) => {
-      return d.date;
-    }));
-    y.domain([0, d3.max(data, (d) => {
-      return d.occurences;
-    })]);
+    x.domain(data.map((d) => d.date));
+    y.domain([0, d3.max(data, (d) => d.occurences)]);
 
-    let xAxis = d3.svg.axis()
+    const xAxis = d3.svg.axis()
       .scale(x)
       .orient('bottom')
       // .tickValues(x.domain().filter(function(d, i) { return !(i % 5); }))
       .tickFormat(SI.timeFormat('%b %y'));
 
-    let yAxis = d3.svg.axis()
+    const yAxis = d3.svg.axis()
       .scale(y)
       .orient('left');
 
     svg.append('g')
       .attr('class', 'x axis bigdata')
-      .attr('transform', 'translate(0,' + height + ')')
+      .attr('transform', `translate(0,${  height  })`)
       .call(xAxis);
 
-    let barcontainers = svg.selectAll('.bigbarcontainer')
+    const barcontainers = svg.selectAll('.bigbarcontainer')
       .remove()
       .data(data)
       .enter()
       .append('g')
       .attr('class', 'bigbarcontainer')
       .on('mouseover', function (d) {
-        let a = d3.select(this).datum();
-        let b = d3.selectAll('.tick')
-          .filter((d) => {
-            return a.date === d;
-          })
+        const a = d3.select(this).datum();
+        const b = d3.selectAll('.tick')
+          .filter((d) => a.date === d)
           .select('text')
           .style('opacity', 1);
       })
       .on('mouseleave', function (d) {
-        let a = d3.select(this).datum();
-        let b = d3.selectAll('.tick')
-          .filter((d) => {
-            return a.date === d;
-          })
+        const a = d3.select(this).datum();
+        const b = d3.selectAll('.tick')
+          .filter((d) => a.date === d)
           .select('text')
           .style('opacity', 0);
       });
 
     barcontainers.append('text')
-      .text((d) => {
-        return d.occurences;
-      })
-      .attr('x', (d) => {
-        return x(d.date);
-      })
-      .attr('y', (d) => {
-        return y(d.occurences);
-      })
+      .text((d) => d.occurences)
+      .attr('x', (d) => x(d.date))
+      .attr('y', (d) => y(d.occurences))
       .attr('width', x.rangeBand)
       .attr('text-anchor', 'middle')
-      .attr('transform', `translate(${  x.rangeBand()/2  }, -4)`);
+      .attr('transform', `translate(${x.rangeBand() / 2 }, -4)`);
 
     barcontainers.append('rect')
       .attr('class', 'bar')
-      .attr('x', (d) => {
-        return x(d.date);
-      })
+      .attr('x', (d) => x(d.date))
       .attr('width', x.rangeBand())
-      .attr('y', (d) => {
-        return y(d.occurences);
-      })
-      .attr('height', (d) => {
-        return height - y(d.occurences);
-      });
+      .attr('y', (d) => y(d.occurences))
+      .attr('height', (d) => height - y(d.occurences));
   }
 
   function createLineChart(data) {
@@ -268,50 +287,45 @@
       .on('mouseout', () => {
         focus.style('display', 'none');
       })
-      .on('mousemove', mousemove);
+      .on('mousemove', mousemove)
+      .on('click', mouseclick);
 
-    let x = d3.time.scale()
+    const x = d3.time.scale()
       .range([0, width]);
 
-    let y = d3.scale.linear()
+    const y = d3.scale.linear()
       .range([height, 0]);
 
     // x.domain(data.map(function(d) { return d.date; }));
-    x.domain(d3.extent(data, (d) => {
-      return d.date;
-    }));
-    y.domain([0, d3.max(data, (d) => {
-      return d.occurences;
-    })]);
+    x.domain(d3.extent(data, (d) => d.date));
+    y.domain([0, d3.max(data, (d) => d.occurences)]);
     // y.domain(d3.extent(data, function(d) {
     //     return d.close;
     // }));
 
-    let xAxis = d3.svg.axis()
+    const xAxis = d3.svg.axis()
       .scale(x)
       .orient('bottom')
       // .tickValues(x.domain().filter(function(d, i) { return !(i % 5); }))
       .tickFormat(SI.timeFormat('%b %y'));
 
-    let yAxis = d3.svg.axis()
+    const yAxis = d3.svg.axis()
       .scale(y)
       .orient('left');
 
     svg.append('g')
       .attr('class', 'x axis bigdata')
-      .attr('transform', 'translate(0,' + height + ')')
+      .attr('transform', `translate(0,${  height  })`)
       .call(xAxis);
 
-    let line = d3.svg.line()
-      .x((d) => {
+    const line = d3.svg.line()
+      .x((d) => 
         // console.log('date' + x(d.date));
-        return x(d.date);
-      })
-      .y((d) => {
+         x(d.date))
+      .y((d) => 
         // console.log(d);
         // console.log(y(d.occurences));
-        return y(d.occurences);
-      });
+         y(d.occurences));
 
     // data.forEach(function(d) {
     //     console.log(d);
@@ -340,13 +354,13 @@
         if (d3.select(circle).classed('hovered')) {
 
         } else {
-            d3.select('.dot circle.hovered')
+          d3.select('.dot circle.hovered')
             .classed('hovered', false)
             .transition()
             .duration(200)
             .attr('r', 4);
 
-            d3.select(circle)
+          d3.select(circle)
             .classed('hovered', true)
             .transition()
             .duration(200)
@@ -355,14 +369,59 @@
         }
 
         if (i > 2 && i < data.length - 3.5) {
-            focus.attr('transform', 'translate(' + x(d.date) + ',' + y(d.occurences) + ')');
+          focus.attr('transform', `translate(${  x(d.date)  },${  y(d.occurences)  })`);
         } else if (i < 3) {
-            focus.attr('transform', 'translate(' + x(data[2].date) + ',' + y(d.occurences) + ')');
+          focus.attr('transform', `translate(${  x(data[2].date)  },${  y(d.occurences)  })`);
         } else {
-            focus.attr('transform', 'translate(' + x(data[data.length - 4].date) + ',' + y(d.occurences) + ')');
+          focus.attr('transform', `translate(${  x(data[data.length - 4].date)  },${  y(d.occurences)  })`);
         }
 
-        focus.select('text').text(`${SI.timeFormat('%B %Y')(d.date)  } | ${  d.occurences}`);
+        focus.select('text').text(`${SI.timeFormat('%B %Y')(d.date)} | ${d.occurences}`);
+      }
+    }
+
+    function mouseclick() {
+      const x0 = x.invert(d3.mouse(this)[0] - margin.left);
+      const i = bisectDate(data, x0, 1);
+      const d0 = data[i - 1];
+      const d1 = data[i];
+      if (i < data.length) {
+        const d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+
+        const circle = x0 - d0.date > d1.date - x0 ? d3.selectAll('.dot circle')[0][i] : d3.selectAll('.dot circle')[0][i - 1];
+
+        // if (d3.select(circle).classed('hovered')) {
+
+        // } else {
+        //   d3.select('.dot circle.hovered')
+        //     .classed('hovered', false)
+        //     .transition()
+        //     .duration(200)
+        //     .attr('r', 4);
+
+        //   d3.select(circle)
+        //     .classed('hovered', true)
+        //     .transition()
+        //     .duration(200)
+        //     .ease('linear')
+        //     .attr('r', 7);
+        // }
+
+        // if (i > 2 && i < data.length - 3.5) {
+        //   focus.attr('transform', 'translate(' + x(d.date) + ',' + y(d.occurences) + ')');
+        // } else if (i < 3) {
+        //   focus.attr('transform', 'translate(' + x(data[2].date) + ',' + y(d.occurences) + ')');
+        // } else {
+        //   focus.attr('transform', 'translate(' + x(data[data.length - 4].date) + ',' + y(d.occurences) + ')');
+        // }
+
+        // focus.select('text').text(`${SI.timeFormat('%B %Y')(d.date)  } | ${  d.occurences}`);
+        // time_query['time_filter'] = d3.select.cirle.datum();
+        var thedate = d3.select(circle).datum().date;
+        var filterdate = '1.' + String(thedate.getMonth() + 1) + '.' + String(thedate.getFullYear());
+        console.log(filterdate);
+        time_query['time_filter'] = filterdate;
+        document.location.href = generateSearchUrl(time_query);
       }
     }
 
@@ -373,13 +432,10 @@
       .attr('class', 'dot')
       .append('circle')
       .attr('r', 4)
-      .attr('cx', (d, i) => {
+      .attr('cx', (d, i) => 
         // console.log(d.date);
-        return x(d.date);
-      })
-      .attr('cy', (d, i) => {
-        return y(d.occurences);
-      })
+         x(d.date))
+      .attr('cy', (d, i) => y(d.occurences))
       .on('mouseover', (d) => { // setup tooltip
         tooltipdiv.transition()
           .duration(200)
@@ -387,17 +443,16 @@
 
         // console.log($(this).parents('#kompas-scatter')));
         tooltipdiv.html(d.occurences)
-          .style('left', (`${d3.event.pageX - (tooltipdiv.node().getBoundingClientRect().width / 2) - $('.timechart').offset().left + 10  }px`))
-          .style('top', `${d3.event.pageY - $('.timechart').offset().top - 30  }px`);
+          .style('left', (`${d3.event.pageX - (tooltipdiv.node().getBoundingClientRect().width / 2) - $('.timechart').offset().left + 10}px`))
+          .style('top', `${d3.event.pageY - $('.timechart').offset().top - 30}px`);
 
         // console.log('ping');
       })
-
-    .on('mouseout', (d) => {
-      tooltipdiv.transition()
-        .duration(200)
-        .style('opacity', 0);
-    });
+      .on('mouseout', (d) => {
+        tooltipdiv.transition()
+          .duration(200)
+          .style('opacity', 0);
+      });
 
     let focus = svg.append('g')
       .attr('class', 'focus')
@@ -432,10 +487,10 @@
       callback();
     };
 
-  $(`#smalldata${  randomId}`).on('click', toggleTabAndExecuteCallback(() => createSmallChart(smalldata)));
-  $(`#bigdata${  randomId}`).on('click', toggleTabAndExecuteCallback(() => createLineChart(bigdata)));
+  $(`#smalldata${randomId}`).on('click', toggleTabAndExecuteCallback(() => createSmallChart(smalldata)));
+  $(`#bigdata${randomId}`).on('click', toggleTabAndExecuteCallback(() => createLineChart(bigdata)));
 
   makeEmbedSwitch();
   activateCopyButton();
   addCardRippling();
-})( /* SCRIPT_PARAMS */ );
+})(/* SCRIPT_PARAMS */);
