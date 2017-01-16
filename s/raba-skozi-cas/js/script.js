@@ -3,8 +3,12 @@
   if (typeof query !== 'undefined') {
     time_query = query;
   } else {
-    time_query = getQueryParams(customUrl.split('?')[1]);
-    time_query['q'] = customUrl.split('/').pop().split('?')[0];
+    if (typeof customUrl !== 'undefined') {
+      time_query = getQueryParams(customUrl.split('?')[1]);
+      time_query['q'] = customUrl.split('/').pop().split('?')[0];
+    } else {
+      time_query = {q: document.location.href.split('?q=')[1]};
+    }
   }
 
   function getQueryParams(str) {
