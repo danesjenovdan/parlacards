@@ -314,8 +314,6 @@ if (!isMSIE) {
 
     function zoom(animate) {
 
-        console.log('ping');
-
         if (animate) {
             svg.selectAll(".dot")
                 .transition()
@@ -326,22 +324,6 @@ if (!isMSIE) {
                 .attr("transform", transform);
         }
 
-        // svg.selectAll(".singlehull")
-        //     .attr("d", function(d) {
-        //         var parent = d3.select('#' + d3.select(this).attr('data-parent'));
-        //         var translateX = parseInt(parent.attr('transform').split('(')[1].split(',')[0]);
-        //         var translateY = parseInt(parent.attr('transform').split('(')[1].split(',')[1].split(')')[0]);
-        //         console.log(translateX, translateY)
-        //         return "M" + translateX + ',' + translateY + "L" + (translateX + 0.01) + ',' + translateY + "Z";
-        //     });
-
-        // for (group in groupedData) {
-        //
-        //     var currentselection = d3.select('#kompasgroup' + groupedData[group][0].person.party.acronym.replace(/ /g, '_'))
-        //
-        //     redrawHull(currentselection, groupedData[group]);
-        //
-        // }
     }
 
     function transform(d) {
@@ -395,14 +377,14 @@ if (!isMSIE) {
         // move person to group front
         d3.select(parent).selectAll('.dot')
             .sort(function(a, b) {
-                s = selected.person.id;
+                var s = selected.person.id;
                 return (a.person.id == s) - (b.person.id == s);
             });
 
         // move group in front of other groups
         d3.select(parent.parentNode).selectAll('.partygroup')
             .sort(function(a, b) {
-                s = selected.person.party.id;
+                var s = selected.person.party.id;
                 return (a[0].person.party.id == s) - (b[0].person.party.id == s);
             });
     }
@@ -414,7 +396,6 @@ if (!isMSIE) {
         }
 
         var elementfound = kompasState.people.find(hasID);
-        console.log(elementfound);
 
         if (!elementfound) {
             kompasState.people.push({'id': parseInt(datum.person.id), 'name': datum.person.name});
