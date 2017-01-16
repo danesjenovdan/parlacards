@@ -2,22 +2,22 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
 
     var parties = response;
 
-    dates=[];
-    for (i in parties) {
+    var dates=[];
+    for (var i in parties) {
         if (parties[i]['acronym'] === 'PS NP') {
             dates.push(new Date(response[i]['founded']))
         }
     }
-    maxDate=new Date(Math.max.apply(null,dates));
+    var maxDate = new Date(Math.max.apply(null,dates));
     // for (i in dates) {
     //     if dates[i]
     // }
 
     // $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
-        raw_data = stranke_data['facet_counts']['facet_fields']['party_i'];
+        var raw_data = stranke_data['facet_counts']['facet_fields']['party_i'];
         console.log(raw_data);
         var sum = 0;
-        for (datum in raw_data) {
+        for (var datum in raw_data) {
             if (datum % 2 == 1) {
                 sum = sum + raw_data[datum];
             }
@@ -30,7 +30,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
         var ticks = []
 
         var firstpiece, secondpiece;
-        for (piece in raw_data) {
+        for (var piece in raw_data) {
             if (piece % 2 === 0) {
                 firstpiece = raw_data[piece];
             } else {
@@ -134,22 +134,22 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
 
         function relax() {
 
-            again = false;
+            var again = false;
             labels.each(function(d, i) {
-                a = this;
-                da = d3.select(a);
-                y1 = da.attr('y');
-                x1 = da.attr('x');
+                var a = this;
+                var da = d3.select(a);
+                var y1 = da.attr('y');
+                var x1 = da.attr('x');
 
                 labels.each(function(d, j) {
-                    b = this;
+                    var b = this;
                     if (a == b) return;
-                    db = d3.select(b);
-                    y2 = db.attr('y');
-                    x2 = db.attr('x');
+                    var db = d3.select(b);
+                    var y2 = db.attr('y');
+                    var x2 = db.attr('x');
 
-                    deltaY = y1 - y2;
-                    deltaX = x1 - x2;
+                    var deltaY = y1 - y2;
+                    var deltaX = x1 - x2;
 
                     // handle Y spacing
                     if (Math.abs(deltaY) > spacingY) {
@@ -157,8 +157,8 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
                     } else {
                         // if we didn't break until now, labels are overlapping
                         again = true;
-                        sign = deltaY > 0 ? 1 : -1;
-                        adjust = sign * alpha;
+                        var sign = deltaY > 0 ? 1 : -1;
+                        var adjust = sign * alpha;
                         da.attr('y', +y1 + adjust);
                         db.attr('y', +y2 - adjust);
                     }
