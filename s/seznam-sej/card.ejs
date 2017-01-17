@@ -40,7 +40,7 @@
         }
         else if (state.filters && state.filters.indexOf('Seje delovnih teles') > -1) {
           if (state.workingBodies && state.workingBodies.length > 0) {
-            return state.workingBodies.indexOf(String(session.org.id)) > -1;
+            return state.workingBodies.indexOf(session.org.id) > -1;
           }
           else {
             return session.org.id !== 9 && session.org.id !== 95;
@@ -90,7 +90,11 @@
                   <div class="column"><%= formatDate(session.date_ts) %></div>
                   <div class="column optional"><%= formatDate(session.updated_at_ts) %></div>
                   <div class="column wider optional">
-                    <a class="funblue-light-hover" href="https://glej.parlameter.si/wb/getWorkingBodies/<%= session.org.id %>?frame=true&altHeader=true"><%= session.org.name %></a>
+                    <% if (session.org.id === 9 || session.org.id === 95) { %>
+                      <%= session.org.name %>
+                    <% } else {%>
+                      <a class="funblue-light-hover" href="https://glej.parlameter.si/wb/getWorkingBodies/<%= session.org.id %>?frame=true&altHeader=true"><%= session.org.name %></a>
+                    <% }%>
                   </div>
                 </li>
                 <% }) %>

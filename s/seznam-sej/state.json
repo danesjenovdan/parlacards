@@ -1,4 +1,5 @@
 {
-    "filters": ["Seje DZ", "Seje kolegija predsednika DZ"],
+    "filters": ["Seje delovnih teles"],
+    "workingBodies": [10],
     "onlyLatest": true
 }
