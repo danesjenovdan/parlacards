@@ -21,7 +21,7 @@
     <%
     function formatDate(isoDate) {
       var date = new Date(isoDate);
-      return `${date.getDate()}. ${date.getMonth() + 1}. ${date.getFullYear()}`
+      return date.getDate() + '. ' + (date.getMonth() + 1) + '. ' + date.getFullYear();
     }
 
     data.sessions = data.sessions
@@ -39,18 +39,18 @@
           return true;
         }
         else if (state.filters && state.filters.indexOf('Seje delovnih teles') > -1) {
-          if (state.workingBodies.length === 0) {
-            return session.org.id !== 9 && session.org.id !== 95;
+          if (state.workingBodies && state.workingBodies.length > 0) {
+            return state.workingBodies.indexOf(String(session.org.id)) > -1;
           }
           else {
-            return state.workingBodies.indexOf(String(session.org.id)) > -1;
+            return session.org.id !== 9 && session.org.id !== 95;
           }
         }
         return false;
       })
       .filter(function(session, index) {
         return !state.onlyLatest || index < 5;
-      })
+      });
     %>
 
     <script>
