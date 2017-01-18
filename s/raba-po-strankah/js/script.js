@@ -194,6 +194,11 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function (response) {
       } else {
         return 'block';
       }
+    })
+    .classed('partylabel', true)
+    .on('click', function (d) {
+      pg_query['parties'] = d.data.party;
+      document.location.href = generateSearchUrl(pg_query);
     });
 
   var alpha = 0.5;
