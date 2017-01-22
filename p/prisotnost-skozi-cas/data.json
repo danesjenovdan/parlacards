@@ -1,0 +1,156 @@
+{
+  "created_at": "20.01.2017",
+  "created_for": "20.01.2017",
+  "person": {
+    "district": null,
+    "gender": "m",
+    "gov_id": "P025",
+    "has_function": false,
+    "id": 36,
+    "is_active": true,
+    "name": "Janez Janša",
+    "party": {
+      "acronym": "SDS",
+      "id": 5,
+      "is_coalition": false,
+      "name": "PS Slovenska Demokratska Stranka"
+    },
+    "type": "mp"
+  },
+  "results": [{
+      "date_ts": "2014-08-01T00:00:00",
+      "not_member": 0,
+      "presence": 88.23529411764706
+    },
+    {
+      "date_ts": "2014-09-01T00:00:00",
+      "not_member": 0,
+      "presence": 93.33333333333333
+    },
+    {
+      "date_ts": "2014-10-01T00:00:00",
+      "not_member": 25,
+      "presence": 0
+    },
+    {
+      "date_ts": "2014-11-01T00:00:00",
+      "not_member": 75.86206896551724,
+      "presence": 24.137931034482758
+    },
+    {
+      "date_ts": "2014-12-01T00:00:00",
+      "not_member": 0,
+      "presence": 47.540983606557376
+    },
+    {
+      "date_ts": "2015-01-01T00:00:00",
+      "not_member": 0,
+      "presence": 69.04761904761905
+    },
+    {
+      "date_ts": "2015-02-01T00:00:00",
+      "not_member": 0,
+      "presence": 29.508196721311474
+    },
+    {
+      "date_ts": "2015-03-01T00:00:00",
+      "not_member": 0,
+      "presence": 39.66942148760331
+    },
+    {
+      "date_ts": "2015-04-01T00:00:00",
+      "not_member": 0,
+      "presence": 58.139534883720934
+    },
+    {
+      "date_ts": "2015-05-01T00:00:00",
+      "not_member": 0,
+      "presence": 31.03448275862069
+    },
+    {
+      "date_ts": "2015-06-01T00:00:00",
+      "not_member": 0,
+      "presence": 14.285714285714285
+    },
+    {
+      "date_ts": "2015-07-01T00:00:00",
+      "not_member": 0,
+      "presence": 51.66666666666667
+    },
+    {
+      "date_ts": "2015-09-01T00:00:00",
+      "not_member": 0,
+      "presence": 38.59649122807017
+    },
+    {
+      "date_ts": "2015-10-01T00:00:00",
+      "not_member": 0,
+      "presence": 2.564102564102564
+    },
+    {
+      "date_ts": "2015-11-01T00:00:00",
+      "not_member": 0,
+      "presence": 84.57446808510637
+    },
+    {
+      "date_ts": "2015-12-01T00:00:00",
+      "not_member": 0,
+      "presence": 2.0408163265306123
+    },
+    {
+      "date_ts": "2016-01-01T00:00:00",
+      "not_member": 0,
+      "presence": 48.64864864864865
+    },
+    {
+      "date_ts": "2016-02-01T00:00:00",
+      "not_member": 0,
+      "presence": 44.44444444444444
+    },
+    {
+      "date_ts": "2016-03-01T00:00:00",
+      "not_member": 0,
+      "presence": 27.34375
+    },
+    {
+      "date_ts": "2016-04-01T00:00:00",
+      "not_member": 0,
+      "presence": 65.45454545454545
+    },
+    {
+      "date_ts": "2016-05-01T00:00:00",
+      "not_member": 0,
+      "presence": 14.285714285714285
+    },
+    {
+      "date_ts": "2016-06-01T00:00:00",
+      "not_member": 0,
+      "presence": 7.5
+    },
+    {
+      "date_ts": "2016-07-01T00:00:00",
+      "not_member": 0,
+      "presence": 86.81318681318682
+    },
+    {
+      "date_ts": "2016-09-01T00:00:00",
+      "not_member": 0,
+      "presence": 38.23529411764706
+    },
+    {
+      "date_ts": "2016-10-01T00:00:00",
+      "not_member": 0,
+      "presence": 30
+    },
+    {
+      "date_ts": "2016-11-01T00:00:00",
+      "not_member": 0,
+      "presence": 1.3986013986013985
+    },
+    {
+      "date_ts": "2016-12-01T00:00:00",
+      "not_member": 0,
+      "presence": 22.52252252252252
+    }
+  ]
+}
