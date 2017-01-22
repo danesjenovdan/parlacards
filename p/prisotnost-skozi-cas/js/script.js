@@ -11,10 +11,10 @@
 
   // global stuff for the chart
   const margin = {
-    top: 50,
+    top: 10,
     right: 30,
     bottom: 30,
-    left: 30,
+    left: 40,
   };
   const width = 960 - margin.left - margin.right;
   const height = 400 - margin.top - margin.bottom;
@@ -101,12 +101,11 @@
 
     const yAxis = d3.svg.axis()
       .scale(y)
-      .orient('left');
-
-    svg.append('g')
-      .attr('class', 'x axis bigdata')
-      .attr('transform', `translate(0,${height})`)
-      .call(xAxis);
+      .orient('left')
+      .tickValues([0, 25, 50, 75, 100])
+      .tickFormat(d => `${d} %`)
+      .innerTickSize(-(width - 13))
+      .outerTickSize(0);
 
     const line = d3.svg.line()
       .x(d => x(d.x))
@@ -128,25 +127,6 @@
       .enter()
       .append('g')
       .attr('class', d => `presencething-${d.name}`);
-    
-    let focus = svg.append('g')
-      .attr('class', 'focus')
-      .style('display', 'none');
-
-    focus.append('rect')
-      .attr('width', 130)
-      .attr('height', 90)
-      .attr('y', -35)
-      .attr('x', -75)
-      .style('rx', 3)
-      .style('yx', 3);
-
-    focus.append('rect')
-      .attr('width', 120)
-      .attr('height', 1.5)
-      .attr('y', -9)
-      .attr('x', -70)
-      .style('fill', '#ffffff');
 
     presencething.selectAll('rect')
       .data(d => {
@@ -165,11 +145,23 @@
       .attr('width', x.rangeBand())
       .on('mouseover', (d) => {
         const bars = svg.selectAll('rect[data-time="' + d.x + '"]').classed('hovered', true);
-        focus
-          .attr('transform', `translate(${x(d.x) + 15},${y(100)})`)
+        console.log(x(d.x));
+        if (x(d.x) < 14) {
+          focus.attr('transform', `translate(${x(d.x) + 30},${y(80)})`)
+            .style('display', null)
+            .selectAll('text')
+            .remove();
+        } else if (x(d.x) > 844) {
+          focus.attr('transform', `translate(${x(d.x) + 10},${y(80)})`)
           .style('display', null)
           .selectAll('text')
           .remove();
+        } else {
+          focus.attr('transform', `translate(${x(d.x) + 20},${y(80)})`)
+          .style('display', null)
+          .selectAll('text')
+          .remove();
+        }
 
         focus.append('text')
           .text(SI.timeFormat('%B %Y')(d3.select(bars[0][0]).datum().x))
@@ -293,6 +285,35 @@
         // document.location.href = generateSearchUrl(time_query);
       }
     }
+
+    svg.append('g')
+      .attr('class', 'x axis')
+      .attr('transform', `translate(0,${height})`)
+      .call(xAxis);
+
+    svg.append('g')
+      .attr('class', 'y axis')
+      .attr('transform', `translate(0,0)`)
+      .call(yAxis);
+
+    let focus = svg.append('g')
+      .attr('class', 'focus')
+      .style('display', 'none');
+
+    focus.append('rect')
+      .attr('width', 140)
+      .attr('height', 90)
+      .attr('y', -35)
+      .attr('x', -75)
+      .style('rx', 3)
+      .style('yx', 3);
+
+    focus.append('rect')
+      .attr('width', 130)
+      .attr('height', 1.5)
+      .attr('y', -9)
+      .attr('x', -70)
+      .style('fill', '#ffffff');
 
     // dots
     // svg.selectAll('g.dot')

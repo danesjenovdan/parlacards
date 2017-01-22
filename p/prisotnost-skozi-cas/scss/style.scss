@@ -4,14 +4,24 @@
 .axis line {
     fill: none;
     stroke: grey;
-    stroke-width: 1;
+    stroke-width: 0.5;
     shape-rendering: crispEdges;
-    stroke-dasharray: 1, 3;
+    stroke-dasharray: 2, 2;
 }
 .tick line {
-        stroke-width: 0;
+        stroke-width: 1;
+        stroke: $black;
 }
-.prisotnost-chart .tick text {
+.tick text {
+    font-size: 10px;
+}
+.prisotnost-chart .domain {
+    display: none;
+}
+.prisotnost-chart .x.axis {
+    display: none;
+}
+.prisotnost-chart .x.axis .tick text {
     opacity: 0;
     transition: all 0.2s ease-in;
 }
