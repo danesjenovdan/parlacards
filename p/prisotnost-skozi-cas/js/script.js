@@ -147,17 +147,17 @@
         const bars = svg.selectAll('rect[data-time="' + d.x + '"]').classed('hovered', true);
         console.log(x(d.x));
         if (x(d.x) < 14) {
-          focus.attr('transform', `translate(${x(d.x) + 30},${y(80)})`)
+          focus.attr('transform', `translate(${x(d.x) + 110},${y(80)})`)
             .style('display', null)
             .selectAll('text')
             .remove();
-        } else if (x(d.x) > 844) {
-          focus.attr('transform', `translate(${x(d.x) + 10},${y(80)})`)
+        } else if (x(d.x) > 748) {
+          focus.attr('transform', `translate(${x(d.x) - 70},${y(80)})`)
           .style('display', null)
           .selectAll('text')
           .remove();
         } else {
-          focus.attr('transform', `translate(${x(d.x) + 20},${y(80)})`)
+          focus.attr('transform', `translate(${x(d.x) + 110},${y(80)})`)
           .style('display', null)
           .selectAll('text')
           .remove();
@@ -176,7 +176,7 @@
           .attr('x', -70)
           .attr('y', 10);
         focus.append('text')
-          .text(`${prisotnostData.person.gender === 'm' ? 'Odsoten' : 'Odsotna'} | ${Math.round(d3.select(bars[0][1]).datum().y)} %`)
+          .text(`${prisotnostData.person.gender === 'm' ? 'Odsoten' : 'Odsotna'} | ${Math.round(d3.select(bars[0][1]).datum().y - 0.0000000001)} %`) // odštevamo zaradi case-a 20.5 + 79.5
           .style('fill', '#ffffff')
           .attr('text-anchor', 'start')
           .attr('x', -70)
