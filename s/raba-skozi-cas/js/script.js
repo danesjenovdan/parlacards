@@ -323,10 +323,10 @@
       .call(xAxis);
 
     const line = d3.svg.line()
-      .x((d) => 
+      .x((d) =>
         // console.log('date' + x(d.date));
          x(d.date))
-      .y((d) => 
+      .y((d) =>
         // console.log(d);
         // console.log(y(d.occurences));
          y(d.occurences));
@@ -423,7 +423,7 @@
         // time_query['time_filter'] = d3.select.cirle.datum();
         var thedate = d3.select(circle).datum().date;
         var filterdate = '1.' + String(thedate.getMonth() + 1) + '.' + String(thedate.getFullYear());
-        console.log(filterdate);
+        // console.log(filterdate);
         time_query['time_filter'] = filterdate;
         document.location.href = generateSearchUrl(time_query);
       }
@@ -436,7 +436,7 @@
       .attr('class', 'dot')
       .append('circle')
       .attr('r', 4)
-      .attr('cx', (d, i) => 
+      .attr('cx', (d, i) =>
         // console.log(d.date);
          x(d.date))
       .attr('cy', (d, i) => y(d.occurences))

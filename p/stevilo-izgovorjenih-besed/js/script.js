@@ -1,16 +1,9 @@
-function fixImages() {
-    $.each($('.smallbar .funblue'), function(i, e) {
-        if ($(e).width() <= 30) {
-            $(e).children().children('.avgminimg').css({
-                'margin-left': '0'
-            });
-            console.log($(e).children().children('.avgminimg'));
-        }
-    });
-}
+/* global progressbarTooltip makeEmbedSwitch activateCopyButton addCardRippling */
 
-progressbarTooltip.init(className);
+((randomId, className) => {
+  progressbarTooltip.init(className);
 
-makeEmbedSwitch();
-activateCopyButton();
-addCardRippling();
+  makeEmbedSwitch();
+  activateCopyButton();
+  addCardRippling();
+})(/* SCRIPT_PARAMS */);

@@ -15,7 +15,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
 
     // $.getJSON('https://isci.parlameter.si/q/zdravstvo', function(r) {
         var raw_data = stranke_data['facet_counts']['facet_fields']['party_i'];
-        console.log(raw_data);
+        // console.log(raw_data);
         var sum = 0;
         for (var datum in raw_data) {
             if (datum % 2 == 1) {
@@ -35,7 +35,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
                 firstpiece = raw_data[piece];
             } else {
                 secondpiece = raw_data[piece];
-                console.log(secondpiece / sum * 100)
+                // console.log(secondpiece / sum * 100)
                 data.push({
                     'party': firstpiece,
                     'occurences': secondpiece,
@@ -111,12 +111,12 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
                 return d.y = Math.sin(a) * (radius + 20);
             })
             .text(function(d) {
-                console.log(d);
+                // console.log(d);
                 if (parties[d.data.party]) {
-                    console.log('yes', d);
+                    // console.log('yes', d);
                     return parties[d.data.party]['acronym'] + ' | ' + d.data.percentage + ' %';
                 } else {
-                    console.log('no', d);
+                    // console.log('no', d);
                     return 'Zunanji govorci | ' + d.data.percentage + ' %';
                 }
             })
@@ -218,7 +218,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function(response) {
                 // .style("stroke", "black")
                 .attr("marker-end", "url(#circ)")
                 .attr("d", function(d) {
-                    console.log(d);
+                    // console.log(d);
                     if (d.cx > d.ox) { //|| Math.abs(d.cx) < 0.1) {
                         return "M" + d.sx + "," + d.sy + "L" + d.ox + "," + d.oy + " " + d.cx + "," + d.cy;
                     } else {

@@ -8,7 +8,7 @@ function equalizeWidth() {
         if (i === iterations - 1) {
             $('.' + className + ' .term').css('width', max);
             $('.' + className + ' .frequency').css('width', $('.' + className + ' .term').parent().width() - max - 10);
-            console.log('ping');
+            // console.log('ping');
         }
     });
 }

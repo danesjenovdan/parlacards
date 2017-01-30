@@ -26,7 +26,7 @@ if (!isMSIE) {
                     var parent = $('#_' + d3.select(selection[0][i]).datum().person.id).parent()[0];
                     moveToFront(parent, d3.select(selection[0][i]).datum());
                 }
-                console.log(Math.floor(selection[0].length / 2));
+                // console.log(Math.floor(selection[0].length / 2));
                 centerCompass();
                 if(typeof measure == 'function') {
                     measure("kompas","party",smallparty,'');
@@ -75,7 +75,7 @@ if (!isMSIE) {
 
                 updatePeopleScroller();
                 for (var i in selection[0]) {
-                    console.log(d3.select(selection[0][i]).datum());
+                    // console.log(d3.select(selection[0][i]).datum());
                     addSearchPerson(d3.select(selection[0][i]).datum());
                 }
             }
