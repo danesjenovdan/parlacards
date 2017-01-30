@@ -77,12 +77,12 @@
           titleSuffix: 'po št. izgovorjenih besed',
           explanation: 'Število besed, ki jih je poslanec izgovoril v vseh svojih dosedanjih govorih v DZ.',
           label: 'Št. izgovorjenih besed'
-    },
+        },
         speeches_per_session: {
           titleSuffix: 'po št. govorov na sejo',
           explanation: 'Preštejemo poslančeve govore in število delimo s številom sej, na katerih je poslanec govoril. Število vseh govorov delimo najprej s številom poslancev, potem pa še s številom vseh sej (na katerih se je govorilo). Individualni rezultat primerjamo s povprečnim.',
           label: 'Št. govorov na sejo'
-      },
+        },
         privzdignjeno: {
           titleSuffix: 'po pogostosti rabe privzdignjenega besedja',
           explanation: 'Z združevanjem kvalifikatorjev <a href="http://www.fran.si/130/sskj-slovar-slovenskega-knjiznega-jezika">SSKJ</a> in <a href="http://www.fran.si/131/snb-slovar-novejsega-besedja">SNB</a> smo definirali ekscesno, privzdignjeno in preprosto besedje v poslanskih govorih. Upoštevani so le kvalifikatorji, ki so v obeh slovarjih tik za zaglavjem in imajo doseg do konca geselskega sestavka (ne pa tudi kvalifikatorji za posamezne pomene oziroma rabe). Podjetje Amebis je iz transkriptov poslanskih govorov pripravilo sezname besed, ki imajo katerega od izbranih kvalifikatorjev.<br>' +
@@ -152,8 +152,8 @@
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
         <div class="card-header">
-            <div class="card-header-border"></div>
-            <h1>Seznam poslancev<%= state && state.analysis ? ' ' + columns[state.analysis].titleSuffix : '' %></h1> <!-- this text is the only thing you touch in .card-header -->
+          <div class="card-header-border"></div>
+          <h1>Seznam poslancev<%= state && state.analysis ? ' ' + columns[state.analysis].titleSuffix : '' %></h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content">
           <div class="card-content-front">
@@ -164,6 +164,7 @@
                 <div data-sort="district" class="column district">Okraj</div>
                 <% if (state && state.analysis) { %>
                   <div data-sort="analysis" class="column">Analiza</div>
+                  <div data-sort="change" class="column">Sprememba</div>
                 <% } %>
               </li>
               <% if (data.data.length === 0) { %>
@@ -171,13 +172,12 @@
               <% } else { %>
                 <% data.data.forEach(function(result, index) { %>
                 <li class="person" data-index="<%= index %>">
-
-                    <a class="portrait column" href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[result.person.id].slug%><%=urlsData.personLink.pregled%>">
-                        <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= result.person.gov_id %>.png" />
-                    </a>
-                    <div class="column wider name">
-                        <a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[result.person.id].slug%><%=urlsData.personLink.pregled%>"><%= result.person.name %></a>
-                    </div>
+                  <a class="portrait column" href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[result.person.id].slug%><%=urlsData.personLink.pregled%>">
+                    <img src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= result.person.gov_id %>.png" />
+                  </a>
+                  <div class="column wider name">
+                    <a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.personLink.base%><%=urlsData.person[result.person.id].slug%><%=urlsData.personLink.pregled%>"><%= result.person.name %></a>
+                  </div>
                   <div class="column">
                     <% if (result.person.party.acronym.indexOf('NeP') === -1) { %><a class="funblue-light-hover" href="<%=urlsData.base%><%=urlsData.partyLink.base%><%=urlsData.party[result.person.party.id].acronym%><%=urlsData.partyLink.pregled%>"><%= result.person.party.acronym %></a><% } else { %> <%= result.person.party.acronym %> <% } %>
                   </div>
@@ -185,7 +185,7 @@
                   <% if (state && state.analysis) { %>
                     <div class="column">
                       <%= function() {
-                        var value = result.results[state.analysis];
+                        var value = result.results[state.analysis].score;
 
                         if (value === null) { return 'Ni dovolj podatkov'; };
 
@@ -193,9 +193,19 @@
                           if (columns[state.analysis].round) { value = String(round(value, columns[state.analysis].roundingPrecision || 1)).replace('.', ','); }
                           if (columns[state.analysis].scientific) { value = value.toExponential(); }
                         }
+
                         if (columns[state.analysis].unit === 'percent') { value += '%'; }
 
                         return value;
+                      }() %>
+                    </div>
+                    <div class="column">
+                      <%= function() {
+                        var change = parseInt(result.results[state.analysis].diff);
+                        var number = Math.abs(change);
+                        var prefix = change < 0 ? '- ' : (change > 0 ? '+ ' : '');
+
+                        return prefix + number;
                       }() %>
                     </div>
                   <% } %>
