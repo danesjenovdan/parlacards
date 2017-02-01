@@ -208,7 +208,8 @@ gulp.task('push', () =>
   fs.readFile('dist/card.min.ejs', 'utf8', (err, data) => {
     request.post({
       /* eslint no-underscore-dangle: "off" */
-      url: `https://glej.parlameter.si/api/card/${cardData._id}/updateEjs`,
+      // url: `https://glej.parlameter.si/api/card/${cardData._id}/updateEjs`,
+      url: `http://localhost:3000/api/card/${cardData._id}/updateEjs`,
       json: { ejs: data },
     }, (err2, response) =>
       fs.writeFile(`${options.path}/card.json`, JSON.stringify(response.body), 'utf-8'),
