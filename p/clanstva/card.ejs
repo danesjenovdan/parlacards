@@ -76,7 +76,14 @@
                                 </li>
                                 <% } %>
                               <% } else { %>
-                                <li class="key"><%= membershipItem.name %></li>
+                            <% if (membershipItem.url != null){ %>
+                            <li class="key">
+                                <a class="funblue-light-hover" target="_blank" href="<%= membershipItem.url %>"> <%= membershipItem.name %></a>
+                            </li>
+                            <% }else{ %>
+                            <li class="key"><%= membershipItem.name %></li>
+                            <% } %>
+
                               <% } %>
                           <% }) %>
                         <% } else { %>
