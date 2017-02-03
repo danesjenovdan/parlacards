@@ -1,12 +1,59 @@
-$blue-dark: #197197;
-$white: #fff;
-$grey-light: #f0f0f0;
-$grey: #c8c8c8;
-$black: #000;
-
 .card-content-front {
   display: flex;
   flex-direction: column;
+}
+
+.filters {
+  $label-height: 26px;
+
+  display: flex;
+  justify-content: space-between;
+
+  .filter-label {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: $label-height;
+  }
+
+  .option-party-buttons {
+    width: 27.5%;
+    display: flex;
+    padding-top: $label-height;
+
+    .party-button:not(:last-child) {
+      margin-right: 3px;
+    }
+  }
+
+  .text-filter {
+    width: 26%;
+
+    .text-filter-input {
+      background-image: url('https://cdn.parlameter.si/v1/parlassets/icons/search.svg');
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+      background-position: right 9px center;
+      border: 1px solid #c8c8c8;
+      font-size: 16px;
+      height: 51px;
+      line-height: 27px;
+      outline: none;
+      padding: 12px 42px 12px 14px;
+      width: 100%;
+    }
+  }
+
+  .tag-dropdown { width: 26%; }
+  .month-dropdown { width: 17.5%; }
+
+  .search-dropdown-input {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  .search-dropdown-options {
+    top: 50px;
+  }
 }
 
 .votes {
@@ -62,6 +109,16 @@ $black: #000;
       line-height: 20px;
       padding: 15px 0;
       a { font-weight: normal; }
+    }
+
+    .outcome {
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 13px;
+      padding: 20px 15px 0;
+      text-align: left;
+      text-transform: uppercase;
+      width: 90px;
     }
   }
 }

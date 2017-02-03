@@ -1,5 +1,5 @@
 {
-    "analysis": "privzdignjeno",
+    "analysis": "speeches_per_session",
     "districts": ["71", "60", "28", "101"],
     "parties": ["SDS", "DeSUS"],
     "excludePresiding": true

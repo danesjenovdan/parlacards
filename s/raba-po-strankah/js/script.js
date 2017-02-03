@@ -251,6 +251,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function (response) {
       });
     });
 
+
     if (again) {
       setTimeout(relax, 20);
     } else {
@@ -305,6 +306,7 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function (response) {
           return 'none';
         } else {
           return 'block';
+
         }
       });
   }

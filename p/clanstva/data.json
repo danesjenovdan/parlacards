@@ -1,72 +1,142 @@
 {
-    "memberships": {
-        "odbor": [{
-            "org_type": "odbor",
-            "org_id": 19,
-            "name": "Odbor za infrastrukturo, okolje in prostor"
-        }, {
-            "org_type": "odbor",
-            "org_id": 17,
-            "name": "Odbor za finance in monetarno politiko"
-        }],
-        "kolegij": [{
-          "org_type": "kolegij",
-          "org_id": 9,
-          "name": "Kolegij predsednika dr\u017eavnega zbora"
-        }],
-        "delegacija": [{
-          "org_type": "delegacija",
-          "org_id": 32,
-          "name": "Delegacija Dr\u017eavnega zbora v Parlamentarni skup\u0161\u010dini Organizacije za varnost in sodelovanje v Evropi"
-        },{
-          "org_type": "delegacija",
-          "org_id": 32,
-          "name": "Delegacija Dr\u017eavnega zbora v Parlamentarni skup\u0161\u010dini Organizacije za varnost in sodelovanje v Evropi"
-        },{
-          "org_type": "delegacija",
-          "org_id": 32,
-          "name": "Delegacija Dr\u017eavnega zbora v Parlamentarni skup\u0161\u010dini Organizacije za varnost in sodelovanje v Evropi"
-        },{
-          "org_type": "delegacija",
-          "org_id": 32,
-          "name": "Delegacija Dr\u017eavnega zbora v Parlamentarni skup\u0161\u010dini Organizacije za varnost in sodelovanje v Evropi"
-        },{
-          "org_type": "delegacija",
-          "org_id": 32,
-          "name": "Delegacija Dr\u017eavnega zbora v Parlamentarni skup\u0161\u010dini Organizacije za varnost in sodelovanje v Evropi"
-        },{
-          "org_type": "delegacija",
-          "org_id": 32,
-          "name": "Delegacija Dr\u017eavnega zbora v Parlamentarni skup\u0161\u010dini Organizacije za varnost in sodelovanje v Evropi"
-        },{
-          "org_type": "delegacija",
-          "org_id": 32,
-          "name": "Delegacija Dr\u017eavnega zbora v Parlamentarni skup\u0161\u010dini Organizacije za varnost in sodelovanje v Evropi"
-        },
-        {
-          "org_type": "delegacija",
-          "org_id": 32,
-          "name": "Delegacija Dr\u017eavnega zbora v Parlamentarni skup\u0161\u010dini Organizacije za varnost in sodelovanje v Evropi"
-        }],
-        "komisija": [{
-            "org_type": "komisija",
-            "org_id": 10,
-            "name": "Komisija za nadzor javnih financ"
-        }],
-        "poslanska skupina": [{
-            "org_type": "poslanska skupina",
-            "org_id": 1,
-            "name": "PS Stranka modernega centra"
-        }]
+  "memberships": {
+    "kolegij": [
+      {
+        "url": null,
+        "org_type": "kolegij",
+        "org_id": 9,
+        "name": "Kolegij predsednika dr\u017eavnega zbora"
+      }
+    ],
+    "delegacija": [
+      {
+        "url": null,
+        "org_type": "delegacija",
+        "org_id": 35,
+        "name": "Nacionalna skupina Interparlamentarne unije v Dr\u017eavnem zboru"
+      }
+    ],
+    "komisija": [
+      {
+        "url": null,
+        "org_type": "komisija",
+        "org_id": 29,
+        "name": "Ustavna komisija"
+      },
+      {
+        "url": null,
+        "org_type": "komisija",
+        "org_id": 15,
+        "name": "Mandatno-volilna komisija"
+      },
+      {
+        "url": null,
+        "org_type": "komisija",
+        "org_id": 11,
+        "name": "Komisija za narodni skupnosti"
+      }
+    ],
+    "poslanska skupina": [
+      {
+        "url": null,
+        "org_type": "poslanska skupina",
+        "org_id": 1,
+        "name": "PS Stranka modernega centra"
+      }
+    ],
+    "skupina prijateljstva": [
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP003",
+        "org_type": "skupina prijateljstva",
+        "org_id": 39,
+        "name": "Skupina prijateljstva z Avstralijo"
+      },
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP014",
+        "org_type": "skupina prijateljstva",
+        "org_id": 50,
+        "name": "Skupina prijateljstva s Finsko"
+      },
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP015",
+        "org_type": "skupina prijateljstva",
+        "org_id": 51,
+        "name": "Skupina prijateljstva s Francijo"
+      },
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP017",
+        "org_type": "skupina prijateljstva",
+        "org_id": 53,
+        "name": "Skupina prijateljstva s Hrva\u0161ko"
+      },
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP018",
+        "org_type": "skupina prijateljstva",
+        "org_id": 54,
+        "name": "Skupina prijateljstva z Indijo"
+      },
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP024",
+        "org_type": "skupina prijateljstva",
+        "org_id": 60,
+        "name": "Skupina prijateljstva s Kitajsko"
+      },
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP028",
+        "org_type": "skupina prijateljstva",
+        "org_id": 63,
+        "name": "Skupina prijateljstva z Mad\u017earsko"
+      },
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP036",
+        "org_type": "skupina prijateljstva",
+        "org_id": 71,
+        "name": "Skupina prijateljstva z Rusijo"
+      },
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP044",
+        "org_type": "skupina prijateljstva",
+        "org_id": 79,
+        "name": "Skupina prijateljstva z Veliko Britanijo"
+      },
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP045",
+        "org_type": "skupina prijateljstva",
+        "org_id": 80,
+        "name": "Skupina prijateljstva z Zdru\u017eenimi dr\u017eavami Amerike"
+      },
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP022",
+        "org_type": "skupina prijateljstva",
+        "org_id": 58,
+        "name": "Skupina prijateljstva z Japonsko"
+      },
+      {
+        "url": "http://www.dz-rs.si/wps/portal/Home/ODrzavnemZboru/KdoJeKdo/SkupinaPrijateljstva?idSP=SP032",
+        "org_type": "skupina prijateljstva",
+        "org_id": 67,
+        "name": "Skupina prijateljstva z Nem\u010dijo"
+      }
+    ]
+  },
+  "person": {
+    "is_active": false,
+    "district": [
+      102
+    ],
+    "name": "Simona Kustec Lipicer",
+    "gov_id": "P266",
+    "gender": "f",
+    "party": {
+      "acronym": "SMC",
+      "is_coalition": true,
+      "id": 1,
+      "name": "PS Stranka modernega centra"
     },
-    "person": {
-        "party": {
-            "acronym": "SMC",
-            "id": 1,
-            "name": "PS Stranka modernega centra"
-        },
-        "name": "Tilen Bo\u017ei\u010d",
-        "gov_id": "P242",
-        "id": 8
-    }
+    "type": "mp",
+    "id": 48,
+    "has_function": false
+  },
+  "created_at": "01.02.2017",
+  "created_for": "01.02.2017"
 }

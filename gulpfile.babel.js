@@ -29,7 +29,6 @@ const knownOptions = {
 };
 
 const options = minimist(process.argv.slice(2), knownOptions);
-console.log(process.argv);
 
 function getFileContents(filePath, defaultValue = false) {
   const fullPath = `${options.path}/${filePath}`;

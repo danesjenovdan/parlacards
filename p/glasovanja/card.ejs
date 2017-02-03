@@ -30,22 +30,41 @@
 
 
     <!-- everything above here is part of the page and not part of the card -->
-    <div class="card-container card-halfling <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
+    <div class="card-container <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
         <div class="card-header">
             <div class="card-header-border"></div>
             <h1>Glasovanja</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div id="glasovanja-<%= randomId %>" class="card-content full">
-            <div class="card-content-front">
-              <search-dropdown :items="allTags" :placeholder="inputPlaceholder"></search-dropdown>
+            <div class="card-content-front" v-cloak>
+              <div class="filters">
+                <div class="filter option-party-buttons">
+                  <div v-for="option in allOptions"
+                  :class="['party-button', option.class, { selected: selectedOptions.indexOf(option.id) > -1 }]"
+                  @click="toggleOption(option.id)">{{ option.label }}</div>
+                </div>
+                <div class="filter text-filter">
+                  <div class="filter-label">Išči po naslovu glasovanja</div>
+                  <input class="text-filter-input" type="text" v-model="textFilter">
+                </div>
+                <div class="filter tag-dropdown">
+                  <div class="filter-label">Matično delovno telo</div>
+                  <search-dropdown :items="allTags" :placeholder="tagPlaceholder"></search-dropdown>
+                </div>
+                <div class="filter month-dropdown">
+                  <div class="filter-label">Časovno obdobje</div>
+                  <search-dropdown :items="allMonths" :placeholder="monthPlaceholder" :alphabetise="false"></search-dropdown>
+                </div>
+              </div>
 
               <div class="votes stickinme date-list">
                 <template v-for="votingDay in filteredVotingDays">
-                  <div class="date">{{ votingDay.date.replace(/\./g, '. ') }}</div>
+                  <div class="date">{{ votingDay.date }}</div>
                   <ul>
                     <li v-for="ballot in votingDay.ballots">
                       <div :class="['icon', ballot.option]"></div>
                       <div class="motion">{{ ballot.label }} <a class="funblue-light-hover" :href="'<%= urlsData.base %>/seja/glasovanje/' + ballot.session_id + '/' + ballot.vote_id + ''">{{ ballot.motion }}</a></div>
+                      <div class="outcome">{{ ballot.outcome || 'Ni podatkov' }}</div>
                     </li>
                   </ul>
                 </template>

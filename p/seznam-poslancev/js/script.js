@@ -12,7 +12,8 @@ activateCopyButton addCardRippling */
     name: item => item.person.name,
     party: item => item.person.party.acronym,
     district: item => item.person.formattedDistrict,
-    analysis: item => item.results[seznamPoslancevState.analysis],
+    analysis: item => item.results[seznamPoslancevState.analysis].score,
+    change: item => item.results[seznamPoslancevState.analysis].diff,
   };
 
   function toggleClasses(element, newSortProperty, oldSortProperty) {
@@ -57,12 +58,13 @@ activateCopyButton addCardRippling */
     const districts = seznamPoslancevState.districts ? `volilni okraj: ${getDistrictNames(seznamPoslancevState.districts).join(', ')}` : 'vsi volilni okraji';
     const presiding = seznamPoslancevState.excludePresiding ? '; brez predsedujočih poslancev' : '';
     const firstLine = `Množica vseh trenutno aktivnih poslancev, ki ustrezajo uporabniškemu vnosu (${parties}; ${districts + presiding}).`;
-
+    const analysisLabel = seznamPoslancevState && seznamPoslancevState.analysis ? seznamPoslancevColumns[seznamPoslancevState.analysis].label : '';
     const sortMap = {
       name: 'abecedi',
       district: 'okrajih',
       party: 'poslanskih skupinah',
-      analysis: `rezultatu analize${seznamPoslancevState && seznamPoslancevState.analysis ? seznamPoslancevColumns[seznamPoslancevState.analysis].label : ''}`,
+      analysis: `rezultatu analize ${analysisLabel}`,
+      change: `aktualni spremembi v rezultatu analize ${analysisLabel}`,
     };
 
     const secondLine = `Seznam je sortiran po ${sortMap[sortProperty]}.`;

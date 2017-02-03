@@ -120,7 +120,7 @@ if (!isMSIE) {
       .on('click', function (d) {
         // stop propagation
         d3.event.stopPropagation();
-        console.log('ping');
+        // console.log('ping');
 
         if (d3.selectAll('.active')[0].length === 0) {
           // no selection is active
@@ -188,7 +188,7 @@ if (!isMSIE) {
         } else {
           // other selection is active
 
-          console.log('demote chosen');
+          // console.log('demote chosen');
           // demote currently chosen slices
           d3.selectAll('path.chosen')
             .classed('chosen', false)
@@ -201,11 +201,11 @@ if (!isMSIE) {
               return d3.interpolateString(startTranslateState, endTranslateState);
             });
 
-          console.log('demote active');
+          // console.log('demote active');
           // demote currently active slices
           if (d3.select('path.active')[0][0] !== null) {
             const activeOption = d3.select('path.active').datum().data.option;
-            console.log(activeOption);
+            // console.log(activeOption);
             d3.selectAll('path.active')
               .classed('active', false)
               .classed('hover', false)
@@ -218,7 +218,7 @@ if (!isMSIE) {
                 return d3.interpolateString(endTranslateState, 'translate(0, 0)');
               });
 
-            console.log('hide active');
+            // console.log('hide active');
             // hide currently active party labels
             d3.selectAll(`.${activeOption.replace(' ', '_')}-label-party`)
               .transition()
@@ -231,11 +231,11 @@ if (!isMSIE) {
               .style('opacity', 0);
           }
 
-          console.log('select data.option');
+          // console.log('select data.option');
           d3.selectAll(`.${ d.data.option}-arc`)
             .classed('active', true);
 
-          console.log('toggle mps');
+          // console.log('toggle mps');
           // togle mps
           d3.selectAll('.mpgroup').classed('hidden', true);
           var mp_list = d3.selectAll(`.${ d.data.option}`);
@@ -596,7 +596,7 @@ if (!isMSIE) {
   $('.option').on('click', function () {
     // togle mps
     $('.mpgroup').addClass('hidden');
-    console.log($(this).data('option'));
+    // console.log($(this).data('option'));
     $(`.mpgroup.${ $(this).data('option')}`).removeClass('hidden');
   });
 } else {
