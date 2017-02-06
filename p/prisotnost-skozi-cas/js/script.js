@@ -10,14 +10,14 @@
   data.sort((x, y) => dateFormatter.parse(x.date_ts) - dateFormatter.parse(y.date_ts));
 
   // global stuff for the chart
-  const margin = {
+  const prisotnostMargin = {
     top: 10,
-    right: 30,
-    bottom: 30,
+    right: 0,
+    bottom: 0,
     left: 40,
   };
-  const width = 960 - margin.left - margin.right;
-  const height = 400 - margin.top - margin.bottom;
+  const width = 960 - prisotnostMargin.left - prisotnostMargin.right;
+  const height = 400 - prisotnostMargin.top - prisotnostMargin.bottom;
 
   const SI = d3.locale({
     decimal: ',',
@@ -81,7 +81,7 @@
     .attr('viewBox', '0 0 960 400')
     .attr('preserveAspectRatio', 'xMidYMid meet')
     .append('g')
-    .attr('transform', `translate(${margin.left},${margin.top})`);
+    .attr('transform', `translate(${prisotnostMargin.left},${prisotnostMargin.top})`);
 
   function renderBarChart(data) {
     const x = d3.scale.ordinal().rangeRoundBands([0, width]);
@@ -104,7 +104,7 @@
       .orient('left')
       .tickValues([0, 25, 50, 75, 100])
       .tickFormat(d => `${d} %`)
-      .innerTickSize(-(width - 13))
+      .innerTickSize(-(width))
       .outerTickSize(0);
 
     const line = d3.svg.line()
@@ -145,7 +145,6 @@
       .attr('width', x.rangeBand())
       .on('mouseover', (d) => {
         const bars = svg.selectAll('rect[data-time="' + d.x + '"]').classed('hovered', true);
-        console.log(x(d.x));
         if (x(d.x) < 14) {
           focus.attr('transform', `translate(${x(d.x) + 110},${y(80)})`)
             .style('display', null)
@@ -169,24 +168,37 @@
           .attr('text-anchor', 'start')
           .attr('x', -70)
           .attr('y', -18);
-        focus.append('text')
-          .text(`${prisotnostData.person.gender === 'm' ? 'Prisoten' : 'Prisotna'} | ${Math.round(d3.select(bars[0][0]).datum().y)} %`)
-          .style('fill', '#ffffff')
-          .attr('text-anchor', 'start')
-          .attr('x', -70)
-          .attr('y', 10);
-        focus.append('text')
-          .text(`${prisotnostData.person.gender === 'm' ? 'Odsoten' : 'Odsotna'} | ${Math.round(d3.select(bars[0][1]).datum().y - 0.0000000001)} %`) // odštevamo zaradi case-a 20.5 + 79.5
-          .style('fill', '#ffffff')
-          .attr('text-anchor', 'start')
-          .attr('x', -70)
-          .attr('y', 28);
-        focus.append('text')
-          .text(`Brez mandata | ${Math.round(d3.select(bars[0][2]).datum().y)} %`)
-          .style('fill', '#ffffff')
-          .attr('text-anchor', 'start')
-          .attr('x', -70)
-          .attr('y', 46);
+        
+        let tooltiptop = 10;
+
+        if (Math.round(d3.select(bars[0][0]).datum().y) > 0) {
+          focus.append('text')
+            .text(`${prisotnostData.person.gender === 'm' ? 'Prisoten' : 'Prisotna'} | ${Math.round(d3.select(bars[0][0]).datum().y)} %`)
+            .style('fill', '#ffffff')
+            .attr('text-anchor', 'start')
+            .attr('x', -70)
+            .attr('y', tooltiptop);
+
+          tooltiptop = tooltiptop + 18;  
+        }
+        if (Math.round(d3.select(bars[0][1]).datum().y - 0.0000000001) > 0) {
+          focus.append('text')
+            .text(`${prisotnostData.person.gender === 'm' ? 'Odsoten' : 'Odsotna'} | ${Math.round(d3.select(bars[0][1]).datum().y - 0.0000000001)} %`) // odštevamo zaradi case-a 20.5 + 79.5
+            .style('fill', '#ffffff')
+            .attr('text-anchor', 'start')
+            .attr('x', -70)
+            .attr('y', tooltiptop);
+
+            tooltiptop = tooltiptop + 18;
+        }
+        if (Math.round(d3.select(bars[0][2]).datum().y) > 0) {
+          focus.append('text')
+            .text(`Brez mandata | ${Math.round(d3.select(bars[0][2]).datum().y)} %`)
+            .style('fill', '#ffffff')
+            .attr('text-anchor', 'start')
+            .attr('x', -70)
+            .attr('y', tooltiptop);
+        }
 
         // focus
         //   .append('text')
@@ -201,7 +213,7 @@
       });
 
     function mousemove() {
-      const x0 = x.invert(d3.mouse(this)[0] - margin.left);
+      const x0 = x.invert(d3.mouse(this)[0] - prisotnostMargin.left);
       const i = bisectDate(data, x0, 1);
       const d0 = data[i - 1];
       const d1 = data[i];
@@ -240,7 +252,7 @@
     }
 
     function mouseclick() {
-      const x0 = x.invert(d3.mouse(this)[0] - margin.left);
+      const x0 = x.invert(d3.mouse(this)[0] - prisotnostMargin.left);
       const i = bisectDate(data, x0, 1);
       const d0 = data[i - 1];
       const d1 = data[i];
@@ -347,4 +359,9 @@
   }
 
   renderBarChart(manipulatedData);
+
+  makeEmbedSwitch();
+  activateCopyButton();
+  addCardRippling();
+
 })(/*SCRIPT PARAMS */);
