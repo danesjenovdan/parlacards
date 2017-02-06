@@ -19,7 +19,8 @@
     <link data-inline="true" rel="stylesheet" href="css/style.css">
 
     <script>
-        var stranke_data = <%- JSON.stringify(data); %>
+        var stranke_data = <%- JSON.stringify(data); %>;
+        var customUrl = '<%- decodeURIComponent(customUrl) %>';
     </script>
 
 </head> <!-- removeme -->

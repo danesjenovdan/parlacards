@@ -1,0 +1,84 @@
+@import  'parlassets/scss/colors';
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 0.5;
+    shape-rendering: crispEdges;
+    stroke-dasharray: 2, 2;
+}
+.tick line {
+        stroke-width: 1;
+        stroke: $black;
+}
+.tick text {
+    font-size: 10px;
+}
+.prisotnost-chart .domain {
+    display: none;
+}
+.prisotnost-chart .x.axis {
+    display: none;
+}
+.prisotnost-chart .x.axis .tick text {
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+
+.prisotnost-chart .line {
+    fill: none;
+    stroke-width: 2;
+    stroke: #009cdd;
+}
+.prisotnost-chart .dot {
+    fill: #009cdd;
+}
+
+.focus rect {
+    /*position: absolute;
+    text-align: center;*/
+    border: 0px;
+    /*pointer-events: none;*/
+    background-color: #525252;
+    border-radius: 3px;
+    padding: 2px 10px;
+    // opacity: 0.7;
+
+    color: #ffffff;
+}
+
+.focus circle {
+    fill: #009cdd;
+}
+
+.tabs-header:hover { text-decoration: none; }
+
+
+.presencething-present rect {
+    fill: #bfe4f4;
+    stroke: #ffffff;
+    stroke-width: 1;
+
+    &.hovered {
+        fill: #009cdd;
+    }
+}
+.presencething-notPresent rect {
+    fill: #feefec;
+    stroke: #ffffff;
+    stroke-width: 1;
+
+    &.hovered {
+        fill: $red;
+    }
+}
+.presencething-notMember rect {
+    fill: #ececec;
+    stroke: #ffffff;
+    stroke-width: 1;
+
+    &.hovered {
+        fill: #a1a1a1;
+    }
+}
