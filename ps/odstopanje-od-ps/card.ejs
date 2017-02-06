@@ -25,15 +25,15 @@
 
 <!-- everything above here is part of the page and not part of the card -->
 <div class="card-container card-halfling <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
-    <div class="card-header">
+    <div class="card-header shadowhunter">
         <div class="card-header-border"></div>
         <h1>Ujemanje s poslansko skupino</h1>
         <!-- this text is the only thing you touch in .card-header -->
     </div>
     <div class="card-content full">
 
-        <div class="card-content-front">
-            <ul class="person-list">
+        <div class="card-content-front stickinme">
+            <ul class="person-list date-list">
                 <% data.results.forEach(function(member) { %>
                 <li class="person">
                     <a href="<%= urlsData.base + urlsData.personLink.base + urlsData.person[member.person.id].slug + urlsData.personLink.pregled %>" class="portrait column">
