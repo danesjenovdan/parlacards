@@ -31,14 +31,14 @@
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
-        <div class="card-header">
+        <div class="card-header shadowhunter">
             <div class="card-header-border"></div>
             <h1>Nastopi, v katerih je bil iskalni niz izrečen</h1> <!-- this text is the only thing you touch in .card-header -->
         </div>
         <div class="card-content full">
-            <div class="card-content-front" id="vue-nvkjbini" v-cloak>
+            <div class="card-content-front stickinme" id="vue-nvkjbini" v-cloak>
                 <div v-if="rawSpeeches.length === 0" class="no-results">Brez zadetkov.</div>
-                <ul v-else class="person-list">
+                <ul v-else class="person-list thing-list">
                     <li v-for="speech in speeches" class="person">
                         <template v-if="speech.person.type === 'mp'">
                             <a class="column portrait" :href="speech.memberUrl">
