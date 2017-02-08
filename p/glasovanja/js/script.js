@@ -101,7 +101,7 @@
         };
 
         const filterDates = (votingDay) => {
-          if (this.selectedMonths.length === 0) return true;
+          if (onlyFilterByText || this.selectedMonths.length === 0) return true;
 
           const [, month, year] = votingDay.date.split(' ').map(string => parseInt(string, 10));
 

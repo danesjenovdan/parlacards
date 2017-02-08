@@ -1,76 +1,138 @@
-(function(randomId){
-  function capitalise(string) {
-    return string[0].toUpperCase() + string.substring(1)
-  }
+/* global Vue vocabulary pgVoteData makeEmbedSwitch activateCopyButton addCardRippling */
 
+((randomId) => {
+  // eslint-disable-next-line no-new
   new Vue({
-    el: '#glasovanja-' + randomId,
+    el: `#glasovanja-${randomId}`,
     components: ['SearchDropdown'],
     computed: {
-      inputPlaceholder: function() {
-        return this.selectedTags.length > 0 ? 'Izbranih filtrov: ' + this.selectedTags.length : 'Izberi filtre'
+      tagPlaceholder() {
+        return this.selectedTags.length > 0 ? `Izbranih: ${this.selectedTags.length}` : 'Izberi';
       },
-      selectedTags: function() {
+      monthPlaceholder() {
+        return this.selectedMonths.length > 0 ? `Izbranih: ${this.selectedMonths.length}` : 'Izberi';
+      },
+      dropdownItems() {
+        const validTags = [];
+        const validMonths = [];
+
+        this.getFilteredVotingDays(true).forEach((votingDay) => {
+          const [, month, year] = votingDay.date.split(' ').map(string => parseInt(string, 10));
+          const monthId = `${year}-${month}`;
+          if (validMonths.indexOf(monthId) === -1) validMonths.push(monthId);
+
+          votingDay.ballots
+            .forEach((ballot) => {
+              ballot.tags.forEach((tag) => {
+                if (validTags.indexOf(tag) === -1) validTags.push(tag);
+              });
+            });
+        });
+
+        return {
+          tags: this.allTags.filter(tag => validTags.indexOf(tag.id) > -1),
+          months: this.allMonths.filter(month => validMonths.indexOf(month.id) > -1),
+        };
+      },
+      selectedTags() {
         return this.allTags
-          .filter(function(tag) { return tag.selected })
-          .map(function(tag) { return tag.id });
+          .filter(tag => tag.selected)
+          .map(tag => tag.id);
       },
-      filteredVotingDays: function() {
-        var currentDate = '',
-            that = this;
+      selectedMonths() {
+        return this.allMonths.filter(month => month.selected);
+      },
+      selectedOptions() {
+        return this.allOptions.filter(option => option.selected)
+                              .map(option => option.id);
+      },
+      filteredVotingDays() {
+        return this.getFilteredVotingDays();
+      },
+    },
+    data() {
+      return {
+        allTags: pgVoteData.all_tags.map(tag => ({ id: tag, label: tag, selected: false })),
+        allOptions: [
+          { id: 'za', class: 'for', label: 'ZA', selected: false },
+          { id: 'proti', class: 'against', label: 'PROTI', selected: false },
+          { id: 'kvorum', class: 'kvorum', label: 'VZDRŽANI', selected: false },
+          { id: 'ni', class: 'ni', label: 'NISO', selected: false },
+        ],
+        allMonths: [
+          { id: '2017-2', label: 'Februar 2017', month: 2, year: 2017, selected: false },
+          { id: '2017-1', label: 'Januar 2017', month: 1, year: 2017, selected: false },
+          { id: '2016-12', label: 'December 2016', month: 12, year: 2016, selected: false },
+          { id: '2016-11', label: 'November 2016', month: 11, year: 2016, selected: false },
+          { id: '2016-10', label: 'Oktober 2016', month: 10, year: 2016, selected: false },
+          { id: '2016-9', label: 'September 2016', month: 9, year: 2016, selected: false },
+          { id: '2016-8', label: 'Avgust 2016', month: 8, year: 2016, selected: false },
+          { id: '2016-7', label: 'Julij 2016', month: 7, year: 2016, selected: false },
+          { id: '2016-6', label: 'Junij 2016', month: 6, year: 2016, selected: false },
+          { id: '2016-5', label: 'Maj 2016', month: 5, year: 2016, selected: false },
+          { id: '2016-4', label: 'April 2016', month: 4, year: 2016, selected: false },
+          { id: '2016-3', label: 'Marec 2016', month: 3, year: 2016, selected: false },
+          { id: '2016-2', label: 'Februar 2016', month: 2, year: 2016, selected: false },
+          { id: '2016-1', label: 'Januar 2016', month: 1, year: 2016, selected: false },
+        ],
+        votingDays: pgVoteData.results,
+        person: pgVoteData.person,
+        textFilter: '',
+        selectedOptions: [],
+      };
+    },
+    methods: {
+      toggleOption(optionId) {
+        const clickedOption = this.allOptions.filter(option => option.id === optionId)[0];
+        clickedOption.selected = !clickedOption.selected;
+      },
+      getFilteredVotingDays(onlyFilterByText = false) {
+        const filterBallots = (ballot) => {
+          const tagMatch = onlyFilterByText || this.selectedTags.length === 0 ||
+            ballot.tags.filter(tag => this.selectedTags.indexOf(tag) > -1).length > 0;
+          const textMatch = this.textFilter === '' ||
+            ballot.motion.toLowerCase().indexOf(this.textFilter.toLowerCase()) > -1;
+          const optionMatch = onlyFilterByText || this.selectedOptions.length === 0 ||
+            this.selectedOptions.indexOf(ballot.option) > -1;
+
+          return tagMatch && textMatch && optionMatch;
+        };
+
+        const filterDates = (votingDay) => {
+          if (onlyFilterByText || this.selectedMonths.length === 0) return true;
+
+          const [, month, year] = votingDay.date.split(' ').map(string => parseInt(string, 10));
+
+          return this.selectedMonths.filter(m => m.month === month && m.year === year).length > 0;
+        };
 
         return this.votingDays
-          .map(function(votingDay) {
-            var newObject = {}
+          .map(votingDay => ({
+            date: votingDay.date,
+            ballots: votingDay.ballots
+              .filter(filterBallots)
+              .map((ballot) => {
+                const ballotClone = JSON.parse(JSON.stringify(ballot));
+                if (ballot.option === 'ni') {
+                  ballotClone.label = 'Niso glasovali o';
+                } else {
+                  ballotClone.label = `Glasovali ${ballot.option.toUpperCase()}`;
+                }
 
-            if (currentDate !== votingDay.date) {
-              currentDate = votingDay.date;
-              newObject.date = votingDay.date;
-            }
+                if (ballot.result !== 'none') {
+                  ballotClone.outcome = ballot.result === true ? 'Predlog sprejet' : 'Predlog zavrnjen';
+                }
 
-            newObject.ballots = votingDay.ballots.filter(function(ballot) {
-              if (that.selectedTags.length > 0) {
-                var match = false;
-                ballot.tags.forEach(function(tag) {
-                  match = match || that.selectedTags.indexOf(tag) > -1;
-                })
-
-                return match
-              }
-              return true
-            })
-            .map(function(ballot) {
-              var ballotClone = JSON.parse(JSON.stringify(ballot));
-              if (ballot.option === 'ni') {
-                ballotClone.label = 'NISO glasovali o';
-              } else if (ballot.option === 'za'){
-                ballotClone.label = 'Glasovali ZA';
-              } else if (ballot.option === 'proti'){
-                ballotClone.label = 'Glasovali PROTI';
-              } else if (ballot.option === 'kvorum'){
-                ballotClone.label = 'VZDRŽALI so se glasovanja o';
-              }
-              return ballotClone;
-            })
-
-            return newObject
-          })
-          .filter(function(votingDay) { return votingDay.ballots.length > 0 })
-      }
+                return ballotClone;
+              }),
+          }))
+          .filter(votingDay => votingDay.ballots.length > 0)
+          .filter(filterDates);
+      },
     },
-    data: function() {
-      return {
-        allTags: psVoteData.all_tags.map(function(tag) {
-          return { id: tag, label: tag, selected: false }
-        }),
-        votingDays: psVoteData.results
-      }
-    }
   });
 
-  progressbarTooltip.init(className);
-
-  addCardRippling();
   makeEmbedSwitch();
   activateCopyButton();
+  addCardRippling();
 })(/* SCRIPT_PARAMS */);
