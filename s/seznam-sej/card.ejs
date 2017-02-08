@@ -33,7 +33,7 @@
           return true;
         }
         else {
-          var match = false
+          var match = false;
 
           if (state.filters.indexOf('Seje DZ') > -1) {
             match = match || (session.orgs.filter(function(org) { return org.id === 95 }).length > 0);
@@ -44,7 +44,7 @@
           if (state.filters.indexOf('Seje delovnih teles') > -1) {
             if (state.workingBodies && state.workingBodies.length > 0) {
               state.workingBodies.forEach(function(workingBody) {
-                match = match || (session.orgs.filter(function(org) { return org.id === workingBody }).length > 0)
+                match = match || (session.orgs.filter(function(org) { return org.id === workingBody }).length > 0);
               });
             }
             else {

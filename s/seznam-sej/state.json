@@ -1,4 +1,5 @@
 {
-    "filters": ["Seje delovnih teles", "Seje DZ"],
-    "workingBodies": [10]
+    "filters": ["Seje delovnih teles"],
+    "workingBodies": [27],
+    "onlyLatest": true
 }
