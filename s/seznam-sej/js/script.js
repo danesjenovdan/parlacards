@@ -12,7 +12,7 @@ activateCopyButton addCardRippling */
     name: item => item.name,
     date: item => item.date_ts,
     updated: item => item.updated_at_ts,
-    workingBody: item => item.org.name,
+    workingBody: item => item.orgs[0].name,
   };
 
   function toggleClasses(element, newSortProperty, oldSortProperty) {

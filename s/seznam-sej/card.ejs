@@ -32,21 +32,27 @@
         if (!state.filters) {
           return true;
         }
-        else if (state.filters && state.filters.indexOf('Seje DZ') > -1 && session.org.id === 95) {
-          return true;
-        }
-        else if (state.filters && state.filters.indexOf('Seje kolegija predsednika DZ') > -1 && session.org.id === 9) {
-          return true;
-        }
-        else if (state.filters && state.filters.indexOf('Seje delovnih teles') > -1) {
-          if (state.workingBodies && state.workingBodies.length > 0) {
-            return state.workingBodies.indexOf(session.org.id) > -1;
+        else {
+          var match = false
+
+          if (state.filters.indexOf('Seje DZ') > -1) {
+            match = match || (session.orgs.filter(function(org) { return org.id === 95 }).length > 0);
           }
-          else {
-            return session.org.id !== 9 && session.org.id !== 95;
+          if (state.filters.indexOf('Seje kolegija predsednika DZ') > -1) {
+            match = match || (session.orgs.filter(function(org) { return org.id === 9 }).length > 0);
           }
+          if (state.filters.indexOf('Seje delovnih teles') > -1) {
+            if (state.workingBodies && state.workingBodies.length > 0) {
+              state.workingBodies.forEach(function(workingBody) {
+                match = match || (session.orgs.filter(function(org) { return org.id === workingBody }).length > 0)
+              });
+            }
+            else {
+              match = match || (session.orgs.filter(function(org) { return [9, 95].indexOf(org.id) === -1 }).length > 0);
+            }
+          }
+          return match;
         }
-        return false;
       })
       .filter(function(session, index) {
         return !state.onlyLatest || index < 5;
@@ -90,11 +96,13 @@
                   <div class="column"><%= formatDate(session.date_ts) %></div>
                   <div class="column optional"><%= formatDate(session.updated_at_ts) %></div>
                   <div class="column wider optional">
-                    <% if (session.org.id === 9 || session.org.id === 95) { %>
-                      <%= session.org.name %>
-                    <% } else {%>
-                      <a class="funblue-light-hover" href="https://glej.parlameter.si/wb/getWorkingBodies/<%= session.org.id %>?frame=true&altHeader=true"><%= session.org.name %></a>
-                    <% }%>
+                    <% session.orgs.forEach(function(org, index) {
+                      if (org.id === 9 || org.id === 95) { %>
+                        <%= org.name + (index < session.orgs.length - 1 ? ', ' : '') %>
+                      <% } else { %>
+                        <a class="funblue-light-hover" href="https://glej.parlameter.si/wb/getWorkingBodies/<%= org.id %>?frame=true&altHeader=true"><%= org.name %></a><%= index < session.orgs.length - 1 ? ', ' : '' %>
+                      <% } %>
+                    <% }) %>
                   </div>
                 </li>
                 <% }) %>
