@@ -1,4 +1,5 @@
-/* global Vue vocabulary pgVoteData makeEmbedSwitch activateCopyButton addCardRippling */
+/* global $ Vue vocabulary pgVoteData pgVoteCardData pgVoteState makeEmbedSwitch activateCopyButton
+addCardRippling */
 
 ((randomId) => {
   // eslint-disable-next-line no-new
@@ -49,36 +50,66 @@
       filteredVotingDays() {
         return this.getFilteredVotingDays();
       },
+      cardUrl() {
+        const state = {};
+
+        if (this.selectedTags.length > 0) state.tags = this.selectedTags;
+        if (this.selectedMonths.length > 0) state.months = this.selectedMonths.map(month => month.id);
+        if (this.textFilter.length > 0) state.text = this.textFilter;
+        if (this.selectedOptions.length > 0) state.options = this.selectedOptions;
+
+        return `https://glej.parlameter.si/${pgVoteCardData.group}/${pgVoteCardData.method}/${pgVoteData.party.id}/?state=${encodeURIComponent(JSON.stringify(state))}&altHeader=true`;
+      },
     },
     data() {
+      const allMonths = [
+        { id: '2017-2', label: 'Februar 2017', month: 2, year: 2017, selected: false },
+        { id: '2017-1', label: 'Januar 2017', month: 1, year: 2017, selected: false },
+        { id: '2016-12', label: 'December 2016', month: 12, year: 2016, selected: false },
+        { id: '2016-11', label: 'November 2016', month: 11, year: 2016, selected: false },
+        { id: '2016-10', label: 'Oktober 2016', month: 10, year: 2016, selected: false },
+        { id: '2016-9', label: 'September 2016', month: 9, year: 2016, selected: false },
+        { id: '2016-8', label: 'Avgust 2016', month: 8, year: 2016, selected: false },
+        { id: '2016-7', label: 'Julij 2016', month: 7, year: 2016, selected: false },
+        { id: '2016-6', label: 'Junij 2016', month: 6, year: 2016, selected: false },
+        { id: '2016-5', label: 'Maj 2016', month: 5, year: 2016, selected: false },
+        { id: '2016-4', label: 'April 2016', month: 4, year: 2016, selected: false },
+        { id: '2016-3', label: 'Marec 2016', month: 3, year: 2016, selected: false },
+        { id: '2016-2', label: 'Februar 2016', month: 2, year: 2016, selected: false },
+        { id: '2016-1', label: 'Januar 2016', month: 1, year: 2016, selected: false },
+      ];
+      const allTags = pgVoteData.all_tags.map(tag => ({ id: tag, label: tag, selected: false }));
+      const allOptions = [
+        { id: 'za', class: 'for', label: 'ZA', selected: false },
+        { id: 'proti', class: 'against', label: 'PROTI', selected: false },
+        { id: 'kvorum', class: 'kvorum', label: 'VZDRŽANI', selected: false },
+        { id: 'ni', class: 'ni', label: 'NISO', selected: false },
+      ];
+      const textFilter = pgVoteState.text || '';
+
+      const toggleFromState = (stateParameter, itemArray) => {
+        if (pgVoteState[stateParameter]) {
+          itemArray.forEach((item) => {
+            if (pgVoteState[stateParameter].indexOf(item.id) > -1) {
+              // eslint-disable-next-line no-param-reassign
+              item.selected = true;
+            }
+          });
+        }
+      };
+
+      toggleFromState('months', allMonths);
+      toggleFromState('tags', allTags);
+      toggleFromState('options', allOptions);
+
       return {
-        allTags: pgVoteData.all_tags.map(tag => ({ id: tag, label: tag, selected: false })),
-        allOptions: [
-          { id: 'za', class: 'for', label: 'ZA', selected: false },
-          { id: 'proti', class: 'against', label: 'PROTI', selected: false },
-          { id: 'kvorum', class: 'kvorum', label: 'VZDRŽANI', selected: false },
-          { id: 'ni', class: 'ni', label: 'NISO', selected: false },
-        ],
-        allMonths: [
-          { id: '2017-2', label: 'Februar 2017', month: 2, year: 2017, selected: false },
-          { id: '2017-1', label: 'Januar 2017', month: 1, year: 2017, selected: false },
-          { id: '2016-12', label: 'December 2016', month: 12, year: 2016, selected: false },
-          { id: '2016-11', label: 'November 2016', month: 11, year: 2016, selected: false },
-          { id: '2016-10', label: 'Oktober 2016', month: 10, year: 2016, selected: false },
-          { id: '2016-9', label: 'September 2016', month: 9, year: 2016, selected: false },
-          { id: '2016-8', label: 'Avgust 2016', month: 8, year: 2016, selected: false },
-          { id: '2016-7', label: 'Julij 2016', month: 7, year: 2016, selected: false },
-          { id: '2016-6', label: 'Junij 2016', month: 6, year: 2016, selected: false },
-          { id: '2016-5', label: 'Maj 2016', month: 5, year: 2016, selected: false },
-          { id: '2016-4', label: 'April 2016', month: 4, year: 2016, selected: false },
-          { id: '2016-3', label: 'Marec 2016', month: 3, year: 2016, selected: false },
-          { id: '2016-2', label: 'Februar 2016', month: 2, year: 2016, selected: false },
-          { id: '2016-1', label: 'Januar 2016', month: 1, year: 2016, selected: false },
-        ],
+        allTags,
+        allOptions,
+        allMonths,
         votingDays: pgVoteData.results,
-        person: pgVoteData.person,
-        textFilter: '',
+        textFilter,
         selectedOptions: [],
+        shortenedCardUrl: '',
       };
     },
     methods: {
@@ -128,6 +159,20 @@
           }))
           .filter(votingDay => votingDay.ballots.length > 0)
           .filter(filterDates);
+      },
+      shortenUrl(url) {
+        $.get(`https://parla.me/shortner/generate?url=${encodeURIComponent(`${url}&frame=true`)}`, (response) => {
+          this.shortenedCardUrl = response;
+          this.$el.querySelector('.card-content-share button, .btn-copy-embed').textContent = 'KOPIRAJ';
+        });
+      },
+    },
+    created() {
+      this.shortenUrl(this.cardUrl);
+    },
+    watch: {
+      cardUrl(newValue) {
+        this.shortenUrl(newValue);
       },
     },
   });
