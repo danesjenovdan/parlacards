@@ -58,7 +58,7 @@ addCardRippling */
         if (this.textFilter.length > 0) state.text = this.textFilter;
         if (this.selectedOptions.length > 0) state.options = this.selectedOptions;
 
-        return `https://glej.parlameter.si/${pgVoteCardData.group}/${pgVoteCardData.method}/${pgVoteData.party.id}/?state=${encodeURIComponent(JSON.stringify(state))}&altHeader=true`;
+        return `https://glej.parlameter.si/${voteCardData.group}/${voteCardData.method}/${pgVoteData.party.id}/?state=${encodeURIComponent(JSON.stringify(state))}&altHeader=true`;
       },
     },
     data() {
