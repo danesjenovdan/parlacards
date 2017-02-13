@@ -40,13 +40,13 @@
             <div class="card-content-info hidden">
                 <div class="card-back-content">
                     <p class="info-text lead">
-                        Prisotnost <%= vocab['poslanec3'][data.person.gender] %> na glasovanjih DZ skozi čas.
+                        Prisotnost poslanske skupine na glasovanjih DZ skozi čas.
                     </p>
                     <p class="info-text heading">
                         METODOLOGIJA
                     </p>
                     <p class="info-text">
-                        Vsak mesec preštejemo vse oddane glasovnice <%= vocab['poslanec3'][data.person.gender] %> in število delimo s številom vseh glasovanj, na katerih bi <%= vocab['morati'][data.person.gender] %> <%= vocab['poslanec'][data.person.gender] %> ta mesec glasovati. Če <%= vocab['poslanec'][data.person.gender] %> v izbranem mesecu mandata ni <%= vocab['imeti'][data.person.gender] %>, prikažemo, na kolikšnem odstotku glasovanj ni <%= vocab['imeti'][data.person.gender] %> pravice glasovati.
+                        Seštejemo število glasovanj, na katerih bi v izbranem mesecu morali biti prisotni poslanci poslanske skupine, in z odstotki prikažemo, kolikšnega deleža glasovanj so se udeležili.
                     </p>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                         </div>
                         <div class="embed-divider"></div>
                         <div class="embed-script">
-                            <textarea class="form-control" data-id="<%= data.person.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?embed=true&altHeader=true"></textarea>
+                            <textarea class="form-control" data-id="<%= data.party.id %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){<iFram></iFram>eResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.party.id %>/?embed=true&altHeader=true"></textarea>
                             <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                         </div>
 
@@ -85,7 +85,7 @@
                 <div class="card-back-content">
                     <div class="share-content">
                         <label for="share-url">Neposredna povezava do kartice</label>
-                        <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.person.id %>/?frame=true&altHeader=true"/>
+                        <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.party.id %>/?frame=true&altHeader=true"/>
                         <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
                     </div>
                 </div>
