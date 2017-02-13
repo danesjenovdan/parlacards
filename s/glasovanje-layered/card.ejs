@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/components.js"></script>
     <!-- endbuild -->
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
@@ -41,38 +43,51 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="greybox">
-                            <div class="legend-container">
-                                <div class="option za" data-option="for">
-                                    <div class="option-text">
-                                        <div class="option-number"><%= data.all.for.total_votes %></div>
-                                        <div class="option-option">za</div>
-                                    </div>
-                                </div>
-
-                                <div class="option proti" data-option="against">
-                                    <div class="option-text">
-                                        <div class="option-number"><%= data.all.against.total_votes %></div>
-                                        <div class="option-option">proti</div>
-                                    </div>
-                                </div>
-
-                                <div class="option vzdrzani" data-option="kvorum">
-                                    <div class="option-text">
-                                        <div class="option-number"><%= data.all.kvorum.total_votes %></div>
-                                        <div class="option-option">vzdržani</div>
-                                    </div>
-                                </div>
-
-                                <div class="option niso" data-option="not_present">
-                                    <div class="option-text">
-                                        <div class="option-number"><%= data.all.not_present.total_votes %></div>
-                                        <div class="option-option">niso</div>
-                                    </div>
+                            <div class="left-container">
+                                <div class="status-container">
+                                    <span class="slab">Status predloga:&nbsp;</span><div class="status"><span class="status-text"><% if (data.result) { %> SPREJET <% } else { %> ZAVRNJEN <% } %></span><i class="status-icon glyphicon <% if (data.result) { %> glyphicon-ok <% } else { %> glyphicon-remove <% } %>"></i></div>
                                 </div>
                             </div>
                             <div class="right-container">
-                                <div class="status-container">
-                                    <span class="slab">Status predloga:&nbsp;</span><div class="status"><span class="status-text"><% if (data.result) { %> SPREJET <% } else { %> ZAVRNJEN <% } %></span><i class="status-icon glyphicon <% if (data.result) { %> glyphicon-ok <% } else { %> glyphicon-remove <% } %>"></i></div>
+                                <% if (data.documents.length > 0) { %>
+                                <search-dropdown :single="true" :alphabetise="true" :items="allTags" :placeholder="inputPlaceholder"></search-dropdown>
+                                <div class="prikazi" @click="takeMeToTheDocument">Prikaži</div>
+                                <% } else { %>
+                                <div class="nodocuments">Ni dokumentov</div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="legend-container">
+                            <div class="option za" data-option="for">
+                                <div class="option-text">
+                                    <div class="option-option">za</div>
+                                    <div class="option-number"><%= data.all.for.total_votes %></div>
+                                </div>
+                            </div>
+
+                            <div class="option proti" data-option="against">
+                                <div class="option-text">
+                                    <div class="option-option">proti</div>
+                                    <div class="option-number"><%= data.all.against.total_votes %></div>
+                                </div>
+                            </div>
+
+                            <div class="option vzdrzani" data-option="kvorum">
+                                <div class="option-text">
+                                    <div class="option-option">vzdržani</div>
+                                    <div class="option-number"><%= data.all.kvorum.total_votes %></div>
+                                </div>
+                            </div>
+
+                            <div class="option niso" data-option="not_present">
+                                <div class="option-text">
+                                    <div class="option-option">niso</div>
+                                    <div class="option-number"><%= data.all.not_present.total_votes %></div>
                                 </div>
                             </div>
                         </div>
@@ -80,10 +95,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="hidden-xs col-sm-6">
-                        <div class="layeredchart"></div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12">
                         <div class="people-ballots">
                             <%
                             var second_level_data = [];
@@ -108,7 +120,8 @@
                                             </a>
                                             <div class="column name">
                                                 <a href="<%= urlsData.base %><%= urlsData.personLink.base %><%= urlsData.person[second_level_data[group]['mps'][mp].id].slug %><%=urlsData.personLink.pregled%>" class="funblue-light-hover"><%= second_level_data[group]['mps'][mp]['name'] %></a>
-                                                <br/>
+                                            </div>
+                                            <div class="column party">
                                                 <% if (second_level_data[group]['mps'][mp]['party']['acronym'].indexOf('NeP') === -1) { %>
                                                     <a href="<%=urlsData.base + urlsData.partyLink.base + urlsData.party[second_level_data[group]['mps'][mp]['party']['id']].acronym + urlsData.partyLink.pregled %>" class="funblue-light-hover"><%= second_level_data[group]['mps'][mp]['party']['acronym'] %></a>
                                                 <% } else { %>

@@ -40,7 +40,7 @@ a.document:hover {
   display: flex;
   flex-wrap: wrap;
   margin-top: 15px;
-  overflow: hidden;
+  overflow: visible;
   padding: 15px;
 }
 
@@ -51,44 +51,81 @@ a.document:hover {
 }
 
 .legend-container {
-  height: 48px;
+  height: 68px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @include respond-to(mobile) { justify-content: space-between; }
 
   .option {
     cursor: pointer;
     display: flex;
+    flex-grow: 1;
+    max-width: 130px;
     height: 100%;
-    margin-right: 20px;
+    margin-right: 5px;
 
-    &.za .option-text { border-left-color: $fontblue; }
-    &.proti .option-text { border-left-color: $funblue; }
-    &.vzdrzani .option-text { border-left-color: $ignoreblue; }
-    &.niso .option-text { border-left-color: $noblue; }
+    border: 1px solid $grey;
+
+    &.za .option-text { border-bottom-color: $fontblue; }
+    &.proti .option-text { border-bottom-color: $funblue; }
+    &.vzdrzani .option-text { border-bottom-color: $ignoreblue; }
+    &.niso .option-text { border-bottom-color: $noblue; }
+
+    &.za .option-text:hover, &.za.selected .option-text {
+      background-color: $fontblue;
+      .option-option, .option-number {
+        color: #ffffff;
+      }
+    }
+    &.proti .option-text:hover, &.proti.selected .option-text {
+      background-color: $funblue;
+      .option-option, .option-number {
+        color: #ffffff;
+      }
+    }
+    &.vzdrzani .option-text:hover, &.vzdrzani.selected .option-text {
+      background-color: $ignoreblue;
+      .option-option, .option-number {
+        color: #ffffff;
+      }
+    }
+    &.niso .option-text:hover, &.niso.selected .option-text {
+      background-color: $noblue;
+      .option-option, .option-number {
+        color: #ffffff;
+      }
+    }
 
     .option-text {
-      display: inline-block;
-      border-left: 10px solid transparent;
-      padding-left: 10px;
+      display: flex;
+      justify-content: center;
+      border-bottom: 5px solid transparent;
+      padding-bottom: 5px;
+
+      width: 100%;
 
       @include respond-to(mobile) { padding-left: 5px; }
     }
 
     .option-number {
+      display: flex;
       color: #515151;
       font-size: 30px;
+      line-height: 42px;
       font-weight: 400;
-      line-height: 30px;
       margin: 0;
       padding: 0;
+      padding-left: 5px;
 
       @include respond-to(mobile) { font-size: 20px; }
     }
 
     .option-option {
+      display: flex;
       color: #515151;
       font-size: 16px;
-      line-height: 16px;
+      line-height: 44px;
       text-transform: uppercase;
 
       @include respond-to(mobile) { font-size: 12px; }
@@ -96,14 +133,7 @@ a.document:hover {
   }
 }
 
-.right-container {
-  justify-content: flex-end;
-
-  @include respond-to(mobile) {
-    margin-top: 15px;
-    justify-content: center;
-  }
-
+.left-container {
   .status-container {
     display: block;
     font-size: 16px;
@@ -126,6 +156,15 @@ a.document:hover {
 
     .glyphicon-remove { color: $red; }
     .glyphicon-ok { color: $green; }
+  }
+}
+
+.right-container {
+  justify-content: flex-end;
+
+  @include respond-to(mobile) {
+    justify-content: center;
+    width: 100%;
   }
 }
 
@@ -172,11 +211,11 @@ a.document:hover {
 }
 
 .people-ballots {
-  height: 507px;
+  height: 439px;
   overflow-x: hidden;
   overflow-y: auto;
 
-  @include respond-to(mobile) { height: 444px; }
+  @include respond-to(mobile) { height: 424px; }
 }
 
 .vote-icon {
@@ -195,4 +234,33 @@ a.document:hover {
 
 .person-list .person:last-child {
   border-bottom: 1px solid $grey;
+}
+
+.search-dropdown {
+  z-index: 10;
+  width: 90%;
+
+  @include respond-to(mobile) { width: 100%; }
+}
+
+.prikazi {
+  width: 100px;
+  text-align: center;
+  height: 53px;
+  line-height: 53px;
+  color: #ffffff;
+  background-color: #00628c;
+  margin-left: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #009CDD;
+  }
+}
+
+.nodocuments {
+  color: rgb(117, 117, 117);
+  height: 53px;
+  line-height: 53px;
 }
