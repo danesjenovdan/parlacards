@@ -1,7 +1,7 @@
-/* global $ Vue vocabulary voteData voteCardData voteState makeEmbedSwitch activateCopyButton
+/* global $ Vue vocabulary voteData voteState makeEmbedSwitch activateCopyButton
 addCardRippling */
 
-((randomId) => {
+((randomId, className, voteCardData) => {
   const capitalise = string => string[0].toUpperCase() + string.substring(1);
 
   // eslint-disable-next-line no-new

@@ -1,7 +1,7 @@
-/* global $ Vue vocabulary pgVoteData pgVoteCardData pgVoteState makeEmbedSwitch activateCopyButton
+/* global $ Vue vocabulary pgVoteData pgVoteState makeEmbedSwitch activateCopyButton
 addCardRippling */
 
-((randomId) => {
+((randomId, className, voteCardData) => {
   // eslint-disable-next-line no-new
   new Vue({
     el: `#glasovanja-${randomId}`,
