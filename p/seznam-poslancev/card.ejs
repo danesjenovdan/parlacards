@@ -197,9 +197,9 @@
                     </div>
                     <div class="column">
                       <%= function() {
-                        var change = parseFloat(member.results[this.currentAnalysis].diff).toFixed(this.currentAnalysisData.roundingPrecision);
+                        var change = String(parseFloat(member.results[this.currentAnalysis].diff).toFixed(this.currentAnalysisData.roundingPrecision)).replace('.', ',');
                         var number = Math.abs(change);
-                        var prefix = change < 0 ? '- ' : (change > 0 ? '+ ' : '');
+                        var prefix = change < 0 ? '-\xa0' : (change > 0 ? '+\xa0' : '');
 
                         return prefix + number;
                       }() %>
