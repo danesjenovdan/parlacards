@@ -1,1 +1,1 @@
-{"_id":"58a3146c89c9ceb038aac4a5","name":"Članstva","group":"p","method":"clanstva","dataUrl":"https://analize.parlameter.si/v1/p/getMembershipsOfMember"}
+{"_id":"58a3146c89c9ceb038aac4a5","name":"Prisotnost skozi čas","group":"p","method":"prisotnost-skozi-cas","dataUrl":"https://analize.parlameter.si/v1/p/getPresenceThroughTime"}
