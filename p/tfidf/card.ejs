@@ -63,7 +63,7 @@
                                 <% data.results.forEach(function(word) {
                                     word.score = Math.round(word.scores['tf-idf'] * 5000); %>
                                     <div class="label-container">
-                                        <a href="<%=urlsData.base%>/seje/isci?q=<%- '%22' + word.term.replace(' ', '+') + '%22' %>" class="funblue-light-hover"><%= word.term %></a>
+                                        <a href="<%=urlsData.base%>/seje/filter?q=<%- '%22' + word.term.replace(' ', '+') + '%22' %>&people=<%= data.person.id %>" class="funblue-light-hover"><%= word.term %></a>
                                     </div>
                                 <% }) %>
                             </div>
