@@ -60,7 +60,7 @@ addCardRippling */
         if (this.textFilter.length > 0) state.text = this.textFilter;
         if (this.selectedOptions.length > 0) state.options = this.selectedOptions;
 
-        return `https://glej.parlameter.si/${voteCardData.group}/${voteCardData.method}/${voteData.person.id}/?state=${encodeURIComponent(JSON.stringify(state))}&altHeader=true`;
+        return `https://glej.parlameter.si/p/glasovanja/${voteData.person.id}/?state=${encodeURIComponent(JSON.stringify(state))}&altHeader=true`;
       },
     },
     data() {
