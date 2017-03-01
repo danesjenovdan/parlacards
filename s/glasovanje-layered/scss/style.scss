@@ -67,34 +67,40 @@ a.document:hover {
 
     border: 1px solid $grey;
 
-    &.za .option-text { border-bottom-color: $fontblue; }
-    &.proti .option-text { border-bottom-color: $funblue; }
-    &.vzdrzani .option-text { border-bottom-color: $ignoreblue; }
-    &.niso .option-text { border-bottom-color: $noblue; }
+    background-color: #227497;
 
-    &.za .option-text:hover, &.za.selected .option-text {
-      background-color: $fontblue;
-      .option-option, .option-number {
-        color: #ffffff;
-      }
-    }
-    &.proti .option-text:hover, &.proti.selected .option-text {
+    // &.za .option-text { border-bottom-color: $fontblue; }
+    // &.proti .option-text { border-bottom-color: $funblue; }
+    // &.vzdrzani .option-text { border-bottom-color: $ignoreblue; }
+    // &.niso .option-text { border-bottom-color: $noblue; }
+
+    // &.za .option-text:hover, &.za.selected .option-text {
+    //   background-color: $fontblue;
+    //   .option-option, .option-number {
+    //     color: #ffffff;
+    //   }
+    // }
+    // &.proti .option-text:hover, &.proti.selected .option-text {
+    //   background-color: $funblue;
+    //   .option-option, .option-number {
+    //     color: #ffffff;
+    //   }
+    // }
+    // &.vzdrzani .option-text:hover, &.vzdrzani.selected .option-text {
+    //   background-color: $ignoreblue;
+    //   .option-option, .option-number {
+    //     color: #ffffff;
+    //   }
+    // }
+    // &.niso .option-text:hover, &.niso.selected .option-text {
+    //   background-color: $noblue;
+    //   .option-option, .option-number {
+    //     color: #ffffff;
+    //   }
+    // }
+
+    &.selected {
       background-color: $funblue;
-      .option-option, .option-number {
-        color: #ffffff;
-      }
-    }
-    &.vzdrzani .option-text:hover, &.vzdrzani.selected .option-text {
-      background-color: $ignoreblue;
-      .option-option, .option-number {
-        color: #ffffff;
-      }
-    }
-    &.niso .option-text:hover, &.niso.selected .option-text {
-      background-color: $noblue;
-      .option-option, .option-number {
-        color: #ffffff;
-      }
     }
 
     .option-text {
@@ -106,11 +112,15 @@ a.document:hover {
       width: 100%;
 
       @include respond-to(mobile) { padding-left: 5px; }
+
+      &:hover {
+        background-color: $funblue-hover;
+      }
     }
 
     .option-number {
       display: flex;
-      color: #515151;
+      color: #ffffff;
       font-size: 30px;
       line-height: 42px;
       font-weight: 400;
@@ -123,7 +133,7 @@ a.document:hover {
 
     .option-option {
       display: flex;
-      color: #515151;
+      color: #ffffff;
       font-size: 16px;
       line-height: 44px;
       text-transform: uppercase;

@@ -599,17 +599,19 @@ if (!isMSIE) {
 
   $('.option').on('click', function () {
     if ($(this).hasClass('selected')) {
-      // togle mps
-      $(`.mpgroup.${ $(this).data('option')}`).addClass('hidden');
-      if ($('.mpgroup.hidden').length === $('.mpgroup').length) {
-        $('.mpgroup').removeClass('hidden');
-      }
+      // show all MPs
+      $('.mpgroup').removeClass('hidden');
+      // $(`.mpgroup.${ $(this).data('option')}`).addClass('hidden');
+      // if ($('.mpgroup.hidden').length === $('.mpgroup').length) {
+      //   $('.mpgroup').removeClass('hidden');
+      // }
     } else {
-      if ($('.mpgroup.hidden').length === 0) {
+      // if ($('.mpgroup.hidden').length === 0) {
         $('.mpgroup').addClass('hidden');
-      }
+      // }
       // console.log($(this).data('option'));
       $(`.mpgroup.${ $(this).data('option')}`).removeClass('hidden');
+      $('.option.selected').removeClass('selected');
     }
 
     // toggle class selected
