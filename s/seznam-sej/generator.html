@@ -18,37 +18,71 @@
 </head>
 
 <body>
-  <div id="session-list-generator-container">
-    <div class="session-list-generator">
+  <div id="member-list-generator-container" v-cloak>
+    <div class="member-list-generator">
       <div class="row">
-        <div class="col-md-12 filters">
-          <ul class="button-filters">
-            <li v-for="filter in filters" class="party-button sds sds-hover"
-                :class="[{ selected: currentFilters.indexOf(filter) > -1 }]"
-                @click="selectFilter(filter)">
-              {{ filter }}
+        <div class="col-md-12">
+          <ul class="analyses">
+            <li v-for="analysis in analyses"
+                :class="{ selected: analysis.id === currentAnalysis }"
+                @click="selectAnalysis(analysis.id)">
+              <span>{{ analysis.label }}</span>
             </li>
           </ul>
 
-          <search-dropdown class="dropdown-filter" :items="workingBodies" :placeholder="inputPlaceholder"></search-dropdown>
+          <div class="mobile-analyses">
+            <label for="analysis">Izberi analizo</label>
+            <div class="select">
+              <select
+                name="analysis"
+                id="analysis"
+                v-model="currentAnalysis"
+                @change="selectAnalysis(currentAnalysis)">
+                <option
+                  v-for="analysis in analyses"
+                  :value="analysis.id">
+                  {{ analysis.label }}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          <div class="align-checkbox">
-            <input id="onlyLatest" type="checkbox" v-model="onlyLatest" class="checkbox">
-            <label for="onlyLatest">Samo zgornjih 5</label>
+      <div class="row">
+        <div class="col-md-12 parties-districts">
+          <ul class="parties">
+            <li v-for="party in parties" class="party-button"
+                :class="[{ selected: currentParties.indexOf(party) > -1 }, party.replace(/ /g, '_').toLowerCase(), party.replace(/ /g, '_').toLowerCase() + '-hover']"
+                @click="selectParty(party)">
+              {{ party }}
+            </li>
+          </ul>
+
+          <search-dropdown class="districts" :items="districts" :placeholder="inputPlaceholder"></search-dropdown>
+
+          <div class="exclude-presiding checkbox-twolines">
+            <input id="predsedujoci" type="checkbox" v-model="excludePresiding" class="checkbox">
+            <label for="predsedujoci">Skrij<br>predsedujoče</label>
+          </div>
+
+          <div class="align-checkbox checkbox-twolines">
+            <input id="samo5" type="checkbox" v-model="onlyLatest" class="checkbox">
+            <label for="samo5">Samo<br>zgornjih 5</label>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-12">
-          <div class="card-container card-halfling card-seznam-sej">
+          <div class="card-container card-halfling card-seznam-poslancev">
             <div class="card-header">
               <div class="card-header-border"></div>
-              <h1>Seznam sej</h1>
+              <h1>Seznam poslancev{{ currentAnalysisData.titleSuffix }}</h1>
             </div>
             <div class="card-content">
               <div class="card-content-front">
-                <ul class="session-list" style="flex-direction: column !important;">
+                <ul class="person-list">
                   <li class="headers">
                     <div v-for="column in columns"
                         :class="['column', column.additionalClass, { sort: currentSort === column.id }, { reverse: currentSortOrder === 'desc' }]"
@@ -56,34 +90,31 @@
                       {{ column.label }}
                     </div>
                   </li>
-                  <li v-if="sessions.length === 0" class="loader">
+                  <li v-if="memberData.length === 0" class="loader">
                     <div class="nalagalnik"></div>
                   </li>
-                  <div v-if="sessions.length > 0 && processedSessions.length === 0" class="no-results">Brez rezultatov.</div>
-                  <li v-for="session in processedSessions" class="item">
-                    <a class="column image" :href="getSessionUrl(session.id)">
-                      <img :src="'https://cdn.parlameter.si/v1/parlassets/icons/seja-' + session.name.split(' ')[1] + '.svg'" />
+                  <div v-if="memberData.length > 0 && processedMemberData.length === 0" class="no-results">Brez rezultatov.</div>
+                  <li v-for="member in processedMemberData" class="person">
+                    <a class="portrait column" :href="getMemberUrl(member.person.id)">
+                      <img :src="'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + member.person.gov_id + '.png'" />
                     </a>
                     <div class="column wider name">
-                      <a class="funblue-light-hover" :href="getSessionUrl(session.id)">{{ session.name }}</a>
+                      <a class="funblue-light-hover" :href="getMemberUrl(member.person.id)">{{ member.person.name }}</a>
                     </div>
-                    <div class="column">{{ formatDate(session.date_ts) }}</div>
-                    <div class="column optional">{{ formatDate(session.updated_at_ts) }}</div>
-                    <div class="column wider optional">
-                      <template v-for="organization, index in session.orgs">
-                        <template v-if="organisationIsWorkingBody(organization.id)">
-                          <a class="funblue-light-hover" :href="'https://glej.parlameter.si/wb/getWorkingBodies/' + organization.id + '?frame=true&altHeader=true'">{{ organization.name }}</a>{{ index < session.orgs.length - 1 ? ', ' : '' }}
-                        </template>
-                        <template v-else>
-                          <span>{{ organization.name }}</span>{{ index < session.orgs.length - 1 ? ', ' : '' }}
-                        </template>
-                      </template>
+                    <div class="column">
+                      <a v-if="member.partylink" class="funblue-light-hover" :href="getPartyUrl(member.person.party)">{{ member.person.party.acronym }}</a>
+                      <template v-else>{{ member.person.party.acronym }}</template>
                     </div>
+                    <div class="column district">{{ member.person.formattedDistrict }}</div>
+                    <template v-if="currentAnalysis !== 'alphabetical'">
+                      <div class="column">{{ getFormattedAnalysisValue(member) }}</div>
+                      <div class="column">{{ getFormattedChangeValue(member) }}</div>
+                    </template>
                   </li>
                 </ul>
               </div>
               <div class="card-content-info hidden">
-                <div class="card-back-content">
+                <div class="card-back-content" v-html="infoText">
                 </div>
               </div>
               <div class="card-content-embed hidden">
@@ -106,7 +137,7 @@
                     </div>
                     <div class="embed-divider"></div>
                     <div class="embed-script">
-                      <textarea class="form-control" data-id="0" data-url="https://glej.parlameter.si/s/seznam-sej/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="{{ generatedCardUrl }}&embed=true"></iframe></textarea>
+                      <textarea class="form-control" data-id="0" data-url="https://glej.parlameter.si/p/seznam-poslancev/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="{{ generatedCardUrl }}&embed=true"></iframe></textarea>
                       <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
                     </div>
                   </div>
@@ -135,26 +166,134 @@
 
   <script>
   new Vue({
-    el: '#session-list-generator-container',
+    el: '#member-list-generator-container',
     components: ['SearchDropdown'],
     data: {
-      sessions: [],
-      workingBodies: [],
-      slugs: null,
-      filters: ['Seje DZ', 'Seje kolegija predsednika DZ', 'Seje delovnih teles'],
-      currentSort: 'date',
-      currentSortOrder: 'desc',
-      currentFilters: [],
       onlyLatest: false,
-      shortenedCardUrl: '',
+      memberData: [],
+      districts: [],
+      currentSort: 'name',
+      currentSortOrder: 'asc',
+      currentAnalysis: 'alphabetical',
+      analyses: [
+        {
+          id: 'alphabetical',
+          titleSuffix: '',
+          label: 'Abecedni seznam',
+        },
+        {
+          id: 'presence_sessions',
+          titleSuffix: ' po prisotnosti na sejah DZ',
+          explanation: 'Preštejemo vse seje in preverimo, če je poslanec glasoval na vsaj enem glasovanju na posamezni seji. Če je glasoval vsaj enkrat, ga štejemo kot prisotnega na posamezni seji. Delimo število sej, ko je bil prisoten, s številom vseh sej in normaliziramo (min 1 - max 100).',
+          label: 'Prisotnost na sejah DZ',
+          round: true,
+          unit: 'percent'
+        },
+        {
+          id: 'presence_votes',
+          titleSuffix: ' po prisotnosti na glasovanjih sej DZ',
+          explanation: 'Število glasovanj, ko je bil poslanec prisoten, delimo s številom vseh glasovanj in normaliziramo (min 1 - max 100).',
+          label: 'Prisotnost na glasovanjih sej DZ',
+          round: true,
+          unit: 'percent'
+        },
+        {
+          id: 'vocabulary_size',
+          titleSuffix: ' po raznolikosti besedišča',
+          explanation: 'Iz vseh poslančevih govorov preštejemo unikatne besede ter število vseh izgovorjenih besed. Potem preštejemo, kolikokrat se vsaka unikatna beseda pojavi. Razdelimo jih v kategorije, tako da združimo vse besede, ki se ponovijo enkrat, dvakrat, trikrat itn. Na koncu izračunamo koeficient, kjer nad ulomkovo črto postavimo število vseh unikatnih izgovorjenih besed, pod ulomkovo črto pa število besed, ki se ponovijo z neko frekvenco (enkrat, dvakrat, trikrat ...) in množimo s frekvenco na kvadrat (ena na kvadrat, dva na kvadrat, tri na kvadrat ...). Za poved "Danes je nov dan in danes je dan za Parlameter" je rezultat: 7 / ((3*2^2) + (4*1^2)) = 0,4375',
+          label: 'Raznolikost besedišča'
+        },
+        {
+          id: 'spoken_words',
+          titleSuffix: ' po št. izgovorjenih besed',
+          explanation: 'Število besed, ki jih je poslanec izgovoril v vseh svojih dosedanjih govorih v DZ.',
+          label: 'Št. izgovorjenih besed'
+        },
+        {
+          id: 'speeches_per_session',
+          titleSuffix: ' po št. govorov na sejo',
+          explanation: 'Preštejemo poslančeve govore in število delimo s številom sej, na katerih je poslanec govoril. Število vseh govorov delimo najprej s številom poslancev, potem pa še s številom vseh sej (na katerih se je govorilo). Individualni rezultat primerjamo s povprečnim.',
+          label: 'Št. govorov na sejo'
+        },
+        {
+          id: 'privzdignjeno',
+          titleSuffix: ' po pogostosti rabe privzdignjenega besedja',
+          explanation: 'Z združevanjem kvalifikatorjev <a href="http://www.fran.si/130/sskj-slovar-slovenskega-knjiznega-jezika">SSKJ</a> in <a href="http://www.fran.si/131/snb-slovar-novejsega-besedja">SNB</a> smo definirali ekscesno, privzdignjeno in preprosto besedje v poslanskih govorih. Upoštevani so le kvalifikatorji, ki so v obeh slovarjih tik za zaglavjem in imajo doseg do konca geselskega sestavka (ne pa tudi kvalifikatorji za posamezne pomene oziroma rabe). Podjetje Amebis je iz transkriptov poslanskih govorov pripravilo sezname besed, ki imajo katerega od izbranih kvalifikatorjev.<br>' +
+            'Privzdignjeno besedje<br>' +
+            'Kvalifikatorji iz SSKJ<br>' +
+            'evfemistično (evfem.), mitološko (mitol.), pesniško (pesn.), knjižno (knjiž.), zastarelo (zastar.), starinsko (star.)<br>' +
+            'Kvalifikatorji iz SNB<br>' +
+            '/<br>' +
+            '<br>' +
+            'Vrednost v stolpcu analiza označuje delež posameznega tipa besedja v poslančevih govorih glede na povprečje, izračunano za celoten sklic.<br>' +
+            'Delež se izračuna po naslednjem algoritmu: vzamejo se vsi poslančevi govori, prešteje se število besed (in njihovih ponovitev) v vsaki kategoriji besedja. To se izvede za vse poslance, nato se deli vrednost kategorije za poslanca z vrednostjo povprečja (seštevek vrednosti vseh poslancev, deljen s številom poslancev). Vrednost vsake kategorije za poslanca se normalizira (min. 1 – max. 100).',
+          label: 'Privzdignjeno besedje',
+          round: true,
+          roundingPrecision: 3
+        },
+        {
+          id: 'preprosto',
+          titleSuffix: ' po pogostosti rabe preprostega besedja',
+          explanation: 'Z združevanjem kvalifikatorjev <a href="http://www.fran.si/130/sskj-slovar-slovenskega-knjiznega-jezika">SSKJ</a> in <a href="http://www.fran.si/131/snb-slovar-novejsega-besedja">SNB</a> smo definirali ekscesno, privzdignjeno in preprosto besedje v poslanskih govorih. Upoštevani so le kvalifikatorji, ki so v obeh slovarjih tik za zaglavjem in imajo doseg do konca geselskega sestavka (ne pa tudi kvalifikatorji za posamezne pomene oziroma rabe). Podjetje Amebis je iz transkriptov poslanskih govorov pripravilo sezname besed, ki imajo katerega od izbranih kvalifikatorjev.<br>' +
+            'Preprosto besedje<br>' +
+            'Kvalifikatorji iz SSKJ<br>' +
+            'narečno (nar.), pogovorno (pog.), nižje pogovorno (nižje pog.) <br>' +
+            'Kvalifikatorji iz SNB<br>' +
+            'pogovorno (pog.)<br>' +
+            '<br>' +
+            'Vrednost v stolpcu analiza označuje delež posameznega tipa besedja v poslančevih govorih glede na povprečje, izračunano za celoten sklic.<br>' +
+            'Delež se izračuna po naslednjem algoritmu: vzamejo se vsi poslančevi govori, prešteje se število besed (in njihovih ponovitev) v vsaki kategoriji besedja. To se izvede za vse poslance, nato se deli vrednost kategorije za poslanca z vrednostjo povprečja (seštevek vrednosti vseh poslancev, deljen s številom poslancev). Vrednost vsake kategorije za poslanca se normalizira (min. 1 – max. 100).',
+          label: 'Preprosto besedje',
+          round: true,
+          roundingPrecision: 3
+        },
+        {
+          id: 'problematicno',
+          titleSuffix: ' po pogostosti rabe ekscesnega besedja',
+          explanation: 'Z združevanjem kvalifikatorjev <a href="http://www.fran.si/130/sskj-slovar-slovenskega-knjiznega-jezika">SSKJ</a> in <a href="http://www.fran.si/131/snb-slovar-novejsega-besedja">SNB</a> smo definirali ekscesno, privzdignjeno in preprosto besedje v poslanskih govorih. Upoštevani so le kvalifikatorji, ki so v obeh slovarjih tik za zaglavjem in imajo doseg do konca geselskega sestavka (ne pa tudi kvalifikatorji za posamezne pomene oziroma rabe). Podjetje Amebis je iz transkriptov poslanskih govorov pripravilo sezname besed, ki imajo katerega od izbranih kvalifikatorjev.<br>' +
+            'Ekscesno besedje<br>' +
+            'Kvalifikatorji iz SSKJ <br>' +
+            'vulgarno (vulg.), slabšalno (slabš.), ekspresivno (ekspr.), ironično (iron.), otroško (otr.) <br>' +
+            'Kvalifikatorji iz SNB<br>' +
+            'slabšalno (slabš.), vulgarno (vulg.)<br>' +
+            '<br>' +
+            'Vrednost v stolpcu analiza označuje delež posameznega tipa besedja v poslančevih govorih glede na povprečje, izračunano za celoten sklic.<br>' +
+            'Delež se izračuna po naslednjem algoritmu: vzamejo se vsi poslančevi govori, prešteje se število besed (in njihovih ponovitev) v vsaki kategoriji besedja. To se izvede za vse poslance, nato se deli vrednost kategorije za poslanca z vrednostjo povprečja (seštevek vrednosti vseh poslancev, deljen s številom poslancev). Vrednost vsake kategorije za poslanca se normalizira (min. 1 – max. 100).',
+          label: 'Ekscesno besedje',
+          round: true,
+          roundingPrecision: 3
+        },
+        {
+          id: 'number_of_questions',
+          titleSuffix: ' po št. poslanskih vprašanj in pobud',
+          explanation: 'Število poslanskih vprašanj in pobud, ki jih je poslanec/-ka zastavil/-a v tem sklicu DZ v primerjavi s povprečno in največjo vrednostjo.' +
+                            'Podatke pridobivamo s spletnega mesta DZ RS: <a href="https://www.dz-rs.si/wps/portal/Home/deloDZ/poslanskaVprasanjaInPobude/">https://www.dz-rs.si/wps/portal/Home/deloDZ/poslanskaVprasanjaInPobude/</a>.',
+          label: 'Št. poslanskih vprašanj in pobud',
+          round: true,
+          roundingPrecision: 0
+        },
+      ],
+      currentParties: [],
+      parties: ['DeSUS', 'IMNS', 'NSI', 'PS NP', 'SD', 'SDS', 'SMC', 'ZL'],
+      excludePresiding: false,
+      slugs: null,
+      shortenedCardUrl: ''
     },
     computed: {
-      columns: () => [
-        { id: 'name', label: 'Ime', additionalClass: 'wider' },
-        { id: 'date', label: 'Začetek' },
-        { id: 'updated', label: 'Sprememba', additionalClass: 'optional' },
-        { id: 'workingBody', label: 'Organizacija', additionalClass: 'wider optional' }
-      ],
+      columns: function() {
+        var columns = [
+          { id: 'name', label: 'Ime', additionalClass: 'wider' },
+          { id: 'party', label: 'PS' },
+          { id: 'district', label: 'Okraj', additionalClass: 'district' }
+        ]
+
+        if (this.currentAnalysis !== 'alphabetical') {
+          columns.push({ id: 'analysis', label: 'Analiza' });
+          columns.push({ id: 'change', label: 'Sprememba' });
+        }
+
+        return columns
+      },
       currentAnalysisData: function() {
         var that = this,
             currentAnalysis
@@ -167,71 +306,79 @@
 
         return currentAnalysis
       },
-      currentWorkingBodies: function() {
-        return this.workingBodies
-          .filter(function(workingBody) { return workingBody.selected })
-          .map(function(workingBody) { return workingBody.id })
+      currentDistricts: function() {
+        return this.districts
+          .filter(function(district) { return district.selected })
+          .map(function(district) { return district.id })
       },
-      currentWorkingBodyNames: function() {
-        return this.workingBodies
-          .filter(function(workingBody) { return workingBody.selected })
-          .map(function(workingBody) { return workingBody.label })
+      currentDistrictNames: function() {
+        return this.districts
+          .filter(function(district) { return district.selected })
+          .map(function(district) { return district.label })
       },
       inputPlaceholder: function() {
-        return this.currentWorkingBodies.length ? 'izbranih delovnih teles: ' + this.currentWorkingBodies.length : 'izberi delovno telo'
+        return this.currentDistricts.length ? 'izbranih okrajev: ' + this.currentDistricts.length : 'izberi okraj'
       },
-      processedSessions: function() {
+      processedMemberData: function() {
         var that = this
+        var sortedAndFiltered = this.memberData
+          .filter(function(member) {
+            var partyMatch = true,
+                districtMatch = true,
+                presidingMatch = true
 
-        var sortedAndFiltered = this.sessions
-          .filter(function(session) {
-            if (that.currentFilters.length === 0) {
-              return true
-            } else {
-              let match = false
-              if (that.currentFilters.indexOf('Seje DZ') > -1) {
-                match = match || session.orgs.filter(org => org.id === 95).length > 0
-              }
-              if (that.currentFilters.indexOf('Seje kolegija predsednika DZ') > -1) {
-                match = match || session.orgs.filter(org => org.id === 9).length > 0
-              }
-              if (that.currentFilters.indexOf('Seje delovnih teles') > -1) {
-                if (that.currentWorkingBodies.length === 0) {
-                  session.orgs.forEach((org) => {
-                    match = match || that.organisationIsWorkingBody(org.id)
-                  })
-                }
-                else {
-                  session.orgs.forEach((org) => {
-                    match = match || that.currentWorkingBodies.indexOf(org.id) > -1
-                  })
-                }
-              }
-              return match
+            if (that.currentParties.length > 0) {
+              partyMatch = that.currentParties.indexOf(member.person.party.acronym) > -1
             }
+            if (that.currentDistricts.length > 0) {
+              districtMatch = member.person.district.reduce(function(prevMatch, memberDistrict) {
+                return prevMatch || that.currentDistricts.indexOf(String(memberDistrict)) > -1
+              }, false)
+            }
+            if (that.excludePresiding) {
+              presidingMatch = !member.person.has_function
+            }
+
+            return partyMatch && districtMatch && presidingMatch
           })
+          .map(function(member) {
+            if (member.person.district.length === 0) {
+              member.person.formattedDistrict = 'okraj ni vnešen'
+            }
+            else {
+              member.person.formattedDistrict = member.person.district.map(function(memberDistrict) {
+                var matchingDistrict = that.districts.filter(function(district) {
+                  return district.id === String(memberDistrict)
+                })[0]
+                return matchingDistrict.label
+              }).join(', ')
+            }
 
-          if (this.onlyLatest) {
-            sortedAndFiltered = sortedAndFiltered.slice(0, 5)
-          }
+            member.partylink = member.person.party.acronym.indexOf('NeP') === -1
 
-          sortedAndFiltered = sortedAndFiltered.sort(function(sessionA, sessionB) {
+            return member
+          })
+          .sort(function(memberA, memberB) {
             switch (that.currentSort) {
+              case 'change':
+                var a = memberA.results[that.currentAnalysis].diff
+                var b = memberB.results[that.currentAnalysis].diff
+                return a < b ? -1 : (a > b ? 1 : 0)
+              case 'analysis':
+                var a = memberA.results[that.currentAnalysis].score
+                var b = memberB.results[that.currentAnalysis].score
+                return a < b ? -1 : (a > b ? 1 : 0)
               case 'name':
-                var a = sessionA.name
-                var b = sessionB.name
-                return alphanumCase(a, b)
-              case 'date':
-                var a = sessionA.date_ts
-                var b = sessionB.date_ts
-                return a < b ? -1 : (a > b ? 1 : 0)
-              case 'updated':
-                var a = sessionA.updated_at_ts
-                var b = sessionB.updated_at_ts
-                return a < b ? -1 : (a > b ? 1 : 0)
-              case 'workingBody':
-                var a = sessionA.orgs[0].name
-                var b = sessionB.orgs[0].name
+                var a = memberA.person.name
+                var b = memberB.person.name
+                return a.localeCompare(b, 'sl')
+              case 'district':
+                var a = memberA.person.formattedDistrict
+                var b = memberB.person.formattedDistrict
+                return a.localeCompare(b, 'sl')
+              case 'party':
+                var a = memberA.person.party.acronym
+                var b = memberB.person.party.acronym
                 return a.localeCompare(b, 'sl')
               default:
                 break
@@ -242,23 +389,53 @@
           sortedAndFiltered.reverse()
         }
 
+        if (this.onlyLatest) {
+          sortedAndFiltered = sortedAndFiltered.slice(0, 5)
+        }
+
         return sortedAndFiltered
       },
       generatedCardUrl: function() {
         var params = {}
-        if (this.currentFilters.length > 0) {
-          params.filters = this.currentFilters
+        if (this.currentAnalysis !== 'alphabetical') {
+          params.analysis = this.currentAnalysis
         }
-        if (this.currentWorkingBodies.length > 0) {
-          params.workingBodies = this.currentWorkingBodies
+        if (this.currentParties.length > 0) {
+          params.parties = this.currentParties
+        }
+        if (this.currentDistricts.length > 0) {
+          params.districts = this.currentDistricts
+        }
+        if (this.excludePresiding) {
+          params.excludePresiding = true
         }
         if (this.onlyLatest) {
           params.onlyLatest = true
         }
 
-        return 'https://glej.parlameter.si/s/seznam-sej/' +
-          '?customUrl=' + encodeURIComponent('https://analize.parlameter.si/v1/s/getSessionsList') +
+        return 'https://glej.parlameter.si/p/seznam-poslancev/' +
+          '?customUrl=' + encodeURIComponent('https://analize.parlameter.si/v1/p/getListOfMembers') +
           (Object.keys(params).length > 0 ? '&state=' + encodeURIComponent(JSON.stringify(params)) : '')
+      },
+      infoText: function() {
+        var parties = this.currentParties.length ? 'poslanska skupina: ' + this.currentParties.join(', ') : 'vse poslanske skupine'
+        var districts = this.currentDistrictNames.length ? 'volilni okraj: ' + this.currentDistrictNames.join(', ') : 'vsi volilni okraji'
+        var presiding = this.excludePresiding ? '; brez predsedujočih poslancev' : ''
+        var firstLine = 'Množica vseh trenutno aktivnih poslancev, ki ustrezajo uporabniškemu vnosu (' + parties + '; ' + districts + presiding + ').'
+
+        var sortMap = {
+          name: 'abecedi',
+          district: 'okrajih',
+          party: 'poslanskih skupinah',
+          analysis: 'rezultatu analize ' + this.currentAnalysisData.label,
+          change: 'aktualni spremembi v rezultatu analize ' + this.currentAnalysisData.label
+        }
+        var secondLine = 'Seznam je sortiran po ' + sortMap[this.currentSort] + '.'
+
+        var thirdLine = this.currentAnalysisData.explanation
+
+        // return firstLine + '<br><br>' + secondLine + (thirdLine ? '<br><br>' + thirdLine : '')
+        return '<p class="info-text lead">' + firstLine + ' ' + secondLine + '</p>' + (thirdLine ? '<p class="info-text heading">METODOLOGIJA</p><p class="info-text">' + thirdLine + '</p>' : '');
       }
     },
     created: function() {
@@ -267,26 +444,32 @@
       $.getJSON('https://analize.parlameter.si/v1/p/getSlugs/', function(response) {
         that.slugs = response
       })
-      $.getJSON('https://analize.parlameter.si/v1/s/getWorkingBodies/', function(response) {
-        that.workingBodies = response.map(function(workingBody) {
+      $.getJSON('https://api.myjson.com/bins/axy9p', function(response) {
+      // $.getJSON('https://analize.parlameter.si/v1/p/getListOfMembers/', function(response) {
+        that.districts = response.districts.map(function(district) {
+          var id = Object.keys(district)[0]
           return {
-            id: workingBody.id,
-            label: workingBody.name,
+            id: id,
+            label: district[id],
             selected: false
           }
         })
+        that.memberData = response.data
       })
-      $.getJSON('https://analize.parlameter.si/v1/s/getSessionsList/', function(response) {
-        that.sessions = response.sessions
-      })
+      this.shortenUrl(this.generatedCardUrl)
     },
     methods: {
-      formatDate: function(isoDate) {
-        var date = new Date(isoDate);
-        return date.getDate() + '. ' + (date.getMonth() + 1) + '. ' + date.getFullYear();
-      },
-      organisationIsWorkingBody: function(organisationId) {
-        return [9, 95].indexOf(organisationId) === -1
+      selectAnalysis: function(analysisId) {
+        this.currentAnalysis = analysisId
+
+        if (this.currentAnalysis === 'alphabetical' && ['analysis', 'change'].indexOf(this.currentSort) > -1) {
+          this.selectSort('name')
+        }
+        else {
+          this.currentSort = 'analysis'
+          this.currentSortOrder = 'desc'
+        }
+        this.measurePiwik(analysisId, '', '', '');
       },
       selectSort: function(sortId) {
         if (this.currentSort === sortId) {
@@ -296,24 +479,46 @@
           this.currentSort = sortId
           this.currentSortOrder = 'asc'
         }
-
-        this.measurePiwik('', sortId, this.currentSortOrder);
+        this.measurePiwik('', '', sortId, this.currentSortOrder);
       },
-      selectFilter: function(filter) {
-        if (this.currentFilters.indexOf(filter) > -1) {
-          this.currentFilters.splice(this.currentFilters.indexOf(filter), 1)
+      selectParty: function(partyId) {
+        if (this.currentParties.indexOf(partyId) > -1) {
+          this.currentParties.splice(this.currentParties.indexOf(partyId), 1)
         }
         else {
-          this.currentFilters.push(filter)
+          this.currentParties.push(partyId)
         }
+        this.measurePiwik('', partyId, '', '');
+      },
+      getFormattedAnalysisValue: function(member) {
+        var value = member.results[this.currentAnalysis].score
 
-        this.measurePiwik(filter, '', '');
+        if (value === null) { return 'Ni dovolj podatkov' }
+
+        if (value !== 0) {
+          if (this.currentAnalysisData.round) { value = String(this.round(value, this.currentAnalysisData.roundingPrecision || 1)).replace('.', ',') }
+          if (this.currentAnalysisData.scientific) { value = value.toExponential() }
+        }
+        if (this.currentAnalysisData.unit === 'percent') { value += '%' }
+
+        return value
       },
-      getSessionUrl: function(sessionId) {
-        return this.slugs ? this.slugs.base + this.slugs.sessionLink.transkript + sessionId : ''
+      getFormattedChangeValue: function(member) {
+        var change = parseInt(member.results[this.currentAnalysis].diff);
+        var number = Math.abs(change);
+        var prefix = change < 0 ? '- ' : (change > 0 ? '+ ' : '');
+
+        return prefix + number;
       },
-      getWorkingBodyUrl: function(workingBodyId) {
-        return 'https://glej.parlameter.si/wb/getWorkingBodies/' + workingBodyId + '?frame=true&altHeader=true'
+      getMemberUrl: function(memberId) {
+        return this.slugs
+          ? this.slugs.base + this.slugs.personLink.base + this.slugs.person[memberId].slug + this.slugs.personLink.pregled
+          : '/p/id/' + String(memberId)
+      },
+      getPartyUrl: function(party) {
+        return this.slugs
+          ? this.slugs.base + this.slugs.partyLink.base + this.slugs.party[party.id].acronym + this.slugs.partyLink.pregled
+          : '/poslanska-skupina/' + party.acronym + '/pregled'
       },
       shortenUrl: function(url) {
         var that = this
@@ -322,13 +527,18 @@
             that.$el.querySelector('.card-content-share button').textContent = 'KOPIRAJ'
         });
       },
-      measurePiwik: function (filter, sort, order) {
-        if (typeof measure == 'function') {
-          if (sort !== '') {
-            measure('s', 'session-sort', sort + ' ' + order, '');
-          }
-          else if (filter !== '') {
-            measure('s', 'session-filter', filter, '');
+      round: function(value, precision) {
+        var multiplier = Math.pow(10, precision || 0)
+        return Math.round(value * multiplier) / multiplier
+      },
+      measurePiwik: function (analysisId, partyId, sort, order) {
+        if(typeof measure == 'function') {
+          if(sort!=''){
+              measure("p","analysis-sort",sort+' '+order,'');
+          }else if(partyId!=''){
+              measure("p","analysis-party",partyId,'');
+          }else if(analysisId!=''){
+              measure("p","analysis",analysisId,'');
           }
         }
       }
@@ -336,21 +546,6 @@
     watch: {
       generatedCardUrl: function(newValue) {
         this.shortenUrl(newValue)
-      },
-      currentFilters: function(newValue, oldValue) {
-        if (newValue.indexOf('Seje delovnih teles') === -1) {
-          this.workingBodies.map(function(wb) {
-            wb.selected = false;
-            return wb;
-          });
-        }
-      },
-      currentWorkingBodies: function(newValue, oldValue) {
-        if (newValue.length !== 0) {
-          if (this.currentFilters.indexOf('Seje delovnih teles') === -1) {
-            this.currentFilters.push('Seje delovnih teles');
-          }
-        }
       }
     }
   })
@@ -360,5 +555,15 @@
   addCardRippling()
 
   </script>
+
+  <style>
+  .checkbox-twolines label {
+    line-height: 14px;
+    max-width: 115px;
+  }
+  .checkbox-twolines label:before {
+    top: 4px;
+  }
+</style>
 </body>
 </html>
