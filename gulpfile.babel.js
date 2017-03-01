@@ -77,7 +77,7 @@ gulp.task('minify:css', () =>
 // js uglifyer
 gulp.task('js', () =>
   gulp.src(`${options.path}/js/script.js`)
-      .pipe(replace('/* SCRIPT_PARAMS */', `"${randomId}", "${className}"`))
+      .pipe(replace('/* SCRIPT_PARAMS */', `"${randomId}", "${className}", "${cardData}"`))
       .pipe(babel({
         presets: ['es2015'],
       }))
@@ -88,7 +88,7 @@ gulp.task('js', () =>
 // js copier (without uglify, for debug)
 gulp.task('js-no-uglify', () =>
   gulp.src(`${options.path}/js/script.js`)
-      .pipe(replace('/* SCRIPT_PARAMS */', `"${randomId}", "${className}"`))
+      .pipe(replace('/* SCRIPT_PARAMS */', `"${randomId}", "${className}", "${cardData}"`))
       .pipe(babel({
         presets: ['es2015'],
       }))
@@ -107,7 +107,7 @@ gulp.task('ejs', () =>
         urlsData: getFileContents('../../urls.json'),
         customUrl: getFileContents('customUrl.json'),
         randomId,
-      }, {
+      }, {}, {
         ext: '.html',
       }))
       .on('error', gutil.log)

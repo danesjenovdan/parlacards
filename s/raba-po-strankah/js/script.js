@@ -250,14 +250,20 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function (response) {
 
       });
     });
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 
     if (again) {
       setTimeout(relax, 20);
     } else {
       // drawLines();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   }
 
   relax();
@@ -306,7 +312,6 @@ $.getJSON('https://data.parlameter.si/v1/getAllPGsExt/', function (response) {
           return 'none';
         } else {
           return 'block';
-
         }
       });
   }

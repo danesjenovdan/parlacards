@@ -15,6 +15,13 @@
 .tick text {
     font-size: 10px;
 }
+.prisotnost-chart {
+    overflow-x: auto;
+}
+.prisotnostchart {
+    min-width: 928px;
+    padding-bottom: 10px;
+}
 .prisotnost-chart .domain {
     display: none;
 }

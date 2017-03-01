@@ -325,7 +325,7 @@
       "slug": "vlasta-pockaj"
     }
   },
-  "base": "https://skoraj.parlameter.si",
+  "base": "https://parlameter.si",
   "party": {
     "1": {
       "acronym": "smc",

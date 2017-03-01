@@ -32,21 +32,27 @@
         if (!state.filters) {
           return true;
         }
-        else if (state.filters && state.filters.indexOf('Seje DZ') > -1 && session.org.id === 95) {
-          return true;
-        }
-        else if (state.filters && state.filters.indexOf('Seje kolegija predsednika DZ') > -1 && session.org.id === 9) {
-          return true;
-        }
-        else if (state.filters && state.filters.indexOf('Seje delovnih teles') > -1) {
-          if (state.workingBodies && state.workingBodies.length > 0) {
-            return state.workingBodies.indexOf(session.org.id) > -1;
+        else {
+          var match = false;
+
+          if (state.filters.indexOf('Seje DZ') > -1) {
+            match = match || (session.orgs.filter(function(org) { return org.id === 95 }).length > 0);
           }
-          else {
-            return session.org.id !== 9 && session.org.id !== 95;
+          if (state.filters.indexOf('Seje kolegija predsednika DZ') > -1) {
+            match = match || (session.orgs.filter(function(org) { return org.id === 9 }).length > 0);
           }
+          if (state.filters.indexOf('Seje delovnih teles') > -1) {
+            if (state.workingBodies && state.workingBodies.length > 0) {
+              state.workingBodies.forEach(function(workingBody) {
+                match = match || (session.orgs.filter(function(org) { return org.id === workingBody }).length > 0);
+              });
+            }
+            else {
+              match = match || (session.orgs.filter(function(org) { return [9, 95].indexOf(org.id) === -1 }).length > 0);
+            }
+          }
+          return match;
         }
-        return false;
       })
       .filter(function(session, index) {
         return !state.onlyLatest || index < 5;
@@ -63,56 +69,102 @@
 
     <!-- everything above here is part of the page and not part of the card -->
     <div class="card-container card-halfling <%= className %>">
-        <div class="card-header">
-            <div class="card-header-border"></div>
-            <h1>Seznam sej</h1> <!-- this text is the only thing you touch in .card-header -->
-        </div>
-        <div class="card-content">
-          <div class="card-content-front">
-            <ul class="session-list">
-              <li class="headers">
-                <div data-sort="name" class="column wider">Ime</div>
-                <div data-sort="date" class="column sort reverse">Začetek</div>
-                <div data-sort="updated" class="column optional">Sprememba</div>
-                <div data-sort="workingBody" class="column wider optional">Organizacija</div>
+      <div class="card-header">
+          <div class="card-header-border"></div>
+          <h1>Seznam sej</h1> <!-- this text is the only thing you touch in .card-header -->
+      </div>
+      <div class="card-content">
+        <div class="card-content-front">
+          <ul class="session-list">
+            <li class="headers">
+              <div data-sort="name" class="column wider">Ime</div>
+              <div data-sort="date" class="column sort reverse">Začetek</div>
+              <div data-sort="updated" class="column optional">Sprememba</div>
+              <div data-sort="workingBody" class="column wider optional">Organizacija</div>
+            </li>
+            <% if (data.sessions.length === 0) { %>
+              <div class="no-results">Brez rezultatov.</div>
+            <% } else { %>
+              <% data.sessions.forEach(function(session, index) { %>
+              <li class="item" data-index="<%= index %>">
+                <a class="column image" href="<%= urlsData.base + urlsData.sessionLink.transkript + session.id %>">
+                  <img src="https://cdn.parlameter.si/v1/parlassets/icons/seja-<%= session.name.split(' ')[1] %>.svg" alt="parlameter logo">
+                </a>
+                <div class="column wider name">
+                  <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.sessionLink.transkript + session.id %>"><%= session.name %></a>
+                </div>
+                <div class="column"><%= formatDate(session.date_ts) %></div>
+                <div class="column optional"><%= formatDate(session.updated_at_ts) %></div>
+                <div class="column wider optional">
+                  <% session.orgs.forEach(function(org, index) {
+                    if (org.id === 9 || org.id === 95) { %>
+                      <%= org.name + (index < session.orgs.length - 1 ? ', ' : '') %>
+                    <% } else { %>
+                      <a class="funblue-light-hover" href="https://glej.parlameter.si/wb/getWorkingBodies/<%= org.id %>?frame=true&altHeader=true"><%= org.name %></a><%= index < session.orgs.length - 1 ? ', ' : '' %>
+                    <% } %>
+                  <% }) %>
+                </div>
               </li>
-              <% if (data.sessions.length === 0) { %>
-                <div class="no-results">Brez rezultatov.</div>
-              <% } else { %>
-                <% data.sessions.forEach(function(session, index) { %>
-                <li class="item" data-index="<%= index %>">
-                  <a class="column image" href="<%= urlsData.base + urlsData.sessionLink.transkript + session.id %>">
-                    <img src="https://cdn.parlameter.si/v1/parlassets/icons/seja-<%= session.name.split(' ')[1] %>.svg" alt="parlameter logo">
-                  </a>
-                  <div class="column wider name">
-                    <a class="funblue-light-hover" href="<%= urlsData.base + urlsData.sessionLink.transkript + session.id %>"><%= session.name %></a>
-                  </div>
-                  <div class="column"><%= formatDate(session.date_ts) %></div>
-                  <div class="column optional"><%= formatDate(session.updated_at_ts) %></div>
-                  <div class="column wider optional">
-                    <% if (session.org.id === 9 || session.org.id === 95) { %>
-                      <%= session.org.name %>
-                    <% } else {%>
-                      <a class="funblue-light-hover" href="https://glej.parlameter.si/wb/getWorkingBodies/<%= session.org.id %>?frame=true&altHeader=true"><%= session.org.name %></a>
-                    <% }%>
-                  </div>
-                </li>
-                <% }) %>
-              <% } %>
-            </ul>
+              <% }) %>
+            <% } %>
+          </ul>
+        </div>
+        <div class="card-content-info hidden">
+          <div class="card-back-content">
+            <p class="info-text">
+              Podatke o sejah pridobivamo iz spletnega mesta DZ RS, natančneje od <a href="https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDt/poDatumu/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zivT39gy2dDB0N3F0NXQw8DX09PTz9HI0M3E30w9EUBJkYARV4W4b4-PoYGnib6UdRot8dXT-G8Wj6_S0N3Qw8Q43dTYx9QwwMfI2I02-AAzgakGg_pgej8BtfkBsKAooAQ6b9bA!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/">tu</a>, <a href="https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDrzavnegaZbora/PoDatumuSeje/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zivT39gy2dDB0N3INMjAw8Db0tQ3x8fQwNvM30wwkpiAJKG-AAjgYE9LtD9BNvv7-loZuBZ6ixu4mxb4iBga8RcfrxOJCA_oLcUCBwVAQAGc0QlQ!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/">tu</a> in <a href="https://www.dz-rs.si/wps/portal/Home/deloDZ/seje/sejeDt/poDatumu/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zivT39gy2dDB0N3F0NXQw8DX09PTz9HI0M3E30w9EUBJkYARV4W4b4-PoYGnib6UdRot8dXT-G8Wj6_S0N3Qw8Q43dTYx9QwwMfI2I02-AAzgakGg_pgej8BtfkBsKAooAQ6b9bA!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/.">tu.</a>
+            </p>
           </div>
         </div>
-        <div class="card-footer">
-                <div class="card-logo hidden">
-                     <a href="<%= urlsData.base %>">
-                         <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
-                     </a>
-                 </div>
+        <div class="card-content-embed hidden">
+            <div class="card-back-content">
+                <div class="embed-content">
+                    <div class="embed-divider"></div>
+                    <div class="embed-switch-container">
+                        <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                        <div class="embed-switch-big-box">
+                            <div class="embed-switch-box">
+                                <div class="embed-switch">
+                                    <div class="embed-switches">
+                                        <div class="leftswitch">
+                                            DA
+                                        </div>
+                                        <div class="rightswitch">
+                                            NE
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="embed-switch-ball"></div>
+                        </div>
+                    </div>
+                    <div class="embed-divider"></div>
+                    <div class="embed-script">
+                        <textarea class="form-control" data-id="<%= 0 %>" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="<%= cardUrl %>&embed=true&altHeader=true"></iframe></textarea>
+                        <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                    </div>
 
-            <div class="card-circle-button card-share"></div>
-            <div class="card-circle-button card-embed"></div>
-            <div class="card-circle-button card-info">i</div>
+                </div>
+            </div>
         </div>
+        <div class="card-content-share hidden">
+            <div class="card-back-content">
+                <div class="share-content">
+                    <label for="share-url">Neposredna povezava do kartice</label>
+                    <%
+                      var cardUrl = 'https://glej.parlameter.si/' + cardData.group + '/' + cardData.method + '/?customUrl=' + encodeURIComponent('https://analize.parlameter.si/v1/s/getSessionsList') + (Object.keys(state).length > 0 ? '&state=' + encodeURIComponent(JSON.stringify(state)) : '');
+                    %>
+                    <input type="url" class="form-control share-url" id="share-url" value="<%= cardUrl %>&frame=true' %>"/>
+                    <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="card-footer" data-shortened="true">
+        <div class="card-circle-button card-share" data-back="share"></div>
+        <div class="card-circle-button card-embed" data-back="embed"></div>
+        <div class="card-circle-button card-info" data-back="info">i</div>
+      </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->
 
