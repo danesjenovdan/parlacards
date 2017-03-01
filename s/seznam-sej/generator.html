@@ -34,7 +34,7 @@
 
           <div class="align-checkbox">
             <input id="onlyLatest" type="checkbox" v-model="onlyLatest" class="checkbox">
-            <label for="onlyLatest">Samo zadnjih 5</label>
+            <label for="onlyLatest">Samo zgornjih 5</label>
           </div>
         </div>
       </div>
@@ -212,9 +212,7 @@
           })
 
           if (this.onlyLatest) {
-            sortedAndFiltered = sortedAndFiltered.sort(function(b, a) {
-              return a.date_ts < b.date_ts ? -1 : (a.date_ts > b.date_ts ? 1 : 0)
-            }).slice(0, 5)
+            sortedAndFiltered = sortedAndFiltered.slice(0, 5)
           }
 
           sortedAndFiltered = sortedAndFiltered.sort(function(sessionA, sessionB) {
