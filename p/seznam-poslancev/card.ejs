@@ -52,7 +52,7 @@
 
         return member;
       });
-      var cardUrl = 'https://glej.parlameter.si/' + cardData.group + '/' + cardData.method + '/?customUrl=' + encodeURIComponent('https://analize.parlameter.si/v1/p/getListOfMembers') + (Object.keys(state).length > 0 ? '&state=' + encodeURIComponent(JSON.stringify(state)) : '');
+      var cardUrl = 'https://glej.parlameter.si/' + cardData.group + '/' + cardData.method + '/?customUrl=' + encodeURIComponent('https://analize.parlameter.si/v1/p/getListOfMembersTickers/') + (Object.keys(state).length > 0 ? '&state=' + encodeURIComponent(JSON.stringify(state)) : '');
       var columns = {
         presence_sessions: {
           titleSuffix: 'po prisotnosti na sejah DZ',
@@ -197,7 +197,7 @@
                     </div>
                     <div class="column">
                       <%= function() {
-                        var change = parseFloat(member.results[this.currentAnalysis].diff).toFixed(this.currentAnalysisData.roundingPrecision);
+                        var change = parseFloat(result.results[state.analysis].diff).toFixed(result.results[state.analysis].roundingPrecision);
                         var number = Math.abs(change);
                         var prefix = change < 0 ? '-\xa0' : (change > 0 ? '+\xa0' : '');
 
