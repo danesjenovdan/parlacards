@@ -61,9 +61,14 @@
 
           <search-dropdown class="districts" :items="districts" :placeholder="inputPlaceholder"></search-dropdown>
 
-          <div class="exclude-presiding">
+          <div class="exclude-presiding checkbox-twolines">
             <input id="predsedujoci" type="checkbox" v-model="excludePresiding" class="checkbox">
-            <label for="predsedujoci">Skrij predsedujoče</label>
+            <label for="predsedujoci">Skrij<br>predsedujoče</label>
+          </div>
+
+          <div class="align-checkbox checkbox-twolines">
+            <input id="predsedujoci" type="checkbox" v-model="excludePresiding" class="checkbox">
+            <label for="predsedujoci">Samo<br>zgornjih 5</label>
           </div>
         </div>
       </div>
