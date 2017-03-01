@@ -39,7 +39,7 @@
                 <% if (data.response.numFound === 0) { %>
                     <div class="no-results">Brez zadetkov.</div>
                 <% } else if (data.facet_counts.facet_ranges.datetime_dt.counts.length < 4) { %>
-                    <div class="no-results">Premalo podatkov za vizualizacijo.</div>
+                    <div class="no-results">Za prikaz vizualizacije izklopi časovni filter.</div>
                 <% } else { %>
                     <div class="row poslanec">
                         <div class="col-xs-12">
