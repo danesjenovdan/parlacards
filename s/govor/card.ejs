@@ -38,9 +38,16 @@
 
       <div class="card-content <% if (data.results.quoted_text) { %>just-quote<% } %>">
         <div class="card-content-front">
-          <div class="person">
-            <img class="portrait" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.person.gov_id %>.png" />
-            <span class="name"><%= data.person.name %></span>
+          <div class="person-session">
+            <div class="person">
+              <img class="portrait" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.person.gov_id %>.png" />
+              <span class="name"><%= data.person.name %></span>
+            </div>
+            <div class="session">
+              <a href="<%= urlsData.base + urlsData.sessionLink.transkript + data.results.session.id %>"><%= data.results.session.name %></a><br>
+              <%= data.results.session.date %>
+            </div>
+
           </div>
 
           <div class="everything">
@@ -69,8 +76,7 @@
           </div>
 
           <div class="links">
-            <a class="link"></a>
-            <a class="share"></a>
+            <a href="<%= urlsData.base + urlsData.sessionLink.transkript + data.results.session.id %>#<%= data.results.speech_id %>" class="link"></a>
           </div>
         </div>
         <div class="card-content-info hidden">
