@@ -14,6 +14,7 @@
 
 $blue: #009cdd;
 $light-gray: #f0f0f0;
+$light-blue: #e1f6ff;
 $medium-gray: #d0d0d0;
 
 %text-styling {
@@ -39,22 +40,26 @@ $medium-gray: #d0d0d0;
   $portrait-size: 34px;
   $portrait-margin: 14px;
   display: flex;
-  font-family: Roboto Slab;
-  height: 81px;
+  height: 86px;
   justify-content: space-between;
 
   @include respond-to(desktop) {
-    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: auto;
-    left: 0;
-    position: absolute;
-    top: -2px;
-    z-index: 1;
+    justify-content: flex-start;
+    width: 220px;
   }
 
   .person {
     align-items: center;
     display: flex;
+    padding-bottom: 22px;
+
+    @include respond-to(desktop) {
+      padding-bottom: 0;
+      width: 100%;
+    }
 
     .portrait {
       border-radius: 50%;
@@ -72,68 +77,27 @@ $medium-gray: #d0d0d0;
   .session {
     font-size: 14px;
     line-height: 22px;
-    padding: 31px 0 0 8px;
-    @include respond-to(desktop) { padding: 7px 0 0 $portrait-size + $portrait-margin; }
+    padding: 21px 0 0 8px;
+    @include respond-to(desktop) {
+      padding: 7px 0 0 $portrait-size + $portrait-margin;
+      width: 100%;
+    }
+    .date { font-family: Roboto Slab; }
   }
 }
 
 .card-content {
-  padding-bottom: 0;
+  padding: 0;
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
-
-  .card-content-front { position: relative; }
-
-  .everything { display: block; }
-  .quote { display: none; }
-
-  &.similar-expanded {
-    .speech-text { visibility: hidden; }
-    .similar-speech-content { display: block; }
-    .similar-speech-tabs ul li.active:before { display: block; }
-  }
-
-  &.closed {
-    max-height: 204px;
-    padding-bottom: 0;
-    .toggle-arrow {
-      transform: none;
-    }
-  }
-  &.just-quote {
-    padding-bottom: 0;
-    .quote-button {
-      background: $medium-gray;
-      cursor: default;
-      display: block;
-      top: 50%;
-    }
-    .speech-text {
-      color: #cacaca;
-      span { color: #000000; }
-    }
-    .full-text-link {
-      @extend %link-styling;
-      margin: 8px 0;
-      @include respond-to(desktop) { margin: 28px 0; }
-    }
-    &.closed { max-height: none; }
-    .everything { display: none; }
-    .quote { display: block; }
-  }
 }
+
 
 .speech-text {
   @extend %text-styling;
-  margin: 6px 0 12px 0;
+  margin: 0;
   padding: 0;
-  position: relative;
-
-  @include respond-to(desktop) {
-    padding: 0 100px 0 234px;
-    margin-bottom: 28px;
-  }
 }
 
 .quote-button {
@@ -145,7 +109,7 @@ $medium-gray: #d0d0d0;
   font-family: Times New Roman, serif;
   font-size: 44px;
   height: 33px;
-  left: 175px;
+  left: -42px;
   line-height: 52px;
   margin-top: -16px;
   position: absolute;
@@ -157,12 +121,12 @@ $medium-gray: #d0d0d0;
 
 .links {
   display: flex;
-  margin-bottom: 16px;
+  margin: 6px 0 16px 0;
 
   @include respond-to(desktop) {
-    position: absolute;
-    top: -3px;
-    right: 0;
+    justify-content: flex-end;
+    margin: 0;
+    width: 110px;
   }
 
   .link, .share {
@@ -176,7 +140,7 @@ $medium-gray: #d0d0d0;
     color: red;
     &:not(:first-child) { margin-left: 9px; }
     &:hover {
-      background-color: #e1f6ff;
+      background-color: $light-blue;
       cursor: pointer;
     }
   }
@@ -192,7 +156,58 @@ $medium-gray: #d0d0d0;
 }
 
 .speech-holder {
-  border-bottom: 1px solid #f0f0f0;
-  margin: 32px 0;
-  position: relative;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  .everything, .quote {
+    flex: 1;
+    ::selection { background: $light-blue; }
+    @include respond-to(desktop) { padding: 2px 8px 0 8px; }
+  }
+  .everything { display: block; }
+  .quote {
+    display: none;
+    position: relative;
+  }
+
+  &.just-quote {
+    .quote-button {
+      background: $medium-gray;
+      cursor: default;
+      display: block;
+      top: 50%;
+    }
+    .speech-text {
+      color: #cacaca;
+      span { color: #000000; }
+    }
+    .full-text-link {
+      @extend %link-styling;
+      position: absolute;
+      width: 100%;
+      bottom: -36px;
+    }
+    .everything { display: none; }
+    .quote { display: block; }
+  }
+
+  &.multiple {
+    border-top: 1px solid #f0f0f0;
+    @include respond-to(desktop) {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+    .person-session {
+      height: 64px;
+      @include respond-to(desktop) { height: auto; }
+      .person { padding-bottom: 0; }
+    }
+    &:target { background: $light-blue; }
+  }
+
+  @include respond-to(desktop) {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 57px;
+  }
 }
