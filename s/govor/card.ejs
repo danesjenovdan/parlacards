@@ -2,57 +2,57 @@
 <html> <!-- removeme -->
 
 <head> <!-- removeme -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
 
-    <!-- build:remove -->
-    <!-- these script files are removed on build -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
-    <!-- endbuild -->
+  <!-- build:remove -->
+  <!-- these script files are removed on build -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+  <!-- endbuild -->
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
-    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+  <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
 
-    <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
-    <link data-inline="true" rel="stylesheet" href="css/style.css">
+  <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+  <link data-inline="true" rel="stylesheet" href="css/style.css">
 </head> <!-- removeme -->
 
 <body> <!-- removeme -->
-    <!-- everything above here is part of the page and not part of the card -->
+  <!-- everything above here is part of the page and not part of the card -->
 
-    <%
+  <%
       var localRandomId = (() => {
         var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         return Array(5).fill(0).map(() => possible.charAt(Math.floor(Math.random() * possible.length))).join('');
       })();
     %>
     <div class="card-container card-halfling <%= className %>" id="<%= localRandomId %>" data-randomid="<%= localRandomId %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
-        <input type="hidden" class="mywords" id="<%= localRandomId %>words" value="<%= data.results.content.replace(/\n+/g, ' ').trim() %>">
-        <input type="hidden" class="myid" id="<%= localRandomId %>id" value="<%= data.results.speech_id %>">
-        <div class="card-header shadowhunter">
-            <div class="card-header-border"></div>
-            <h1>Govor</h1>
-        </div>
+      <input type="hidden" class="mywords" id="<%= localRandomId %>words" value="<%= data.results.content.replace(/\n+/g, ' ').trim() %>">
+      <input type="hidden" class="myid" id="<%= localRandomId %>id" value="<%= data.results.speech_id %>">
+      <div class="card-header shadowhunter">
+        <div class="card-header-border"></div>
+        <h1>Govor</h1>
+      </div>
 
-        <div class="card-content <% if (data.results.quoted_text) { %>just-quote<% } %>">
-          <div class="card-content-front">
-            <div class="person">
-                <img class="portrait" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.person.gov_id %>.png" />
-                <span class="name"><%= data.person.name %></span>
-            </div>
+      <div class="card-content <% if (data.results.quoted_text) { %>just-quote<% } %>">
+        <div class="card-content-front">
+          <div class="person">
+            <img class="portrait" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.person.gov_id %>.png" />
+            <span class="name"><%= data.person.name %></span>
+          </div>
 
-            <div class="everything">
-              <div class="speech-text">
-                <%= data.results.content.replace(/\n+/g, ' ').trim() %>
+          <div class="everything">
+            <div class="speech-text">
+              <%= data.results.content.replace(/\n+/g, ' ').trim() %>
                 <div class="quote-button">“</div>
-              </div>
             </div>
+          </div>
 
-            <div class="quote">
-              <div class="speech-text">
-                <%
+          <div class="quote">
+            <div class="speech-text">
+              <%
                   if (data.results.quoted_text) {
                     var PADDING_LENGTH = 30;
                     var splitQuote = data.results.content.replace(/\n+/g, ' ').trim().split(data.results.quoted_text);
@@ -63,56 +63,56 @@
                     var quoteWithPadding = '...' + paddingBefore + '<span>' + data.results.quoted_text + '</span>' + paddingAfter + '...';
                 %>
                 <%- quoteWithPadding %>
-                <% }%>
-              </div>
-              <a href="#" class="full-text-link">Cel govor</a>
+                  <% }%>
             </div>
+            <a href="#" class="full-text-link">Cel govor</a>
+          </div>
 
-            <div class="links">
-                <a class="link"></a>
-                <a class="share"></a>
-            </div>
+          <div class="links">
+            <a class="link"></a>
+            <a class="share"></a>
           </div>
-          <div class="card-content-info hidden">
-            <div class="card-back-content">
-                <p class="info-text">
-                    Transkript seje, ki je v obliki HTML dokumenta objavljen na spletnem mestu DZ, strojno razbijemo na posamezne govorne nastope. To je kartica, ki predstavlja en govor.
-                </p>
-            </div>
+        </div>
+        <div class="card-content-info hidden">
+          <div class="card-back-content">
+            <p class="info-text">
+              Transkript seje, ki je v obliki HTML dokumenta objavljen na spletnem mestu DZ, strojno razbijemo na posamezne govorne nastope. To je kartica, ki predstavlja en govor.
+            </p>
           </div>
-          <div class="card-content-embed hidden">
-              <div class="card-back-content">
-                  <div class="embed-content">
-                      <div class="embed-divider"></div>
-                      <div class="embed-script">
-                          <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<% if (data.results.quote_id) { %><%= data.results.quote_id %><% } else { %><%= data.results.speech_id %><% } %>?embed=true&altHeader=true"></textarea>
-                          <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
-                      </div>
+        </div>
+        <div class="card-content-embed hidden">
+          <div class="card-back-content">
+            <div class="embed-content">
+              <div class="embed-divider"></div>
+              <div class="embed-script">
+                <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<% if (data.results.quote_id) { %><%= data.results.quote_id %><% } else { %><%= data.results.speech_id %><% } %>?embed=true&altHeader=true"></textarea>
+                <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+              </div>
 
-                  </div>
-              </div>
+            </div>
           </div>
-          <div class="card-content-share hidden">
-              <div class="card-back-content">
-                  <div class="share-content">
-                      <label for="share-url">Neposredna povezava do kartice</label>
-                      <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<% if (data.results.quote_id) { %><%= data.results.quote_id %><% } else { %><%= data.results.speech_id %><% } %>?frame=true&altHeader=true"/>
-                      <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
-                  </div>
-              </div>
+        </div>
+        <div class="card-content-share hidden">
+          <div class="card-back-content">
+            <div class="share-content">
+              <label for="share-url">Neposredna povezava do kartice</label>
+              <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<% if (data.results.quote_id) { %><%= data.results.quote_id %><% } else { %><%= data.results.speech_id %><% } %>?frame=true&altHeader=true" />
+              <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+            </div>
           </div>
-          <!-- delete this placeholder, this is the content of your card -->
+        </div>
+        <!-- delete this placeholder, this is the content of your card -->
       </div>
       <div class="card-footer">
-              <div class="card-logo hidden">
-                      <a href="<%= urlsData.base %>">
-                          <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
-                      </a>
-                  </div>
+        <div class="card-logo hidden">
+          <a href="<%= urlsData.base %>">
+            <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+          </a>
+        </div>
 
-          <div class="card-circle-button card-share" data-back="share"></div>
-          <div class="card-circle-button card-embed" data-back="embed"></div>
-          <div class="card-circle-button card-info" data-back="info">i</div>
+        <div class="card-circle-button card-share" data-back="share"></div>
+        <div class="card-circle-button card-embed" data-back="embed"></div>
+        <div class="card-circle-button card-info" data-back="info">i</div>
       </div>
     </div>
     <!-- everything below here is part of the page and not part of the card -->
