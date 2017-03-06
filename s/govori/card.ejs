@@ -9,7 +9,7 @@
   <!-- these script files are removed on build -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://d3js.org/d3.v3.min.js"></script>
-  <!--<script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>-->
+  <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
   <!-- endbuild -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
   <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
@@ -31,18 +31,13 @@
       </div>
       <div class="card-content">
         <div class="card-content-front">
-          <%
-            function compare(a, b) {
-                if (a.results.speech_id < b.results.speech_id) { return -1; }
-                else if (a.results.speech_id > b.results.speech_id) { return 1; }
-                return 0;
+            <% function compare(a, b) {
+              if (a.results.speech_id < b.results.speech_id) { return -1; }
+              else if (a.results.speech_id > b.results.speech_id) { return 1; }
+              return 0;
             }
 
-            var newdata = data.results.sort(compare);
-
-            for (i = 0; i < data.results.length; i++) {
-                var data2 = newdata[i];
-            %>
+            data.results.sort(compare).forEach(data2 => { %>
 
             <div class="speech-holder multiple" id="<%= data2.results.speech_id %>">
               <input type="hidden" class="mywords" value="<%= data2.results.content.replace(/\n+/g, ' ').trim() %>">
@@ -66,7 +61,7 @@
                 <a href="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data2.results.speech_id %>?frame=true" class="share"></a>
               </div>
             </div>
-            <% } %>
+            <% }) %>
         </div>
 
         <div class="card-content-info hidden">

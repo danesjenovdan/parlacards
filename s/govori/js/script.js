@@ -11,8 +11,10 @@
     return false;
   }
 
-  function makeSpeechesEventful() {
-    $('.speech-holder').not('.eventful').each((i, e) => {
+  function makeSpeechesWork(allSpeeches) {
+    let selectElement;
+
+    allSpeeches.not('.eventful').each((i, e) => {
       $(e).addClass('eventful');
 
       const cardElement = $(e);
@@ -20,43 +22,49 @@
       const quoteElement = cardElement.find('.everything .quote-button');
       const speechId = cardElement.find('.myid').val();
 
-      speechTextElement.on('mouseup', (event) => {
-        event.preventDefault();
+      speechTextElement
+        .on('mousedown', (event) => {
+          selectElement = event.currentTarget;
+        })
+        .on('mouseup', (event) => {
+          event.preventDefault();
+          allSpeeches.find('.everything .quote-button').hide();
+          if (selectElement !== event.currentTarget) return;
 
-        const selection = getSelected();
+          const selection = getSelected();
 
-        if (selection && selection.toString().length > 0) {
-          const parentOffsetTop = speechTextElement.get(0).getBoundingClientRect().top;
-          const rectangle = selection.getRangeAt(0).getBoundingClientRect();
-          const quoteIconOffset = (rectangle.top - parentOffsetTop) + (rectangle.height / 2);
+          if (selection && selection.toString().length > 0) {
+            const parentOffsetTop = speechTextElement.get(0).getBoundingClientRect().top;
+            const rectangle = selection.getRangeAt(0).getBoundingClientRect();
+            const quoteIconOffset = (rectangle.top - parentOffsetTop) + (rectangle.height / 2);
 
-          quoteElement.data({ text: selection.toString() });
-          quoteElement.css({
-            top: `${quoteIconOffset}px`,
-            display: 'block',
-          });
-        } else {
-          quoteElement.css({ display: 'none' });
-        }
-      });
+            quoteElement.data({ text: selection.toString() });
+            quoteElement.css({
+              top: `${quoteIconOffset}px`,
+              display: 'block',
+            });
+          } else {
+            quoteElement.css({ display: 'none' });
+          }
+        });
 
       // This prevents deselection of text when clicking on quote icon
-      quoteElement.on('mousedown', event => event.preventDefault());
+      quoteElement
+        .on('mousedown', event => event.preventDefault())
+        .on('click', () => {
+          const selectedText = quoteElement.data().text.trim();
+          const allText = cardElement.find('.mywords').val();
+          const startIndex = allText.indexOf(selectedText);
+          const endIndex = startIndex + selectedText.length;
+          const url = `https://analize.parlameter.si/v1/s/setQuote/${speechId}/${startIndex}/${endIndex}`;
 
-      quoteElement.on('click', () => {
-        const selectedText = quoteElement.data().text.trim();
-        const allText = cardElement.find('.mywords').val();
-        const startIndex = allText.indexOf(selectedText);
-        const endIndex = startIndex + selectedText.length;
-        const url = `https://analize.parlameter.si/v1/s/setQuote/${speechId}/${startIndex}/${endIndex}`;
-
-        $.ajax({
-          url,
-          async: false,
-          dataType: 'json',
-          success: result => window.open(`https://glej.parlameter.si/s/citat/${result.id}?frame=true`),
+          $.ajax({
+            url,
+            async: false,
+            dataType: 'json',
+            success: result => window.open(`https://glej.parlameter.si/s/citat/${result.id}?frame=true`),
+          });
         });
-      });
 
       // QUOTE-FULL SPEECH TOGGLING
       cardElement.on('click', '.full-text-link', (event) => {
@@ -66,7 +74,9 @@
     });
   }
 
-  makeSpeechesEventful();
+  const allSpeeches = $('.speech-holder');
+
+  makeSpeechesWork(allSpeeches);
   makeEmbedSwitch();
   activateCopyButton();
   addCardRippling();

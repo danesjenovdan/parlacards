@@ -198,6 +198,7 @@ $medium-gray: #d0d0d0;
 .speech-holder {
   padding-left: 16px;
   padding-right: 16px;
+  &.selection-disabled { user-select: none; }
   &.multiple {
     border-top: 1px solid #f0f0f0;
     @include respond-to(desktop) {
