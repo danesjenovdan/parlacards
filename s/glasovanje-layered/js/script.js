@@ -1,4 +1,8 @@
-/* global $ d3 */
+/* Array global $ d3 */
+
+Array.prototype.diff = function (a) {
+  return this.filter(i => a.indexOf(i) < 0);
+};
 
 if (!isMSIE) {
   // utilities
@@ -10,7 +14,7 @@ if (!isMSIE) {
       groups[group].push(o);
     });
 
-    return Object.keys(groups).map(group => groups[group]);
+    return Object.keys(groups).map(group => groups[ group]);
   };
 
   // draw the pie
@@ -569,9 +573,9 @@ if (!isMSIE) {
     option_data.push(data.all[i]);
   }
 
-  drawPie(second_level_data);
-  drawOptionLabels(option_data);
-  drawPartyLabels(second_level_data);
+  // drawPie(second_level_data);
+  // drawOptionLabels(option_data);
+  // drawPartyLabels(second_level_data);
 
 
   function moveSingleMP() {
@@ -594,10 +598,24 @@ if (!isMSIE) {
   }
 
   $('.option').on('click', function () {
-    // togle mps
-    $('.mpgroup').addClass('hidden');
-    // console.log($(this).data('option'));
-    $(`.mpgroup.${ $(this).data('option')}`).removeClass('hidden');
+    if ($(this).hasClass('selected')) {
+      // show all MPs
+      $('.mpgroup').removeClass('hidden');
+      // $(`.mpgroup.${ $(this).data('option')}`).addClass('hidden');
+      // if ($('.mpgroup.hidden').length === $('.mpgroup').length) {
+      //   $('.mpgroup').removeClass('hidden');
+      // }
+    } else {
+      // if ($('.mpgroup.hidden').length === 0) {
+        $('.mpgroup').addClass('hidden');
+      // }
+      // console.log($(this).data('option'));
+      $(`.mpgroup.${ $(this).data('option')}`).removeClass('hidden');
+      $('.option.selected').removeClass('selected');
+    }
+
+    // toggle class selected
+    $(this).toggleClass('selected');
   });
 } else {
   $('.card-glasovanje-layered .card-content-front').html('<div class="no-results" style="width: 300px; margin-top: -20px;">Tvoj brskalnik žal ne podpira tehnologij, ki poganjajo to kartico.</div>');
@@ -606,3 +624,58 @@ if (!isMSIE) {
 makeEmbedSwitch();
 activateCopyButton();
 addCardRippling();
+
+function makeId() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 5; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+
+var testis = new Vue({
+  el: '.right-container',
+  components: ['SearchDropdown'],
+  computed: {
+    inputPlaceholder: function () {
+      if (this.allTags.length > 0) {
+        return this.selectedTags.length > 0 ? 'Izbranih dokumentov: ' + this.selectedTags.length : 'Izberi dokument'
+      }
+
+      return 'Ni dokumentov';
+    },
+    selectedTags: function () {
+      return this.allTags
+        .filter(function (tag) {
+          return tag.selected
+        })
+        .map(function (tag) {
+          return {
+            id: tag.id,
+            url: tag.url
+          }
+        });
+    },
+  },
+  data: function () {
+    return {
+      allTags: data.documents.map(function (document) {
+        return {
+          id: document.name + makeId(),
+          label: document.name.substring(0,3) === ' | ' ? 'Dokument brez imena' + document.name : document.name,
+          selected: false,
+          url: document.url
+        }
+      })
+    }
+  },
+  methods: {
+    takeMeToTheDocument: function (event) {
+      this.selectedTags.forEach(tag => {
+        window.open(tag.url);
+      })
+    }
+  }
+});
