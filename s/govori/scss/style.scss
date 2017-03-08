@@ -161,11 +161,11 @@ $medium-gray: #d0d0d0;
 
 .links {
   display: flex;
-  margin: 6px 0 16px 0;
+  padding: 6px 0 16px 0;
 
   @include respond-to(desktop) {
     justify-content: flex-end;
-    margin: 0;
+    padding: 0;
     width: 110px;
   }
 
