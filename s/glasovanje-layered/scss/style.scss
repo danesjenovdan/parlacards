@@ -134,9 +134,10 @@ a.document:hover {
     .option-option {
       display: flex;
       color: #ffffff;
-      font-size: 16px;
+      font-size: 13px;
       line-height: 44px;
       text-transform: uppercase;
+      font-weight: 200;
 
       @include respond-to(mobile) { font-size: 12px; }
     }
