@@ -1,6 +1,13 @@
-/* global window document $ makeEmbedSwitch activateCopyButton addCardRippling */
+/* global window document $ makeEmbedSwitch activateCopyButton addCardRippling history */
 
 (() => {
+
+  // fuck you chrome
+  // if ('scrollRestoration' in history) {
+  //   // Back off, browser, I got this...
+  //   history.scrollRestoration = 'manual';
+  // }
+
   // SELECTION QUOTING
   function getSelected() {
     if (window.getSelection) return window.getSelection();

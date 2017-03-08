@@ -23,104 +23,85 @@
 
 
   <!-- everything above here is part of the page and not part of the card -->
-  <div class="justaspeechcontainer" data-id="<%= cardData.group %>/<%= cardData.method %>">
-    <div class="card-container card-halfling <%= className %>">
-      <div class="card-header shadowhunter">
-        <div class="card-header-border"></div>
-        <h1>Transkript</h1>
-      </div>
-      <div class="card-content">
-        <div class="card-content-front">
-            <% function compare(a, b) {
-              if (a.results.speech_id < b.results.speech_id) { return -1; }
-              else if (a.results.speech_id > b.results.speech_id) { return 1; }
-              return 0;
-            }
+  <div class="card-container card-halfling <%= className %>">
+    <div class="card-header shadowhunter">
+      <div class="card-header-border"></div>
+      <h1>Transkript</h1>
+    </div>
+    <div class="card-content">
+      <div class="card-content-front">
+          <% function compare(a, b) {
+            if (a.results.speech_id < b.results.speech_id) { return -1; }
+            else if (a.results.speech_id > b.results.speech_id) { return 1; }
+            return 0;
+          }
 
-            data.results.sort(compare).forEach(data2 => { %>
+          data.results.sort(compare).forEach(data2 => { %>
 
-            <div class="speech-holder multiple" id="<%= data2.results.speech_id %>">
-              <input type="hidden" class="mywords" value="<%= data2.results.content.replace(/\n+/g, ' ').trim() %>">
-              <input type="hidden" class="myid" value="<%= data2.results.speech_id %>">
-              <div class="person-session">
-                <div class="person">
-                  <img class="portrait" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data2.person.gov_id || 'null' %>.png" />
-                  <span class="name"><%= data2.person.name %></span>
-                </div>
-              </div>
-
-              <div class="everything">
-                <div class="speech-text">
-                  <%= data2.results.content.replace(/\n+/g, ' ').trim() %>
-                    <div class="quote-button">“</div>
-                </div>
-              </div>
-
-              <div class="links">
-                <a href="<%= urlsData.base + urlsData.sessionLink.transkript + data2.results.session.id %>#<%= data2.results.speech_id %>" class="link"></a>
-                <a href="https://glej.parlameter.si/<%= cardData.group %>/govor/<%= data2.results.speech_id %>?frame=true" class="share"></a>
+          <div class="speech-holder multiple" id="<%= data2.results.speech_id %>">
+            <input type="hidden" class="mywords" value="<%= data2.results.content.replace(/\n+/g, ' ').trim() %>">
+            <input type="hidden" class="myid" value="<%= data2.results.speech_id %>">
+            <div class="person-session">
+              <div class="person">
+                <img class="portrait" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data2.person.gov_id || 'null' %>.png" />
+                <span class="name"><%= data2.person.name %></span>
               </div>
             </div>
-            <% }) %>
-        </div>
 
-        <div class="card-content-info hidden">
-          <div class="card-back-content">
-            <p class="info-text">
-              Transkript seje, ki je v obliki HTML dokumenta objavljen na spletnem mestu DZ, strojno razbijemo na posamezne govorne nastope. To je kartica, ki predstavlja en govor.
-            </p>
-          </div>
-        </div>
-        <div class="card-content-embed hidden">
-          <div class="card-back-content">
-            <div class="embed-content">
-              <div class="embed-divider"></div>
-              <div class="embed-switch-container">
-                <div class="embed-label">Podatki naj se vedno osvežujejo</div>
-                <div class="embed-switch-big-box">
-                  <div class="embed-switch-box">
-                    <div class="embed-switch">
-                      <div class="embed-switches">
-                        <div class="leftswitch">
-                          DA
-                        </div>
-                        <div class="rightswitch">
-                          NE
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="embed-switch-ball"></div>
-                </div>
+            <div class="everything">
+              <div class="speech-text">
+                <%= data2.results.content.replace(/\n+/g, ' ').trim() %>
+                  <div class="quote-button">“</div>
               </div>
-              <div class="embed-divider"></div>
-              <div class="embed-script">
-              </div>
+            </div>
 
+            <div class="links">
+              <a href="<%= urlsData.base + urlsData.sessionLink.transkript + data2.results.session.id %>#<%= data2.results.speech_id %>" class="link"></a>
+              <a href="https://glej.parlameter.si/<%= cardData.group %>/govor/<%= data2.results.speech_id %>?frame=true" class="share"></a>
             </div>
           </div>
+          <% }) %>
+      </div>
+
+      <div class="card-content-info hidden">
+        <div class="card-back-content">
+          <p class="info-text">
+            Transkript seje, ki je v obliki HTML dokumenta objavljen na spletnem mestu <a href="http://www.dz-rs.si" target="_blank">DZ RS</a>, strojno razbijemo na posamezne govorne nastope in jih v izvornem vrstnem redu združimo v kartico transkript.
+          </p>
         </div>
-        <div class="card-content-share hidden">
-          <div class="card-back-content">
-            <div class="share-content">
-              <label for="share-url">Neposredna povezava do kartice</label>
-              <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+      </div>
+      <div class="card-content-embed hidden">
+        <div class="card-back-content">
+          <div class="embed-content">
+            <div class="embed-divider"></div>
+            <div class="embed-script">
+              <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.session.id %>?embed=true&altHeader=true"></textarea>
+              <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
             </div>
+
           </div>
         </div>
-        <!-- delete this placeholder, this is the content of your card -->
       </div>
-      <div class="card-footer">
-        <div class="card-logo hidden">
-          <a href="<%= urlsData.base %>">
-            <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
-          </a>
+      <div class="card-content-share hidden">
+        <div class="card-back-content">
+          <div class="share-content">
+            <label for="share-url">Neposredna povezava do kartice</label>
+            <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/<%= data.session.id %>?frame=true&altHeader=true" />
+            <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+          </div>
         </div>
-
-        <div class="card-circle-button card-share" data-back="share"></div>
-        <div class="card-circle-button card-embed" data-back="embed"></div>
-        <div class="card-circle-button card-info" data-back="info">i</div>
       </div>
+    </div>
+    <div class="card-footer">
+      <div class="card-logo hidden">
+        <a href="<%= urlsData.base %>">
+          <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+        </a>
+      </div>
+
+      <div class="card-circle-button card-share" data-back="share"></div>
+      <div class="card-circle-button card-embed" data-back="embed"></div>
+      <div class="card-circle-button card-info" data-back="info">i</div>
     </div>
   </div>
   <!-- everything below here is part of the page and not part of the card -->

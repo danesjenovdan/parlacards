@@ -1,1 +1,1 @@
-{"_id":"583266442cd45a08b320cb9c","name":"speeches","group":"s","method":"speeches","dataUrl":"https://analize.parlameter.si/v1/s/getSpeechesOfSession"}
+{"_id":"58bebbfe82e01da863e31d3d","name":"Govori","group":"s","method":"govori","dataUrl":"https://analize.parlameter.si/v1/s/getSpeechesOfSession"}
