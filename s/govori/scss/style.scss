@@ -91,47 +91,12 @@ $medium-gray: #d0d0d0;
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
+}
 
-  .everything, .quote {
-    flex: 1;
-    ::selection { background: $light-blue; }
-    @include respond-to(desktop) { padding: 2px 8px 0 8px; }
-  }
-  .everything { display: block; }
-  .quote {
-    display: none;
-    position: relative;
-  }
-
-  &.closed {
-    max-height: 204px;
-    padding-bottom: 0;
-    .toggle-arrow {
-      transform: none;
-    }
-  }
-  &.just-quote {
-    padding-bottom: 0;
-    .quote-button {
-      background: $medium-gray;
-      cursor: default;
-      display: block;
-      top: 50%;
-    }
-    .speech-text {
-      color: #cacaca;
-      span { color: #000000; }
-    }
-    .full-text-link {
-      @extend %link-styling;
-      position: absolute;
-      width: 100%;
-      bottom: -88px;
-    }
-    &.closed { max-height: none; }
-    .everything { display: none; }
-    .quote { display: block; }
-  }
+.card-content-info,
+.card-content-embed,
+.card-content-share {
+  padding: 60px 20px 0
 }
 
 .speech-text {
@@ -198,7 +163,39 @@ $medium-gray: #d0d0d0;
 .speech-holder {
   padding-left: 16px;
   padding-right: 16px;
-  &.selection-disabled { user-select: none; }
+
+  .everything, .quote {
+    flex: 1;
+    ::selection { background: $light-blue; }
+    @include respond-to(desktop) { padding: 2px 8px 0 8px; }
+  }
+  .everything { display: block; }
+  .quote {
+    display: none;
+    position: relative;
+  }
+
+  &.just-quote {
+    .quote-button {
+      background: $medium-gray;
+      cursor: default;
+      display: block;
+      top: 50%;
+    }
+    .speech-text {
+      color: #cacaca;
+      span { color: #000000; }
+    }
+    .full-text-link {
+      @extend %link-styling;
+      position: absolute;
+      width: 100%;
+      bottom: -36px;
+    }
+    .everything { display: none; }
+    .quote { display: block; }
+  }
+
   &.multiple {
     border-top: 1px solid #f0f0f0;
     @include respond-to(desktop) {
@@ -218,9 +215,4 @@ $medium-gray: #d0d0d0;
     padding-top: 15px;
     padding-bottom: 57px;
   }
-}
-
-.card-back-content {
-  padding-left: 20px;
-  padding-right: 20px;
 }
