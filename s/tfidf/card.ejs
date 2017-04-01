@@ -31,8 +31,7 @@
         </div>
         <div class="card-content">
             <div class="card-content-front">
-                <% if (data.results.length > 0) { %>
-                <div class="bgwhite poslanec">
+                <div class="tfidf-container">
 
                     <%
 
@@ -41,10 +40,10 @@
 
                     for (var i = 0; i < data.results.length; i++) {
                         var word = data.results[i];
-                        if (Math.round(word['scores']['tf-idf'] * 100) > max) {
-                            max = Math.round(word['scores']['tf-idf'] * 100);
-                        } else if (+word['scores']['tf-idf'] < min) {
-                            min = Math.round(word['scores']['tf-idf'] * 100);
+                        if (Math.round(word.scores['tf-idf'] * 5000) > max) {
+                            max = Math.round(word.scores['tf-idf'] * 5000);
+                        } else if (+word.scores['tf-idf'] < min) {
+                            min = Math.round(word.scores['tf-idf'] * 5000);
                         }
                     }
 
@@ -54,86 +53,34 @@
 
                     %>
 
-                    <div class="halfer-container">
-
-                        <div class="halfer">
-
-                        <%
-
-                        for (var i=0; i < 5; i++) {
-                            if (i < data.results.length) {
-                                var word = data.results[i];
-                                word.score = Math.round(word['scores']['tf-idf'] * 100);
-                        %>
-
-                            <div class="me_poslanec clearfix tfidf-bar">
-
-                                <div class="term">
-                                    <span class="poslanec_title">
-                                                    <a href="<%=urlsData.base%>/seje/isci?q=<%- '%22' + word.term.replace(' ', '+') + '%22' %>" class="funblue-light-hover"><%= word.term %></a>
-                                                </span>
-                                </div>
-                                <div class="frequency">
-                                    <div class="progress hugebar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="0" aria-valuemax="<%= max %>" style="width: <%= word.score / max * 100 > 1 ? word.score / max * 100 : 1 %>%;">
-                                            <span class="sr-only"><%= word.score %></span>
-                                        </div>
-
+                    <% if (data.results.length === 0) { %>
+                        <div class="nospeeches"><i>Brez govorov.</i></div>
+                    <% } %>
+                    <div class="columns">
+                        <% [data.results.slice(0,5), data.results.slice(5,10)].forEach(function(column) { %>
+                            <div class="word-list">
+                                <div class="labeled-chart">
+                                    <div class="column chart-label">
+                                        <% column.forEach(function(word) {
+                                            word.score = Math.round(word.scores['tf-idf'] * 5000); %>
+                                            <div class="label-container">
+                                                <a href="<%=urlsData.base%>/seje/isci?q=<%- '%22' + word.term.replace(' ', '+') + '%22' %>" class="funblue-light-hover"><%= word.term %></a>
+                                            </div>
+                                        <% }) %>
+                                    </div>
+                                    <div class="column chart">
+                                        <% column.forEach(function(word) {
+                                            word.score = Math.round(word.scores['tf-idf'] * 5000); %>
+                                            <div class="progress hugebar">
+                                                <div role="progressbar" class="progress-bar funblue" style="width: <%= word.score / max * 100 > 1 ? word.score / max * 100 : 1 %>%;"></div>
+                                            </div>
+                                        <% }) %>
                                     </div>
                                 </div>
                             </div>
-
-                        <%
-                            }
-                            }
-                        %>
-
-                        </div>
-
-                        <div class="halfer">
-
-                        <%
-
-                        for (var i=5; i < 10; i++) {
-                            if (i < data.results.length) {
-                                var word = data.results[i];
-                                word.score = Math.round(word['scores']['tf-idf'] * 100);
-                        %>
-
-                            <div class="me_poslanec clearfix tfidf-bar">
-
-                                <div class="term">
-                                    <span class="poslanec_title">
-                                                    <a href="<%=urlsData.base%>/seje/isci?q=<%- '%22' + decodeURIComponent(escape(word.term)).replace(' ', '+') + '%22' %>" class="funblue-light-hover"><%= word.term %></a>
-                                                </span>
-                                </div>
-                                <div class="frequency">
-                                    <div class="progress hugebar avgmin">
-                                        <div class="progress-bar funblue" role="progressbar" aria-valuenow="<%= word.score %>" aria-valuemin="0" aria-valuemax="<%= max %>" style="width: <%= word.score / max * 100 > 1 ? word.score / max * 100 : 1 %>%;">
-                                            <span class="sr-only"><%= word.score %></span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        <%
-                            }
-                            }
-                        %>
-
-                        </div>
-
+                        <% }) %>
                     </div>
-
-
-
                 </div>
-                <% } else { %>
-                    <div class="bgwhite poslanec">
-                        <div class="no-results">Seja v obdelavi.</div>
-                    </div>
-                <% } %>
             </div>
             <div class="card-content-info hidden">
                 <div class="card-back-content">

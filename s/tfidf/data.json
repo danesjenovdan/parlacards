@@ -1,17 +1,164 @@
 {
-    "created_at": "01.12.2016",
-    "created_for": "01.12.2016",
-    "session": {
-        "date": "25. 11. 2016",
-        "org": {
-            "acronym": "DZ",
-            "is_coalition": false,
-            "id": 95,
-            "name": "Državni zbor"
-        },
-        "name": "38. izredna seja",
-        "in_review": false,
-        "id": 7522
+  "created_at": "21.02.2017",
+  "created_for": "21.02.2017",
+  "session": {
+    "name": "27. redna seja",
+    "date_ts": "2017-02-13T01:00:00",
+    "orgs": [{
+      "acronym": "DZ",
+      "is_coalition": false,
+      "id": 95,
+      "name": "Dr\u017eavni zbor"
+    }],
+    "date": "13. 2. 2017",
+    "org": {
+      "acronym": "DZ",
+      "is_coalition": false,
+      "id": 95,
+      "name": "Dr\u017eavni zbor"
     },
-    "results": []
+    "id": 9158,
+    "in_review": false
+  },
+  "results": [{
+    "term": "ELES",
+    "scores": {
+      "tf": 13,
+      "df": 117,
+      "tf-idf": 0.1111111111111111
+    }
+  }, {
+    "term": "fitofarmacevtski",
+    "scores": {
+      "tf": 14,
+      "df": 138,
+      "tf-idf": 0.10144927536231885
+    }
+  }, {
+    "term": "obvoznica",
+    "scores": {
+      "tf": 13,
+      "df": 198,
+      "tf-idf": 0.06565656565656566
+    }
+  }, {
+    "term": "Zasavje",
+    "scores": {
+      "tf": 15,
+      "df": 249,
+      "tf-idf": 0.060240963855421686
+    }
+  }, {
+    "term": "termoelektrarna",
+    "scores": {
+      "tf": 16,
+      "df": 276,
+      "tf-idf": 0.057971014492753624
+    }
+  }, {
+    "term": "medicina",
+    "scores": {
+      "tf": 19,
+      "df": 523,
+      "tf-idf": 0.036328871892925434
+    }
+  }, {
+    "term": "cona",
+    "scores": {
+      "tf": 13,
+      "df": 373,
+      "tf-idf": 0.03485254691689008
+    }
+  }, {
+    "term": "ZPIZ",
+    "scores": {
+      "tf": 15,
+      "df": 462,
+      "tf-idf": 0.032467532467532464
+    }
+  }, {
+    "term": "DARS",
+    "scores": {
+      "tf": 18,
+      "df": 581,
+      "tf-idf": 0.03098106712564544
+    }
+  }, {
+    "term": "TE\u0160",
+    "scores": {
+      "tf": 18,
+      "df": 603,
+      "tf-idf": 0.029850746268656716
+    }
+  }, {
+    "term": "Slovenj Gradec",
+    "scores": {
+      "tf": 12,
+      "df": 411,
+      "tf-idf": 0.029197080291970802
+    }
+  }, {
+    "term": "energetski",
+    "scores": {
+      "tf": 38,
+      "df": 1346,
+      "tf-idf": 0.02823179791976226
+    }
+  }, {
+    "term": "odsek",
+    "scores": {
+      "tf": 14,
+      "df": 506,
+      "tf-idf": 0.02766798418972332
+    }
+  }, {
+    "term": "SDH",
+    "scores": {
+      "tf": 47,
+      "df": 1776,
+      "tf-idf": 0.026463963963963964
+    }
+  }, {
+    "term": "zdravnik",
+    "scores": {
+      "tf": 43,
+      "df": 1880,
+      "tf-idf": 0.0228723404255
+    }
+  }, {
+    "term": "varianta",
+    "scores": {
+      "tf": 21,
+      "df": 1128,
+      "tf-idf": 0.018617021276595744
+    }
+  }, {
+    "term": "urgenten",
+    "scores": {
+      "tf": 13,
+      "df": 722,
+      "tf-idf": 0.018005540166204988
+    }
+  }, {
+    "term": "energija",
+    "scores": {
+      "tf": 34,
+      "df": 1895,
+      "tf-idf": 0.017941952506596307
+    }
+  }, {
+    "term": "prednosten",
+    "scores": {
+      "tf": 21,
+      "df": 1301,
+      "tf-idf": 0.01614142966948501
+    }
+  }, {
+    "term": "zdravstven",
+    "scores": {
+      "tf": 65,
+      "df": 4107,
+      "tf-idf": 0.01582663744825907
+    }
+  }]
 }

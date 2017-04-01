@@ -1,40 +1,44 @@
-@import "parlassets/scss/breakpoints";
+@import 'parlassets/scss/breakpoints';
 
-.poslanec_title {
-    line-height: 30px;
-    height: 30px;
-    padding-right: 10px;
-}
-
-.term, .frequency {
-    display: block;
-    float: left;
-    height: 30px;
-}
-.term span, .frequency div span {
-    line-height: 30px;
-}
-.progress-bar, .progress_number {
-    float: left;
+.nospeeches {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
 }
 
-.tfidf-bar {
-    height: 30px;
-    margin-bottom: 19px;
-}
-.progress-bar {
-    border-bottom-width: 0;
-}
+.word-list {
+  margin: 0;
+  &:last-child { margin-bottom: 15px; }
+  @include respond-to(desktop) {
+    margin-bottom: 0;
+    &:first-child { margin-right: 16px; }
+    flex: 1;
+  }
 
-.halfer-container {
-    overflow: hidden;
-}
-
-.halfer {
-    width: 100%;
-    float: left;
-    @include respond-to(desktop) {
-        width: 50%;
-        padding-right: 5px;
+  .labeled-chart {
+    padding: 0;
+    line-height: 1.3em;
+    .column {
+      &.chart-label {
+        flex: 1;
+        .label-container {
+          align-items: center;
+          display: flex;
+          height: 48px;
+        }
+      }
+      &.chart {
+        flex: 4;
+        .progress {
+          padding: 9px 0;
+          height: 48px;
+        }
+      }
     }
+  }
+}
+
+@include respond-to(desktop) {
+  .columns { display: flex; }
 }
