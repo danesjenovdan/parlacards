@@ -14,7 +14,8 @@
 
 $blue: #009cdd;
 $light-gray: #f0f0f0;
-$light-blue: #e1f6ff;
+$lightest-blue: #e9eff2;
+$light-blue: #b4e9ff;
 $medium-gray: #d0d0d0;
 
 %text-styling {
@@ -209,7 +210,7 @@ $medium-gray: #d0d0d0;
       @include respond-to(desktop) { height: auto; }
       .person { padding-bottom: 0; }
     }
-    &:target { background: $light-blue; }
+    &:target { background: $lightest-blue; }
   }
 
   @include respond-to(desktop) {
