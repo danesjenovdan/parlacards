@@ -1,0 +1,259 @@
+<!-- TODO premakni knjižico v parlassets -->
+<!DOCTYPE html> <!-- removeme -->
+<html> <!-- removeme -->
+
+<head> <!-- removeme -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- removeme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> <!-- removeme -->
+
+    <!-- build:remove -->
+    <!-- these script files are removed on build -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/typeahead.bundle.min.js"></script>
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/script.js"></script>
+    <!-- endbuild -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-remove="false" data-concat="false"> <!-- removeme -->
+    <link rel="stylesheet" href="https://cdn.parlameter.si/v1/parlassets/scss/style.css" data-remove="false" data-concat="false"> <!-- removeme -->
+
+    <!-- your css file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <link data-inline="true" rel="stylesheet" href="css/style.css">
+
+    <script>
+        var kompas_data = <%- JSON.stringify(data.data); %>;
+        var urlsData = <%- JSON.stringify(urlsData); %>;
+    </script>
+
+</head> <!-- removeme -->
+
+<body> <!-- removeme -->
+
+    <%
+
+        function getParties(data) {
+            var parties = [];
+
+            for (person_i in data) {
+                if (parties.indexOf(data[person_i].person.party.acronym) === -1) {
+                    parties.push(data[person_i].person.party.acronym);
+                }
+            }
+
+            return parties;
+        }
+
+        var parties = getParties(data.data);
+
+        function getPartyObjects(data) {
+
+            var parties = [];
+
+            for (person_i in data) {
+                if (parties.indexOf(data[person_i].person.party) === -1) {
+                    if (data[person_i].person.party.acronym.indexOf('NeP') === -1) {
+                        parties.push(data[person_i].person.party);
+                    }
+                }
+            }
+
+            return parties;
+        }
+
+    %>
+
+    <script>
+        var parties_data = <%- JSON.stringify(getPartyObjects(data.data)); %>;
+        var kompasState = <%- JSON.stringify(state || {}) %>;
+    </script> <!-- TODO this is a dirty hack -->
+
+    <!-- IE stuff -->
+    <script>
+        var isMSIE = false;
+        if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv 11/)) || ($.browser && $.browser.msie == 1)) {
+            isMSIE = true;
+        }
+    </script>
+
+    <!-- everything above here is part of the page and not part of the card -->
+    <div class="card-container <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
+        <div class="card-header">
+            <div class="card-header-border"></div>
+            <h1>Parlamentarni kompas</h1>
+            <!-- this text is the only thing you touch in .card-header -->
+        </div>
+        <div class="card-content">
+            <div class="card-content-front">
+                <div class="row">
+                    <div class="col-md-12 kompas-flex-container">
+                        <div class="hidden-xs kompas-search-container">
+                            <div class="kompas-search">
+                                <%
+                                    var searchpeople = [];
+
+                                    var kompas_data = data;
+
+                                    for (person_i in kompas_data.data) {
+                                        searchpeople.push(kompas_data.data[person_i]['person']);
+                                    }
+                                %>
+                                <script>var searchpeople = <%- JSON.stringify(searchpeople) %>;</script>
+                                <input type="text" class="kompas-search-input" id="the-kompas-search-input" />
+                                <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" class="search-icon">
+
+                                <g>
+                                    <title>background</title>
+                                    <rect fill="none" id="canvas_background" height="102" width="102" y="-1" x="-1"/>
+                                </g>
+                                <g>
+                                    <title>Layer 1</title>
+                                    <path class="svg_1" d="m101,93.254997l-31.361,-31.361996c4.902,-6.543003 7.556999,-14.458 7.556999,-22.780003c0,-10.179998 -3.965996,-19.747999 -11.163002,-26.945999c-7.195995,-7.199 -16.763996,-11.162 -26.945995,-11.162c-10.179001,0 -19.748001,3.963 -26.945002,11.162c-14.856,14.856001 -14.856,39.032001 -0.002,53.889999c7.197999,7.198997 16.766999,11.163002 26.945998,11.163002c8.338001,0 16.264,-2.663002 22.815002,-7.581001l31.356003,31.356003l7.742996,-7.740005zm-61.915001,-25.962997c-7.525999,0 -14.603998,-2.931 -19.926998,-8.251999c-5.323001,-5.323002 -8.254001,-12.401001 -8.254001,-19.929001c0,-7.528 2.932,-14.604 8.255,-19.927c5.323,-5.321 12.400999,-8.252 19.926998,-8.252c7.529003,0 14.606003,2.931 19.926003,8.252999c10.987999,10.987001 10.987999,28.866999 0,39.855001c-5.322002,5.320999 -12.396999,8.251999 -19.927002,8.251999z" fill="#505050"/>
+                                </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="kompas-parties-container">
+                                <% var parties = parties.sort(); %>
+                                <% for (party_i in parties) {
+                                    var selected = false;
+                                    if (state.parties) {
+                                        if (state.parties.length > 0) {
+                                            for (state_party_i in state.parties) {
+                                                if (state.parties[state_party_i].acronym === parties[party_i]) {
+                                                    selected = true;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    if (parties[party_i].toLowerCase().indexOf('nep') === -1) { %>
+                                    <div data-acronym="<%= parties[party_i].replace(/ /g, '_') %>" class="<% if (selected) { %>turnedon <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-background<% } %> party-button noselect <%= parties[party_i].replace(/ /g, '_').toLowerCase() %> <%= parties[party_i].replace(/ /g, '_').toLowerCase() %>-hover" id="partyswitch-<%= parties[party_i].replace(/ /g, '_') %>"><%= parties[party_i].replace(/ /g, '\xa0') %></div>
+                                    <%  }
+                                } %>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 hidden-xs kompas-people-container">
+                        <div class="kompas-people">
+                            <div class="kompas-people-wide">
+                                <% for (person_i in data.data) {
+                                    var selected = false;
+                                    if (state.people) {
+                                        if (state.people.length > 0) {
+                                            for (state_person_i in state.people) {
+                                                if (state.people[state_person_i].id === data.data[person_i].person.id) {
+                                                    selected = true;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    %>
+                                    <div class="kompas-person <% if (!selected) { %>hidden<% } %> noselect" id="kompas-personcard<%= data.data[person_i]['person']['id'] %>" data-id="<%= data.data[person_i]['person']['id'] %>" data-acronym="<%= data.data[person_i]['person']['party']['acronym'] %>">
+
+                                        <div class="kompas-person-party <%= data.data[person_i]['person']['party']['acronym'].replace(/ /g, '_').toLowerCase() %>-background">
+                                            <%= data.data[person_i]['person']['party']['acronym'] %>
+                                        </div>
+                                        <div class="kompas-person-internal-container">
+                                            <div class="kompas-person-image" style="background-image: url(https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.data[person_i]['person']['gov_id'] %>.png)"></div>
+                                            <div class="kompas-person-name">
+                                                <%= data.data[person_i]['person']['name'] %>
+                                            </div>
+                                        </div>
+                                        <div class="kompas-person-close">
+                                            ×
+                                        </div>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="kompas-scatter"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content-info hidden">
+                <div class="card-back-content">
+                    <p class="info-text lead">
+                        Pregled poslancev v koordinatnem sistemu glede na podobnost njihovih glasovanj. Dlje kot sta poslanca na političnem kompasu, bolj se njuna glasovalna zgodovina razlikuje.
+                    </p>
+                    <p class="info-text heading">
+                        METODOLOGIJA
+                    </p>
+                    <p class="info-text">
+                        Za vsakega/-o poslanca/-ko posebej prikličemo zgodovino glasovanj (ali neprisotnosti). Zgodovino glasovanj vsake/-ga poslanke/-ca primejamo z zgodovino glasovanj vseh drugih poslancev in preštejemo, kolikokrat sta poslanca glasovala enako. Rezultate postavimo v dvodimenzionalno matriko (vrstice in stolpci so poslanci, vrednost na Xi,j predstavlja, kolikokrat sta dva poslanca glasovala enako (poslanca sta i in j). Nato matriko razbijemo na lastne vrednosti.
+                    </p>
+                    <p class="info-text">
+                        Algoritem vrne tri matrike - u, s in V-transpose. O V-transpose matriki lahko razmišljamo kot o novem naboru koordinat poslancev. Iz V-transpose vzamemo tisti dve vrstici, ki pojasnjujeta največji del prejšnje matrike in ju vizualiziramo v dvodimenzionalnem koordinatnem sistemu.
+                    </p>
+                    <p class="info-text">
+                        O prvi matriki lahko razmišljamo kot o poslancih, ki se nahajajo v N-dimenzionalnem prostoru (N je število glasovanj, ki jih primerjamo med sabo, oz. najdaljša zgodovina glasovanj enega poslanca/-ke). Algoritem ustvari preslikavo iz N dimenzij na 2, pri katerih skuša čim bolj ohraniti razdalje med poslanci. Dlje kot sta poslanca na političnem kompasu, bolj se njuna glasovalna zgodovina razlikuje.
+                    </p>
+                </div>
+            </div>
+            <div class="card-content-embed hidden">
+                <div class="card-back-content">
+                    <div class="embed-content">
+                        <div class="embed-divider"></div>
+                        <div class="embed-switch-container">
+                            <div class="embed-label">Podatki naj se vedno osvežujejo</div>
+                            <div class="embed-switch-big-box">
+                                <div class="embed-switch-box">
+                                    <div class="embed-switch">
+                                        <div class="embed-switches">
+                                            <div class="leftswitch">
+                                                DA
+                                            </div>
+                                            <div class="rightswitch">
+                                                NE
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="embed-switch-ball"></div>
+                            </div>
+                        </div>
+                        <div class="embed-divider"></div>
+                        <div class="embed-script">
+                            <textarea class="form-control" data-id="" data-url="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/"><script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){iFrameResize({log:true,checkOrigin:false})};script.src = 'https://cdn.parlameter.si/v1/parlassets/js/iframeResizer.min.js';d.getElementsByTagName('head')[0].appendChild(script);}(document));</script><iframe frameborder="0" width="100%" src="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?embed=true&altHeader=true&state=<%- encodeURIComponent(JSON.stringify(state)) %>"></textarea>
+                            <button class="btn-parlameter btn-full-width btn-blue btn-copy-embed">KOPIRAJ</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-content-share hidden">
+                <div class="card-back-content">
+                    <div class="share-content">
+                        <label for="share-url">Neposredna povezava do kartice</label>
+                        <input type="url" class="form-control share-url" id="share-url" value="https://glej.parlameter.si/<%= cardData.group %>/<%= cardData.method %>/?frame=true&altHeader=true&state=<%- encodeURIComponent(JSON.stringify(state)) %>"/>
+                        <button class="btn-parlameter btn-full-width btn-blue">KOPIRAJ</button>
+                    </div>
+                </div>
+            </div>
+            <!-- delete this placeholder, this is the content of your card -->
+        </div>
+        <div class="card-footer">
+                <div class="card-logo hidden">
+                     <a href="<%= urlsData.base %>">
+                         <img src="https://cdn.parlameter.si/v1/parlassets/img/logo-parlameter.svg" alt="parlameter logo">
+                     </a>
+                 </div>
+
+            <div class="card-circle-button card-share" data-back="share"></div>
+            <div class="card-circle-button card-embed" data-back="embed"></div>
+            <div class="card-circle-button card-info" data-back="info">i</div>
+        </div>
+    </div>
+    <!-- everything below here is part of the page and not part of the card -->
+
+    <!-- your js file is compiled to this and later inlined (must begin with data-inline="true" )-->
+    <!-- inline temp/js/script.js as <script> -->
+    <script src="https://cdn.parlameter.si/v1/parlassets/js/kompas-movie.js"></script>
+    <script data-inline="true" src="js/script.js"></script>
+
+</body> <!-- removeme -->
+
+</html> <!-- removeme -->

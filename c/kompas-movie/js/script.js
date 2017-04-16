@@ -1,7 +1,14 @@
+
+
 if (Object.keys(kompasState).length === 0) {
     kompasState['people'] = [];
     kompasState['parties'] = [];
 }
+
+var playStep;
+var playMovie;
+var playing = false;
+var keep_playing = true;
 
 (function() {
 if (!isMSIE) {
@@ -233,6 +240,21 @@ if (!isMSIE) {
         .on('click', function() {
             centerCompass();
         });
+    
+    
+    svg.append('svg')
+        .classed('playcontrol', true)
+        .attr('width', 20)
+        .attr('height', 20)
+        .attr('x', width - 60)
+        .attr('y', height - 30)
+        .attr('viewBox', '0 0 512 512')
+        .html('<g class="playme"><path fill="#5388AA" d="M152.443 136.417l207.114 119.573-207.114 119.593z" fill="#000000" /></g>')
+        .select('.playme')
+        .on('click', function() {
+            playMovie(moviedata);
+        });
+
 
     // tooltip start
 
@@ -328,6 +350,11 @@ if (!isMSIE) {
 
     function transform(d) {
         return "translate(" + x(d[xCat]) + "," + y(d[yCat]) + ")";
+    }
+
+    function stepTransform(d) {
+        console.log("translate(" + x(d.vT1) + "," + y(d.vT2) + ")");
+        return "translate(" + x(d.vT1) + "," + y(d.vT2) + ")";
     }
 
     function overGroup() {};
@@ -783,21 +810,63 @@ if (!isMSIE) {
     }
 
     function updateShareURL() {
-        $('.card-kompas .share-url').val('https://glej.parlameter.si/c/kompas/?frame=true&altHeader=true&state=' + encodeURIComponent(JSON.stringify(kompasState)));
-        $('.card-kompas .card-footer').data('shortened', 'false');
+        $('.card-kompas-movie .share-url').val('https://glej.parlameter.si/c/animirani-kompas/?frame=true&altHeader=true&state=' + encodeURIComponent(JSON.stringify(kompasState)));
+        $('.card-kompas-movie .card-footer').data('shortened', 'false');
         updateEmbedURL();
     }
     function updateEmbedURL() {
-        var $textarea = $('.card-kompas .embed-script textarea');
+        var $textarea = $('.card-kompas-movie .embed-script textarea');
         var embedbase = $textarea.val().split('100%" src="')[0] + '100%" src="';
-        var embedextra = 'https://glej.parlameter.si/c/kompas/?embed=true&altHeader=true&state=' + encodeURIComponent(JSON.stringify(kompasState)) + '">';
+        var embedextra = 'https://glej.parlameter.si/c/animirani-kompas/?embed=true&altHeader=true&state=' + encodeURIComponent(JSON.stringify(kompasState)) + '">';
         var embedcode = embedbase + embedextra;
-        $('.card-kompas .embed-script textarea').val(embedcode);
+        $('.card-kompas-movie .embed-script textarea').val(embedcode);
     }
 
     centerCompass();
+
+    function stepTransform(d) {
+        return "translate(" + x(d.vT1) + "," + y(d.vT2) + ")";
+    }
+
+    playStep = function (state_i, states) {
+        if (keep_playing) {
+            var newstate = states[state_i].people;
+            for (var person_i in newstate) {
+                svg.select('#_' + newstate[person_i].id)
+                    .attr("transform", stepTransform(newstate[person_i]));
+            }
+            if (state_i < states.length - 1) {
+                state_i = state_i + 1;
+                window.setTimeout(function() {
+                    playStep(state_i, states);
+                }, 100);
+            } else {
+                playing = false;
+                $('.playcontrol .stopme').html('<g class="playme"><path fill="#5388AA" d="M152.443 136.417l207.114 119.573-207.114 119.593z" fill="#000000" /></g>');
+                $('.stopme').attr('class', 'playme');
+            }
+        } else {
+            playing = false;
+            keep_playing = true;
+        }
+    }
+
+    playMovie = function (states) {
+
+        if (!playing) {
+            $('.playcontrol .playme').html('<rect x="123" y="143" width="256" height="256" />');
+            $('.playme').attr('class', 'stopme');
+            playing = true;
+            var state_i = 0;
+            playStep(state_i, states);
+        } else {
+            $('.playcontrol .stopme').html('<g class="playme"><path fill="#5388AA" d="M152.443 136.417l207.114 119.573-207.114 119.593z" fill="#000000" /></g>');
+            $('.stopme').attr('class', 'playme');
+            keep_playing = false;
+        }
+    }
 } else {
-    $('.card-kompas .card-content-front').html('<div class="no-results" style="width: 300px; margin-top: -20px;">Tvoj brskalnik žal ne podpira tehnologij, ki poganjajo to kartico.</div>')
+    $('.card-kompas-movie .card-content-front').html('<div class="no-results" style="width: 300px; margin-top: -20px;">Tvoj brskalnik žal ne podpira tehnologij, ki poganjajo to kartico.</div>')
 }
 
 makeEmbedSwitch();

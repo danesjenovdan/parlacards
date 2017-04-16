@@ -1,513 +1,1623 @@
 {
-  "created_at": "9. 1. 2017",
-  "created_for": "5. 1. 2017",
   "person": {
-    "district": [12],
-    "gender": "m",
-    "gov_id": "P187",
-    "has_function": false,
-    "id": 53,
-    "is_active": false,
-    "name": "Tomaž Lisec",
+    "is_active": true,
+    "district": [62],
+    "name": "Alenka Bratu\u0161ek",
+    "gov_id": "P166",
+    "gender": "f",
     "party": {
-      "acronym": "SDS",
-      "id": 5,
+      "acronym": "PS NP",
       "is_coalition": false,
-      "name": "PS Slovenska Demokratska Stranka"
+      "id": 109,
+      "name": "PS nepovezanih poslancev "
     },
-    "type": "mp"
+    "type": "mp",
+    "id": 9,
+    "has_function": false
   },
+  "created_at": "4. 4. 2017",
+  "created_for": "27. 3. 2017",
   "results": [{
-    "date": "5. 1. 2017",
+    "date": "27. 3. 2017",
     "questions": [{
-      "id": 762,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z naselitvijo beguncev",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0053545a351f4ff5db6230aa250e06165ab8707d336eb9901dba5ba647e"
-    }]
-  }, {
-    "date": "23. 12. 2016",
-    "questions": [{
-      "id": 776,
+      "recipient_orgs": [],
       "recipient_text": "ministrica za notranje zadeve",
-      "session_id": "Unknown",
+      "title": "v zvezi z slu\u017ebenimi vozili varovanih oseb",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00544f413ed1914ed75f5772c9d7991504f57611b31ed5172755422fdb3",
       "session_name": "Unknown",
-      "title": "v zvezi s sektorskim merjenjem hitrosti na štajerski avtocesti na Trojanah",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b7d446f706af4cfc174120a7aa0371a031936a7335fb835b297417ce"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Vesna Gy\u00f6rk\u00f6s \u017dnidar",
+        "gov_id": "G1302",
+        "ministry": {
+          "acronym": "MNZ",
+          "is_coalition": true,
+          "id": 135,
+          "name": "Ministrstvo za notranje zadeve"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1302,
+        "has_function": false
+      }],
+      "id": 10230,
+      "session_id": "Unknown"
     }]
   }, {
-    "date": "20. 12. 2016",
+    "date": "10. 3. 2017",
     "questions": [{
-      "id": 784,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z odkupom parcel",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005577bd31ed8e3b5cfc116202d1b36dd8a8ee1d3045739391d23dc401a"
-    }]
-  }, {
-    "date": "15. 12. 2016",
-    "questions": [{
-      "id": 798,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z reševanjem problematike podlubnikov",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00589d08e627feef351090f7c84024a92189291e424345dac625e2df0e7"
-    }, {
-      "id": 799,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano MiJU - minister za javno upravo",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s kupovanjem kmetijskih zemljišč v obmejnih predelih s strani tujcev",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00588d48b96d98a53e64ff8af06d37d33f285eae06cd7d64b4f76b23ba4"
-    }]
-  }, {
-    "date": "15. 12. 2016",
-    "questions": [{
-      "id": 798,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z reševanjem problematike podlubnikov",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00589d08e627feef351090f7c84024a92189291e424345dac625e2df0e7"
-    }, {
-      "id": 799,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano MiJU - minister za javno upravo",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s kupovanjem kmetijskih zemljišč v obmejnih predelih s strani tujcev",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00588d48b96d98a53e64ff8af06d37d33f285eae06cd7d64b4f76b23ba4"
-    }, {
-      "id": 801,
-      "recipient_text": "ministrica za izobraževanje znanost in šport",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s problematiko športne infrastrukture",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005f5015e8444a4f12807cbfab0de7caa356d510b35d79c7498886feaa0"
-    }]
-  }, {
-    "date": "6. 12. 2016",
-    "questions": [{
-      "id": 860,
-      "recipient_text": "ministrica za izobraževanje znanost in šport",
-      "session_id": 7546,
-      "session_name": "39. izredna seja",
-      "title": "v zvezi s spremembo določila v Pravilniku o šolskem koledarju za osnovne šole, ki velja za učence, ki se šolajo na domu",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005d5c827dbeca93b5cf1d28b3627ad778276270966357391e62eec3a47"
-    }, {
-      "id": 859,
-      "recipient_text": "ministrica za izobraževanje znanost in šport",
-      "session_id": 7546,
-      "session_name": "39. izredna seja",
-      "title": "v zvezi s pripravo zakonodaje s področja visokega šolstva in raziskovalne dejavnosti",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b52282116dc07c9677390f545ac3716356a0216fae9120590fd8a8ab"
-    }]
-  }, {
-    "date": "1. 12. 2016",
-    "questions": [{
-      "id": 871,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z delovanjem podjetja Slovenski državni gozdovi d.o.o.",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00572540075ada3c1fb34c54c339a3b78fc704fbcfc127609835da5dd21"
-    }]
-  }, {
-    "date": "1. 12. 2016",
-    "questions": [{
-      "id": 871,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z delovanjem podjetja Slovenski državni gozdovi d.o.o.",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00572540075ada3c1fb34c54c339a3b78fc704fbcfc127609835da5dd21"
-    }, {
-      "id": 874,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z izračunom katastrskega dohodka pri proizvodnji belih špargljev",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00575bea83c8aba0d8021e3e70172d0da1d290d209929e63dcb86739184"
-    }]
-  }, {
-    "date": "30. 11. 2016",
-    "questions": [{
-      "id": 874,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z izračunom katastrskega dohodka pri proizvodnji belih špargljev",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00575bea83c8aba0d8021e3e70172d0da1d290d209929e63dcb86739184"
-    }, {
-      "id": 882,
-      "recipient_text": "ministrica za izobraževanje znanost in šport",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s pripravništvi na področju šolstva",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0058c46e92d2cd387853fecef9d423feaa057e064a4a05aaf9faf35aefa"
-    }, {
-      "id": 883,
-      "recipient_text": "minister za javno upravo",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z napredovanji v naziv v javnem sektorju",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0058e09fc6ee085a1479cb017e9908de6043362de7e53b72b1098d358b0"
-    }]
-  }, {
-    "date": "29. 11. 2016",
-    "questions": [{
-      "id": 882,
-      "recipient_text": "ministrica za izobraževanje znanost in šport",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s pripravništvi na področju šolstva",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0058c46e92d2cd387853fecef9d423feaa057e064a4a05aaf9faf35aefa"
-    }, {
-      "id": 883,
-      "recipient_text": "minister za javno upravo",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z napredovanji v naziv v javnem sektorju",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0058e09fc6ee085a1479cb017e9908de6043362de7e53b72b1098d358b0"
-    }, {
-      "id": 892,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s podjetjem Slovenski državni gozdovi",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00515aa2d82dc02c6378f6aa21c7db7bc3cc1d675f3be2303faa40b6764"
-    }, {
-      "id": 893,
-      "recipient_text": "ministrica za delo družino socialne zadeve in enake možnosti",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z določbami za dodelitev štipendije",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00514dd300896ee6d356eea56e8358eb7dee4a92e60f1e2168479af262a"
-    }, {
-      "id": 894,
+      "recipient_orgs": [],
       "recipient_text": "minister za infrastrukturo",
-      "session_id": "Unknown",
+      "title": "v zvezi s financiranjem obnove obstoje\u010de \u017eelezni\u0161ke proge med Koprom in Diva\u010do",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b46f775450a1f81d3eceed487c8101649f32b173d62eb18e2061b389",
       "session_name": "Unknown",
-      "title": "v zvezi z vzdrževanjem cest in železnic",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005166eec46cd1dc757675dd2578042c471dcaedf884928fa4ce7f73067"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Peter Ga\u0161per\u0161i\u010d",
+        "gov_id": "G1305",
+        "ministry": {
+          "acronym": "MZIP",
+          "is_coalition": true,
+          "id": 130,
+          "name": "Ministrstvo za infrastrukturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1305,
+        "has_function": false
+      }],
+      "id": 10112,
+      "session_id": "Unknown"
     }, {
-      "id": 895,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "minister za infrastrukturo",
+      "title": "v zvezi s cesto \u010dez prelaz Vr\u0161i\u010d",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b593a684e9707d5e76d1b3be2a62152f7c399f4826ab9f862d0236c8",
       "session_name": "Unknown",
-      "title": "v zvezi s konkurenčnostjo države",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005170b3e377ccdc6ad9fae778ff3f0eef0e33a5d8da09312d4c8ba3cc4"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Peter Ga\u0161per\u0161i\u010d",
+        "gov_id": "G1305",
+        "ministry": {
+          "acronym": "MZIP",
+          "is_coalition": true,
+          "id": 130,
+          "name": "Ministrstvo za infrastrukturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1305,
+        "has_function": false
+      }],
+      "id": 10113,
+      "session_id": "Unknown"
+    }, {
+      "recipient_orgs": [],
+      "recipient_text": "minister za gospodarski razvoj in tehnologijo",
+      "title": "v zvezi s turizmom",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b8d06c75eb6aa0c40eec7ba51f85488eeefb3ff5abe8de400905abbf",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Zdravko Po\u010dival\u0161ek",
+        "gov_id": "G1309",
+        "ministry": {
+          "acronym": "MGRT",
+          "is_coalition": true,
+          "id": 129,
+          "name": "Ministrstvo za gospodarski razvoj in tehnologijo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1309,
+        "has_function": false
+      }],
+      "id": 10114,
+      "session_id": "Unknown"
     }]
   }, {
-    "date": "25. 11. 2016",
+    "date": "3. 3. 2017",
     "questions": [{
-      "id": 899,
-      "recipient_text": "minister za javno upravo",
-      "session_id": 7523,
-      "session_name": "37. izredna seja",
-      "title": "v zvezi s pasivno volilno zakonodajo",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a29c88241ce73451abfd6e754583447c9e23005ffeb33c78c7895bae"
+      "recipient_orgs": [],
+      "recipient_text": "minister za infrastrukturo",
+      "title": "v zvezi z elektronskim cestninjenjem",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b59f7da0bc2e48d7d451b3cbb68f0b2228db6a5c574fca19cfee7532",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Peter Ga\u0161per\u0161i\u010d",
+        "gov_id": "G1305",
+        "ministry": {
+          "acronym": "MZIP",
+          "is_coalition": true,
+          "id": 130,
+          "name": "Ministrstvo za infrastrukturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1305,
+        "has_function": false
+      }],
+      "id": 10101,
+      "session_id": "Unknown"
     }, {
-      "id": 902,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": 7523,
-      "session_name": "37. izredna seja",
-      "title": "v zvezi s projekti Leader",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a1180d87909210e72433e27842744c5d2a4a0ee960d584a1650e5038"
+      "recipient_orgs": [],
+      "recipient_text": "minister za infrastrukturo",
+      "title": "v zvezi z odstranjevanjem cestninskih postaj z avtocest",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b8dc35f14e9e863b650c4651716e2f06e6b181bcd566242810a679c2",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Peter Ga\u0161per\u0161i\u010d",
+        "gov_id": "G1305",
+        "ministry": {
+          "acronym": "MZIP",
+          "is_coalition": true,
+          "id": 130,
+          "name": "Ministrstvo za infrastrukturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1305,
+        "has_function": false
+      }],
+      "id": 10102,
+      "session_id": "Unknown"
     }, {
-      "id": 903,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": 7523,
-      "session_name": "37. izredna seja",
-      "title": "v zvezi z mladimi prevzemniki kmetij",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005d5c47b00d0d35d204cdfbe6f83fc148c52067f7c16446f0186f29b55"
+      "recipient_orgs": [],
+      "recipient_text": "minister za infrastrukturo, ministrica za okolje in prostor",
+      "title": "v zvezi z izgradnjo ceste Hajdina\u2013Ormo\u017e in umestitev v prostor odseka te ceste na relaciji Ptuj\u2013Markovci",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b9d11c728469e02d3838d8acccf0a9a48fab740a45f68a9f21f51437",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Peter Ga\u0161per\u0161i\u010d",
+        "gov_id": "G1305",
+        "ministry": {
+          "acronym": "MZIP",
+          "is_coalition": true,
+          "id": 130,
+          "name": "Ministrstvo za infrastrukturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1305,
+        "has_function": false
+      }, {
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Irena Majcen",
+        "gov_id": "G1358",
+        "ministry": {
+          "acronym": "MOP",
+          "is_coalition": true,
+          "id": 137,
+          "name": "Ministrstvo za okolje in prostor"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1358,
+        "has_function": false
+      }],
+      "id": 10103,
+      "session_id": "Unknown"
     }]
   }, {
-    "date": "25. 11. 2016",
+    "date": "10. 2. 2017",
     "questions": [{
-      "id": 899,
-      "recipient_text": "minister za javno upravo",
-      "session_id": 7523,
-      "session_name": "37. izredna seja",
-      "title": "v zvezi s pasivno volilno zakonodajo",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a29c88241ce73451abfd6e754583447c9e23005ffeb33c78c7895bae"
-    }, {
-      "id": 902,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": 7523,
-      "session_name": "37. izredna seja",
-      "title": "v zvezi s projekti Leader",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a1180d87909210e72433e27842744c5d2a4a0ee960d584a1650e5038"
-    }, {
-      "id": 903,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": 7523,
-      "session_name": "37. izredna seja",
-      "title": "v zvezi z mladimi prevzemniki kmetij",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005d5c47b00d0d35d204cdfbe6f83fc148c52067f7c16446f0186f29b55"
-    }, {
-      "id": 904,
-      "recipient_text": "minister za javno upravo MiIZŠ - ministrica za izobraževanje znanost in šport",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade",
+      "title": "v zvezi s prodajo Nove Ljubljanske banke, d.d.",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00594a9960a6ab110932fffdffdce15be8586139d14b85ac0de5b55ecc0",
       "session_name": "Unknown",
-      "title": "v zvezi z dvigom plač vzgojiteljic – pomočnic",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0052dfefce3c72357287c0df41020c5a6cf0ec019a1cb5b1790a2407601"
-    }, {
-      "id": 905,
-      "recipient_text": "ministrica za zdravje",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s korupcijo v zdravstvu",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a74bcfe13c4f3ed4f58c88fa76697541f17d946f36204cfb43c2d560"
-    }, {
-      "id": 906,
-      "recipient_text": "ministrica za okolje in prostor",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z izgradnjo HE Mokrice",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0052b5f43d6e0a762a50b05b034488f06dd3fa4812d9b3153c60d6cc2ef"
-    }, {
-      "id": 907,
-      "recipient_text": "ministrica za finance MiGT - minister za gospodarski razvoj in tehnologijo MiDDSZEM - ministrica za delo družino socialne zadeve in enake možnosti",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s plačnim sistemom",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00525703a98a7ba20617a80726d8374a5bd1550dc0276579f981a0bae6a"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 10013,
+      "session_id": "Unknown"
     }]
   }, {
-    "date": "22. 11. 2016",
+    "date": "9. 2. 2017",
     "questions": [{
-      "id": 917,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade",
+      "title": "v zvezi s TE\u0160 6",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0052a5f4d49c15b297389c2a3737e2427d263e4b2bf15032fe2cb208515",
       "session_name": "Unknown",
-      "title": "v zvezi s sledljivostjo lesa iz podjetja Slovenski državni gozdovi d.o.o.",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00579e2850f0ed2c7d5bacbbde89d29fb77202d516ffa8025c2b9ab6872"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 9981,
+      "session_id": "Unknown"
+    }, {
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade",
+      "title": "v zvezi s prodajo Nove Ljubljanske banke, d.d.",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00594a9960a6ab110932fffdffdce15be8586139d14b85ac0de5b55ecc0",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 10013,
+      "session_id": "Unknown"
     }]
   }, {
-    "date": "16. 11. 2016",
+    "date": "13. 1. 2017",
     "questions": [{
-      "id": 933,
-      "recipient_text": "ministrica za delo družino socialne zadeve in enake možnosti",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "minister za pravosodje",
+      "title": "v zvezi z vra\u010danjem ozemlja po denacionalizacijskih postopkih Rimskokatoli\u0161ki cerkvi",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0054fc88c902c32cd09f38c33e39d734f1db0b0dff40ed8ab3a3d98d5a1",
       "session_name": "Unknown",
-      "title": "v zvezi s hibridnimi zaposlitvami",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e3933f694b34ed3b3419818bdafdd4d96cb121b558f137c4cb7bf0fa"
-    }, {
-      "id": 934,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano MiDDSZEM - ministrica za delo družino socialne zadeve in enake možnosti",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s pravilnikom o varstvu pri delu v gozdarstvu",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00582402ce0eb2e83c3021f8008a0854b987e7d2511e53173942a51e0f5"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Goran Klemen\u010di\u010d",
+        "gov_id": "G1303",
+        "ministry": {
+          "acronym": "MP",
+          "is_coalition": true,
+          "id": 138,
+          "name": "Ministrstvo za pravosodje"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1303,
+        "has_function": false
+      }],
+      "id": 9864,
+      "session_id": "Unknown"
     }]
   }, {
-    "date": "16. 11. 2016",
+    "date": "12. 1. 2017",
     "questions": [{
-      "id": 933,
-      "recipient_text": "ministrica za delo družino socialne zadeve in enake možnosti",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "minister za infrastrukturo, ministrica za okolje in prostor",
+      "title": "v zvezi z delom Eko sklada",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00582af1f65539586934a4dbf5281bdcb157cf7f820b3d5cd1c6658829c",
       "session_name": "Unknown",
-      "title": "v zvezi s hibridnimi zaposlitvami",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e3933f694b34ed3b3419818bdafdd4d96cb121b558f137c4cb7bf0fa"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Peter Ga\u0161per\u0161i\u010d",
+        "gov_id": "G1305",
+        "ministry": {
+          "acronym": "MZIP",
+          "is_coalition": true,
+          "id": 130,
+          "name": "Ministrstvo za infrastrukturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1305,
+        "has_function": false
+      }, {
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Irena Majcen",
+        "gov_id": "G1358",
+        "ministry": {
+          "acronym": "MOP",
+          "is_coalition": true,
+          "id": 137,
+          "name": "Ministrstvo za okolje in prostor"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1358,
+        "has_function": false
+      }],
+      "id": 9858,
+      "session_id": "Unknown"
     }, {
-      "id": 934,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano MiDDSZEM - ministrica za delo družino socialne zadeve in enake možnosti",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "minister za infrastrukturo",
+      "title": "v zvezi z ureditvijo regionalne ceste",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005830bbc16aa42e6401a8857ba7733aa298cf98b3bfe372141cfe9b27d",
       "session_name": "Unknown",
-      "title": "v zvezi s pravilnikom o varstvu pri delu v gozdarstvu",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00582402ce0eb2e83c3021f8008a0854b987e7d2511e53173942a51e0f5"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Peter Ga\u0161per\u0161i\u010d",
+        "gov_id": "G1305",
+        "ministry": {
+          "acronym": "MZIP",
+          "is_coalition": true,
+          "id": 130,
+          "name": "Ministrstvo za infrastrukturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1305,
+        "has_function": false
+      }],
+      "id": 9859,
+      "session_id": "Unknown"
     }, {
-      "id": 945,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "minister za zunanje zadeve",
+      "title": "v zvezi z uresni\u010devanjem temeljnih svobo\u0161\u010din EU med Republiko Slovenijo in Republiko Avstrijo",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00586a2910e07963061a213d602d3bb16c1f398439d2b3fc62a13246bea",
       "session_name": "Unknown",
-      "title": "v zvezi s pravilnikom o zakupu kmetijskih zemljišč",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0056af73b7de9acbc6d5a05bee5b9d7ff79bafb4dea8698c460169b0883"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [34],
+        "name": "Karl Viktor Erjavec",
+        "gov_id": "G20",
+        "ministry": {
+          "acronym": "MZZ",
+          "is_coalition": true,
+          "id": 140,
+          "name": "Ministrstvo za zunanje zadeve"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 20,
+        "has_function": false
+      }],
+      "id": 9860,
+      "session_id": "Unknown"
     }, {
-      "id": 946,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "minister za pravosodje",
+      "title": "v zvezi z vra\u010danjem ozemlja po denacionalizacijskih postopkih Rimskokatoli\u0161ki cerkvi",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0054fc88c902c32cd09f38c33e39d734f1db0b0dff40ed8ab3a3d98d5a1",
       "session_name": "Unknown",
-      "title": "v zvezi s položajem dolgoročnega zakupnika pri nakupu kmetijskega zemljišča",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0056f40f806186537e441f72193645af6d17cda6c7442598fee3a8e333e"
-    }]
-  }, {
-    "date": "15. 11. 2016",
-    "questions": [{
-      "id": 945,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s pravilnikom o zakupu kmetijskih zemljišč",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0056af73b7de9acbc6d5a05bee5b9d7ff79bafb4dea8698c460169b0883"
-    }, {
-      "id": 946,
-      "recipient_text": "minister za kmetijstvo gozdarstvo in prehrano",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s položajem dolgoročnega zakupnika pri nakupu kmetijskega zemljišča",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0056f40f806186537e441f72193645af6d17cda6c7442598fee3a8e333e"
-    }, {
-      "id": 989,
-      "recipient_text": "Vlada",
-      "session_id": 5572,
-      "session_name": "24. redna seja",
-      "title": "v zvezi z debirokratizacijo šolstva",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0050ecc780930f1bcf6fba7ad35d32bfcf0c8730bcaa5bdb2bdb7634865"
-    }]
-  }, {
-    "date": "11. 11. 2016",
-    "questions": [{
-      "id": 1004,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s povračilom škode na področju divjih zveri",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005338ce173fe8bef299c9385334d6152d0412015546351d0d76be4998b"
-    }, {
-      "id": 1026,
-      "recipient_text": "ministrica za okolje in prostor",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z izgradnjo hidroelektrarn na Spodnji Savi",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b72bbdede4f8f940bb2f1c10a9129942de91fd2ce92c0b2aa064c6c7"
-    }]
-  }, {
-    "date": "11. 11. 2016",
-    "questions": [{
-      "id": 1004,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s povračilom škode na področju divjih zveri",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005338ce173fe8bef299c9385334d6152d0412015546351d0d76be4998b"
-    }, {
-      "id": 1026,
-      "recipient_text": "ministrica za okolje in prostor",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z izgradnjo hidroelektrarn na Spodnji Savi",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b72bbdede4f8f940bb2f1c10a9129942de91fd2ce92c0b2aa064c6c7"
-    }, {
-      "id": 1061,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s Skladom kmetijskih zemljišč in gozdov Republike Slovenije",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0051ce0e6724cc1d3f9874b03b656aec33bb4bd502b036582b515b599c4"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Goran Klemen\u010di\u010d",
+        "gov_id": "G1303",
+        "ministry": {
+          "acronym": "MP",
+          "is_coalition": true,
+          "id": 138,
+          "name": "Ministrstvo za pravosodje"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1303,
+        "has_function": false
+      }],
+      "id": 9864,
+      "session_id": "Unknown"
     }]
   }, {
     "date": "10. 11. 2016",
     "questions": [{
-      "id": 1061,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "minister za infrastrukturo",
+      "title": "v zvezi s tretjo razvojno osjo",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0054dcce0bc282f831a10d4351a78a6b6e820d537fb1dbff8ef19b8ff2f",
       "session_name": "Unknown",
-      "title": "v zvezi s Skladom kmetijskih zemljišč in gozdov Republike Slovenije",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0051ce0e6724cc1d3f9874b03b656aec33bb4bd502b036582b515b599c4"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Peter Ga\u0161per\u0161i\u010d",
+        "gov_id": "G1305",
+        "ministry": {
+          "acronym": "MZIP",
+          "is_coalition": true,
+          "id": 130,
+          "name": "Ministrstvo za infrastrukturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1305,
+        "has_function": false
+      }],
+      "id": 9762,
+      "session_id": "Unknown"
     }, {
-      "id": 1093,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade",
+      "title": "v zvezi z denacionalizacijskimi postopki",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0054bfdd43d702239b1430c397fd9e5ea093ba51fb2312255b6c9df321a",
       "session_name": "Unknown",
-      "title": "v zvezi s poročili o primanjkljaju in dolgu sektorja države",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005659ea6f07f55caf294b472d44e6f8c9ef0b8052345495bd1a6a0ebf1"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 9771,
+      "session_id": "Unknown"
     }]
   }, {
-    "date": "9. 11. 2016",
+    "date": "29. 9. 2016",
     "questions": [{
-      "id": 1093,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "ministrica za notranje zadeve, minister za infrastrukturo",
+      "title": "v zvezi z varnostjo v cestnem prometu in pove\u010danju \u0161tevila smrtnih \u017ertev v letu 2016",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005ec06c005e46da93fef40bec56646e8c3b4ca3192c600713a0ce9f193",
       "session_name": "Unknown",
-      "title": "v zvezi s poročili o primanjkljaju in dolgu sektorja države",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005659ea6f07f55caf294b472d44e6f8c9ef0b8052345495bd1a6a0ebf1"
-    }, {
-      "id": 1127,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s posvojitvami",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0055a1c84e2471869c78b3322b7d5c67e6134825633abf10f8dd81fbabb"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Vesna Gy\u00f6rk\u00f6s \u017dnidar",
+        "gov_id": "G1302",
+        "ministry": {
+          "acronym": "MNZ",
+          "is_coalition": true,
+          "id": 135,
+          "name": "Ministrstvo za notranje zadeve"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1302,
+        "has_function": false
+      }, {
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Peter Ga\u0161per\u0161i\u010d",
+        "gov_id": "G1305",
+        "ministry": {
+          "acronym": "MZIP",
+          "is_coalition": true,
+          "id": 130,
+          "name": "Ministrstvo za infrastrukturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1305,
+        "has_function": false
+      }],
+      "id": 9648,
+      "session_id": "Unknown"
     }]
   }, {
-    "date": "8. 11. 2016",
+    "date": "23. 9. 2016",
     "questions": [{
-      "id": 1127,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s posvojitvami",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0055a1c84e2471869c78b3322b7d5c67e6134825633abf10f8dd81fbabb"
-    }, {
-      "id": 1148,
-      "recipient_text": "Vlada",
-      "session_id": 5585,
-      "session_name": "36. izredna seja",
-      "title": "v zvezi z ustanavljanjem pokrajin",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00560de2db44fd8ed81b076c8139cd900d1dc4cc4619fc438952a491c9d"
-    }]
-  }, {
-    "date": "4. 11. 2016",
-    "questions": [{
-      "id": 1188,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z maturo",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00571081c116eba05c74d29ccdc66899bf1013ea8712902ec9dc88924eb"
-    }]
-  }, {
-    "date": "4. 11. 2016",
-    "questions": [{
-      "id": 1188,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi z maturo",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00571081c116eba05c74d29ccdc66899bf1013ea8712902ec9dc88924eb"
-    }, {
-      "id": 1211,
+      "recipient_orgs": [],
       "recipient_text": "ministrica za zdravje",
-      "session_id": "Unknown",
+      "title": "v zvezi z izobra\u017eevanjem za podro\u010dje zdravstvene nege",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005898b15ed5cdbf84d7c023330b400d3458cb3f07ea501fcce7a9e3d81",
       "session_name": "Unknown",
-      "title": "v zvezi z zdravniško oskrbo",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e2f5943691035e95271bae22b042b730cab9dddca272542fb454f565"
-    }, {
-      "id": 1218,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
-      "session_name": "Unknown",
-      "title": "v zvezi s koruptivnimi in klientelističnimi delovanji funkcionarjev in državnih uradnikov",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0050ed605821a8ed70bf20c5327c9228a2e0f9eb20732a6478d2f2e443e"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Milojka Kolar Celarc",
+        "gov_id": "G1306",
+        "ministry": {
+          "acronym": "MZ",
+          "is_coalition": true,
+          "id": 139,
+          "name": "Ministrstvo za zdravje"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1306,
+        "has_function": false
+      }],
+      "id": 9634,
+      "session_id": "Unknown"
     }]
   }, {
-    "date": "3. 11. 2016",
+    "date": "5. 8. 2016",
     "questions": [{
-      "id": 1211,
+      "recipient_orgs": [],
+      "recipient_text": "minister za javno upravo",
+      "title": "v zvezi z zaposlenimi v javnem sektorju",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005f3dd3683e81fabd313fee0cd369460d2d6f2b35a71c890898d5982e9",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Boris Koprivnikar",
+        "gov_id": "G1304",
+        "ministry": {
+          "acronym": "MJU",
+          "is_coalition": true,
+          "id": 132,
+          "name": "Ministrstvo za javno upravo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1304,
+        "has_function": false
+      }],
+      "id": 9605,
+      "session_id": "Unknown"
+    }, {
+      "recipient_orgs": [],
+      "recipient_text": "ministrica brez resorja pristojna za razvoj strate\u0161ke projekte in kohezijo v funkciji ministra za finance",
+      "title": "v zvezi s samostojnimi podjetniki",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005f1a257f5fef9cd9ff2a35898385c709af7a42f129717756be56953d5",
+      "session_name": "Unknown",
+      "recipient_persons": [],
+      "id": 9606,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "2. 8. 2016",
+    "questions": [{
+      "recipient_orgs": [],
       "recipient_text": "ministrica za zdravje",
-      "session_id": "Unknown",
+      "title": "v zvezi s cepljenjem proti klopnemu meningoencefalitisu",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0059fec91b642b2e796580f3d8f09986a850be6850bf37c13ce5260841c",
       "session_name": "Unknown",
-      "title": "v zvezi z zdravniško oskrbo",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e2f5943691035e95271bae22b042b730cab9dddca272542fb454f565"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Milojka Kolar Celarc",
+        "gov_id": "G1306",
+        "ministry": {
+          "acronym": "MZ",
+          "is_coalition": true,
+          "id": 139,
+          "name": "Ministrstvo za zdravje"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1306,
+        "has_function": false
+      }],
+      "id": 9603,
+      "session_id": "Unknown"
     }, {
-      "id": 1218,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "minister za pravosodje",
+      "title": "v zvezi z izvajanjem Zakona o alternativnem re\u0161evanju sodnih sporov",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a25650d5636cd521482aaec5edff948aa14d579c535bdf26c5ed362c",
       "session_name": "Unknown",
-      "title": "v zvezi s koruptivnimi in klientelističnimi delovanji funkcionarjev in državnih uradnikov",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0050ed605821a8ed70bf20c5327c9228a2e0f9eb20732a6478d2f2e443e"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Goran Klemen\u010di\u010d",
+        "gov_id": "G1303",
+        "ministry": {
+          "acronym": "MP",
+          "is_coalition": true,
+          "id": 138,
+          "name": "Ministrstvo za pravosodje"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1303,
+        "has_function": false
+      }],
+      "id": 9604,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "29. 7. 2016",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "minister za pravosodje",
+      "title": "V zvezi z izvajanjem Zakona o alternativnem re\u0161evanju sodnih sporov",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e65af97034ff4f1d6979b7026bcef8ca6b71a3f29bfb9b40b3392b4b",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Goran Klemen\u010di\u010d",
+        "gov_id": "G1303",
+        "ministry": {
+          "acronym": "MP",
+          "is_coalition": true,
+          "id": 138,
+          "name": "Ministrstvo za pravosodje"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1303,
+        "has_function": false
+      }],
+      "id": 9602,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "26. 7. 2016",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "ministrica za zdravje",
+      "title": "v zvezi z zdravljenjem v tujini",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0057ba16db11a2ec5a1f73eef709573e46b2fbc078d0235b31458d7d51c",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Milojka Kolar Celarc",
+        "gov_id": "G1306",
+        "ministry": {
+          "acronym": "MZ",
+          "is_coalition": true,
+          "id": 139,
+          "name": "Ministrstvo za zdravje"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1306,
+        "has_function": false
+      }],
+      "id": 9601,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "8. 7. 2016",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade",
+      "title": "v zvezi z dogajanjem v Luki Koper, d.d.",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a2452a2ac283f12c92fd46d7c9c8391f097912f4ef7c4d516f296e35",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 9588,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "6. 7. 2016",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "minister za kulturo, minister za finance, minister za javno upravo",
+      "title": "v zvezi z pla\u010devanjem najemnine za Pokrajinski muzej Maribor",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e27b77ea4e680fe458dfc4cd8671543f6fe029650d1bf8003624d79f",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Boris Koprivnikar",
+        "gov_id": "G1304",
+        "ministry": {
+          "acronym": "MJU",
+          "is_coalition": true,
+          "id": 132,
+          "name": "Ministrstvo za javno upravo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1304,
+        "has_function": false
+      }, {
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Anton Per\u0161ak",
+        "gov_id": "G1432",
+        "ministry": {
+          "acronym": "MK",
+          "is_coalition": true,
+          "id": 133,
+          "name": "Ministrstvo za kulturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1432,
+        "has_function": false
+      }, {
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Du\u0161an Mramor",
+        "gov_id": "",
+        "ministry": {
+          "acronym": "MF",
+          "is_coalition": true,
+          "id": 128,
+          "name": "Ministrstvo za finance"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1362,
+        "has_function": false
+      }],
+      "id": 9576,
+      "session_id": "Unknown"
     }, {
-      "id": 1241,
-      "recipient_text": "Vlada",
-      "session_id": "Unknown",
+      "recipient_orgs": [],
+      "recipient_text": "minister za kulturo",
+      "title": "v zvezi z izvedbo investicije Mariborska knji\u017enica",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e33ea0d16f8a1689513cc334698b89571ee25681b3e93a1a1f43b028",
       "session_name": "Unknown",
-      "title": "v zvezi s črpanjem evropskih sredstev",
-      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005cd4a6d488600f7e602bcca4c4fc920df626c3183446c9c455b9dbf91"
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Anton Per\u0161ak",
+        "gov_id": "G1432",
+        "ministry": {
+          "acronym": "MK",
+          "is_coalition": true,
+          "id": 133,
+          "name": "Ministrstvo za kulturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1432,
+        "has_function": false
+      }],
+      "id": 9577,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "13. 5. 2016",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade",
+      "title": "v zvezi s pravno dr\u017eavo",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005c8e0d3138e09d77173845bd72de6658c48518e9ee89fa606f188c144",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 9521,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "17. 3. 2016",
+    "questions": [{
+      "recipient_orgs": [{
+        "acronym": "Vlada",
+        "is_coalition": true,
+        "id": 126,
+        "name": "Vlada"
+      }],
+      "recipient_text": "Vlada",
+      "title": "v zvezi z delovanjem Centra za upravljanje z dedi\u0161\u010dino \u017eivega srebra",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005b3fa5bf3c115262bce6eb630b9049bd7b020da25515f03b495f71b4f",
+      "session_name": "Unknown",
+      "recipient_persons": [],
+      "id": 9441,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "26. 2. 2016",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade",
+      "title": "v zvezi z upravljanjem dr\u017eavnega premo\u017eenja in s kadrovanjem v dr\u017eavnih podjetjih",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0053fa3733f7325a68c8b550436493ffaa42c4a9ee3ace2458bda7b90b7",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 9429,
+      "session_id": "Unknown"
+    }, {
+      "recipient_orgs": [],
+      "recipient_text": "minister za finance",
+      "title": "v zvezi z upravljanjem in prodajo dr\u017eavnega premo\u017eenja ter s kadrovanjem v dr\u017eavnih podjetjih",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0053d82470c0625ff67fe513db3f016823efc270e28a15db0806744d21a",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Du\u0161an Mramor",
+        "gov_id": "",
+        "ministry": {
+          "acronym": "MF",
+          "is_coalition": true,
+          "id": 128,
+          "name": "Ministrstvo za finance"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1362,
+        "has_function": false
+      }],
+      "id": 9430,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "23. 2. 2016",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "ministrica za kulturo",
+      "title": "v zvezi z o\u010ditki glede cenzuriranja dr\u017eavne proslave",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005d366865367988df234cb16ec57cccdbabc368a71077275e3da51945a",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": true,
+        "gender": "f",
+        "district": [66],
+        "name": "Julijana Bizjak Mlakar",
+        "gov_id": "P158",
+        "ministry": {
+          "acronym": "MK",
+          "is_coalition": true,
+          "id": 133,
+          "name": "Ministrstvo za kulturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 5,
+        "has_function": false
+      }],
+      "id": 9418,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "1. 2. 2016",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "ministrica za kulturo",
+      "title": "v zvezi z javnim razpisom za podporo portalu e-knjig",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a15e811794179a33741a9b7e6b799e9f39a1238619f4314520d2a1b8",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": true,
+        "gender": "f",
+        "district": [66],
+        "name": "Julijana Bizjak Mlakar",
+        "gov_id": "P158",
+        "ministry": {
+          "acronym": "MK",
+          "is_coalition": true,
+          "id": 133,
+          "name": "Ministrstvo za kulturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 5,
+        "has_function": false
+      }],
+      "id": 9389,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "24. 12. 2015",
+    "questions": [{
+      "recipient_orgs": [{
+        "acronym": "Vlada",
+        "is_coalition": true,
+        "id": 126,
+        "name": "Vlada"
+      }],
+      "recipient_text": "Vlada",
+      "title": "v zvezi z re\u0161evanjem problematike KSEVT-a",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005aa812e34b2a0625a9dcdaecb0514f6bf61ec1e97666331427099f2c0",
+      "session_name": "Unknown",
+      "recipient_persons": [],
+      "id": 9346,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "17. 12. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "minister za javno upravo, ministrica za kulturo",
+      "title": "v zvezi z letnim usposabljanjem \u010dlanov svetov javnih zavodov",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005738f3b1581f54504aa3fec02a89127ff790cf7ccd9ae4480b9c1b4da",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Boris Koprivnikar",
+        "gov_id": "G1304",
+        "ministry": {
+          "acronym": "MJU",
+          "is_coalition": true,
+          "id": 132,
+          "name": "Ministrstvo za javno upravo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1304,
+        "has_function": false
+      }, {
+        "is_active": true,
+        "gender": "f",
+        "district": [66],
+        "name": "Julijana Bizjak Mlakar",
+        "gov_id": "P158",
+        "ministry": {
+          "acronym": "MK",
+          "is_coalition": true,
+          "id": 133,
+          "name": "Ministrstvo za kulturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 5,
+        "has_function": false
+      }],
+      "id": 9341,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "11. 12. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "ministrica za zdravje",
+      "title": "v zvezi s stanjem v zdravstvu",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005fd3b49f65b4389a876be10359faf345f4abb039bcd27c1097302ea07",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Milojka Kolar Celarc",
+        "gov_id": "G1306",
+        "ministry": {
+          "acronym": "MZ",
+          "is_coalition": true,
+          "id": 139,
+          "name": "Ministrstvo za zdravje"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1306,
+        "has_function": false
+      }],
+      "id": 9338,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "24. 11. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "minister za infrastrukturo",
+      "title": "v zvezi z na\u010dinom delitve in obra\u010dunov stro\u0161kov za toploto v stanovanjskih objektih",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005d02f4eb777871cac374d83bd5bb94924a3f186777bd22287cf068cd1",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Peter Ga\u0161per\u0161i\u010d",
+        "gov_id": "G1305",
+        "ministry": {
+          "acronym": "MZIP",
+          "is_coalition": true,
+          "id": 130,
+          "name": "Ministrstvo za infrastrukturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1305,
+        "has_function": false
+      }],
+      "id": 9289,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "13. 11. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade",
+      "title": "v zvezi z ukrepi Vlade Republike Slovenije",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00590348da1803fcda40fa0e97bc7f6b50a9ada7ccafe8dbf69b9bf5a0b",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 9287,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "27. 8. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "minister za finance",
+      "title": "v zvezi ohranitvijo Tovarne nogavic Polzela",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00524ad391c81da7db2456cb320883686d78012755db03162261afc87dc",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Du\u0161an Mramor",
+        "gov_id": "",
+        "ministry": {
+          "acronym": "MF",
+          "is_coalition": true,
+          "id": 128,
+          "name": "Ministrstvo za finance"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1362,
+        "has_function": false
+      }],
+      "id": 9202,
+      "session_id": "Unknown"
+    }, {
+      "recipient_orgs": [],
+      "recipient_text": "minister za finance",
+      "title": "v zvezi s posojili v \u0161vicarskih frankih",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00525d7dddb9e8996e05028d6c9a204d00d43c44441c48a6efc3a24c27c",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Du\u0161an Mramor",
+        "gov_id": "",
+        "ministry": {
+          "acronym": "MF",
+          "is_coalition": true,
+          "id": 128,
+          "name": "Ministrstvo za finance"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1362,
+        "has_function": false
+      }],
+      "id": 9203,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "12. 6. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade",
+      "title": "v zvezi z  zapisom pravice do pitne vode v Ustavo",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e00537b23a67f73060456373e664162afac6dab7261cc303978752513b98",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 9156,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "24. 4. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "minister za finance, ministrica za okolje in prostor",
+      "title": "v zvezi s privatizacijo dru\u017ebe Telekom in Solin d.o.o.",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0050e9fa4e5deaa9e272cfd9e36991a84020e2ea38d23bceeebebe5df2b",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Du\u0161an Mramor",
+        "gov_id": "",
+        "ministry": {
+          "acronym": "MF",
+          "is_coalition": true,
+          "id": 128,
+          "name": "Ministrstvo za finance"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1362,
+        "has_function": false
+      }, {
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Irena Majcen",
+        "gov_id": "G1358",
+        "ministry": {
+          "acronym": "MOP",
+          "is_coalition": true,
+          "id": 137,
+          "name": "Ministrstvo za okolje in prostor"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1358,
+        "has_function": false
+      }],
+      "id": 9100,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "23. 4. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "ministrica za notranje zadeve",
+      "title": "v zvezi s preiskavo Nacionalnega preiskovalnega urada",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005462f99d694dd544a7a411e6515dc7e46d3ac7218258377ea1d600939",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Vesna Gy\u00f6rk\u00f6s \u017dnidar",
+        "gov_id": "G1302",
+        "ministry": {
+          "acronym": "MNZ",
+          "is_coalition": true,
+          "id": 135,
+          "name": "Ministrstvo za notranje zadeve"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1302,
+        "has_function": false
+      }],
+      "id": 9099,
+      "session_id": "Unknown"
+    }, {
+      "recipient_orgs": [],
+      "recipient_text": "minister za finance, ministrica za okolje in prostor",
+      "title": "v zvezi s privatizacijo dru\u017ebe Telekom in Solin d.o.o.",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0050e9fa4e5deaa9e272cfd9e36991a84020e2ea38d23bceeebebe5df2b",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Du\u0161an Mramor",
+        "gov_id": "",
+        "ministry": {
+          "acronym": "MF",
+          "is_coalition": true,
+          "id": 128,
+          "name": "Ministrstvo za finance"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1362,
+        "has_function": false
+      }, {
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Irena Majcen",
+        "gov_id": "G1358",
+        "ministry": {
+          "acronym": "MOP",
+          "is_coalition": true,
+          "id": 137,
+          "name": "Ministrstvo za okolje in prostor"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1358,
+        "has_function": false
+      }],
+      "id": 9100,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "17. 4. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade",
+      "title": "v zvezi z osnutkom Nacionalnega reformnega programa za leti 2015 \u2013 2016",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0055863cd49912db7742a173e22590b8e1b39902bad3080e6515eeaacd2",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 9089,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "9. 4. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade v funkciji ministra za izobra\u017eevanje znanost in \u0161port",
+      "title": "v zvezi s financiranjem jezikovnih virov in tehnologij",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0053e2f1ab640ffd9e6fc231351a8e5317057ecbdd0cd06bc5cac5fdeea",
+      "session_name": "12. izredna seja",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 9072,
+      "session_id": 5609
+    }]
+  }, {
+    "date": "31. 3. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "ministrica za okolje in prostor",
+      "title": "v zvezi z denacionalizacijskimi postopki na obmo\u010dju Triglavskega narodnega parka",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005eaf1e11bcc174ab388bddeda1f6b45d8ea0ef5dc18f04182d867a537",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Irena Majcen",
+        "gov_id": "G1358",
+        "ministry": {
+          "acronym": "MOP",
+          "is_coalition": true,
+          "id": 137,
+          "name": "Ministrstvo za okolje in prostor"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1358,
+        "has_function": false
+      }],
+      "id": 9066,
+      "session_id": "Unknown"
+    }, {
+      "recipient_orgs": [],
+      "recipient_text": "minister za infrastrukturo, ministrica za okolje in prostor",
+      "title": "v zvezi s pripravo predpisov",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005e90e8149454073172dc092b2cb1d72f4f92341913d80255fd0cb3758",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Peter Ga\u0161per\u0161i\u010d",
+        "gov_id": "G1305",
+        "ministry": {
+          "acronym": "MZIP",
+          "is_coalition": true,
+          "id": 130,
+          "name": "Ministrstvo za infrastrukturo"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1305,
+        "has_function": false
+      }, {
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Irena Majcen",
+        "gov_id": "G1358",
+        "ministry": {
+          "acronym": "MOP",
+          "is_coalition": true,
+          "id": 137,
+          "name": "Ministrstvo za okolje in prostor"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1358,
+        "has_function": false
+      }],
+      "id": 9067,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "6. 3. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "ministrica za notranje zadeve",
+      "title": "v zvezi zagotavljanjem finan\u010dnih sredstev za delovanje policije",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e005a168d931d4025b369c922fd7e7b004c47438141b191fbb87c19ad603",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Vesna Gy\u00f6rk\u00f6s \u017dnidar",
+        "gov_id": "G1302",
+        "ministry": {
+          "acronym": "MNZ",
+          "is_coalition": true,
+          "id": 135,
+          "name": "Ministrstvo za notranje zadeve"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1302,
+        "has_function": false
+      }],
+      "id": 9033,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "2. 2. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "ministrica za okolje in prostor",
+      "title": "v zvezi z denacionalizacijskimi postopki na obmo\u010dju Triglavskega narodnega parka",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0056354f2bf2f7084d8f95898bf94abbc76da00ee13bf7f183394af351b",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "f",
+        "district": null,
+        "name": "Irena Majcen",
+        "gov_id": "G1358",
+        "ministry": {
+          "acronym": "MOP",
+          "is_coalition": true,
+          "id": 137,
+          "name": "Ministrstvo za okolje in prostor"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1358,
+        "has_function": false
+      }],
+      "id": 8979,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "23. 1. 2015",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "minister za finance",
+      "title": "v zvezi s kapitalskimi nalo\u017ebami dr\u017eave v energetskih podjetjih",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0051791135866cae06a5a9a917a371a868e85301405d14b57fcd05090e6",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": null,
+        "name": "Du\u0161an Mramor",
+        "gov_id": "",
+        "ministry": {
+          "acronym": "MF",
+          "is_coalition": true,
+          "id": 128,
+          "name": "Ministrstvo za finance"
+        },
+        "party": null,
+        "type": "ministry",
+        "id": 1362,
+        "has_function": false
+      }],
+      "id": 8967,
+      "session_id": "Unknown"
+    }]
+  }, {
+    "date": "12. 12. 2014",
+    "questions": [{
+      "recipient_orgs": [],
+      "recipient_text": "predsednik Vlade",
+      "title": "v zvezi z novelo Energetskega zakona",
+      "url": "http://imss.dz-rs.si/IMiS/ImisAdmin.nsf/ImisnetAgent?OpenAgent&2&DZ-MSS-01/ca20e0058a551a2746be8b3460c58e0f05d7f1ed9685ba7033d66c1a0631b70f",
+      "session_name": "Unknown",
+      "recipient_persons": [{
+        "is_active": false,
+        "gender": "m",
+        "district": [103],
+        "name": "Miro Cerar",
+        "gov_id": "G13",
+        "ministry": {
+          "acronym": "Vlada",
+          "is_coalition": true,
+          "id": 126,
+          "name": "Vlada"
+        },
+        "party": {
+          "acronym": "SMC",
+          "is_coalition": true,
+          "id": 1,
+          "name": "PS Stranka modernega centra"
+        },
+        "type": "ministry",
+        "id": 13,
+        "has_function": false
+      }],
+      "id": 8909,
+      "session_id": "Unknown"
     }]
   }]
 }

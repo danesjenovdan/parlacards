@@ -45,7 +45,7 @@
                 <div class="date"><%= data.results[result].date %></div>
                 <section>
 
-                    <span class="title"><a href="<%= data.results[result].sessions[0].session_name %>">
+                    <span class="title"><a href="https://parlameter.si/seja/transkript/<%= data.results[result].sessions[0].session_id %>">
                             <%= data.results[result].sessions[0].session_name %>
                         </a></span>
 
@@ -79,7 +79,7 @@
                                                 var tmpIndex = j + 1;
                                             %>
                                             <a class="parlaicon speech"
-                                            href="https://glej.parlameter.si/s/speech/<%= tmpSpeeker.speeches[r] %>?frame=true&altHeader=true"><%= tmpIndex %></a>
+                                            href="https://parlameter.si/seja/transkript/<%= data.results[result].sessions[0].session_id %>#<%= tmpSpeeker.speeches[r] %>"><%= tmpIndex %></a>
                                             <% j++; } %>
 
                                         </div>

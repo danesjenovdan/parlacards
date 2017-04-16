@@ -137,7 +137,7 @@ a.document:hover {
       font-size: 13px;
       line-height: 44px;
       text-transform: uppercase;
-      font-weight: 200;
+      font-weight: 300;
 
       @include respond-to(mobile) { font-size: 12px; }
     }
