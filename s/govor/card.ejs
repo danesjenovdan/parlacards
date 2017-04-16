@@ -32,7 +32,7 @@
                 <% if (data.person.type === 'mp') { %>
                 <a href="<%= urlsData.base + urlsData.personLink.base + urlsData.person[data.person.id].slug + urlsData.personLink.pregled %>">
                 <% } %>
-                  <img class="portrait" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= data.person.gov_id %>.png" />
+                  <img class="portrait" src="https://cdn.parlameter.si/v1/parlassets/img/people/square/<%= String(data.person.gov_id) %>.png" />
                 <% if (data.person.type === 'mp') { %>
                 </a>
                 <a href="<%= urlsData.base + urlsData.personLink.base + urlsData.person[data.person.id].slug + urlsData.personLink.pregled %>" class="funblue-light-hover">
