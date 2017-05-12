@@ -35,9 +35,17 @@
     line-height: 20px;
     text-transform: uppercase;
   }
-/*@media (max-width: 480px) {
+@media (max-width: 420px) {
+  .session_voting .session_votes .type {
+    font-size: 12px;
+  }
 }
-*/
+@media (max-width: 360px) {
+  .session_voting .session_votes .type {
+    font-size: 10px;
+  }
+}
+
 .session_voting{
   font-weight: 400;
 }
