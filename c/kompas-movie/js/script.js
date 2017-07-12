@@ -252,7 +252,7 @@ if (!isMSIE) {
         .html('<g class="playme"><path fill="#5388AA" d="M152.443 136.417l207.114 119.573-207.114 119.593z" fill="#000000" /></g>')
         .select('.playme')
         .on('click', function() {
-            playMovie(moviedata);
+            playMovie(moviedata, true);
         });
 
 
@@ -828,7 +828,7 @@ if (!isMSIE) {
         return "translate(" + x(d.vT1) + "," + y(d.vT2) + ")";
     }
 
-    playStep = function (state_i, states) {
+    playStep = function (state_i, states, loop) {
         if (keep_playing) {
             var newstate = states[state_i].people;
             for (var person_i in newstate) {
@@ -838,12 +838,18 @@ if (!isMSIE) {
             if (state_i < states.length - 1) {
                 state_i = state_i + 1;
                 window.setTimeout(function() {
-                    playStep(state_i, states);
+                    playStep(state_i, states, loop);
                 }, 100);
             } else {
-                playing = false;
-                $('.playcontrol .stopme').html('<g class="playme"><path fill="#5388AA" d="M152.443 136.417l207.114 119.573-207.114 119.593z" fill="#000000" /></g>');
-                $('.stopme').attr('class', 'playme');
+                if (loop) {
+                    window.setTimeout(function() {
+                        playStep(0, states, true);
+                    }, 100);
+                } else {
+                    playing = false;
+                    $('.playcontrol .stopme').html('<g class="playme"><path fill="#5388AA" d="M152.443 136.417l207.114 119.573-207.114 119.593z" fill="#000000" /></g>');
+                    $('.stopme').attr('class', 'playme');
+                }
             }
         } else {
             playing = false;
@@ -851,14 +857,14 @@ if (!isMSIE) {
         }
     }
 
-    playMovie = function (states) {
+    playMovie = function (states, loop) {
 
         if (!playing) {
             $('.playcontrol .playme').html('<rect x="123" y="143" width="256" height="256" />');
             $('.playme').attr('class', 'stopme');
             playing = true;
             var state_i = 0;
-            playStep(state_i, states);
+            playStep(state_i, states, loop);
         } else {
             $('.playcontrol .stopme').html('<g class="playme"><path fill="#5388AA" d="M152.443 136.417l207.114 119.573-207.114 119.593z" fill="#000000" /></g>');
             $('.stopme').attr('class', 'playme');
@@ -872,5 +878,9 @@ if (!isMSIE) {
 makeEmbedSwitch();
 activateCopyButton();
 addCardRippling();
+console.log(kompasState);
+if (kompasState.loop) {
+    playMovie(moviedata, true);
+}
 
 })();
