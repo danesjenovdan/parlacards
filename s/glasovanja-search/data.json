@@ -20,7 +20,9 @@
             "against": 48,
             "motion_id": 6514,
             "not_present": 22,
-            "result": false
+            "result": false,
+            "is_outlier": true,
+            "has_outliers": true
         }
     },
     {
@@ -44,7 +46,9 @@
             "against": 50,
             "motion_id": 5801,
             "not_present": 12,
-            "result": false
+            "result": false,
+            "is_outlier": true,
+            "has_outliers": false
         }
     },
     {
@@ -68,7 +72,9 @@
             "against": 38,
             "motion_id": 4966,
             "not_present": 8,
-            "result": false
+            "result": false,
+            "is_outlier": false,
+            "has_outliers": true
         }
     },
     {

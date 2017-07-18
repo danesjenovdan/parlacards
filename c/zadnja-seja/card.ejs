@@ -212,6 +212,19 @@
 
 
                             <div class="clearfix single_voting">
+                                
+                                <% if (motion.is_outlier) { %>
+                                    <div class="fire-badge"></div>
+                                    <% if (motion.has_outliers) { %>
+                                        <div class="lightning-badge"></div>
+                                    <% } %>
+                                <% } else if (motion.has_outliers) { %>
+                                    <div class="lightning-badge" style="position: absolute; left: -37px;"></div>
+                                <% } %>
+                                <!-- <div v-if="vote.results.is_outlier" class="fire-badge"></div>
+                                <div v-if="vote.results.has_outliers && vote.results.is_outlier" class="lightning-badge"></div>
+                                <div v-if="vote.results.has_outliers && !vote.results.is_outlier" class="lightning-badge" style="left: -7px;"></div> -->
+
                                 <a href="/seja/glasovanje/<%=data.motions[i].session.id%>/<%=motion.motion_id%>">
                                     <div class=" col-md-1 ">
                                         <div class="accepted <%= ayeney %> ">
