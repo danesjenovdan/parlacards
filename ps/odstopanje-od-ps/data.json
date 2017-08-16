@@ -1,93 +1,101 @@
 {
   "organization": {
-    "acronym": "SDS",
-    "id": 5,
-    "name": "PS Slovenska Demokratska Stranka"
+    "acronym": "Levica",
+    "is_coalition": false,
+    "id": 8,
+    "name": "PS Levica"
   },
-  "results": [
-    {
-      "person": {
-        "id": 69,
-        "party": {
-          "acronym": "DeSUS",
-          "id": 3,
-          "name": "PS Demokratska Stranka Upokojencev Slovenije"
-        },
-        "name": "Uro\u0161 Prikl",
-        "gov_id": "P280",
-        "gender": "m"
+  "created_at": "16.08.2017",
+  "created_for": "16.08.2017",
+  "results": [{
+    "person": {
+      "name": "Franc Tr\u010dek ",
+      "district": [49],
+      "gender": "m",
+      "is_active": false,
+      "party": {
+        "acronym": "Levica",
+        "id": 8,
+        "is_coalition": false,
+        "name": "PS Levica"
       },
-      "ratio": 32.4488962749391
+      "type": "mp",
+      "id": 82,
+      "gov_id": "P290",
+      "has_function": false
     },
-    {
-      "person": {
-        "id": 60,
-        "party": {
-          "acronym": "SMC",
-          "id": 1,
-          "name": "PS Stranka modernega centra"
-        },
-        "name": "Jasna Murgel",
-        "gov_id": "P274",
-        "gender": "f"
+    "ratio": 5.78034682080924
+  }, {
+    "person": {
+      "name": "Luka Mesec",
+      "district": [15],
+      "gender": "m",
+      "is_active": false,
+      "party": {
+        "acronym": "Levica",
+        "id": 8,
+        "is_coalition": false,
+        "name": "PS Levica"
       },
-      "ratio": 32.7715978556233
+      "type": "mp",
+      "id": 58,
+      "gov_id": "P273",
+      "has_function": false
     },
-    {
-      "person": {
-        "id": 16,
-        "party": {
-          "acronym": "SMC",
-          "id": 1,
-          "name": "PS Stranka modernega centra"
-        },
-        "name": "Erika Dekleva",
-        "gov_id": "P247",
-        "gender": "f"
+    "ratio": 4.27498555748123
+  }, {
+    "person": {
+      "name": "Violeta Tomi\u0107",
+      "district": [103],
+      "gender": "f",
+      "is_active": false,
+      "party": {
+        "acronym": "Levica",
+        "id": 8,
+        "is_coalition": false,
+        "name": "PS Levica"
       },
-      "ratio": 32.881558819505
+      "type": "mp",
+      "id": 80,
+      "gov_id": "P289",
+      "has_function": false
     },
-    {
-      "person": {
-        "id": 49,
-        "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
-        "name": "Zvonko Lah",
-        "gov_id": "P129",
-        "gender": "m"
+    "ratio": 3.37150127226464
+  }, {
+    "person": {
+      "name": "Miha Kordi\u0161",
+      "district": [64],
+      "gender": "m",
+      "is_active": false,
+      "party": {
+        "acronym": "Levica",
+        "id": 8,
+        "is_coalition": false,
+        "name": "PS Levica"
       },
-      "ratio": 95.7391225674506
+      "type": "mp",
+      "id": 42,
+      "gov_id": "P262",
+      "has_function": false
     },
-    {
-      "person": {
-        "id": 64,
-        "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
-        "name": "Bojan Podkraj\u0161ek",
-        "gov_id": "P277",
-        "gender": "m"
+    "ratio": 2.08464939987365
+  }, {
+    "person": {
+      "name": "Matej Ta\u0161ner Vatovec",
+      "district": [83],
+      "gender": "m",
+      "is_active": false,
+      "party": {
+        "acronym": "Levica",
+        "id": 8,
+        "is_coalition": false,
+        "name": "PS Levica"
       },
-      "ratio": 96.1472014806222
+      "type": "mp",
+      "id": 79,
+      "gov_id": "P288",
+      "has_function": false
     },
-    {
-      "person": {
-        "id": 51,
-        "party": {
-          "acronym": "SDS",
-          "id": 5,
-          "name": "PS Slovenska Demokratska Stranka"
-        },
-        "name": "Suzana Lep \u0160imenko",
-        "gov_id": "P268",
-        "gender": "f"
-      },
-      "ratio": 96.4650786862602
-    }
-  ]
+    "ratio": 1.63934426229508
+  }]
 }

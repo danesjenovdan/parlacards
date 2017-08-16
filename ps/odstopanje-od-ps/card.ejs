@@ -27,7 +27,7 @@
 <div class="card-container card-halfling <%= className %>" data-id="<%= cardData.group %>/<%= cardData.method %>">
     <div class="card-header shadowhunter">
         <div class="card-header-border"></div>
-        <h1>Odstopanje od poslanske skupine</h1>
+        <h1>Neujemanje s poslansko skupino</h1>
         <!-- this text is the only thing you touch in .card-header -->
     </div>
     <div class="card-content full">
@@ -48,7 +48,7 @@
                         <% } %>
                     </div>
                     <div class="column large-number">
-                        <%= String(member.ratio.toFixed(2)).replace('.', ','); %>
+                        <%= String(member.ratio.toFixed(2)).replace('.', ','); %> %
                     </div>
                 </li>
 
@@ -58,14 +58,16 @@
         <div class="card-content-info hidden">
             <div class="card-back-content">
                 <p class="info-text lead">
-                    Seznam vseh poslancev poslanske skupine, ki so razvrščeni glede na vrednost ujemanja z glasom poslanske skupine. Večja kot je vrednost, večje je ujemanje.
+                    Seznam vseh poslancev poslanske skupine, ki so razvrščeni glede na vrednost ujemanja z glasom poslanske skupine. Večja kot je vrednost, manjše je ujemanje.
                 </p>
                 <p class="info-text heading">
                     METODOLOGIJA
                 </p>
                 <p class="info-text">
-                    Za vsako glasovanje izračunamo "glas poslanske skupine", ki ji posamezni/-a poslanec/-ka. Nato seštejemo v številke pretvorjene vrednosti vsakega glasovanja za vsakega/-o poslanca/-ko PS in delimo s številom poslancev v PS. Nazadnje izračunamo evklidsko razdaljo med pridobljenim nizom rezultatov in nizom glasov poslancev.
+                    Za vsako glasovanje izračunamo "glas poslanske skupine", ki ji posamezni/-a poslanec/-ka. Potem za vsakega člana/-ico izračunamo odstotek glasovanj, na katerih je poslanec/-ka glasoval/-a drugače od večinskega glasu poslanske skupine in rezultate razvrstimo od največjega odstopanja proti najmanjšemu.
                 </p>
+                <p class="info-text">
+                    Vse glasovnice z vrednostjo "NI" ignoriramo, kar ima za posledico to, da če je večinski glas poslanske skupine "NI" (večina poslank in poslancev se glasovanja ni udeležila) to glasovanje iz analize izključimo. Če ima poslanska skupina več "večinskih glasov" (dve opciji imata enako največje število glasov znotraj poslanske skupine) upoštevamo obe opciji pri primerjavi z individualnimi poslanci ni poslankami.                </p>
             </div>
         </div>
         <div class="card-content-embed hidden">
