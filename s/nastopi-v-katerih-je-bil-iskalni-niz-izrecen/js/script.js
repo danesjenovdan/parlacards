@@ -11,7 +11,9 @@
 
           if (speech.person.type === 'mp') {
             speech.memberUrl = that.urls.base + that.urls.personLink.base + that.urls.person[speech.person.id].slug + that.urls.personLink.pregled
-            speech.partyUrl = that.urls.base + that.urls.partyLink.base + that.urls.party[speech.person.party.id].acronym + that.urls.partyLink.pregled
+            if (speech.person.party.acronym.indexOf('NeP') === -1) {
+              speech.partyUrl = that.urls.base + that.urls.partyLink.base + that.urls.party[speech.person.party.id].acronym + that.urls.partyLink.pregled
+            }
           }
 
           speech.memberImageUrl = 'https://cdn.parlameter.si/v1/parlassets/img/people/square/' + String(speech.person.gov_id) + '.png'

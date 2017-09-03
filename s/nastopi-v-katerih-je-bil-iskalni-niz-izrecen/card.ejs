@@ -46,7 +46,10 @@
                             </a>
                             <div class="column name">
                                 <a class="funblue-light-hover" :href="speech.memberUrl">{{ speech.person.name }}</a><br/>
-                                <a class="funblue-light-hover" :href="speech.partyUrl">{{ speech.person.party.acronym }}</a>
+                                <template v-if="speech.partyUrl">
+                                    <a class="funblue-light-hover" :href="speech.partyUrl">{{ speech.person.party.acronym }}</a>
+                                </template>
+                                <template v-else>{{ speech.person.party.acronym}}</template>
                             </div>
                         </template>
                         <template v-else>
@@ -55,7 +58,6 @@
                             </div>
                             <div class="column name">
                               {{ speech.person.name }}<br/>
-                              {{ speech.person.party.acronym }}
                             </div>
                         </template>
 
